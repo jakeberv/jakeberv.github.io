@@ -10,7 +10,7 @@ redirect_from:
 
 *I consider information from natural history, ecology, genomics, and paleontology---often through the application of novel computation tools---in order to understand the links between micro- and macroevolution*
 
-Since in November, 2019, I have been a [Life Sciences Fellow](https://lifescifellows.umich.edu/) at the University of Michigan. I am affiliated with the [Department of Ecology and Evolutionary Biology, Earth and Environmental Sciences, and the University of Michigan Museum of Zoology](https://lsa.umich.edu/eeb/people/postdoctoral-fellows/jacob-berv.html).
+Since in November, 2019, I have been a [Life Sciences Fellow](https://lifescifellows.umich.edu/) at the University of Michigan. I am affiliated with the [Department of Ecology and Evolutionary Biology](https://lsa.umich.edu/eeb/people/postdoctoral-fellows/jacob-berv.html), Earth and Environmental Sciences, and the University of Michigan Museum of Zoology.
 
 Previously, I:
 
