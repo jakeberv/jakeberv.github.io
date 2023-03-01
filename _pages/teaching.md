@@ -10,7 +10,7 @@ You can read more of my thoughts on teaching and check out prior course evaluati
 ## University of Michigan
 
 -   Guest lecturer in Vertebrate Paleontology EARTH 437, December 2021 – “The Evolution of Birds”
-    -   Recording available: https://bit.ly/Berv_EARTH437_2021
+    -   Recording available (teaching demo): https://bit.ly/Berv_EARTH437_2021
 
 ## Cornell University
 
