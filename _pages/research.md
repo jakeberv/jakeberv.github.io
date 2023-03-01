@@ -4,11 +4,11 @@ title: "Research Interests"
 permalink: /research/
 author_profile: true
 header:
-  image: "research/the-persistence-of-memory-painting-by-salvador-dali-uhd-4k-wallpaper.jpg"
+  image: #"research/the-persistence-of-memory-painting-by-salvador-dali-uhd-4k-wallpaper.jpg"
   og_image: "research/the-persistence-of-memory-painting-by-salvador-dali-uhd-4k-wallpaper.jpg"
 ---
 
-## ![THE PERSISTENCE OF MEMORY PAINTING BY SALVADOR DALI](research/the-persistence-of-memory-painting-by-salvador-dali-uhd-4k-wallpaper.jpg){}
+![The Persistence of Memory, By Salvador Dali](research/the-persistence-of-memory-painting-by-salvador-dali-uhd-4k-wallpaper.jpg)
 
 I am most fascinated by how microevolutionary genetic processes operating at the level of individual organisms and populations may propagate through the tree of life and time to generate macroevolutionary patterns. Accordingly, my research program integrates across evolutionary scales, from the genome to higher taxa. While much of my experience has centered on birds, my approach is taxonomically inclusive, and I have also investigated groups of mammals, reptiles, amphibians, fishes, and deep-sea invertebrates. Some of the questions guiding my research include: What are the roles of evolutionary contingency and convergence in generating patterns of biodiversity? When and why might one of these modes of evolution predominate over the other? What are the drivers and correlates of evolutionary change?
 
