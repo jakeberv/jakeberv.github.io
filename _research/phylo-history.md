@@ -1,12 +1,13 @@
 ---
-title: "Social media data"
+title: "Phylogenetic Natural History"
 layout: single-portfolio
-excerpt: "<img src='/images/research/ternary.png' alt=''>"
+excerpt: "<img src='/images/research/haeckel_humm.jpg' alt=''>"
 collection: research
-order_number: 40
+order_number: 10
 header: 
-  og_image: "research/ternary.png"
+  og_image: "research/haeckel_humm.jpg"
 ---
+
 
 In these projects I leverage social media data to study the early stages of
 radicalization and participation in extremist movements. In one, I use geocoded
