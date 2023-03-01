@@ -3,26 +3,19 @@ permalink: /teaching/
 title: "Teaching"
 ---
 
-Temporary:
+Philosophy: I am an evolutionary biologist, and I care about teaching evolution because "nothing in biology makes sense except in the light of evolution."1 Though I wish all my students would follow me in the battle of deciphering the rules of life, my job as a science educator is first to provide access to scientific literacy. Literacy in evolutionary biology has never been more important. Evolutionary processes shape every facet of the natural world, and the COVID-19 pandemic has shown us how evolution impacts our daily lives [Indeed, the story of how phylogenetics routinely saves us from dire epidemiological events is not told often enough]. More generally, a limited understanding of evolution can impede a person's ability to make informed decisions on important issues2. As discussed by Brandt et al.3, scientific literacy encompasses four key learning goals: content knowledge, procedural knowledge, epistemic knowledge, and application of knowledge. These axes are critical in understanding and evaluating the evidence for evolutionary processes, as well as in applying evolutionary concepts to real-world situations.
 
-You can view my teaching portfolio [here](/files/pdf/teaching/Portfolio.pdf).
-You can find a selection of my teaching materials, including all of the labs
-from Advanced Topics in Political Data Science, [here](/teaching-materials).
+You can read more of my thoughts on teaching and see course evaluations in my teaching dossier [here](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/teaching/teaching_philosophy.pdf).
 
-Modify courses:
+## University of Michigan
 
-## Washington University in St. Louis
-- Pol Sci 3090: The Scientific Study of Civil War (Spring 2020)
-    - [Syllabus](/files/pdf/teaching/PS 3090 Syllabus.pdf)
-- Pol Sci 3171: International Conflict Management & Resolution (Fall 2019)
-    - [Syllabus](/files/pdf/teaching/PS 3171 Syllabus.pdf)
+-   Guest lecturer in Vertebrate Paleontology EARTH 437, December 2021 – “The Evolution of Birds”
+    -   Recording available: https://bit.ly/Berv_EARTH437_2021
 
-## The University of North Carolina at Chapel Hill
-- Poli 281: Quantitative Research in Political Science (Spring 2019)
-    - [Syllabus](/files/pdf/teaching/POLI 281 Syllabus.pdf)
-- Poli 891: Lab for Advanced Topics in Political Data Science (Fall 2017, Fall 2018)
-    - [Syllabus](/files/pdf/teaching/POLI 891 Syllabus.pdf)
+## Cornell University
 
-## ICPSR Summer Program
-- Introduction to Applied Bayesian Modeling (Summer 2017)
-    - [Syllabus](/files/pdf/teaching/bayes2017.pdf)
+-   BIOEE 1780: Evolutionary Biology and Diversity
+    -   ["Writing in the Majors"](https://knight.as.cornell.edu/writing-in-the-majors) seminar, Fall 2013, 2014, 2015, 2018
+    -   I designed semester long seminar courses with guidance from the John. S. Knight Institute for Writing in the Disciplines. My course offered undergraduates an opportunity to engage with and learn to write about primary scientific literature in a variety of formats. Student evaluations available.
+
+-   BIOEE 2650, Tropical Field Ecology and Behavior (field course in Kenya), Winter 2014
