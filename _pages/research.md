@@ -12,6 +12,21 @@ header:
 
 I am most fascinated by how microevolutionary genetic processes operating at the level of individual organisms and populations may propagate through the tree of life and time to generate macroevolutionary patterns. Accordingly, my research program integrates across evolutionary scales, from the genome to higher taxa. While much of my experience has centered on birds, my approach is taxonomically inclusive, and I have also investigated groups of mammals, reptiles, amphibians, fishes, and deep-sea invertebrates. Some of the questions guiding my research include: What are the roles of evolutionary contingency and convergence in generating patterns of biodiversity? When and why might one of these modes of evolution predominate over the other? What are the drivers and correlates of evolutionary change?
 
+Research themes:
+
+-  Systematic Biology
+    -   molecular evolution
+    -   phylogeny reconstruction
+    -   divergence dating
+    -   phylogenetic comparative methods
+
+-  Neotropical biogeography
+    -   suboscine phylogeny
+    -   population genomics
+    -   areas of endemism
+  
+Below, you can learn more about the two primary domains of my research program:
+
 <nbsp>
 
 {% include base_path %}
