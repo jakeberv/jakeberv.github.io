@@ -85,9 +85,9 @@ author:
   name             : "Jake Berv"
   avatar           : "profile.png"
   bio              : "Evolutionary Biologist"
-  location         : "University of Michigan"
-  employer         :
-  pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  location         : "Ann Arbor, Michigan"
+  employer         : "University of Michigan"
+  pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=cQQaGZQAAAAJ&hl=en"
   email            : "jberv@umich.edu"
   researchgate     : 
@@ -102,20 +102,20 @@ author:
   google_plus      :
   keybase          :
   instagram        :
-  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
+  impactstory      :
   lastfm           :
   linkedin         :
   orcid            : "https://orcid.org/0000-0002-5962-0621"
   pinterest        :
   soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  stackoverflow    : 
   steam            :
   tumblr           :
   twitter          : "jakeberv"
   vine             :
   weibo            :
   xing             :
-  youtube          :
+  youtube          : 
   wikipedia        :
 
 
