@@ -8,7 +8,7 @@ header:
   og_image: "research/the-persistence-of-memory-painting-by-salvador-dali-uhd-4k-wallpaper.jpg"
 ---
 
-![The Persistence of Memory, by Salvador Dalí](https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/the-persistence-of-memory-painting-by-salvador-dali-uhd-4k-wallpaper.jpg) [The Persistence of Memory](https://www.thehourglass.com/au/cultural-perspectives/salvador-dali/), by Salvador Dalí
+![The Persistence of Memory, by Salvador Dalí](https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/persistence_of_memory-research.jpg) [The Persistence of Memory](https://www.thehourglass.com/au/cultural-perspectives/salvador-dali/), by Salvador Dalí
 
 ---
 
