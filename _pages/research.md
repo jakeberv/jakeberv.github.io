@@ -15,19 +15,20 @@ I am most fascinated by how microevolutionary genetic processes operating at the
 
 ***Research themes in Systematic Biology***
 
-**Phylogenetic Natural History**
-  -   molecular evolution
-  -   phylogeny reconstruction
-  -   divergence dating
-  -   phylogenetic comparative methods
+My research program as an evolutionary biologist is integrative by design, and examines aspects of the following research themes
 
+**Phylogenetic Natural History**
+  -   Molecular evolution
+  -   Phylogeny reconstruction
+  -   Divergence dating
+  -   Phylogenetic comparative methods
 
 **Neotropical biogeography**
-  -   suboscine phylogeny
-  -   population genomics
-  -   areas of endemism
+  -   Suboscine phylogeny
+  -   Population genomics
+  -   Areas of Endemism
 
-Below, you can learn more about the two primary domains of my research program:
+Below, you can learn more about two branches of my research program:
 
 <nbsp>
 
