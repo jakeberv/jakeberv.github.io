@@ -8,11 +8,14 @@ main:
   
   - title: "Teaching"
     url: /teaching/
+    
+  - title: "Service"
+    url: /service/
 
   - title: "Software"
     url: /software/
 
-  - title: "Posts"
+  - title: "Blog"
     url: /posts/
     
   - title: "CV"
