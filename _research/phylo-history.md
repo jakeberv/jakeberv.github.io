@@ -1,7 +1,7 @@
 ---
 title: "Phylogenetic Natural History"
 layout: single-portfolio
-excerpt: "<img src='/images/research/haeckel_humm.jpg' alt=''>"
+excerpt: "<img src='/images/research/haeckel_humm.jpg' alt='Ernst Haeckel Hummingbirds Plate #99'>"
 collection: research
 order_number: 10
 header: 

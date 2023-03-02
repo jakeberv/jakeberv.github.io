@@ -18,9 +18,16 @@ I am fascinated by how microevolutionary genetic processes operating at the leve
 
 My research program as an evolutionary biologist is integrative by design, and examines aspects of the following research themes
 
-**Phylogenetic Natural History** - Molecular evolution - Phylogeny reconstruction - Divergence dating - Phylogenetic comparative methods
+**Phylogenetic Natural History** 
+- Molecular evolution 
+- Phylogeny reconstruction 
+- Divergence dating 
+- Phylogenetic comparative methods
 
-**Neotropical biogeography** - Suboscine phylogeny - Population genomics - Areas of Endemism
+**Neotropical biogeography** 
+- Suboscine phylogeny 
+- Population genomics 
+- Areas of Endemism
 
 Below, you can learn more about two branches of my research program:
 
