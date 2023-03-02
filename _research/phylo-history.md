@@ -8,12 +8,14 @@ header:
   og_image: "research/haeckel_humm.jpg"
 ---
 
+My research program seeks to unify hypothesis testing with data-driven approaches to investigate the factors that generate evolutionary patterns across scales, a concept that has been called "Phylogenetic Natural History"([Uyeda *et al* 2018](https://academic.oup.com/sysbio/article/67/6/1091/4985805)). 
+Evolutionary biologists can now access whole genomes, range maps for thousands of species, eons of ecological and climate information, and millions of preserved museum specimens. Integrating these data types to answer questions about biological processes and how they have shaped our world is an emerging “grand challenge” in biodiversity science. Indeed, deciphering this flood of data has created new imperatives for the training of researchers in the life sciences.
 
-"Phylogenetic Natural History" is a relatively new concept in the field of Systematic Biology, and was coined by [Uyeda *et al* 2018](https://academic.oup.com/sysbio/article/67/6/1091/4985805). My research program has converged on a similar approach, and seeks to unify hypothesis testing with data-driven approaches to investigate the factors that generate evolutionary patterns across scales.
+In my work, I have applied the concept of "Phylogenetic Natural History" by merging domains of natural history, data science, computational biology, paleontology, and genomics.
 
+**Deep-time natural history through the lens of molecular evolution**
 
-
-## Working paper
+## Molecular Early Burst 
 
 Richard McAlexander, Rob Williams, and Michael Rubin. "They’re Still There, He’s All Gone: American Fatalities in Foreign Wars and Right-Wing Radicalization at Home."
 
