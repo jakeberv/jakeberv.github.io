@@ -6,6 +6,9 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+header:
+  image: "research/persistence_of_memory-about-header.jpg"
+  og_image: #"research/the-persistence-of-memory-painting-by-salvador-dali-uhd-4k-wallpaper.jpg"
 ---
 
 *My research integrates data from natural history, ecology, genomics, and paleontology---often through the application of novel computation tools---in order to understand the links between micro- and macroevolution.*
