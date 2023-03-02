@@ -1,11 +1,11 @@
 ---
 title: "Neotropical biogeography"
 layout: single-portfolio
-excerpt: "<img src='/images/research/alexander-von-humboldts-chimborazo-map-science-source.jpg' alt=''>"
+excerpt: "<img src='/images/research/Geographie_der_Pflanzen_in_den_Tropen-Ländern_(cropped)-resized.jpg' alt=''>"
 collection: research
 order_number: 20
 header: 
-  og_image: "research/alexander-von-humboldts-chimborazo-map-science-source.jpg"
+  og_image: "research/Geographie_der_Pflanzen_in_den_Tropen-Ländern_(cropped)-resized.jpg"
 ---
 
 
