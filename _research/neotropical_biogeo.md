@@ -1,11 +1,11 @@
 ---
 title: "Neotropical biogeography"
 layout: single-portfolio
-excerpt: "<img src='/images/research/haeckel_humm.jpg' alt=''>"
+excerpt: "<img src='/images/research/alexander-von-humboldts-chimborazo-map-science-source.jpg' alt=''>"
 collection: research
 order_number: 20
 header: 
-  og_image: "research/haeckel_humm.jpg"
+  og_image: "research/alexander-von-humboldts-chimborazo-map-science-source.jpg"
 ---
 
 
