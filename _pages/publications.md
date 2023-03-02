@@ -5,9 +5,10 @@ permalink: /publications/
 author_profile: true
 ---
 
-**\* Equal authorship**
+![The Disintegration of the Persistence of Memory, by [Salvador Dalí](https://archive.thedali.org/mwebcgi/mweb.exe?request=record;id=1652;type=101)](https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/The-Disintegration-of-the-Persistence-of-Memory.jpg)
 
-**\^ Student Advisee**
+**\* Equal authorship**
+**^ Student Advisee**
 
 See CV for other publications/pre-prints
 
