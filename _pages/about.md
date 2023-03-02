@@ -7,9 +7,16 @@ redirect_from:
   - /about/
   - /about.html
 header:
+  overlay_image: "research/persistence_of_memory-about-header.jpg"
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+  actions:
+    - label: "Download"
+      url: "https://github.com"
+---
+
   image: "research/persistence_of_memory-about-header.jpg"
   og_image: #"research/the-persistence-of-memory-painting-by-salvador-dali-uhd-4k-wallpaper.jpg"
----
 
 *My research integrates data from natural history, ecology, genomics, and paleontology---often through the application of novel computation tools---in order to understand the links between micro- and macroevolution.*
 
