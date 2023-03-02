@@ -1,7 +1,7 @@
 ---
 permalink: /
-#title: "About me"
-#excerpt: "About me"
+title: "About me"
+excerpt: "About me"
 title: "Jacob S. Berv, PhD"
 author_profile: true
 redirect_from: 
@@ -9,16 +9,14 @@ redirect_from:
   - /about.html
 header:
   og_image: "research/persistence_of_memory-research.jpg"
-  #image: "research/persistence_of_memory-about-header.jpg"
-  overlay_image: "research/persistence_of_memory-about-header.jpg"
+  image: "research/persistence_of_memory-about-header.jpg"
+  #overlay_image: "research/persistence_of_memory-about-header.jpg"
   #overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
-  caption: "**Salvador Dalí**"
+  #caption: "**Salvador Dalí**"
   #actions:
   #  - label: "Download"
   #    url: "https://github.com"
 ---
-
-## About me
 
 *My research integrates data from natural history, ecology, genomics, and paleontology---often through the application of novel computation tools---in order to understand the links between micro- and macroevolution.*
 
