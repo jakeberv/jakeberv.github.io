@@ -9,13 +9,9 @@ header:
 ---
 
 
-In these projects I leverage social media data to study the early stages of
-radicalization and participation in extremist movements. In one, I use geocoded
-videos uploads to explore the relationship between American military fatalities
-overseas and far-right mobilization. The other applies computer vision
-techniques to recruitment videos from groups within the Salafi Jihadi movement
-to study how different groups within a broader clandestine movement use
-rhetorical strategies to communicate to a broad pool of potential supporters.
+"Phylogenetic Natural History" is a relatively new concept in the field of Systematic Biology, and was coined by [Uyeda *et al* 2018](https://academic.oup.com/sysbio/article/67/6/1091/4985805). My research program has converged on a similar approach, and seeks to unify hypothesis testing with data-driven approaches to investigate the factors that generate evolutionary patterns across scales.
+
+
 
 ## Working paper
 
