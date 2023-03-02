@@ -3,7 +3,7 @@ title: "Neotropical biogeography"
 layout: single-portfolio
 excerpt: "<img src='/images/research/haeckel_humm.jpg' alt=''>"
 collection: research
-order_number: 10
+order_number: 20
 header: 
   og_image: "research/haeckel_humm.jpg"
 ---
