@@ -8,8 +8,7 @@ header:
   og_image: "research/haeckel_humm.jpg"
 ---
 
-![The Succession of Strata](/images/research/Smith.jpg)
-*William Smith's Succession of Strata-- the first map to identify layers of rock based on fossil content, instead of mineral content*
+![The Succession of Strata](/images/research/Smith.jpg) *William Smith's Succession of Strata-- the first map to identify layers of rock based on fossil content, instead of mineral content*
 
 [Phylogeny](https://en.wiktionary.org/wiki/phylogeny) is the conceptual and practical framework for studying biodiversity from an evolutionary perspective. My research program unifies hypothesis testing with data-driven approaches in phylogenetics to uncover the factors that generate evolutionary patterns---a concept that has been called "Phylogenetic Natural History" ([Uyeda *et al* 2018](https://academic.oup.com/sysbio/article/67/6/1091/4985805)). In my work, I have applied the concept of "Phylogenetic Natural History" by merging domains of natural history, data science, computational biology, paleontology, and genomics.
 
@@ -18,13 +17,22 @@ header:
 Resolving the evolutionary history of groups of organisms that are suspected to have rapidly diversified is a fundamental challenge in systematic biology -- and one which tests the limits of what can be known. My current research interests in this topic are motivated by the extinction of the non-avian dinosaurs and the subsequent diversification of vertebrate clades towards the end of the Mesozoic 66 million years ago (the K---Pg boundary).
 
 ***A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing***
-![testing](/images/research/haeckel_humm.jpg "testing" =50%x)
+
+[testing](/images/research/Prum-Bird-Evolution.jpeg "testing"=50%x)
+
+
+<img src="/images/research/Prum-Bird-Evolution.jpeg" align="right"/>
+
+
+
+|             Solarized dark             |            Solarized Ocean             |
+|:--------------------------------------:|:--------------------------------------:|
+| ![](/images/research/haeckel_humm.jpg) | ![](/images/research/haeckel_humm.jpg) |
+
+
 
 
 First, I highlight a collaborative effort that 1) investigated the relationships among modern bird families and 2) estimated a new timescale of avian diversification ([Prum, Berv, et al. 2015, Nature](https://jakeberv.com/publication/2015-10-07-Prum_Berv_et_al_2015)). Here, we leveraged advances in target-capture sequencing for phylogenomics to propose that the modern bird radiation comprises nine super-ordinal groups which diversified in close association with the K---Pg boundary. Our study investigated these questions across a family-level sample of avian species using hundreds of genetic markers. We presented strong support for novel relationships and the first "next-generation" phylogenomic evidence for hundreds of key relationships across the avian tree of life. In addition, we advanced several statistical approaches for [phylogenetic experimental design](https://academic.oup.com/sysbio/article/68/1/145/5043533). These approaches, which include metrics of "phylogenetic informativeness," empower researchers to design phylogenetic inference studies to have maximum statistical power to address specific hypotheses.
-
-
-
 
 ***Genomic Signature of an Avian Lilliput Effect across the K--Pg Extinction***
 
