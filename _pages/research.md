@@ -29,7 +29,7 @@ My research program as an evolutionary biologist is integrative by design, and e
 - Population genomics 
 - Areas of Endemism
 
-Below, you can learn more about two branches of my research program:
+Below, you can learn more about the different branches of my research program:
 
 <nbsp>
 
