@@ -1,11 +1,11 @@
 ---
 title: "Phylogenetic Comparative Methods"
 layout: single-portfolio
-excerpt: "<img src='/images/research/haeckel_humm.jpg' alt='Ernst Haeckel Hummingbirds Plate #99'>"
+excerpt: "<img src='/images/research/Yggdrasil-cropped.jpg' alt='Yggdrasil'>"
 collection: research
-order_number: 40
+order_number: 3
 header: 
-  og_image: "research/haeckel_humm.jpg"
+  og_image: "research/Yggdrasil-cropped.jpg"
 ---
 
 ### **My research program seeks to unify hypothesis testing with data-driven approaches to investigate the factors that generate evolutionary patterns across scales, a concept that has been called "Phylogenetic Natural History" ([Uyeda *et al* 2018](https://academic.oup.com/sysbio/article/67/6/1091/4985805)).**
