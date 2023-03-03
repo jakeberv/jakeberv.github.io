@@ -73,11 +73,11 @@ social:
 
 # Analytics
 analytics:
-  provider               : "google-universal" # false (default), "google", "google-universal", "custom", "goatcounter"
+  provider               : "goatcounter" # false (default), "google", "google-universal", "custom", "goatcounter"
   google:
     tracking_id          : 
   goatcounter:
-    code		 : 
+    code		 : jakeberv
 
 
 # Site Author
@@ -244,6 +244,9 @@ defaults:
       layout: talk
       author_profile: true
       share: true
+
+
+
 
 # Sass/SCSS
 sass:
