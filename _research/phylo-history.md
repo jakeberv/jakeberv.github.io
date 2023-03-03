@@ -8,13 +8,15 @@ header:
   og_image: "research/haeckel_humm.jpg"
 ---
 
-### **My research program seeks to unify hypothesis testing with data-driven approaches to investigate the factors that generate evolutionary patterns across scales, a concept that has been called "Phylogenetic Natural History" ([Uyeda *et al* 2018](https://academic.oup.com/sysbio/article/67/6/1091/4985805)).**
+### My research program unifies hypothesis testing with data-driven approaches to uncover the factors that generate evolutionary patterns---a concept that has been called "Phylogenetic Natural History" ([Uyeda *et al* 2018](https://academic.oup.com/sysbio/article/67/6/1091/4985805)).
 
 ![Anthropomorphic Echo by Salvador Dali](/images/research/Anthropomorphic_Echo_web.jpg)
 
 ------------------------------------------------------------------------
 
-### Evolutionary biologists can now access whole genomes, range maps for thousands of species, eons of ecological and climate information, and millions of preserved museum specimens. Integrating these data types to answer questions about biological processes and how they have shaped our world is an emerging "grand challenge" in biodiversity science. Deciphering this flood of data has created new imperatives for the training of researchers in the life sciences.
+### With access whole genomes, range maps for thousands of species, eons of ecological and climate information, and millions of preserved museum specimens, deciphering a flood of data has created new imperatives for the training of researchers in the life sciences.
+
+### Integrating these data types to answer questions about biological processes and how they have shaped our world is an emerging "grand challenge" in biodiversity science. 
 
 ### In my work, I have applied the concept of "Phylogenetic Natural History" by merging domains of natural history, data science, computational biology, paleontology, and genomics.
 
@@ -33,4 +35,3 @@ A well-recognized issue in systematic biology is that the signal of clade origin
 ***Molecular early burst associated with the diversification of birds at the K--Pg boundary***
 
 As a Life Sciences Fellow at the University of Michigan (2019-2023), I explored the idea that variation in the "tempo" or speed, and "mode" or processes of evolutionary change can confound the interpretation of phylogenetic data. In research now available [on bioRxiv as a preprint](https://www.biorxiv.org/content/10.1101/2022.10.21.513146v1), I investigated molecular model heterogeneity across crown bird phylogeny using a technique enabling inferred sequence substitution models to transition across the history of a clade. I identified distinct patterns across exons, introns, untranslated regions, and mitochondrial genomes that reflect shifts in key processes of molecular evolution. Multiple model shifts map to lineages originating shortly after the end-Cretaceous extinction, demonstrating a burst of genomic disparity early in the evolutionary history of birds. In addition to increasing our knowledge of macroevolutionary patterns, our study provides strong evidence that deep-time shifts in processes of genome evolution were associated with changes in avian life history, physiology, and development. [Seminar recording](https://bit.ly/berv_OIST_2022)
-
