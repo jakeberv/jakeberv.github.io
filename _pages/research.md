@@ -18,8 +18,6 @@ I am fascinated by how microevolutionary genetic processes operating at the leve
 
 {% for post in ordered_pages %} {% include archive-single.html type="grid" %} {% endfor %}
 
-------------------------------------------------------------------------
-
-testing 
+---
 
 ![The Persistence of Memory, by Salvador Dalí](https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/persistence_of_memory-research.jpg) [The Persistence of Memory](https://www.thehourglass.com/au/cultural-perspectives/salvador-dali/), by Salvador Dalí
