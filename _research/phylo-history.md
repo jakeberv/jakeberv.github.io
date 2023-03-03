@@ -14,9 +14,9 @@ header:
 
 ------------------------------------------------------------------------
 
-### With access whole genomes, range maps for thousands of species, eons of ecological and climate information, and millions of preserved museum specimens, deciphering a flood of data has created new imperatives for the training of researchers in the life sciences.
+### A need to decipher whole genomes, range maps for thousands of species, eons of ecological and climate information, in the context of millions of preserved museum specimens has created new imperatives for the training of researchers in the life sciences.
 
-### Integrating these data types to answer questions about biological processes and how they have shaped our world is an emerging "grand challenge" in biodiversity science. 
+### Integrating these data types to answer questions about biological processes and how they have shaped our world is an emerging "grand challenge" in biodiversity science.
 
 ### In my work, I have applied the concept of "Phylogenetic Natural History" by merging domains of natural history, data science, computational biology, paleontology, and genomics.
 
