@@ -18,17 +18,13 @@ Resolving the evolutionary history of groups of organisms that are suspected to 
 
 ***A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing***
 
-
-<img src="/images/research/Prum-Bird-Evolution.jpeg" align="right"/>
-
-
-<a href="https://example.com">
-  <img src="/images/research/Prum-Bird-Evolution.jpeg" align="right" width="425"/>
+<a href="https://jakeberv.com/publication/2015-10-07-Prum_Berv_et_al_2015">
+  <img src="/images/research/Prum-Bird-Evolution.jpeg" align="center" width="600"/>
 </a>
 
 
-
 First, I highlight a collaborative effort that 1) investigated the relationships among modern bird families and 2) estimated a new timescale of avian diversification ([Prum, Berv, et al. 2015, Nature](https://jakeberv.com/publication/2015-10-07-Prum_Berv_et_al_2015)). Here, we leveraged advances in target-capture sequencing for phylogenomics to propose that the modern bird radiation comprises nine super-ordinal groups which diversified in close association with the K---Pg boundary. Our study investigated these questions across a family-level sample of avian species using hundreds of genetic markers. We presented strong support for novel relationships and the first "next-generation" phylogenomic evidence for hundreds of key relationships across the avian tree of life. In addition, we advanced several statistical approaches for [phylogenetic experimental design](https://academic.oup.com/sysbio/article/68/1/145/5043533). These approaches, which include metrics of "phylogenetic informativeness," empower researchers to design phylogenetic inference studies to have maximum statistical power to address specific hypotheses.
+
 
 ***Genomic Signature of an Avian Lilliput Effect across the K--Pg Extinction***
 
