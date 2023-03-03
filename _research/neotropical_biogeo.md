@@ -3,7 +3,7 @@ title: "Neotropical biogeography"
 layout: single-portfolio
 excerpt: "<img src='/images/research/geographie_der_Pflanzen-resized.jpg' alt='Map of Mount Chimborazo in Ecuador. By depicting plant life according to elevation, this map connects disparate climate zones across the globe.'>"
 collection: research
-order_number: 20
+order_number: 30
 header: 
   og_image: "research/geographie_der_Pflanzen-resized.jpg"
 ---

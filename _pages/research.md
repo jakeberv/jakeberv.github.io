@@ -37,4 +37,4 @@ Below, you can learn more about the different branches of my research program:
 
 {% assign ordered_pages = site.research \| sort:"order_number" %}
 
-{% for post in ordered_pages %} {% include archive-single.html type="grid" %} {% endfor %}
+{% for post in ordered_pages %} {% include archive-single.html type="list" %} {% endfor %}
