@@ -21,13 +21,15 @@ Resolving the evolutionary history of groups of organisms that are suspected to 
 
 **A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing**
 
-<a href="https://doi.org/10.1038/nature15697"> <img src="/images/research/Prum-Bird-Evolution.jpeg" width="60%" style="display: block; margin: 0 auto;"/> </a>
+<a href="https://doi.org/10.1038/nature15697"> <img src="/images/research/Prum-Bird-Evolution.jpeg" width="60%" style="display: block; margin: 0 auto;"/></a>
 
 First, I highlight a collaborative effort that 1) investigated the relationships among modern bird families and 2) estimated a new timescale of avian diversification ([Prum, Berv, et al. 2015, Nature](https://jakeberv.com/publication/2015-10-07-Prum_Berv_et_al_2015)). Here, we leveraged advances in target-capture sequencing for phylogenomics to propose that the modern bird radiation comprises nine super-ordinal groups which diversified in close association with the K---Pg boundary. Our study investigated these questions across a family-level sample of avian species using hundreds of genetic markers. We presented strong support for novel relationships and the first "next-generation" phylogenomic evidence for hundreds of key relationships across the avian tree of life. In addition, we advanced several statistical approaches for [phylogenetic experimental design](https://academic.oup.com/sysbio/article/68/1/145/5043533). These approaches, which include metrics of "phylogenetic informativeness," empower researchers to design phylogenetic inference studies to have maximum statistical power to address specific hypotheses.
+[Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Prum_Berv_et_al_2015.pdf){: .btn--research} 
 
 <iframe src="/files/pdf/research/23.5x70-poster.pdf" width="100%" height="500" frameborder="no" border="0" marginwidth="0" marginheight="0">
 </iframe>
-You can download a PDF copy this poster [here](/files/pdf/research/23.5x70-poster.pdf). Email me for a door sized, printed copy (I have dozens left).
+[Download Poster](/files/pdf/research/23.5x70-poster.pdf){: .btn--research} 
+Email me for a door sized, printed copy (I have dozens left).
 
 **Genomic Signature of an Avian Lilliput Effect across the K--Pg Extinction**
 
@@ -36,9 +38,11 @@ A well-recognized issue in systematic biology is that the signal of clade origin
 <a href="https://doi.org/10.1093/sysbio/syx064"><img src="/images/research/Field_et_al_2020-scaling.png" width="75%" style="display: block; margin: 0 auto;"/></a>
 
 In [Berv and Field 2018, Systematic Biology](https://jakeberv.com/publication/2018-01-01-Berv_Field_2018), we investigated the hypothesis that a K---Pg-induced acceleration in the rate of avian genome evolution may explain part of this discrepancy. Our hypothesis was derived from fossil evidence that mass extinctions can select against large-bodied organisms through several mechanisms known collectively as the "Lilliput effect." Because smaller-bodied birds also tend to have faster-evolving genomes, the presence of an avian Lilliput effect across the K---Pg boundary may obscure our ability to address fundamental questions about the origin of modern birds. We conclude that similarly integrated evolutionary responses to mass extinctions may apply to other groups of organisms---and may artificially inflate estimates of divergence times implied by molecular sequences (see CV for talk recordings).
+[Download Paper](https://jakeberv.com/publication/2018-01-01-Berv_Field_2018){: .btn--research} 
 
-<a href="https://doi.org/10.1093/sysbio/syx064"> <img src="/images/research/syx064f2.jpeg" width="75%" style="display: block; margin: 0 auto;"/></a>
+<a href="https://doi.org/10.1093/sysbio/syx064"><img src="/images/research/syx064f2.jpeg" width="75%" style="display: block; margin: 0 auto;"/></a>
 
-*Molecular early burst associated with the diversification of birds at the K--Pg boundary*
+**Molecular early burst associated with the diversification of birds at the K--Pg boundary**
 
-As a Life Sciences Fellow at the University of Michigan (2019-2023), I explored the idea that variation in the "tempo" or speed, and "mode" or processes of evolutionary change can confound the interpretation of phylogenetic data. In research now available [on bioRxiv as a preprint](https://www.biorxiv.org/content/10.1101/2022.10.21.513146v1), I investigated molecular model heterogeneity across crown bird phylogeny using a technique enabling inferred sequence substitution models to transition across the history of a clade. I identified distinct patterns across exons, introns, untranslated regions, and mitochondrial genomes that reflect shifts in key processes of molecular evolution. Multiple model shifts map to lineages originating shortly after the end-Cretaceous extinction, demonstrating a burst of genomic disparity early in the evolutionary history of birds. In addition to increasing our knowledge of macroevolutionary patterns, our study provides strong evidence that deep-time shifts in processes of genome evolution were associated with changes in avian life history, physiology, and development. [Seminar recording](https://bit.ly/berv_OIST_2022)
+As a Life Sciences Fellow at the University of Michigan (2019-2023), I explored the idea that variation in the "tempo" or speed, and "mode" or processes of evolutionary change can confound the interpretation of phylogenetic data. In research now available [on bioRxiv as a preprint](https://www.biorxiv.org/content/10.1101/2022.10.21.513146v1), I investigated molecular model heterogeneity across crown bird phylogeny using a technique enabling inferred sequence substitution models to transition across the history of a clade. I identified distinct patterns across exons, introns, untranslated regions, and mitochondrial genomes that reflect shifts in key processes of molecular evolution. Multiple model shifts map to lineages originating shortly after the end-Cretaceous extinction, demonstrating a burst of genomic disparity early in the evolutionary history of birds. In addition to increasing our knowledge of macroevolutionary patterns, our study provides strong evidence that deep-time shifts in processes of genome evolution were associated with changes in avian life history, physiology, and development.
+[Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_et_al_2022.pdf){: .btn--research}[Seminar recording](https://bit.ly/berv_OIST_2022){: .btn--research}
