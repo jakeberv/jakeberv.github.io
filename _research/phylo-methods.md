@@ -7,5 +7,3 @@ order_number: 3
 header: 
   og_image: "research/Yggdrasil-cropped.jpg"
 ---
-
-Coming soon

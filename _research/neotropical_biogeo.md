@@ -10,5 +10,4 @@ header:
 
 Coming soon
 
-
 [Working Paper](https://preprints.apsanet.org/engage/api-gateway/apsa/assets/orp/resource/item/61115b4018911da2f6dd1def/original/they-re-still-there-he-s-all-gone-american-fatalities-in-foreign-wars-and-right-wing-radicalization-at-home.pdf){: .btn--research} [Supplemental Information](https://preprints.apsanet.org/engage/api-gateway/apsa/assets/orp/resource/item/61115c914cb47968ba2bb2d8/original/appendix-for-they-re-still-there-he-s-all-gone-american-fatalities-in-foreign-wars-and-right-wing-radicalization-at-home.pdf){: .btn--research}
