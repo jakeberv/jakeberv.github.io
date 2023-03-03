@@ -2,7 +2,7 @@
 permalink: /
 title: "About me"
 excerpt: "About me"
-title: "Jacob S. Berv, PhD"
+#title: "Jacob S. Berv, PhD"
 author_profile: true
 redirect_from: 
   - /about/
