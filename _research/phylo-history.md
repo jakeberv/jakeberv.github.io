@@ -8,14 +8,10 @@ header:
   og_image: "research/haeckel_humm.jpg"
 ---
 
-![The Succession of Strata](/images/research/Smith.jpg "William Smith's Succession of Strata-- the first map to identify layers of rock based on fossil content, instead of mineral content")
-
-
 <figure>
-  <img src="/images/research/Smith.jpg" alt="my alt text"/>
-  <figcaption>This is my caption text.</figcaption>
+  <img src="/images/research/Smith.jpg" alt="William Smith's Succession of Strata"/>
+  <figcaption>William Smith's Succession of Strata-- the first map to identify layers of rock based on fossil content, instead of mineral content.</figcaption>
 </figure>
-
 
 
 [Phylogeny](https://en.wiktionary.org/wiki/phylogeny) is the conceptual and practical framework for studying biodiversity from an evolutionary perspective. My research program unifies hypothesis testing with data-driven approaches in phylogenetics to uncover the factors that generate evolutionary patterns---a concept that has been called "Phylogenetic Natural History" ([Uyeda *et al* 2018](https://academic.oup.com/sysbio/article/67/6/1091/4985805)). In my work, I have applied the concept of "Phylogenetic Natural History" by merging domains of natural history, data science, computational biology, paleontology, and genomics.
