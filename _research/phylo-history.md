@@ -18,8 +18,14 @@ Resolving the evolutionary history of groups of organisms that are suspected to 
 
 ***A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing***
 
-<a href="https://jakeberv.com/publication/2015-10-07-Prum_Berv_et_al_2015">
-  <img src="/images/research/Prum-Bird-Evolution.jpeg" align="center" width="600"/>
+<a href="https://doi.org/10.1038/nature15697">
+  <img src="/images/research/Prum-Bird-Evolution.jpeg" align="center" width="500"/>
+</a>
+
+
+
+<a href="https://doi.org/10.1038/nature15697">
+  <img src="/images/research/Prum-Bird-Evolution.jpeg" width="500" style="display: block; margin: 0 auto;" />
 </a>
 
 
