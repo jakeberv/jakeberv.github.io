@@ -12,7 +12,7 @@ header:
   image: "research/persistence_of_memory-about-header.jpg"
   #overlay_image: "research/persistence_of_memory-about-header.jpg"
   #overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
-  #caption: "**Salvador Dalí**"
+  caption: "**Salvador Dalí**"
   #actions:
   #  - label: "Download"
   #    url: "https://github.com"
