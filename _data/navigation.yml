@@ -9,17 +9,17 @@ main:
   - title: "Teaching"
     url: /teaching/
     
-  - title: "People"
-    url: /people/
-    
-  - title: "Service"
-    url: /service/
-
-  - title: "Software"
-    url: /software/
-
-  - title: "Posts"
-    url: /posts/
+  # - title: "People"
+  #   url: /people/
+  #   
+  # - title: "Service"
+  #   url: /service/
+  # 
+  # - title: "Software"
+  #   url: /software/
+  # 
+  # - title: "Posts"
+  #   url: /posts/
     
   - title: "CV"
     url: /cv/
