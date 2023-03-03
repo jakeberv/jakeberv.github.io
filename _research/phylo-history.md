@@ -10,7 +10,7 @@ header:
 
 ### **My research program seeks to unify hypothesis testing with data-driven approaches to investigate the factors that generate evolutionary patterns across scales, a concept that has been called "Phylogenetic Natural History" ([Uyeda *et al* 2018](https://academic.oup.com/sysbio/article/67/6/1091/4985805)).**
 
-![Anthropomorphic Echo by Salvador Dali](/research/Anthropomorphic_Echo_web.jpg)
+![Anthropomorphic Echo by Salvador Dali](/images/research/Anthropomorphic_Echo_web.jpg)
 
 ------------------------------------------------------------------------
 
