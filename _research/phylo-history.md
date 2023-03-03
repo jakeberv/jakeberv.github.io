@@ -8,19 +8,13 @@ header:
   og_image: "research/haeckel_humm.jpg"
 ---
 
-### My research program unifies hypothesis testing with data-driven approaches to uncover the factors that generate evolutionary patterns---a concept that has been called "Phylogenetic Natural History" ([Uyeda *et al* 2018](https://academic.oup.com/sysbio/article/67/6/1091/4985805)).
-
 ![Anthropomorphic Echo by Salvador Dali](/images/research/Anthropomorphic_Echo_web.jpg)
 
-------------------------------------------------------------------------
+[Phylogeny](https://en.wiktionary.org/wiki/phylogeny) is the conceptual and practical framework for studying biodiversity from an evolutionary perspective. My research program unifies hypothesis testing with data-driven approaches in phylogenetics to uncover the factors that generate evolutionary patterns---a concept that has been called "Phylogenetic Natural History" ([Uyeda *et al* 2018](https://academic.oup.com/sysbio/article/67/6/1091/4985805)). In my work, I have applied the concept of "Phylogenetic Natural History" by merging domains of natural history, data science, computational biology, paleontology, and genomics.
 
-### A need to decipher whole genomes, range maps for thousands of species, eons of ecological and climate information, in the context of millions of preserved museum specimens has created new imperatives for the training of researchers in the life sciences.
+### Deep-time natural history through the lens of molecular evolution
 
-### Integrating these data types to answer questions about biological processes and how they have shaped our world is an emerging "grand challenge" in biodiversity science.
-
-### In my work, I have applied the concept of "Phylogenetic Natural History" by merging domains of natural history, data science, computational biology, paleontology, and genomics.
-
-**Research area:** Deep-time natural history through the lens of molecular evolution
+![The Succession of Strata](/images/research/Smith.jpg)
 
 Resolving the evolutionary history of groups of organisms that are suspected to have rapidly diversified is a fundamental challenge in systematic biology -- and one which tests the limits of what can be known. My current research interests in this topic are motivated by the extinction of the non-avian dinosaurs and the subsequent diversification of vertebrate clades towards the end of the Mesozoic 66 million years ago (the K---Pg boundary). In particular, the phylogeny of modern birds at this timescale is a complicated and compelling problem in evolutionary biology. Further, the specific issues which make resolving avian phylogeny challenging may provide critical insights into the impact of the end-Cretaceous extinction on the diversification of life in the Cenozoic, with implications for contemporary conservation biology.
 
