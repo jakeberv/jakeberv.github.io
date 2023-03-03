@@ -1,5 +1,5 @@
 ---
-title: "Phylogenetic Natural History"
+title: "Natural History"
 layout: single-portfolio
 excerpt: "<img src='/images/research/haeckel_humm.jpg' alt='Ernst Haeckel Hummingbirds Plate #99'>"
 collection: research
