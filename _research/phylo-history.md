@@ -18,17 +18,13 @@ Resolving the evolutionary history of groups of organisms that are suspected to 
 
 ***A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing***
 
-[testing](/images/research/Prum-Bird-Evolution.jpeg "testing"=50%x)
-
 
 <img src="/images/research/Prum-Bird-Evolution.jpeg" align="right"/>
 
 
-
-|             Solarized dark             |            Solarized Ocean             |
-|:--------------------------------------:|:--------------------------------------:|
-| ![](/images/research/haeckel_humm.jpg) | ![](/images/research/haeckel_humm.jpg) |
-
+<a href="https://example.com">
+  <img src="/images/research/Prum-Bird-Evolution.jpeg" align="right" width="425"/>
+</a>
 
 
 
