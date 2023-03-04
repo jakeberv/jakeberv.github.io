@@ -9,9 +9,13 @@ header:
 ---
 
 <figure>
-  <img src="/images/research/the-elephants-large.jpg" alt="The Elephants by Salvador Dalí"/>
+  <img src="/images/research/three_elephants.jpeg" alt="The Elephants by Salvador Dalí"/>
   <figcaption> The stork-legged elephant is one of the best-known icons of Dalí's work </figcaption>
 </figure>
+
+
+By synthesizing data from physiological, anatomical, life history, and genomic datasets with predictions from population genetic theory, I aspire to help define a modern approach to studying macroevolutionary patterns across the tree of life. This includes 
+
 
 #Cotingas
 <a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_Prum_2014.pdf"><img src="/images/research/CircleTree-LOO-PR.png" width="85%" style="display: block; margin: 0 auto;"/></a>

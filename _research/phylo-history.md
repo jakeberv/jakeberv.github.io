@@ -47,8 +47,22 @@ In [Berv and Field 2018, Systematic Biology](https://jakeberv.com/publication/20
 As a Life Sciences Fellow at the University of Michigan (2019-2023), I explored the idea that variation in the "tempo" or speed, and "mode" or processes of evolutionary change can confound the interpretation of phylogenetic data. In research now available [on bioRxiv as a preprint](https://www.biorxiv.org/content/10.1101/2022.10.21.513146v1), I investigated molecular model heterogeneity across crown bird phylogeny using a technique enabling inferred sequence substitution models to transition across the history of a clade. I identified distinct patterns across exons, introns, untranslated regions, and mitochondrial genomes that reflect shifts in key processes of molecular evolution. Multiple model shifts map to lineages originating shortly after the end-Cretaceous extinction, demonstrating a burst of genomic disparity early in the evolutionary history of birds. In addition to increasing our knowledge of macroevolutionary patterns, our study provides strong evidence that deep-time shifts in processes of genome evolution were associated with changes in avian life history, physiology, and development.
 [Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_et_al_2022.pdf){: .btn--research}[Seminar recording](https://bit.ly/berv_OIST_2022){: .btn--research}
 
+---
 
-## Deep sea invertebrates
+## Habitat-associated evolutionary rates in deep-sea chemosynthetic invertebrates
+
+Using a natural experiment in the energy-starved deep sea, where mussels and tubeworms have diversified across chemosynthetic environments, we investigate a novel resource longevity hypothesis that predicts an inverse relationship between the longevity of limiting resources and consumers’ rates of genome evolution.
+
+In the deep sea, organic falls (e.g., whale falls), hydrothermal vents, and cold seeps create ephemeral patches of productivity that persist over different lengths of time, ranging from decades to millennia. These longevities induce a hard maximum on a community’s life cycle, and thus, are predicted to select for consumers with life-histories adapted to ephemeral resources. As variation along the life-history spectrum often corresponds with variation in the rate of genome evolution, we predicted a signature of habitat longevities might be recorded in the genomes of consumer specialists.
+
+Our study documents the first example (to our knowledge) of a widespread relationship between habitat longevity and rates of mitochondrial evolution
+
+
+
+
+
+
+
 
 
 ### Future research questions in these areas:
