@@ -51,21 +51,21 @@ As a Life Sciences Fellow at the University of Michigan (2019-2023), I explored 
 
 ## Habitat-associated evolutionary rates in deep-sea chemosynthetic invertebrates
 
-Using a natural experiment in the energy-starved deep sea, where mussels and tubeworms have diversified across chemosynthetic environments, we investigate a novel resource longevity hypothesis that predicts an inverse relationship between the longevity of limiting resources and consumers’ rates of genome evolution.
+Using a natural experiment in the energy-starved deep sea, where mussels and tubeworms have diversified across chemosynthetic environments, I investigated a novel resource longevity hypothesis that predicts an inverse relationship between the longevity of limiting resources and consumers’ rates of genome evolution.
 
-In the deep sea, organic falls (e.g., whale falls), hydrothermal vents, and cold seeps create ephemeral patches of productivity that persist over different lengths of time, ranging from decades to millennia. These longevities induce a hard maximum on a community’s life cycle, and thus, are predicted to select for consumers with life-histories adapted to ephemeral resources. As variation along the life-history spectrum often corresponds with variation in the rate of genome evolution, we predicted a signature of habitat longevities might be recorded in the genomes of consumer specialists.
+[![Alt text](https://img.youtube.com/vi/zeZNcDHDMzo/0.jpg)](https://www.youtube.com/watch?v=zeZNcDHDMzo)
+https://slate.com/technology/2019/10/decomposing-whale-carcass-nautilus-video.html
 
-Our study documents the first example (to our knowledge) of a widespread relationship between habitat longevity and rates of mitochondrial evolution
+In the deep sea, organic falls (e.g., whale falls), hydrothermal vents, and cold seeps create ephemeral patches of productivity that persist over different lengths of time, ranging from decades to millennia. These longevities induce a hard maximum on a community’s life cycle, and thus, are predicted to select for consumers with life-histories adapted to ephemeral resources.
 
+<a href="https://hakaimagazine.com/news/how-dead-whales-seem-to-connect-deep-sea-life/"><img src="/images/research/header-deliberate-whale-fall.jpg" width="85%" style="display: block; margin: 0 auto;"/></a>
 
+As variation along the life-history spectrum often corresponds with variation in the rate of genome evolution, we predicted a signature of habitat longevities might be recorded in the genomes of consumer specialists. Our study documents the first example (to our knowledge) of a widespread relationship between habitat longevity and rates of mitochondrial evolution.
 
-
-
-
-
-
+<a href="https://pixels.com/featured/black-smoker-hydrothermal-vent-jose-antonio-penasscience-photo-library.htm"><img src="/images/research/black-smoker-hydrothermal-vent-jose-antonio-penasscience-photo-library.jpg" width="65%" style="display: block; margin: 0 auto;"/></a>
 
 ### Future research questions in these areas:
+
 1)	How and why do the tempo and mode of evolution vary across genomes and lineages?
 •	For example, considering whole genome data across vertebrates, are patterns of evolutionary tempo and mode conserved across different genetic elements (e.g., exons, introns, UTRs, regulatory and transposable elements, organelle genomes, etc.)?
 2)	How have major events in Earth’s history impacted genome evolution and diversification patterns?
