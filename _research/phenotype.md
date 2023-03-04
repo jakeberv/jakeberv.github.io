@@ -18,9 +18,12 @@ By synthesizing data from physiological, anatomical, life history, and genomic d
 ## Sexual selection
 
 ### The evolution of sexual dichromatism in Neotropical Cotingas
-<a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_Prum_2014.pdf"><img src="/images/research/CircleTree-LOO-PR.png" width="85%" style="display: block; margin: 0 auto;"/></a>
+<a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_Prum_2014.pdf"><img src="/images/research/CircleTree-LOO-PR.png" width="75%" style="display: block; margin: 0 auto;"/></a>
 
 ### The evolution of feather-instruments in a clade of "bee" hummingbirds
-<a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Clark_et_al_2018.pdf"><img src="/images/research/bee-hummingbird.png" width="65%" style="display: block; margin: 0 auto;"/></a>
+<a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Clark_et_al_2018.pdf"><img src="/images/research/bee-hummingbird.png" width="75%" style="display: block; margin: 0 auto;"/></a>
 
 ### Modes of fish shape evolution across the Phanerozoic
+
+
+
