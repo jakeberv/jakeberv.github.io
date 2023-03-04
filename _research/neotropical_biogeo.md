@@ -29,3 +29,6 @@ Our study applied short-read sequencing technology to generate thousands of gene
 My investigations of Pseudopipra have required close collaboration with scientists at the [Instituto Nacional de Pesquisas da Amazônia](https://www.gov.br/inpa/pt-br) (INPA) in Manaus, Brazil. As we emerge from COVID-19, I hope to re-invigorate these relationships and resume field studies and specimen collection efforts with students from my home institution.
 
 Field work photos coming soon.
+
+---
+[Return to Research Home](https://wwwjakeberv.com/research){: .btn--research}
