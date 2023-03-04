@@ -18,7 +18,7 @@ header:
   #    url: "https://github.com"
 ---
 
-{% last_modified_at %}
+Last updated on {{ site.github.updated_at | date: "%B %d, %Y" }}
 
 *My research integrates data from natural history, ecology, genomics, and paleontology---often through the application of novel computation tools---in order to understand the links between micro- and macroevolution.*
 
