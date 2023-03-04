@@ -10,7 +10,7 @@ header:
 
 <figure>
   <img src="/images/research/swans-reflecting-elephants.jpg" alt="Swans Reflecting Elephants by Salvador Dalí"/>
-  <figcaption> Swans Reflecting Elephants, Dalí 1937. A "spontaneous method of irrational understanding based upon the interpretative critical association of delirious phenomena." </figcaption>
+  <figcaption> Swans Reflecting Elephants, Dalí 1937. A "spontaneous method of irrational understanding based upon the interpretative critical association of delirious phenomena."</figcaption>
 </figure>
 
 ## [“Ghosts in the machine”](https://grammarist.com/idiom/ghost-in-the-machine/#:~:text=Computer%20programmers%20have%20appropriated%20the,comparison%20that%20is%20made%20figuratively.) of phylogenetic comparative methods
