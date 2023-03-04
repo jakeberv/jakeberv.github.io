@@ -14,8 +14,6 @@ header:
 </figure>
 
 
-
-
 #Cotingas
 <a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_Prum_2014.pdf"><img src="/images/research/CircleTree-LOO-PR.png" width="85%" style="display: block; margin: 0 auto;"/></a>
 
