@@ -10,8 +10,8 @@ header:
 
 <figure>
   <div style="display:flex">
-    <img src="/images/research/ernst-haeckel-art-forms-in-nature-plate-79-lacertilia-1904-trivium-art-history.jpeg" style="flex:1;max-width:50%"">
-    <img src="/images/research/ernst-haeckel-art-forms-in-nature-plate-62-nepenthaceae-1904-trivium-art-history.jpeg" style="flex:1;max-width:50%"">
+    <img src="/images/research/ernst-haeckel-art-forms-in-nature-plate-79-lacertilia-1904-trivium-art-history.jpeg" style="flex:1;width:50%"">
+    <img src="/images/research/ernst-haeckel-art-forms-in-nature-plate-62-nepenthaceae-1904-trivium-art-history.jpeg" style="flex:1;width:50%"">
   </div>
   <figcaption>Plates by Ernst Haeckel </figcaption>
 </figure>
