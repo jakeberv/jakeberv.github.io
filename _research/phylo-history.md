@@ -19,7 +19,7 @@ header:
 
 Resolving the evolutionary history of groups of organisms that are suspected to have rapidly diversified is a fundamental challenge in systematic biology -- and one which tests the limits of what can be known. My current research interests in this topic are motivated by the extinction of the non-avian dinosaurs and the subsequent diversification of vertebrate clades towards the end of the Mesozoic 66 million years ago (the K---Pg boundary).
 
-<a href="https://doi.org/10.1038/nature15697"> <img src="/images/research/Prum-Bird-Evolution.jpeg" width="75%" style="display: block; margin: 0 auto;"/></a>
+<a href="https://doi.org/10.1038/nature15697"> <img src="/images/research/Prum-Bird-Evolution.jpeg" width="80%" style="display: block; margin: 0 auto;"/></a>
 
 **A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing**
 
@@ -35,12 +35,12 @@ Email me for a door sized, printed copy (I have dozens left).
 
 A well-recognized issue in systematic biology is that the signal of clade origination times from the fossil record and inferences made from molecular sequences are often incompatible. One way this phenomenon manifests is in discordance between estimates of the ages of higher taxa implied by the fossil record and in molecular model-based inferences of divergence times (e.g., from molecular clock models). Such discrepancies between the fossil record and the signal in molecular data make it difficult to reliably assess the impact of events in Earth's history on the diversification of life's major groups. In the case of modern birds, the fossil record implies that major sub-groups originated close to the K---Pg boundary (\~66Ma). In contrast, molecular-clock estimates often indicate much older ages (100-150+ Ma).
 
-<a href="https://doi.org/10.1093/sysbio/syx064"><img src="/images/research/Field_et_al_2020-scaling.png" width="75%" style="display: block; margin: 0 auto;"/></a>
+<a href="https://doi.org/10.1093/sysbio/syx064"><img src="/images/research/Field_et_al_2020-scaling.png" width="100%" style="display: block; margin: 0 auto;"/></a>
 
 In [Berv and Field 2018, Systematic Biology](https://jakeberv.com/publication/2018-01-01-Berv_Field_2018), we investigated the hypothesis that a K---Pg-induced acceleration in the rate of avian genome evolution may explain part of this discrepancy. Our hypothesis was derived from fossil evidence that mass extinctions can select against large-bodied organisms through several mechanisms known collectively as the "Lilliput effect." Because smaller-bodied birds also tend to have faster-evolving genomes, the presence of an avian Lilliput effect across the K---Pg boundary may obscure our ability to address fundamental questions about the origin of modern birds. We conclude that similarly integrated evolutionary responses to mass extinctions may apply to other groups of organisms---and may artificially inflate estimates of divergence times implied by molecular sequences (see CV for talk recordings).
 [Download Paper](https://jakeberv.com/publication/2018-01-01-Berv_Field_2018){: .btn--research} 
 
-<a href="https://academic.oup.com/sysbio/article/67/1/1/3960267#:~:text=Model%20of%20the,available%20on%20Dryad."><img src="/images/research/syx064f2.jpeg" width="75%" style="display: block; margin: 0 auto;"/></a>
+<a href="https://academic.oup.com/sysbio/article/67/1/1/3960267#:~:text=Model%20of%20the,available%20on%20Dryad."><img src="/images/research/syx064f2.jpeg" width="100" style="display: block; margin: 0 auto;"/></a>
 
 **Molecular early burst associated with the diversification of birds at the K--Pg boundary**
 

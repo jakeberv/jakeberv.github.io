@@ -23,8 +23,9 @@ My first paper on this topic focused on the potential impact of ecological filte
 <iframe src="/files/pdf/research/curbio_28_11_3c.pdf" width="100%" height="500" frameborder="no" border="0" marginwidth="0" marginheight="0">
 </iframe> [Artwork by Phillip Krzeminski](https://www.phillipmk.com/){: .btn--research} 
 
-Later, we investigated the same hypothesis in [mammals](https://onlinelibrary.wiley.com/doi/10.1002/ece3.8114), and discovered similar patterns
-[Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Hughes_et_al_2021.pdf){: .btn--research}
+We later investigated the same hypothesis in [mammals](https://onlinelibrary.wiley.com/doi/10.1002/ece3.8114), and discovered similar patterns.
+---
+<a href="https://doi.org/10.1002/ece3.8114"><img src="/images/research/ece38114-fig-0003-m.jpg" width="100%" style="display: block; margin: 0 auto;"/></a>[Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Hughes_et_al_2021.pdf){: .btn--research}
 
 I am currently examining these patterns across the Cenozoic diversification of frogs.
 
@@ -32,7 +33,3 @@ I am currently examining these patterns across the Cenozoic diversification of f
 
 The application of statistical models to the study of speciation and extinction has revolutionized our understanding of macroevolutionary history. Recently, several studies have reported inverse latitudinal gradients in speciation rates, contrary to predictions from ecological theory, which posits that the latitudinal diversity gradient derives from increased speciation toward the tropics. In research currently in final prep, I investigated these global patterns using simulations to study whether and when the models commonly used to study patterns of diversification may provide misleading results. I have focused on identifying scenarios where a lack of biological realism concerning time-heterogeneous patterns of molecular evolution can drive pre-determined outcomes in statistical analyses of lineage diversification. Incorporating increased biological realism into these models, I show that global patterns reported in the literature across many taxonomic groups may be statistical artifacts.
 [2021 Seminar recording](https://bit.ly/berv_umich_2021){: .btn--research}
-
-
-
-
