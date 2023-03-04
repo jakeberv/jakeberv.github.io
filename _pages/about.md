@@ -20,8 +20,6 @@ header:
 
 *My research integrates data from natural history, ecology, genomics, and paleontology---often through the application of novel computation tools---in order to understand the links between micro- and macroevolution.*
 
-*A need to decipher whole genomes, range maps for thousands of species, eons of ecological and climate information in the context of millions of preserved museum specimens has created new imperatives for the training of researchers in the life sciences. Integrating these data types to answer questions about biological processes and how they have shaped our world is an emerging "grand challenge" in biodiversity science.*
-
 Since November, 2019, I have been a [Life Sciences Fellow](https://lifescifellows.umich.edu/) at the University of Michigan. I am affiliated with the [Department of Ecology and Evolutionary Biology](https://lsa.umich.edu/eeb/people/postdoctoral-fellows/jacob-berv.html), [Earth and Environmental Sciences](https://lsa.umich.edu/earth/research/paleontology.html), and the [University of Michigan Museum of Zoology](https://lsa.umich.edu/ummz).
 
 In February 2023, I was awarded an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/ai-in-science/) to further develop an interdisciplinary [research program](jakeberv.com/research).
