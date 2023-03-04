@@ -22,7 +22,7 @@ header:
 
 Since November, 2019, I have been a [Life Sciences Fellow](https://lifescifellows.umich.edu/) at the University of Michigan. I am affiliated with the [Department of Ecology and Evolutionary Biology](https://lsa.umich.edu/eeb/people/postdoctoral-fellows/jacob-berv.html), [Earth and Environmental Sciences](https://lsa.umich.edu/earth/research/paleontology.html), and the [University of Michigan Museum of Zoology](https://lsa.umich.edu/ummz).
 
-In February 2023, I was awarded an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/ai-in-science/) to further develop an interdisciplinary [research program](https://www.jakeberv.com/research).
+In February 2023, I was awarded an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/ai-in-science/) to further develop my interdisciplinary [research program](https://www.jakeberv.com/research).
 
 Previously, I:
 
