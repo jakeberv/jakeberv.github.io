@@ -8,6 +8,15 @@ header:
   og_image: "research/Yggdrasil-cropped.jpg"
 ---
 
+<figure>
+  <div style="display:flex">
+    <img src="/images/research/ernst-haeckel-art-forms-in-nature-plate-79-lacertilia-1904-trivium-art-history.jpeg" style="flex:1;margin-right:5px">
+    <img src="/images/research/ernst-haeckel-art-forms-in-nature-plate-62-nepenthaceae-1904-trivium-art-history.jpeg" style="flex:1;margin-left:5px">
+  </div>
+  <figcaption>Plates by Ernst Haeckel </figcaption>
+</figure>
+
+
 
 
 “Ghosts in the machine”6 of phylogenetic comparative methods
