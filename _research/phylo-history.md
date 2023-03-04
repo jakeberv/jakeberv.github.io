@@ -53,14 +53,32 @@ As a Life Sciences Fellow at the University of Michigan (2019-2023), I explored 
 
 Using a natural experiment in the energy-starved deep sea, where mussels and tubeworms have diversified across chemosynthetic environments, Cornell PhD student Amelia Weiss and I investigated a novel resource longevity hypothesis that predicts an inverse relationship between the longevity of limiting resources and consumers’ rates of genome evolution.
 
-<p align="center"><iframe width="500" height="500" src="https://www.youtube.com/watch?v=zeZNcDHDMzo" frameborder="0" allowfullscreen> </iframe></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zeZNcDHDMzo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 In the deep sea, organic falls (e.g., whale falls), hydrothermal vents, and cold seeps create ephemeral patches of productivity that persist over different lengths of time, ranging from decades to millennia. These longevities induce a hard maximum on a community’s life cycle, and thus, are predicted to select for consumers with life-histories adapted to ephemeral resources.
 
-<a href="https://hakaimagazine.com/news/how-dead-whales-seem-to-connect-deep-sea-life/"><img src="/images/research/header-deliberate-whale-fall.jpg" width="65%" style="display: block; margin: 0 auto;"/></a>
+<a href="https://hakaimagazine.com/news/how-dead-whales-seem-to-connect-deep-sea-life/"><img src="/images/research/header-deliberate-whale-fall.jpg" width="75%" style="display: block; margin: 0 auto;"/></a>
+
+
+<div style="text-align:center;">
+  <a href="https://hakaimagazine.com/news/how-dead-whales-seem-to-connect-deep-sea-life/">
+    <img src="/images/research/header-deliberate-whale-fall.jpg" width="75%" style="display: block; margin: 0 auto;"/>
+  </a>
+  <p><em>Dead whales can create entire ecosystems on the seafloor. Photo by NOAA.</em></p>
+</div>
+
 
 As variation along the life-history spectrum often corresponds with variation in the rate of genome evolution, we predicted a signature of habitat longevities might be recorded in the genomes of consumer specialists. Our study documents the first example (to our knowledge) of a widespread relationship between habitat longevity and rates of mitochondrial evolution.
 
-<a href="https://pixels.com/featured/black-smoker-hydrothermal-vent-jose-antonio-penasscience-photo-library.htm"><img src="/images/research/black-smoker-hydrothermal-vent-jose-antonio-penasscience-photo-library.jpg" width="65%" style="display: block; margin: 0 auto;"/></a>
+<a href="https://pixels.com/featured/black-smoker-hydrothermal-vent-jose-antonio-penasscience-photo-library.htm"><img src="/images/research/black-smoker-hydrothermal-vent-jose-antonio-penasscience-photo-library.jpg" width="75%" style="display: block; margin: 0 auto;"/></a>
+
+
+<div style="text-align:center;">
+  <a href="https://pixels.com/featured/black-smoker-hydrothermal-vent-jose-antonio-penasscience-photo-library.htm">
+    <img src="/images/research/black-smoker-hydrothermal-vent-jose-antonio-penasscience-photo-library.jpg" width="75%" style="display: block; margin: 0 auto;"/>
+  </a>
+  <p><em>A black smoker hydrothermal vent, an underwater geothermal feature. Photo by Jose Antonio Penas/Science Photo Library.</em></p>
+</div>
+
 
 A preprint describing these results will be available soon.
