@@ -40,7 +40,7 @@ A well-recognized issue in systematic biology is that the signal of clade origin
 In [Berv and Field 2018, Systematic Biology](https://jakeberv.com/publication/2018-01-01-Berv_Field_2018), we investigated the hypothesis that a K---Pg-induced acceleration in the rate of avian genome evolution may explain part of this discrepancy. Our hypothesis was derived from fossil evidence that mass extinctions can select against large-bodied organisms through several mechanisms known collectively as the "Lilliput effect." Because smaller-bodied birds also tend to have faster-evolving genomes, the presence of an avian Lilliput effect across the K---Pg boundary may obscure our ability to address fundamental questions about the origin of modern birds. We conclude that similarly integrated evolutionary responses to mass extinctions may apply to other groups of organisms---and may artificially inflate estimates of divergence times implied by molecular sequences (see CV for talk recordings).
 [Download Paper](https://jakeberv.com/publication/2018-01-01-Berv_Field_2018){: .btn--research} 
 
-<a href="https://doi.org/10.1093/sysbio/syx064"><img src="/images/research/syx064f2.jpeg" width="75%" style="display: block; margin: 0 auto;"/></a>
+<a href="https://academic.oup.com/sysbio/article/67/1/1/3960267#:~:text=Model%20of%20the,available%20on%20Dryad."><img src="/images/research/syx064f2.jpeg" width="75%" style="display: block; margin: 0 auto;"/></a>
 
 **Molecular early burst associated with the diversification of birds at the K--Pg boundary**
 
