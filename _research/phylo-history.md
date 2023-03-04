@@ -57,9 +57,6 @@ Using a natural experiment in the energy-starved deep sea, where mussels and tub
 
 In the deep sea, organic falls (e.g., whale falls), hydrothermal vents, and cold seeps create ephemeral patches of productivity that persist over different lengths of time, ranging from decades to millennia. These longevities induce a hard maximum on a community’s life cycle, and thus, are predicted to select for consumers with life-histories adapted to ephemeral resources.
 
-<a href="https://hakaimagazine.com/news/how-dead-whales-seem-to-connect-deep-sea-life/"><img src="/images/research/header-deliberate-whale-fall.jpg" width="75%" style="display: block; margin: 0 auto;"/></a>
-
-
 <div style="text-align:center;">
   <a href="https://hakaimagazine.com/news/how-dead-whales-seem-to-connect-deep-sea-life/">
     <img src="/images/research/header-deliberate-whale-fall.jpg" width="75%" style="display: block; margin: 0 auto;"/>
@@ -67,18 +64,11 @@ In the deep sea, organic falls (e.g., whale falls), hydrothermal vents, and cold
   <p><em>Dead whales can create entire ecosystems on the seafloor. Photo by NOAA.</em></p>
 </div>
 
-
-As variation along the life-history spectrum often corresponds with variation in the rate of genome evolution, we predicted a signature of habitat longevities might be recorded in the genomes of consumer specialists. Our study documents the first example (to our knowledge) of a widespread relationship between habitat longevity and rates of mitochondrial evolution.
-
-<a href="https://pixels.com/featured/black-smoker-hydrothermal-vent-jose-antonio-penasscience-photo-library.htm"><img src="/images/research/black-smoker-hydrothermal-vent-jose-antonio-penasscience-photo-library.jpg" width="75%" style="display: block; margin: 0 auto;"/></a>
-
+As variation along the life-history spectrum often corresponds with variation in the rate of genome evolution, we predicted a signature of habitat longevities might be recorded in the genomes of consumer specialists. Our study documents the first example (to our knowledge) of a widespread relationship between habitat longevity and rates of mitochondrial evolution. A preprint describing these results will be available soon.
 
 <div style="text-align:center;">
   <a href="https://pixels.com/featured/black-smoker-hydrothermal-vent-jose-antonio-penasscience-photo-library.htm">
     <img src="/images/research/black-smoker-hydrothermal-vent-jose-antonio-penasscience-photo-library.jpg" width="75%" style="display: block; margin: 0 auto;"/>
   </a>
-  <p><em>A black smoker hydrothermal vent, an underwater geothermal feature. Photo by Jose Antonio Penas/Science Photo Library.</em></p>
+  <p><em>A black smoker hydrothermal vent, an underwater geothermal feature. Artwork by Jose Antonio Penas.</em></p>
 </div>
-
-
-A preprint describing these results will be available soon.
