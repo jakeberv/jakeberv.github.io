@@ -17,6 +17,8 @@ I am fascinated by how microevolutionary genetic processes operating at the leve
 
 A need to decipher whole genomes, range maps for thousands of species, eons of ecological and climate information in the context of millions of preserved museum specimens has created new imperatives for the training of researchers in the life sciences. Integrating these data types to answer questions about biological processes and how they have shaped our world is an emerging ["grand challenge" in biology.](https://www.ncbi.nlm.nih.gov/books/NBK45113/)
 
+Below, you can explore branches of my research program, highlighting selected projects.
+
 <nbsp>
 
 {% include base_path %}
