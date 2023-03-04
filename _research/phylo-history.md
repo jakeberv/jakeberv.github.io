@@ -47,6 +47,8 @@ In [Berv and Field 2018, Systematic Biology](https://jakeberv.com/publication/20
 As a Life Sciences Fellow at the University of Michigan (2019-2023), I explored the idea that variation in the "tempo" or speed, and "mode" or processes of evolutionary change can confound the interpretation of phylogenetic data. In research now available [on bioRxiv as a preprint](https://www.biorxiv.org/content/10.1101/2022.10.21.513146v1), I investigated molecular model heterogeneity across crown bird phylogeny using a technique enabling inferred sequence substitution models to transition across the history of a clade. I identified distinct patterns across exons, introns, untranslated regions, and mitochondrial genomes that reflect shifts in key processes of molecular evolution. Multiple model shifts map to lineages originating shortly after the end-Cretaceous extinction, demonstrating a burst of genomic disparity early in the evolutionary history of birds. In addition to increasing our knowledge of macroevolutionary patterns, our study provides strong evidence that deep-time shifts in processes of genome evolution were associated with changes in avian life history, physiology, and development.
 [Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_et_al_2022.pdf){: .btn--research}[Seminar recording](https://bit.ly/berv_OIST_2022){: .btn--research}
 
+<a href="https://www.biorxiv.org/content/10.1101/2022.10.21.513146v1.full#:~:text=Life%2Dhistory%20traits%20associated,Supplemental%20Figures%205%2C%206)."><img src="/images/research/F2.large.jpg" width="80%" style="display: block; margin: 0 auto;"/></a>
+
 ---
 
 ## Habitat-associated evolutionary rates in deep-sea chemosynthetic invertebrates
