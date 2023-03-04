@@ -51,7 +51,7 @@ As a Life Sciences Fellow at the University of Michigan (2019-2023), I explored 
 
 ## Habitat-associated evolutionary rates in deep-sea chemosynthetic invertebrates
 
-Using a natural experiment in the energy-starved deep sea, where mussels and tubeworms have diversified across chemosynthetic environments, I investigated a novel resource longevity hypothesis that predicts an inverse relationship between the longevity of limiting resources and consumers’ rates of genome evolution.
+Using a natural experiment in the energy-starved deep sea, where mussels and tubeworms have diversified across chemosynthetic environments, Cornell PhD student Amelia Weiss and I investigated a novel resource longevity hypothesis that predicts an inverse relationship between the longevity of limiting resources and consumers’ rates of genome evolution.
 
 <p align="center"><iframe width="500" height="500" src="https://www.youtube.com/watch?v=zeZNcDHDMzo" frameborder="0" allowfullscreen> </iframe></p>
 
