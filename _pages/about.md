@@ -18,8 +18,6 @@ header:
   #    url: "https://github.com"
 ---
 
-<p>Last updated on {{ page.last_modified_date | date: "%B %d, %Y" }}</p>
-
 *My research integrates data from natural history, ecology, genomics, and paleontology---often through the application of novel computation tools---in order to understand the links between micro- and macroevolution.*
 
 I have studied groups of birds, mammals, reptiles, amphibians, fishes, and deep-sea invertebrates. [Go Directly to Research](https://www.jakeberv.com/research){: .btn--research}
