@@ -21,7 +21,7 @@ Resolving the evolutionary history of groups of organisms that are suspected to 
 
 <a href="https://doi.org/10.1038/nature15697"> <img src="/images/research/Prum-Bird-Evolution.jpeg" width="80%" style="display: block; margin: 0 auto;"/></a>
 
-**A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing**
+### Phylogeny Inference 
 
 First, I highlight a collaborative effort that 1) investigated the relationships among modern bird families and 2) estimated a new timescale of avian diversification ([Prum, Berv, et al. 2015, Nature](https://jakeberv.com/publication/2015-10-07-Prum_Berv_et_al_2015)). Here, we leveraged advances in target-capture sequencing for phylogenomics to propose that the modern bird radiation comprises nine super-ordinal groups which diversified in close association with the K---Pg boundary. Our study investigated these questions across a family-level sample of avian species using hundreds of genetic markers. We presented strong support for novel relationships and the first "next-generation" phylogenomic evidence for hundreds of key relationships across the avian tree of life. In addition, we advanced several statistical approaches for [phylogenetic experimental design](https://academic.oup.com/sysbio/article/68/1/145/5043533). These approaches, which include metrics of "phylogenetic informativeness," empower researchers to design phylogenetic inference studies to have maximum statistical power to address specific hypotheses.
 [Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Prum_Berv_et_al_2015.pdf){: .btn--research} 
@@ -31,7 +31,7 @@ First, I highlight a collaborative effort that 1) investigated the relationships
 [Download Poster](/files/pdf/research/23.5x70-poster.pdf){: .btn--research} 
 Email me for a door sized, printed copy (I have dozens left).
 
-**Genomic Signature of an Avian Lilliput Effect across the K--Pg Extinction**
+### Divergence time estimation
 
 A well-recognized issue in systematic biology is that the signal of clade origination times from the fossil record and inferences made from molecular sequences are often incompatible. One way this phenomenon manifests is in discordance between estimates of the ages of higher taxa implied by the fossil record and in molecular model-based inferences of divergence times (e.g., from molecular clock models). Such discrepancies between the fossil record and the signal in molecular data make it difficult to reliably assess the impact of events in Earth's history on the diversification of life's major groups. In the case of modern birds, the fossil record implies that major sub-groups originated close to the K---Pg boundary (\~66Ma). In contrast, molecular-clock estimates often indicate much older ages (100-150+ Ma).
 
@@ -42,7 +42,7 @@ In [Berv and Field 2018, Systematic Biology](https://jakeberv.com/publication/20
 
 <a href="https://academic.oup.com/sysbio/article/67/1/1/3960267#:~:text=Model%20of%20the,available%20on%20Dryad."><img src="/images/research/syx064f2.jpeg" width="100%" style="display: block; margin: 0 auto;"/></a>
 
-**Molecular early burst associated with the diversification of birds at the K--Pg boundary**
+### The Tempo *and* Mode of molecular evolution
 
 As a Life Sciences Fellow at the University of Michigan (2019-2023), I explored the idea that variation in the "tempo" or speed, and "mode" or processes of evolutionary change can confound the interpretation of phylogenetic data. In research now available [on bioRxiv as a preprint](https://www.biorxiv.org/content/10.1101/2022.10.21.513146v1), I investigated molecular model heterogeneity across crown bird phylogeny using a technique enabling inferred sequence substitution models to transition across the history of a clade. I identified distinct patterns across exons, introns, untranslated regions, and mitochondrial genomes that reflect shifts in key processes of molecular evolution. Multiple model shifts map to lineages originating shortly after the end-Cretaceous extinction, demonstrating a burst of genomic disparity early in the evolutionary history of birds. In addition to increasing our knowledge of macroevolutionary patterns, our study provides strong evidence that deep-time shifts in processes of genome evolution were associated with changes in avian life history, physiology, and development.
 [Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_et_al_2022.pdf){: .btn--research}[Seminar recording](https://bit.ly/berv_OIST_2022){: .btn--research}
@@ -51,7 +51,7 @@ As a Life Sciences Fellow at the University of Michigan (2019-2023), I explored 
 
 ---
 
-## Habitat-associated evolutionary rates in deep-sea chemosynthetic invertebrates
+### Constraints on molecular evolution
 
 Using a natural experiment in the energy-starved deep sea, where mussels and tubeworms have diversified across chemosynthetic environments, Cornell PhD student Amelia Weiss and I investigated a novel resource longevity hypothesis that predicts an inverse relationship between the longevity of limiting resources and consumers’ rates of genome evolution.
 

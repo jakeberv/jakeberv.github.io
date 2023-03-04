@@ -15,7 +15,7 @@ header:
 
 [Biogeography](https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.13616) is the study of evolution across geographic space. Although much of my recent work pertains to broad-scale evolutionary phenomena operating across geologic time, I also manage a parallel research track focused on more recent timescales. The most significant of these interests relates to the biogeography and evolution of neotropical suboscine passerines, a species-rich group of modern birds representing ~10% of living bird diversity.
 
-## Genomic phylogeography of the White-crowned Manakin
+## Continental-scale Population Genomics
 
 <a href="https://www.sciencedirect.com/science/article/pii/S105579032100138X?via%3Dihub#:~:text=Fig.%201.,of%20this%20figure."><img src="/images/research/Figure1_optimized_twitter.jpeg" width="85%" style="display: block; margin: 0 auto;"/></a>
 
