@@ -17,17 +17,11 @@ header:
 
 insert
 
-
 mammal diversification kpg forest
 
 bird diversification kpg forest
 
 amphibian kpg forest kpg
-
-
-
-
-
 
 
 ## [“Ghosts in the machine”](https://grammarist.com/idiom/ghost-in-the-machine/#:~:text=Computer%20programmers%20have%20appropriated%20the,comparison%20that%20is%20made%20figuratively.) of phylogenetic comparative methods
