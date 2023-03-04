@@ -8,30 +8,9 @@ header:
   og_image: "research/Yggdrasil-cropped.jpg"
 ---
 
-<figure>
-  <div style="display:flex">
-    <img src="/images/research/ernst-haeckel-art-forms-in-nature-plate-79-lacertilia-1904-trivium-art-history.jpeg" style="flex:1;width:50%"">
-    <img src="/images/research/ernst-haeckel-art-forms-in-nature-plate-62-nepenthaceae-1904-trivium-art-history.jpeg" style="flex:1;width:50%"">
-  </div>
-  <figcaption>Plates by Ernst Haeckel </figcaption>
-</figure>
-
-
-
-<style>
-table {
-  border-collapse: collapse;
-  border: none;
-}
-
-td {
-  border: none;
-}
-</style>
-
-| <img src="/images/research/ernst-haeckel-art-forms-in-nature-plate-79-lacertilia-1904-trivium-art-history.jpeg" alt="Image 1" style="width:300px"/> | <img src="/images/research/ernst-haeckel-art-forms-in-nature-plate-62-nepenthaceae-1904-trivium-art-history.jpeg" alt="Image 2" style="width:300px"/> |
-|:--:|:--:|
-| colspan="2" style="text-align:center"><em>Plates by Ernst Haeckel</em></td> |
+![Image 1](www.jakeberv.com/images/research/ernst-haeckel-art-forms-in-nature-plate-62-nepenthaceae-1904-trivium-art-history.jpeg){: style="float: left; margin-right: 10px;" width="50%"}
+![Image 2](www.jakeberv.com/images/research/ernst-haeckel-art-forms-in-nature-plate-62-nepenthaceae-1904-trivium-art-history.jpeg){: style="float: left; margin-right: 10px;" width="50%"}
+<div style="clear: both;"></div>
 
 
 ## “Ghosts in the machine” of phylogenetic comparative methods
