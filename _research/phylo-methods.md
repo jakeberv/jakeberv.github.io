@@ -13,15 +13,20 @@ header:
   <figcaption> Swans Reflecting Elephants, Dalí 1937. A "spontaneous method of irrational understanding based upon the interpretative critical association of delirious phenomena."</figcaption>
 </figure>
 
+"Diversification" refers to the process by which a single ancestral species gives rise to a variety of descendant species that differ from each other in morphology, behavior, and/or other traits. This process is often driven by natural selection, which favors genetic variation that confer advantages in a particular environment. Bursts of diversification are often associated with major evolutionary innovations, such as the development of new morphological structures or ecological adaptations, that allow organisms to exploit new niches and environments.
 
-insert
+## Adaptation to arboreality predicts macroecological patterns of Cenozoic diversification
 
-mammal diversification kpg forest
+Global paleobotanical and palynological data show that the K-Pg Chicxulub impact triggered widespread destruction of forests. In a paper we [published in Current Biology](https://doi.org/10.1016/j.cub.2018.04.062), my co-authors and I suggest that ecological filtering due to the loss of plant cover across the K-Pg boundary selected against any animals committed to arboreal ecologies, resulting in a predominantly non-arboreal post- extinction fauna. [Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Field_et_al_2018.pdf){: .btn--research}
 
-bird diversification kpg forest
+My first paper on this topic focused on the potential impact of ecological filtering on arboreal birds in the Mesozoic. Cover illustration prepared by paleoartist Phillip Krzeminski.
+<iframe src="/files/pdf/research/curbio_28_11_3c.pdf" width="100%" height="500" frameborder="no" border="0" marginwidth="0" marginheight="0">
+</iframe> [Artwork by Phillip Krzeminski](https://www.phillipmk.com/){: .btn--research} 
 
-amphibian kpg forest kpg
+Later, we investigated the same hypothesis in [mammals](https://onlinelibrary.wiley.com/doi/10.1002/ece3.8114), and discovered similar patterns
+[Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Hughes_et_al_2021.pdf){: .btn--research}
 
+I am currently examining these patterns across the Cenozoic diversification of frogs.
 
 ## [“Ghosts in the machine”](https://grammarist.com/idiom/ghost-in-the-machine/#:~:text=Computer%20programmers%20have%20appropriated%20the,comparison%20that%20is%20made%20figuratively.) of phylogenetic comparative methods
 
