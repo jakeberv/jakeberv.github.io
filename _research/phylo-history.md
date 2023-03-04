@@ -59,7 +59,7 @@ In the deep sea, organic falls (e.g., whale falls), hydrothermal vents, and cold
 
 <div style="text-align:center;">
   <a href="https://hakaimagazine.com/news/how-dead-whales-seem-to-connect-deep-sea-life/">
-    <img src="/images/research/header-deliberate-whale-fall.jpg" width="75%" style="display: block; margin: 0 auto;"/>
+    <img src="/images/research/header-deliberate-whale-fall.jpg" width="100%" style="display: block; margin: 0 auto;"/>
   </a>
   <p><em>Dead whales can create entire ecosystems on the seafloor. Photo by NOAA.</em></p>
 </div>
