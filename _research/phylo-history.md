@@ -68,7 +68,7 @@ As variation along the life-history spectrum often corresponds with variation in
 
 <div style="text-align:center;">
   <a href="https://pixels.com/featured/black-smoker-hydrothermal-vent-jose-antonio-penasscience-photo-library.htm">
-    <img src="/images/research/black-smoker-hydrothermal-vent-jose-antonio-penasscience-photo-library.jpg" width="75%" style="display: block; margin: 0 auto;"/>
+    <img src="/images/research/black-smoker-hydrothermal-vent-jose-antonio-penasscience-photo-library.jpg" width="100%" style="display: block; margin: 0 auto;"/>
   </a>
   <p><em>A black smoker hydrothermal vent, an underwater geothermal feature. Artwork by Jose Antonio Penas.</em></p>
 </div>

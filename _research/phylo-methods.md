@@ -14,7 +14,6 @@ header:
 </figure>
 
 
-
 insert
 
 mammal diversification kpg forest
