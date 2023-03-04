@@ -46,3 +46,19 @@ In [Berv and Field 2018, Systematic Biology](https://jakeberv.com/publication/20
 
 As a Life Sciences Fellow at the University of Michigan (2019-2023), I explored the idea that variation in the "tempo" or speed, and "mode" or processes of evolutionary change can confound the interpretation of phylogenetic data. In research now available [on bioRxiv as a preprint](https://www.biorxiv.org/content/10.1101/2022.10.21.513146v1), I investigated molecular model heterogeneity across crown bird phylogeny using a technique enabling inferred sequence substitution models to transition across the history of a clade. I identified distinct patterns across exons, introns, untranslated regions, and mitochondrial genomes that reflect shifts in key processes of molecular evolution. Multiple model shifts map to lineages originating shortly after the end-Cretaceous extinction, demonstrating a burst of genomic disparity early in the evolutionary history of birds. In addition to increasing our knowledge of macroevolutionary patterns, our study provides strong evidence that deep-time shifts in processes of genome evolution were associated with changes in avian life history, physiology, and development.
 [Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_et_al_2022.pdf){: .btn--research}[Seminar recording](https://bit.ly/berv_OIST_2022){: .btn--research}
+
+
+## Deep sea invertebrates
+
+
+### Future research questions in these areas:
+1)	How and why do the tempo and mode of evolution vary across genomes and lineages?
+•	For example, considering whole genome data across vertebrates, are patterns of evolutionary tempo and mode conserved across different genetic elements (e.g., exons, introns, UTRs, regulatory and transposable elements, organelle genomes, etc.)?
+2)	How have major events in Earth’s history impacted genome evolution and diversification patterns?
+•	For example, are signatures of Earth’s “big five” mass extinction events detectable in the genomes of living organisms? Do shifts in patterns of genome evolution coincide with macroevolutionary patterns of lineage or phenotypic diversification?
+3)	How can we integrate paleontological and contemporary phylogenetic data to test hypotheses?
+•	For example, can inferences of life-history traits from fossils (e.g., body mass or growth rates) be used to calibrate or improve molecular-clock models?
+4)	How can evolutionary “laws” be exploited to learn about evolutionary history?
+•	For example, can associations between life history traits and patterns of molecular evolution enable us to test hypotheses about patterns of molecular evolution in extinct taxa?
+5)	How can evolutionary “laws,” such as the Lilliput Effect, inform conservation priorities?
+•	For example, can we exploit a mechanistic understanding of macroevolution to optimize the selection of species for conservation protection?

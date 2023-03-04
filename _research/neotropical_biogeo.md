@@ -9,7 +9,7 @@ header:
 ---
 
 <figure>
-  <img src="/images/research/biogeography-bands.jpeg" alt="Physical Tableau of mountain ranges showing elevation bands in vegetation and characteristics of the physical environment in the Andes, Tenerife, the Himalayas, the Alps and Lappland (Berghaus, 1892"/>
+  <img src="/images/research/biogeography-bands.jpeg" alt="Physical Tableau of mountain ranges showing elevation bands in vegetation and characteristics of the physical environment in the Andes, Tenerife, the Himalayas, the Alps and Lappland (Berghaus, 1892)"/>
   <figcaption> Physical Tableau of mountain ranges showing elevation bands in vegetation and characteristics of the physical environment in the Andes, Tenerife, the Himalayas, the Alps and Lappland (Berghaus, 1892) </figcaption>
 </figure>
 
