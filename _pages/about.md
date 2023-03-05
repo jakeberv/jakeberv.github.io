@@ -22,13 +22,13 @@ header:
 
 I have studied groups of birds, mammals, reptiles, amphibians, fishes, and deep-sea invertebrates [Go Directly to Research](https://www.jakeberv.com/research){: .btn--research}
 
-Since November, 2019, I have been a [Life Sciences Fellow](https://lifescifellows.umich.edu/) at the University of Michigan. I am affiliated with the [Department of Ecology and Evolutionary Biology](https://lsa.umich.edu/eeb/people/postdoctoral-fellows/jacob-berv.html), [Earth and Environmental Sciences](https://lsa.umich.edu/earth/research/paleontology.html), and the [University of Michigan Museum of Zoology](https://lsa.umich.edu/ummz).[Recent Seminar](https://bit.ly/berv_OIST_2022){: .btn--research}
+Since November, 2019, I have been a [Life Sciences Fellow](https://lifescifellows.umich.edu/) at the University of Michigan. I am affiliated with the [Department of Ecology and Evolutionary Biology](https://lsa.umich.edu/eeb/people/postdoctoral-fellows/jacob-berv.html), [Earth and Environmental Sciences](https://lsa.umich.edu/earth/research/paleontology.html), and the [University of Michigan Museum of Zoology](https://lsa.umich.edu/ummz) [October 2022 Invited Seminar](https://bit.ly/berv_OIST_2022){: .btn--research}
 
-In February 2023, I was awarded an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/ai-in-science/) to further develop my interdisciplinary [research program](https://www.jakeberv.com/research).
+In February 2023, I was awarded an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/ai-in-science/) to further develop my interdisciplinary research program.
 
 Previously, I:
 
--   earned a PhD at Cornell University (2013-2019), working within [Cornell's Laboratory of Ornithology](https://www.birds.cornell.edu/home/). As a graduate student, I investigated several [dimensions of biodiversity](https://www.proquest.com/openview/0944ba11c7dc9bdbfd11748cb2de4cfa/1?pq-origsite=gscholar&cbl=18750&diss=y), applying the tools of Systematic Biology, Population Genomics, and Paleontology. [2019 Defense Seminar](https://www.youtube.com/watch?v=8A-j2DccpTw&list=PLt6TWRNEKcmUMXvUPbpFPVvb7Z8d0UbaN){: .btn--research}
+-   earned a PhD at Cornell University (2013-2019), working within [Cornell's Laboratory of Ornithology](https://www.birds.cornell.edu/home/). As a graduate student, I investigated several [dimensions of biodiversity](https://www.proquest.com/openview/0944ba11c7dc9bdbfd11748cb2de4cfa/1?pq-origsite=gscholar&cbl=18750&diss=y), applying the tools of Systematic Biology, Population Genomics, and Paleontology. [Download Paper](https://jakeberv.com/publication/2018-01-01-Berv_Field_2018){: .btn--research}[2019 Defense Seminar](https://www.youtube.com/watch?v=8A-j2DccpTw&list=PLt6TWRNEKcmUMXvUPbpFPVvb7Z8d0UbaN){: .btn--research}[Publisher's Award](https://academic.oup.com/sysbio/pages/publishers_award){: .btn--research}
 
 -   worked as a researcher in the [Prum Lab](https://prumlab.yale.edu/) (2010-2013), where I largely focused on discovering the evolutionary relationships [within](https://www.sciencedirect.com/science/article/pii/S105579032100138X) and [among](https://www.nature.com/articles/nature15697) bird species.
 
