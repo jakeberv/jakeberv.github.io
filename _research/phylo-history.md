@@ -77,4 +77,4 @@ As variation along the life-history spectrum often corresponds with variation in
 
 
 ---
-[Return to Research Home](https://wwwjakeberv.com/research){: .btn--research}
+[Return to Research Home](https://www.jakeberv.com/research){: .btn--research}

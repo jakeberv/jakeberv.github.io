@@ -38,4 +38,4 @@ The application of statistical models to the study of speciation and extinction 
 [2021 Seminar recording](https://bit.ly/berv_umich_2021){: .btn--research}
 
 ---
-[Return to Research Home](https://wwwjakeberv.com/research){: .btn--research}
+[Return to Research Home](https://www.jakeberv.com/research){: .btn--research}

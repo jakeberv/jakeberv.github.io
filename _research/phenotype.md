@@ -27,4 +27,4 @@ By synthesizing data from physiological, anatomical, life history, and genomic d
 
 
 ---
-[Return to Research Home](https://wwwjakeberv.com/research){: .btn--research}
+[Return to Research Home](https://www.jakeberv.com/research){: .btn--research}

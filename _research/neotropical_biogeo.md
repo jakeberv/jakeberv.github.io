@@ -31,4 +31,4 @@ My investigations of Pseudopipra have required close collaboration with scientis
 Field work photos coming soon.
 
 ---
-[Return to Research Home](https://wwwjakeberv.com/research){: .btn--research}
+[Return to Research Home](https://www.jakeberv.com/research){: .btn--research}
