@@ -34,4 +34,6 @@ Previously, I:
 
 -   completed a Bachelors of Science degree at [Yale University](https://eeb.yale.edu/) (2006-2010). My senior thesis investigated patterns of phylogeographic congruence among co-distributed open-habitat specialists [across the Amazon basin](https://jakeberv.github.io/publication/2021-03-08-vanEls_et_al_2021).
 
+Last Updated 5 March 2023
+
 #### The site's banner is a portion of Salvador Dali's "Persistence of Memory." Dawn Adès wrote, "The soft watches are an unconscious symbol of the relativity of space and time, a Surrealist meditation on the collapse of our notions of a fixed cosmic order." In evolutionary biology, time is often relative and (outside of paleontology) rarely absolute. Dalí's olive tree with its cut branches, overlain by time, is a reminder of the challenges we face in understanding the tree of life.
