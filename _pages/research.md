@@ -19,7 +19,16 @@ I am fascinated by how microevolutionary genetic processes operating at the leve
 --When and why might one of these modes of evolution predominate over the other? 
 --What are the drivers and correlates of evolutionary change?
 
-Addressing these questions requires an appeal to both population scale phenomena, as well as larger scale patterns that can only be directly observed from the fossil record. This interdisciplinary approach to systematic biology recognizes that variation in the “tempo” or speed, and “mode” or processes of evolutionary change can confound the interpretation of phylogenetic comparative data. Identifying regions of the tree of life where transitions in the evolutionary processes of molecular or phenotypic evolution have occurred will provide transformative research opportunities.
+---
+More specifically, I am to answer the following questions:
+
+1)	How and why do the tempo and mode of evolution vary across genomes and lineages?
+2)	How have major events in Earth’s history impacted genome evolution and diversification patterns?
+3)	How can we integrate paleontological and contemporary phylogenetic data to test hypotheses?
+4)	How can evolutionary “laws” be exploited to learn about evolutionary history?
+5)	How can evolutionary “laws” inform conservation priorities?
+
+Addressing these questions requires an appeal to both population scale phenomena, as well as larger scale patterns that can only be directly observed from the fossil record. This interdisciplinary approach to systematic biology recognizes that variation in the “tempo” or speed, and “mode” or processes of evolutionary change can confound the interpretation of phylogenetic comparative data.
 
 Below, you can explore branches of my research program, highlighting selected projects.
 
