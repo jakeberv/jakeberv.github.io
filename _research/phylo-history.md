@@ -24,12 +24,29 @@ Resolving the evolutionary history of groups of organisms that are suspected to 
 ### Phylogeny Inference 
 
 First, I highlight a collaborative effort that 1) investigated the relationships among modern bird families and 2) estimated a new timescale of avian diversification ([Prum, Berv, et al. 2015, Nature](https://jakeberv.com/publication/2015-10-07-Prum_Berv_et_al_2015)). Here, we leveraged advances in target-capture sequencing for phylogenomics to propose that the modern bird radiation comprises nine super-ordinal groups which diversified in close association with the K---Pg boundary. Our study investigated these questions across a family-level sample of avian species using hundreds of genetic markers. We presented strong support for novel relationships and the first "next-generation" phylogenomic evidence for hundreds of key relationships across the avian tree of life. In addition, we advanced several statistical approaches for [phylogenetic experimental design](https://academic.oup.com/sysbio/article/68/1/145/5043533). These approaches, which include metrics of "phylogenetic informativeness," empower researchers to design phylogenetic inference studies to have maximum statistical power to address specific hypotheses.
-[Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Prum_Berv_et_al_2015.pdf){: .btn--research} 
+[Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Prum_Berv_et_al_2015.pdf){: .btn--research}[Download Poster](/files/pdf/research/23.5x70-poster.pdf){: .btn--research}
 
-<iframe src="/files/pdf/research/23.5x70-poster.pdf" width="100%" height="500" frameborder="no" border="0" marginwidth="0" marginheight="0">
-</iframe>
-[Download Poster](/files/pdf/research/23.5x70-poster.pdf){: .btn--research} 
-Email me for a door sized, printed copy (I have dozens left).
+<head>
+  <style>
+    /* Hide the iframe on screens narrower than 768px */
+    @media (max-width: 768px) {
+      iframe {
+        display: none;
+      }
+    }
+    /* Show the iframe on screens wider than 768px */
+    @media (min-width: 769px) {
+      iframe {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div style="overflow: auto;">
+    <iframe src="/files/pdf/research/23.5x70-poster.pdf" height="500" frameborder="no" border="0" marginwidth="0" marginheight="0"></iframe>
+  </div>
+</body>
 
 ### Divergence time estimation
 
