@@ -13,7 +13,7 @@ header:
   <figcaption> Salvador Dalí's famous painting, The Persistence of Memory </figcaption>
 </figure>
 
-I am fascinated by how microevolutionary genetic processes operating at the level of individual organisms and populations propagate through the tree of life and time to generate macroevolutionary patterns. Taking this lens, my research aims to address broad questions in systematic biology:
+I am fascinated by how microevolutionary genetic processes operating at the level of individual organisms and populations propagate through the tree of life and time to generate macroevolutionary patterns. Taking this lens, my research aims to investigate several overarching themes in systematic biology:
 
 --What are the roles of evolutionary contingency and convergence in generating patterns of biodiversity? 
 --When and why might one of these modes of evolution predominate over the other? 
