@@ -9,8 +9,8 @@ redirect_from:
   - /about.html
 header:
   og_image: "research/persistence_of_memory-research.jpg"
-  image: "research/persistence_of_memory-about-header.jpg"
-  #overlay_image: "research/persistence_of_memory-about-header.jpg"
+  #image: "research/persistence_of_memory-about-header.jpg"
+  overlay_image: "research/persistence_of_memory-about-header.jpg"
   #overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
   #caption: "**Salvador Dalí**"
   #actions:
