@@ -1,7 +1,7 @@
 ---
 permalink: /
-title: "About me"
-excerpt: "About me"
+title: "Jacob S Berv"
+excerpt: "Evolutionary Biologist"
 #title: "Jacob S. Berv, PhD"
 author_profile: true
 redirect_from: 
@@ -17,6 +17,8 @@ header:
   #  - label: "Download"
   #    url: "https://github.com"
 ---
+
+# About me
 
 *My research integrates data from natural history, ecology, genomics, and paleontology---often through the application of novel computation tools---in order to understand the links between micro- and macroevolution.*
 
