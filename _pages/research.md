@@ -9,10 +9,10 @@ header:
 ---
 
 <figure>
-  <img src="/images/research/tree-of-life_2000.png" alt="The Evogeneao Tree of Life"/>
-  <figcaption> A simplified tree of life from evogeneao.com, indicating major events in Earth's history </figcaption>
+  <img src="/images/research/tree-of-life_systems.png" alt="The Evogeneao Tree of Life"/>
+  <figcaption> A simplified tree of life (evogeneao.com), depicting major events in Earth's history. Major lineages I have studied in published or ongoing research are highlighted in grey.
+  </figcaption>
 </figure>
-
 
 I am fascinated by how microevolutionary genetic processes operating at the level of individual organisms and populations propagate through the tree of life and time to generate macroevolutionary patterns. Taking this lens, my research aims to investigate several overarching themes in systematic biology:
 
