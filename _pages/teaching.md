@@ -2,9 +2,13 @@
 permalink: /teaching/
 title: "Teaching"
 ---
-![Anthropomorphic Echo by Salvador Dali](/images/research/Anthropomorphic_Echo_web.jpg)
 
-I am an evolutionary biologist, and I care about teaching evolution because, as noted by Theodosius Dobzhansky, "Nothing in biology makes sense except in the light of evolution." Though I wish all my students would follow me deciphering the rules of life, my job as a science educator is first to provide access to scientific literacy. **Literacy in evolutionary biology has never been more important.** Evolutionary processes shape every facet of the natural world, and the COVID-19 pandemic has shown us how evolution impacts our daily lives [Indeed, the story of how phylogenetics routinely saves us from dire epidemiological events is not told often enough]. More generally, a limited understanding of evolution can impede a person's ability to make informed decisions on important issues. As discussed by [Brandt *et al.* 2022](https://royalsocietypublishing.org/doi/full/10.1098/rspb.2022.1077), scientific literacy encompasses four key learning goals: content knowledge, procedural knowledge, epistemic knowledge, and the application of knowledge. These axes are critical in understanding and evaluating the evidence for evolutionary processes, as well as in applying evolutionary concepts to real-world situations.
+<figure>
+  <img src="/images/research/Anthropomorphic_Echo_web.jpg" alt="Anthropomorphic Echo by Salvador Dalí"/>
+  <figcaption>Anthropomorphic Echo by Salvador Dalí</figcaption>
+</figure>
+
+I am an evolutionary biologist, and I care about teaching evolution because, as noted by Theodosius Dobzhansky, "Nothing in biology makes sense except in the light of evolution." While I hope to inspire my students to pursue careers in evolutionary science, my first job as a science educator is to provide access to scientific literacy. **Literacy in evolutionary biology has never been more important.** Evolutionary processes shape every facet of the natural world, and the COVID-19 pandemic has shown us how evolution impacts our daily lives [Indeed, the story of how phylogenetics routinely saves us from dire epidemiological events is not told often enough]. More generally, a limited understanding of evolution can impede a person's ability to make informed decisions on important issues. As discussed by [Brandt *et al.* 2022](https://royalsocietypublishing.org/doi/full/10.1098/rspb.2022.1077), scientific literacy encompasses four key learning goals: content knowledge, procedural knowledge, epistemic knowledge, and the application of knowledge. These axes are critical in understanding and evaluating the evidence for evolutionary processes, as well as in applying evolutionary concepts to real-world situations.
 
 You can read more of my thoughts on teaching and check out prior course evaluations in my teaching dossier [here](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/teaching/teaching_philosophy.pdf).
 
