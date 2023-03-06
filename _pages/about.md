@@ -1,7 +1,7 @@
 ---
 permalink: /
-title: "Jacob S Berv"
-excerpt: "Evolutionary Biologist"
+title: "Jacob S. Berv"
+excerpt: "Evolutionary and Systematic Biologist"
 #title: "Jacob S. Berv, PhD"
 author_profile: true
 redirect_from: 
