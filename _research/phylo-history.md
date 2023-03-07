@@ -74,7 +74,7 @@ Using a natural experiment in the energy-starved deep sea, where mussels and tub
 
 <div style="text-align:center;">
   <a href="https://www.evogeneao.com/en/explore/tree-of-life-explorer#segmented-worms-and-clams">
-    <img src="bivalve_worm_test.png" width="100%" style="display: block; margin: 0 auto;"/>
+    <img src="/images/research/bivalve_worm.jpg" width="100%" style="display: block; margin: 0 auto;"/>
   </a>
   <p><em>Bivalves and tubeworms represent > 1 billion years of distinct evolutionary history</em></p>
 </div>

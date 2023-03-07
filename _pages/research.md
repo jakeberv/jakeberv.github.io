@@ -9,7 +9,7 @@ header:
 ---
 
 <figure>
-  <img src="/images/research/tree-of-life_systems.png" alt="The Evogeneao Tree of Life"/>
+  <img src="/images/research/tree-of-life_systems.jpg" alt="The Evogeneao Tree of Life"/>
   <figcaption> A simplified tree of life (evogeneao.com), depicting major events in Earth's history. Major lineages I have studied in published or ongoing research are highlighted in grey.
   </figcaption>
 </figure>
