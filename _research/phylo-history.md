@@ -72,7 +72,35 @@ As a Life Sciences Fellow at the University of Michigan (2019-2023), I explored 
 
 Using a natural experiment in the energy-starved deep sea, where mussels and tubeworms have diversified across chemosynthetic environments, Cornell PhD student Amelia Weiss and I investigated a novel resource longevity hypothesis that predicts an inverse relationship between the longevity of limiting resources and consumers’ rates of genome evolution.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zeZNcDHDMzo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div style="text-align:center;">
+  <a href="https://www.evogeneao.com/en/explore/tree-of-life-explorer#segmented-worms-and-clams">
+    <img src="bivalve_worm_test.png" width="100%" style="display: block; margin: 0 auto;"/>
+  </a>
+  <p><em>Bivalves and tubeworms represent > 1 billion years of distinct evolutionary history</em></p>
+</div>
+
+<head>
+  <style>
+    /* Hide the iframe on screens narrower than 768px */
+    @media (max-width: 768px) {
+      iframe {
+        display: none;
+      }
+    }
+    /* Show the iframe on screens wider than 768px */
+    @media (min-width: 769px) {
+      iframe {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div style="overflow: auto;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/zeZNcDHDMzo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</body>
+
 
 In the deep sea, organic falls (e.g., whale falls), hydrothermal vents, and cold seeps create ephemeral patches of productivity that persist over different lengths of time, ranging from decades to millennia. These longevities induce a hard maximum on a community’s life cycle, and thus, are predicted to select for consumers with life-histories adapted to ephemeral resources.
 
