@@ -66,19 +66,17 @@ I am generally interested in how well we can reconstruct "living" characteristic
 
 Coming soon.
 
-
-<div style="display: flex;">
+<div style="display: flex; align-items: center;">
   <figure style="width: 40%; max-width: 400px; margin-right: 1em;">
     <a href="https://www.sciencedirect.com/science/article/pii/S105579032100138X#:~:text=Fig.%208.,details%20and%20discussion.">
       <img src="https://ars.els-cdn.com/content/image/1-s2.0-S105579032100138X-gr8.jpg" width="100%" style="display: block;"/>
     </a>
-    <figcaption>Distinct patterns of lek (top) and call (vocalizations) complicate understanding this history of the White-crowned Manakin</figcaption>
+    <figcaption style="text-align: center;">Distinct patterns of lek (top) and call (vocalizations) complicate understanding this history of the White-crowned Manakin</figcaption>
   </figure>
   <div style="flex: 1;">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consectetur dolor ac ipsum sollicitudin consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras eu elit at libero luctus elementum. Sed vitae malesuada odio. Fusce sodales vel lorem sed convallis. Aliquam dapibus lacus in nunc rutrum finibus. Fusce venenatis malesuada est quis laoreet. In vel nibh et eros sagittis tincidunt quis nec turpis. Sed euismod diam id nisl posuere efficitur. Sed malesuada eu quam sit amet rhoncus. Vivamus vel tellus ex. Aenean pharetra mauris sed suscipit malesuada. Sed efficitur turpis justo, a faucibus tellus bibendum eu.</p>
   </div>
 </div>
-
 
 
 ---
