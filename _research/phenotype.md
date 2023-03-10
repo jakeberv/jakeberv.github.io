@@ -19,7 +19,6 @@ By synthesizing data from physiological, anatomical, life history, and genomic d
 
 ### The evolution of sexual dichromatism in Neotropical Cotingas
 ---
-To test Darwin’s (1871) hypothesis that the increase in sexual selection associated with polygynous breeding systems drives the evolution of color dimorphism, we estimated and applied a new phylogenetic hypothesis for the Neotropical Cotingas, a diverse clade of suboscine passerine birds known for their flamboyant plumages.
 
 <div style="display: flex; align-items: flex-start;">
   <figure style="width: 40%; margin-right: 1em;">
