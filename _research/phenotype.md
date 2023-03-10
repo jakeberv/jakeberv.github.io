@@ -21,8 +21,6 @@ By synthesizing data from physiological, anatomical, life history, and genomic d
 
 To test Darwin’s (1871) hypothesis that the increase in sexual selection associated with polygynous breeding systems drives the evolution of color dimorphism, we estimated and applied a new phylogenetic hypothesis for the Neotropical Cotingas, a diverse clade of suboscine passerine birds known for their flamboyant plumages.
 
-<a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_Prum_2014.pdf"><img src="/images/research/CircleTree-LOO-PR.png" width="75%" style="display: block; margin: 0 auto;"/></a>
-
 <div style="text-align: center;">
   <figure style="width: 75%; margin: 0 auto;">
     <a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_Prum_2014.pdf">
@@ -67,6 +65,21 @@ I am generally interested in how well we can reconstruct "living" characteristic
 ### Modes of fish shape evolution across the Phanerozoic
 
 Coming soon.
+
+
+<div style="display: flex;">
+  <figure style="width: 40%; max-width: 400px; margin-right: 1em;">
+    <a href="https://www.sciencedirect.com/science/article/pii/S105579032100138X#:~:text=Fig.%208.,details%20and%20discussion.">
+      <img src="https://ars.els-cdn.com/content/image/1-s2.0-S105579032100138X-gr8.jpg" width="100%" style="display: block;"/>
+    </a>
+    <figcaption>Distinct patterns of lek (top) and call (vocalizations) complicate understanding this history of the White-crowned Manakin</figcaption>
+  </figure>
+  <div style="flex: 1;">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consectetur dolor ac ipsum sollicitudin consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras eu elit at libero luctus elementum. Sed vitae malesuada odio. Fusce sodales vel lorem sed convallis. Aliquam dapibus lacus in nunc rutrum finibus. Fusce venenatis malesuada est quis laoreet. In vel nibh et eros sagittis tincidunt quis nec turpis. Sed euismod diam id nisl posuere efficitur. Sed malesuada eu quam sit amet rhoncus. Vivamus vel tellus ex. Aenean pharetra mauris sed suscipit malesuada. Sed efficitur turpis justo, a faucibus tellus bibendum eu.</p>
+  </div>
+</div>
+
+
 
 ---
 [Return to Research Home](https://www.jakeberv.com/research){: .btn--research}
