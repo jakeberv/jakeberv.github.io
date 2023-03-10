@@ -32,7 +32,7 @@ To test Darwin’s (1871) hypothesis that the increase in sexual selection assoc
 
 ### The evolution of feather-instruments in a clade of "bee" hummingbirds
 
-<div style="display: flex; align-items: center;">
+<div style="display: flex; align-items: flex-start;">
   <figure style="width: 40%; margin-right: 1em;">
     <a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Clark_et_al_2018.pdf">
       <img src="/images/research/bee-hummingbird.png" width="100%" style="display: block;"/>
@@ -40,7 +40,7 @@ To test Darwin’s (1871) hypothesis that the increase in sexual selection assoc
     <figcaption style="text-align: left;">Distinct patterns of lek (top) and call (vocalizations) complicate understanding this history of the White-crowned Manakin</figcaption>
   </figure>
   <div style="flex: 1;">
-    <p>Phenotypic characters with a complex physical basis may have a correspondingly complex evolutionary history. Males in the “bee” hummingbird clade court females with sound from tail-feathers, which flutter during display dives. In this study, I applied stochastic process models to rank different evolutionary scenarios.</p>
+    <p style="margin-top: 0;">Phenotypic characters with a complex physical basis may have a correspondingly complex evolutionary history. Males in the “bee” hummingbird clade court females with sound from tail-feathers, which flutter during display dives. In this study, I applied stochastic process models to rank different evolutionary scenarios.</p>
   </div>
 </div>
 
