@@ -21,13 +21,16 @@ By synthesizing data from physiological, anatomical, life history, and genomic d
 ---
 To test Darwin’s (1871) hypothesis that the increase in sexual selection associated with polygynous breeding systems drives the evolution of color dimorphism, we estimated and applied a new phylogenetic hypothesis for the Neotropical Cotingas, a diverse clade of suboscine passerine birds known for their flamboyant plumages.
 
-<div style="text-align: center;">
-  <figure style="width: 75%; margin: 0 auto;">
+<div style="display: flex; align-items: flex-start;">
+  <figure style="width: 40%; margin-right: 1em;">
     <a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_Prum_2014.pdf">
       <img src="/images/research/CircleTree-LOO-PR.png" width="100%" style="display: block;"/>
     </a>
-    <figcaption> The phylogenetic distribution of sexual dichromatism across Neotropical Cotingas</figcaption>
+    <figcaption style="text-align: left;">The phylogenetic distribution of sexual dichromatism across Neotropical Cotingas</figcaption>
   </figure>
+  <div style="flex: 1;">
+    <p style="margin-top: 0;">To test Darwin’s (1871) hypothesis that the increase in sexual selection associated with polygynous breeding systems drives the evolution of color dimorphism, we estimated and applied a new phylogenetic hypothesis for the Neotropical Cotingas, a diverse clade of suboscine passerine birds known for their flamboyant plumages.</p>
+  </div>
 </div>
 
 ### The evolution of feather-instruments in a clade of "bee" hummingbirds
@@ -58,7 +61,7 @@ To test Darwin’s (1871) hypothesis that the increase in sexual selection assoc
   </div>
 </div>
 
-## Reconstructing character data directly from fossils
+## Reconstructing "life" parameters from fossils
 ---
 I am generally interested in how well we can reconstruct "living" characteristics from skeletal proportions, which is especially important for animals that we only know from fossils. In this example, I use [allometric scaling equations](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0082000) to estimate the distribution of body masses for an assemblage of stem lineage birds in the latest Maastrictian.
 
