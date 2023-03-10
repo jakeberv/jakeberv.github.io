@@ -30,11 +30,7 @@ By synthesizing data from physiological, anatomical, life history, and genomic d
   <div style="flex: 1; display: flex; flex-direction: column;">
     <p style="margin-top: 0; align-self: flex-start;">To test Darwin’s (1871) hypothesis that the increase in sexual selection associated with polygynous breeding systems drives the evolution of color dimorphism, we estimated and applied a new phylogenetic hypothesis for the Neotropical Cotingas, a diverse clade of suboscine passerine birds known for their flamboyant plumages.</p>
   </div>
-  <div style="text-align: right;">
-  <a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_Prum_2014.pdf" class="btn--research">Download Paper</a>
 </div>
-</div>
-
 <div style="text-align: right;">
   <a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_Prum_2014.pdf" class="btn--research">Download Paper</a>
 </div>
