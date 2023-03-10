@@ -32,15 +32,19 @@ Phenotypic characters with a complex physical basis may have a correspondingly c
 To examine the differentiation of a secondary sexual characteristic produced through animal behavior (vocalization during courtship display), I studied the radiation of a cryptic species complex across the Amazon basin. In addition to providing new biogeographic insights, our study discovered complex patterns of [symplesiomorphic](https://en.wikipedia.org/wiki/Plesiomorphy_and_symplesiomorphy) (shared and ancestral characters) evolution.
 
 <figure>
-<a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_Prum_2014.pdf"><img src="https://ars.els-cdn.com/content/image/1-s2.0-S105579032100138X-gr8_lrg.jpg" width="75%" style="display: block; margin: 0 auto;"/></a>
+<a href="https://www.sciencedirect.com/science/article/pii/S105579032100138X#:~:text=Fig.%208.,details%20and%20discussion."><img src="https://ars.els-cdn.com/content/image/1-s2.0-S105579032100138X-gr8.jpg" width="75%" style="display: block; margin: 0 auto;"/></a>
 <figcaption> Distinct patterns of lek (top) and call (vocalizations) complicate understanding this history of the White-crowned Manakin </figcaption>
 </figure>
 
-### Reconstructing character data from fossils
+### Reconstructing character data directly from fossils
 
+I am generally interested in how well we can reconstruct "living" characteristics from skeletal proportions, which is especially important for animals that we only know from fossils. In this example, I use [allometric scaling equations](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0082000) to estimate the distribution of body masses for an assemblage of stem lineage birds in the latest Maastrictian.
 
+<figure>
+<a href=""><img src="/images/research/Berv_Field_2018_supp4.png" width="75%" style="display: block; margin: 0 auto;"/></a>
+<figcaption> Estimates of body mass from fossil allometries </figcaption>
+</figure>
 
-<a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Clark_et_al_2018.pdf"><img src="/images/research/bee-hummingbird.png" width="75%" style="display: block; margin: 0 auto;"/></a>
 
 ### Modes of fish shape evolution across the Phanerozoic
 
