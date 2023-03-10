@@ -31,16 +31,14 @@ Phenotypic characters with a complex physical basis may have a correspondingly c
 
 To examine the differentiation of a secondary sexual characteristic produced through animal behavior (vocalization during courtship display), I studied the radiation of a cryptic species complex across the Amazon basin. In addition to providing new biogeographic insights, our study discovered complex patterns of [symplesiomorphic](https://en.wikipedia.org/wiki/Plesiomorphy_and_symplesiomorphy) (shared and ancestral characters) evolution.
 
-<figure>
-<a href="https://www.sciencedirect.com/science/article/pii/S105579032100138X#:~:text=Fig.%208.,details%20and%20discussion."><img src="https://ars.els-cdn.com/content/image/1-s2.0-S105579032100138X-gr8.jpg" width="75%" style="display: block; margin: 0 auto;"/></a>
-<figcaption> Distinct patterns of lek (top) and call (vocalizations) complicate understanding this history of the White-crowned Manakin </figcaption>
-</figure>
-
-
-<figure style="width: 75%;">
-  <a href="https://www.sciencedirect.com/science/article/pii/S105579032100138X#:~:text=Fig.%208.,details%20and%20discussion."><img src="https://ars.els-cdn.com/content/image/1-s2.0-S105579032100138X-gr8.jpg" width="100%" style="display: block; margin: 0 auto;"/></a>
-  <figcaption>Distinct patterns of lek (top) and call (vocalizations) complicate understanding this history of the White-crowned Manakin</figcaption>
-</figure>
+<div style="text-align: center;">
+  <figure style="width: 75%; margin: 0 auto;">
+    <a href="https://www.sciencedirect.com/science/article/pii/S105579032100138X#:~:text=Fig.%208.,details%20and%20discussion.">
+      <img src="https://ars.els-cdn.com/content/image/1-s2.0-S105579032100138X-gr8.jpg" width="100%" style="display: block;"/>
+    </a>
+    <figcaption>Distinct patterns of lek (top) and call (vocalizations) complicate understanding this history of the White-crowned Manakin</figcaption>
+  </figure>
+</div>
 
 
 ### Reconstructing character data directly from fossils
