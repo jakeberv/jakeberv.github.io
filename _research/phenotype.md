@@ -17,7 +17,7 @@ By synthesizing data from physiological, anatomical, life history, and genomic d
 
 ## Sexual selection
 
-## The evolution of sexual dichromatism in Neotropical Cotingas
+### The evolution of sexual dichromatism in Neotropical Cotingas
 
 To test Darwin’s (1871) hypothesis that the increase in sexual selection associated with polygynous breeding systems drives the evolution of color dimorphism, we estimated and applied a new phylogenetic hypothesis for the Neotropical Cotingas, a diverse clade of suboscine passerine birds known for their flamboyant plumages.
 
@@ -30,14 +30,14 @@ To test Darwin’s (1871) hypothesis that the increase in sexual selection assoc
   </figure>
 </div>
 
-## The evolution of feather-instruments in a clade of "bee" hummingbirds
+### The evolution of feather-instruments in a clade of "bee" hummingbirds
 
-<div style="display: flex; align-items: flex-start;">
+<div style="display: flex; align-items: center;">
   <figure style="width: 40%; margin-right: 1em;">
     <a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Clark_et_al_2018.pdf">
       <img src="/images/research/bee-hummingbird.png" width="100%" style="display: block;"/>
     </a>
-    <figcaption>The feathers of some "bee" hummingbirds are highly modified and produce tonal sounds when air passes over them at the right speed</figcaption>
+    <figcaption style="text-align: left;">Distinct patterns of lek (top) and call (vocalizations) complicate understanding this history of the White-crowned Manakin</figcaption>
   </figure>
   <div style="flex: 1;">
     <p>Phenotypic characters with a complex physical basis may have a correspondingly complex evolutionary history. Males in the “bee” hummingbird clade court females with sound from tail-feathers, which flutter during display dives. In this study, I applied stochastic process models to rank different evolutionary scenarios.</p>
@@ -45,21 +45,21 @@ To test Darwin’s (1871) hypothesis that the increase in sexual selection assoc
 </div>
 
 
-## The evolution of vocal phenotype in a radition of Manakins
+### The evolution of vocal phenotype in a radition of Manakins
 
-<div style="display: flex; align-items: flex-start;">
+<div style="display: flex; align-items: center;">
   <figure style="width: 40%; margin-right: 1em;">
     <a href="https://www.sciencedirect.com/science/article/pii/S105579032100138X#:~:text=Fig.%208.,details%20and%20discussion.">
       <img src="https://ars.els-cdn.com/content/image/1-s2.0-S105579032100138X-gr8.jpg" width="100%" style="display: block;"/>
     </a>
-    <figcaption>Distinct patterns of lek (top) and call (vocalizations) complicate understanding this history of the White-crowned Manakin</figcaption>
+    <figcaption style="text-align: left;">Distinct patterns of lek (top) and call (vocalizations) complicate understanding this history of the White-crowned Manakin</figcaption>
   </figure>
   <div style="flex: 1;">
     <p>To examine the differentiation of a secondary sexual characteristic produced through animal behavior (vocalization during courtship display), I studied the radiation of a cryptic species complex across the Amazon basin. In addition to providing new biogeographic insights, our study discovered complex patterns of <a href="https://en.wikipedia.org/wiki/Plesiomorphy_and_symplesiomorphy">symplesiomorphic</a> (shared and ancestral characters) evolution.</p>
   </div>
 </div>
 
-### Reconstructing character data directly from fossils
+## Reconstructing character data directly from fossils
 
 I am generally interested in how well we can reconstruct "living" characteristics from skeletal proportions, which is especially important for animals that we only know from fossils. In this example, I use [allometric scaling equations](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0082000) to estimate the distribution of body masses for an assemblage of stem lineage birds in the latest Maastrictian.
 
@@ -73,10 +73,9 @@ I am generally interested in how well we can reconstruct "living" characteristic
 </div>
 
 
-### Modes of fish shape evolution across the Phanerozoic
+## Modes of fish shape evolution across the Phanerozoic
 
 Coming soon.
-
 
 
 ---
