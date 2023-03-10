@@ -41,10 +41,9 @@ To examine the differentiation of a secondary sexual characteristic produced thr
 I am generally interested in how well we can reconstruct "living" characteristics from skeletal proportions, which is especially important for animals that we only know from fossils. In this example, I use [allometric scaling equations](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0082000) to estimate the distribution of body masses for an assemblage of stem lineage birds in the latest Maastrictian.
 
 <figure>
-<a href=""><img src="/images/research/Berv_Field_2018_supp4.png" width="75%" style="display: block; margin: 0 auto;"/></a>
-<figcaption> Estimates of body mass from fossil allometries </figcaption>
+<a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_Field_2018.pdf"><img src="/images/research/Berv_Field_2018_supp4.png" width="75%" style="display: block; margin: 0 auto;"/></a>
+<figcaption> Estimates of body mass from fossil allometries, Berv and Field 2018 </figcaption>
 </figure>
-
 
 ### Modes of fish shape evolution across the Phanerozoic
 
