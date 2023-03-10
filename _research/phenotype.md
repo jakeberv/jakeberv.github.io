@@ -31,7 +31,9 @@ By synthesizing data from physiological, anatomical, life history, and genomic d
     <p style="margin-top: 0; align-self: flex-start;">To test Darwin’s (1871) hypothesis that the increase in sexual selection associated with polygynous breeding systems drives the evolution of color dimorphism, we estimated and applied a new phylogenetic hypothesis for the Neotropical Cotingas, a diverse clade of suboscine passerine birds known for their flamboyant plumages.</p>
   </div>
 </div>
-[Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_Prum_2014.pdf){: .btn--research}
+<div style="text-align: right;">
+  <a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_Prum_2014.pdf" class="btn--research">Download Paper</a>
+</div>
 
 ### The evolution of feather-instruments in a clade of "bee" hummingbirds
 ---
@@ -47,7 +49,9 @@ By synthesizing data from physiological, anatomical, life history, and genomic d
     <p style="margin-top: 0; align-self: flex-start;">Phenotypic characters with a complex physical basis may have a correspondingly complex evolutionary history. Males in the “bee” hummingbird clade court females with sound from tail-feathers, which flutter during display dives. In this study, I applied stochastic process models to rank different evolutionary scenarios.</p>
   </div>
 </div>
-[Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Clark_et_al_2018.pdf){: .btn--research}
+<div style="text-align: right;">
+  <a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Clark_et_al_2018.pdf" class="btn--research">Download Paper</a>
+</div>
 
 ### The evolution of vocal phenotype in a radition of Manakins
 ---
@@ -63,7 +67,9 @@ By synthesizing data from physiological, anatomical, life history, and genomic d
     <p style="margin-top: 0; align-self: flex-start;">To examine the differentiation of a secondary sexual characteristic produced through animal behavior (vocalization during courtship display), I studied the radiation of a cryptic species complex across the Amazon basin. In addition to providing new biogeographic insights, our study discovered complex patterns of <a href="https://en.wikipedia.org/wiki/Plesiomorphy_and_symplesiomorphy">symplesiomorphic</a> (shared and ancestral characters) evolution.</p>
   </div>
 </div>
-[Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_et_al_2021.pdf){: .btn--research}
+<div style="text-align: right;">
+  <a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_et_al_2021.pdf" class="btn--research">Download Paper</a>
+</div>
 
 ## Fossil Reconstructions
 
@@ -79,15 +85,13 @@ I am generally interested in how well we can reconstruct "living" characteristic
     <figcaption> Estimates of body mass from fossil allometries, Berv and Field 2018 </figcaption>
   </figure>
 </div>
-[Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_Field_2018.pdf){: .btn--research}
+<div style="text-align: right;">
+  <a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_Field_2018.pdf" class="btn--research">Download Paper</a>
+</div>
 
 ### Modes of fish shape evolution across the Phanerozoic
 
 Coming soon.
-
-<div style="text-align: right;">
-  <a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_et_al_2021.pdf" class="btn--research">Download Paper</a>
-</div>
 
 ---
 [Return to Research Home](https://www.jakeberv.com/research){: .btn--research}
