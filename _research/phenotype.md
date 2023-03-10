@@ -35,7 +35,7 @@ To test Darwin’s (1871) hypothesis that the increase in sexual selection assoc
 Phenotypic characters with a complex physical basis may have a correspondingly complex evolutionary history. Males in the “bee” hummingbird clade court females with sound from tail-feathers, which flutter during display dives. In this study, I applied stochastic process models to rank different evolutionary scenarios.
 
 <div style="display: flex; align-items: flex-start;">
-  <figure style="width: 40%; max-width: 400px; margin-right: 1em;">
+  <figure style="width: 40%; margin-right: 1em;">
     <a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Clark_et_al_2018.pdf">
       <img src="/images/research/bee-hummingbird.png" width="100%" style="display: block;"/>
     </a>
@@ -52,7 +52,7 @@ Phenotypic characters with a complex physical basis may have a correspondingly c
 To examine the differentiation of a secondary sexual characteristic produced through animal behavior (vocalization during courtship display), I studied the radiation of a cryptic species complex across the Amazon basin. In addition to providing new biogeographic insights, our study discovered complex patterns of [symplesiomorphic](https://en.wikipedia.org/wiki/Plesiomorphy_and_symplesiomorphy) (shared and ancestral characters) evolution.
 
 <div style="display: flex; align-items: flex-start;">
-  <figure style="width: 40%; max-width: 400px; margin-right: 1em;">
+  <figure style="width: 40%; margin-right: 1em;">
     <a href="https://www.sciencedirect.com/science/article/pii/S105579032100138X#:~:text=Fig.%208.,details%20and%20discussion.">
       <img src="https://ars.els-cdn.com/content/image/1-s2.0-S105579032100138X-gr8.jpg" width="100%" style="display: block;"/>
     </a>
