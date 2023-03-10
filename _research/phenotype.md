@@ -85,6 +85,9 @@ I am generally interested in how well we can reconstruct "living" characteristic
 
 Coming soon.
 
+<div style="text-align: right;">
+  <a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_et_al_2021.pdf" class="btn--research">Download Paper</a>
+</div>
 
 ---
 [Return to Research Home](https://www.jakeberv.com/research){: .btn--research}
