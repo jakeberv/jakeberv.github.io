@@ -34,19 +34,34 @@ To test Darwin’s (1871) hypothesis that the increase in sexual selection assoc
 
 Phenotypic characters with a complex physical basis may have a correspondingly complex evolutionary history. Males in the “bee” hummingbird clade court females with sound from tail-feathers, which flutter during display dives. In this study, I applied stochastic process models to rank different evolutionary scenarios.
 
+<div style="display: flex; align-items: flex-start;">
+  <figure style="width: 40%; max-width: 400px; margin-right: 1em;">
+    <a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Clark_et_al_2018.pdf">
+      <img src="/images/research/bee-hummingbird.png" width="100%" style="display: block;"/>
+    </a>
+    <figcaption>The feathers of some "bee" hummingbirds are highly modified and produce tonal sounds when air passes over them at the right speed</figcaption>
+  </figure>
+  <div style="flex: 1;">
+    <p>Phenotypic characters with a complex physical basis may have a correspondingly complex evolutionary history. Males in the “bee” hummingbird clade court females with sound from tail-feathers, which flutter during display dives. In this study, I applied stochastic process models to rank different evolutionary scenarios.</p>
+  </div>
+</div>
+
+
 ## The evolution of vocal phenotype in a radition of Manakins
 
 To examine the differentiation of a secondary sexual characteristic produced through animal behavior (vocalization during courtship display), I studied the radiation of a cryptic species complex across the Amazon basin. In addition to providing new biogeographic insights, our study discovered complex patterns of [symplesiomorphic](https://en.wikipedia.org/wiki/Plesiomorphy_and_symplesiomorphy) (shared and ancestral characters) evolution.
 
-<div style="text-align: center;">
-  <figure style="width: 75%; margin: 0 auto;">
+<div style="display: flex; align-items: flex-start;">
+  <figure style="width: 40%; max-width: 400px; margin-right: 1em;">
     <a href="https://www.sciencedirect.com/science/article/pii/S105579032100138X#:~:text=Fig.%208.,details%20and%20discussion.">
       <img src="https://ars.els-cdn.com/content/image/1-s2.0-S105579032100138X-gr8.jpg" width="100%" style="display: block;"/>
     </a>
     <figcaption>Distinct patterns of lek (top) and call (vocalizations) complicate understanding this history of the White-crowned Manakin</figcaption>
   </figure>
+  <div style="flex: 1;">
+    <p>To examine the differentiation of a secondary sexual characteristic produced through animal behavior (vocalization during courtship display), I studied the radiation of a cryptic species complex across the Amazon basin. In addition to providing new biogeographic insights, our study discovered complex patterns of <a href="https://en.wikipedia.org/wiki/Plesiomorphy_and_symplesiomorphy">symplesiomorphic</a> (shared and ancestral characters) evolution.</p>
+  </div>
 </div>
-
 
 ### Reconstructing character data directly from fossils
 
@@ -66,17 +81,6 @@ I am generally interested in how well we can reconstruct "living" characteristic
 
 Coming soon.
 
-<div style="display: flex; align-items: center;">
-  <figure style="width: 40%; max-width: 400px; margin-right: 1em;">
-    <a href="https://www.sciencedirect.com/science/article/pii/S105579032100138X#:~:text=Fig.%208.,details%20and%20discussion.">
-      <img src="https://ars.els-cdn.com/content/image/1-s2.0-S105579032100138X-gr8.jpg" width="100%" style="display: block;"/>
-    </a>
-    <figcaption style="text-align: center;">Distinct patterns of lek (top) and call (vocalizations) complicate understanding this history of the White-crowned Manakin</figcaption>
-  </figure>
-  <div style="flex: 1;">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consectetur dolor ac ipsum sollicitudin consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras eu elit at libero luctus elementum. Sed vitae malesuada odio. Fusce sodales vel lorem sed convallis. Aliquam dapibus lacus in nunc rutrum finibus. Fusce venenatis malesuada est quis laoreet. In vel nibh et eros sagittis tincidunt quis nec turpis. Sed euismod diam id nisl posuere efficitur. Sed malesuada eu quam sit amet rhoncus. Vivamus vel tellus ex. Aenean pharetra mauris sed suscipit malesuada. Sed efficitur turpis justo, a faucibus tellus bibendum eu.</p>
-  </div>
-</div>
 
 
 ---
