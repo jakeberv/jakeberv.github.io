@@ -19,4 +19,4 @@ See CV for other publications/pre-prints
 
 {% include base_path %}
 
-{% for post in site.publications reversed %} {% include archive-single.html %} {% endfor %}
+{% for post in site.publications reversed %} {% include archive-single-pubs.html %} {% endfor %}
