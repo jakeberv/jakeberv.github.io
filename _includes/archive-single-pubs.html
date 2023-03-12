@@ -73,7 +73,7 @@
     </div>
 
     {% if post.link %}
-      <div class="archive__item-altmetric">
+      <div class="archive__item-altmetric" style="width: 15%; padding-left: 1rem;">
         <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
         <div data-badge-popover="right" data-badge-type="medium-donut" data-doi="{{ post.link }}" data-condensed="true" data-hide-no-mentions="true" data-hide-less-than="1" class="altmetric-embed"></div>
       </div>
@@ -122,6 +122,6 @@
   }
   .archive__item-altmetric {
     margin-right: 2rem;
-    width: 20%;
+    width: 15%;
   }
 </style>
