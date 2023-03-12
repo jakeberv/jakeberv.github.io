@@ -41,11 +41,3 @@
 @import "print";
 
 @import "custom";
-
-.site-title::before {
-	content: url("https://github.com/raroraroraro/prle/raw/gh-pages/assets/LogoRaro.jpg");
-	display: inline-block;
-	position: relative;
-	width: 35px;
-	top: 10px;
-}
