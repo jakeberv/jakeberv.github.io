@@ -24,9 +24,22 @@ My first paper on this topic focused on the potential impact of ecological filte
 <iframe src="/files/pdf/research/curbio_28_11_3c.pdf" width="100%" height="500" frameborder="no" border="0" marginwidth="0" marginheight="0">
 </iframe> [Artwork by Phillip Krzeminski](https://www.phillipmk.com/){: .btn--research} 
 
-We later investigated the same hypothesis in mammals  [mammals](https://onlinelibrary.wiley.com/doi/10.1002/ece3.8114), and discovered similar, albeit somewhat more ambiguous patterns. As part of this work, I developed a new tool for analyzing ancestral state transitions from stochastic character maps [Github Repo](https://github.com/jakeberv/mammal_arboreality){: .btn--research}[Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Hughes_et_al_2021.pdf){: .btn--research}
+---
 
-<a href="https://doi.org/10.1002/ece3.8114"><img src="/images/research/ece38114-fig-0003-m.jpg" width="100%" style="display: block; margin: 0 auto;"/></a>
+<div style="display: flex;">
+  <div style="width: 40%; margin-right: 1em;">
+    <a href="https://doi.org/10.1002/ece3.8114">
+      <img src="/images/research/ece38114-fig-0003-m.jpg" width="100%" style="display: block;"/>
+    </a>
+    <figcaption style="text-align: left;">The phylogenetic distribution of sexual dichromatism across Neotropical Cotingas</figcaption>
+  </div>
+  <div style="flex: 1; display: flex; flex-direction: column;">
+    <p style="margin-top: 0; align-self: flex-start;">We later investigated the same hypothesis in <a href="https://onlinelibrary.wiley.com/doi/10.1002/ece3.8114">mammals</a> and discovered similar, albeit somewhat more ambiguous patterns. As part of this work, I developed a new tool for analyzing ancestral state transitions from stochastic character maps</p>
+  </div>
+</div>
+<div style="text-align: right;">
+<a href="https://github.com/jakeberv/mammal_arboreality" class="btn--research">Github repo</a><a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Hughes_et_al_2021.pdf" class="btn--research">Download Paper</a>
+</div>
 
 I am currently examining these patterns across the Cenozoic diversification of frogs.
 
