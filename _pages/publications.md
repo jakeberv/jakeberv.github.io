@@ -10,14 +10,14 @@ author_profile: true
     <a href="">
       <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/disintegration_of_persistence_of_memory-publications.jpg" width="80%" style="display: block;"/>
     </a>
-    <figcaption> The Disintegration of the Persistence of Memory, by [Salvador Dalí </figcaption>
+    <figcaption> The Disintegration of the Persistence of Memory, by Salvador Dalí </figcaption>
   </figure>
 </div>
 
 ---
 
-**\"*" indicates equal authorship**
-**"^"" indicates student advisee**
+*Students I have advised are marked with a ^ symbol*
+*Authors receivieng equal co-authors are marked with an \* symbol*
 
 See CV for other publications/pre-prints
 
