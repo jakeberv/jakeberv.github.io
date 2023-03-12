@@ -5,14 +5,10 @@ permalink: /publications/
 author_profile: true
 ---
 
-<div style="text-align: center;">
-  <figure style="width: 100%; margin: 0 auto;">
-    <a href="">
-      <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/publication_headers.png" width="80%" style="display: block;"/>
-    </a>
-    <figcaption> Examples of journal cover images from my research (and birdy mascott) </figcaption>
-  </figure>
-</div>
+<figure>
+  <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/publication_headers.png" alt="Examples of journal cover images from my research (and birdy mascott)"/>
+  <figcaption> Examples of journal cover images from my research (and birdy mascott)</figcaption>
+</figure>
 
 ---
 
