@@ -8,9 +8,9 @@ author_profile: true
 <div style="text-align: center;">
   <figure style="width: 100%; margin: 0 auto;">
     <a href="">
-      <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/disintegration_of_persistence_of_memory-publications.jpg" width="80%" style="display: block;"/>
+      <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/publication_headers.png" width="80%" style="display: block;"/>
     </a>
-    <figcaption> The Disintegration of the Persistence of Memory, by Salvador Dalí </figcaption>
+    <figcaption> Examples of journal cover images from my research (and birdy mascott) </figcaption>
   </figure>
 </div>
 
@@ -18,7 +18,7 @@ author_profile: true
 
 *Students I have advised are marked with a ^ symbol*
 
-*Authors receivieng equal co-authors are marked with an \* symbol*
+*Authors receivieng equal co-authorship are marked with an \* symbol*
 
 See CV for other publications/pre-prints
 
