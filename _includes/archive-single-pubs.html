@@ -14,6 +14,50 @@
 
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+
+    <div class="archive__item-details">
+      {% if post.collection == 'publications' %}
+        <p>
+          {% if post.citation %}
+            {{ post.citation }}
+          {% endif %}
+          <br>
+          {% if post.link %}
+            <a href="{{ post.link }}"><i class="fas fa-fw fa-link zoom" aria-hidden="true"></i></a>
+          {% endif %}
+          {% if post.paperurl %}
+            <a href="{{ post.paperurl }}"><i class="fas fa-fw fa-file-pdf zoom" aria-hidden="true"></i></a>
+          {% endif %}
+          {% if post.code %}
+            <a href="{{ post.code }}"><i class="fas fa-fw fa-code zoom" aria-hidden="true"></i></a>
+          {% endif %}
+          {% if post.github %}
+            <a href="{{ post.github }}"><i class="fab fa-fw fa-github zoom" aria-hidden="true"></i></a>
+          {% endif %}
+        </p>
+        {% if post.abstract %}
+          <details><summary>Abstract</summary>
+          <blockquote>
+          <p>
+          {{ post.abstract }}
+          </p>
+          </blockquote>
+          </details>
+        {% endif %}
+      {% elsif post.collection == 'teaching' %}
+        <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+      {% elsif post.collection == 'posts' and post.date %}
+        <p class="page__date"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+      {% endif %}
+    </div>
+
+    {% if post.link %}
+      <div class="archive__item-altmetric">
+        <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+        <div data-badge-details="right" data-badge-type="medium-donut" data-doi="{{ post.link }}" data-condensed="true" data-hide-no-mentions="true" data-hide-less-than="10" class="altmetric-embed"></div>
+      </div>
+    {% endif %}
+
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src=
@@ -41,46 +85,6 @@
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
 
-    {% if post.collection == 'teaching' %}
-      <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-    {% elsif post.collection == 'publications' %}
-      {% if post.abstract %}
-        <details><summary>Abstract</summary>
-        <blockquote>
-        <p>
-        {{ post.abstract }}
-        </p>
-        </blockquote>
-        </details>
-      {% endif %}
-      
-      <!-- citation and icon code -->
-      <p>
-      {% if post.citation %}
-        {{ post.citation }}
-      {% endif %}
-      <br>
-      {% if post.link %}
-        <a href="{{ post.link }}"><i class="fas fa-fw fa-link zoom" aria-hidden="true"></i></a>
-      {% endif %}
-      {% if post.paperurl %}
-        <a href="{{ post.paperurl }}"><i class="fas fa-fw fa-file-pdf zoom" aria-hidden="true"></i></a>
-      {% endif %}
-      {% if post.code %}
-        <a href="{{ post.code }}"><i class="fas fa-fw fa-code zoom" aria-hidden="true"></i></a>
-      {% endif %}
-      {% if post.github %}
-        <a href="{{ post.github }}"><i class="fab fa-fw fa-github zoom" aria-hidden="true"></i></a>
-      {% endif %}
-      {% if post.link %}
-      <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
-      <div data-badge-details="right" data-badge-type="medium-donut" data-doi="{{ post.link }}" data-condensed="true" data-hide-no-mentions="true" data-hide-less-than="1" class="altmetric-embed"></div>
-      {% endif %}
-      </p>
-    {% elsif post.collection == 'posts' and post.date %}
-      <p class="page__date"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
-    {% endif %}
-    
     {% if post.excerpt and post.collection == 'research' and site.read_more != 'enabled' %}
       <p class="archive__item-excerpt" itemprop="description">
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">
@@ -105,3 +109,17 @@
     
   </article>
 </div>
+
+<style>
+  .archive__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .archive__item-details {
+    flex-grow: 1;
+  }
+  .archive__item-altmetric {
+    margin-left: 1rem;
+  }
+</style>
