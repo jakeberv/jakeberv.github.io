@@ -21,7 +21,7 @@ By synthesizing data from physiological, anatomical, life history, and genomic d
 ---
 
 <div style="display: flex;">
-  <div style="width: 40%; margin-right: 1em;">
+  <div style="width: 50%; margin-right: 1em;">
     <a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_Prum_2014.pdf">
       <img src="/images/research/CircleTree-LOO-PR.png" width="100%" style="display: block;"/>
     </a>
@@ -39,7 +39,7 @@ By synthesizing data from physiological, anatomical, life history, and genomic d
 ---
 
 <div style="display: flex;">
-  <div style="width: 40%; margin-right: 1em;">
+  <div style="width: 50%; margin-right: 1em;">
     <a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Clark_et_al_2018.pdf">
       <img src="/images/research/bee-hummingbird.png" width="100%" style="display: block;"/>
     </a>
@@ -57,7 +57,7 @@ By synthesizing data from physiological, anatomical, life history, and genomic d
 ---
 
 <div style="display: flex;">
-  <div style="width: 40%; margin-right: 1em;">
+  <div style="width: 50%; margin-right: 1em;">
     <a href="https://www.sciencedirect.com/science/article/pii/S105579032100138X#:~:text=Fig.%208.,details%20and%20discussion.">
       <img src="https://ars.els-cdn.com/content/image/1-s2.0-S105579032100138X-gr8.jpg" width="100%" style="display: block;"/>
     </a>
