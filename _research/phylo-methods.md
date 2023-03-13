@@ -51,7 +51,7 @@ My first paper on this topic focused on the potential impact of ecological filte
     <a href="https://doi.org/10.1002/ece3.8114">
       <img src="/images/research/ece38114-fig-0003-m.jpg" width="100%" style="display: block;"/>
     </a>
-    <figcaption style="text-align: left;">The phylogenetic distribution of sexual dichromatism across Neotropical Cotingas</figcaption>
+    <figcaption style="text-align: left;">Transition frequency through time</figcaption>
   </div>
   <div style="flex: 1; display: flex; flex-direction: column;">
     <p style="margin-top: 0; align-self: flex-start;">We later investigated the same hypothesis in <a href="https://onlinelibrary.wiley.com/doi/10.1002/ece3.8114">mammals</a> and discovered similar, albeit somewhat more ambiguous patterns. As part of this work, I developed a new tool for analyzing ancestral state transitions from stochastic character maps</p>
