@@ -1,4 +1,6 @@
 ---
+toc: true
+toc_label: "Table of Contents"
 title: "Phylogeny"
 layout: single-portfolio
 excerpt: "<img src='/images/research/haeckel_humm.jpg' alt='Ernst Haeckel Hummingbirds Plate #99'>"
