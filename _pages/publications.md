@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 <br>
-<figure style="max-width: 80%;">
+<figure style="max-width: 100%;">
   <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/publication_headers.png" alt="Examples of journal cover images from my research (and birdy mascott)"/>
   <figcaption> Examples of journal cover images from my research (and birdy mascott)</figcaption>
 </figure>
