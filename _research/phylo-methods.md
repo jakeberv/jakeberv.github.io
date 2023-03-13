@@ -1,5 +1,7 @@
 ---
 title: "Diversification"
+toc: true
+toc_sticky: true
 layout: single-portfolio
 excerpt: "<img src='/images/research/Yggdrasil-cropped.jpg' alt='Yggdrasil'>"
 collection: research
