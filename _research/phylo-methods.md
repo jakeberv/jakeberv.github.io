@@ -40,9 +40,9 @@ My first paper on this topic focused on the potential impact of ecological filte
 <body>
   <div style="overflow: auto;">
     <iframe src="/files/pdf/research/curbio_28_11_3c.pdf" width="100%" height="500" frameborder="no" border="0" marginwidth="0" marginheight="0"></iframe>
-    [Artwork by Phillip Krzeminski](https://www.phillipmk.com/){: .btn--research}[Download Poster](/files/pdf/research/curbio_28_11_3c.pdf){: .btn--research}
   </div>
 </body>
+[Artwork by Phillip Krzeminski](https://www.phillipmk.com/){: .btn--research}[Download Poster](/files/pdf/research/curbio_28_11_3c.pdf){: .btn--research}
 
 ---
 
