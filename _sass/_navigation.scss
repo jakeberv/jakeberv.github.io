@@ -6,6 +6,8 @@
    Breadcrumb navigation links
    ========================================================================== */
 
+$breadcrumb-font-size: 1.2em;
+
 .breadcrumbs {
   @include container;
   @include clearfix;
@@ -15,9 +17,9 @@
   padding-right: 2em;
   font-family: $sans-serif;
   -webkit-animation: intro 0.3s both;
-          animation: intro 0.3s both;
+  animation: intro 0.3s both;
   -webkit-animation-delay: 0.30s;
-          animation-delay: 0.30s;
+  animation-delay: 0.30s;
 
   @include breakpoint($large) {
     padding-left: 1em;
@@ -31,7 +33,7 @@
   ol {
     padding: 0;
     list-style: none;
-    font-size: $type-size-6;
+    font-size: $breadcrumb-font-size;
 
     @include breakpoint($large) {
       @include span(10 of 12 last);
