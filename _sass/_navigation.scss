@@ -6,13 +6,14 @@
    Breadcrumb navigation links
    ========================================================================== */
 
-$breadcrumb-font-size: 1em;
+$breadcrumb-font-size: 2em;
 
 .breadcrumbs {
   @include container;
   @include clearfix;
   margin-top: 0;
   margin-bottom: 0;
+  padding-top: 2em;
   padding-left: 2em;
   padding-right: 2em;
   font-family: $sans-serif;
