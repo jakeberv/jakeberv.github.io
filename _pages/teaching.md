@@ -1,6 +1,5 @@
 ---
 permalink: /teaching/
-title: "Teaching"
 ---
 
 <figure>
