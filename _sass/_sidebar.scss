@@ -75,11 +75,13 @@
   width: 36px;
   // set width only, for non-square avatars
   // height: 36px;
+  padding-top: 65px; /* add padding to the top */
 
   @include breakpoint($large) {
     display: block;
     width: auto;
     height: auto;
+    padding-top: 65px; /* add padding to the top */
   }
 
   img {
@@ -99,21 +101,25 @@
   padding-left: 15px;
   padding-right: 25px;
   line-height: 1;
+  padding-top: 65px; /* add padding to the top */
 
   @include breakpoint($large) {
     display: block;
     width: 100%;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 65px; /* add padding to the top */
   }
 }
 
 .author__name {
   margin: 0;
+  padding-top: 65px; /* add padding to the top */
 
   @include breakpoint($large) {
     margin-top: 10px;
     margin-bottom: 10px;
+    padding-top: 65px; /* add padding to the top */
   }
 }
 .sidebar .author__name {
@@ -123,10 +129,12 @@
 
 .author__bio {
   margin: 0;
+  padding-top: 65px; /* add padding to the top */
 
   @include breakpoint($large) {
     margin-top: 10px;
     margin-bottom: 20px;
+    padding-top: 65px; /* add padding to the top */
   }
 }
 
