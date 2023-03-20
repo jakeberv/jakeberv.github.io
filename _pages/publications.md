@@ -6,7 +6,7 @@ author_profile: true
 ---
 <br>
 <figure style="max-width: 100%;">
-  <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/publication_headers.png" alt="Examples of journal cover images from my research (and birdy mascott)"/>
+  <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/publication_headers.png" alt="Examples of journal cover images from my research"/>
   <figcaption> Journal cover images </figcaption>
 </figure>
 
@@ -27,5 +27,5 @@ See CV for other publications/pre-prints
 
 <figure style="max-width: 100%;">
   <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/citation_map_3_19_23.png" alt="Citation Map"/>
-  <figcaption> Web of Science Citation Map </figcaption>
+  <figcaption> For each article in the Web of Science Core Collection that cited the researcher's work, a city with a contributing author's institution represents a data point </figcaption>
 </figure>
