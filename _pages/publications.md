@@ -25,6 +25,8 @@ author_profile: true
 
 See CV for other publications/pre-prints  
 
+## Citation Map
+
 <figure style="max-width: 100%;">
   <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/citation_map_3_19_23.png" alt="Citation Map"/>
   <figcaption> For each article in the Web of Science Core Collection that cited the researcher's work, a city with a contributing author's institution represents a data point </figcaption>

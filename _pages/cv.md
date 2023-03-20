@@ -27,6 +27,6 @@ You can download a PDF copy of my CV [here](/files/pdf/BERV_3_19_23_web.pdf).
 </head>
 <body>
   <div style="overflow: auto;">
-    <iframe src="/files/pdf/BERV_3_19_23_web.pdf.pdf" height="500" frameborder="no" border="0" marginwidth="0" marginheight="0"></iframe>
+    <iframe src="/files/pdf/BERV_3_19_23_web.pdf" height="500" frameborder="no" border="0" marginwidth="0" marginheight="0"></iframe>
   </div>
 </body>
