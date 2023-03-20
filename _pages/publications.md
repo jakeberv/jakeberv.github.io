@@ -10,6 +10,7 @@ author_profile: true
   <figcaption> Journal cover images </figcaption>
 </figure>
 
+
 {% if author.googlescholar %} You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u> {% endif %}
 
 {% include base_path %}
@@ -23,3 +24,8 @@ author_profile: true
 *Authors receivieng equal co-authorship are marked with an \* symbol*
 
 See CV for other publications/pre-prints  
+
+<figure style="max-width: 100%;">
+  <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/citation_map_3_19_23.png" alt="Citation Map"/>
+  <figcaption> Web of Science Citation Map </figcaption>
+</figure>
