@@ -20,6 +20,12 @@ I am fascinated by how microevolutionary genetic processes operating at the leve
 -   When and why might one of these modes of evolution predominate over the other? 
 -   What are the drivers and correlates of evolutionary change?
 
+<figure style="width: 75%; margin: 0 auto;">
+  <img src="/images/research/IMG_4528.JPG" alt="Field work outside Manaus"/>
+  <figcaption> Field work outside Manaus, Brazil
+  </figcaption>
+</figure>
+
 ---
 More specifically, I am to answer the following questions:
 
