@@ -22,9 +22,9 @@ header:
 
 *My research program integrates data from natural history, ecology, genomics, and paleontology---often through the application of novel computation tools---in order to understand the links between micro- and macroevolution.* 
 
-[Go Directly to Research](https://www.jakeberv.com/research){: .btn--research} For examples considering groups of birds, mammals, reptiles, amphibians, fishes, and deep-sea invertebrates.
+[Go Directly to Research](https://www.jakeberv.com/research){: .btn--research} for examples considering groups of birds, mammals, reptiles, amphibians, fishes, and deep-sea invertebrates.
 
-I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/) to develop an interdisciplinary research program.
+I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/).
 
 Previously, I:
 
