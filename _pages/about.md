@@ -20,11 +20,11 @@ header:
 
 # About me
 
-*My research integrates data from natural history, ecology, genomics, and paleontology---often through the application of novel computation tools---in order to understand the links between micro- and macroevolution.*
+*My research program integrates data from natural history, ecology, genomics, and paleontology---often through the application of novel computation tools---in order to understand the links between micro- and macroevolution.* 
 
-I have studied groups of birds, mammals, reptiles, amphibians, fishes, and deep-sea invertebrates [Go Directly to Research](https://www.jakeberv.com/research){: .btn--research}. I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/) to develop an interdisciplinary research program.
+[Go Directly to Research](https://www.jakeberv.com/research){: .btn--research} For examples considering groups of birds, mammals, reptiles, amphibians, fishes, and deep-sea invertebrates.
 
-[Most recent invited seminar](https://bit.ly/berv_OIST_2022){: .btn--research}
+I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/) to develop an interdisciplinary research program.
 
 Previously, I:
 
@@ -37,8 +37,8 @@ Previously, I:
 -   completed a Bachelors of Science degree at [Yale University](https://eeb.yale.edu/) (2006-2010). My senior thesis investigated patterns of phylogeographic congruence among co-distributed open-habitat specialists [across the Amazon basin](https://jakeberv.github.io/publication/2021-03-08-vanEls_et_al_2021).
 
 I am currently affiliated with five groups within the University of Michigan
-1. [Department of Ecology and Evolutionary Biology](https://lsa.umich.edu/eeb/people/postdoctoral-fellows/jacob-berv.html), 
-2. [Earth and Environmental Sciences](https://lsa.umich.edu/earth/research/paleontology.html),
+1. [Department of Ecology and Evolutionary Biology](https://lsa.umich.edu/eeb/people/postdoctoral-fellows/jacob-berv.html)
+2. [Earth and Environmental Sciences](https://lsa.umich.edu/earth/research/paleontology.html)
 3. [Museum of Zoology](https://lsa.umich.edu/ummz) 
 4. [Institute for Data Science](https://midas.umich.edu/)
 5. [School for Environment and Sustainability](http://bcweeks.weebly.com/)
