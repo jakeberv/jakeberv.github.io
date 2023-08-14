@@ -26,7 +26,7 @@ header:
 
 I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/).
 
-<img src="/images/midas_logo.png" alt="", width="300">
+<img src="/images/midas_logo.png" alt="" width="300">
 
 Previously, I:
 
