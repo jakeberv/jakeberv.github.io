@@ -25,12 +25,12 @@ header:
 [Go Directly to Research](https://www.jakeberv.com/research){: .btn--research} for examples considering groups of birds, mammals, reptiles, amphibians, fishes, and deep-sea invertebrates.
 
 <a href="https://midas.umich.edu/ai-in-science/">
-<img src="/images/midas_logo.png" alt="" width="500">
+<img src="/images/midas_logo.png" alt="" width="550">
 </a>
 
 I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/).
 
-Previously, I:
+<b>Previously, I:</b>
 
 -   was a [Life Sciences Fellow](https://lifescifellows.umich.edu/) at the University of Michigan (2019-2023).
 
@@ -40,7 +40,7 @@ Previously, I:
 
 -   completed a Bachelors of Science degree at [Yale University](https://eeb.yale.edu/) (2006-2010). My senior thesis investigated patterns of phylogeographic congruence among co-distributed open-habitat specialists [across the Amazon basin](https://jakeberv.github.io/publication/2021-03-08-vanEls_et_al_2021).
 
-I am currently affiliated with five groups within the University of Michigan
+<b>I am currently affiliated with five groups within the University of Michigan</b>
 1. [Department of Ecology and Evolutionary Biology](https://lsa.umich.edu/eeb/people/postdoctoral-fellows/jacob-berv.html)
 2. [Earth and Environmental Sciences](https://lsa.umich.edu/earth/research/paleontology.html)
 3. [Museum of Zoology](https://lsa.umich.edu/ummz) 

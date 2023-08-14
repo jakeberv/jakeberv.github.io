@@ -19,11 +19,7 @@ author_profile: true
 
 ---
 
-*Students I have advised are marked with a ^ symbol*
-
-*Authors receivieng equal co-authorship are marked with an \* symbol*
-
-See CV for other publications/pre-prints  
+See CV for other publications
 
 ## Citation Map
 
