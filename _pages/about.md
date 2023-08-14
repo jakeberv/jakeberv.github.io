@@ -26,6 +26,8 @@ header:
 
 I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/).
 
+<img src="/images/midas_logo.png" alt="", width="300">
+
 Previously, I:
 
 -   was a [Life Sciences Fellow](https://lifescifellows.umich.edu/) at the University of Michigan (2019-2023).

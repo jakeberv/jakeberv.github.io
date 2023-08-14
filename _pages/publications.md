@@ -6,7 +6,7 @@ author_profile: true
 ---
 <br>
 <figure style="max-width: 100%;">
-  <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/publication_headers.png" alt="Examples of journal cover images from my research"/>
+  <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/publication_headers.png" alt="Journal cover images from my research"/>
   <figcaption> Journal cover images </figcaption>
 </figure>
 
