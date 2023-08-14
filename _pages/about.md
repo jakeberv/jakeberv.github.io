@@ -24,11 +24,11 @@ header:
 
 [Go Directly to Research](https://www.jakeberv.com/research){: .btn--research} for examples considering groups of birds, mammals, reptiles, amphibians, fishes, and deep-sea invertebrates.
 
-I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/).
-
 <a href="https://midas.umich.edu/ai-in-science/">
-<img src="/images/midas_logo.png" alt="" width="400">
+<img src="/images/midas_logo.png" alt="" width="500">
 </a>
+
+I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/).
 
 Previously, I:
 
