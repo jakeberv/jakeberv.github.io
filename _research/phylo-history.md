@@ -68,7 +68,7 @@ As a Life Sciences Fellow at the University of Michigan (2019-2023), I have expl
 
 ---
 
-### Constraints on molecular evolution
+### Patterns ofmolecular evolution
 
 Using a natural experiment in the energy-starved deep sea, where mussels and tubeworms have diversified across chemosynthetic environments, Cornell PhD student Amelia Weiss and I investigated a novel resource longevity hypothesis that predicts an inverse relationship between the longevity of limiting resources and consumers’ rates of genome evolution.
 
