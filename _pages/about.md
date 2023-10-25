@@ -47,6 +47,6 @@ I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctora
 4. [Institute for Data Science](https://midas.umich.edu/)
 5. [School for Environment and Sustainability](http://bcweeks.weebly.com/)
 
-Last Updated 11 August 2023
+Last Updated 24 October 2023
 
 #### The site's banner is a portion of Salvador Dali's "Persistence of Memory." Dawn Adès wrote, "The soft watches are an unconscious symbol of the relativity of space and time, a Surrealist meditation on the collapse of our notions of a fixed cosmic order." In evolutionary biology, time is often relative and (outside of paleontology) rarely absolute. Dalí's olive tree with its cut branches, overlain by time, is a reminder of the challenges we face in understanding the tree of life. To the top left, an allusion to Charles Darwin's note, "I think", from his famous [illustration of a phylogenetic tree](https://www.amnh.org/exhibitions/darwin/the-idea-takes-shape/i-think).
