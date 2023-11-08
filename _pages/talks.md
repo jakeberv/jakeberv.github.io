@@ -12,27 +12,27 @@ author_profile: true
 Each talk has a video recording available to view. The following is a list of talks I've given at various conferences and events.
 
 {% for talk in site.data.talks %}
-<div style="display: flex; align-items: center; justify-content: flex-start; margin-bottom: 2em;">
-  <div style="flex: 1; padding-right: 5px;"> <!-- Reduced padding to close the gap -->
+<div style="display: grid; grid-template-columns: 3fr 2fr; column-gap: 10px; align-items: center; margin-bottom: 2em;">
+  <div>
     <h2>{{ talk.title }}</h2>
-    <p style="margin-bottom: 0.5em; line-height: 1.2;">
+    <p style="margin: 0.5em 0; line-height: 1.2;">
       <strong>Description</strong><br>{{ talk.description }}
     </p>
     <p style="line-height: 1.2;">
       <strong>Details</strong>
     </p>
-    <ul style="line-height: 1.2; margin: 0; padding-left: 20px;"> <!-- Adjusted list styles -->
+    <ul style="line-height: 1.2; padding-left: 20px; margin: 0;">
       <li>Event: {{ talk.event }}</li>
       <li>Date: {{ talk.date }}</li>
       <li>Location: {{ talk.location }}</li>
     </ul>
     {% if talk.slides %}
-    <p style="line-height: 1.2;"><a href="{{ talk.slides_url }}">View Slides</a></p>
+    <p><a href="{{ talk.slides_url }}">View Slides</a></p>
     {% endif %}
   </div>
   
   {% if talk.youtube_id %}
-  <div style="width: 250px; flex-shrink: 0; position: relative;"> <!-- Controlled width and flex-shrink for video preview size -->
+  <div style="position: relative;">
     <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube" style="display: block; position: relative;">
       <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" style="width: 100%; height: auto;">
       <span style="
@@ -41,8 +41,8 @@ Each talk has a video recording available to view. The following is a list of ta
         left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 50%;
-        width: 54px; /* Adjusted play button size */
-        height: 54px; /* Adjusted play button size */
+        width: 54px; /* Reverted size for play button */
+        height: 54px; /* Reverted size for play button */
         display: flex;
         align-items: center;
         justify-content: center;
