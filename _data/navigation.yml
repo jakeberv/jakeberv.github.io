@@ -12,14 +12,14 @@ main:
   - title: "Talks"
     url: /talks/
     
-  # - title: "People"
-  #   url: /people/
-  #   
-  # - title: "Service"
-  #   url: /service/
+  #- title: "People"
+  #  url: /people/
+     
+  - title: "DEI"
+    url: /DEI/
   # 
-  # - title: "Software"
-  #   url: /software/
+  - title: "Code"
+    url: /code/
   # 
   # - title: "Posts"
   #   url: /posts/
