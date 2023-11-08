@@ -50,8 +50,8 @@ This page lists recorded talks I've given at conferences, workshops, and other v
           <svg width="68" height="68" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
             <mask id="mask{{ forloop.index }}" x="0" y="0" width="68" height="68" maskUnits="userSpaceOnUse">
               <rect x="0" y="0" width="68" height="68" fill="white"/>
-              <!-- Define an equilateral triangle centered in the mask -->
-              <polygon points="34,22 22,44 46,44" fill="black"/>
+              <!-- Rotate the triangle to point to the right -->
+              <polygon points="24,34 44,50 44,18" fill="black"/>
             </mask>
             <circle cx="34" cy="34" r="34" fill="rgba(255, 255, 255, 0.7)" mask="url(#mask{{ forloop.index }})"/>
           </svg>
