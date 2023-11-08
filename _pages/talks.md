@@ -13,17 +13,21 @@ Each talk has a video recording available to view. The following is a list of ta
 
 {% for talk in site.data.talks %}
 <div style="display: flex; align-items: center; justify-content: start; margin-bottom: 2em;">
-  <div style="flex: 1; padding-right: 20px;"> <!-- Adjust padding to control spacing -->
+  <div style="flex: 1; padding-right: 10px;"> <!-- Reduced padding to bring text closer to video -->
     <h2>{{ talk.title }}</h2>
-    <p><strong>Description</strong><br>{{ talk.description }}</p>
-    <p><strong>Details</strong></p>
-    <ul>
+    <p style="margin-bottom: 0.5em; line-height: 1.2;"> <!-- Tightened line spacing -->
+      <strong>Description</strong><br>{{ talk.description }}
+    </p>
+    <p style="line-height: 1.2;"> <!-- Tightened line spacing -->
+      <strong>Details</strong>
+    </p>
+    <ul style="line-height: 1.2;"> <!-- Tightened line spacing -->
       <li>Event: {{ talk.event }}</li>
       <li>Date: {{ talk.date }}</li>
       <li>Location: {{ talk.location }}</li>
     </ul>
     {% if talk.slides %}
-    <p><a href="{{ talk.slides_url }}">View Slides</a></p>
+    <p style="line-height: 1.2;"><a href="{{ talk.slides_url }}">View Slides</a></p> <!-- Tightened line spacing -->
     {% endif %}
   </div>
   
@@ -37,8 +41,8 @@ Each talk has a video recording available to view. The following is a list of ta
         left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 50%;
-        width: 54px; /* Adjusted play button size */
-        height: 54px; /* Adjusted play button size */
+        width: 54px; /* Same play button size */
+        height: 54px; /* Same play button size */
         display: flex;
         align-items: center;
         justify-content: center;
