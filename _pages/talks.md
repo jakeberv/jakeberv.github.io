@@ -1,9 +1,10 @@
 ---
-layout: page
+layout: archive
 permalink: /talks/
 title: "Talks"
 header: 
   #og_image: "teaching/pdp.png"
+author_profile: true
 ---
 
 # Talks
