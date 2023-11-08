@@ -15,7 +15,7 @@ This page lists recorded talks I've given at conferences, workshops, and other v
 <div style="margin-bottom: 2em;">
   <h2 style="margin-bottom: 0;">{{ talk.title }}</h2>
   
-  <div style="display: flex; align-items: flex-start;">
+  <div style="display: flex; align-items: flex-start; gap: 20px;">
     <div style="flex: 3;">
       <p><strong>Description</strong><br>
       {{ talk.description }}</p>
@@ -31,9 +31,9 @@ This page lists recorded talks I've given at conferences, workshops, and other v
     </div>
     
     {% if talk.youtube_id %}
-    <div style="flex: 1; padding-left: 1em;">
+    <div style="flex: 1; min-width: 240px;">
       <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube">
-        <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" style="max-width: 200px; border: 1px solid #ccc;">
+        <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" style="width: 100%; height: auto; border: 1px solid #ccc;">
       </a>
     </div>
     {% endif %}
