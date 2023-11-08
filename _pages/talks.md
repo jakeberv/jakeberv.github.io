@@ -31,9 +31,10 @@ This page lists recorded talks I've given at conferences, workshops, and other v
     </div>
     
     {% if talk.youtube_id %}
-    <div style="flex: 1; min-width: 240px;">
-      <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube">
+    <div style="flex: 1; min-width: 240px; position: relative;">
+      <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube" style="display: block; position: relative;">
         <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" style="width: 100%; height: auto; border: 1px solid #ccc;">
+        <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2em; pointer-events: none;">▶</span>
       </a>
     </div>
     {% endif %}
