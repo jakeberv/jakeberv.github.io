@@ -2,7 +2,7 @@
 layout: archive
 permalink: /talks/
 title: "Talks"
-header: 
+header:
   og_image: "teaching/pdp.png"
 author_profile: true
 ---
@@ -12,8 +12,8 @@ author_profile: true
 Each talk has a video recording available to view. The following is a list of talks I've given at various conferences and events.
 
 {% for talk in site.data.talks %}
-<div style="display: flex; align-items: center; justify-content: start; margin-bottom: 2em;">
-  <div style="flex: 1; padding-right: 10px; min-width: 0;"> <!-- Reduce padding-right to close the gap -->
+<div style="display: flex; align-items: center; justify-content: flex-start; margin-bottom: 2em;">
+  <div style="flex: 1; padding-right: 5px;"> <!-- Reduced padding to close the gap -->
     <h2>{{ talk.title }}</h2>
     <p style="margin-bottom: 0.5em; line-height: 1.2;">
       <strong>Description</strong><br>{{ talk.description }}
@@ -21,7 +21,7 @@ Each talk has a video recording available to view. The following is a list of ta
     <p style="line-height: 1.2;">
       <strong>Details</strong>
     </p>
-    <ul style="line-height: 1.2; padding-left: 20px;"> <!-- Adjust padding-left as per list style -->
+    <ul style="line-height: 1.2; margin: 0; padding-left: 20px;"> <!-- Adjusted list styles -->
       <li>Event: {{ talk.event }}</li>
       <li>Date: {{ talk.date }}</li>
       <li>Location: {{ talk.location }}</li>
@@ -32,7 +32,7 @@ Each talk has a video recording available to view. The following is a list of ta
   </div>
   
   {% if talk.youtube_id %}
-  <div style="flex-grow: 1; position: relative; max-width: 250px;"> <!-- Adjust max-width for video preview size -->
+  <div style="width: 250px; flex-shrink: 0; position: relative;"> <!-- Controlled width and flex-shrink for video preview size -->
     <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube" style="display: block; position: relative;">
       <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" style="width: 100%; height: auto;">
       <span style="
