@@ -14,9 +14,11 @@ I am an evolutionary biologist, and I care about teaching evolution because, as 
 You can read more of my thoughts on teaching and check out prior course evaluations in my teaching dossier [here](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/teaching/teaching_philosophy.pdf).
 
 ## University of Michigan
-
+-   Guest lecturer in Analytical Paleobiology EARTH 444, November 2023 -- "Estimating Evolutionary Timescales"
+    -   Slides to be uploaded
 -   Guest lecturer in Vertebrate Paleontology EARTH 437, December 2021 -- "The Evolution of Birds"
     -   Recording available ([teaching demo](https://bit.ly/Berv_EARTH437_2021))
+    -   Slides to be uploaded
 
 ## Cornell University
 
@@ -25,4 +27,4 @@ You can read more of my thoughts on teaching and check out prior course evaluati
     -   I designed semester long seminar courses with guidance from the John. S. Knight Institute for Writing in the Disciplines. My course offered undergraduates an opportunity to engage with and learn to write about primary scientific literature in a variety of formats. Student evaluations available.
 -   BIOEE 2650, Tropical Field Ecology and Behavior (field course in Kenya), Winter 2014
 
-Other teaching activities and links to many recorded talks available in my CV.
+Other teaching activities and links to recorded talks available in my CV.
