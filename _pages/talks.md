@@ -39,16 +39,16 @@ This page lists recorded talks I've given at conferences, workshops, and other v
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          background-color: rgba(255, 255, 255, 0.7);
+          background-color: rgba(255, 255, 255, 0.5); /* More transparent circle */
           border-radius: 50%;
-          width: 64px;
-          height: 64px;
+          width: 68px; /* Slightly larger circle */
+          height: 68px; /* Slightly larger circle */
           display: flex;
           align-items: center;
           justify-content: center;
         ">
-          <svg viewBox="0 0 68 48" style="width:36px;height:36px;">
-            <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+          <svg viewBox="0 0 68 48" style="width:48px;height:48px;"> <!-- Larger triangle -->
+            <path d="M 45,24 27,14 27,34" fill="transparent" stroke="#fff" stroke-width="1"></path> <!-- Transparent triangle with white stroke -->
           </svg>
         </span>
       </a>
