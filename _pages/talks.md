@@ -3,7 +3,7 @@ layout: archive
 permalink: /talks/
 title: "Talks"
 header: 
-  #og_image: "teaching/pdp.png"
+  # og_image: "teaching/pdp.png"
 author_profile: true
 ---
 
@@ -33,22 +33,26 @@ This page lists recorded talks I've given at conferences, workshops, and other v
     {% if talk.youtube_id %}
     <div style="flex-grow: 1; max-width: 280px; position: relative; margin-left: 10px;">
       <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube" style="display: block; position: relative;">
-        <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" style="width: 100%; height: auto; border: 1px solid #ccc;">
+        <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" style="width: 100%; height: auto;">
         <span style="
           position: absolute;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          background-color: rgba(255, 255, 255, 0.5); /* More transparent circle */
+          background-color: rgba(0, 0, 0, 0); /* Fully transparent */
           border-radius: 50%;
-          width: 68px; /* Slightly larger circle */
-          height: 68px; /* Slightly larger circle */
+          width: 68px;
+          height: 68px;
           display: flex;
           align-items: center;
           justify-content: center;
         ">
-          <svg viewBox="0 0 68 48" style="width:48px;height:48px;"> <!-- Larger triangle -->
-            <path d="M 45,24 27,14 27,34" fill="transparent" stroke="#fff" stroke-width="1"></path> <!-- Transparent triangle with white stroke -->
+          <svg width="68" height="68" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
+            <mask id="mask{{ forloop.index }}" x="0" y="0" width="68" height="68" maskUnits="userSpaceOnUse">
+              <rect x="0" y="0" width="68" height="68" fill="white"/>
+              <polygon points="34,17 34,51 55,34" fill="black"/>
+            </mask>
+            <circle cx="34" cy="34" r="34" fill="rgba(255, 255, 255, 0.7)" mask="url(#mask{{ forloop.index }})"/>
           </svg>
         </span>
       </a>
