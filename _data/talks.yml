@@ -4,6 +4,7 @@
   date: "2023-03-23"
   event: "Invited Seminar"
   location: "University of Toronto"
+  video_id: https://www.youtube.com/watch?v=IUKL0_gL8xs
   #slides_url: "http://example.com/slides/bird-evolution.pdf"
   
 - title: "EARTH 437 Lecture - Modern Birds"
@@ -12,6 +13,7 @@
   date: "2021-12-07"
   event: "Guest Lecture"
   location: "University of Michigan"
+  video_id: https://www.youtube.com/watch?v=G6rNxdSf5I4
   #slides_url: "http://example.com/slides/bird-evolution.pdf"
 
 - title: "Molecular Early Burst associted with the Diversification of birds at the K-Pg boundary"
@@ -20,6 +22,7 @@
   date: "2022-10-12"
   event: "Invited Seminar, host: Dr. Lauren Sallan"
   location: "Okinawa Institute of Science and Technology"
+  video_id: https://www.youtube.com/watch?v=tAECFiSZR74
   #slides_url: "http://example.com/slides/bird-evolution.pdf"
 
 - title: "Molecular Early Burst associted with the Diversification of birds at the K-Pg boundary"
@@ -28,6 +31,7 @@
   date: "2022-9-20"
   event: "Department of EEB Tuesday Lunch Seminar"
   location: "University of Michigan"
+  video_id: https://www.youtube.com/watch?v=JJ2HKO1Z_CM
   #slides_url: "http://example.com/slides/bird-evolution.pdf"
   
 - title: "Ghosts in the Machine of diversification analysis"
@@ -36,6 +40,7 @@
   date: "2021-10-7"
   event: "Department of EEB Virtual Seminar"
   location: "University of Michigan"
+  video_id: https://www.youtube.com/watch?v=shpUFy6PfhE
   #slides_url: "http://example.com/slides/bird-evolution.pdf"
   
 - title: "Molecular Early Burst at the K--Pg"
@@ -44,6 +49,7 @@
   date: "2022-7-21"
   event: "Invited Seminar"
   location: "The III Meeting of Systematics, Biogeography, and Evolution"
+  video_id: https://www.youtube.com/watch?v=hh32R8yvYSg
   #slides_url: "http://example.com/slides/bird-evolution.pdf"
   
 - title: "Embracing uncertainty: Using genomic, anatomical, and life-history data to integrate the micro and macroevolution of birds"
@@ -52,6 +58,7 @@
   date: "2020-11-12"
   event: "Invited Seminar, host: Dr. Liam Revell"
   location: "UMass Boston"
+  video_id: https://www.youtube.com/watch?v=Bes2SRRsseM
   #slides_url: "http://example.com/slides/bird-evolution.pdf"
   
 - title: "Genomic phylogeography of the White-crowned Manakin"
@@ -60,6 +67,7 @@
   date: "2020-8-10"
   event: "North American Ornithological Congress"
   location: "Virtual"
+  video_id: https://www.youtube.com/watch?v=SUS-nMTYYeg
   #slides_url: "http://example.com/slides/bird-evolution.pdf"
   
 - title: "PhD. Defense Seminar"
@@ -69,6 +77,7 @@
   event: "Jacob Berv Exit Seminar"
   location: "Cornell University"
   playlist_image: https://i3.ytimg.com/vi/8A-j2DccpTw/maxresdefault.jpg
+  video_id: https://www.youtube.com/watch?v=8A-j2DccpTw&list=PLt6TWRNEKcmUMXvUPbpFPVvb7Z8d0UbaN
   #slides_url: "http://example.com/slides/bird-evolution.pdf"
   
 - title: "Evolution 2018 Ernst Mayr Presentation"
@@ -78,6 +87,5 @@
   event: "Ernst Mayr Award Talk"
   location: "Montpellier, France"
   #slides_url: "http://example.com/slides/bird-evolution.pdf"
-  
   
   

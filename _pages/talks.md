@@ -34,18 +34,28 @@ Each talk has a video recording available to view.
     </p>
   </div>
   
-  {% if talk.youtube_id %}
+  {% if talk.playlist_image %}
+  <div class="talks-video">
+    <a href="{{ talk.video_id }}" title="Watch Video" target="_blank">
+      <img src="{{ talk.playlist_image }}" alt="Playlist Preview" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+      <div class="play-button-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+        <!-- SVG play button code -->
+        <svg width="64" height="64" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="34" cy="34" r="32" fill="rgba(255, 255, 255, 0.7)"/>
+          <polygon points="27,20 27,48 49,34" fill="#000000"/>
+        </svg>
+      </div>
+    </a>
+  </div>
+  {% elsif talk.youtube_id %}
   <div class="talks-video">
     <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube" target="_blank">
       <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" style="width: 100%; height: auto; display: block; margin: 0 auto;">
       <div class="play-button-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+        <!-- SVG play button code -->
         <svg width="64" height="64" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
-          <mask id="mask{{ forloop.index }}" x="0" y="0" width="68" height="68" maskUnits="userSpaceOnUse">
-            <rect x="0" y="0" width="68" height="68" fill="#ffffff"/>
-            <polygon points="27,20 27,48 49,34" fill="#000000"/>
-          </mask>
-          <circle cx="34" cy="34" r="32" fill="rgba(255, 255, 255, 0.7)" mask="url(#mask{{ forloop.index }})"/>
-          <polygon points="27,20 27,48 49,34" fill="#ffffff" mask="url(#mask{{ forloop.index }})"/>
+          <circle cx="34" cy="34" r="32" fill="rgba(255, 255, 255, 0.7)"/>
+          <polygon points="27,20 27,48 49,34" fill="#000000"/>
         </svg>
       </div>
     </a>
@@ -69,6 +79,18 @@ Each talk has a video recording available to view.
 .talks-video a {
   display: block;
   position: relative;
+}
+
+.play-button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 @media (max-width: 767px) {
