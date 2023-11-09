@@ -61,7 +61,7 @@ Each talk has a video recording available to view. The following is a list of ta
 .talks-entry {
   display: grid;
   grid-template-columns: 3fr 1.5fr;
-  column-gap: 10px;
+  column-gap: 5px; /* Reduced gap from 10px to 5px */
   align-items: center;
 }
 
