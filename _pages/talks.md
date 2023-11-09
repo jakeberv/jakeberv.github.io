@@ -12,7 +12,7 @@ author_profile: true
 Each talk has a video recording available to view. The following is a list of talks I've given at various conferences and events.
 
 {% for talk in site.data.talks %}
-<div style="display: grid; grid-template-columns: 3fr 1fr; column-gap: 10px; align-items: center; margin-bottom: 2em;">
+<div style="display: grid; grid-template-columns: 3fr 1.5fr; column-gap: 10px; align-items: center; margin-bottom: 2em;">
   <div>
     <h2>{{ talk.title }}</h2>
     <p style="margin: 0.5em 0; line-height: 1.2;">
@@ -34,7 +34,7 @@ Each talk has a video recording available to view. The following is a list of ta
   {% if talk.youtube_id %}
   <div style="position: relative; padding-left: 10px;">
     <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube" style="display: block; position: relative;">
-      <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" style="width: 65%; height: auto; display: block; margin: 0 auto;"> <!-- Further decreased width for smaller preview -->
+      <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" style="width: 75%; height: auto; display: block; margin: 0 auto;"> <!-- Increased width for larger preview -->
       <span style="
         position: absolute;
         top: 50%;
