@@ -15,20 +15,17 @@ Each talk has a video recording available to view. The following is a list of ta
 <div class="talks-entry" style="margin-bottom: 2em;">
   <div class="talks-content">
     <h2>{{ talk.title }}</h2>
-    <p style="margin: 0.5em 0; line-height: 1.2;">
-      <strong>Description</strong><br>{{ talk.description }}
-    </p>
-    <p style="line-height: 1.2;">
-      <strong>Details</strong>
-    </p>
     <ul style="line-height: 1.2; padding-left: 20px; margin: 0;">
-      <li>Event: {{ talk.event }}</li>
-      <li>Date: {{ talk.date }}</li>
-      <li>Location: {{ talk.location }}</li>
+      <li><strong>Event:</strong> {{ talk.event }}</li>
+      <li><strong>Date:</strong> {{ talk.date }}</li>
+      <li><strong>Location:</strong> {{ talk.location }}</li>
     </ul>
     {% if talk.slides %}
     <p><a href="{{ talk.slides_url }}">View Slides</a></p>
     {% endif %}
+    <p style="margin: 0.5em 0; line-height: 1.2; font-size: 0.9em;">
+      <strong>Description</strong><br>{{ talk.description }}
+    </p>
   </div>
   
   {% if talk.youtube_id %}
