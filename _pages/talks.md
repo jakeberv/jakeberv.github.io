@@ -12,8 +12,8 @@ author_profile: true
 Each talk has a video recording available to view. The following is a list of talks I've given at various conferences and events.
 
 {% for talk in site.data.talks %}
-<div style="display: grid; grid-template-columns: 1fr; gap: 10px; align-items: center; margin-bottom: 2em;">
-  <div>
+<div class="talks-entry" style="margin-bottom: 2em;">
+  <div class="talks-content">
     <h2>{{ talk.title }}</h2>
     <p style="margin: 0.5em 0; line-height: 1.2;">
       <strong>Description</strong><br>{{ talk.description }}
@@ -32,40 +32,60 @@ Each talk has a video recording available to view. The following is a list of ta
   </div>
   
   {% if talk.youtube_id %}
-  <div style="position: relative; padding-left: 10px;">
-    <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube" style="display: block; position: relative;">
-      <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" style="width: auto; max-width: 100%; height: auto; display: block; margin: 0 auto;"> <!-- Set width to auto and max-width to 100% for responsiveness -->
-      <span style="
+  <div class="talks-video">
+    <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube">
+      <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+      <div class="play-button-overlay" style="
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 64px;
+        height: 64px;
+        background-color: rgba(255, 255, 255, 0.7);
         border-radius: 50%;
-        width: 64px; /* Kept play button size */
-        height: 64px; /* Kept play button size */
         display: flex;
         align-items: center;
-        justify-content: center;
-      ">
-        <svg width="64" height="64" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
-          <mask id="mask{{ forloop.index }}" x="0" y="0" width="68" height="68" maskUnits="userSpaceOnUse">
-            <rect x="0" y="0" width="68" height="68" fill="white"/>
-            <polygon points="27,20 27,48 49,34" fill="black"/> <!-- Adjusted points for the larger triangle -->
-          </mask>
-          <circle cx="34" cy="34" r="32" fill="rgba(255, 255, 255, 0.7)" mask="url(#mask{{ forloop.index }})"/> <!-- Adjusted radius for the larger play button -->
+        justify-content: center;">
+        <svg viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg" style="width: 60%; height: auto;">
+          <polygon points="25,20 25,48 47,34" fill="black"/>
         </svg>
-      </span>
+      </div>
     </a>
   </div>
   {% endif %}
 </div>
+{% endfor %}
 
 <style>
-@media (min-width: 768px) {
-  .talks-grid {
-    grid-template-columns: 3fr 1.5fr; /* Larger screens will have side by side layout */
+.talks-entry {
+  display: grid;
+  grid-template-columns: 3fr 1.5fr;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.talks-video {
+  position: relative;
+}
+
+.talks-video a {
+  display: block;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .talks-entry {
+    grid-template-columns: 1fr;
+  }
+
+  .talks-video {
+    order: 2;
+  }
+
+  .talks-video a {
+    width: 100%;
+    margin-top: 20px;
   }
 }
 </style>
-
-{% endfor %}
