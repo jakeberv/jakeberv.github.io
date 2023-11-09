@@ -78,9 +78,9 @@
   location: "Cornell University"
   #slides_url: "http://example.com/slides/bird-evolution.pdf"
   
-    
+
 - title: "Evolution 2018 Ernst Mayr Presentation"
-  youtube_id: "https://programme.europa-organisation.com/slides/programme_jointCongressEvolBiology-2018/webconf/365_19082018_1420_rabelais_Jacob_Berv_63/index.html"
+  video_id: "https://programme.europa-organisation.com/slides/programme_jointCongressEvolBiology-2018/webconf/365_19082018_1420_rabelais_Jacob_Berv_63/index.html"
   description: "update"
   date: "2018-8-19"
   event: "Ernst Mayr Award Talk"
