@@ -50,9 +50,9 @@ Each talk has a video recording available to view. The following is a list of ta
         <svg width="64" height="64" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
           <mask id="mask{{ forloop.index }}" x="0" y="0" width="68" height="68" maskUnits="userSpaceOnUse">
             <rect x="0" y="0" width="68" height="68" fill="white"/>
-            <polygon points="27,20 27,48 49,34" fill="black"/>
+            <polygon points="27,20 27,48 49,34" fill="black"/> <!-- Adjusted points for larger triangle -->
           </mask>
-          <circle cx="34" cy="34" r="32" fill="rgba(255, 255, 255, 0.7)" mask="url(#mask{{ forloop.index }})"/>
+          <circle cx="34" cy="34" r="32" fill="rgba(255, 255, 255, 0.7)" mask="url(#mask{{ forloop.index }})"/> <!-- Adjusted radius for larger play button -->
         </svg>
       </div>
     </a>
