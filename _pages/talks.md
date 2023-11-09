@@ -14,11 +14,13 @@ Each talk has a video recording available to view.
 {% for talk in site.data.talks %}
 <div class="talks-entry" style="margin-bottom: 2em;">
   <div class="talks-content">
-    {% if talk.video_id %}
-    <h2><a href="{{ talk.video_id }}" target="_blank">{{ talk.title }}</a></h2>
-    {% else %}
-    <h2>{{ talk.title }}</h2>
-    {% endif %}
+    <h2>
+      {% if talk.youtube_id %}
+      <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" target="_blank">{{ talk.title }}</a>
+      {% else %}
+      {{ talk.title }}
+      {% endif %}
+    </h2>
     <ul style="line-height: 1.2; padding-left: 20px; margin: 0;">
       <li><strong>Event:</strong> {{ talk.event }}</li>
       <li><strong>Date:</strong> {{ talk.date }}</li>
