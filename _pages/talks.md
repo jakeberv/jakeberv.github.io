@@ -40,20 +40,17 @@ Each talk has a video recording available to view. The following is a list of ta
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 64px;
-        height: 64px;
-        background-color: rgba(255, 255, 255, 0.7);
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;">
         <svg width="64" height="64" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
           <mask id="mask{{ forloop.index }}" x="0" y="0" width="68" height="68" maskUnits="userSpaceOnUse">
-            <rect x="0" y="0" width="68" height="68" fill="white"/>
-            <polygon points="27,20 27,48 49,34" fill="black"/>
+            <rect x="0" y="0" width="68" height="68" fill="#ffffff"/>
+            <polygon points="27,20 27,48 49,34" fill="#000000"/>
           </mask>
           <circle cx="34" cy="34" r="32" fill="rgba(255, 255, 255, 0.7)" mask="url(#mask{{ forloop.index }})"/>
-          <!-- The black triangle is removed, and the mask effect will create the cutout -->
+          <polygon points="27,20 27,48 49,34" fill="#ffffff" mask="url(#mask{{ forloop.index }})"/>
         </svg>
       </div>
     </a>
@@ -66,7 +63,7 @@ Each talk has a video recording available to view. The following is a list of ta
 .talks-entry {
   display: grid;
   grid-template-columns: 3fr 1.5fr;
-  column-gap: 0px;
+  column-gap: 5px; /* Adjusted gap for closer proximity */
   align-items: center;
 }
 

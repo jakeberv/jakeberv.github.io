@@ -16,7 +16,7 @@ main:
   #  url: /people/
      
   - title: "DEI"
-    url: /DEI/
+    url: /dei/
   # 
   - title: "Code"
     url: /code/
