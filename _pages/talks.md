@@ -90,6 +90,9 @@ Each talk has a video recording available to view.
 
   .talks-video {
     order: 2;
+    max-width: 75%; /* Set the max width of the video preview */
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .talks-video a {
