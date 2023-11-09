@@ -1,6 +1,6 @@
 - title: "Tempo and Mode: Applying Phyogenetic Natural History to Integrate Micro- and Macrovolution"
   youtube_id: "IUKL0_gL8xs"
-  description: "Unraveling interactions among significant events in Earth's history and macroevolutionary patterns is a fundamental and persistent problem in evolutionary biology. “Phylogenetic Natural History” is a potential way forward that combines hypothesis testing with data-driven inference methods in phylogenetics to reveal the mechanisms underlying evolutionary transitions. My research program applies this approach by integrating natural history, paleontology, genomics, and data science to investigate evolutionary patterns across spatial and temporal scales. Here, I focus on recent work which recognizes the tempo and mode of genome evolution as related axes of life history variation. I will showcase several projects motivated by the extinction of the non-avian dinosaurs at the end-Cretaceous (K—Pg) mass extinction boundary, a macroevolutionary contingency that structured the evolutionary potential of surviving lineages. By applying techniques that can detect the signatures of time-heterogeneous evolutionary processes, my research reveals the impact of the K—Pg transition across underexplored dimensions of biodiversity. Taking birds as a case study of Phylogenetic Natural History, I show that shifts in developmental mode, body mass, and metabolic physiology strongly correlate with shifts in the tempo and mode of nucleotide substitution—linking genomic changes to the origins of higher taxa and the end-Cretaceous transition."
+  description: "In this talk, I present research which applies concepts from 'Phylogenetic Natural History' to examine macroevolutionary patterns, integrating across different scientific disciplines. I concentrate on the effects of the end-Cretaceous mass extinction on genome evolution, using data science methods to understand evolutionary changes in surviving species. Specifically, I investigate how shifts in bird development, size, and metabolism correspond to genomic evolution, providing insights into the broader impacts of the end-Cretaceous transition on biodiversity."
   date: "2023-03-23"
   event: "Invited Seminar"
   location: "University of Toronto"
@@ -15,7 +15,7 @@
   #slides_url: "http://example.com/slides/bird-evolution.pdf"
 
 - title: "Molecular Early Burst associted with the Diversification of birds at the K-Pg boundary"
-  youtube_id: "G6rNxdSf5I4"
+  youtube_id: "tAECFiSZR74"
   description: ""
   date: "2022-10-12"
   event: "Invited Seminar"

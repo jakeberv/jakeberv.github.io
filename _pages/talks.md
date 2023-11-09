@@ -9,7 +9,7 @@ author_profile: true
 
 # Talks
 
-Each talk has a video recording available to view. The following is a list of talks I've given at various conferences and events.
+Each talk has a video recording available to view.
 
 {% for talk in site.data.talks %}
 <div class="talks-entry" style="margin-bottom: 2em;">

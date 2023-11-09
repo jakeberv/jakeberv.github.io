@@ -15,10 +15,10 @@ You can read more of my thoughts on teaching and check out prior course evaluati
 
 ## University of Michigan
 -   Guest lecturer in Analytical Paleobiology EARTH 444, November 2023 -- "Estimating Evolutionary Timescales"
-    -   Slides to be uploaded
+    -   Faculty invitation from ([Dr. Matt Friedman](https://lsa.umich.edu/earth/people/faculty/matt-friedman.html))
 -   Guest lecturer in Vertebrate Paleontology EARTH 437, December 2021 -- "The Evolution of Birds"
     -   Recording available ([teaching demo](https://bit.ly/Berv_EARTH437_2021))
-    -   Slides to be uploaded
+    -   Faculty invitation from ([Dr. Jeffrey Wilson Mantilla](https://lsa.umich.edu/earth/people/faculty/wilsonja.html))
 
 ## Cornell University
 
