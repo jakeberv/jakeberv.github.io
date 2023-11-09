@@ -47,8 +47,12 @@ Each talk has a video recording available to view. The following is a list of ta
         display: flex;
         align-items: center;
         justify-content: center;">
-        <svg viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg" style="width: 60%; height: auto;">
-          <polygon points="25,20 25,48 47,34" fill="black"/>
+        <svg width="64" height="64" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
+          <mask id="mask{{ forloop.index }}" x="0" y="0" width="68" height="68" maskUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="68" height="68" fill="white"/>
+            <polygon points="27,20 27,48 49,34" fill="black"/>
+          </mask>
+          <circle cx="34" cy="34" r="32" fill="rgba(255, 255, 255, 0.7)" mask="url(#mask{{ forloop.index }})"/>
         </svg>
       </div>
     </a>
@@ -61,7 +65,7 @@ Each talk has a video recording available to view. The following is a list of ta
 .talks-entry {
   display: grid;
   grid-template-columns: 3fr 1.5fr;
-  column-gap: 5px; /* Reduced gap from 10px to 5px */
+  column-gap: 0px;
   align-items: center;
 }
 
