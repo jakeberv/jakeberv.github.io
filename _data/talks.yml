@@ -68,17 +68,9 @@
   date: "2020-5-20"
   event: "Jacob Berv Exit Seminar"
   location: "Cornell University"
+  #playlist_image: 
   #slides_url: "http://example.com/slides/bird-evolution.pdf"
   
-- title: "PhD. Defense Seminar"
-  youtube_id: "8A-j2DccpTw&list=PLt6TWRNEKcmUMXvUPbpFPVvb7Z8d0UbaN"
-  description: "update"
-  date: "2020-5-20"
-  event: "Jacob Berv Exit Seminar"
-  location: "Cornell University"
-  #slides_url: "http://example.com/slides/bird-evolution.pdf"
-  
-
 - title: "Evolution 2018 Ernst Mayr Presentation"
   video_id: "https://programme.europa-organisation.com/slides/programme_jointCongressEvolBiology-2018/webconf/365_19082018_1420_rabelais_Jacob_Berv_63/index.html"
   description: "update"

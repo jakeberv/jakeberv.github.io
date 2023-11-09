@@ -14,11 +14,13 @@ Each talk has a video recording available to view.
 {% for talk in site.data.talks %}
 <div class="talks-entry" style="margin-bottom: 2em;">
   <div class="talks-content">
-    {% if talk.video_id %}
-    <h2><a href="{{ talk.video_id }}">{{ talk.title }}</a></h2>
-    {% else %}
-    <h2>{{ talk.title }}</h2>
-    {% endif %}
+    <h2>
+      {% if talk.video_id %}
+      <a href="{{ talk.video_id }}">{{ talk.title }}</a>
+      {% else %}
+      {{ talk.title }}
+      {% endif %}
+    </h2>
     <ul style="line-height: 1.2; padding-left: 20px; margin: 0;">
       <li><strong>Event:</strong> {{ talk.event }}</li>
       <li><strong>Date:</strong> {{ talk.date }}</li>
@@ -35,7 +37,11 @@ Each talk has a video recording available to view.
   {% if talk.youtube_id %}
   <div class="talks-video">
     <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube">
+      {% if talk.playlist_image %}
+      <img src="{{ talk.playlist_image }}" alt="Playlist Image" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+      {% else %}
       <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+      {% endif %}
       <div class="play-button-overlay" style="
         position: absolute;
         top: 50%;
