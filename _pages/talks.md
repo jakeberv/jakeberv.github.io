@@ -15,8 +15,8 @@ Each talk has a video recording available to view.
 <div class="talks-entry" style="margin-bottom: 2em;">
   <div class="talks-content">
     <h2>
-      {% if talk.youtube_id %}
-      <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" target="_blank">{{ talk.title }}</a>
+      {% if talk.video_id %}
+      <a href="{{ talk.video_id }}" target="_blank">{{ talk.title }}</a>
       {% else %}
       {{ talk.title }}
       {% endif %}
@@ -26,7 +26,7 @@ Each talk has a video recording available to view.
       <li><strong>Date:</strong> {{ talk.date }}</li>
       <li><strong>Location:</strong> {{ talk.location }}</li>
     </ul>
-    {% if talk.slides %}
+    {% if talk.slides_url %}
     <p><a href="{{ talk.slides_url }}">View Slides</a></p>
     {% endif %}
     <p style="margin: 0.5em 0; line-height: 1.2; font-size: 0.9em;">
@@ -36,21 +36,9 @@ Each talk has a video recording available to view.
   
   {% if talk.youtube_id %}
   <div class="talks-video">
-    <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube">
-      {% if talk.playlist_image %}
-      <img src="{{ talk.playlist_image }}" alt="Playlist Preview" style="width: 100%; height: auto; display: block; margin: 0 auto;">
-      {% else %}
+    <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube" target="_blank">
       <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" style="width: 100%; height: auto; display: block; margin: 0 auto;">
-      {% endif %}
-      <div class="play-button-overlay" style="
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;">
+      <div class="play-button-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
         <svg width="64" height="64" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
           <mask id="mask{{ forloop.index }}" x="0" y="0" width="68" height="68" maskUnits="userSpaceOnUse">
             <rect x="0" y="0" width="68" height="68" fill="#ffffff"/>
