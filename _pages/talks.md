@@ -12,7 +12,7 @@ author_profile: true
 Each talk has a video recording available to view.
 
 {% for talk in site.data.talks %}
-<div class="talks-entry">
+<div class="talks-entry" style="margin-bottom: 2em;">
   <div class="talks-content">
     <h2>
       {% if talk.video_id %}
@@ -38,8 +38,7 @@ Each talk has a video recording available to view.
   <div class="talks-video">
     <a href="{{ talk.video_id }}" title="Watch Video" target="_blank">
       <img src="{{ talk.playlist_image }}" alt="Playlist Preview" style="width: 100%; height: auto; display: block; margin: 0 auto;">
-      <!-- Play button overlay -->
-      <div class="play-button-overlay">
+      <div class="play-button-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
         <!-- SVG play button code -->
         <svg width="64" height="64" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
           <circle cx="34" cy="34" r="32" fill="rgba(255, 255, 255, 0.7)"/>
@@ -52,8 +51,7 @@ Each talk has a video recording available to view.
   <div class="talks-video">
     <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube" target="_blank">
       <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" style="width: 100%; height: auto; display: block; margin: 0 auto;">
-      <!-- Play button overlay -->
-      <div class="play-button-overlay">
+      <div class="play-button-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
         <!-- SVG play button code -->
         <svg width="64" height="64" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
           <circle cx="34" cy="34" r="32" fill="rgba(255, 255, 255, 0.7)"/>
@@ -69,18 +67,13 @@ Each talk has a video recording available to view.
 <style>
 .talks-entry {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 20px;
-  align-items: start;
-}
-
-.talks-content, .talks-video {
-  padding: 10px;
+  grid-template-columns: 3fr 1.5fr;
+  column-gap: 5px; /* Adjusted gap for closer proximity */
+  align-items: center;
 }
 
 .talks-video {
   position: relative;
-  padding-top: 0; /* Remove padding from the top for better alignment of the play button */
 }
 
 .talks-video a {
@@ -105,17 +98,16 @@ Each talk has a video recording available to view.
     grid-template-columns: 1fr;
   }
 
-  .talks-content, .talks-video {
-    padding: 10px 0;
-  }
-
   .talks-video {
-    width: 100%; /* Ensure the video takes full width on small screens */
-    padding-top: 0; /* Keep padding-top removed */
+    order: 2;
+    max-width: 75%; /* Set the max width of the video preview */
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .talks-video a {
-    margin-top: 20px; /* Add space between text and video on small screens */
+    width: 100%;
+    margin-top: 20px;
   }
 }
 </style>
