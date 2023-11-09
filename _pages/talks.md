@@ -35,7 +35,11 @@ Each talk has a video recording available to view.
   {% if talk.youtube_id %}
   <div class="talks-video">
     <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube">
+      {% if talk.playlist_image %}
+      <img src="{{ talk.playlist_image }}" alt="Playlist Preview" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+      {% else %}
       <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+      {% endif %}
       <div class="play-button-overlay" style="
         position: absolute;
         top: 50%;
@@ -54,13 +58,6 @@ Each talk has a video recording available to view.
           <polygon points="27,20 27,48 49,34" fill="#ffffff" mask="url(#mask{{ forloop.index }})"/>
         </svg>
       </div>
-    </a>
-  </div>
-  {% endif %}
-  {% if talk.playlist_image %}
-  <div class="talks-video">
-    <a href="{{ talk.video_id }}" title="Watch on Video">
-      <img src="{{ talk.playlist_image }}" alt="Playlist Preview" style="width: 100%; height: auto; display: block; margin: 0 auto;">
     </a>
   </div>
   {% endif %}
