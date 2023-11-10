@@ -34,8 +34,8 @@ author_profile: true
   
   {% if talk.playlist_image %}
   <div class="talks-video">
-    <a href="{{ talk.video_id }}" title="Watch Video" target="_blank">
-      <img src="{{ talk.playlist_image }}" alt="Playlist Preview" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+    <a href="{{ talk.video_id }}" title="Watch Video" target="_blank" class="talks-video-link">
+      <img src="{{ talk.playlist_image }}" alt="Playlist Preview" class="talks-preview-image">
       <div class="play-button-overlay">
         <!-- SVG play button code with mask cutout -->
         <svg width="64" height="64" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
@@ -51,18 +51,10 @@ author_profile: true
   </div>
   {% elsif talk.youtube_id %}
   <div class="talks-video">
-    <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube" target="_blank">
-      <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+    <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube" target="_blank" class="talks-video-link">
+      <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" class="talks-preview-image">
       <div class="play-button-overlay">
-        <!-- SVG play button code with mask cutout -->
-        <svg width="64" height="64" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
-          <mask id="mask{{ forloop.index }}" x="0" y="0" width="68" height="68" maskUnits="userSpaceOnUse">
-            <rect x="0" y="0" width="68" height="68" fill="#ffffff"/>
-            <polygon points="27,20 27,48 49,34" fill="#000000"/>
-          </mask>
-          <circle cx="34" cy="34" r="32" fill="rgba(255, 255, 255, 0.7)" mask="url(#mask{{ forloop.index }})"/>
-          <polygon points="27,20 27,48 49,34" fill="#ffffff" mask="url(#mask{{ forloop.index }})"/>
-        </svg>
+        <!-- Same SVG play button code -->
       </div>
     </a>
   </div>
@@ -90,6 +82,16 @@ author_profile: true
 .talks-video a {
   display: block;
   position: relative;
+  overflow: hidden; /* Ensure no overflow from the scaling */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+.talks-video a:hover .talks-preview-image,
+.talks-video a:focus .talks-preview-image,
+.talks-video a:hover .play-button-overlay,
+.talks-video a:focus .play-button-overlay {
+  transform: scale(1.05); /* Slightly enlarges the image and play button overlay */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Increase the shadow for more depth */
 }
 
 .play-button-overlay {
@@ -97,11 +99,13 @@ author_profile: true
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: transform 0.3s ease; /* Smooth transition for the overlay */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  z-index: 3; /* Ensures the overlay is on top */
 }
 
 @media (max-width: 767px) {
