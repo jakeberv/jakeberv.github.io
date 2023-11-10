@@ -114,11 +114,14 @@ Each talk has a video recording available to view.
 
   .talks-video {
     order: 2;
+    width: 80%; /* Video preview width is 80% of the text column width */
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 1em; /* Space between text and video on small screens */
   }
 
   .talks-video a {
-    width: 100%; /* Full width on small screens */
+    width: 100%; /* Full width of the video container */
   }
 }
 </style>
