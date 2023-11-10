@@ -27,10 +27,11 @@ header:
 # News
 
 {% for item in site.news limit:5 %}
-  <h4>{{ item.title }}</h4>
+  <h4 style="font-size: 1.5em;">{{ item.title }}</h4>
   <p>{{ item.date | date: "%B %d, %Y" }} - {{ item.excerpt }}</p>
   <a href="{{ item.url | prepend: site.baseurl }}">Read more</a>
 {% endfor %}
+
 
 # Background
 
