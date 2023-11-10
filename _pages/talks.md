@@ -34,7 +34,7 @@ author_profile: true
   
   {% if talk.playlist_image %}
   <div class="talks-video">
-    <a href="{{ talk.video_id }}" title="Watch Video" target="_blank">
+    <a href="{{ talk.video_id }}" title="Watch Video" target="_blank" class="talks-video-link">
       <img src="{{ talk.playlist_image }}" alt="Playlist Preview" style="width: 100%; height: auto; display: block; margin: 0 auto;">
       <div class="play-button-overlay">
         <!-- SVG play button code with mask cutout -->
@@ -51,7 +51,7 @@ author_profile: true
   </div>
   {% elsif talk.youtube_id %}
   <div class="talks-video">
-    <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube" target="_blank">
+    <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube" target="_blank" class="talks-video-link">
       <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" style="width: 100%; height: auto; display: block; margin: 0 auto;">
       <div class="play-button-overlay">
         <!-- SVG play button code with mask cutout -->
@@ -87,21 +87,16 @@ author_profile: true
   position: relative;
 }
 
-.talks-video a {
-  display: block;
-  position: relative;
+.talks-video-link {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block; /* Changed to block to allow width to be set */
+  margin: 0 auto; /* Center the video */
 }
 
-.play-button-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+.talks-video-link:hover,
+.talks-video-link:focus { /* Add focus for accessibility */
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Shadow for depth */
 }
 
 @media (max-width: 767px) {
@@ -112,13 +107,11 @@ author_profile: true
 
   .talks-video {
     order: 2;
-    margin: auto; /* Center the video */
     margin-top: 1em; /* Space between text and video on small screens */
-    width: 80%; /* Video preview width is 80% of the text column width */
   }
 
-  .talks-video a {
-    width: 100%; /* Full width of the video container */
+  .talks-video-link {
+    width: 80%; /* Video preview width is 80% of the text column width */
   }
 }
 </style>
