@@ -37,14 +37,14 @@ author_profile: true
     <a href="{{ talk.video_id }}" title="Watch Video" target="_blank" class="talks-video-link">
       <img src="{{ talk.playlist_image }}" alt="Playlist Preview" class="talks-preview-image">
       <div class="play-button-overlay">
-        <!-- SVG play button code with mask cutout -->
+        <!-- SVG play button code with mask cutout using youtube_id for uniqueness -->
         <svg width="64" height="64" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
-          <mask id="mask{{ forloop.index }}" x="0" y="0" width="68" height="68" maskUnits="userSpaceOnUse">
+          <mask id="mask{{ talk.youtube_id }}" x="0" y="0" width="68" height="68" maskUnits="userSpaceOnUse">
             <rect x="0" y="0" width="68" height="68" fill="#ffffff"/>
             <polygon points="27,20 27,48 49,34" fill="#000000"/>
           </mask>
-          <circle cx="34" cy="34" r="32" fill="rgba(255, 255, 255, 0.7)" mask="url(#mask{{ forloop.index }})"/>
-          <polygon points="27,20 27,48 49,34" fill="#ffffff" mask="url(#mask{{ forloop.index }})"/>
+          <circle cx="34" cy="34" r="32" fill="rgba(255, 255, 255, 0.7)" mask="url(#mask{{ talk.youtube_id }})"/>
+          <polygon points="27,20 27,48 49,34" fill="#ffffff" mask="url(#mask{{ talk.youtube_id }})"/>
         </svg>
       </div>
     </a>
@@ -55,6 +55,14 @@ author_profile: true
       <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" class="talks-preview-image">
       <div class="play-button-overlay">
         <!-- Same SVG play button code -->
+        <svg width="64" height="64" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
+          <mask id="mask{{ talk.youtube_id }}" x="0" y="0" width="68" height="68" maskUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="68" height="68" fill="#ffffff"/>
+            <polygon points="27,20 27,48 49,34" fill="#000000"/>
+          </mask>
+          <circle cx="34" cy="34" r="32" fill="rgba(255, 255, 255, 0.7)" mask="url(#mask{{ talk.youtube_id }})"/>
+          <polygon points="27,20 27,48 49,34" fill="#ffffff" mask="url(#mask{{ talk.youtube_id }})"/>
+        </svg>
       </div>
     </a>
   </div>
@@ -63,6 +71,8 @@ author_profile: true
 {% endfor %}
 
 <style>
+/* Existing styles... */
+
 .talks-entry {
   display: grid;
   grid-template-columns: 3fr 2fr; /* Adjusted for proper alignment */
@@ -104,11 +114,11 @@ author_profile: true
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1000; /* High z-index to ensure it's on top */
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  z-index: 100; /* Ensured it is on top of other elements */
 }
 
 @media (max-width: 767px) {
