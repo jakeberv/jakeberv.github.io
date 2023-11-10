@@ -74,8 +74,8 @@ author_profile: true
 
 .talks-video a:hover .talks-preview-image,
 .talks-video a:focus .talks-preview-image {
-  transform: scale(1.05); /* Increase the scale factor for more impact */
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Increase the shadow for more depth */
+  transform: scale(1.03); /* Slightly scale up the image */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Add shadow for depth */
 }
 
 .talks-preview-image {
