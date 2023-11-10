@@ -7,9 +7,7 @@ header:
 author_profile: true
 ---
 
-# Talks
-
-Each talk has a video recording available to view.
+# Available recorded talks
 
 {% for talk in site.data.talks %}
 <div class="talks-entry" style="margin-bottom: 2em;">
