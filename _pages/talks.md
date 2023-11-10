@@ -39,7 +39,6 @@ Each talk has a video recording available to view.
     <a href="{{ talk.video_id }}" title="Watch Video" target="_blank">
       <img src="{{ talk.playlist_image }}" alt="Playlist Preview" style="width: 100%; height: auto; display: block; margin: 0 auto;">
       <div class="play-button-overlay">
-        <!-- Corrected SVG play button code with mask cutout -->
         <svg width="64" height="64" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
           <mask id="mask{{ forloop.index }}" x="0" y="0" width="68" height="68" maskUnits="userSpaceOnUse">
             <rect x="0" y="0" width="68" height="68" fill="#ffffff"/>
@@ -56,7 +55,6 @@ Each talk has a video recording available to view.
     <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube" target="_blank">
       <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" style="width: 100%; height: auto; display: block; margin: 0 auto;">
       <div class="play-button-overlay">
-        <!-- Corrected SVG play button code with mask cutout -->
         <svg width="64" height="64" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
           <mask id="mask{{ forloop.index }}" x="0" y="0" width="68" height="68" maskUnits="userSpaceOnUse">
             <rect x="0" y="0" width="68" height="68" fill="#ffffff"/>
@@ -75,13 +73,19 @@ Each talk has a video recording available to view.
 <style>
 .talks-entry {
   display: grid;
-  grid-template-columns: 3fr 1.5fr;
-  column-gap: 5px; /* Adjusted gap for closer proximity */
-  align-items: center;
+  grid-template-columns: 3fr 2fr; /* Adjusted for proper alignment */
+  column-gap: 30px; /* Increased gap for more space between description and video */
+  align-items: start;
+  margin-bottom: 2em;
+}
+
+.talks-content, .talks-video {
+  padding: 10px;
 }
 
 .talks-video {
   position: relative;
+  padding-top: 0; /* Remove padding from the top for better alignment of the play button */
 }
 
 .talks-video a {
@@ -103,19 +107,16 @@ Each talk has a video recording available to view.
 
 @media (max-width: 767px) {
   .talks-entry {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Single column on small screens */
   }
 
   .talks-video {
     order: 2;
-    /* Removed max-width to prevent shrinking */
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 1em; /* Space between text and video on small screens */
   }
 
   .talks-video a {
-    width: 100%;
-    margin-top: 20px;
+    width: 100%; /* Full width on small screens */
   }
 }
 </style>
