@@ -104,11 +104,12 @@ author_profile: true
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10; /* Ensure it's on top of other elements */
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  /* Ensure the play button is above the image but below the hover shadow */
+  z-index: 1;
 }
 
 @media (max-width: 767px) {
