@@ -47,9 +47,7 @@ I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctora
 4. [Institute for Data Science](https://midas.umich.edu/)
 5. [School for Environment and Sustainability](http://bcweeks.weebly.com/)
 
-
-#### News
-Check out the latest updates and news below:
+# News
 
 {% for item in site.news limit:5 %}
   <h4>{{ item.title }}</h4>
