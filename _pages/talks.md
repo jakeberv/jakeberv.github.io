@@ -104,6 +104,7 @@ author_profile: true
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 10; /* Ensure it's on top of other elements */
   display: flex;
   align-items: center;
   justify-content: center;
