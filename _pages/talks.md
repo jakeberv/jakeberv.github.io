@@ -63,7 +63,21 @@ author_profile: true
 {% endfor %}
 
 <style>
-/* Existing styles... */
+.talks-entry {
+  display: grid;
+  grid-template-columns: 3fr 2fr; /* Adjusted for proper alignment */
+  column-gap: 30px; /* Increased gap for more space between description and video */
+  align-items: center; /* Center the items vertically */
+  margin-bottom: 2em;
+}
+
+.talks-content {
+  padding-right: 1em; /* Added padding between text and video */
+}
+
+.talks-video {
+  position: relative;
+}
 
 .talks-video-link {
   display: block;
@@ -85,17 +99,32 @@ author_profile: true
   box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add shadow for depth */
 }
 
-/* SVG play button styles remain unchanged */
 .play-button-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* ... other styles ... */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-/* Media queries remain unchanged */
 @media (max-width: 767px) {
-  /* ... */
+  .talks-entry {
+    grid-template-columns: 1fr; /* Single column on small screens */
+    align-items: flex-start; /* Align items to the start on small screens */
+  }
+
+  .talks-video {
+    order: 2;
+    margin: auto; /* Center the video */
+    margin-top: 1em; /* Space between text and video on small screens */
+    width: 80%; /* Video preview width is 80% of the text column width */
+  }
+
+  .talks-video a {
+    width: 100%; /* Full width of the video container */
+  }
 }
 </style>
