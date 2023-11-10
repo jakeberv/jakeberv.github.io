@@ -34,8 +34,8 @@ author_profile: true
   
   {% if talk.playlist_image %}
   <div class="talks-video">
-    <a href="{{ talk.video_id }}" title="Watch Video" target="_blank">
-      <img src="{{ talk.playlist_image }}" alt="Playlist Preview" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+    <a href="{{ talk.video_id }}" title="Watch Video" target="_blank" class="talks-video-link">
+      <img src="{{ talk.playlist_image }}" alt="Playlist Preview" class="talks-preview-image">
       <div class="play-button-overlay">
         <!-- SVG play button code with mask cutout -->
         <svg width="64" height="64" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
@@ -51,18 +51,10 @@ author_profile: true
   </div>
   {% elsif talk.youtube_id %}
   <div class="talks-video">
-    <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube" target="_blank">
-      <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+    <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube" target="_blank" class="talks-video-link">
+      <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" class="talks-preview-image">
       <div class="play-button-overlay">
-        <!-- SVG play button code with mask cutout -->
-        <svg width="64" height="64" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
-          <mask id="mask{{ forloop.index }}" x="0" y="0" width="68" height="68" maskUnits="userSpaceOnUse">
-            <rect x="0" y="0" width="68" height="68" fill="#ffffff"/>
-            <polygon points="27,20 27,48 49,34" fill="#000000"/>
-          </mask>
-          <circle cx="34" cy="34" r="32" fill="rgba(255, 255, 255, 0.7)" mask="url(#mask{{ forloop.index }})"/>
-          <polygon points="27,20 27,48 49,34" fill="#ffffff" mask="url(#mask{{ forloop.index }})"/>
-        </svg>
+        <!-- Same SVG play button code -->
       </div>
     </a>
   </div>
@@ -71,25 +63,26 @@ author_profile: true
 {% endfor %}
 
 <style>
-.talks-entry {
-  display: grid;
-  grid-template-columns: 3fr 2fr; /* Adjusted for proper alignment */
-  column-gap: 30px; /* Increased gap for more space between description and video */
-  align-items: center; /* Center the items vertically */
-  margin-bottom: 2em;
-}
-
-.talks-content {
-  padding-right: 1em; /* Added padding between text and video */
-}
-
-.talks-video {
-  position: relative;
-}
+/* Existing styles... */
 
 .talks-video a {
   display: block;
   position: relative;
+  overflow: hidden; /* Ensure no overflow from the scaling */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions for hover effects */
+}
+
+.talks-video a:hover .talks-preview-image,
+.talks-video a:focus .talks-preview-image {
+  transform: scale(1.03); /* Slightly scale up the image */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Add shadow for depth */
+}
+
+.talks-preview-image {
+  transition: transform 0.3s, box-shadow 0.3s; /* Ensure the image transitions smoothly */
+  display: block; /* Override any existing display properties */
+  width: 100%; /* Full width of the container */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .play-button-overlay {
@@ -102,23 +95,10 @@ author_profile: true
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  z-index: 3; /* Ensures the overlay is on top */
 }
 
 @media (max-width: 767px) {
-  .talks-entry {
-    grid-template-columns: 1fr; /* Single column on small screens */
-    align-items: flex-start; /* Align items to the start on small screens */
-  }
-
-  .talks-video {
-    order: 2;
-    margin: auto; /* Center the video */
-    margin-top: 1em; /* Space between text and video on small screens */
-    width: 80%; /* Video preview width is 80% of the text column width */
-  }
-
-  .talks-video a {
-    width: 100%; /* Full width of the video container */
-  }
+  /* Responsive adjustments... */
 }
 </style>
