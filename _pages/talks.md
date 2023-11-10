@@ -63,35 +63,26 @@ author_profile: true
 {% endfor %}
 
 <style>
-.talks-entry {
-  display: grid;
-  grid-template-columns: 3fr 2fr; /* Adjusted for proper alignment */
-  column-gap: 30px; /* Increased gap for more space between description and video */
-  align-items: center; /* Center the items vertically */
-  margin-bottom: 2em;
-}
-
-.talks-content {
-  padding-right: 1em; /* Added padding between text and video */
-}
-
-.talks-video {
-  position: relative;
-}
+/* Existing styles... */
 
 .talks-video a {
   display: block;
   position: relative;
   overflow: hidden; /* Ensure no overflow from the scaling */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions for hover effects */
 }
 
 .talks-video a:hover .talks-preview-image,
-.talks-video a:focus .talks-preview-image,
-.talks-video a:hover .play-button-overlay,
-.talks-video a:focus .play-button-overlay {
-  transform: scale(1.05); /* Slightly enlarges the image and play button overlay */
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Increase the shadow for more depth */
+.talks-video a:focus .talks-preview-image {
+  transform: scale(1.03); /* Slightly scale up the image */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Add shadow for depth */
+}
+
+.talks-preview-image {
+  transition: transform 0.3s, box-shadow 0.3s; /* Ensure the image transitions smoothly */
+  display: block; /* Override any existing display properties */
+  width: 100%; /* Full width of the container */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .play-button-overlay {
@@ -99,7 +90,6 @@ author_profile: true
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: transform 0.3s ease; /* Smooth transition for the overlay */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -109,20 +99,6 @@ author_profile: true
 }
 
 @media (max-width: 767px) {
-  .talks-entry {
-    grid-template-columns: 1fr; /* Single column on small screens */
-    align-items: flex-start; /* Align items to the start on small screens */
-  }
-
-  .talks-video {
-    order: 2;
-    margin: auto; /* Center the video */
-    margin-top: 1em; /* Space between text and video on small screens */
-    width: 80%; /* Video preview width is 80% of the text column width */
-  }
-
-  .talks-video a {
-    width: 100%; /* Full width of the video container */
-  }
+  /* Responsive adjustments... */
 }
 </style>
