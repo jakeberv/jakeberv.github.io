@@ -12,17 +12,17 @@ main:
   - title: "Teaching"
     url: /teaching/
     
-  - title: "DEI"
-    url: /dei/
+  #- title: "DEI"
+  #  url: /dei/
     
   - title: "Talks"
     url: /talks/
     
-  - title: "Collaborators"
-    url: /collaborators/
+  #- title: "Collaborators"
+  #  url: /collaborators/
 
-  - title: "Code/AI"
-    url: /code/
+  #- title: "Code/AI"
+  #  url: /code/
  
   - title: "CV"
     url: /cv/
