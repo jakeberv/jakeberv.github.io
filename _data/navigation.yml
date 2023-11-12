@@ -1,5 +1,8 @@
 # main links links
 main:
+  - title: "News"
+    url: /news/
+
   - title: "Research"
     url: /research/
     
@@ -9,20 +12,17 @@ main:
   - title: "Teaching"
     url: /teaching/
     
+  - title: "DEI"
+    url: /dei/
+    
   - title: "Talks"
     url: /talks/
     
   #- title: "People"
   #  url: /people/
-     
-  - title: "DEI"
-    url: /dei/
-  # 
-  - title: "Code"
+
+  - title: "Code/AI"
     url: /code/
-  # 
-  # - title: "Posts"
-  #   url: /posts/
-    
+ 
   - title: "CV"
     url: /cv/
