@@ -24,7 +24,7 @@ header:
 
 [Go Directly to Research](https://www.jakeberv.com/research){: .btn--research} for examples considering groups of birds, mammals, reptiles, amphibians, fishes, and deep-sea invertebrates.
 
-# News
+## Recent updates
 {% for item in site.news limit:5 %}
   <h4 style="font-size: 1.25em;">{{ item.title }}</h4>
   <p>{{ item.date | date: "%B %d, %Y" }} - {{ item.excerpt }}</p>

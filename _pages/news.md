@@ -7,8 +7,8 @@ layout: archive
 author_profile: true
 ---
 
-{% for item in site.news limit:100 %}
+{% for item in site.news %}
   <h4 style="font-size: 1.25em;">{{ item.title }}</h4>
-  <p>{{ item.date | date: "%B %d, %Y" }} - {{ item.excerpt }}</p>
+  <p>{{ item.date | date: "%B %d, %Y" }} - {{ item.content | truncatewords: 100, "..." }}</p>
   <a href="{{ item.url | prepend: site.baseurl }}">Read more</a>
 {% endfor %}
