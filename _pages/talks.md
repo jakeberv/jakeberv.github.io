@@ -7,7 +7,7 @@ header:
 author_profile: true
 ---
 
-# Available recorded talks
+# Selected recorded talks
 
 {% for talk in site.data.talks %}
 <div class="talks-entry" style="margin-bottom: 2em;">
