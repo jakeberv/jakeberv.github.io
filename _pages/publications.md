@@ -7,12 +7,12 @@ author_profile: true
 <br>
 <figure style="max-width: 100%;">
   <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/publication_headers.png" alt="Journal cover images from my research"/>
-  <figcaption> Journal cover images </figcaption>
+  <figcaption>  </figcaption>
 </figure>
 
-<figure style="max-width: 25%;">
+<figure style="max-width: 50%;">
   <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/sciadv.2024.10.issue-31.largecover.jpg" alt="July 31 2024 cover for Science Advances"/>
-  <figcaption> July 31 2024 cover for Science Advances (article below) </figcaption>
+  <figcaption> Journal cover images (articles below) </figcaption>
 </figure>
 
 
