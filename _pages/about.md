@@ -22,7 +22,8 @@ header:
 
 My research program integrates data from natural history, ecology, genomics, and paleontology---often through the application of novel computation tools---in order to understand the links between micro- and macroevolution. 
 
-[Go Directly to Research](https://www.jakeberv.com/research){: .btn--research} 
+[Go Directly to Research](https://www.jakeberv.com/research){: .btn--research}
+
 For examples considering groups of birds, mammals, reptiles, amphibians, fishes, and deep-sea invertebrates.
 
 ## Recent updates
