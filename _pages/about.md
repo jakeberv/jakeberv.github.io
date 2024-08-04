@@ -20,7 +20,7 @@ header:
 
 # About me
 
-My research program integrates data from natural history, ecology, genomics, and paleontology---often through the application of novel computation tools---in order to understand the links between micro- and macroevolution. 
+I am an evolutionary biologist interested in building and deciphering the tree of life. My research integrates data from natural history, ecology, genomics, and paleontology---often through the application of novel computation tools---in order to understand the links between micro- and macroevolution.
 
 [Go Directly to Research](https://www.jakeberv.com/research){: .btn--research}
 
