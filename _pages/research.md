@@ -37,7 +37,7 @@ More specifically, I am to answer the following questions:
 
 Addressing these questions requires an appeal to both population scale phenomena, as well as larger scale patterns that can only be directly observed from the fossil record. This interdisciplinary approach to systematic biology recognizes that variation in the “tempo” or speed, and “mode” or processes of evolutionary change can confound the interpretation of phylogenetic comparative data.
 
-Below, you can explore branches of my research program, highlighting selected projects.
+Below, you can explore branches of my research program, highlighting selected projects across groups of birds, mammals, reptiles, amphibians, fishes, and deep-sea invertebrates.
 
 <nbsp>
 

@@ -24,8 +24,6 @@ I am an evolutionary biologist interested in building and deciphering the tree o
 
 [Go Directly to Research](https://www.jakeberv.com/research){: .btn--research}
 
-For examples considering groups of birds, mammals, reptiles, amphibians, fishes, and deep-sea invertebrates.
-
 ## Recent updates
 {% for item in site.news limit:5 %}
   <h4 style="font-size: 1.25em;">{{ item.title }}</h4>
