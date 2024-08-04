@@ -11,7 +11,9 @@ author_profile: true
 </figure>
 
 <figure style="max-width: 50%;">
-  <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/sciadv.2024.10.issue-31.largecover.jpg" alt="July 31 2024 cover for Science Advances"/>
+  <a href="https://doi.org/10.1126/sciadv.adp0114">
+    <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/sciadv.2024.10.issue-31.largecover.jpg" alt="July 31 2024 cover for Science Advances"/>
+  </a>
   <figcaption> Journal cover images (articles below) </figcaption>
 </figure>
 
