@@ -317,5 +317,148 @@
     "public_access": {
         "available": 10,
         "not_available": 0
-    }
+    },
+    "total_publications": 20,
+    "publications": [
+        {
+            "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
+            "citations": 1636,
+            "year": 2015,
+            "venue": "N/A",
+            "url": "https://www.nature.com/articles/nature15697"
+        },
+        {
+            "title": "Early evolution of modern birds structured by global forest collapse at the end-Cretaceous mass extinction",
+            "citations": 157,
+            "year": 2018,
+            "venue": "N/A",
+            "url": "https://www.cell.com/current-biology/fulltext/S0960-9822(18)30534-7"
+        },
+        {
+            "title": "Genomic signature of an avian Lilliput effect across the K-Pg extinction",
+            "citations": 113,
+            "year": 2018,
+            "venue": "N/A",
+            "url": "https://academic.oup.com/sysbio/article-abstract/67/1/1/3960267"
+        },
+        {
+            "title": "An inverse latitudinal gradient in infection probability and phylogenetic diversity for Leucocytozoon blood parasites in New World birds",
+            "citations": 85,
+            "year": 2020,
+            "venue": "N/A",
+            "url": "https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/1365-2656.13117"
+        },
+        {
+            "title": "Complex coevolution of wing, tail, and vocal sounds of courting male bee hummingbirds",
+            "citations": 46,
+            "year": 2018,
+            "venue": "N/A",
+            "url": "https://academic.oup.com/evolut/article-abstract/72/3/630/6726732"
+        },
+        {
+            "title": "A comprehensive multilocus phylogeny of the Neotropical cotingas (Cotingidae, Aves) with a comparative evolutionary analysis of breeding system and plumage dimorphism and a revised phylogenetic classification",
+            "citations": 43,
+            "year": 2014,
+            "venue": "N/A",
+            "url": "https://www.sciencedirect.com/science/article/pii/S1055790314003133"
+        },
+        {
+            "title": "Timing the extant avian radiation: the rise of modern birds, and the importance of modeling molecular rate variation",
+            "citations": 40,
+            "year": 2019,
+            "venue": "N/A",
+            "url": "https://peerj.com/preprints/27521/"
+        },
+        {
+            "title": "Genomic phylogeography of the White-crowned Manakin Pseudopipra pipra (Aves: Pipridae) illuminates a continental-scale radiation out of the Andes",
+            "citations": 26,
+            "year": 2021,
+            "venue": "N/A",
+            "url": "https://www.sciencedirect.com/science/article/pii/S105579032100138X"
+        },
+        {
+            "title": "Divergence in morphology, calls, song, mechanical sounds, and genetics supports species status for the Inaguan hummingbird (Trochilidae: Calliphlox \u201cevelynae\u201d lyrura)",
+            "citations": 22,
+            "year": 2015,
+            "venue": "N/A",
+            "url": "https://academic.oup.com/auk/article-abstract/132/1/248/5149205"
+        },
+        {
+            "title": "Ecological selectivity and the evolution of mammalian substrate preference across the K\u2013Pg boundary",
+            "citations": 15,
+            "year": 2021,
+            "venue": "N/A",
+            "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ece3.8114"
+        },
+        {
+            "title": "Recent divergence and lack of shared phylogeographic history characterize the diversification of neotropical savanna birds",
+            "citations": 15,
+            "year": 2021,
+            "venue": "N/A",
+            "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/jbi.14065"
+        },
+        {
+            "title": "Genome and life-history evolution link bird diversification to the end-Cretaceous mass extinction",
+            "citations": 5,
+            "year": 2024,
+            "venue": "N/A",
+            "url": "https://www.science.org/doi/abs/10.1126/sciadv.adp0114"
+        },
+        {
+            "title": "The pace of mitochondrial molecular evolution varies with seasonal migration distance",
+            "citations": 2,
+            "year": 2024,
+            "venue": "N/A",
+            "url": "https://academic.oup.com/evolut/article-abstract/78/1/160/7379636"
+        },
+        {
+            "title": "CRAN task view: Phylogenetics",
+            "citations": 1,
+            "year": 2024,
+            "venue": "N/A",
+            "url": "https://mirror.truenetwork.ru/CRAN/web/views/Phylogenetics.html"
+        },
+        {
+            "title": "The genomic landscape, causes, and consequences of extensive phylogenomic discordance in Old World mice and rats",
+            "citations": 0,
+            "year": 2023,
+            "venue": "N/A",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10491188/"
+        },
+        {
+            "title": "CRAN Task View: Phylogenetics.",
+            "citations": 0,
+            "year": 2022,
+            "venue": "N/A",
+            "url": "N/A"
+        },
+        {
+            "title": "Acknowledgment to Reviewers of Birds in 2021",
+            "citations": 0,
+            "year": 2022,
+            "venue": "N/A",
+            "url": "https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=26736004&asa=N&AN=155981554&h=6ShoPHa1VNW3eJA5GgTybJaBTlAf67eP1XlLt9BpgsMd3u%2BBlqn61nXbJK%2FplO%2FEaocOXnmiohLr%2Fujoy6JjRA%3D%3D&crl=c"
+        },
+        {
+            "title": "Pennaraptoran theropod dinosaurs: past progress and new frontiers.(Bulletin of the American Museum of Natural History, no. 440)",
+            "citations": 0,
+            "year": 2020,
+            "venue": "N/A",
+            "url": "https://digitallibrary.amnh.org/handle/2246/7237"
+        },
+        {
+            "title": "Peer Review Report For: The deep(er) roots of Eukaryotes and Akaryotes [version 1; peer review: 1 approved, 1 approved with reservations, 1 not approved]",
+            "citations": 0,
+            "year": 2020,
+            "venue": "N/A",
+            "url": "N/A"
+        },
+        {
+            "title": "Tempo and Mode: Using Genomic, Anatomical, and Life-History Data to Integrate the Micro-and Macroevolution of Birds",
+            "citations": 0,
+            "year": 2019,
+            "venue": "N/A",
+            "url": "https://search.proquest.com/openview/0944ba11c7dc9bdbfd11748cb2de4cfa/1?pq-origsite=gscholar&cbl=18750&diss=y"
+        }
+    ]
 }
