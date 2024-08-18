@@ -111,23 +111,27 @@
       {% endif %}
       {% if author.orcid %}
         <li><a href="{{ author.orcid }}"><i class="ai ai-orcid ai-fw" aria-hidden="true" style="padding-right: 1.5em;"></i>ORCID</a></li>
+      {% endif %}
+      
       {% if author.googlescholar %}
         <li>
           <a href="{{ author.googlescholar }}">
-            <i class="fas fa-fw fa-graduation-cap" aria-hidden="true" style="padding-right: 1.5em;"></i>
+            <i class="fas fa-fw fa-graduation-cap" aria-hidden="true" style="padding-right: 1.5em      ;"></i>
             Google Scholar
           </a>
           <div style="margin-left: 2em; margin-top: 0.5em; font-size: 1.05em;">
             <strong>Metrics</strong>
             <ul style="list-style-type: disc; margin-left: 1.5em; margin-top: 0.3em;">
               <li style="margin: 0.2em 0;">h-index: {{ site.data.scholar_metrics.h_index }}</li>
-              <li style="margin: 0.2em 0;">i10-index: {{ site.data.scholar_metrics.i10_index }}</li>
-              <li style="margin: 0.2em 0;">Total Citations: {{ site.data.scholar_metrics.citations }}</li>
-              <li style="margin: 0.2em 0;">Total Publications: {{ site.data.scholar_metrics.total_publications }}</li>
+              <li style="margin: 0.2em 0;">i10-index: {{ site.data.scholar_metrics.i10_index }}    </li>
+              <li style="margin: 0.2em 0;">Total Citations: {{ site.data.scholar_metrics.citations      }}</li>
+              <li style="margin: 0.2em 0;">Total Publications: {{ site.data.scholar_metrics     .total_publications }}</li>
             </ul>
           </div>
         </li>
       {% endif %}
+
+      
       {% if author.pubmed %}
         <li><a href="{{ author.pubmed }}"><i class="ai ai-pubmed-square ai-fw" aria-hidden="true" style="padding-right: 1.5em;"></i>PubMed</a></li>
       {% endif %}
