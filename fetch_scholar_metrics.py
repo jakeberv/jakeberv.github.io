@@ -1,5 +1,11 @@
-from scholarly import scholarly
+from scholarly import scholarly, ProxyGenerator
+import time
 import json
+
+# Set up a proxy generator
+pg = ProxyGenerator()
+success = pg.FreeProxies()  # Uses free proxies
+scholarly.use_proxy(pg)
 
 # Search for your profile using your Google Scholar ID
 author = scholarly.search_author_id('cQQaGZQAAAAJ')
@@ -23,6 +29,7 @@ for pub in author['publications']:
         'venue': publication['bib'].get('venue', 'N/A')
     }
     scholar_data['publications'].append(pub_data)
+    time.sleep(2)  # Add a delay to avoid rate-limiting
 
 # Save the data to a JSON file in the _data directory
 with open('_data/scholar_metrics.json', 'w') as f:
