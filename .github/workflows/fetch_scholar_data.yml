@@ -33,4 +33,3 @@ jobs:
         git add _data/scholar_metrics.json
         git commit -m "Update Google Scholar metrics"
         git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
-    
