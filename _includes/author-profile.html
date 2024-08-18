@@ -113,7 +113,18 @@
         <li><a href="{{ author.orcid }}"><i class="ai ai-orcid ai-fw" aria-hidden="true" style="padding-right: 1.5em;"></i>ORCID</a></li>
       {% endif %}
       {% if author.googlescholar %}
-        <li><a href="{{ author.googlescholar }}"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true" style="padding-right: 1.5em;"></i>Google Scholar</a></li>
+        <li>
+          <a href="{{ author.googlescholar }}">
+            <i class="fas fa-fw fa-graduation-cap" aria-hidden="true" style="padding-right: 1.5em;"></i>
+            Google Scholar
+          </a>
+          <div style="margin-left: 1.5em; margin-top: 0.3em;">
+            <p style="margin: 0;">h-index: {{ site.data.scholar_metrics.h_index }}</p>
+            <p style="margin: 0;">i10-index: {{ site.data.scholar_metrics.i10_index }}</p>
+            <p style="margin: 0;">Total Citations: {{ site.data.scholar_metrics.citations }}</p>
+            <p style="margin: 0;">Total Publications: {{ site.data.scholar_metrics.total_publications }}</p>
+          </div>
+        </li>
       {% endif %}
       {% if author.pubmed %}
         <li><a href="{{ author.pubmed }}"><i class="ai ai-pubmed-square ai-fw" aria-hidden="true" style="padding-right: 1.5em;"></i>PubMed</a></li>
@@ -125,13 +136,6 @@
         <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"><i class="fab fa-fw fa-wikipedia-w" aria-hidden="true" style="padding-right: 1.5em;"></i>Wikipedia</a></li>
 {% endif %}
     </ul>
-  </div>
-  <!-- Insert academic metrics after all other content -->
-  <div class="author__metrics">
-      <h3>Academic Metrics</h3>
-      <p>h-index: {{ site.data.scholar_metrics.h_index }}</p>
-      <p>i10-index: {{ site.data.scholar_metrics.i10_index }}</p>
-      <p>Total Citations: {{ site.data.scholar_metrics.citations }}</p>
   </div>
 </div>
 
