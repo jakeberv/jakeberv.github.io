@@ -1,0 +1,321 @@
+{
+    "name": "Jacob S. Berv",
+    "affiliation": "Schmidt AI in Science Postdoctoral Fellow,  University of Michigan",
+    "email_domain": "@umich.edu",
+    "h_index": 11,
+    "i10_index": 11,
+    "citations": 2206,
+    "cites_per_year": {
+        "2015": 13,
+        "2016": 104,
+        "2017": 206,
+        "2018": 211,
+        "2019": 270,
+        "2020": 297,
+        "2021": 308,
+        "2022": 307,
+        "2023": 251,
+        "2024": 199
+    },
+    "interests": [
+        "Speciation",
+        "Evolution",
+        "Ornithology",
+        "Population Genomics",
+        "Phylogenetics"
+    ],
+    "coauthors": [
+        {
+            "name": "Richard O. Prum",
+            "affiliation": "Yale University",
+            "scholar_id": "PrtHleIAAAAJ"
+        },
+        {
+            "name": "Daniel J. Field",
+            "affiliation": "Professor of Vertebrate Palaeontology & Strickland Curator of Ornithology, University of \u2026",
+            "scholar_id": "oxSZWaEAAAAJ"
+        },
+        {
+            "name": "alex dornburg",
+            "affiliation": "University of North Carolina, Charlotte",
+            "scholar_id": "VgPd6sMAAAAJ"
+        },
+        {
+            "name": "Alan Lemmon",
+            "affiliation": "Associate Professor",
+            "scholar_id": "2xR_OmsAAAAJ"
+        },
+        {
+            "name": "Jeffrey Townsend",
+            "affiliation": "Elihu Professor of Biostatistics and Ecology & Evolutionary Biology",
+            "scholar_id": "J8J7NvkAAAAJ"
+        },
+        {
+            "name": "Emily Moriarty Lemmon",
+            "affiliation": "Florida State University",
+            "scholar_id": "wNmwYS4AAAAJ"
+        },
+        {
+            "name": "Kristof Zyskowski",
+            "affiliation": "Yale University, Peabody Museum of Natural History",
+            "scholar_id": "aEmILscAAAAJ"
+        },
+        {
+            "name": "Teresa J. Feo",
+            "affiliation": "Smithsonian National Museum of Natural History",
+            "scholar_id": "KC_7qOMAAAAJ"
+        },
+        {
+            "name": "Camila C. Ribas",
+            "affiliation": "Instituto Nacional de Pesquisas da Amaz\u00f4nia & American Museum of Natural History",
+            "scholar_id": "-X2HGoYAAAAJ"
+        },
+        {
+            "name": "Jacques A. Gauthier",
+            "affiliation": "Professor of Earth & Planetary Sciences, Yale University",
+            "scholar_id": "x6GEbUEAAAAJ"
+        },
+        {
+            "name": "Vivi Vajda",
+            "affiliation": "Professor, Dept of Palaeobiology, Swedish Museum of Natural History, Stockholm, Sweden",
+            "scholar_id": "LTMeTU4AAAAJ"
+        },
+        {
+            "name": "Tyler Lyson",
+            "affiliation": "Curator of Vertebrate Paleontology, Dept. of Earth Sciences, Denver Museum of Nature and \u2026",
+            "scholar_id": "vSG9jpgAAAAJ"
+        },
+        {
+            "name": "Antoine Bercovici",
+            "affiliation": "School of Biosciences, University of Nottingham",
+            "scholar_id": "WMU6uOgAAAAJ"
+        },
+        {
+            "name": "Regan E. Dunn",
+            "affiliation": "Natural History Museums of Los Angeles County, La Brea Tar Pits & Museum",
+            "scholar_id": "cAyGBSoAAAAJ"
+        },
+        {
+            "name": "Christopher J Clark",
+            "affiliation": "EEOB, UC Riverside",
+            "scholar_id": "9Bpr4-4AAAAJ"
+        },
+        {
+            "name": "Alan Fecchio",
+            "affiliation": "Universidade Federal de Mato Grosso",
+            "scholar_id": "FgGcYjEAAAAJ"
+        },
+        {
+            "name": "Holly L. Lutz",
+            "affiliation": "The Scripps Research Institute; Field Museum of Natural History",
+            "scholar_id": "ZymJFLoAAAAJ"
+        },
+        {
+            "name": "Marina Anciaes",
+            "affiliation": "INPA",
+            "scholar_id": "sIX5N50AAAAJ"
+        },
+        {
+            "name": "Jason D. Weckstein",
+            "affiliation": "Associate Curator, Ornithology Department, Academy of Natural Sciences and Associate \u2026",
+            "scholar_id": "VYFI2fQAAAAJ"
+        },
+        {
+            "name": "Nicholas J Clark",
+            "affiliation": "University of Queensland",
+            "scholar_id": "5bO9uxEAAAAJ"
+        },
+        {
+            "name": "Vasyl Tkach",
+            "affiliation": "Chester Fritz Distinguished Professor of Biology, University of North Dakota",
+            "scholar_id": "Ae0KZEUAAAAJ"
+        },
+        {
+            "name": "Spencer C. Galen",
+            "affiliation": "University of Scranton",
+            "scholar_id": "3ELcXGwAAAAJ"
+        },
+        {
+            "name": "Jeffrey Bell",
+            "affiliation": "University of North Dakota",
+            "scholar_id": "t71puqEAAAAJ"
+        },
+        {
+            "name": "Daniel Gonz\u00e1lez Acu\u00f1a",
+            "affiliation": "Universidad de Concepci\u00f3n",
+            "scholar_id": "eYoZV6cAAAAJ"
+        },
+        {
+            "name": "Victor R. Cueto",
+            "affiliation": "CIEMEP (CONICET & UNPSJB)",
+            "scholar_id": "qfvfHd0AAAAJ"
+        },
+        {
+            "name": "Irby Lovette",
+            "affiliation": "Fuller Professor of Ornithology, Cornell University",
+            "scholar_id": "Vi0LoiAAAAAJ"
+        },
+        {
+            "name": "Elisa Bonaccorso",
+            "affiliation": "Colegio de Ciencias Biol\u00f3gicas y Ambientales, Universidad San Francisco de Quito",
+            "scholar_id": "vfgVDMsAAAAJ"
+        },
+        {
+            "name": "Jimmy A McGuire",
+            "affiliation": "Professor of Integrative Biology, UC Berkeley",
+            "scholar_id": "5wcNxu0AAAAJ"
+        },
+        {
+            "name": "Michael Landis",
+            "affiliation": "Assistant Professor at Washington University in St. Louis",
+            "scholar_id": "LxPnTjYAAAAJ"
+        },
+        {
+            "name": "Allison Hsiang",
+            "affiliation": "Researcher, Stockholm University",
+            "scholar_id": "3D-4Dn8AAAAJ"
+        },
+        {
+            "name": "Robert Lanfear",
+            "affiliation": "Professor, Australian National University",
+            "scholar_id": "Se6txrMAAAAJ"
+        },
+        {
+            "name": "Jonathan Hughes",
+            "affiliation": "Postdoctoral Researcher, UC Riverside",
+            "scholar_id": "awBFtXsAAAAJ"
+        },
+        {
+            "name": "Benjamin M. Winger",
+            "affiliation": "Assistant Professor of Ecology and Evolutionary Biology, University of Michigan",
+            "scholar_id": "C61BipSii0wC"
+        },
+        {
+            "name": "Leonardo Campagna",
+            "affiliation": "Cornell Lab of Ornithology",
+            "scholar_id": "PtLhs74AAAAJ"
+        },
+        {
+            "name": "Jacob M. Musser",
+            "affiliation": "Yale University",
+            "scholar_id": "T90NSF0AAAAJ"
+        },
+        {
+            "name": "Alexandre Aleixo",
+            "affiliation": "Instituto Tecnol\u00f3gico Vale",
+            "scholar_id": "XpyI2wYAAAAJ"
+        },
+        {
+            "name": "Lucas Rocha Moreira",
+            "affiliation": "Postdoctoral fellow at the Broad Institute of Harvard and MIT",
+            "scholar_id": "s0q58G8AAAAJ"
+        },
+        {
+            "name": "Eugenia Zarza",
+            "affiliation": "El Colegio de la Frontera Sur - CONACYT",
+            "scholar_id": "3CduKNgAAAAJ"
+        },
+        {
+            "name": "Paul van Els",
+            "affiliation": "Dutch Centre for Field Ornithology",
+            "scholar_id": "Pb0WwvUAAAAJ"
+        },
+        {
+            "name": "Eric J. Sargis",
+            "affiliation": "Professor, Yale University; Curator, Yale Peabody Museum",
+            "scholar_id": "pk0CYUsAAAAJ"
+        },
+        {
+            "name": "Valentina G\u00f3mez-Baham\u00f3n",
+            "affiliation": "Pennsylvania State University",
+            "scholar_id": "QCVlwlsAAAAJ"
+        },
+        {
+            "name": "Stephen GB Chester",
+            "affiliation": "Associate Professor, Brooklyn College, City University of New York",
+            "scholar_id": "To56C4YAAAAJ"
+        },
+        {
+            "name": "Nathanael Walker-Hale",
+            "affiliation": "Postdoctoral Research Associate, Department of Biosciences, Durham University",
+            "scholar_id": "SeRf_xAAAAAJ"
+        },
+        {
+            "name": "J Ryan Shipley",
+            "affiliation": "Swiss Federal Research Institute WSL",
+            "scholar_id": "3z5nlGUAAAAJ"
+        },
+        {
+            "name": "Eliot Miller",
+            "affiliation": "American Bird Conservancy",
+            "scholar_id": "uTONo4MAAAAJ"
+        },
+        {
+            "name": "Matt Friedman",
+            "affiliation": "Museum of Paleontology, Department of Earth and Environmental Sciences, University of \u2026",
+            "scholar_id": "4d4zhI8AAAAJ"
+        },
+        {
+            "name": "Stephen A. Smith",
+            "affiliation": "Professor, University of Michigan",
+            "scholar_id": "gVwJZpAAAAAJ"
+        },
+        {
+            "name": "Edward L. Braun",
+            "affiliation": "Professor of Biology, University of Florida",
+            "scholar_id": "31XPDbYAAAAJ"
+        },
+        {
+            "name": "Rebecca Kimball",
+            "affiliation": "Professor of Biology, University of Florida",
+            "scholar_id": "zQPuErkAAAAJ"
+        },
+        {
+            "name": "Sonal Singhal",
+            "affiliation": "Associate Professor, CSU Dominguez Hills",
+            "scholar_id": "hGRmhQkAAAAJ"
+        },
+        {
+            "name": "Sean McHugh",
+            "affiliation": "Washington University in St. Louis",
+            "scholar_id": "1fdBsg8AAAAJ"
+        },
+        {
+            "name": "C. Tomomi Parins-Fukuchi",
+            "affiliation": "University of Toronto",
+            "scholar_id": "WhHTPMQAAAAJ"
+        },
+        {
+            "name": "Eric R. Gulson-Castillo",
+            "affiliation": "Graduate student, University of Michigan",
+            "scholar_id": "lWPHsioAAAAJ"
+        },
+        {
+            "name": "Teresa Pegan",
+            "affiliation": "University of Michigan",
+            "scholar_id": "7XYBoHEAAAAJ"
+        },
+        {
+            "name": "Abigail A. Kimmitt",
+            "affiliation": "University of Michigan",
+            "scholar_id": "j7OsXOwAAAAJ"
+        },
+        {
+            "name": "William Gearty",
+            "affiliation": "Postdoctoral Research Fellow, American Museum of Natural History",
+            "scholar_id": "HWV1c2UAAAAJ"
+        },
+        {
+            "name": "Carla Suertegaray Fontana",
+            "affiliation": "UFRGS-Centro de Ecologia",
+            "scholar_id": "_xxcGZwAAAAJ"
+        }
+    ],
+    "profile_picture": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=cQQaGZQAAAAJ&citpid=1",
+    "homepage": "N/A",
+    "organization": 4770128543809686866,
+    "public_access": {
+        "available": 10,
+        "not_available": 0
+    }
+}
