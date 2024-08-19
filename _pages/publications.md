@@ -56,6 +56,7 @@ author_profile: true
 
 See CV for other publications
 
+
 <canvas id="GeoBubbleChart"></canvas>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -77,12 +78,13 @@ function initGeoBubbleChart(countries, mapData) {
             label: 'Country Outlines',
             outline: countries,
             showOutline: true,
-            backgroundColor: 'steelblue',
+            backgroundColor: 'rgba(255, 99, 132, 0.5)',
             data: mapData.map(d => ({
                 x: d.lon,
                 y: d.lat,
                 r: Math.sqrt(d.publicationCount) * 2,
-                value: d.publicationCount
+                value: d.publicationCount,
+                address: d.address
             }))
         }]
     };
@@ -106,7 +108,8 @@ function initGeoBubbleChart(countries, mapData) {
                     mode: 'point',
                     callbacks: {
                         label: function(context) {
-                            return `${context.label}: ${context.raw.value} publications`;
+                            const data = context.raw;
+                            return `${data.address}: ${data.value} publications`;
                         }
                     }
                 }
