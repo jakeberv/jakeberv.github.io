@@ -79,11 +79,9 @@ function initGeoBubbleChart(countries, mapData) {
             showOutline: true,
             backgroundColor: 'rgba(255, 99, 132, 0.5)',
             data: mapData.map(d => ({
-                x: d.lon,
-                y: d.lat,
-                r: Math.sqrt(d.publicationCount) * 2,
-                value: d.publicationCount,
-                address: d.address
+                longitude: d.lon,
+                latitude: d.lat,
+                value: d.publicationCount
             }))
         }]
     };
@@ -110,8 +108,14 @@ function initGeoBubbleChart(countries, mapData) {
                     projection: 'equalEarth'
                 },
                 size: {
+                    display: false,
                     axis: 'x',
                     size: [1, 20]
+                },
+                radiusScale: {
+                    display: false,
+                    range: [1, 20],
+                    property: 'value'
                 }
             }
         }
@@ -120,5 +124,6 @@ function initGeoBubbleChart(countries, mapData) {
     new Chart(ctx, config);
 }
 </script>
+
 
 
