@@ -45,19 +45,7 @@ author_profile: true
   });
 </script>
 
-
-{% if author.googlescholar %} You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u> {% endif %}
-
-{% include base_path %}
-
-{% for post in site.publications reversed %} {% include archive-single-pubs.html %} {% endfor %}
-
----
-
-See CV for other publications
-
-
-<h2 style="margin-top: 0px;">Geographic distribution of citations</h2>
+<h2 style="margin-top: 10px; margin-bottom: 10px;">Geographic distribution of citations</h2>
 <div id="geochartWrapper" style="width: 80%; height: 350px; position: relative;">
   <canvas id="GeoBubbleChart"></canvas>
 </div>
@@ -125,6 +113,17 @@ function initGeoBubbleChart(countries, mapData) {
     new Chart(ctx, config);
 }
 </script>
+
+
+{% if author.googlescholar %} You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u> {% endif %}
+
+{% include base_path %}
+
+{% for post in site.publications reversed %} {% include archive-single-pubs.html %} {% endfor %}
+
+---
+
+See CV for other publications
 
 
 
