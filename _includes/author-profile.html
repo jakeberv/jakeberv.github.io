@@ -121,7 +121,7 @@
     </a>
     <div style="margin-top: 0.3em;">
       <strong style="display: block; margin-left: 0; font-size: 1.05em;">Metrics</strong>
-      <ul style="list-style-type: disc; padding-left: 1.5em; margin-left: 0; font-size: 1em;">
+      <ul style="list-style-type: disc; padding-left: 1.5em; margin-left: 0;">
         <li style="margin: 0.1em 0;">h-index: {{ site.data.scholar_metrics.h_index }}</li>
         <li style="margin: 0.1em 0;">i10-index: {{ site.data.scholar_metrics.i10_index }}</li>
         <li style="margin: 0.1em 0;">Total Citations: {{ site.data.scholar_metrics.citations }}</li>
@@ -130,7 +130,7 @@
     </div>
   </li>
       {% endif %}
-      
+
       {% if author.pubmed %}
         <li><a href="{{ author.pubmed }}"><i class="ai ai-pubmed-square ai-fw" aria-hidden="true" style="padding-right: 1.5em;"></i>PubMed</a></li>
       {% endif %}
