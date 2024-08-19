@@ -74,13 +74,10 @@ function initGeoBubbleChart(countries, mapData) {
     const data = {
         labels: mapData.map(d => d.address),
         datasets: [{
-            label: 'Country Outlines',
+            label: '',
             outline: countries,
             showOutline: true,
             backgroundColor: 'rgba(255, 99, 132, 0.5)',
-            hoverBackgroundColor: 'rgba(200, 99, 132, 0.7)',
-            hoverBorderColor: 'white',
-            hoverBorderWidth: 2,
             data: mapData.map(d => ({
                 x: d.lon,
                 y: d.lat,
@@ -94,22 +91,8 @@ function initGeoBubbleChart(countries, mapData) {
         type: 'bubbleMap',
         data: data,
         options: {
-            showGraticule: true,
-            graticule: {
-                borderColor: '#cccccc',
-                lineWidth: 0.5
-            },
-            scales: {
-                projection: {
-                    axis: 'x',
-                    projection: 'equalEarth'
-                },
-                size: {
-                    axis: 'x',
-                    size: [1, 20]
-                }
-            },
             plugins: {
+                legend: { display: false },
                 tooltip: {
                     enabled: true,
                     mode: 'point',
@@ -121,8 +104,15 @@ function initGeoBubbleChart(countries, mapData) {
                     }
                 }
             },
-            onHover: function(event, chartElement) {
-                event.native.target.style.cursor = chartElement.length ? 'pointer' : 'default';
+            scales: {
+                projection: {
+                    axis: 'x',
+                    projection: 'equalEarth'
+                },
+                size: {
+                    axis: 'x',
+                    size: [1, 20]
+                }
             }
         }
     };
@@ -130,4 +120,5 @@ function initGeoBubbleChart(countries, mapData) {
     new Chart(ctx, config);
 }
 </script>
+
 
