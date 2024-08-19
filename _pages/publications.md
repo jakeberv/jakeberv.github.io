@@ -45,6 +45,8 @@ author_profile: true
   });
 </script>
 
+<br>
+
 <h2 style="margin-top: 10px; margin-bottom: 10px;">Geographic distribution of citations</h2>
 <div id="geochartWrapper" style="width: 80%; height: 350px; position: relative;">
   <canvas id="GeoBubbleChart"></canvas>
@@ -71,11 +73,9 @@ function initGeoBubbleChart(countries, mapData) {
             showOutline: true,
             backgroundColor: 'rgba(255, 99, 132, 0.5)',
             data: mapData.map(d => ({
-                x: d.lon,
-                y: d.lat,
-                r: Math.sqrt(d.publicationCount) * 2,
-                value: d.publicationCount,
-                address: d.address
+                longitude: d.lon,
+                latitude: d.lat,
+                value: d.publicationCount
             }))
         }]
     };
@@ -98,13 +98,11 @@ function initGeoBubbleChart(countries, mapData) {
             },
             scales: {
                 projection: {
-                    axis: 'x',
                     projection: 'equalEarth'
                 },
                 size: {
-                    axis: 'x',
-                    size: [1, 20],
-                    display: false
+                    display: false,
+                    range: [1, 20]
                 }
             }
         }
@@ -113,6 +111,7 @@ function initGeoBubbleChart(countries, mapData) {
     new Chart(ctx, config);
 }
 </script>
+
 
 
 {% if author.googlescholar %} You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u> {% endif %}
