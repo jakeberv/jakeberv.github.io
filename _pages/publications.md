@@ -4,10 +4,9 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
-<br>
 
 <h2>Citations Over Time</h2>
-<div id="chartWrapper" style="width: 80%; height: 200px; position: relative;">
+<div id="chartWrapper" style="width: 80%; height: 250px; position: relative;">
   <canvas id="citationsChart"></canvas>
 </div>
 
