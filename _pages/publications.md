@@ -47,10 +47,13 @@ author_profile: true
 
 <br>
 
-<h2 style="margin-top: 10px; margin-bottom: 10px;">Geographic distribution of citations</h2>
-<div id="geochartWrapper" style="width: 80%; height: 350px; position: relative;">
-  <canvas id="GeoBubbleChart"></canvas>
-</div>
+<h2 style="margin-top: 10px; margin-bottom: 20px;">Citation locations</h2>
+<figure>
+    <div id="geochartWrapper" style="width: 80%; height: 350px; position: relative;">
+        <canvas id="GeoBubbleChart"></canvas>
+    </div>
+    <figcaption style="text-align: center;">Partial sample from Web of Science</figcaption>
+</figure>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-geo"></script>
@@ -72,6 +75,7 @@ function initGeoBubbleChart(countries, mapData) {
             outline: countries,
             showOutline: true,
             backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            outlineBackgroundColor: '#f0f0f0',
             data: mapData.map(d => ({
                 x: d.lon,
                 y: d.lat,
