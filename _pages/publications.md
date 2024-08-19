@@ -17,79 +17,42 @@ author_profile: true
   <figcaption> Journal cover images (articles below) </figcaption>
 </figure>
 
-<style>
-  #chartWrapper {
-    width: 400px;  /* Desired width set in pixels */
-    height: 200px; /* Desired height set in pixels */
-    position: relative;
-  }
-</style>
-
 <h2>Citations Over Time</h2>
-<div id="chartWrapper">
+<div id="chartWrapper" style="width: 400px; height: 200px; position: relative;">
   <canvas id="citationsChart"></canvas>
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log("DOMContentLoaded: DOM fully loaded and parsed.");
+  const ctx = document.getElementById('citationsChart').getContext('2d');
 
-    const canvas = document.getElementById('citationsChart');
-    if (!canvas) {
-      console.error("Canvas element not found!");
-      return;
-    } else {
-      console.log("Canvas element found.");
-    }
+  const citationsData = {{ site.data.scholar_metrics.cites_per_year | jsonify }};
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) {
-      console.error("Failed to get canvas context!");
-      return;
-    } else {
-      console.log("Canvas context acquired.");
-    }
+  const labels = Object.keys(citationsData);
+  const data = Object.values(citationsData);
 
-    console.log("Attempting to fetch and parse chart data...");
-    // Simulate the data since the actual template processing needs to run server-side with Jekyll
-    const citationsData = { "2018": 50, "2019": 75, "2020": 100, "2021": 125 };  // Replace with actual data fetching logic
-    console.log("Data fetched:", citationsData);
-
-    const labels = Object.keys(citationsData);
-    const data = Object.values(citationsData);
-    console.log("Data labels:", labels);
-    console.log("Data values:", data);
-
-    try {
-      const citationsChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: labels,
-          datasets: [{
-            label: 'Citations per Year',
-            data: data,
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            borderColor: 'rgba(75, 192, 192, 1)',
-            borderWidth: 1
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: true,
-          scales: {
-            y: {
-              beginAtZero: true
-            }
-          }
+  const citationsChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'Citations per Year',
+        data: data,
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true
         }
-      });
-      console.log("Chart initialized successfully.");
-    } catch (e) {
-      console.error("Failed to initialize the chart:", e);
+      }
     }
   });
 </script>
-
 
 
 {% if author.googlescholar %} You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u> {% endif %}
