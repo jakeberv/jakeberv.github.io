@@ -18,7 +18,7 @@ author_profile: true
 </figure>
 
 <h2>Citations Over Time</h2>
-<div id="chartWrapper" style="width: 400px; height: 200px; position: relative;">
+<div id="chartWrapper" style="width: 80%; height: 200px; position: relative;">
   <canvas id="citationsChart"></canvas>
 </div>
 
