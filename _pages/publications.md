@@ -60,7 +60,6 @@ See CV for other publications
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-geo"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 
 <script>
 fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json')
@@ -91,12 +90,6 @@ function initGeoBubbleChart(countries, mapData) {
         type: 'bubbleMap',
         data: data,
         options: {
-            plugins: {
-                datalabels: {
-                    align: 'top',
-                    formatter: (v) => `${v.x.toFixed(2)}, ${v.y.toFixed(2)}: ${v.value} publications`
-                }
-            },
             scales: {
                 projection: {
                     axis: 'x',
@@ -106,9 +99,19 @@ function initGeoBubbleChart(countries, mapData) {
                     axis: 'x',
                     size: [1, 20]
                 }
+            },
+            plugins: {
+                tooltip: {
+                    enabled: true,
+                    mode: 'point',
+                    callbacks: {
+                        label: function(context) {
+                            return `${context.label}: ${context.raw.value} publications`;
+                        }
+                    }
+                }
             }
-        },
-        plugins: [ChartDataLabels]
+        }
     };
     const ctx = document.getElementById('GeoBubbleChart').getContext('2d');
     new Chart(ctx, config);
