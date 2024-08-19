@@ -56,7 +56,6 @@ author_profile: true
 
 See CV for other publications
 
-
 <canvas id="GeoBubbleChart"></canvas>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -79,6 +78,9 @@ function initGeoBubbleChart(countries, mapData) {
             outline: countries,
             showOutline: true,
             backgroundColor: 'rgba(255, 99, 132, 0.5)',
+            hoverBackgroundColor: 'rgba(200, 99, 132, 0.7)', // slightly darker on hover
+            hoverBorderColor: 'white',
+            hoverBorderWidth: 2,
             data: mapData.map(d => ({
                 x: d.lon,
                 y: d.lat,
@@ -113,6 +115,13 @@ function initGeoBubbleChart(countries, mapData) {
                         }
                     }
                 }
+            },
+            onHover: function(event, chartElement) {
+                if (chartElement.length) {
+                    event.native.target.style.cursor = 'pointer';
+                } else {
+                    event.native.target.style.cursor = 'default';
+                }
             }
         }
     };
@@ -120,6 +129,5 @@ function initGeoBubbleChart(countries, mapData) {
     new Chart(ctx, config);
 }
 </script>
-
 
 
