@@ -18,9 +18,7 @@ author_profile: true
 </figure>
 
 <h2>Citations Over Time</h2>
-<div style="width: 250px; height: 120px; max-width: 100%;">
-  <canvas id="citationsChart"></canvas>
-</div>
+<canvas id="citationsChart" style="width: 250px; height: 120px;"></canvas>
 
 
 {% if author.googlescholar %} You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u> {% endif %}
@@ -62,7 +60,7 @@ See CV for other publications
       }]
     },
     options: {
-      maintainAspectRatio: false, // Allow the chart to fit the container's size
+      maintainAspectRatio: false, // Allows chart to respect the canvas dimensions
       scales: {
         y: {
           beginAtZero: true
