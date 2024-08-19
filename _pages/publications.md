@@ -18,16 +18,15 @@ author_profile: true
 </figure>
 
 <style>
-  #citationsChartWrapper {
-    display: inline-block; /* or block depending on your layout */
-    position: relative;
-    width: 400px; /* Fixed width */
-    height: 200px; /* Fixed height */
+  #chartWrapper {
+    width: 400px; /* Desired width */
+    height: 200px; /* Desired height */
+    position: relative; /* Needed for responsive config */
   }
 </style>
 
 <h2>Citations Over Time</h2>
-<div id="citationsChartWrapper">
+<div id="chartWrapper">
   <canvas id="citationsChart"></canvas>
 </div>
 
@@ -35,40 +34,35 @@ author_profile: true
   document.addEventListener('DOMContentLoaded', function() {
     const ctx = document.getElementById('citationsChart').getContext('2d');
 
-    // Ensure that 'citationsData' is correctly prepared and jsonified from Jekyll's data
-    // Replace 'site.data.scholar_metrics.cites_per_year' with your actual data path
-    // The '{{ }}' syntax is specific to Jekyll/Liquid templates, make sure it's processed server-side
     const citationsData = {{ site.data.scholar_metrics.cites_per_year | jsonify }};
-    
-    // Ensuring labels and data are fetched properly from the citationsData
     const labels = Object.keys(citationsData);
     const data = Object.values(citationsData);
 
-    // Create the chart
     const citationsChart = new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: labels, // Year labels from your data
+        labels: labels,
         datasets: [{
-          label: 'Citations per Year', // Dataset label
-          data: data, // Corresponding data for each year
-          backgroundColor: 'rgba(75, 192, 192, 0.2)', // Color of the bars
-          borderColor: 'rgba(75, 192, 192, 1)', // Border color of the bars
-          borderWidth: 1 // Border width
+          label: 'Citations per Year',
+          data: data,
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1
         }]
       },
       options: {
-        responsive: true, // Makes the chart responsive
-        maintainAspectRatio: false, // Adjusts the chart size to the container
+        responsive: true,
+        maintainAspectRatio: true, // Maintain the aspect ratio of the chart as per its parent container's proportions
         scales: {
           y: {
-            beginAtZero: true // Starts the scale at zero
+            beginAtZero: true
           }
         }
       }
     });
   });
 </script>
+
 
 
 {% if author.googlescholar %} You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u> {% endif %}
