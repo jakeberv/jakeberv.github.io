@@ -18,14 +18,17 @@ author_profile: true
 </figure>
 
 
-<!-- Chart Container to center the canvas element and give it a flexible but controlled environment -->
-<div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
-  <canvas id="citationsChart"></canvas>
-</div>
+<style>
+  #citationsChart {
+    width: 600px !important;  /* Set a fixed width in pixels */
+    height: 400px !important; /* Set a fixed height in pixels */
+  }
+</style>
 
-<!-- Chart Initialization Script -->
+<h2>Citations Over Time</h2>
+<canvas id="citationsChart"></canvas>
+
 <script>
-  // Getting the context of the canvas where the chart will be drawn
   const ctx = document.getElementById('citationsChart').getContext('2d');
 
   // Assuming dynamic data is loaded correctly from your site's data files
@@ -33,7 +36,6 @@ author_profile: true
   const labels = Object.keys(citationsData);
   const data = Object.values(citationsData);
 
-  // Initializing the chart with your data
   const citationsChart = new Chart(ctx, {
     type: 'bar',  // Chart type is set to 'bar'
     data: {
@@ -48,7 +50,7 @@ author_profile: true
     },
     options: {
       responsive: true,  // Chart is responsive to the size of its container
-      maintainAspectRatio: false,  // Chart does not maintain the aspect ratio
+      maintainAspectRatio: true,  // Maintain the aspect ratio
       scales: {
         y: {  // Configuration for the y-axis
           beginAtZero: true  // Ensures the y-axis starts from zero
@@ -57,6 +59,7 @@ author_profile: true
     }
   });
 </script>
+
 
 
 {% if author.googlescholar %} You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u> {% endif %}
