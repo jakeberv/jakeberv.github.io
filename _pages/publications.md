@@ -51,8 +51,10 @@ author_profile: true
 <div id="geochartWrapper" style="width: 80%; height: 350px; position: relative;">
   <canvas id="GeoBubbleChart"></canvas>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-geo"></script>
+
 <script>
 fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json')
     .then(response => response.json())
@@ -61,20 +63,22 @@ fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json')
         const mapData = {{ site.data.map_data | jsonify }};
         initGeoBubbleChart(countries, mapData);
     });
+
 function initGeoBubbleChart(countries, mapData) {
-    const enhancedMapData = mapData.map(d => Object.assign(d, {
-        longitude: d.lon,
-        latitude: d.lat,
-        value: d.publicationCount
-    }));
     const data = {
-        labels: enhancedMapData.map(d => d.address),
+        labels: mapData.map(d => d.address),
         datasets: [{
             label: '',
             outline: countries,
             showOutline: true,
-            backgroundColor: 'rgba(255, 99, 132, 0.5)',
-            data: enhancedMapData
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            data: mapData.map(d => ({
+                x: d.lon,
+                y: d.lat,
+                r: Math.sqrt(d.publicationCount) * 2,
+                value: d.publicationCount,
+                address: d.address
+            }))
         }]
     };
     const config = {
@@ -96,11 +100,13 @@ function initGeoBubbleChart(countries, mapData) {
             },
             scales: {
                 projection: {
+                    axis: 'x',
                     projection: 'equalEarth'
                 },
                 size: {
-                    display: false,
-                    range: [1, 20]
+                    axis: 'x',
+                    size: [1, 20],
+                    display: false
                 }
             }
         }
