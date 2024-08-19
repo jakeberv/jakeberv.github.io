@@ -20,8 +20,8 @@ author_profile: true
 
 <style>
   #citationsChart {
-    width: 600px !important;  /* Set a fixed width in pixels */
-    height: 400px !important; /* Set a fixed height in pixels */
+    width: 400 !important;  /* Set a fixed width in pixels */
+    height: 200 !important; /* Set a fixed height in pixels */
   }
 </style>
 
