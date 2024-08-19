@@ -56,7 +56,11 @@ author_profile: true
 
 See CV for other publications
 
-<canvas id="GeoBubbleChart"></canvas>
+
+<h2 style="margin-top: 0px;">Geographic distribution of citations</h2>
+<div id="geochartWrapper" style="width: 80%; height: 350px; position: relative;">
+  <canvas id="GeoBubbleChart"></canvas>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-geo"></script>
@@ -79,9 +83,11 @@ function initGeoBubbleChart(countries, mapData) {
             showOutline: true,
             backgroundColor: 'rgba(255, 99, 132, 0.5)',
             data: mapData.map(d => ({
-                longitude: d.lon,
-                latitude: d.lat,
-                value: d.publicationCount
+                x: d.lon,
+                y: d.lat,
+                r: Math.sqrt(d.publicationCount) * 2,
+                value: d.publicationCount,
+                address: d.address
             }))
         }]
     };
@@ -108,14 +114,9 @@ function initGeoBubbleChart(countries, mapData) {
                     projection: 'equalEarth'
                 },
                 size: {
-                    display: false,
                     axis: 'x',
-                    size: [1, 20]
-                },
-                radiusScale: {
-                    display: false,
-                    range: [1, 20],
-                    property: 'value'
+                    size: [1, 20],
+                    display: false
                 }
             }
         }
