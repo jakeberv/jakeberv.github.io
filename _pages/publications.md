@@ -58,6 +58,50 @@ See CV for other publications
 
 ## Citation Map
 
+
+<h2>Global Distribution of Publications</h2>
+<canvas id="geo-chart" width="800" height="450"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/chartjs-chart-geo"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('{{ site.baseurl }}/data/map_data.json')
+    .then(response => response.json())
+    .then(mapData => {
+      const ctx = document.getElementById('geo-chart').getContext('2d');
+      const chart = new Chart(ctx, {
+        type: 'bubbleMap',
+        data: {
+          datasets: [{
+            label: 'Publication Locations',
+            data: mapData.map(item => ({
+              lat: item.lat,
+              lon: item.lon,
+              value: item.publicationCount,
+              city: item.address
+            })),
+            backgroundColor: 'rgba(255, 99, 132, 0.7)'
+          }]
+        },
+        options: {
+          plugins: {
+            legend: {
+              display: false
+            },
+            tooltip: {
+              callbacks: {
+                label: context => `${context.raw.city}: ${context.raw.value}`
+              }
+            }
+          }
+        }
+      });
+    });
+});
+</script>
+
+
 <figure style="max-width: 100%;">
   <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/citation_map_3_19_23.png" alt="Citation Map"/>
   <figcaption> For each article in the Web of Science Core Collection that cited the researcher's work, a city with a contributing author's institution represents a data point </figcaption>
