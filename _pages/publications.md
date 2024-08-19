@@ -18,7 +18,7 @@ author_profile: true
 </figure>
 
 <h2>Citations Over Time</h2>
-<canvas id="citationsChart" width="300" height="150"></canvas> <!-- Adjusted height -->
+<canvas id="citationsChart" width="250" height="120"></canvas> <!-- Adjusted width and height -->
 
 {% if author.googlescholar %} You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u> {% endif %}
 
@@ -60,8 +60,21 @@ See CV for other publications
     },
     options: {
       scales: {
+        x: {
+          grid: {
+            display: false  // Remove gridlines on x-axis
+          }
+        },
         y: {
-          beginAtZero: true
+          beginAtZero: true,
+          grid: {
+            display: false  // Remove gridlines on y-axis
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: false  // Hide the legend
         }
       }
     }
