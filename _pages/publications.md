@@ -118,10 +118,56 @@ function initChart(countries, mapData) {
 
 
 
+###
+<canvas id="myChart"></canvas>
 
-<figure style="max-width: 100%;">
-  <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/citation_map_3_19_23.png" alt="Citation Map"/>
-  <figcaption> For each article in the Web of Science Core Collection that cited the researcher's work, a city with a contributing author's institution represents a data point </figcaption>
-</figure>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-chart-geo"></script>
 
+<script>
+fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json')
+    .then(response => response.json())
+    .then(countriesData => {
+        const countries = ChartGeo.topojson.feature(countriesData, countriesData.objects.countries).features;
+        const mapData = {{ site.data.map_data | jsonify }};
+        initChart(countries, mapData);
+    });
+
+function initChart(countries, mapData) {
+    const data = {
+        labels: countries.map(d => d.properties.name),
+        datasets: [{
+            label: 'Publication Count',
+            data: mapData.map(d => ({
+                feature: countries.find(c => c.properties.name === d.address),
+                value: d.publicationCount
+            })),
+            backgroundColor: 'rgba(255, 99, 132, 0.5)'
+        }]
+    };
+    const config = {
+        type: 'bubbleMap',
+        data: data,
+        options: {
+            scales: {
+                xy: {
+                    projection: 'equalEarth'
+                }
+            },
+            plugins: {
+                legend: false,
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return `${context.raw.feature.properties.name}: ${context.raw.value} publications`;
+                        }
+                    }
+                }
+            }
+        }
+    };
+    const ctx = document.getElementById('myChart').getContext('2d');
+    new Chart(ctx, config);
+}
+</script>
 
