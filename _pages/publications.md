@@ -51,34 +51,17 @@ See CV for other publications
     data: {
       labels: labels,
       datasets: [{
-        label: 'Citations per Year',
+        label: 'Citations',
         data: data,
-        backgroundColor: 'rgba(54, 162, 235, 0.6)', // Simplified color
-        borderColor: 'rgba(54, 162, 235, 1)',
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        borderColor: 'rgba(75, 192, 192, 1)',
         borderWidth: 1
       }]
     },
     options: {
       scales: {
-        x: {
-          grid: {
-            display: false  // Hide grid lines on x-axis for simplicity
-          }
-        },
         y: {
-          beginAtZero: true,
-          grid: {
-            display: true, // Display y-axis grid lines for context
-            color: 'rgba(200, 200, 200, 0.3)' // Light gray grid lines
-          },
-          ticks: {
-            stepSize: 50 // Adjust the step size for ticks to reduce clutter
-          }
-        }
-      },
-      plugins: {
-        legend: {
-          display: false // Hide the legend for simplicity
+          beginAtZero: true
         }
       }
     }
