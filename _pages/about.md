@@ -37,8 +37,6 @@ I am an evolutionary biologist interested in building and deciphering the tree o
   </a>
 </figure>
 
-
-
 [Go Directly to Research](https://www.jakeberv.com/research){: .btn--research}
 
 ## Recent updates
