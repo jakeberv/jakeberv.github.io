@@ -28,6 +28,9 @@ author_profile: true
 <h2>Citations Over Time</h2>
 <canvas id="citationsChart"></canvas>
 
+<!-- Load Chart.js library from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script>
   const ctx = document.getElementById('citationsChart').getContext('2d');
 
