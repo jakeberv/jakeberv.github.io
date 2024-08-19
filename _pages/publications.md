@@ -17,6 +17,8 @@ author_profile: true
   <figcaption> Journal cover images (articles below) </figcaption>
 </figure>
 
+<h2>Citations Over Time</h2>
+<canvas id="citationsChart" width="400" height="200"></canvas>
 
 {% if author.googlescholar %} You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u> {% endif %}
 
@@ -34,3 +36,34 @@ See CV for other publications
   <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/citation_map_3_19_23.png" alt="Citation Map"/>
   <figcaption> For each article in the Web of Science Core Collection that cited the researcher's work, a city with a contributing author's institution represents a data point </figcaption>
 </figure>
+
+
+<script>
+  const ctx = document.getElementById('citationsChart').getContext('2d');
+
+  const citationsData = {{ site.data.scholar_metrics.cites_per_year | jsonify }};
+
+  const labels = Object.keys(citationsData);
+  const data = Object.values(citationsData);
+
+  const citationsChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'Citations',
+        data: data,
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
