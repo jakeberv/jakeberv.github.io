@@ -18,7 +18,7 @@ author_profile: true
 </figure>
 
 <h2>Citations Over Time</h2>
-<canvas id="citationsChart" width="400" height="200"></canvas> <!-- Adjusted size -->
+<canvas id="citationsChart" width="200" height="200"></canvas> <!-- Adjusted size -->
 
 <script>
   const ctx = document.getElementById('citationsChart').getContext('2d');
