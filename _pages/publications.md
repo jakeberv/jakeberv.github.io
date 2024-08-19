@@ -35,7 +35,6 @@ author_profile: true
     data: {
       labels: labels,
       datasets: [{
-        label: 'Citations per Year',
         data: data,
         backgroundColor: 'rgba(75, 192, 192, 0.2)',
         borderColor: 'rgba(75, 192, 192, 1)',
@@ -45,8 +44,10 @@ author_profile: true
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      legend: {
-        display: false
+      plugins: {
+        legend: {
+          display: false // Ensures the legend is not displayed
+        }
       },
       scales: {
         y: {
