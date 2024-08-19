@@ -93,7 +93,7 @@ function initGeoBubbleChart(countries, mapData) {
     const config = {
         type: 'bubbleMap',
         data: data,
-        options: {
+        options: {showGraticule: true,
             scales: {
                 projection: {
                     axis: 'x',
@@ -101,7 +101,8 @@ function initGeoBubbleChart(countries, mapData) {
                 },
                 size: {
                     axis: 'x',
-                    size: [1, 20]
+                    size: [1, 20],
+                    mode: 'area',
                 }
             },
             plugins: {
