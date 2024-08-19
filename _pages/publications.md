@@ -58,48 +58,65 @@ See CV for other publications
 
 ## Citation Map
 
-
-<h2>Global Distribution of Publications</h2>
-<canvas id="geo-chart" width="800" height="450"></canvas>
+<canvas id="myChart"></canvas>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://unpkg.com/chartjs-chart-geo"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-chart-geo"></script>
+
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  fetch('{{ site.baseurl }}/data/map_data.json')
+fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json')
     .then(response => response.json())
-    .then(mapData => {
-      const ctx = document.getElementById('geo-chart').getContext('2d');
-      const chart = new Chart(ctx, {
-        type: 'bubbleMap',
-        data: {
-          datasets: [{
-            label: 'Publication Locations',
-            data: mapData.map(item => ({
-              lat: item.lat,
-              lon: item.lon,
-              value: item.publicationCount,
-              city: item.address
-            })),
-            backgroundColor: 'rgba(255, 99, 132, 0.7)'
-          }]
-        },
-        options: {
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-              callbacks: {
-                label: context => `${context.raw.city}: ${context.raw.value}`
-              }
-            }
-          }
-        }
-      });
+    .then(countriesData => {
+        const countries = ChartGeo.topojson.feature(countriesData, countriesData.objects.countries).features;
+        const mapData = {{ site.data.map_data | jsonify }};
+        initChart(countries, mapData);
     });
-});
+
+function initChart(countries, mapData) {
+    const data = {
+        labels: mapData.map(d => d.address),
+        datasets: [{
+            label: 'Publication Count',
+            data: mapData.map(d => ({
+                x: d.lon,
+                y: d.lat,
+                r: Math.sqrt(d.publicationCount) * 2,
+                address: d.address,
+                count: d.publicationCount
+            })),
+            backgroundColor: 'rgba(255, 99, 132, 0.5)'
+        }]
+    };
+    const config = {
+        type: 'bubble',
+        data: data,
+        options: {
+            scales: {
+                x: {
+                    type: 'linear',
+                    position: 'bottom'
+                },
+                y: {
+                    type: 'linear'
+                }
+            },
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return `${context.raw.address}: ${context.raw.count} publications`;
+                        }
+                    }
+                }
+            }
+        }
+    };
+    const ctx = document.getElementById('myChart').getContext('2d');
+    new Chart(ctx, config);
+}
 </script>
+
+
 
 
 <figure style="max-width: 100%;">
