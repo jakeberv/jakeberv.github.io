@@ -46,7 +46,7 @@ author_profile: true
       responsive: true,
       maintainAspectRatio: false,
       legend: {
-        display: false  // This line hides the legend
+        display: false
       },
       scales: {
         y: {
