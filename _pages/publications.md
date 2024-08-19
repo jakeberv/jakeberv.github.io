@@ -18,26 +18,7 @@ author_profile: true
 </figure>
 
 <h2>Citations Over Time</h2>
-<canvas id="citationsChart" style="width: 250px; height: 120px;"></canvas>
-
-
-{% if author.googlescholar %} You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u> {% endif %}
-
-{% include base_path %}
-
-{% for post in site.publications reversed %} {% include archive-single-pubs.html %} {% endfor %}
-
----
-
-See CV for other publications
-
-## Citation Map
-
-<figure style="max-width: 100%;">
-  <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/citation_map_3_19_23.png" alt="Citation Map"/>
-  <figcaption> For each article in the Web of Science Core Collection that cited the researcher's work, a city with a contributing author's institution represents a data point </figcaption>
-</figure>
-
+<canvas id="citationsChart" width="250" height="120"></canvas>
 
 <script>
   const ctx = document.getElementById('citationsChart').getContext('2d');
@@ -60,7 +41,6 @@ See CV for other publications
       }]
     },
     options: {
-      maintainAspectRatio: false, // Allows chart to respect the canvas dimensions
       scales: {
         y: {
           beginAtZero: true
@@ -69,5 +49,23 @@ See CV for other publications
     }
   });
 </script>
+
+
+{% if author.googlescholar %} You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u> {% endif %}
+
+{% include base_path %}
+
+{% for post in site.publications reversed %} {% include archive-single-pubs.html %} {% endfor %}
+
+---
+
+See CV for other publications
+
+## Citation Map
+
+<figure style="max-width: 100%;">
+  <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/citation_map_3_19_23.png" alt="Citation Map"/>
+  <figcaption> For each article in the Web of Science Core Collection that cited the researcher's work, a city with a contributing author's institution represents a data point </figcaption>
+</figure>
 
 
