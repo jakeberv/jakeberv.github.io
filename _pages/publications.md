@@ -18,50 +18,39 @@ author_profile: true
 </figure>
 
 
-<style>
-  #citationsChart {
-    width: 400 !important;  /* Set a fixed width in pixels */
-    height: 200 !important; /* Set a fixed height in pixels */
-  }
-</style>
-
 <h2>Citations Over Time</h2>
-<canvas id="citationsChart"></canvas>
-
-<!-- Load Chart.js library from CDN -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="citationsChart" width="400" height="200"></canvas>
 
 <script>
   const ctx = document.getElementById('citationsChart').getContext('2d');
 
-  // Assuming dynamic data is loaded correctly from your site's data files
   const citationsData = {{ site.data.scholar_metrics.cites_per_year | jsonify }};
+
   const labels = Object.keys(citationsData);
   const data = Object.values(citationsData);
 
   const citationsChart = new Chart(ctx, {
-    type: 'bar',  // Chart type is set to 'bar'
+    type: 'bar',
     data: {
-      labels: labels,  // Labels are the years
+      labels: labels,
       datasets: [{
-        label: 'Citations per Year',  // Label for the data set
-        data: data,  // Array of data points
-        backgroundColor: 'rgba(75, 192, 192, 0.2)',  // Background color of bars
-        borderColor: 'rgba(75, 192, 192, 1)',  // Border color of bars
-        borderWidth: 1  // Width of the border around bars
+        label: 'Citations',
+        data: data,
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1
       }]
     },
     options: {
-      responsive: true,  // Chart is responsive to the size of its container
-      maintainAspectRatio: true,  // Maintain the aspect ratio
       scales: {
-        y: {  // Configuration for the y-axis
-          beginAtZero: true  // Ensures the y-axis starts from zero
+        y: {
+          beginAtZero: true
         }
       }
     }
   });
 </script>
+
 
 
 
