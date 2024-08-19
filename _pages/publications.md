@@ -18,7 +18,7 @@ author_profile: true
 </figure>
 
 <h2>Citations Over Time</h2>
-<div style="width: 300px; height: 150px; margin: auto;">
+<div class="chart-container" style="position: relative; height:40vh; width:80vw; margin: auto;">
   <canvas id="citationsChart"></canvas>
 </div>
 
@@ -42,7 +42,7 @@ author_profile: true
       }]
     },
     options: {
-      maintainAspectRatio: false,  // Allows the chart to scale with the container
+      maintainAspectRatio: false,  // Allows the chart to fill the container
       scales: {
         y: {
           beginAtZero: true
@@ -51,6 +51,7 @@ author_profile: true
     }
   });
 </script>
+
 
 
 {% if author.googlescholar %} You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u> {% endif %}
