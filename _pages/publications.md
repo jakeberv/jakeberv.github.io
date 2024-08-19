@@ -51,10 +51,8 @@ author_profile: true
 <div id="geochartWrapper" style="width: 80%; height: 350px; position: relative;">
   <canvas id="GeoBubbleChart"></canvas>
 </div>
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-geo"></script>
-
 <script>
 fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json')
     .then(response => response.json())
@@ -63,20 +61,20 @@ fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json')
         const mapData = {{ site.data.map_data | jsonify }};
         initGeoBubbleChart(countries, mapData);
     });
-
 function initGeoBubbleChart(countries, mapData) {
+    const enhancedMapData = mapData.map(d => Object.assign(d, {
+        longitude: d.lon,
+        latitude: d.lat,
+        value: d.publicationCount
+    }));
     const data = {
-        labels: mapData.map(d => d.address),
+        labels: enhancedMapData.map(d => d.address),
         datasets: [{
             label: '',
             outline: countries,
             showOutline: true,
             backgroundColor: 'rgba(255, 99, 132, 0.5)',
-            data: mapData.map(d => ({
-                longitude: d.lon,
-                latitude: d.lat,
-                value: d.publicationCount
-            }))
+            data: enhancedMapData
         }]
     };
     const config = {
@@ -111,9 +109,6 @@ function initGeoBubbleChart(countries, mapData) {
     new Chart(ctx, config);
 }
 </script>
-
-
-
 
 
 {% if author.googlescholar %} You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u> {% endif %}
