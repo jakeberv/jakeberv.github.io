@@ -51,7 +51,7 @@ See CV for other publications
     data: {
       labels: labels,
       datasets: [{
-        label: 'Citations',
+        label: 'Citations per Year',
         data: data,
         backgroundColor: 'rgba(75, 192, 192, 0.2)',
         borderColor: 'rgba(75, 192, 192, 1)',
@@ -60,21 +60,8 @@ See CV for other publications
     },
     options: {
       scales: {
-        x: {
-          grid: {
-            display: false  // Remove gridlines on x-axis
-          }
-        },
         y: {
-          beginAtZero: true,
-          grid: {
-            display: false  // Remove gridlines on y-axis
-          }
-        }
-      },
-      plugins: {
-        legend: {
-          display: false  // Hide the legend
+          beginAtZero: true
         }
       }
     }
