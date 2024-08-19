@@ -17,13 +17,6 @@ author_profile: true
   <figcaption> Journal cover images (articles below) </figcaption>
 </figure>
 
-<!-- Styles to ensure the canvas size is responsive and controlled via CSS !important rules -->
-<style>
-  #citationsChart {
-    width: 80% !important;  /* Force the canvas width to 80% of its container */
-    height: 50vh !important; /* Force the canvas height to 50% of the viewport height */
-  }
-</style>
 
 <!-- Chart Container to center the canvas element and give it a flexible but controlled environment -->
 <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
