@@ -56,8 +56,6 @@ author_profile: true
 
 See CV for other publications
 
-## Citation Map
-
 <canvas id="myChart"></canvas>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -74,31 +72,37 @@ fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json')
 
 function initChart(countries, mapData) {
     const data = {
-        labels: countries.map(d => d.properties.name),
+        labels: mapData.map(d => d.address),
         datasets: [{
             label: 'Publication Count',
             data: mapData.map(d => ({
-                feature: countries.find(c => c.properties.name === d.address),
-                value: d.publicationCount
+                x: d.lon,
+                y: d.lat,
+                r: Math.sqrt(d.publicationCount) * 2,
+                address: d.address,
+                count: d.publicationCount
             })),
             backgroundColor: 'rgba(255, 99, 132, 0.5)'
         }]
     };
     const config = {
-        type: 'bubbleMap',
+        type: 'bubble',
         data: data,
         options: {
             scales: {
-                xy: {
-                    projection: 'equalEarth'
+                x: {
+                    type: 'linear',
+                    position: 'bottom'
+                },
+                y: {
+                    type: 'linear'
                 }
             },
             plugins: {
-                legend: false,
                 tooltip: {
                     callbacks: {
                         label: function(context) {
-                            return `${context.raw.feature.properties.name}: ${context.raw.value} publications`;
+                            return `${context.raw.address}: ${context.raw.count} publications`;
                         }
                     }
                 }
@@ -106,6 +110,68 @@ function initChart(countries, mapData) {
         }
     };
     const ctx = document.getElementById('myChart').getContext('2d');
+    new Chart(ctx, config);
+}
+</script>
+
+
+
+## Citation Map
+
+<canvas id="GeoBubbleChart"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-chart-geo"></script>
+
+<script>
+fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json')
+    .then(response => response.json())
+    .then(countriesData => {
+        const countries = ChartGeo.topojson.feature(countriesData, countriesData.objects.countries).features;
+        const mapData = {{ site.data.map_data | jsonify }};
+        initGeoBubbleChart(countries, mapData);
+    });
+
+function initGeoBubbleChart(countries, mapData) {
+    const data = {
+        labels: countries.map(c => c.properties.name),
+        datasets: [{
+            label: 'Countries',
+            data: countries.map(c => ({ feature: c })),
+            backgroundColor: 'rgba(211, 211, 211, 0.5)',
+            borderColor: '#FFFFFF',
+            borderWidth: 1,
+            type: 'choropleth'
+        }, {
+            label: 'Publication Count',
+            data: mapData.map(d => ({
+                feature: countries.find(c => c.properties.name === d.address),
+                value: d.publicationCount,
+                r: Math.sqrt(d.publicationCount) * 2
+            })),
+            backgroundColor: 'rgba(255, 99, 132, 0.5)',
+            type: 'bubble'
+        }]
+    };
+    const config = {
+        type: 'bubble',
+        data: data,
+        options: {
+            scales: {
+                projection: 'equalEarth'
+            },
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return `${context.label}: ${context.raw.value} publications`;
+                        }
+                    }
+                }
+            }
+        }
+    };
+    const ctx = document.getElementById('GeoBubbleChart').getContext('2d');
     new Chart(ctx, config);
 }
 </script>
