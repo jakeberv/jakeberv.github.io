@@ -5,17 +5,6 @@ permalink: /publications/
 author_profile: true
 ---
 <br>
-<figure style="max-width: 100%;">
-  <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/publication_headers.png" alt="Journal cover images from my research"/>
-  <figcaption>  </figcaption>
-</figure>
-
-<figure style="max-width: 50%;">
-  <a href="https://doi.org/10.1126/sciadv.adp0114">
-    <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/sciadv.2024.10.issue-31.largecover.jpg" alt="July 31 2024 cover for Science Advances"/>
-  </a>
-  <figcaption> Journal cover images (articles below) </figcaption>
-</figure>
 
 <h2>Citations Over Time</h2>
 <div id="chartWrapper" style="width: 80%; height: 200px; position: relative;">
