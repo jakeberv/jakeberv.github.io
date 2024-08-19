@@ -4,18 +4,7 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
-
-<style>
-  .page__hero--overlay {
-    margin-bottom: 0px; /* Reduce space below the header or other elements */
-  }
-
-  #chartWrapper {
-    margin-top: 0px; /* Reduce space above the chart */
-  }
-</style>
-
-<h2>Citations Over Time</h2>
+<h2 style="margin-top: 0px;">Citations Over Time</h2>
 <div id="chartWrapper" style="width: 80%; height: 250px; position: relative;">
   <canvas id="citationsChart"></canvas>
 </div>
