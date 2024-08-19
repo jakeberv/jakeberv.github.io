@@ -18,13 +18,14 @@ author_profile: true
 </figure>
 
 <h2>Citations Over Time</h2>
-<canvas id="citationsChart" width="250" height="120"></canvas>
+<div style="width: 300px; height: 150px; margin: auto;">
+  <canvas id="citationsChart"></canvas>
+</div>
 
 <script>
   const ctx = document.getElementById('citationsChart').getContext('2d');
 
   const citationsData = {{ site.data.scholar_metrics.cites_per_year | jsonify }};
-
   const labels = Object.keys(citationsData);
   const data = Object.values(citationsData);
 
@@ -41,6 +42,7 @@ author_profile: true
       }]
     },
     options: {
+      maintainAspectRatio: false,  // Allows the chart to scale with the container
       scales: {
         y: {
           beginAtZero: true
