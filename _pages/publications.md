@@ -18,7 +18,7 @@ author_profile: true
 </figure>
 
 <h2>Citations Over Time</h2>
-<canvas id="citationsChart" width="400" height="200"></canvas>
+<canvas id="citationsChart" width="300" height="150"></canvas> <!-- Adjusted height -->
 
 {% if author.googlescholar %} You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u> {% endif %}
 
@@ -51,19 +51,37 @@ See CV for other publications
     data: {
       labels: labels,
       datasets: [{
-        label: 'Citations',
+        label: 'Citations per Year',
         data: data,
-        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-        borderColor: 'rgba(75, 192, 192, 1)',
+        backgroundColor: 'rgba(54, 162, 235, 0.6)', // Simplified color
+        borderColor: 'rgba(54, 162, 235, 1)',
         borderWidth: 1
       }]
     },
     options: {
       scales: {
+        x: {
+          grid: {
+            display: false  // Hide grid lines on x-axis for simplicity
+          }
+        },
         y: {
-          beginAtZero: true
+          beginAtZero: true,
+          grid: {
+            display: true, // Display y-axis grid lines for context
+            color: 'rgba(200, 200, 200, 0.3)' // Light gray grid lines
+          },
+          ticks: {
+            stepSize: 50 // Adjust the step size for ticks to reduce clutter
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: false // Hide the legend for simplicity
         }
       }
     }
   });
 </script>
+
