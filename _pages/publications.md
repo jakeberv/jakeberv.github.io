@@ -46,7 +46,7 @@ author_profile: true
       maintainAspectRatio: false,
       plugins: {
         legend: {
-          display: false // Ensures the legend is not displayed
+          display: false
         }
       },
       scales: {
