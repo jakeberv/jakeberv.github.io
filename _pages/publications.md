@@ -73,44 +73,47 @@ fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json')
 
 function initGeoBubbleChart(countries, mapData) {
     const data = {
-        labels: countries.map(c => c.properties.name),
+        labels: mapData.map(d => d.address),
         datasets: [{
-            label: 'Countries',
+            label: 'Country Outlines',
             outline: countries,
             showOutline: true,
-            backgroundColor: 'rgba(211, 211, 211, 0.5)',
-            borderColor: '#FFFFFF',
-            borderWidth: 1,
-            type: 'bubbleMap'
-        }, {
-            label: 'Publication Count',
+            backgroundColor: 'steelblue',
             data: mapData.map(d => ({
-                feature: countries.find(c => c.properties.name === d.address),
-                value: d.publicationCount,
-                r: Math.sqrt(d.publicationCount) * 2
-            })),
-            backgroundColor: 'rgba(255, 99, 132, 0.5)',
-            type: 'bubbleMap'
+                x: d.lon,
+                y: d.lat,
+                r: Math.sqrt(d.publicationCount) * 2,
+                value: d.publicationCount
+            }))
         }]
     };
     const config = {
         type: 'bubbleMap',
         data: data,
         options: {
-            scales: {
-                projection: 'equalEarth'
-            },
             plugins: {
                 datalabels: {
                     align: 'top',
-                    formatter: (v) => `${v.feature.properties.name}: ${v.value} publications`
+                    formatter: (v) => `${v.x.toFixed(2)}, ${v.y.toFixed(2)}: ${v.value} publications`
+                }
+            },
+            scales: {
+                projection: {
+                    axis: 'x',
+                    projection: 'equalEarth'
+                },
+                size: {
+                    axis: 'x',
+                    size: [1, 20]
                 }
             }
-        }
+        },
+        plugins: [ChartDataLabels]
     };
     const ctx = document.getElementById('GeoBubbleChart').getContext('2d');
     new Chart(ctx, config);
 }
 </script>
+
 
 
