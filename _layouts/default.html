@@ -9,39 +9,14 @@ layout: compress
   <head>
     {% include head.html %}
     {% include head/custom.html %}
-    <style>
-      /* Media Query: Hide the grey box when the screen width is 764px or less */
-      @media (max-width: 764px) {
-        .sidebar-bg {
-          display: none;
-        }
-      }
-
-      /* Ensure the body and html elements take full height to allow the grey box to extend to the bottom */
-      html, body {
-        height: 100%;
-        margin: 0;
-      }
-
-      /* Ensure that the main content area takes full height */
-      #main-content {
-        min-height: 100vh;
-        position: relative;
-        z-index: 1;
-      }
-    </style>
   </head>
 
   <body>
+
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
-    <!-- Grey Background Box -->
-    <div class="sidebar-bg" style="position: fixed; top: 0; left: 0; width: 25%; height: 100%; background-color: #f0f0f0; z-index: -1;"></div>
-
-    <div id="main-content">
-      {{ content }}
-    </div>
+    {{ content }}
 
     <div class="page__footer">
       <footer>
@@ -51,5 +26,6 @@ layout: compress
     </div>
 
     {% include scripts.html %}
+
   </body>
 </html>
