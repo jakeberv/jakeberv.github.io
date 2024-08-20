@@ -95,9 +95,7 @@ function initGeoBubbleChart(countries, mapData) {
 
 <script>
   const ctx = document.getElementById('citationsChart').getContext('2d');
-
   const citationsData = {{ site.data.scholar_metrics.cites_per_year | jsonify }};
-
   const labels = Object.keys(citationsData);
   const data = Object.values(citationsData);
 
@@ -109,7 +107,10 @@ function initGeoBubbleChart(countries, mapData) {
         data: data,
         backgroundColor: 'rgba(75, 192, 192, 0.5)',
         borderColor: 'rgba(75, 192, 192, 1)',
-        borderWidth: 1
+        borderWidth: 1,
+        hoverBackgroundColor: 'rgba(0, 133, 183, 0.75)',
+        hoverBorderColor: 'rgba(0, 133, 183, 1)',
+        hoverBorderWidth: 2
       }]
     },
     options: {
@@ -128,6 +129,7 @@ function initGeoBubbleChart(countries, mapData) {
     }
   });
 </script>
+
 
 <br>
 
