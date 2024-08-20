@@ -2,21 +2,8 @@
    SIDEBAR
    ========================================================================== */
 
-/* 
-   Container for Sidebar 
-   ========================================================================== */
-
-.sidebar-container {
-  background-color: #f0f0f0;  /* Light grey background for the entire left portion */
-  height: 100%;  /* Ensure the background extends to full height */
-  
-  @include breakpoint($large) {
-    display: flex;
-  }
-}
-
 /*
-   Default Sidebar Styling
+   Default
    ========================================================================== */
 
 .sidebar {
@@ -36,6 +23,7 @@
       opacity: 1;
     }
   }
+
 
   @include breakpoint($x-large) {
     padding-right: 0;
@@ -74,13 +62,10 @@
     padding-left: 1em;
     padding-top: 1em !important;
     z-index: 10;
-
-    /* Right sidebar remains unaffected by the grey background */
-    background-color: transparent;
   }
 }
 
-/* ==========================================================================
+/*
    Author profile and links
    ========================================================================== */
 
@@ -131,7 +116,6 @@
     margin-bottom: 10px;
   }
 }
-
 .sidebar .author__name {
   font-family: $sans-serif;
   font-size: $type-size-5;
