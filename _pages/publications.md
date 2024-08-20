@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 <h1 style="margin-top: 10px; margin-bottom: 20px;">Impact</h1>
-<h2 style="margin-top: 10px; margin-bottom: 20px;">Citation Geography</h2>
+<h2 style="margin-top: 10px; margin-bottom: 20px;text-align: center;">Citation Geography</h2>
 <figure>
     <div id="geochartWrapper" style="width: 90%; height: 400px; position: relative;">
         <canvas id="GeoBubbleChart"></canvas>
@@ -85,7 +85,7 @@ function initGeoBubbleChart(countries, mapData) {
 
 <br>
 
-<h2 style="margin-top: 10px; margin-bottom: 20px;">Citations Over Time</h2>
+<h2 style="margin-top: 10px; margin-bottom: 20px; text-align: center;">Citations Over Time</h2>
 <figure style="width: 40%; margin: auto; position: relative;">
     <div id="chartWrapper" style="width: 100%; height: 250px; position: relative;">
         <canvas id="citationsChart"></canvas>
