@@ -19,23 +19,18 @@ layout: compress
     </style>
   </head>
 
-  <body style="display: flex; flex-direction: column; min-height: 100vh;">
+  <body>
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
-    <div style="flex: 1; display: flex;">
-      
-      <!-- Grey Background Box -->
-      <div class="sidebar-bg" style="background-color: #f0f0f0; flex: 0 0 25%; max-width: 400px; min-width: 250px;"></div>
+    <!-- Grey Background Box -->
+    <div class="sidebar-bg" style="position: absolute; top: 0; left: 0; width: 25%; min-width: 250px; max-width: 400px; height: 100vh; background-color: #f0f0f0; z-index: -1;"></div>
 
-      <!-- Main Content Area -->
-      <div id="main-content" style="flex: 1; position: relative;">
-        {{ content }}
-      </div>
-
+    <div id="main-content" style="position: relative; z-index: 1;">
+      {{ content }}
     </div>
 
-    <div class="page__footer" style="margin-top: auto;">
+    <div class="page__footer">
       <footer>
         {% include footer/custom.html %}
         {% include footer.html %}
