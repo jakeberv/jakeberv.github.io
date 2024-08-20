@@ -42,7 +42,7 @@ function initGeoBubbleChart(countries, mapData) {
                 value: d.publicationCount,
                 address: d.address
             })),
-            hoverBackgroundColor: 'rgba(255, 99, 132, 0.75)',
+            hoverBackgroundColor: 'rgba(0, 133, 183, 0.75)',
             hoverRadius: (context) => {
                 return context.raw.r * 1.5;
             }
@@ -92,7 +92,6 @@ function initGeoBubbleChart(countries, mapData) {
     </div>
     <figcaption style="text-align: left; margin-top: 2px; width: 100%;">This graphic uses Chart.js to display the number of citations of my publications over time, based on all records from Google Scholar</figcaption>
 </figure>
-
 
 <script>
   const ctx = document.getElementById('citationsChart').getContext('2d');
