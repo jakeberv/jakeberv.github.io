@@ -19,26 +19,22 @@ layout: compress
 
       /* Grey box styles */
       .sidebar-bg {
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         width: 25%;  /* Adjust width as needed */
-        height: 100vh;
+        height: 100%; /* Extend to the bottom of the page */
         background-color: #f0f0f0;
         z-index: -1;
       }
 
       /* Main content should respect the grey box */
       #main-content {
-        position: relative;
-        z-index: 1;
         margin-left: 25%;  /* Match this margin with the width of the grey box */
       }
 
       /* Sidebar overlay styles */
       .sidebar {
-        position: relative;
-        z-index: 2;  /* Ensure it overlaps the grey box */
         margin-left: -25%;  /* Shift the sidebar content over the grey box */
         width: 25%;  /* Match with the grey box width */
       }
@@ -53,14 +49,16 @@ layout: compress
     <!-- Grey Background Box -->
     <div class="sidebar-bg"></div>
 
-    <!-- Sidebar Content -->
-    <div class="sidebar">
-      {% include sidebar.html %}
-    </div>
+    <div class="content-container" style="position: relative; z-index: 1;">
+      <!-- Sidebar Content -->
+      <div class="sidebar">
+        {% include sidebar.html %}
+      </div>
 
-    <!-- Main Content Area -->
-    <div id="main-content">
-      {{ content }}
+      <!-- Main Content Area -->
+      <div id="main-content">
+        {{ content }}
+      </div>
     </div>
 
     <!-- Footer Area -->
