@@ -85,12 +85,14 @@ function initGeoBubbleChart(countries, mapData) {
 
 <br>
 
-<figure>
-    <div id="chartWrapper" style="width: 40%; height: 250px; position: relative;">
+<h2 style="margin-top: 10px; margin-bottom: 20px;">Citations Over Time</h2>
+<figure style="width: 40%; margin: auto; position: relative;">
+    <div id="chartWrapper" style="width: 100%; height: 250px; position: relative;">
         <canvas id="citationsChart"></canvas>
     </div>
-    <figcaption style="text-align: left; margin-top: 2px;">This graphic uses Chart.js to display the number of citations of my publications over time, based on all records from Google Scholar</figcaption>
+    <figcaption style="text-align: left; margin-top: 2px; width: 100%;">This graphic uses Chart.js to display the number of citations of my publications over time, based on all records from Google Scholar</figcaption>
 </figure>
+
 
 <script>
   const ctx = document.getElementById('citationsChart').getContext('2d');
