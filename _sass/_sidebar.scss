@@ -2,8 +2,28 @@
    SIDEBAR
    ========================================================================== */
 
+/* 
+   Container for Sidebar 
+   ========================================================================== */
+
+.sidebar-container {
+  background-color: #f0f0f0;  /* Light grey background for the entire left portion */
+  width: 300px;  /* Adjust width as necessary for the sidebar */
+  min-height: 100vh;  /* Ensure the background covers the full height of the viewport */
+}
+
+/* Layout container for main content and sidebar */
+.content-wrapper {
+  display: flex;  /* Flexbox to align sidebar and content side by side */
+}
+
+.main-content {
+  flex-grow: 1;  /* Main content takes up remaining space */
+  padding-left: 20px;  /* Add space between the sidebar and main content */
+}
+
 /*
-   Default
+   Default Sidebar Styling
    ========================================================================== */
 
 .sidebar {
@@ -23,7 +43,6 @@
       opacity: 1;
     }
   }
-
 
   @include breakpoint($x-large) {
     padding-right: 0;
