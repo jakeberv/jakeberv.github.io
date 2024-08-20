@@ -10,7 +10,7 @@ author_profile: true
     <div id="geochartWrapper" style="width: 80%; height: 350px; position: relative;">
         <canvas id="GeoBubbleChart"></canvas>
     </div>
-    <figcaption style="text-align: center; margin-top: 2px;">Partial sample from Web of Science</figcaption>
+    <figcaption style="text-align: center; margin-top: 2px;">Verified partial sample from Web of Science</figcaption>
 </figure>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -81,7 +81,7 @@ function initGeoBubbleChart(countries, mapData) {
 <br>
 
 <h2 style="margin-top: 0px;">Citations Over Time</h2>
-<div id="chartWrapper" style="width: 40%; height: 200px; position: relative; margin: 0 auto;">
+<div id="chartWrapper" style="width: 40%; height: 250px; position: relative;">
   <canvas id="citationsChart"></canvas>
 </div>
 
