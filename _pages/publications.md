@@ -4,8 +4,9 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
+
 <h2 style="margin-top: 0px;">Citations Over Time</h2>
-<div id="chartWrapper" style="width: 80%; height: 250px; position: relative;">
+<div id="chartWrapper" style="width: 50%; height: 250px; position: relative;">
   <canvas id="citationsChart"></canvas>
 </div>
 
@@ -47,12 +48,12 @@ author_profile: true
 
 <br>
 
-<h2 style="margin-top: 10px; margin-bottom: 20px;">Citation locations</h2>
-<figure style="width: 80%; margin: auto;">
-    <div id="geochartWrapper" style="height: 350px; position: relative;">
+<h2 style="margin-top: 10px; margin-bottom: 20px;">Citation Geography</h2>
+<figure>
+    <div id="geochartWrapper" style="width: 80%; height: 350px; position: relative;">
         <canvas id="GeoBubbleChart"></canvas>
     </div>
-    <figcaption style="text-align: center; margin-top: 5px;">Partial sample from Web of Science</figcaption>
+    <figcaption style="text-align: center; margin-top: 2px;">Partial sample from Web of Science</figcaption>
 </figure>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
