@@ -5,12 +5,13 @@ permalink: /publications/
 author_profile: true
 ---
 
+<h1 style="margin-top: 10px; margin-bottom: 20px;">Impact</h1>
 <h2 style="margin-top: 10px; margin-bottom: 20px;">Citation Geography</h2>
 <figure>
     <div id="geochartWrapper" style="width: 90%; height: 400px; position: relative;">
         <canvas id="GeoBubbleChart"></canvas>
     </div>
-    <figcaption style="text-align: center; margin-top: 2px;">This graphic displays the geographic distribution of authors who have cited my publications, based on a sample of verified records from Web of Science.</figcaption>
+    <figcaption style="text-align: left; margin-top: 2px;">This graphic uses Chart.js Geo to display the geographic distribution of authors who have cited my publications, based on a sample of verified records from Web of Science.</figcaption>
 </figure>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -41,7 +42,7 @@ function initGeoBubbleChart(countries, mapData) {
                 value: d.publicationCount,
                 address: d.address
             })),
-            hoverBackgroundColor: 'rgba(75, 192, 192, 0.5)',
+            hoverBackgroundColor: 'rgba(255, 99, 132, 0.75)',
             hoverRadius: (context) => {
                 return context.raw.r * 1.5;
             }
@@ -84,10 +85,12 @@ function initGeoBubbleChart(countries, mapData) {
 
 <br>
 
-<h2 style="margin-top: 0px;">Citations Over Time</h2>
-<div id="chartWrapper" style="width: 40%; height: 250px; position: relative;">
-  <canvas id="citationsChart"></canvas>
-</div>
+<figure>
+    <div id="chartWrapper" style="width: 40%; height: 250px; position: relative;">
+        <canvas id="citationsChart"></canvas>
+    </div>
+    <figcaption style="text-align: left; margin-top: 2px;">This graphic uses Chart.js to display the number of citations of my publications over time, based on all records from Google Scholar</figcaption>
+</figure>
 
 <script>
   const ctx = document.getElementById('citationsChart').getContext('2d');
@@ -126,8 +129,8 @@ function initGeoBubbleChart(countries, mapData) {
 </script>
 
 <br>
-<h2 style="margin-top: 10px; margin-bottom: 20px;">Publications</h2>
 
+<h1 style="margin-top: 10px; margin-bottom: 20px;">Publications</h1>
 {% if author.googlescholar %} You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u> {% endif %}
 
 {% include base_path %}
