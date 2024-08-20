@@ -48,11 +48,11 @@ author_profile: true
 <br>
 
 <h2 style="margin-top: 10px; margin-bottom: 20px;">Citation locations</h2>
-<figure style="position: relative; width: 80%; margin: auto;">
-    <div id="geochartWrapper" style="height: 350px;">
-        <canvas id="GeoBubbleChart"></canvas>
+<figure style="width: 80%; margin: auto; position: relative;">
+    <div id="geochartWrapper" style="height: 350px; position: relative;">
+        <canvas id="GeoBubbleChart" style="width: 100%; height: 100%;"></canvas>
     </div>
-    <figcaption style="position: absolute; bottom: 50%; left: 50%; transform: translate(-50%, 50%); width: 100%; text-align: center;">Partial sample from Web of Science</figcaption>
+    <figcaption style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); text-align: center; width: 100%; margin-top: 10px;">Partial sample from Web of Science</figcaption>
 </figure>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
