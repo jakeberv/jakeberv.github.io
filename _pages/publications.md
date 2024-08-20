@@ -10,7 +10,7 @@ author_profile: true
     <div id="geochartWrapper" style="width: 90%; height: 400px; position: relative;">
         <canvas id="GeoBubbleChart"></canvas>
     </div>
-    <figcaption style="text-align: center; margin-top: 2px;">Verified partial sample from Web of Science</figcaption>
+    <figcaption style="text-align: center; margin-top: 2px;">This graphic displays the geographic distribution of authors who have cited my publications, based on a sample of verified records from Web of Science.</figcaption>
 </figure>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -40,7 +40,11 @@ function initGeoBubbleChart(countries, mapData) {
                 r: Math.sqrt(d.publicationCount) * 2,
                 value: d.publicationCount,
                 address: d.address
-            }))
+            })),
+            hoverBackgroundColor: 'rgba(75, 192, 192, 0.5)',
+            hoverRadius: (context) => {
+                return context.raw.r * 1.5;
+            }
         }]
     };
     const config = {
@@ -121,7 +125,8 @@ function initGeoBubbleChart(countries, mapData) {
   });
 </script>
 
-
+<br>
+<h2 style="margin-top: 10px; margin-bottom: 20px;">Publications</h2>
 
 {% if author.googlescholar %} You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u> {% endif %}
 
