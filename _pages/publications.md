@@ -78,8 +78,6 @@ function initGeoBubbleChart(countries, mapData) {
 }
 </script>
 
-<br>
-
 <h2 style="margin-top: 0px;">Citations Over Time</h2>
 <div id="chartWrapper" style="width: 40%; height: 250px; position: relative;">
   <canvas id="citationsChart"></canvas>
@@ -99,7 +97,7 @@ function initGeoBubbleChart(countries, mapData) {
       labels: labels,
       datasets: [{
         data: data,
-        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        backgroundColor: 'rgba(75, 192, 192, 0.5)',
         borderColor: 'rgba(75, 192, 192, 1)',
         borderWidth: 1
       }]
