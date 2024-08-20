@@ -7,7 +7,7 @@ author_profile: true
 
 <h2 style="margin-top: 10px; margin-bottom: 20px;">Citation Geography</h2>
 <figure>
-    <div id="geochartWrapper" style="width: 80%; height: 350px; position: relative;">
+    <div id="geochartWrapper" style="width: 90%; height: 400px; position: relative;">
         <canvas id="GeoBubbleChart"></canvas>
     </div>
     <figcaption style="text-align: center; margin-top: 2px;">Verified partial sample from Web of Science</figcaption>
@@ -77,6 +77,8 @@ function initGeoBubbleChart(countries, mapData) {
     new Chart(ctx, config);
 }
 </script>
+
+<br>
 
 <h2 style="margin-top: 0px;">Citations Over Time</h2>
 <div id="chartWrapper" style="width: 40%; height: 250px; position: relative;">
