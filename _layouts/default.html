@@ -9,70 +9,15 @@ layout: compress
   <head>
     {% include head.html %}
     {% include head/custom.html %}
-    <style>
-      /* Media Query: Hide the grey box when the screen width is 764px or less */
-      @media (max-width: 764px) {
-        .sidebar-bg {
-          display: none;
-        }
-      }
-
-      /* Grey box styles */
-      .sidebar-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 25%;  /* Adjust width as needed */
-        height: 100%; /* Extend to the bottom of the page */
-        background-color: #f0f0f0;
-        z-index: -2;  /* Ensure it is behind everything, including the masthead */
-      }
-
-      /* Main content should respect the grey box */
-      #main-content {
-        margin-left: 25%;  /* Match this margin with the width of the grey box */
-      }
-
-      /* Sidebar overlay styles */
-      .sidebar {
-        margin-left: -25%;  /* Shift the sidebar content over the grey box */
-        width: 25%;  /* Match with the grey box width */
-      }
-
-      /* Masthead should sit on top of everything */
-      .masthead {
-        position: relative;
-        z-index: 2;  /* Ensure the masthead is on top */
-      }
-    </style>
   </head>
 
   <body>
 
     {% include browser-upgrade.html %}
+    {% include masthead.html %}
 
-    <!-- Masthead sits on top of everything -->
-    <div class="masthead">
-      {% include masthead.html %}
-    </div>
+    {{ content }}
 
-    <!-- Grey Background Box -->
-    <div class="sidebar-bg"></div>
-
-    <!-- Sidebar and Main Content Area -->
-    <div class="content-container" style="position: relative; z-index: 1;">
-      <!-- Sidebar Content -->
-      <div class="sidebar">
-        {% include sidebar.html %}
-      </div>
-
-      <!-- Main Content Area -->
-      <div id="main-content">
-        {{ content }}
-      </div>
-    </div>
-
-    <!-- Footer Area -->
     <div class="page__footer">
       <footer>
         {% include footer/custom.html %}
