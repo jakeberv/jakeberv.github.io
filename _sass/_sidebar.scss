@@ -13,6 +13,9 @@
   @include clearfix();
   margin-bottom: 1em;
 
+  /* Add light grey background only to the left sidebar */
+  background-color: #f0f0f0;
+
   @include breakpoint($large) {
     @include span(2 of 12);
     opacity: 1;
@@ -23,7 +26,6 @@
       opacity: 1;
     }
   }
-
 
   @include breakpoint($x-large) {
     padding-right: 0;
@@ -62,6 +64,9 @@
     padding-left: 1em;
     padding-top: 1em !important;
     z-index: 10;
+
+    /* Ensure the right sidebar does not inherit the left sidebar's background */
+    background-color: transparent;
   }
 }
 
