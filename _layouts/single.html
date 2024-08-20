@@ -14,10 +14,20 @@ layout: default
   {% endunless %}
 {% endif %}
 
-<div id="main" role="main">
-  {% include sidebar.html %}
+<div id="main" role="main" style="display: flex; min-height: 100vh;">
 
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+  <!-- Sidebar background extending to the left -->
+  <div style="background-color: #f0f0f0; min-width: 300px; max-width: 300px; position: relative;">
+
+    <!-- Sidebar content (profile) -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; padding: 20px;">
+      {% include sidebar.html %}
+    </div>
+
+  </div>
+
+  <!-- Main content -->
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork" style="flex-grow: 1; padding-left: 20px;">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
@@ -48,7 +58,6 @@ layout: default
           <p class="page__date"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}
         
-             
         {% if page.citation and page.paperurl %}
           <p>Recommended citation: {{ page.citation }} <a href="{{ page.paperurl }}"><u>{{ page.paperurl }}</u></a></p>
         {% elsif page.citation %}
