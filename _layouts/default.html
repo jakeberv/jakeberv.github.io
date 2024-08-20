@@ -16,15 +16,7 @@ layout: compress
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
-    <div class="content-wrapper"> <!-- New flexbox container -->
-      <div class="sidebar-container"> <!-- Sidebar wrapper with grey background -->
-        {% include sidebar.html %} <!-- Include the sidebar -->
-      </div>
-      
-      <div class="main-content"> <!-- Main content area -->
-        {{ content }}
-      </div>
-    </div>
+    {{ content }}
 
     <div class="page__footer">
       <footer>
