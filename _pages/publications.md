@@ -5,49 +5,6 @@ permalink: /publications/
 author_profile: true
 ---
 
-<h2 style="margin-top: 0px;">Citations Over Time</h2>
-<div id="chartWrapper" style="width: 50%; height: 250px; position: relative;">
-  <canvas id="citationsChart"></canvas>
-</div>
-
-<script>
-  const ctx = document.getElementById('citationsChart').getContext('2d');
-
-  const citationsData = {{ site.data.scholar_metrics.cites_per_year | jsonify }};
-
-  const labels = Object.keys(citationsData);
-  const data = Object.values(citationsData);
-
-  const citationsChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: labels,
-      datasets: [{
-        data: data,
-        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-        borderColor: 'rgba(75, 192, 192, 1)',
-        borderWidth: 1
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          display: false
-        }
-      },
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
-</script>
-
-<br>
-
 <h2 style="margin-top: 10px; margin-bottom: 20px;">Citation Geography</h2>
 <figure>
     <div id="geochartWrapper" style="width: 80%; height: 350px; position: relative;">
@@ -120,6 +77,50 @@ function initGeoBubbleChart(countries, mapData) {
     new Chart(ctx, config);
 }
 </script>
+
+<br>
+
+<h2 style="margin-top: 0px;">Citations Over Time</h2>
+<div id="chartWrapper" style="width: 40%; height: 200px; position: relative; margin: 0 auto;">
+  <canvas id="citationsChart"></canvas>
+</div>
+
+<script>
+  const ctx = document.getElementById('citationsChart').getContext('2d');
+
+  const citationsData = {{ site.data.scholar_metrics.cites_per_year | jsonify }};
+
+  const labels = Object.keys(citationsData);
+  const data = Object.values(citationsData);
+
+  const citationsChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [{
+        data: data,
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
 
 
 {% if author.googlescholar %} You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u> {% endif %}
