@@ -95,10 +95,15 @@ function initGeoBubbleChart(countries, mapData) {
 </figure>
 
 <style>
-  /* Media query for mobile devices */
-  @media (max-width: 768px) {
+  /* Mobile-first approach */
+  #citationsFigure {
+    width: 100%;
+  }
+
+  /* Larger screens */
+  @media (min-width: 769px) {
     #citationsFigure {
-      width: 100%;
+      width: 40%;
     }
   }
 </style>
