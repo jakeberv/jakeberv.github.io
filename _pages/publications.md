@@ -87,30 +87,35 @@ function initGeoBubbleChart(countries, mapData) {
 <br>
 
 <h2 style="margin-top: 10px; margin-bottom: 20px; text-align: center;">Citations Over Time</h2>
-<figure id="citationsFigure" style="margin: auto; position: relative; display: flex; justify-content: center;">
-    <div id="chartWrapper" style="width: 40%; height: 250px; position: relative;">
+<figure id="citationsFigure" style="width: 40%; margin: auto; position: relative;">
+    <div id="chartWrapper" style="width: 100%; height: 250px; position: relative;">
         <canvas id="citationsChart"></canvas>
     </div>
-    <figcaption style="text-align: left; margin-top: 2px; width: 100%;">This graphic uses Chart.js to display the number of citations of my publications over time, based on all records from Google Scholar</figcaption>
+    <figcaption id="citationsCaption" style="text-align: left; margin-top: 2px; width: 100%;">This graphic uses Chart.js to display the number of citations of my publications over time, based on all records from Google Scholar</figcaption>
 </figure>
 
 <style>
-  /* Default styles */
+  /* Default style for larger screens */
   #citationsFigure {
+    width: 40%;
+  }
+
+  #citationsCaption {
     width: 100%;
   }
 
-  #chartWrapper {
-    width: 100%;
-  }
-
-  /* Media query for larger screens */
-  @media (min-width: 769px) {
-    #chartWrapper {
-      width: 40%;
+  /* Media query for mobile devices */
+  @media (max-width: 768px) {
+    #citationsFigure {
+      width: 100%;
+    }
+    
+    #citationsCaption {
+      width: 100%;
     }
   }
 </style>
+
 
 
 <script>
