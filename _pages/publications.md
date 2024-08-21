@@ -97,7 +97,7 @@ function initGeoBubbleChart(countries, mapData) {
 <style>
 @media (max-width: 768px) {
     #citationsFigure {
-        width: 80%!important;
+        width: 90%!important;
     }
 }
 </style>
