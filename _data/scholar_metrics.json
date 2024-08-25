@@ -4,13 +4,13 @@
     "email_domain": "@umich.edu",
     "h_index": 11,
     "i10_index": 11,
-    "citations": 2206,
+    "citations": 2208,
     "cites_per_year": {
         "2015": 13,
         "2016": 104,
         "2017": 206,
         "2018": 211,
-        "2019": 270,
+        "2019": 271,
         "2020": 297,
         "2021": 308,
         "2022": 307,
@@ -322,7 +322,7 @@
     "publications": [
         {
             "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-            "citations": 1636,
+            "citations": 1638,
             "year": 2015,
             "venue": "N/A",
             "url": "https://www.nature.com/articles/nature15697"
