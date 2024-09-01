@@ -5,12 +5,12 @@ title: "Background"
 ---
 
 <div style="display: flex; align-items: center;">
-  <div style="width: 35%; padding-right: 10%;">
+  <div style="width: 50%; padding-right: 10%;">
     <p style="font-weight: 500;">
       I am currently supported by an <a href="https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/">Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship</a> at the University of Michigan.
     </p>
   </div>
-  <div style="width: 55%;">
+  <div style="width: 40%;">
     <a href="https://www.schmidtsciences.org/" style="text-decoration: none;">
       <img src="/images/SchmidtSciencesLogo.png" alt="" style="width: 100%; pointer-events: none;">
     </a>
