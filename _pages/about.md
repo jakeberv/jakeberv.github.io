@@ -1,4 +1,5 @@
 ---
+layout: about
 permalink: /
 title: "Jacob S. Berv"
 excerpt: "Evolutionary and Systematic Biologist"
