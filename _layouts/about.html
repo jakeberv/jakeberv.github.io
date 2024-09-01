@@ -139,7 +139,7 @@ layout: default
 </div>
 
 <!-- Right Sidebar for Twitter Feed, positioned absolutely -->
-<div style="position: absolute; top: 0; right: 0; width: 220px; margin-right: 20px;">
+<div class="right-sidebar" style="position: absolute; top: 300px; right: 240px; width: 220px;">
   {% include right-sidebar.html %}
 </div>
 
@@ -151,3 +151,12 @@ layout: default
 </div>
 
 {% include scripts.html %}
+
+<!-- Add a media query to hide the sidebar on mobile -->
+<style>
+  @media (max-width: 768px) {
+    .right-sidebar {
+      display: none;
+    }
+  }
+</style>
