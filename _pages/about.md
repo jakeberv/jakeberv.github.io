@@ -20,9 +20,8 @@ header:
 
 # Welcome
 
-I am an evolutionary biologist interested in building and deciphering the tree of life. My research integrates data from natural history, ecology, genomics, and paleontology---often through the application of novel computation tools---in order to understand the links between micro- and macroevolution.
-
-I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/) at the University of Michigan.[Go Directly to Research](https://www.jakeberv.com/research){: .btn--research}
+I am an evolutionary biologist interested in building and deciphering the tree of life. My research integrates data from natural history, ecology, genomics, and paleontology---often through the application of novel computation tools---in order to understand the links between micro- and macroevolution. I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/) at the University of Michigan.
+[Go Directly to Research](https://www.jakeberv.com/research){: .btn--research}
 
 
 ## Recent News
@@ -33,8 +32,8 @@ I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctora
 {% endfor %}
 
 
-<small>
-  <span style="line-height: 0.5;">
-    The site's banner is a portion of Salvador Dali's "Persistence of Memory." Dawn Adès wrote, "The soft watches are an unconscious symbol of the relativity of space and time, a Surrealist meditation on the collapse of our notions of a fixed cosmic order." In evolutionary biology, time is often relative and (outside of paleontology) rarely absolute. Dalí's olive tree with its cut branches, overlain by time, is a reminder of the challenges we face in understanding the tree of life. To the top left, an allusion to Charles Darwin's note, "I think", from his famous <a href="https://www.amnh.org/exhibitions/darwin/the-idea-takes-shape/i-think">illustration of a phylogenetic tree</a>.
-  </span>
+<br>
+
+<small style="line-height: 1 !important; display: block; margin: 0;">
+The site's banner is a portion of Salvador Dali's "Persistence of Memory." Dawn Adès wrote, "The soft watches are an unconscious symbol of the relativity of space and time, a Surrealist meditation on the collapse of our notions of a fixed cosmic order." In evolutionary biology, time is often relative and (outside of paleontology) rarely absolute. Dalí's olive tree with its cut branches, overlain by time, is a reminder of the challenges we face in understanding the tree of life. To the top left, an allusion to Charles Darwin's note, "I think", from his famous <a href="https://www.amnh.org/exhibitions/darwin/the-idea-takes-shape/i-think">illustration of a phylogenetic tree</a>.
 </small>
