@@ -1,0 +1,44 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body>
+
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+      
+      <!-- Main Content Area -->
+      <main style="flex: 1; margin-right: 20px;">
+        {{ content }}
+      </main>
+
+      <!-- Right Sidebar (Twitter Feed) -->
+      <aside style="width: 220px;">
+        <a class="twitter-timeline" data-width="220" data-height="500" data-theme="light" href="https://twitter.com/jakeberv?ref_src=twsrc%5Etfw">Tweets by jakeberv</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </aside>
+      
+    </div>
+
+    <div class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
+</html>
