@@ -40,7 +40,7 @@ header:
       display: none;
     }
     .content-area {
-      width: 100%; /* Ensures content fills the full width when Twitter container is hidden */
+      width: 100%;
     }
   }
 </style>
