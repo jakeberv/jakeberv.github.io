@@ -5,7 +5,6 @@ permalink: /publications/
 author_profile: true
 ---
 
-
 <figure style="max-width: 100%; display: flex; justify-content: space-between; align-items: center;">
   <a href="https://doi.org/10.1016/j.cub.2018.04.062" target="_blank" style="flex: 1; display: flex; justify-content: center;">
     <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/CurrBio.jpg" style="max-height: 250px; width: auto; max-width: 100%; box-shadow: 0 8px 16px rgba(0,0,0,0.2);" onmouseover="this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'" onmouseout="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" alt="Current Biology cover"/>
@@ -21,47 +20,10 @@ author_profile: true
   </a>
 </figure>
 
-<script>
-  const ctx = document.getElementById('citationsChart').getContext('2d');
-  const citationsData = {{ site.data.scholar_metrics.cites_per_year | jsonify }};
-  const labels = Object.keys(citationsData);
-  const data = Object.values(citationsData);
-
-  const citationsChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: labels,
-      datasets: [{
-        data: data,
-        backgroundColor: 'rgba(75, 192, 192, 0.5)',
-        borderColor: 'rgba(75, 192, 192, 1)',
-        borderWidth: 1,
-        hoverBackgroundColor: 'rgba(0, 133, 183, 0.75)',
-        hoverBorderColor: 'rgba(0, 133, 183, 1)',
-        hoverBorderWidth: 2
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          display: false
-        }
-      },
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
-</script>
-
 
 <br>
 
-<h1 style="margin-top: 10px; margin-bottom: 20px;">Publications</h1>
+
 {% if author.googlescholar %} You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u> {% endif %}
 
 {% include base_path %}

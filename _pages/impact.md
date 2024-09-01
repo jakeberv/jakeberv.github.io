@@ -4,8 +4,6 @@ permalink: /impact/
 title: "Impact"
 ---
 
-<h1 style="margin-top: 10px; margin-bottom: 20px;">Impact</h1>
-
 <h2 style="margin-top: 10px; margin-bottom: 20px;text-align: center;">Citation Geography</h2>
 <figure style="width: 90%; margin: auto; position: relative;">
     <div id="geochartWrapper" style="width: 100%; height: auto; position: relative;">
@@ -85,6 +83,23 @@ function initGeoBubbleChart(countries, mapData) {
 
 <br>
 
+<h2 style="margin-top: 10px; margin-bottom: 20px; text-align: center;">Citations Over Time</h2>
+<figure style="width: 40%; margin: auto; position: relative;" id="citationsFigure">
+    <div style="width: 100%; height: 250px; position: relative;" id="chartWrapper">
+        <canvas id="citationsChart"></canvas>
+    </div>
+    <figcaption style="text-align: left; margin-top: 2px; width: 100%;" id="citationsCaption">This graphic uses Chart.js to display the number of citations of my publications over time, based on all records from Google Scholar</figcaption>
+</figure>
+
+<style>
+@media (max-width: 768px) {
+    #citationsFigure {
+        width: 90%!important;
+    }
+}
+</style>
+
+
 <script>
   const ctx = document.getElementById('citationsChart').getContext('2d');
   const citationsData = {{ site.data.scholar_metrics.cites_per_year | jsonify }};
@@ -121,19 +136,3 @@ function initGeoBubbleChart(countries, mapData) {
     }
   });
 </script>
-
-<h2 style="margin-top: 10px; margin-bottom: 20px; text-align: center;">Citations Over Time</h2>
-<figure style="width: 40%; margin: auto; position: relative;" id="citationsFigure">
-    <div style="width: 100%; height: 250px; position: relative;" id="chartWrapper">
-        <canvas id="citationsChart"></canvas>
-    </div>
-    <figcaption style="text-align: left; margin-top: 2px; width: 100%;" id="citationsCaption">This graphic uses Chart.js to display the number of citations of my publications over time, based on all records from Google Scholar</figcaption>
-</figure>
-
-<style>
-@media (max-width: 768px) {
-    #citationsFigure {
-        width: 90%!important;
-    }
-}
-</style>
