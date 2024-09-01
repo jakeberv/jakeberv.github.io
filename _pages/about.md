@@ -24,10 +24,6 @@ I am an evolutionary biologist interested in building and deciphering the tree o
 
 I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/) at the University of Michigan.
 
-<a href="https://midas.umich.edu/ai-in-science/">
-<img src="/images/midas_logo.png" alt="" width="550">
-</a>
-
 <figure style="max-width: 100%; display: flex; justify-content: space-between; align-items: center;">
   <a href="https://doi.org/10.1016/j.cub.2018.04.062" target="_blank" style="flex: 1; display: flex; justify-content: center;">
     <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/CurrBio.jpg" style="max-height: 250px; width: auto; max-width: 100%; box-shadow: 0 8px 16px rgba(0,0,0,0.2);" onmouseover="this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'" onmouseout="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" alt="Current Biology cover"/>
@@ -51,3 +47,8 @@ I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctora
   <p>{{ item.date | date: "%B %d, %Y" }} - {{ item.excerpt }}</p>
   <a href="{{ item.url | prepend: site.baseurl }}">Read more</a>
 {% endfor %}
+
+
+<small>
+  The site's banner is a portion of Salvador Dali's "Persistence of Memory." Dawn Adès wrote, "The soft watches are an unconscious symbol of the relativity of space and time, a Surrealist meditation on the collapse of our notions of a fixed cosmic order." In evolutionary biology, time is often relative and (outside of paleontology) rarely absolute. Dalí's olive tree with its cut branches, overlain by time, is a reminder of the challenges we face in understanding the tree of life. To the top left, an allusion to Charles Darwin's note, "I think", from his famous <a href="https://www.amnh.org/exhibitions/darwin/the-idea-takes-shape/i-think">illustration of a phylogenetic tree</a>.
+</small>
