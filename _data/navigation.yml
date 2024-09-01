@@ -1,23 +1,26 @@
 # main links links
 main:
+  - title: "About"
+    url: /background/
+
   - title: "News"
     url: /news/
-
-  - title: "Research"
-    url: /research/
     
   - title: "Publications"
     url: /publications/
-  
-  - title: "Teaching"
-    url: /teaching/
     
-  #- title: "DEI"
-  #  url: /dei/
+  - title: "Research"
+    url: /research/
     
   - title: "Talks"
     url: /talks/
-    
+  
+  - title: "Teaching"
+    url: /teaching/
+
+  #- title: "DEI"
+  #  url: /dei/
+  
   #- title: "Collaborators"
   #  url: /collaborators/
 
@@ -26,3 +29,4 @@ main:
  
   - title: "CV"
     url: /cv/
+

@@ -22,6 +22,12 @@ header:
 
 I am an evolutionary biologist interested in building and deciphering the tree of life. My research integrates data from natural history, ecology, genomics, and paleontology---often through the application of novel computation tools---in order to understand the links between micro- and macroevolution.
 
+I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/) at the University of Michigan.
+
+<a href="https://midas.umich.edu/ai-in-science/">
+<img src="/images/midas_logo.png" alt="" width="550">
+</a>
+
 <figure style="max-width: 100%; display: flex; justify-content: space-between; align-items: center;">
   <a href="https://doi.org/10.1016/j.cub.2018.04.062" target="_blank" style="flex: 1; display: flex; justify-content: center;">
     <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/CurrBio.jpg" style="max-height: 250px; width: auto; max-width: 100%; box-shadow: 0 8px 16px rgba(0,0,0,0.2);" onmouseover="this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'" onmouseout="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" alt="Current Biology cover"/>
@@ -39,37 +45,9 @@ I am an evolutionary biologist interested in building and deciphering the tree o
 
 [Go Directly to Research](https://www.jakeberv.com/research){: .btn--research}
 
-## Recent updates
+## News
 {% for item in site.news limit:5 %}
   <h4 style="font-size: 1.25em;">{{ item.title }}</h4>
   <p>{{ item.date | date: "%B %d, %Y" }} - {{ item.excerpt }}</p>
   <a href="{{ item.url | prepend: site.baseurl }}">Read more</a>
 {% endfor %}
-
-
-# Background
-
-I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/).
-
-<a href="https://midas.umich.edu/ai-in-science/">
-<img src="/images/midas_logo.png" alt="" width="550">
-</a>
-
-<b>Previously, I:</b>
-
--   was a [Life Sciences Fellow](https://lifescifellows.umich.edu/) at the University of Michigan (2019-2023).
-
--   earned a PhD at Cornell University (2013-2019), working within [Cornell's Laboratory of Ornithology](https://www.birds.cornell.edu/home/). As a graduate student, I investigated several [dimensions of biodiversity](https://jakeberv.com/publication/2019-08-30-Berv_2019), applying the tools of Systematic Biology, Population Genomics, and Paleontology. [Key Paper 1](https://jakeberv.com/publication/2018-01-01-Berv_Field_2018){: .btn--research}[Publisher's Award](https://academic.oup.com/sysbio/pages/publishers_award?login=false#:~:text=Genomic%20Signature%20of,Berv%20et%20al.){: .btn--research}[Key Paper 2](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_et_al_2021.pdf){: .btn--research}[2019 Defense Seminar](https://www.youtube.com/watch?v=8A-j2DccpTw&list=PLt6TWRNEKcmUMXvUPbpFPVvb7Z8d0UbaN){: .btn--research}
-
--   worked as a researcher in the [Prum Lab](https://prumlab.yale.edu/) (2010-2013), where I largely focused on discovering the evolutionary relationships [within](https://www.sciencedirect.com/science/article/pii/S105579032100138X) and [among](https://www.nature.com/articles/nature15697) bird species.
-
--   completed a Bachelors of Science degree at [Yale University](https://eeb.yale.edu/) (2006-2010). My senior thesis investigated patterns of phylogeographic congruence among co-distributed open-habitat specialists [across the Amazon basin](https://jakeberv.github.io/publication/2021-03-08-vanEls_et_al_2021).
-
-<b>I am currently affiliated with five groups within the University of Michigan</b>
-1. [Department of Ecology and Evolutionary Biology](https://lsa.umich.edu/eeb/people/postdoctoral-fellows/jacob-berv.html)
-2. [Earth and Environmental Sciences](https://lsa.umich.edu/earth/research/paleontology.html)
-3. [Museum of Zoology](https://lsa.umich.edu/ummz) 
-4. [Institute for Data Science](https://midas.umich.edu/)
-5. [School for Environment and Sustainability](http://bcweeks.weebly.com/)
-
-#### The site's banner is a portion of Salvador Dali's "Persistence of Memory." Dawn Adès wrote, "The soft watches are an unconscious symbol of the relativity of space and time, a Surrealist meditation on the collapse of our notions of a fixed cosmic order." In evolutionary biology, time is often relative and (outside of paleontology) rarely absolute. Dalí's olive tree with its cut branches, overlain by time, is a reminder of the challenges we face in understanding the tree of life. To the top left, an allusion to Charles Darwin's note, "I think", from his famous [illustration of a phylogenetic tree](https://www.amnh.org/exhibitions/darwin/the-idea-takes-shape/i-think).
