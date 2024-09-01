@@ -5,6 +5,8 @@ layout: archive
 author_profile: true
 ---
 
+Slowly backfilling important events, new website!
+
 <ol>
 {% assign sorted_news = site.news | sort: 'date' | reverse %}
 {% for item in sorted_news %}
