@@ -5,7 +5,7 @@ layout: archive
 author_profile: true
 ---
 
-<ul>
+<ol>
 {% assign sorted_news = site.news | sort: 'date' | reverse %}
 {% for item in sorted_news %}
   <li>
@@ -13,4 +13,4 @@ author_profile: true
     <a href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
   </li>
 {% endfor %}
-</ul>
+</ol>

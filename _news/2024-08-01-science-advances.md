@@ -1,5 +1,5 @@
 ---
-title: "Major paper publication"
+title: "New paper in Science Advances"
 date: 2024-08-01
 excerpt: "Test news item"
 layout: archive
