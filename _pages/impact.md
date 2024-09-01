@@ -85,6 +85,43 @@ function initGeoBubbleChart(countries, mapData) {
 
 <br>
 
+<script>
+  const ctx = document.getElementById('citationsChart').getContext('2d');
+  const citationsData = {{ site.data.scholar_metrics.cites_per_year | jsonify }};
+  const labels = Object.keys(citationsData);
+  const data = Object.values(citationsData);
+
+  const citationsChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [{
+        data: data,
+        backgroundColor: 'rgba(75, 192, 192, 0.5)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1,
+        hoverBackgroundColor: 'rgba(0, 133, 183, 0.75)',
+        hoverBorderColor: 'rgba(0, 133, 183, 1)',
+        hoverBorderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
 <h2 style="margin-top: 10px; margin-bottom: 20px; text-align: center;">Citations Over Time</h2>
 <figure style="width: 40%; margin: auto; position: relative;" id="citationsFigure">
     <div style="width: 100%; height: 250px; position: relative;" id="chartWrapper">

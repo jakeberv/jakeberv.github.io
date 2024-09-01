@@ -1,6 +1,6 @@
 ---
 permalink: /news/
-title: "News"
+title: "News Archive"
 header: 
   #og_image: "teaching/pdp.png"
 layout: archive

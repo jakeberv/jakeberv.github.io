@@ -2,9 +2,6 @@
 main:
   - title: "About"
     url: /background/
-
-  - title: "News"
-    url: /news/
     
   - title: "Publications"
     url: /publications/
@@ -32,4 +29,7 @@ main:
  
   - title: "CV"
     url: /cv/
+    
+  - title: "News"
+    url: /news/
 
