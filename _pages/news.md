@@ -6,10 +6,11 @@ author_profile: true
 ---
 
 <ul>
-{% for item in site.news %}
+{% assign sorted_news = site.news | sort: 'date' | reverse %}
+{% for item in sorted_news %}
   <li>
+    <span>{{ item.date | date: "%B %d, %Y" }}:</span>
     <a href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
-    <p>{{ item.date | date: "%B %d, %Y" }}</p>
   </li>
 {% endfor %}
 </ul>
