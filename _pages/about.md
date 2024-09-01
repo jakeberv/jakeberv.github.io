@@ -22,9 +22,10 @@ header:
 # Welcome
 
 <div class="wide-content">
-  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-    <div style="width: 60%;">
-      <p>I am an evolutionary biologist interested in building and deciphering the tree of life. My research integrates data from natural history, ecology, genomics, and paleontology<code>&#8212;</code>often through the application of novel computation tools<code>&#8212;</code>in order to understand the links between micro- and macroevolution.</p><p></p><p>I am currently supported by an <a href="https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/">Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship</a> at the University of Michigan.</p>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;">
+    <div class="content-area" style="width: 60%;">
+      <p>I am an evolutionary biologist interested in building and deciphering the tree of life. My research integrates data from natural history, ecology, genomics, and paleontology&#8212;often through the application of novel computation tools&#8212;in order to understand the links between micro- and macroevolution.</p>
+      <p>I am currently supported by an <a href="https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/">Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship</a> at the University of Michigan.</p>
     </div>
     <div class="twitter-container" style="width: 35%;">
       <a class="twitter-timeline" data-width="300" data-height="300" data-theme="light" href="https://twitter.com/jakeberv?ref_src=twsrc%5Etfw">Tweets by jakeberv</a>
@@ -33,11 +34,13 @@ header:
   </div>
 </div>
 
-
 <style>
   @media (max-width: 768px) {
     .twitter-container {
       display: none;
+    }
+    .content-area {
+      width: 100%; /* Ensures content fills the full width when Twitter container is hidden */
     }
   }
 </style>
