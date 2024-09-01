@@ -6,9 +6,11 @@ title: "Background"
 
 <div style="display: flex; align-items: center; margin-top: -30px;">
   <div style="width: 55%; padding-right: 0%;">
-    <p style="font-weight: 500;">
-      I am currently supported by an <a href="https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/">Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship</a> at the University of Michigan.
-    </p>
+    <ul style="margin: 0; padding-left: 20px; list-style-position: inside;">
+      <li style="font-weight: 500; list-style-type: disc;">
+        I am currently supported by an <a href="https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/">Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship</a> at the University of Michigan.
+      </li>
+    </ul>
   </div>
   <div style="width: 40%; padding-left: 5%;">
     <a href="https://www.schmidtsciences.org/" style="text-decoration: none;">
@@ -16,6 +18,8 @@ title: "Background"
     </a>
   </div>
 </div>
+
+
 <br>
 <b>Previously, I:</b>
 
