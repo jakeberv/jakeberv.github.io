@@ -6,8 +6,8 @@ title: "Background"
 
 <div style="display: flex; align-items: center; margin-top: -30px;">
   <div style="width: 55%; padding-right: 0%;">
-    <ul style="margin: 0; padding-left: 20px; list-style-position: outside;">
-      <li style="font-weight: 500; list-style-type: disc; text-indent: -20px; padding-left: 20px;">
+    <ul style="margin: 0; padding-left: 1.2em; list-style-position: outside;">
+      <li style="font-weight: 500; list-style-type: disc; margin-left: -1.2em;">
         I am currently supported by an <a href="https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/">Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship</a> at the University of Michigan.
       </li>
     </ul>
