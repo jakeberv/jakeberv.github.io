@@ -4,7 +4,7 @@ permalink: /background/
 title: "Background"
 ---
 
-<div style="display: flex; align-items: center; margin-top: -20px;">
+<div style="display: flex; align-items: center; margin-top: -30px;">
   <div style="width: 55%; padding-right: 0%;">
     <p style="font-weight: 500;">
       I am currently supported by an <a href="https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/">Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship</a> at the University of Michigan.
@@ -16,7 +16,7 @@ title: "Background"
     </a>
   </div>
 </div>
-
+<br>
 <b>Previously, I:</b>
 
 -   was a [Life Sciences Fellow](https://lifescifellows.umich.edu/) at the University of Michigan (2019-2023).
