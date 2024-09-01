@@ -14,12 +14,15 @@ layout: default
   {% endunless %}
 {% endif %}
 
-<div id="main" role="main" style="display: flex;">
+<div id="main" role="main" style="display: flex; justify-content: center; align-items: flex-start; max-width: 1200px; margin: 0 auto;">
 
-  <!-- Main Content Area with Existing Sidebar -->
-  <div style="flex: 1;">
+  <!-- Left Sidebar for Author Profile -->
+  <div style="flex: 0 0 220px; margin-right: 20px;">
     {% include sidebar.html %}
+  </div>
 
+  <!-- Main Content Area -->
+  <div style="flex: 1;">
     <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
       {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
       {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
@@ -87,10 +90,11 @@ layout: default
     </article>
   </div>
 
-  <!-- New Right Sidebar with Twitter Feed -->
-  <div style="flex: 0 0 220px; margin-left: 10px;">
+  <!-- Right Sidebar for Twitter Feed -->
+  <div style="flex: 0 0 220px; margin-left: 20px;">
     {% include right-sidebar.html %}
   </div>
+
 </div>
 
 <div class="page__footer">
