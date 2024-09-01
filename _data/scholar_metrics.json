@@ -4,18 +4,18 @@
     "email_domain": "@umich.edu",
     "h_index": 11,
     "i10_index": 11,
-    "citations": 2208,
+    "citations": 2216,
     "cites_per_year": {
         "2015": 13,
         "2016": 104,
         "2017": 206,
-        "2018": 211,
+        "2018": 212,
         "2019": 271,
         "2020": 297,
         "2021": 308,
         "2022": 307,
         "2023": 251,
-        "2024": 199
+        "2024": 207
     },
     "interests": [
         "Speciation",
@@ -201,6 +201,16 @@
             "scholar_id": "T90NSF0AAAAJ"
         },
         {
+            "name": "Eric J. Sargis",
+            "affiliation": "Professor, Yale University; Curator, Yale Peabody Museum",
+            "scholar_id": "pk0CYUsAAAAJ"
+        },
+        {
+            "name": "Stephen GB Chester",
+            "affiliation": "Associate Professor, Brooklyn College, City University of New York",
+            "scholar_id": "To56C4YAAAAJ"
+        },
+        {
             "name": "Alexandre Aleixo",
             "affiliation": "Instituto Tecnol\u00f3gico Vale",
             "scholar_id": "XpyI2wYAAAAJ"
@@ -221,19 +231,9 @@
             "scholar_id": "Pb0WwvUAAAAJ"
         },
         {
-            "name": "Eric J. Sargis",
-            "affiliation": "Professor, Yale University; Curator, Yale Peabody Museum",
-            "scholar_id": "pk0CYUsAAAAJ"
-        },
-        {
             "name": "Valentina G\u00f3mez-Baham\u00f3n",
             "affiliation": "Pennsylvania State University",
             "scholar_id": "QCVlwlsAAAAJ"
-        },
-        {
-            "name": "Stephen GB Chester",
-            "affiliation": "Associate Professor, Brooklyn College, City University of New York",
-            "scholar_id": "To56C4YAAAAJ"
         },
         {
             "name": "Nathanael Walker-Hale",
@@ -322,7 +322,7 @@
     "publications": [
         {
             "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-            "citations": 1638,
+            "citations": 1643,
             "year": 2015,
             "venue": "N/A",
             "url": "https://www.nature.com/articles/nature15697"
@@ -343,7 +343,7 @@
         },
         {
             "title": "An inverse latitudinal gradient in infection probability and phylogenetic diversity for Leucocytozoon blood parasites in New World birds",
-            "citations": 85,
+            "citations": 86,
             "year": 2020,
             "venue": "N/A",
             "url": "https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/1365-2656.13117"
@@ -371,7 +371,7 @@
         },
         {
             "title": "Genomic phylogeography of the White-crowned Manakin Pseudopipra pipra (Aves: Pipridae) illuminates a continental-scale radiation out of the Andes",
-            "citations": 26,
+            "citations": 27,
             "year": 2021,
             "venue": "N/A",
             "url": "https://www.sciencedirect.com/science/article/pii/S105579032100138X"
@@ -385,7 +385,7 @@
         },
         {
             "title": "Ecological selectivity and the evolution of mammalian substrate preference across the K\u2013Pg boundary",
-            "citations": 15,
+            "citations": 16,
             "year": 2021,
             "venue": "N/A",
             "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ece3.8114"
