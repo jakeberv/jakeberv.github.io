@@ -21,7 +21,6 @@ header:
 # Welcome
 
 I am an evolutionary biologist interested in building and deciphering the tree of life. My research integrates data from natural history, ecology, genomics, and paleontology---often through the application of novel computation tools---in order to understand the links between micro- and macroevolution. I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/) at the University of Michigan.
-[Go Directly to Research](https://www.jakeberv.com/research){: .btn--research}
 
 
 ## Recent News

@@ -4,11 +4,12 @@ permalink: /background/
 title: "Background"
 ---
 
+<a href="https://midas.umich.edu/ai-in-science/">
+<img src="/images/SchmidtSciencesLogo.png" alt="" width="450">
+</a>
+
 I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/) at the University of Michigan.
 
-<a href="https://midas.umich.edu/ai-in-science/">
-<img src="/images/SchmidtSciencesLogo.png" alt="" width="550">
-</a>
 
 <b>Previously, I:</b>
 
