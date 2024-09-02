@@ -6,9 +6,15 @@ author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
 
-The primary work from Jake's first postdoc position is now published as this week's cover article for the open-access journal Science Advances. 
+<div style="display: flex; align-items: flex-start;">
+  <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/science_advances.jpg" 
+       style="max-height: 250px; width: auto; max-width: 100%; margin-right: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.2);" 
+       onmouseover="this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'" 
+       onmouseout="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" 
+       alt="Science Advances cover"/>
+  <p>The primary work from Jake's first postdoc position is now published as this week's cover article for the open-access journal Science Advances.</p>
+</div>
 
-<img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/science_advances.jpg" style="max-height: 200px; width: auto; max-width: 100%; box-shadow: 0 8px 16px rgba(0,0,0,0.2);" onmouseover="this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'" onmouseout="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" alt="Science Advances cover"/>
 
 <!--news-excerpt-->
 
