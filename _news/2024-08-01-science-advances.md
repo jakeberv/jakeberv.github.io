@@ -1,11 +1,19 @@
 ---
 title: "New paper in Science Advances"
 date: 2024-08-01
-excerpt: "Test news item"
 layout: archive
 author_profile: true
+excerpt_separator: "<!--news-excerpt-->"
 ---
 
+The primary work from Jake's first postdoc position is now published as this week's cover article for the open-access journal Science Advances. 
+
+<img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/science_advances.jpg" style="max-height: 200px; width: auto; max-width: 100%; box-shadow: 0 8px 16px rgba(0,0,0,0.2);" onmouseover="this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'" onmouseout="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" alt="Science Advances cover"/>
+
+<!--news-excerpt-->
+
 ### Publication in Science Advances
+
+I've written some comments about this work in the twitter thread here:
 
 <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">Back from a fantastic <a href="https://twitter.com/hashtag/Evol2024?src=hash&amp;ref_src=twsrc%5Etfw">#Evol2024</a> meeting in Montreal, and I’m very pleased to officially talk about this project again, now published in <a href="https://twitter.com/ScienceAdvances?ref_src=twsrc%5Etfw">@ScienceAdvances</a> <a href="https://t.co/RstUs2bzvF">https://t.co/RstUs2bzvF</a></p>&mdash; Jake Berv (@jakeberv) <a href="https://twitter.com/jakeberv/status/1819085303795372413?ref_src=twsrc%5Etfw">August 1, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
