@@ -12,7 +12,7 @@ excerpt_separator: "<!--news-excerpt-->"
        onmouseover="this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'" 
        onmouseout="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" 
        alt="Science Advances cover"/>
-  <p>The primary work from Jake's first postdoc position is now published as this week's cover article for the open-access journal Science Advances. In this study, I examined how bird genomes evolved following the end-Cretaceous mass extinction, which occurred around 66 million years ago. By analyzing different genetic regions, we identified important shifts in DNA sequences that emerged during this time. These changes were closely linked to differences in development, body size, and metabolism, suggesting that the mass extinction played a key role in shaping the evolution of modern birds. Our findings provide new insights into how this event influenced the early diversification of bird species.</p>
+  <p>The primary work from Jake's first postdoc is now published as the cover article in Science Advances. In this study, I examined how bird genomes evolved after the end-Cretaceous mass extinction 66 million years ago. By analyzing different genetic regions, we identified key shifts in DNA sequences linked to changes in development, body size, and metabolism. These findings suggest that the mass extinction played a crucial role in shaping the evolution and early diversification of modern birds.</p>
 </div>
 
 <!--news-excerpt-->
