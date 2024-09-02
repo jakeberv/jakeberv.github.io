@@ -12,14 +12,23 @@ excerpt_separator: "<!--news-excerpt-->"
        onmouseover="this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'" 
        onmouseout="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" 
        alt="Science Advances cover"/>
-  <p>The primary work from Jake's first postdoc position is now published as this week's cover article for the open-access journal Science Advances.</p>
+  <p>The primary work from Jake's first postdoc position is now published as this week's cover article for the open-access journal Science Advances. In this study, I examined how bird genomes evolved following the end-Cretaceous mass extinction, which occurred around 66 million years ago. By analyzing different genetic regions, we identified important shifts in DNA sequences that emerged during this time. These changes were closely linked to differences in development, body size, and metabolism, suggesting that the mass extinction played a key role in shaping the evolution of modern birds. Our findings provide new insights into how this event influenced the early diversification of bird species.</p>
 </div>
-
 
 <!--news-excerpt-->
 
-### Publication in Science Advances
+I've written some additional comments about this work in the twitter thread here:
 
-I've written some comments about this work in the twitter thread here:
-
-<blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">Back from a fantastic <a href="https://twitter.com/hashtag/Evol2024?src=hash&amp;ref_src=twsrc%5Etfw">#Evol2024</a> meeting in Montreal, and I’m very pleased to officially talk about this project again, now published in <a href="https://twitter.com/ScienceAdvances?ref_src=twsrc%5Etfw">@ScienceAdvances</a> <a href="https://t.co/RstUs2bzvF">https://t.co/RstUs2bzvF</a></p>&mdash; Jake Berv (@jakeberv) <a href="https://twitter.com/jakeberv/status/1819085303795372413?ref_src=twsrc%5Etfw">August 1, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div style="display: flex; justify-content: center;">
+  <blockquote class="twitter-tweet" data-theme="light" style="width: 30%;">
+    <p lang="en" dir="ltr">
+      Back from a fantastic 
+      <a href="https://twitter.com/hashtag/Evol2024?src=hash&amp;ref_src=twsrc%5Etfw">#Evol2024</a> 
+      meeting in Montreal, and I’m very pleased to officially talk about this project again, now published in 
+      <a href="https://twitter.com/ScienceAdvances?ref_src=twsrc%5Etfw">@ScienceAdvances</a> 
+      <a href="https://t.co/RstUs2bzvF">https://t.co/RstUs2bzvF</a>
+    </p>&mdash; Jake Berv (@jakeberv) 
+    <a href="https://twitter.com/jakeberv/status/1819085303795372413?ref_src=twsrc%5Etfw">August 1, 2024</a>
+  </blockquote>
+</div>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
