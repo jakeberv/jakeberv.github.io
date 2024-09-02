@@ -6,6 +6,10 @@ author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
 
+{% if page.excerpt == nil %}
+*Published on: {{ page.date | date: "%B %d, %Y" }}*
+{% endif %}
+
 <div style="display: flex; align-items: flex-start;">
   <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/science_advances.jpg" 
        style="max-height: 250px; width: auto; max-width: 100%; margin-right: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.2);" 
