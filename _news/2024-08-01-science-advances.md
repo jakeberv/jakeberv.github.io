@@ -33,6 +33,7 @@ I've written some additional comments about this work in the twitter thread here
 </div>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+{% raw %}
 <div class="container">
     <div id="thread-header" class="d-flex align-items-center">
     </div>
@@ -111,7 +112,6 @@ I've written some additional comments about this work in the twitter thread here
 </style>
 
 <script>
-    // Load the Twitter widgets script and wait for it to be ready
     window.twttr = (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0],
             t = window.twttr || {};
@@ -129,7 +129,6 @@ I've written some additional comments about this work in the twitter thread here
         return t;
     }(document, "script", "twitter-wjs"));
 
-    // Fetch and display the thread content after Twitter widgets are ready
     window.twttr.ready(function() {
         async function fetchThreadReaderContent() {
             const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
@@ -174,7 +173,7 @@ I've written some additional comments about this work in the twitter thread here
             }
         }
 
-        // Call the function to fetch and display the thread content
         fetchThreadReaderContent();
     });
 </script>
+{% endraw %}
