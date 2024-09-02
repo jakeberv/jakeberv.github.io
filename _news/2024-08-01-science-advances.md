@@ -5,7 +5,6 @@ layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
-
 {{ page.date | date: "%B %d, %Y" }} -
 
 <strong>Genome and life-history evolution link bird diversification to the end-Cretaceous mass extinction</strong>
