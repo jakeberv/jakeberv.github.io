@@ -34,19 +34,21 @@ I've written some additional comments about this work in the twitter thread here
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
-{% raw %}
-<!-- Thread Reader Embed Start -->
 <div class="container">
     <div id="thread-header" class="d-flex align-items-center">
-        <!-- User Profile Info -->
     </div>
     <div id="thread-content">
-        <!-- Tweets Content -->
     </div>
 </div>
 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
 <style>
-    /* Basic page styling */
+    body {
+        background-color: #f5f8fa;
+        font-family: Arial, sans-serif;
+    }
+
     .container {
         max-width: 600px;
         background-color: #ffffff;
@@ -56,7 +58,6 @@ I've written some additional comments about this work in the twitter thread here
         margin: 20px auto;
     }
 
-    /* User Profile Header */
     #thread-header {
         border-bottom: 1px solid #e1e8ed;
         padding-bottom: 15px;
@@ -85,7 +86,6 @@ I've written some additional comments about this work in the twitter thread here
         font-size: 12px;
     }
 
-    /* Tweet Styling */
     .content-tweet {
         padding: 10px 0;
         border-bottom: 1px solid #e1e8ed;
@@ -121,10 +121,8 @@ I've written some additional comments about this work in the twitter thread here
             const parser = new DOMParser();
             const doc = parser.parseFromString(text, 'text/html');
 
-            // Extract relevant parts of the document
             const userInfoElement = doc.querySelector('.prof-image').parentElement;
 
-            // Remove the subscribe button from the user profile
             const subscribeButton = userInfoElement.querySelector('form');
             if (subscribeButton) {
                 subscribeButton.remove();
@@ -133,13 +131,10 @@ I've written some additional comments about this work in the twitter thread here
             const userInfo = userInfoElement.innerHTML;
             const tweets = doc.querySelectorAll('.content-tweet');
 
-            // Inject the user info into the page
             document.getElementById('thread-header').innerHTML = userInfo;
 
-            // Loop through each tweet and inject it into the page
             let contentHtml = '';
             tweets.forEach((tweet, index) => {
-                // Remove the chain link symbol and attached links
                 const linkIcon = tweet.querySelector('.tw-permalink');
                 if (linkIcon) {
                     linkIcon.remove();
@@ -156,7 +151,6 @@ I've written some additional comments about this work in the twitter thread here
             });
             document.getElementById('thread-content').innerHTML = contentHtml;
 
-            // Initialize Twitter widgets
             window.twttr = (function(d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0],
                     t = window.twttr || {};
@@ -178,9 +172,7 @@ I've written some additional comments about this work in the twitter thread here
         }
     }
 
-    // Fetch and display the content when the page loads
     fetchThreadReaderContent();
 </script>
-<!-- Thread Reader Embed End -->
-{% endraw %}
+
 
