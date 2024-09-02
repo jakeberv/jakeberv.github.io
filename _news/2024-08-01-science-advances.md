@@ -6,9 +6,9 @@ author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
 
-{% if page.excerpt == nil %}
-*Published on: {{ page.date | date: "%B %d, %Y" }}*
-{% endif %}
+{{ page.date | date: "%B %d, %Y" }} -
+
+<strong>Genome and life-history evolution link bird diversification to the end-Cretaceous mass extinction</strong>
 
 <div style="display: flex; align-items: flex-start;">
   <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/science_advances.jpg" 

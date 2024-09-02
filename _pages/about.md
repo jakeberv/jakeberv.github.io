@@ -53,11 +53,10 @@ header:
   }
 </style>
 
-
 ## Recent News
 {% for item in site.news limit:5 %}
   <h4 style="font-size: 1.00em;">{{ item.title }}</h4>
-  <p>{{ item.date | date: "%B %d, %Y" }} - <span style="font-size: 0.85em;">{{ item.excerpt }}</span></p>
+  <p><span style="font-size: 0.85em;">{{ item.excerpt }}</span></p>
   <a href="{{ item.url | prepend: site.baseurl }}">Read more</a>
 {% endfor %}
 
