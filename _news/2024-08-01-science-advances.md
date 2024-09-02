@@ -1,13 +1,11 @@
 ---
-title: "New paper in Science Advances"
+title: "Genome and life-history evolution link bird diversification to the end-Cretaceous mass extinction"
 date: 2024-08-01
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
 {{ page.date | date: "%B %d, %Y" }} -
-
-<strong>Genome and life-history evolution link bird diversification to the end-Cretaceous mass extinction</strong>
 
 <div style="display: flex; align-items: flex-start;">
   <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/science_advances.jpg" 
