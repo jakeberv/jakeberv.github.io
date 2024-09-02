@@ -40,10 +40,15 @@ header:
       display: none;
     }
     .content-area {
-      width: 100%;
-      margin: 0; /* Remove any margins */
-      padding: 0 15px; /* Optional: Add padding for better readability */
-      box-sizing: border-box; /* Ensure padding is included in the width calculation */
+      width: 100% !important;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .wide-content {
+      margin: 0;
+      padding: 0;
+      width: 100% !important;
     }
   }
 </style>
