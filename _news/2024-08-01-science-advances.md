@@ -16,7 +16,7 @@ excerpt_separator: "<!--news-excerpt-->"
 </div>
 
 <!--news-excerpt-->
-
+<br>
 I've written some additional comments about this work in the twitter thread here:
 
 <div style="display: flex; justify-content: center;">
@@ -32,7 +32,6 @@ I've written some additional comments about this work in the twitter thread here
   </blockquote>
 </div>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 
 <div class="container">
     <div id="thread-header" class="d-flex align-items-center">
@@ -112,67 +111,70 @@ I've written some additional comments about this work in the twitter thread here
 </style>
 
 <script>
-    async function fetchThreadReaderContent() {
-        const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-        const targetUrl = 'https://threadreaderapp.com/thread/1819085303795372413';
-        try {
-            const response = await fetch(proxyUrl + targetUrl);
-            const text = await response.text();
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(text, 'text/html');
+    // Load the Twitter widgets script and wait for it to be ready
+    window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
 
-            const userInfoElement = doc.querySelector('.prof-image').parentElement;
+        t._e = [];
+        t.ready = function(f) {
+            t._e.push(f);
+        };
 
-            const subscribeButton = userInfoElement.querySelector('form');
-            if (subscribeButton) {
-                subscribeButton.remove();
-            }
+        return t;
+    }(document, "script", "twitter-wjs"));
 
-            const userInfo = userInfoElement.innerHTML;
-            const tweets = doc.querySelectorAll('.content-tweet');
+    // Fetch and display the thread content after Twitter widgets are ready
+    window.twttr.ready(function() {
+        async function fetchThreadReaderContent() {
+            const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+            const targetUrl = 'https://threadreaderapp.com/thread/1819085303795372413';
+            try {
+                const response = await fetch(proxyUrl + targetUrl);
+                const text = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(text, 'text/html');
 
-            document.getElementById('thread-header').innerHTML = userInfo;
+                const userInfoElement = doc.querySelector('.prof-image').parentElement;
 
-            let contentHtml = '';
-            tweets.forEach((tweet, index) => {
-                const linkIcon = tweet.querySelector('.tw-permalink');
-                if (linkIcon) {
-                    linkIcon.remove();
+                const subscribeButton = userInfoElement.querySelector('form');
+                if (subscribeButton) {
+                    subscribeButton.remove();
                 }
 
-                contentHtml += `
-                    <div class="content-tweet">
-                        ${tweet.innerHTML}
-                        <div class="tweet-footer">
-                            <span>${index + 1}/${tweets.length}</span>
+                const userInfo = userInfoElement.innerHTML;
+                const tweets = doc.querySelectorAll('.content-tweet');
+
+                document.getElementById('thread-header').innerHTML = userInfo;
+
+                let contentHtml = '';
+                tweets.forEach((tweet, index) => {
+                    const linkIcon = tweet.querySelector('.tw-permalink');
+                    if (linkIcon) {
+                        linkIcon.remove();
+                    }
+
+                    contentHtml += `
+                        <div class="content-tweet">
+                            ${tweet.innerHTML}
+                            <div class="tweet-footer">
+                                <span>${index + 1}/${tweets.length}</span>
+                            </div>
                         </div>
-                    </div>
-                `;
-            });
-            document.getElementById('thread-content').innerHTML = contentHtml;
-
-            window.twttr = (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0],
-                    t = window.twttr || {};
-                if (d.getElementById(id)) return t;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "https://platform.twitter.com/widgets.js";
-                fjs.parentNode.insertBefore(js, fjs);
-
-                t._e = [];
-                t.ready = function(f) {
-                    t._e.push(f);
-                };
-
-                return t;
-            }(document, "script", "twitter-wjs"));
-        } catch (error) {
-            console.error('Error fetching thread:', error);
+                    `;
+                });
+                document.getElementById('thread-content').innerHTML = contentHtml;
+            } catch (error) {
+                console.error('Error fetching thread:', error);
+            }
         }
-    }
 
-    fetchThreadReaderContent();
+        // Call the function to fetch and display the thread content
+        fetchThreadReaderContent();
+    });
 </script>
-
-
