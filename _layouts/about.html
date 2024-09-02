@@ -61,10 +61,24 @@ layout: default
         <!-- Custom CSS to extend the wide-content section -->
         <style>
           .wide-content {
-            width: calc(100% + 200px); /* Adjusts the extension to the right */
-            margin-right: -100px; /* Aligns the content */
+            width: calc(100% + 200px);
+            margin-right: -100px;
           }
 
+          @media (max-width: 768px) {
+            .wide-content {
+              width: 100%;
+              margin-right: 0;
+            }
+            .page__inner-wrap {
+              overflow-x: hidden;
+            }
+            header,
+            .page__title {
+              width: 100vw;
+              box-sizing: border-box;
+            }
+          }
         </style>
 
         {{ content }}
