@@ -58,12 +58,13 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
+        <!-- Custom CSS to extend the wide-content section -->
         <style>
           .wide-content {
             width: calc(100% + 200px);
             margin-right: -100px;
           }
-      
+
           @media (max-width: 768px) {
             .wide-content {
               width: 100%;
@@ -73,29 +74,16 @@ layout: default
               overflow-x: hidden;
             }
             header,
-            .page__title,
-            .page__hero,
-            .header-image img {
+            .page__title {
               width: 100vw;
-              max-width: 100%;
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-            }
-            .masthead,
-            .masthead img {
-              width: 100vw;
-              max-width: 100%;
-              margin: 0;
-              padding: 0;
               box-sizing: border-box;
             }
           }
         </style>
-      
+
         {{ content }}
-      
-        {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label |       default: "Direct Link" }}</a></div>{% endif %}
+
+        {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
       <footer class="page__meta">
