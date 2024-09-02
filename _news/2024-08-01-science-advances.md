@@ -12,7 +12,7 @@ excerpt_separator: "<!--news-excerpt-->"
        onmouseover="this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'" 
        onmouseout="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" 
        alt="Science Advances cover"/>
-  <p>The primary work from Jake's first postdoc is now published as the cover article in Science Advances. In this study, Jake examined how bird genomes evolved after the end-Cretaceous mass extinction 66 million years ago. By analyzing different genetic regions, Jake and his team identified key shifts in DNA sequences linked to changes in development, body size, and metabolism. These findings suggest that the mass extinction played a crucial role in shaping the evolution and early diversification of modern birds.</p>
+  <p style="font-size: 0.85em;">The primary work from Jake's first postdoc is now published as the cover article in Science Advances. In this study, Jake examined how bird genomes evolved after the end-Cretaceous mass extinction 66 million years ago. By analyzing different genetic regions, Jake and his team identified key shifts in DNA sequences linked to changes in development, body size, and metabolism. These findings suggest that the mass extinction played a crucial role in shaping the evolution and early diversification of modern birds.</p>
 </div>
 
 <!--news-excerpt-->
@@ -112,68 +112,70 @@ I've written some additional comments about this work in the twitter thread here
 </style>
 
 <script>
-    window.twttr = (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0],
-            t = window.twttr || {};
-        if (d.getElementById(id)) return t;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://platform.twitter.com/widgets.js";
-        fjs.parentNode.insertBefore(js, fjs);
+    document.addEventListener("DOMContentLoaded", function() {
+        window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
 
-        t._e = [];
-        t.ready = function(f) {
-            t._e.push(f);
-        };
+            t._e = [];
+            t.ready = function(f) {
+                t._e.push(f);
+            };
 
-        return t;
-    }(document, "script", "twitter-wjs"));
+            return t;
+        }(document, "script", "twitter-wjs"));
 
-    window.twttr.ready(function() {
-        async function fetchThreadReaderContent() {
-            const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-            const targetUrl = 'https://threadreaderapp.com/thread/1819085303795372413';
-            try {
-                const response = await fetch(proxyUrl + targetUrl);
-                const text = await response.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(text, 'text/html');
+        window.twttr.ready(function() {
+            async function fetchThreadReaderContent() {
+                const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+                const targetUrl = 'https://threadreaderapp.com/thread/1819085303795372413';
+                try {
+                    const response = await fetch(proxyUrl + targetUrl);
+                    const text = await response.text();
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(text, 'text/html');
 
-                const userInfoElement = doc.querySelector('.prof-image').parentElement;
+                    const userInfoElement = doc.querySelector('.prof-image').parentElement;
 
-                const subscribeButton = userInfoElement.querySelector('form');
-                if (subscribeButton) {
-                    subscribeButton.remove();
-                }
-
-                const userInfo = userInfoElement.innerHTML;
-                const tweets = doc.querySelectorAll('.content-tweet');
-
-                document.getElementById('thread-header').innerHTML = userInfo;
-
-                let contentHtml = '';
-                tweets.forEach((tweet, index) => {
-                    const linkIcon = tweet.querySelector('.tw-permalink');
-                    if (linkIcon) {
-                        linkIcon.remove();
+                    const subscribeButton = userInfoElement.querySelector('form');
+                    if (subscribeButton) {
+                        subscribeButton.remove();
                     }
 
-                    contentHtml += `
-                        <div class="content-tweet">
-                            ${tweet.innerHTML}
-                            <div class="tweet-footer">
-                                <span>${index + 1}/${tweets.length}</span>
-                            </div>
-                        </div>
-                    `;
-                });
-                document.getElementById('thread-content').innerHTML = contentHtml;
-            } catch (error) {
-                console.error('Error fetching thread:', error);
-            }
-        }
+                    const userInfo = userInfoElement.innerHTML;
+                    const tweets = doc.querySelectorAll('.content-tweet');
 
-        fetchThreadReaderContent();
+                    document.getElementById('thread-header').innerHTML = userInfo;
+
+                    let contentHtml = '';
+                    tweets.forEach((tweet, index) => {
+                        const linkIcon = tweet.querySelector('.tw-permalink');
+                        if (linkIcon) {
+                            linkIcon.remove();
+                        }
+
+                        contentHtml += `
+                            <div class="content-tweet">
+                                ${tweet.innerHTML}
+                                <div class="tweet-footer">
+                                    <span>${index + 1}/${tweets.length}</span>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    document.getElementById('thread-content').innerHTML = contentHtml;
+                } catch (error) {
+                    console.error('Error fetching thread:', error);
+                }
+            }
+
+            fetchThreadReaderContent();
+        });
     });
 </script>
 {% endraw %}
