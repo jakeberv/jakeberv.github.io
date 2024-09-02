@@ -32,3 +32,13 @@ I've written some additional comments about this work in the twitter thread here
   </blockquote>
 </div>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<div class="threadreader-wrapper">
+    <div class="threadreader-container" data-threadreader-url="https://threadreaderapp.com/thread/1819085303795372413">
+        <!-- The Thread Reader content will be injected here automatically -->
+    </div>
+</div>
+
+<!-- Include the JS file -->
+<script src="{{ '/assets/js/threadreader-embed.js' | relative_url }}"></script>
