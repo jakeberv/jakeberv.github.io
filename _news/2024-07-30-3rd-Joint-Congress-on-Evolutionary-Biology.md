@@ -9,7 +9,7 @@ excerpt_separator: "<!--news-excerpt-->"
 
 <div style="display: flex; align-items: flex-start;">
   <img src="/images/posts/EVO2024-title.jpg" 
-       style="max-height: 250px; width: auto; max-width: 100%; margin-right: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.2);" 
+       style="max-height: 200px; width: auto; max-width: 100%; margin-right: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.2);" 
        onmouseover="this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'" 
        onmouseout="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" 
        alt="Title slide from Jake's talk"/>
