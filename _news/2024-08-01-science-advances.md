@@ -37,8 +37,8 @@ excerpt_separator: "<!--news-excerpt-->"
 
 
 <!--news-excerpt-->
-<br>
-I've written some additional comments about this work in the twitter thread here:
+<hr>
+See the twitter thread here for additional comments:
 
 <div style="display: flex; justify-content: center;">
   <blockquote class="twitter-tweet" data-theme="light" style="width: 300;">
