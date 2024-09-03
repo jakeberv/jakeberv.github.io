@@ -3,7 +3,6 @@ layout: archive
 title: "Publications"
 permalink: /publications/
 author_profile: true
-read_more: "enabled"
 ---
 
 <figure style="max-width: 100%; display: flex; justify-content: space-between; align-items: center;">

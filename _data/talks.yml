@@ -1,3 +1,12 @@
+- title: "15,000 Skeletons, or How I Learned to Stop Worrying and Love the Phenotype"
+  youtube_id: "i4mPfi5_5wk&t=1735s"
+  description: "Jake attended the 2024 Evolution meeting, where he gave a talk on his research into applications of computer vision to studies of bird skeleton evolution. His talk, titled (in jest) '15,000 Skeletons, or How I Learned to Stop Worrying and Love the Phenotype'."
+  date: "2024-07-30"
+  event: "3rd Joint Congress on Evolutionary Biology"
+  location: "Montreal, QC, Canada"
+  video_id: https://www.youtube.com/watch?v=i4mPfi5_5wk&t=1735s
+  #slides_url: "http://example.com/slides/bird-evolution.pdf"
+
 - title: "Tempo and Mode: Applying Phyogenetic Natural History to Integrate Micro- and Macrovolution"
   youtube_id: "OFiJDjPANNI"
   description: "In this talk, I present research which applies concepts from 'Phylogenetic Natural History' to examine macroevolutionary patterns, integrating across different scientific disciplines. I concentrate on the effects of the end-Cretaceous mass extinction on genome evolution, using data science methods to understand evolutionary changes in surviving species. Specifically, I investigate how shifts in bird development, size, and metabolism correspond to genomic evolution, providing insights into the broader impacts of the end-Cretaceous transition on biodiversity."
