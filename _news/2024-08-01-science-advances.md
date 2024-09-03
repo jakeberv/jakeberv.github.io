@@ -13,14 +13,14 @@ excerpt_separator: "<!--news-excerpt-->"
        onmouseover="this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'" 
        onmouseout="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" 
        alt="Science Advances cover"/>
-  <p style="font-size: 0.85em; margin: 0; flex-grow: 1; align-self: flex-start;">The primary work from Jake's first postdoc is now published as the cover article in Science Advances. In this study, Jake examined how bird genomes evolved after the end-Cretaceous mass extinction 66 million years ago. By analyzing different genetic regions, Jake and his team identified key shifts in DNA sequences linked to changes in development, body size, and metabolism. These findings suggest that the mass extinction played a crucial role in shaping the evolution and early diversification of modern birds.</p>
+  <p style="font-size: 0.85em; margin: 0; flex-grow: 1; align-self: flex-start; text-align: left;">The primary work from Jake's first postdoc is now published as the cover article in Science Advances. In this study, Jake examined how bird genomes evolved after the end-Cretaceous mass extinction 66 million years ago. By analyzing different genetic regions, Jake and his team identified key shifts in DNA sequences linked to changes in development, body size, and metabolism. These findings suggest that the mass extinction played a crucial role in shaping the evolution and early diversification of modern birds.</p>
 </div>
 
 <style>
   @media (max-width: 768px) {
     .flex-container {
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
     }
 
     .flex-container img {
@@ -29,7 +29,7 @@ excerpt_separator: "<!--news-excerpt-->"
     }
 
     .flex-container p {
-      text-align: center;
+      text-align: left;
       width: 100%;
     }
   }
