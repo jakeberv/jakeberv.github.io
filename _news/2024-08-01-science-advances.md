@@ -7,14 +7,34 @@ excerpt_separator: "<!--news-excerpt-->"
 ---
 {{ page.date | date: "%B %d, %Y" }} -
 
-<div style="display: flex; align-items: flex-start;">
+<div class="flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
   <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/science_advances.jpg" 
-       style="max-height: 250px; width: auto; max-width: 100%; margin-right: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.2);" 
+       style="max-height: 250px; width: auto; max-width: 100%; margin-right: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); flex-shrink: 0;" 
        onmouseover="this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'" 
        onmouseout="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" 
        alt="Science Advances cover"/>
-  <p style="font-size: 0.85em;">The primary work from Jake's first postdoc is now published as the cover article in Science Advances. In this study, Jake examined how bird genomes evolved after the end-Cretaceous mass extinction 66 million years ago. By analyzing different genetic regions, Jake and his team identified key shifts in DNA sequences linked to changes in development, body size, and metabolism. These findings suggest that the mass extinction played a crucial role in shaping the evolution and early diversification of modern birds.</p>
+  <p style="font-size: 0.85em; margin: 0; flex-basis: 100%; flex-grow: 1;">The primary work from Jake's first postdoc is now published as the cover article in Science Advances. In this study, Jake examined how bird genomes evolved after the end-Cretaceous mass extinction 66 million years ago. By analyzing different genetic regions, Jake and his team identified key shifts in DNA sequences linked to changes in development, body size, and metabolism. These findings suggest that the mass extinction played a crucial role in shaping the evolution and early diversification of modern birds.</p>
 </div>
+
+<style>
+  @media (max-width: 768px) {
+    .flex-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .flex-container img {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    .flex-container p {
+      text-align: center;
+      width: 100%;
+    }
+  }
+</style>
+
 
 <!--news-excerpt-->
 <br>
