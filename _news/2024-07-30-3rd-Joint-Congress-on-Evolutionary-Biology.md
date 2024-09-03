@@ -7,13 +7,13 @@ excerpt_separator: "<!--news-excerpt-->"
 ---
 {{ page.date | date: "%B %d, %Y" }} -
 
-<div style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+<div class="flex-container" style="display: flex; align-items: flex-start;">
   <img src="/images/posts/EVO2024-title.jpg" 
        style="max-height: 200px; width: auto; max-width: 100%; margin-right: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); flex-shrink: 0;" 
        onmouseover="this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'" 
        onmouseout="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" 
        alt="Title slide from Jake's talk"/>
-  <p style="font-size: 0.85em; margin: 0; flex-basis: 100%; flex-grow: 1;">Jake attended the 3rd Joint Congress on Evolutionary Biology in Montreal, QC, Canada, where he gave a talk on his research into applications of computer vision to studies of bird skeleton evolution. His talk, titled (in jest) '15,000 Skeletons, or How I Learned to Stop Worrying and Love the Phenotype', was recorded and is available on YouTube <a href="https://www.youtube.com/watch?v=i4mPfi5_5wk&t=1735s">here</a></p>
+  <p style="font-size: 0.85em; margin: 0; flex-grow: 1; align-self: flex-start;">Jake attended the 3rd Joint Congress on Evolutionary Biology in Montreal, QC, Canada, where he gave a talk on his research into applications of computer vision to studies of bird skeleton evolution. His talk, titled (in jest) '15,000 Skeletons, or How I Learned to Stop Worrying and Love the Phenotype', was recorded and is available on YouTube <a href="https://www.youtube.com/watch?v=i4mPfi5_5wk&t=1735s">here</a></p>
 </div>
 
 <style>
@@ -34,6 +34,7 @@ excerpt_separator: "<!--news-excerpt-->"
     }
   }
 </style>
+
 
 
 <!--news-excerpt-->
