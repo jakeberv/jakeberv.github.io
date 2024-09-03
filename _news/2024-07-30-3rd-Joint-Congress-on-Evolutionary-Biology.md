@@ -1,6 +1,6 @@
 ---
 title: "3rd Joint Congress on Evolutionary Biology"
-date: 2024-08-01
+date: 2024-07-30
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
