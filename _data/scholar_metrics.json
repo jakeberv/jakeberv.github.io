@@ -4,18 +4,18 @@
     "email_domain": "@umich.edu",
     "h_index": 11,
     "i10_index": 11,
-    "citations": 2230,
+    "citations": 2237,
     "cites_per_year": {
         "2015": 13,
         "2016": 104,
         "2017": 206,
         "2018": 213,
         "2019": 270,
-        "2020": 296,
-        "2021": 308,
+        "2020": 298,
+        "2021": 309,
         "2022": 307,
         "2023": 252,
-        "2024": 219
+        "2024": 223
     },
     "interests": [
         "Speciation",
@@ -322,7 +322,7 @@
     "publications": [
         {
             "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-            "citations": 1649,
+            "citations": 1655,
             "year": 2015,
             "venue": "N/A",
             "url": "https://www.nature.com/articles/nature15697"
@@ -343,7 +343,7 @@
         },
         {
             "title": "An inverse latitudinal gradient in infection probability and phylogenetic diversity for Leucocytozoon blood parasites in New World birds",
-            "citations": 86,
+            "citations": 87,
             "year": 2020,
             "venue": "N/A",
             "url": "https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/1365-2656.13117"
