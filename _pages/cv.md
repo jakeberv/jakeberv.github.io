@@ -7,7 +7,7 @@ redirect_from:
   - /resume
 ---
 
-You can download a PDF copy of my CV [here](/files/pdf/BERV_10_24_23.pdf).
+You can download a PDF copy of my CV [here](/files/pdf/BERV_10_07_24.pdf).
 
 <head>
   <style>
@@ -27,6 +27,6 @@ You can download a PDF copy of my CV [here](/files/pdf/BERV_10_24_23.pdf).
 </head>
 <body>
   <div style="overflow: auto;">
-    <iframe src="/files/pdf/BERV_10_24_23.pdf" height="500" frameborder="no" border="0" marginwidth="0" marginheight="0"></iframe>
+    <iframe src="/files/pdf/BERV_10_07_24.pdf" height="500" frameborder="no" border="0" marginwidth="0" marginheight="0"></iframe>
   </div>
 </body>
