@@ -4,7 +4,7 @@
     "email_domain": "@umich.edu",
     "h_index": 11,
     "i10_index": 11,
-    "citations": 2237,
+    "citations": 2244,
     "cites_per_year": {
         "2015": 13,
         "2016": 104,
@@ -15,7 +15,7 @@
         "2021": 309,
         "2022": 307,
         "2023": 252,
-        "2024": 223
+        "2024": 230
     },
     "interests": [
         "Speciation",
@@ -322,7 +322,7 @@
     "publications": [
         {
             "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-            "citations": 1655,
+            "citations": 1659,
             "year": 2015,
             "venue": "N/A",
             "url": "https://www.nature.com/articles/nature15697"
@@ -350,7 +350,7 @@
         },
         {
             "title": "Complex coevolution of wing, tail, and vocal sounds of courting male bee hummingbirds",
-            "citations": 46,
+            "citations": 47,
             "year": 2018,
             "venue": "N/A",
             "url": "https://academic.oup.com/evolut/article-abstract/72/3/630/6726732"
@@ -371,7 +371,7 @@
         },
         {
             "title": "Genomic phylogeography of the White-crowned Manakin Pseudopipra pipra (Aves: Pipridae) illuminates a continental-scale radiation out of the Andes",
-            "citations": 27,
+            "citations": 28,
             "year": 2021,
             "venue": "N/A",
             "url": "https://www.sciencedirect.com/science/article/pii/S105579032100138X"
@@ -385,7 +385,7 @@
         },
         {
             "title": "Recent divergence and lack of shared phylogeographic history characterize the diversification of neotropical savanna birds",
-            "citations": 17,
+            "citations": 18,
             "year": 2021,
             "venue": "N/A",
             "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/jbi.14065"
