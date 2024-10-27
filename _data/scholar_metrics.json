@@ -4,7 +4,7 @@
     "email_domain": "@umich.edu",
     "h_index": 11,
     "i10_index": 11,
-    "citations": 2256,
+    "citations": 2260,
     "cites_per_year": {
         "2015": 13,
         "2016": 105,
@@ -13,9 +13,9 @@
         "2019": 270,
         "2020": 298,
         "2021": 310,
-        "2022": 308,
-        "2023": 254,
-        "2024": 237
+        "2022": 309,
+        "2023": 253,
+        "2024": 240
     },
     "interests": [
         "Speciation",
@@ -166,6 +166,11 @@
             "scholar_id": "5wcNxu0AAAAJ"
         },
         {
+            "name": "Jonathan Hughes",
+            "affiliation": "Postdoctoral Researcher, UC Riverside",
+            "scholar_id": "awBFtXsAAAAJ"
+        },
+        {
             "name": "Michael Landis",
             "affiliation": "Assistant Professor at Washington University in St. Louis",
             "scholar_id": "LxPnTjYAAAAJ"
@@ -179,11 +184,6 @@
             "name": "Robert Lanfear",
             "affiliation": "Professor, Australian National University",
             "scholar_id": "Se6txrMAAAAJ"
-        },
-        {
-            "name": "Jonathan Hughes",
-            "affiliation": "Postdoctoral Researcher, UC Riverside",
-            "scholar_id": "awBFtXsAAAAJ"
         },
         {
             "name": "Benjamin M. Winger",
@@ -221,14 +221,14 @@
             "scholar_id": "Pb0WwvUAAAAJ"
         },
         {
-            "name": "Valentina G\u00f3mez-Baham\u00f3n",
-            "affiliation": "Virginia Tech",
-            "scholar_id": "QCVlwlsAAAAJ"
-        },
-        {
             "name": "Eric J. Sargis",
             "affiliation": "Professor, Yale University; Curator, Yale Peabody Museum",
             "scholar_id": "pk0CYUsAAAAJ"
+        },
+        {
+            "name": "Valentina G\u00f3mez-Baham\u00f3n",
+            "affiliation": "Virginia Tech",
+            "scholar_id": "QCVlwlsAAAAJ"
         },
         {
             "name": "Stephen GB Chester",
@@ -322,14 +322,14 @@
     "publications": [
         {
             "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-            "citations": 1665,
+            "citations": 1667,
             "year": 2015,
             "venue": "N/A",
             "url": "https://www.nature.com/articles/nature15697"
         },
         {
             "title": "Early evolution of modern birds structured by global forest collapse at the end-Cretaceous mass extinction",
-            "citations": 161,
+            "citations": 162,
             "year": 2018,
             "venue": "N/A",
             "url": "https://www.cell.com/current-biology/fulltext/S0960-9822(18)30534-7"
@@ -384,18 +384,18 @@
             "url": "https://academic.oup.com/auk/article-abstract/132/1/248/5149205"
         },
         {
+            "title": "Ecological selectivity and the evolution of mammalian substrate preference across the K\u2013Pg boundary",
+            "citations": 18,
+            "year": 2021,
+            "venue": "N/A",
+            "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ece3.8114"
+        },
+        {
             "title": "Recent divergence and lack of shared phylogeographic history characterize the diversification of neotropical savanna birds",
             "citations": 18,
             "year": 2021,
             "venue": "N/A",
             "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/jbi.14065"
-        },
-        {
-            "title": "Ecological selectivity and the evolution of mammalian substrate preference across the K\u2013Pg boundary",
-            "citations": 17,
-            "year": 2021,
-            "venue": "N/A",
-            "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ece3.8114"
         },
         {
             "title": "Genome and life-history evolution link bird diversification to the end-Cretaceous mass extinction",
@@ -423,7 +423,7 @@
             "citations": 0,
             "year": 2023,
             "venue": "N/A",
-            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10491188/"
+            "url": "https://www.biorxiv.org/content/10.1101/2023.08.28.555178.abstract"
         },
         {
             "title": "CRAN Task View: Phylogenetics.",
