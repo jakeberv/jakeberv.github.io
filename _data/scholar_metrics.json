@@ -4,18 +4,18 @@
     "email_domain": "@umich.edu",
     "h_index": 11,
     "i10_index": 11,
-    "citations": 2280,
+    "citations": 2300,
     "cites_per_year": {
         "2015": 13,
         "2016": 105,
-        "2017": 208,
+        "2017": 207,
         "2018": 212,
         "2019": 272,
-        "2020": 298,
-        "2021": 310,
-        "2022": 308,
-        "2023": 252,
-        "2024": 258
+        "2020": 300,
+        "2021": 308,
+        "2022": 309,
+        "2023": 254,
+        "2024": 275
     },
     "interests": [
         "Speciation",
@@ -26,14 +26,14 @@
     ],
     "coauthors": [
         {
+            "name": "Daniel J. Field",
+            "affiliation": "Professor of Vertebrate Palaeontology & Strickland Curator of Ornithology, University of Cambridge",
+            "scholar_id": "oxSZWaEAAAAJ"
+        },
+        {
             "name": "Richard O. Prum",
             "affiliation": "Yale University",
             "scholar_id": "PrtHleIAAAAJ"
-        },
-        {
-            "name": "Daniel J. Field",
-            "affiliation": "Professor of Vertebrate Palaeontology & Strickland Curator of Ornithology, University of \u2026",
-            "scholar_id": "oxSZWaEAAAAJ"
         },
         {
             "name": "alex dornburg",
@@ -82,7 +82,7 @@
         },
         {
             "name": "Tyler Lyson",
-            "affiliation": "Curator of Vertebrate Paleontology, Dept. of Earth Sciences, Denver Museum of Nature and \u2026",
+            "affiliation": "Curator of Vertebrate Paleontology, Dept. of Earth Sciences, Denver Museum of Nature and Science",
             "scholar_id": "vSG9jpgAAAAJ"
         },
         {
@@ -117,208 +117,13 @@
         },
         {
             "name": "Jason D. Weckstein",
-            "affiliation": "Associate Curator, Ornithology Department, Academy of Natural Sciences and Associate \u2026",
+            "affiliation": "Associate Curator, Ornithology Department, Academy of Natural Sciences and Associate Professor,",
             "scholar_id": "VYFI2fQAAAAJ"
         },
         {
             "name": "Nicholas J Clark",
             "affiliation": "University of Queensland",
             "scholar_id": "5bO9uxEAAAAJ"
-        },
-        {
-            "name": "Vasyl Tkach",
-            "affiliation": "Chester Fritz Distinguished Professor of Biology, University of North Dakota",
-            "scholar_id": "Ae0KZEUAAAAJ"
-        },
-        {
-            "name": "Spencer C. Galen",
-            "affiliation": "University of Scranton",
-            "scholar_id": "3ELcXGwAAAAJ"
-        },
-        {
-            "name": "Jeffrey Bell",
-            "affiliation": "University of North Dakota",
-            "scholar_id": "t71puqEAAAAJ"
-        },
-        {
-            "name": "Daniel Gonz\u00e1lez Acu\u00f1a",
-            "affiliation": "Universidad de Concepci\u00f3n",
-            "scholar_id": "eYoZV6cAAAAJ"
-        },
-        {
-            "name": "Victor R. Cueto",
-            "affiliation": "CIEMEP (CONICET & UNPSJB)",
-            "scholar_id": "qfvfHd0AAAAJ"
-        },
-        {
-            "name": "Irby Lovette",
-            "affiliation": "Fuller Professor of Ornithology, Cornell University",
-            "scholar_id": "Vi0LoiAAAAAJ"
-        },
-        {
-            "name": "Elisa Bonaccorso",
-            "affiliation": "Colegio de Ciencias Biol\u00f3gicas y Ambientales, Universidad San Francisco de Quito",
-            "scholar_id": "vfgVDMsAAAAJ"
-        },
-        {
-            "name": "Jimmy A McGuire",
-            "affiliation": "Professor of Integrative Biology, UC Berkeley",
-            "scholar_id": "5wcNxu0AAAAJ"
-        },
-        {
-            "name": "Jonathan Hughes",
-            "affiliation": "Postdoctoral Researcher, UC Riverside",
-            "scholar_id": "awBFtXsAAAAJ"
-        },
-        {
-            "name": "Michael Landis",
-            "affiliation": "Assistant Professor at Washington University in St. Louis",
-            "scholar_id": "LxPnTjYAAAAJ"
-        },
-        {
-            "name": "Allison Hsiang",
-            "affiliation": "Researcher, Stockholm University",
-            "scholar_id": "3D-4Dn8AAAAJ"
-        },
-        {
-            "name": "Robert Lanfear",
-            "affiliation": "Professor, Australian National University",
-            "scholar_id": "Se6txrMAAAAJ"
-        },
-        {
-            "name": "Benjamin M. Winger",
-            "affiliation": "Associate Professor of Ecology and Evolutionary Biology, University of Michigan",
-            "scholar_id": "C61BipSii0wC"
-        },
-        {
-            "name": "Leonardo Campagna",
-            "affiliation": "Cornell Lab of Ornithology",
-            "scholar_id": "PtLhs74AAAAJ"
-        },
-        {
-            "name": "Jacob M. Musser",
-            "affiliation": "Yale University",
-            "scholar_id": "T90NSF0AAAAJ"
-        },
-        {
-            "name": "Eric J. Sargis",
-            "affiliation": "Professor, Yale University; Curator, Yale Peabody Museum",
-            "scholar_id": "pk0CYUsAAAAJ"
-        },
-        {
-            "name": "Stephen GB Chester",
-            "affiliation": "Associate Professor, Brooklyn College, City University of New York",
-            "scholar_id": "To56C4YAAAAJ"
-        },
-        {
-            "name": "Alexandre Aleixo",
-            "affiliation": "Instituto Tecnol\u00f3gico Vale",
-            "scholar_id": "XpyI2wYAAAAJ"
-        },
-        {
-            "name": "Lucas Rocha Moreira",
-            "affiliation": "Postdoctoral fellow at the Broad Institute of Harvard and MIT",
-            "scholar_id": "s0q58G8AAAAJ"
-        },
-        {
-            "name": "Eugenia Zarza",
-            "affiliation": "El Colegio de la Frontera Sur - CONACYT",
-            "scholar_id": "3CduKNgAAAAJ"
-        },
-        {
-            "name": "Paul van Els",
-            "affiliation": "Dutch Centre for Field Ornithology",
-            "scholar_id": "Pb0WwvUAAAAJ"
-        },
-        {
-            "name": "Valentina G\u00f3mez-Baham\u00f3n",
-            "affiliation": "Virginia Tech",
-            "scholar_id": "QCVlwlsAAAAJ"
-        },
-        {
-            "name": "Nathanael Walker-Hale",
-            "affiliation": "Postdoctoral Research Associate, Department of Biosciences, Durham University",
-            "scholar_id": "SeRf_xAAAAAJ"
-        },
-        {
-            "name": "J Ryan Shipley",
-            "affiliation": "Swiss Federal Research Institute WSL",
-            "scholar_id": "3z5nlGUAAAAJ"
-        },
-        {
-            "name": "Eliot Miller",
-            "affiliation": "American Bird Conservancy",
-            "scholar_id": "uTONo4MAAAAJ"
-        },
-        {
-            "name": "Matt Friedman",
-            "affiliation": "Museum of Paleontology, Department of Earth and Environmental Sciences, University of \u2026",
-            "scholar_id": "4d4zhI8AAAAJ"
-        },
-        {
-            "name": "Stephen A. Smith",
-            "affiliation": "Professor, University of Michigan",
-            "scholar_id": "gVwJZpAAAAAJ"
-        },
-        {
-            "name": "Edward L. Braun",
-            "affiliation": "Professor of Biology, University of Florida",
-            "scholar_id": "31XPDbYAAAAJ"
-        },
-        {
-            "name": "Rebecca Kimball",
-            "affiliation": "Professor of Biology, University of Florida",
-            "scholar_id": "zQPuErkAAAAJ"
-        },
-        {
-            "name": "Sonal Singhal",
-            "affiliation": "Associate Professor, CSU Dominguez Hills",
-            "scholar_id": "hGRmhQkAAAAJ"
-        },
-        {
-            "name": "Sean McHugh",
-            "affiliation": "Washington University in St. Louis",
-            "scholar_id": "1fdBsg8AAAAJ"
-        },
-        {
-            "name": "C. Tomomi Parins-Fukuchi",
-            "affiliation": "University of Toronto",
-            "scholar_id": "WhHTPMQAAAAJ"
-        },
-        {
-            "name": "Eric R. Gulson-Castillo",
-            "affiliation": "Postdoctoral Associate, Yale University",
-            "scholar_id": "lWPHsioAAAAJ"
-        },
-        {
-            "name": "Teresa Pegan",
-            "affiliation": "University of Michigan",
-            "scholar_id": "7XYBoHEAAAAJ"
-        },
-        {
-            "name": "Abigail A. Kimmitt",
-            "affiliation": "Hofstra University",
-            "scholar_id": "j7OsXOwAAAAJ"
-        },
-        {
-            "name": "William Gearty",
-            "affiliation": "Postdoctoral Researcher, Syracuse University",
-            "scholar_id": "HWV1c2UAAAAJ"
-        },
-        {
-            "name": "Mia Levine",
-            "affiliation": "University of Pennsylvania",
-            "scholar_id": "Pt4QxysAAAAJ"
-        },
-        {
-            "name": "Gregg WC Thomas",
-            "affiliation": "Bioinformatics Scientist, Harvard University",
-            "scholar_id": "4pydfEUAAAAJ"
-        },
-        {
-            "name": "Carla Suertegaray Fontana",
-            "affiliation": "UFRGS-Centro de Ecologia",
-            "scholar_id": "_xxcGZwAAAAJ"
         }
     ],
     "profile_picture": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=cQQaGZQAAAAJ&citpid=1",
@@ -328,11 +133,11 @@
         "available": 10,
         "not_available": 0
     },
-    "total_publications": 19,
+    "total_publications": 21,
     "publications": [
         {
             "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-            "citations": 1677,
+            "citations": 1696,
             "year": 2015,
             "venue": "N/A",
             "url": "https://www.nature.com/articles/nature15697"
@@ -346,7 +151,7 @@
         },
         {
             "title": "Genomic signature of an avian Lilliput effect across the K-Pg extinction",
-            "citations": 115,
+            "citations": 116,
             "year": 2018,
             "venue": "N/A",
             "url": "https://academic.oup.com/sysbio/article-abstract/67/1/1/3960267"
@@ -356,7 +161,7 @@
             "citations": 90,
             "year": 2020,
             "venue": "N/A",
-            "url": "https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/1365-2656.13117"
+            "url": "N/A"
         },
         {
             "title": "Complex coevolution of wing, tail, and vocal sounds of courting male bee hummingbirds",
@@ -367,10 +172,10 @@
         },
         {
             "title": "A comprehensive multilocus phylogeny of the Neotropical cotingas (Cotingidae, Aves) with a comparative evolutionary analysis of breeding system and plumage dimorphism and a revised phylogenetic classification",
-            "citations": 46,
+            "citations": 45,
             "year": 2014,
             "venue": "N/A",
-            "url": "https://www.sciencedirect.com/science/article/pii/S1055790314003133"
+            "url": "N/A"
         },
         {
             "title": "Timing the extant avian radiation: the rise of modern birds, and the importance of modeling molecular rate variation",
@@ -381,10 +186,10 @@
         },
         {
             "title": "Genomic phylogeography of the White-crowned Manakin Pseudopipra pipra (Aves: Pipridae) illuminates a continental-scale radiation out of the Andes",
-            "citations": 29,
+            "citations": 30,
             "year": 2021,
             "venue": "N/A",
-            "url": "https://www.sciencedirect.com/science/article/pii/S105579032100138X"
+            "url": "N/A"
         },
         {
             "title": "Divergence in morphology, calls, song, mechanical sounds, and genetics supports species status for the Inaguan hummingbird (Trochilidae: Calliphlox \u201cevelynae\u201d lyrura)",
@@ -398,7 +203,7 @@
             "citations": 19,
             "year": 2021,
             "venue": "N/A",
-            "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ece3.8114"
+            "url": "N/A"
         },
         {
             "title": "Recent divergence and lack of shared phylogeographic history characterize the diversification of neotropical savanna birds",
@@ -412,7 +217,7 @@
             "citations": 6,
             "year": 2024,
             "venue": "N/A",
-            "url": "https://www.science.org/doi/abs/10.1126/sciadv.adp0114"
+            "url": "N/A"
         },
         {
             "title": "The pace of mitochondrial molecular evolution varies with seasonal migration distance",
@@ -426,7 +231,7 @@
             "citations": 1,
             "year": 2024,
             "venue": "N/A",
-            "url": "https://mirror.truenetwork.ru/CRAN/web/views/Phylogenetics.html"
+            "url": "N/A"
         },
         {
             "title": "The genomic landscape, causes, and consequences of extensive phylogenomic discordance in Old World mice and rats",
@@ -434,6 +239,13 @@
             "year": 2023,
             "venue": "N/A",
             "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10491188/"
+        },
+        {
+            "title": "Variable patterns of phenotypic evolution among canonical'living fossil'lineages",
+            "citations": 0,
+            "year": 2024,
+            "venue": "N/A",
+            "url": "N/A"
         },
         {
             "title": "Acknowledgment to Reviewers of Birds in 2021",
@@ -447,7 +259,7 @@
             "citations": 0,
             "year": 2020,
             "venue": "N/A",
-            "url": "https://digitallibrary.amnh.org/handle/2246/7237"
+            "url": "N/A"
         },
         {
             "title": "Peer Review Report For: The deep(er) roots of Eukaryotes and Akaryotes [version 1; peer review: 1 approved, 1 approved with reservations, 1 not approved]",
@@ -461,7 +273,14 @@
             "citations": 0,
             "year": 2019,
             "venue": "N/A",
-            "url": "https://search.proquest.com/openview/0944ba11c7dc9bdbfd11748cb2de4cfa/1?pq-origsite=gscholar&cbl=18750&diss=y"
+            "url": "N/A"
+        },
+        {
+            "title": "Genomic Signature of the Lilliput Effect across the K/pg Extinction",
+            "citations": 0,
+            "year": 2016,
+            "venue": "N/A",
+            "url": "https://ui.adsabs.harvard.edu/abs/2016GSAA...4887815B/abstract"
         }
     ]
 }
