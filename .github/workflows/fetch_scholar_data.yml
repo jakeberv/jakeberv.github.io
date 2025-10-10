@@ -1,8 +1,9 @@
+# .github/workflows/fetch-scholar-metrics.yml
 name: Fetch Google Scholar Metrics
 
 on:
   schedule:
-    - cron: '0 0 * * 0'  # weekly Sunday at 00:00 UTC
+    - cron: '0 0 * * 0'  # weekly Sunday 00:00 UTC
   workflow_dispatch:
 
 permissions:
@@ -14,30 +15,54 @@ env:
   REQUIRE_FREE_PROXY: "1"
   MAX_PUBS: "50"
   CRAWL_DELAY: "2"
+  AUTHOR_FETCH_RETRIES: "20"
 
 jobs:
   fetch-data:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
+      # Optional: speed up installs between runs
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: ${{ runner.os }}-pip-
+
       - name: Set up Python 3.12
         uses: actions/setup-python@v4
         with:
           python-version: '3.12'
+          cache: 'pip'
 
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
           pip install scholarly==1.7.11 "httpx[socks]==0.23.0"
 
-      - name: Run the Python script
-        run: python fetch_scholar_metrics.py
+      - name: Run the Python script (with retry)
+        run: |
+          set -e
+          for i in 1 2 3; do
+            echo "Attempt $i/3..."
+            if python fetch_scholar_metrics.py; then
+              echo "Success on attempt $i"
+              exit 0
+            fi
+            echo "Attempt $i failed. Backing off..."
+            sleep $((60 * i))   # 60s, 120s, 180s
+          done
+          echo "All attempts failed."
+          exit 1
 
       - name: Commit and push changes
+        if: ${{ success() }}
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
