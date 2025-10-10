@@ -1,4 +1,3 @@
-# fetch_scholar_metrics.py
 from scholarly import scholarly, ProxyGenerator
 import json
 import os
@@ -6,21 +5,18 @@ import time
 from pathlib import Path
 from typing import Optional, Dict, Any
 
-# ---------- Configuration (env-overridable) ----------
+# ---------- Configuration ----------
 SCHOLAR_ID = os.getenv("SCHOLAR_ID", "cQQaGZQAAAAJ")
-REQUIRE_FREE_PROXY = os.getenv("REQUIRE_FREE_PROXY", "1").strip() not in ("0", "false", "False", "")
+REQUIRE_FREE_PROXY = os.getenv("REQUIRE_FREE_PROXY", "1").strip().lower() not in ("0", "false", "no")
 MAX_PUB_RETRIES = 3
 PROXY_INIT_RETRIES = 5
-CRAWL_DELAY = float(os.getenv("CRAWL_DELAY", "2"))  # polite delay between requests (seconds)
-MAX_PUBS = int(os.getenv("MAX_PUBS", "12"))         # limit pubs per run to reduce rate limiting
+CRAWL_DELAY = float(os.getenv("CRAWL_DELAY", "2"))
+MAX_PUBS = int(os.getenv("MAX_PUBS", "12"))
 OUT_PATH = Path("_data/scholar_metrics.json")
 
-# ---------- Proxy setup (FreeProxies with retries) ----------
+
+# ---------- Proxy Handling ----------
 def init_free_proxy(max_attempts: int = PROXY_INIT_RETRIES) -> Optional[ProxyGenerator]:
-    """
-    Try to obtain a free proxy several times. These often fail or are rate-limited.
-    Returns the configured ProxyGenerator on success, else None (no proxy).
-    """
     for attempt in range(1, max_attempts + 1):
         try:
             print(f"[proxy] Attempt {attempt}/{max_attempts} to fetch free proxies...")
@@ -34,15 +30,12 @@ def init_free_proxy(max_attempts: int = PROXY_INIT_RETRIES) -> Optional[ProxyGen
                 print("[proxy] ❌ FreeProxies() returned False.")
         except Exception as e:
             print(f"[proxy] ❌ Exception during FreeProxies(): {e}")
-        # Exponential backoff (caps at 10s to keep runs timely)
         time.sleep(min(10, 2 * attempt))
     print("[proxy] ⚠️ Could not obtain a working free proxy after retries.")
     return None
 
+
 def switch_proxy(pg_holder: Dict[str, Optional[ProxyGenerator]]) -> None:
-    """
-    Try to switch to a new free proxy. If none are available, keep the current one.
-    """
     print("[proxy] Switching proxy...")
     new_pg = init_free_proxy(max_attempts=3)
     if new_pg is not None:
@@ -50,11 +43,9 @@ def switch_proxy(pg_holder: Dict[str, Optional[ProxyGenerator]]) -> None:
     else:
         print("[proxy] ⚠️ Could not obtain a new proxy; keeping existing.")
 
-# ---------- Data fetch helpers ----------
+
+# ---------- Publication Fetch ----------
 def fetch_publication_details(pub: Dict[str, Any], pg_holder: Dict[str, Optional[ProxyGenerator]]) -> Optional[Dict[str, Any]]:
-    """
-    Fill a single publication with retries and exponential backoff.
-    """
     for attempt in range(1, MAX_PUB_RETRIES + 1):
         try:
             filled = scholarly.fill(pub)
@@ -72,8 +63,18 @@ def fetch_publication_details(pub: Dict[str, Any], pg_holder: Dict[str, Optional
     print("[error] giving up on a publication after retries.")
     return None
 
-def ensure_outdir():
-    OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+
+# ---------- Safe Save ----------
+def ensure_outdir_safe():
+    """Create _data only if missing. Do nothing if it exists."""
+    if OUT_PATH.parent.exists():
+        if not OUT_PATH.parent.is_dir():
+            raise RuntimeError(f"[fatal] {OUT_PATH.parent} exists but is not a directory.")
+        print(f"[info] Data folder {OUT_PATH.parent} exists — leaving it untouched.")
+    else:
+        print(f"[info] Creating data folder {OUT_PATH.parent}")
+        OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+
 
 # ---------- Main ----------
 def main() -> int:
@@ -81,30 +82,25 @@ def main() -> int:
     print(f"[info] REQUIRE_FREE_PROXY={REQUIRE_FREE_PROXY}")
     print(f"[info] MAX_PUBS={MAX_PUBS}, CRAWL_DELAY={CRAWL_DELAY}s")
 
-    # Set up free proxy (best-effort)
     pg_holder = {"pg": init_free_proxy()}
 
-    # Enforce 'must use a free proxy' if configured
     if REQUIRE_FREE_PROXY and pg_holder["pg"] is None:
         print("[fatal] No free proxy could be configured and REQUIRE_FREE_PROXY=1. Exiting.")
         return 2
 
-    # If proxy is optional and none was found, proceed without proxy
     if not REQUIRE_FREE_PROXY and pg_holder["pg"] is None:
         scholarly.use_proxy(None)
         print("[proxy] Proceeding without proxy (REQUIRE_FREE_PROXY=0).")
 
-    # Fetch author basics and publication list
+    # Fetch author
     try:
         author = scholarly.search_author_id(SCHOLAR_ID)
         try:
-            # Preferred: request specific sections
             author = scholarly.fill(
                 author,
                 sections=["basics", "indices", "coauthors", "counts", "publications", "public_access"],
             )
         except Exception as e:
-            # Fallback: let scholarly decide defaults if section names/version mismatch
             print(f"[warn] fill(sections=...) failed ({e}); falling back to default fill()")
             author = scholarly.fill(author)
         print(f"[info] Fetched author: {author.get('name', 'Unknown')}")
@@ -112,7 +108,7 @@ def main() -> int:
         print(f"[fatal] Error fetching author data: {e}")
         return 1
 
-    # Iterate publications with throttling and optional cap
+    # Publications
     publications_data = []
     pubs = author.get("publications", []) or []
     if MAX_PUBS > 0:
@@ -123,10 +119,9 @@ def main() -> int:
         details = fetch_publication_details(pub, pg_holder)
         if details:
             publications_data.append(details)
-        # polite delay between requests to reduce blocking
         time.sleep(CRAWL_DELAY)
 
-    # Build final JSON
+    # Final data
     scholar_data = {
         "name": author.get("name", "N/A"),
         "affiliation": author.get("affiliation", "N/A"),
@@ -155,12 +150,11 @@ def main() -> int:
         "proxy_mode": "free" if pg_holder["pg"] else "none",
     }
 
-    # Debug print
     print(json.dumps(scholar_data, indent=2))
 
-    # Save
+    # Save safely without touching existing folder
     try:
-        ensure_outdir()
+        ensure_outdir_safe()
         with OUT_PATH.open("w", encoding="utf-8") as f:
             json.dump(scholar_data, f, indent=2, ensure_ascii=False)
         print(f"[info] Saved to {OUT_PATH}")
@@ -169,6 +163,7 @@ def main() -> int:
         return 1
 
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())

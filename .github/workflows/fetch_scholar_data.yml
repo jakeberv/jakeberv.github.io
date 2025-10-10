@@ -1,4 +1,3 @@
-# .github/workflows/fetch-scholar-metrics.yml
 name: Fetch Google Scholar Metrics
 
 on:
@@ -11,11 +10,10 @@ permissions:
 
 env:
   PYTHONUNBUFFERED: "1"
-  # Runtime config (tweak as needed)
-  SCHOLAR_ID: "cQQaGZQAAAAJ"  # your Google Scholar ID
-  REQUIRE_FREE_PROXY: "1"      # fail the run if a free proxy can't be set
-  MAX_PUBS: "12"               # cap publications per run (helps with rate limits)
-  CRAWL_DELAY: "2"             # seconds to sleep between publication fetches
+  SCHOLAR_ID: "cQQaGZQAAAAJ"
+  REQUIRE_FREE_PROXY: "1"
+  MAX_PUBS: "12"
+  CRAWL_DELAY: "2"
 
 jobs:
   fetch-data:
@@ -26,7 +24,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up Python 3.12 (required for httpx 0.23 + scholarly)
+      - name: Set up Python 3.12
         uses: actions/setup-python@v4
         with:
           python-version: '3.12'
