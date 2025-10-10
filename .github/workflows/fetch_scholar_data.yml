@@ -3,7 +3,7 @@ name: Fetch Google Scholar Metrics
 
 on:
   schedule:
-    - cron: '0 0 * * 0'  # weekly Sunday 00:00 UTC
+    - cron: '0 0 * * 0'
   workflow_dispatch:
 
 permissions:
@@ -20,26 +20,16 @@ env:
 jobs:
   fetch-data:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # Optional: speed up installs between runs
-      - name: Cache pip
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: ${{ runner.os }}-pip-
-
       - name: Set up Python 3.12
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12'
-          cache: 'pip'
+          python-version: '3.12'         # <-- no cache
 
       - name: Install Python dependencies
         run: |
@@ -56,7 +46,7 @@ jobs:
               exit 0
             fi
             echo "Attempt $i failed. Backing off..."
-            sleep $((60 * i))   # 60s, 120s, 180s
+            sleep $((60 * i))
           done
           echo "All attempts failed."
           exit 1
