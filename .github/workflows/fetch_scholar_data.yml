@@ -1,35 +1,48 @@
+# .github/workflows/fetch-scholar-metrics.yml
 name: Fetch Google Scholar Metrics
 
 on:
   schedule:
-    - cron: '0 0 * * 0'  # Runs weekly on Sunday at midnight
-  workflow_dispatch:  # Allows manual triggering
+    - cron: '0 0 * * 0'  # weekly Sunday at 00:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  PYTHONUNBUFFERED: "1"
+  # Runtime config (tweak as needed)
+  SCHOLAR_ID: "cQQaGZQAAAAJ"  # your Google Scholar ID
+  REQUIRE_FREE_PROXY: "1"      # fail the run if a free proxy can't be set
+  MAX_PUBS: "12"               # cap publications per run (helps with rate limits)
+  CRAWL_DELAY: "2"             # seconds to sleep between publication fetches
 
 jobs:
   fetch-data:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'  # Use the latest Python 3 version
+      - name: Set up Python 3.12 (required for httpx 0.23 + scholarly)
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
 
-    - name: Install Python dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install scholarly httpx==0.23.0
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install scholarly==1.7.11 "httpx[socks]==0.23.0"
 
-    - name: Run the Python script
-      run: python fetch_scholar_metrics.py
+      - name: Run the Python script
+        run: python fetch_scholar_metrics.py
 
-    - name: Commit and push changes
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git add _data/scholar_metrics.json
-        git commit -m "Update Google Scholar metrics"
-        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add _data/scholar_metrics.json
+          git commit -m "Update Google Scholar metrics" || echo "No changes to commit"
+          git push
