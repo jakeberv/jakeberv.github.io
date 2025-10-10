@@ -31,3 +31,15 @@ json.out<-toJSON(results)
 
 write(json.out, file='_data/map_data.json')
 
+### 
+tb = data.frame(address = tapply(results$address, results$address, function(x) x[1]),
+                publicationCount = tapply(results$publicationCount, results$address, sum),
+                lat = tapply(results$lat, results$address, mean),
+                lon = tapply(results$lon, results$address, mean))
+
+#convert to proper json (if merging at the city level)
+json.out<-toJSON(tb)
+write(json.out, file='_data/map_data.json')
+
+
+
