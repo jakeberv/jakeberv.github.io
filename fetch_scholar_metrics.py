@@ -1,3 +1,4 @@
+# fetch_scholar_metrics.py
 from scholarly import scholarly, ProxyGenerator
 import json
 import os
@@ -10,6 +11,7 @@ SCHOLAR_ID = os.getenv("SCHOLAR_ID", "cQQaGZQAAAAJ")
 REQUIRE_FREE_PROXY = os.getenv("REQUIRE_FREE_PROXY", "1").strip().lower() not in ("0", "false", "no")
 MAX_PUB_RETRIES = 3
 PROXY_INIT_RETRIES = 5
+AUTHOR_FETCH_RETRIES = 5
 CRAWL_DELAY = float(os.getenv("CRAWL_DELAY", "2"))
 MAX_PUBS = int(os.getenv("MAX_PUBS", "12"))
 OUT_PATH = Path("_data/scholar_metrics.json")
@@ -44,7 +46,61 @@ def switch_proxy(pg_holder: Dict[str, Optional[ProxyGenerator]]) -> None:
         print("[proxy] ⚠️ Could not obtain a new proxy; keeping existing.")
 
 
-# ---------- Publication Fetch ----------
+# ---------- Safe Save ----------
+def ensure_outdir_safe():
+    """Create _data only if missing. Do nothing if it exists."""
+    if OUT_PATH.parent.exists():
+        if not OUT_PATH.parent.is_dir():
+            raise RuntimeError(f"[fatal] {OUT_PATH.parent} exists but is not a directory.")
+        print(f"[info] Data folder {OUT_PATH.parent} exists — leaving it untouched.")
+    else:
+        print(f"[info] Creating data folder {OUT_PATH.parent}")
+        OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+
+
+# ---------- Fetch Helpers ----------
+def fetch_author_with_retries(pg_holder: Dict[str, Optional[ProxyGenerator]], retries: int = AUTHOR_FETCH_RETRIES):
+    """
+    Repeatedly attempt to fetch & fill the author. Switch proxies and back off between tries.
+    Returns a filled author dict or None.
+    """
+    for attempt in range(1, retries + 1):
+        try:
+            # Sometimes an immediate call after switching a proxy gets blocked; short pause helps.
+            time.sleep(1.0)
+
+            a = scholarly.search_author_id(SCHOLAR_ID)
+            if not a:
+                raise ValueError("search_author_id returned None")
+
+            try:
+                a = scholarly.fill(
+                    a,
+                    sections=["basics", "indices", "coauthors", "counts", "publications", "public_access"],
+                )
+            except Exception as e:
+                print(f"[warn] fill(sections=...) failed ({e}); falling back to default fill()")
+                a = scholarly.fill(a)
+
+            # Validate result
+            if not a or not isinstance(a, dict):
+                raise ValueError("filled author is None or not a dict")
+
+            # A minimal sanity check: name or citations present
+            if not a.get("name") and not a.get("citedby"):
+                raise ValueError("filled author missing key fields (name/citedby)")
+
+            return a
+
+        except Exception as e:
+            print(f"[warn] Author fetch attempt {attempt}/{retries} failed: {e}")
+            switch_proxy(pg_holder)
+            time.sleep(min(20, 2 * attempt))  # exponential-ish backoff
+
+    print("[error] Exhausted retries fetching author.")
+    return None
+
+
 def fetch_publication_details(pub: Dict[str, Any], pg_holder: Dict[str, Optional[ProxyGenerator]]) -> Optional[Dict[str, Any]]:
     for attempt in range(1, MAX_PUB_RETRIES + 1):
         try:
@@ -64,18 +120,6 @@ def fetch_publication_details(pub: Dict[str, Any], pg_holder: Dict[str, Optional
     return None
 
 
-# ---------- Safe Save ----------
-def ensure_outdir_safe():
-    """Create _data only if missing. Do nothing if it exists."""
-    if OUT_PATH.parent.exists():
-        if not OUT_PATH.parent.is_dir():
-            raise RuntimeError(f"[fatal] {OUT_PATH.parent} exists but is not a directory.")
-        print(f"[info] Data folder {OUT_PATH.parent} exists — leaving it untouched.")
-    else:
-        print(f"[info] Creating data folder {OUT_PATH.parent}")
-        OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-
-
 # ---------- Main ----------
 def main() -> int:
     print(f"[info] Using SCHOLAR_ID={SCHOLAR_ID}")
@@ -92,21 +136,12 @@ def main() -> int:
         scholarly.use_proxy(None)
         print("[proxy] Proceeding without proxy (REQUIRE_FREE_PROXY=0).")
 
-    # Fetch author
-    try:
-        author = scholarly.search_author_id(SCHOLAR_ID)
-        try:
-            author = scholarly.fill(
-                author,
-                sections=["basics", "indices", "coauthors", "counts", "publications", "public_access"],
-            )
-        except Exception as e:
-            print(f"[warn] fill(sections=...) failed ({e}); falling back to default fill()")
-            author = scholarly.fill(author)
-        print(f"[info] Fetched author: {author.get('name', 'Unknown')}")
-    except Exception as e:
-        print(f"[fatal] Error fetching author data: {e}")
+    author = fetch_author_with_retries(pg_holder, retries=AUTHOR_FETCH_RETRIES)
+    if not author:
+        print("[fatal] Error fetching author data after retries.")
         return 1
+
+    print(f"[info] Fetched author: {author.get('name', 'Unknown')}")
 
     # Publications
     publications_data = []
@@ -152,7 +187,7 @@ def main() -> int:
 
     print(json.dumps(scholar_data, indent=2))
 
-    # Save safely without touching existing folder
+    # Save
     try:
         ensure_outdir_safe()
         with OUT_PATH.open("w", encoding="utf-8") as f:
