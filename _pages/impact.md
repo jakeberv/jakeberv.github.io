@@ -9,7 +9,7 @@ title: "Impact"
     <div id="geochartWrapper" style="width: 100%; height: auto; position: relative;">
         <canvas id="GeoBubbleChart"></canvas>
     </div>
-    <figcaption style="text-align: left; margin-top: 2px;">This graphic uses Chart.js Geo to display the geographic distribution of authors who have cited my publications, based on a sample of verified records from Web of Science (08/19/24).</figcaption>
+    <figcaption style="text-align: left; margin-top: 2px;">This graphic uses Chart.js Geo to display the geographic distribution of authors who have cited my publications, based on a sample of verified records from Web of Science (10/10/25).</figcaption>
 </figure>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
