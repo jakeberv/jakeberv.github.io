@@ -390,7 +390,7 @@
     "not_available": 0
   },
   "total_publications": 25,
-  "publications_fetched": 12,
+  "publications_fetched": 25,
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
@@ -475,8 +475,99 @@
       "year": 2020,
       "venue": "N/A",
       "url": "https://scholar.google.com/scholar?cluster=14767977026164811401&hl=en&oi=scholarr"
+    },
+    {
+      "title": "Genome and life-history evolution link bird diversification to the end-Cretaceous mass extinction",
+      "citations": 17,
+      "year": 2024,
+      "venue": "N/A",
+      "url": "https://www.science.org/doi/abs/10.1126/sciadv.adp0114"
+    },
+    {
+      "title": "The pace of mitochondrial molecular evolution varies with seasonal migration distance",
+      "citations": 7,
+      "year": 2024,
+      "venue": "N/A",
+      "url": "https://academic.oup.com/evolut/article-abstract/78/1/160/7379636"
+    },
+    {
+      "title": "Cran task view: Phylogenetics",
+      "citations": 6,
+      "year": 2025,
+      "venue": "N/A",
+      "url": "https://mirror.truenetwork.ru/CRAN/web/views/Phylogenetics.html"
+    },
+    {
+      "title": "The genomic landscape, causes, and consequences of extensive phylogenomic discordance in Old World mice and rats",
+      "citations": 2,
+      "year": 2023,
+      "venue": "N/A",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10491188/"
+    },
+    {
+      "title": "The genomic landscape, causes, and consequences of extensive phylogenomic discordance in murine rodents",
+      "citations": 1,
+      "year": 2025,
+      "venue": "N/A",
+      "url": "https://academic.oup.com/gbe/advance-article/doi/10.1093/gbe/evaf017/7998737"
+    },
+    {
+      "title": "Skeletal trait measurements for thousands of bird species",
+      "citations": 0,
+      "year": 2025,
+      "venue": "N/A",
+      "url": "https://www.nature.com/articles/s41597-025-05234-y"
+    },
+    {
+      "title": "Habitat-associated evolutionary rates in deep-sea invertebrates",
+      "citations": 0,
+      "year": 2025,
+      "venue": "N/A",
+      "url": "https://academic.oup.com/evolut/advance-article-abstract/doi/10.1093/evolut/qpaf080/8121435"
+    },
+    {
+      "title": "Variable patterns of phenotypic evolution among canonical ‘living fossil’lineages",
+      "citations": 0,
+      "year": 2024,
+      "venue": "N/A",
+      "url": "https://www.biorxiv.org/content/10.1101/2024.11.14.623638.abstract"
+    },
+    {
+      "title": "Acknowledgment to Reviewers of Birds in 2021",
+      "citations": 0,
+      "year": 2022,
+      "venue": "N/A",
+      "url": "https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=26736004&asa=N&AN=155981554&h=6ShoPHa1VNW3eJA5GgTybJaBTlAf67eP1XlLt9BpgsMd3u%2BBlqn61nXbJK%2FplO%2FEaocOXnmiohLr%2Fujoy6JjRA%3D%3D&crl=c"
+    },
+    {
+      "title": "Pennaraptoran theropod dinosaurs: past progress and new frontiers.(Bulletin of the American Museum of Natural History, no. 440)",
+      "citations": 0,
+      "year": 2020,
+      "venue": "N/A",
+      "url": "https://digitallibrary.amnh.org/items/2a4a03b6-dd75-4d96-bdb3-6d214b993353"
+    },
+    {
+      "title": "Peer Review Report For: The deep(er) roots of Eukaryotes and Akaryotes [version 1; peer review: 1 approved, 1 approved with reservations, 1 not approved]",
+      "citations": 0,
+      "year": 2020,
+      "venue": "N/A",
+      "url": "N/A"
+    },
+    {
+      "title": "Tempo and Mode: Using Genomic, Anatomical, and Life-History Data to Integrate the Micro-and Macroevolution of Birds",
+      "citations": 0,
+      "year": 2019,
+      "venue": "N/A",
+      "url": "https://search.proquest.com/openview/0944ba11c7dc9bdbfd11748cb2de4cfa/1?pq-origsite=gscholar&cbl=18750&diss=y"
+    },
+    {
+      "title": "Genomic Signature of the Lilliput Effect across the K/pg Extinction",
+      "citations": 0,
+      "year": 2016,
+      "venue": "N/A",
+      "url": "https://ui.adsabs.harvard.edu/abs/2016GSAA...4887815B/abstract"
     }
   ],
-  "generated_at": 1760139764,
+  "generated_at": 1760140861,
   "proxy_mode": "free"
 }
