@@ -4,3 +4,5 @@ images/posts/*.pdf
 images/posts/*.sty
 _source/*_cache
 .Rproj.user
+.Rdata
+.Rhistory
