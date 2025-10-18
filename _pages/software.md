@@ -59,7 +59,7 @@ hr.soft-sep {
 /* Slightly smaller figure-style image for Janus card */
 .software-figure {
   float: right;
-  width: 38%;
+  width: 20%;
   max-width: 260px;
   margin: 0.5rem 0 0.75rem 1.5rem;
   border-radius: 6px;
@@ -115,16 +115,13 @@ hr.soft-sep {
   <img class="software-figure" src="https://raw.githubusercontent.com/jakeberv/jakeberv.github.io/master/images/software/janus.webp" alt="janus logo" loading="lazy" decoding="async" />
 </a>
 
-`janus` is a program for detecting shifts in molecular substitution models or base composition across phylogenies. It analyzes molecular sequence data alongside a fixed tree to identify where compositional changes occur, outputting annotated trees that can be visualized in tools like FigTree. Analyses can incorporate uncertainty estimation, run in parallel on multiple threads, and produce model-specific summaries that highlight compositional changes across clades.  
-
-The original method underlying `janus` was introduced in **Smith et al. 2023, [*New Phytologist*](https://doi.org/10.1111/nph.19099)**, which demonstrated how compositional shifts are associated with major evolutionary transitions in plants.  Jacob Berv contributed large-scale simulation workflows used in **Berv et al. 2024 (*Science Advances*)**, where we applied `janus` to study molecular evolution in avian sequence data.
+`janus` is a command-line tool for detecting shifts in molecular substitution models or base composition across phylogenies. It analyzes sequence data with a fixed tree to pinpoint where compositional changes occur and outputs annotated trees for visualization in tools like FigTree. The method was first introduced in **Smith et al. 2023, [*New Phytologist*](https://doi.org/10.1111/nph.19099)**, revealing compositional shifts linked to major evolutionary transitions in plants, and I contributed large-scale simulation workflows used in **Berv et al. 2024 (*Science Advances*)**, where we applied `janus`  to study molecular evolution in avian genomes.
 
 <hr class="soft-sep" />
 
 <div class="software-meta">
 <small>
-<strong>Highlights:</strong> Command-line workflow written in Go; integrates with <code>NLopt</code> for optimization; identifies shifts in substitution models and base composition; supports uncertainty analyses and outputs trees annotated by model.  
-A complementary implementation written in C is available as part of the <a href="http://git.sr.ht/~hms/hringhorni"><code>hringhorni</code></a> package, optimized for speed and large-scale analyses.
+<strong>Highlights:</strong> Command-line workflow written in Go; integrates with <code>NLopt</code> for optimization; identifies shifts in substitution models and base composition; supports uncertainty analyses and outputs trees annotated by model.  A complementary implementation written in C is available as part of the <a href="http://git.sr.ht/~hms/hringhorni"><code>hringhorni</code></a> package, optimized for speed and large-scale analyses.
 </small>
 </div>
 
