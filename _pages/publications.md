@@ -75,7 +75,6 @@ read_more: "enabled"
   .archive__item-altmetric { width: 100%; padding-left: 0; margin: .35rem 0 0 0; }
 }
 
-<style>
 /* Cover image row - improved layout */
 .pub-covers {
   display: grid;
@@ -150,6 +149,6 @@ read_more: "enabled"
 </ul>
 {% endfor %}
 
----
+<hr>
 
-See CV for other publications
+<p>See CV for other publications.</p>
