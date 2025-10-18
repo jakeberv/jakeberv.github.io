@@ -75,26 +75,54 @@ read_more: "enabled"
   .archive__item-altmetric { width: 100%; padding-left: 0; margin: .35rem 0 0 0; }
 }
 
-/* Cover image row */
-figure[style*="display: flex"] { gap: 1rem; flex-wrap: wrap; }
-figure[style*="display: flex"] img { max-height: 240px; height: auto; }
+<style>
+/* Cover image row - improved layout */
+.pub-covers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  max-width: 70%;
+  margin: 0 auto 2rem auto; /* center and add spacing below */
+  justify-items: center;
+}
+
+.pub-covers a {
+  display: flex;
+  justify-content: center;
+}
+
+.pub-covers img {
+  max-height: 250px;
+  width: auto;
+  max-width: 100%;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.pub-covers img:hover {
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
 @media (max-width: 720px) {
-  figure[style*="display: flex"] { justify-content: center; }
+  .pub-covers {
+    grid-template-columns: 1fr;
+    max-width: 90%;
+  }
 }
 </style>
 
-<figure style="max-width: 100%; display: flex; justify-content: space-between; align-items: center;">
-  <a href="https://doi.org/10.1016/j.cub.2018.04.062" target="_blank" style="flex: 1; display: flex; justify-content: center;" rel="noopener">
-    <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/CurrBio.jpg" style="max-height: 250px; width: auto; max-width: 100%; box-shadow: 0 8px 16px rgba(0,0,0,0.2);" onmouseover="this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'" onmouseout="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" alt="Current Biology cover">
+<figure class="pub-covers">
+  <a href="https://doi.org/10.1016/j.cub.2018.04.062" target="_blank" rel="noopener">
+    <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/CurrBio.jpg" alt="Current Biology cover">
   </a>
-  <a href="http://digitallibrary.amnh.org/handle/2246/7237" target="_blank" style="flex: 1; display: flex; justify-content: center;" rel="noopener">
-    <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/amnh_bulletin.jpg" style="max-height: 250px; width: auto; max-width: 100%; box-shadow: 0 8px 16px rgba(0,0,0,0.2);" onmouseover="this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'" onmouseout="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" alt="AMNH Bulletin cover">
+  <a href="http://digitallibrary.amnh.org/handle/2246/7237" target="_blank" rel="noopener">
+    <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/amnh_bulletin.jpg" alt="AMNH Bulletin cover">
   </a>
-  <a href="https://doi.org/10.1093/sysbio/syx064" target="_blank" style="flex: 1; display: flex; justify-content: center;" rel="noopener">
-    <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/syst_biol.jpg" style="max-height: 250px; width: auto; max-width: 100%; box-shadow: 0 8px 16px rgba(0,0,0,0.2);" onmouseover="this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'" onmouseout="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" alt="Systematic Biology cover">
+  <a href="https://doi.org/10.1093/sysbio/syx064" target="_blank" rel="noopener">
+    <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/syst_biol.jpg" alt="Systematic Biology cover">
   </a>
-  <a href="https://doi.org/10.1126/sciadv.adp0114" target="_blank" style="flex: 1; display: flex; justify-content: center;" rel="noopener">
-    <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/science_advances.jpg" style="max-height: 250px; width: auto; max-width: 100%; box-shadow: 0 8px 16px rgba(0,0,0,0.2);" onmouseover="this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'" onmouseout="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" alt="Science Advances cover">
+  <a href="https://doi.org/10.1126/sciadv.adp0114" target="_blank" rel="noopener">
+    <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/science_advances.jpg" alt="Science Advances cover">
   </a>
 </figure>
 
