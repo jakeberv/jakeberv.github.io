@@ -33,16 +33,20 @@ I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctora
   | reverse %}
 
 {% for item in news_items limit:10 %}
-  <p style="margin-bottom: 0.75em;">
-    <strong>{{ item.date | date: "%B %-d, %Y" }}</strong> — 
-    <a href="{{ item.url | relative_url }}" style="font-weight: 600; text-decoration: none;">
-      {{ item.title }}
-    </a><br>
-    <span style="font-size: 0.9em;">{{ item.excerpt }}</span>
-  </p>
+  <div style="margin-bottom: 0.5em; line-height: 1.35;">
+    <p style="margin: 0;">
+      <strong>{{ item.date | date: "%B %-d, %Y" }}</strong> — 
+      <a href="{{ item.url | relative_url }}" style="text-decoration: none;">
+        {{ item.title }}
+      </a>
+    </p>
+    <p style="margin: 0.15em 0 0 0; font-size: 0.9em;">
+      {{ item.excerpt }}
+    </p>
+  </div>
 {% endfor %}
 
-<p style="margin-top: 1.5em;">
+<p style="margin-top: 0.8em;">
   <a href="{{ '/news/' | relative_url }}" style="font-weight: 600; text-decoration: none;">
     View all news →
   </a>
