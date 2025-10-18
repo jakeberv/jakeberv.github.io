@@ -5,7 +5,7 @@ layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
-Jake Berv gave an invited seminar for the University of Massachusetts Boston Biology Seminar Series.
+Jacob Berv gave an invited seminar for the University of Massachusetts Boston Biology Seminar Series.
 
 <!--news-excerpt-->
 The presentation discussed how museum collections inform macroevolutionary research.

@@ -5,7 +5,7 @@ layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
-Jake Berv gave a guest lecture on the evolution of birds for the University of Michigan’s Vertebrate Paleontology course.
+Jacob Berv gave a guest lecture on the evolution of birds for the University of Michigan’s Vertebrate Paleontology course.
 
 <!--news-excerpt-->
 The class explored fossil-calibrated timelines and major shifts in avian history.

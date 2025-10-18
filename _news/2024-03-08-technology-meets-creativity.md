@@ -5,7 +5,7 @@ layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
-Jake Berv organized and led "Technology Meets Creativity: Exploring the Potential of AI for the Arts" at the University of Michigan.
+Jacob Berv organized and led "Technology Meets Creativity: Exploring the Potential of AI for the Arts" at the University of Michigan.
 
 <!--news-excerpt-->
 The workshop invited campus participants to experiment with responsible generative AI.

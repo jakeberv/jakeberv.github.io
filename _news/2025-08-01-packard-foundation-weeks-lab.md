@@ -5,7 +5,7 @@ layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
-Jake Berv began a Packard Foundation–funded postdoctoral appointment in Brian Weeks’ lab at the University of Michigan School for Environment and Sustainability.
+Jacob Berv began a Packard Foundation–funded postdoctoral appointment in Brian Weeks’ lab at the University of Michigan School for Environment and Sustainability.
 
 <!--news-excerpt-->
 The role advanced collaborative research connecting museum collections, macroevolution, and climate resilience.

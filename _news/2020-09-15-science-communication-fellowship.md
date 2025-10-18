@@ -5,7 +5,7 @@ layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
-Jake Berv began serving as a Science Communication Fellow at the University of Michigan Natural History Museum.
+Jacob Berv began serving as a Science Communication Fellow at the University of Michigan Natural History Museum.
 
 <!--news-excerpt-->
 The fellowship supported public programs translating macroevolution and biodiversity science.

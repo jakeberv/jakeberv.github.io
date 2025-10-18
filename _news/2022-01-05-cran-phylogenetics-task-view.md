@@ -5,7 +5,7 @@ layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
-Jake Berv became a co-maintainer for the CRAN Phylogenetics Task View.
+Jacob Berv became a co-maintainer for the CRAN Phylogenetics Task View.
 
 <!--news-excerpt-->
 The service role supported open-source comparative biology software.

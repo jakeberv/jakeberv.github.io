@@ -5,7 +5,7 @@ layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
-Jake Berv gave a guest lecture on molecular systematics at the University of Michigan.
+Jacob Berv gave a guest lecture on molecular systematics at the University of Michigan.
 
 <!--news-excerpt-->
 The session covered practical approaches to phylogenomic data analysis.

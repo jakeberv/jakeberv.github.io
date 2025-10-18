@@ -5,7 +5,7 @@ layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
-Jake Berv began the Schmidt AI in Science Postdoctoral Fellowship at the University of Michigan.
+Jacob Berv began the Schmidt AI in Science Postdoctoral Fellowship at the University of Michigan.
 
 <!--news-excerpt-->
 The fellowship positioned him to link AI methods with biodiversity data science.

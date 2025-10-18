@@ -5,7 +5,7 @@ layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
-Jake Berv completed the two-year Rackham Professional Development Certificate program focused on leadership and mentoring.
+Jacob Berv completed the two-year Rackham Professional Development Certificate program focused on leadership and mentoring.
 
 <!--news-excerpt-->
 The training strengthened mentorship practices within interdisciplinary research teams.

@@ -5,7 +5,7 @@ layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
-Jake Berv earned a Ph.D. in Ecology and Evolutionary Biology from Cornell University.
+Jacob Berv earned a Ph.D. in Ecology and Evolutionary Biology from Cornell University.
 
 <!--news-excerpt-->
-The Cornell doctoral training laid the foundation for his ongoing macroevolution research.
+This doctoral training laid the foundation for Dr. Berv's ongoing research in macroevolution.

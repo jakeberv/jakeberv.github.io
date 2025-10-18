@@ -5,7 +5,7 @@ layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
-Jake Berv served as an invited speaker at the "Computer Vision for Science" workshop at CVPR in Seattle, Washington.
+Jacob Berv was an invited speaker at the "Computer Vision for Science" workshop at CVPR in Seattle, Washington.
 
 <!--news-excerpt-->
 The presentation shared biodiversity imaging pipelines with the computer vision community.

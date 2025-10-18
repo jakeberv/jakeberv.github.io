@@ -5,7 +5,7 @@ layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
-Jake Berv gave an invited talk at the Okinawa Institute of Science and Technology.
+Jacob Berv gave an invited talk at the Okinawa Institute of Science and Technology.
 
 <!--news-excerpt-->
 The seminar focused on comparative genomics and avian diversification.

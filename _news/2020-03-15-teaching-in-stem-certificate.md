@@ -5,7 +5,7 @@ layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
-Jake Berv earned the University of Michigan Center for Research on Learning and Teaching’s Teaching in STEM Certificate.
+Jacob Berv earned the University of Michigan Center for Research on Learning and Teaching’s Teaching in STEM Certificate.
 
 <!--news-excerpt-->
 The program emphasized inclusive pedagogy and active-learning strategies for science courses.

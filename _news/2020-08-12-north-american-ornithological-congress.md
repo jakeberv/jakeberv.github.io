@@ -5,7 +5,7 @@ layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
-Jake Berv gave an invited symposium talk at the virtual North American Ornithological Congress.
+Jacob Berv gave an invited symposium talk at the virtual North American Ornithological Congress.
 
 <!--news-excerpt-->
 The presentation explored large-scale patterns of avian diversification.
