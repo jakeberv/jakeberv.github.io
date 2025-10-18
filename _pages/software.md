@@ -26,6 +26,11 @@ title: "Software"
   color: var(--color-muted, #555);
   margin-bottom: 0.75rem;
 }
+.software-meta small {
+  font-size: 0.85em;
+  line-height: 1.4;
+  display: block;
+}
 .software-actions a {
   text-decoration: none;
   border-bottom: 1px solid transparent;
@@ -50,9 +55,26 @@ hr.soft-sep {
 }
 /* Normalize inline-code spacing if theme adjusts it */
 .software-card code { letter-spacing: normal; }
-</style>
 
-Below is a selection of software projects that I lead or contribute to. These tools focus on phylogenetic comparative methods, high-dimensional trait evolution, and macroevolutionary inference.
+/* Slightly smaller figure-style image for Janus card */
+.software-figure {
+  float: right;
+  width: 38%;
+  max-width: 260px;
+  margin: 0.5rem 0 0.75rem 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+@media (max-width: 640px) {
+  .software-figure {
+    float: none;
+    display: block;
+    margin: 1rem auto;
+    width: 75%;
+    max-width: 340px;
+  }
+}
+</style>
 
 ---
 
@@ -64,18 +86,53 @@ Below is a selection of software projects that I lead or contribute to. These to
 
 **Branch-level Inference Framework for Recognizing Optimal Shifts in Traits**
 
-`bifrost` is an R package for branch-level inference of multi-regime, multivariate trait evolution on phylogenies. It uses penalized-likelihood multivariate GLS to detect where, when, and how evolutionary rate regimes shift across a tree—operating directly in trait space (no PCA required) and scaling to high-dimensional datasets and large phylogenies.
+`bifrost` is an R package for branch-level inference of multi-regime, multivariate trait evolution on phylogenies. It uses penalized-likelihood multivariate GLS to detect where, when, and how evolutionary rate regimes shift across a tree—operating directly in trait space (no PCA required) and scaling to high-dimensional datasets and large phylogenies. A pre-print describing this package is forthcoming (Berv et al.).
 
 <hr class="soft-sep" />
 
 <div class="software-meta">
+<small>
 <strong>Highlights:</strong> multi-rate Brownian Motion with proportional VCV scaling; greedy, step-wise search with GIC/BIC; parallel candidate scoring; SIMMAP-compatible outputs.
+</small>
 </div>
 
 <div class="software-actions">
 📦 <a href="https://github.com/jakeberv/bifrost">Repository</a> &nbsp;•&nbsp;
 📖 <a href="https://jakeberv.com/bifrost">Documentation (pkgdown)</a> &nbsp;•&nbsp;
 📄 <a href="https://jakeberv.com/bifrost/articles/jaw-shape-vignette.html">Getting Started vignette</a>
+</div>
+
+<div style="clear: both;"></div>
+</div>
+
+<div class="software-card" markdown="1">
+
+### janus
+
+**Command-line tool for detecting molecular model shifts on phylogenies (Go)**
+
+<a href="https://en.wikipedia.org/wiki/Waltham_Abbey_Church" target="_blank" rel="noopener">
+  <img class="software-figure" src="https://raw.githubusercontent.com/jakeberv/jakeberv.github.io/master/images/software/janus.webp" alt="janus logo" loading="lazy" decoding="async" />
+</a>
+
+`janus` is a program for detecting shifts in molecular substitution models or base composition across phylogenies. It analyzes molecular sequence data alongside a fixed tree to identify where compositional changes occur, outputting annotated trees that can be visualized in tools like FigTree. Analyses can incorporate uncertainty estimation, run in parallel on multiple threads, and produce model-specific summaries that highlight compositional changes across clades.  
+
+The original method underlying `janus` was introduced in **Smith et al. 2023, [*New Phytologist*](https://doi.org/10.1111/nph.19099)**, which demonstrated how compositional shifts are associated with major evolutionary transitions in plants.  Jacob Berv contributed large-scale simulation workflows used in **Berv et al. 2024 (*Science Advances*)**, where we applied `janus` to study molecular evolution in avian sequence data.
+
+<hr class="soft-sep" />
+
+<div class="software-meta">
+<small>
+<strong>Highlights:</strong> Command-line workflow written in Go; integrates with <code>NLopt</code> for optimization; identifies shifts in substitution models and base composition; supports uncertainty analyses and outputs trees annotated by model.  
+A complementary implementation written in C is available as part of the <a href="http://git.sr.ht/~hms/hringhorni"><code>hringhorni</code></a> package, optimized for speed and large-scale analyses.
+</small>
+</div>
+
+<div class="software-actions">
+📦 <a href="https://git.sr.ht/~hms/janus">Repository</a> &nbsp;•&nbsp;
+📖 <a href="https://git.sr.ht/~hms/janus/tree/master/doc/index.md">Documentation</a> &nbsp;•&nbsp;
+📄 <a href="https://www.science.org/doi/10.1126/sciadv.adp0114">Berv&nbsp;et&nbsp;al.&nbsp;2024, <em>Science Advances</em></a> &nbsp;•&nbsp;
+📄 <a href="https://doi.org/10.1111/nph.19099">Smith&nbsp;et&nbsp;al.&nbsp;2023, <em>New Phytologist</em></a>
 </div>
 
 <div style="clear: both;"></div>
