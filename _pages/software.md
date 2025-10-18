@@ -14,7 +14,7 @@ title: "Software"
   background: var(--color-bg, #fff);
   box-shadow: 0 1px 2px rgba(0,0,0,0.04);
 }
-.software-card h2 {
+.software-card h2, .software-card h3 {
   margin-top: 0.2rem;
   margin-bottom: 0.25rem;
   font-size: 1.35rem;
@@ -52,7 +52,7 @@ Below is a selection of software projects that I lead or contribute to. These to
 
 ---
 
-<div class="software-card">
+<div class="software-card" markdown="1">
 
 <img class="software-logo" src="https://raw.githubusercontent.com/jakeberv/bifrost/main/man/figures/logo.png" alt="bifrost hex sticker" />
 
