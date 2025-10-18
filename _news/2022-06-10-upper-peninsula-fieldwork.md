@@ -5,7 +5,7 @@ layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
-Jake Berv conducted fieldwork in Michigan’s Upper Peninsula to collect boreal migrant specimens.
+Jacob Berv conducted fieldwork in Michigan’s Upper Peninsula to collect boreal migrant specimens.
 
 <!--news-excerpt-->
 The effort expanded museum resources for macroevolutionary and conservation studies.

@@ -26,10 +26,16 @@ I am an evolutionary biologist interested in building and deciphering the tree o
 I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/) at the University of Michigan.
 
 ## Recent News
-{% for item in site.news limit:5 %}
+{% assign news_items = site.news
+  | where_exp: "i", "i.date"
+  | where_exp: "i", "i.date <= site.time"
+  | sort: "date"
+  | reverse %}
+
+{% for item in news_items limit:5 %}
   <h4 style="font-size: 1.00em;">{{ item.title }}</h4>
   <p><span style="font-size: 0.85em;">{{ item.excerpt }}</span></p>
-  <a href="{{ item.url | prepend: site.baseurl }}">Read more</a>
+  <a href="{{ item.url | relative_url }}">Read more</a>
 {% endfor %}
 
 <br>
