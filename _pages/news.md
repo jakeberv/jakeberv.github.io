@@ -5,14 +5,25 @@ layout: archive
 author_profile: true
 ---
 
-Slowly backfilling important events, new website!
 
-<ol>
-{% assign sorted_news = site.news | sort: 'date' | reverse %}
-{% for item in sorted_news %}
-  <li>
-    <span>{{ item.date | date: "%B %d, %Y" }}:</span>
-    <a href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
-  </li>
+{% assign news_items = site.news
+  | where_exp: "i", "i.date"
+  | where_exp: "i", "i.date <= site.time"
+  | sort: "date"
+  | reverse %}
+
+{% assign groups = news_items | group_by_exp: "i", "i.date | date: '%Y'" %}
+
+{% for year in groups %}
+  <h3 class="archive__subtitle" style="margin-top: 1.5em;">{{ year.name }}</h3>
+  <ul class="news-year" style="list-style: none; margin: 0; padding: 0;">
+    {% for item in year.items %}
+      <li style="margin-bottom: 0.6em;">
+        <strong>{{ item.date | date: "%B %-d" }}</strong> — 
+        <a href="{{ item.url | relative_url }}" style="font-weight: 600; text-decoration: none;">
+          {{ item.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
 {% endfor %}
-</ol>
