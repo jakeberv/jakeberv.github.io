@@ -5,6 +5,37 @@ layout: archive
 author_profile: true
 ---
 
+<style>
+/* Offset anchor targets so they don't hide under the sticky header */
+.archive__subtitle { scroll-margin-top: 96px; }
+.archive__subtitle:target::before {
+  content: "";
+  display: block;
+  height: 96px;
+  margin-top: -96px;
+}
+
+/* News list styling */
+.news-year {
+  list-style: none;
+  margin: 0 0 1em 1.5em; /* subtle indent */
+  padding: 0;
+}
+
+.news-year li {
+  margin-bottom: 0.4em;
+  line-height: 1.35;
+}
+
+.news-date {
+  display: inline-block;
+  width: 7.5em;       /* creates the "date column" */
+  color: #555;
+  font-size: 0.9em;
+  text-align: left;   /* keep left-justified */
+}
+</style>
+
 {% assign news_items = site.news
   | where_exp: "i", "i.date"
   | where_exp: "i", "i.date <= site.time"
@@ -24,18 +55,13 @@ author_profile: true
 {% for year in groups %}
 <h3 id="y{{ year.name }}" class="archive__subtitle" style="margin-top: 1.5em; border-bottom: 1px solid #ddd; padding-bottom: 0.25em;">
   {{ year.name }}
-  <a href="#y{{ year.name }}" aria-label="Link to {{ year.name }}" style="text-decoration:none; color:#aaa; font-size:.8em; margin-left:.3em;">#</a>
 </h3>
 
-<ul class="news-year" style="list-style: none; margin: 0 0 1em 0; padding: 0;">
+<ul class="news-year">
   {% for item in year.items %}
-  <li style="margin-bottom: 0.4em; line-height: 1.35;">
-    <span style="display: inline-block; width: 7.5em; color: #555; font-size: 0.9em;">
-      {{ item.date | date: "%B %-d" }}
-    </span>
-    <a href="{{ item.url | relative_url }}" style="text-decoration: none;">
-      {{ item.title }}
-    </a>
+  <li>
+    <span class="news-date">{{ item.date | date: "%B %-d" }}</span>
+    <a href="{{ item.url | relative_url }}" style="text-decoration: none;">{{ item.title }}</a>
   </li>
   {% endfor %}
 </ul>
