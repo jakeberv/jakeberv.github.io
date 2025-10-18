@@ -4,6 +4,8 @@ permalink: /software/
 title: "Software"
 ---
 
+{::options parse_block_html="true" /}
+
 <style>
 /* Lightweight, page-local styling that works with most Jekyll themes */
 .software-card {
@@ -46,6 +48,8 @@ hr.soft-sep {
   border-top: 1px solid var(--color-border, #e5e7eb);
   margin: 1rem 0 0.75rem;
 }
+/* Normalize inline-code spacing if theme adjusts it */
+.software-card code { letter-spacing: normal; }
 </style>
 
 Below is a selection of software projects that I lead or contribute to. These tools focus on phylogenetic comparative methods, high-dimensional trait evolution, and macroevolutionary inference.
