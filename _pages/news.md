@@ -56,7 +56,7 @@ author_profile: true
 </p>
 
 {% for year in groups %}
-<h3 id="y{{ year.name }}" class="archive__subtitle" style="margin-top: 1.5em; border-bottom: 1px solid #ddd; padding-bottom: 0.25em;">
+<h3 id="y{{ year.name }}" class="archive__subtitle" style="margin-top: 1.5em; border-bottom: 1px solid #ddd; padding-bottom: 0.4em; margin-bottom: 0.6em;">
   {{ year.name }}
 </h3>
 
