@@ -131,15 +131,13 @@
       </ul>
       {% assign cites_by_year = site.data.scholar_metrics.cites_per_year %}
       {% if cites_by_year and cites_by_year != empty %}
-      <div style="margin-top: 1em; height: 140px;">
+      <div style="margin-top: 0.9em; height: 140px;">
         <canvas id="scholarCitesChart"></canvas>
       </div>
       
-      <!-- Ensure Chart.js is available before drawing -->
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      
       <script>
-      (function() {
+      (function () {
+        // Data from Jekyll
         const cites = {{ cites_by_year | jsonify }};
         const labels = Object.keys(cites).sort((a,b) => Number(a) - Number(b)); // keep as strings for axis labels
         const data = labels.map(k => Number(cites[k]) || 0);
@@ -171,7 +169,7 @@
                 borderColor: '#3366cc',
                 borderWidth: 2,
                 pointRadius: 0,
-                tension: 0.35
+                tension: 0.35, // smoothing
               }]
             },
             options: {
