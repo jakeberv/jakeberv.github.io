@@ -2,21 +2,21 @@
   "name": "Jacob S. Berv",
   "affiliation": "Schmidt AI in Science Postdoctoral Fellow,  University of Michigan",
   "email_domain": "@umich.edu",
-  "h_index": 13,
-  "i10_index": 13,
-  "citations": 2526,
+  "h_index": "N/A",
+  "i10_index": "N/A",
+  "citations": 2527,
   "cites_per_year": {
     "2015": 14,
     "2016": 105,
     "2017": 208,
     "2018": 217,
     "2019": 273,
-    "2020": 308,
+    "2020": 307,
     "2021": 317,
     "2022": 307,
-    "2023": 257,
-    "2024": 267,
-    "2025": 211
+    "2023": 258,
+    "2024": 269,
+    "2025": 209
   },
   "interests": [
     "Speciation",
@@ -88,7 +88,7 @@
     },
     {
       "name": "Antoine Bercovici",
-      "affiliation": "School of Biosciences, University of Nottingham",
+      "affiliation": "Denver Museum of Nature and Science",
       "scholar_id": "WMU6uOgAAAAJ"
     },
     {
@@ -380,6 +380,16 @@
       "name": "Zhizhuo Zhou",
       "affiliation": "Stanford University",
       "scholar_id": "WjZyzbYAAAAJ"
+    },
+    {
+      "name": "Rebecca J. Strauch",
+      "affiliation": "George Mason University",
+      "scholar_id": "BJeIl0AAAAAJ"
+    },
+    {
+      "name": "Nicholas D. Pyenson",
+      "affiliation": "Curator, National Museum of Natural History, Smithsonian Institution",
+      "scholar_id": "TPY3-ccAAAAJ"
     }
   ],
   "profile_picture": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=cQQaGZQAAAAJ&citpid=4",
@@ -390,11 +400,11 @@
     "not_available": 0
   },
   "total_publications": 26,
-  "publications_fetched": 26,
+  "publications_fetched": 16,
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 1810,
+      "citations": 1813,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
@@ -408,7 +418,7 @@
     },
     {
       "title": "Genomic signature of an avian Lilliput effect across the K-Pg extinction",
-      "citations": 125,
+      "citations": 124,
       "year": 2018,
       "venue": "N/A",
       "url": "https://academic.oup.com/sysbio/article-abstract/67/1/1/3960267"
@@ -443,7 +453,7 @@
     },
     {
       "title": "Genomic phylogeography of the White-crowned Manakin Pseudopipra pipra (Aves: Pipridae) illuminates a continental-scale radiation out of the Andes",
-      "citations": 38,
+      "citations": 37,
       "year": 2021,
       "venue": "N/A",
       "url": "https://www.sciencedirect.com/science/article/pii/S105579032100138X"
@@ -454,20 +464,6 @@
       "year": 2021,
       "venue": "N/A",
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ece3.8114"
-    },
-    {
-      "title": "Recent divergence and lack of shared phylogeographic history characterize the diversification of neotropical savanna birds",
-      "citations": 25,
-      "year": 2021,
-      "venue": "N/A",
-      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/jbi.14065"
-    },
-    {
-      "title": "Divergence in morphology, calls, song, mechanical sounds, and genetics supports species status for the Inaguan hummingbird (Trochilidae: Calliphlox “evelynae” lyrura)",
-      "citations": 22,
-      "year": 2015,
-      "venue": "N/A",
-      "url": "https://academic.oup.com/auk/article-abstract/132/1/248/5149205"
     },
     {
       "title": "Pennaraptoran theropod dinosaurs: past progress and new frontiers",
@@ -482,20 +478,6 @@
       "year": 2024,
       "venue": "N/A",
       "url": "https://www.science.org/doi/abs/10.1126/sciadv.adp0114"
-    },
-    {
-      "title": "The pace of mitochondrial molecular evolution varies with seasonal migration distance",
-      "citations": 7,
-      "year": 2024,
-      "venue": "N/A",
-      "url": "https://academic.oup.com/evolut/article-abstract/78/1/160/7379636"
-    },
-    {
-      "title": "Cran task view: Phylogenetics",
-      "citations": 6,
-      "year": 2025,
-      "venue": "N/A",
-      "url": "https://mirror.truenetwork.ru/CRAN/web/views/Phylogenetics.html"
     },
     {
       "title": "The genomic landscape, causes, and consequences of extensive phylogenomic discordance in Old World mice and rats",
@@ -519,13 +501,6 @@
       "url": "https://www.nature.com/articles/s41597-025-05234-y"
     },
     {
-      "title": "Habitat-associated evolutionary rates in deep-sea invertebrates",
-      "citations": 0,
-      "year": 2025,
-      "venue": "N/A",
-      "url": "https://academic.oup.com/evolut/advance-article-abstract/doi/10.1093/evolut/qpaf080/8121435"
-    },
-    {
       "title": "Morphological diversity of the cetacean mandibular symphysis coincides with novel modes of aquatic feeding",
       "citations": 0,
       "year": 2025,
@@ -533,48 +508,13 @@
       "url": "https://www.cambridge.org/core/journals/paleobiology/article/morphological-diversity-of-the-cetacean-mandibular-symphysis-coincides-with-novel-modes-of-aquatic-feeding/E26D07190859FF4B606098AACF19F246"
     },
     {
-      "title": "Variable patterns of phenotypic evolution among canonical ‘living fossil’lineages",
-      "citations": 0,
-      "year": 2024,
-      "venue": "N/A",
-      "url": "https://www.biorxiv.org/content/10.1101/2024.11.14.623638.abstract"
-    },
-    {
-      "title": "Acknowledgment to Reviewers of Birds in 2021",
-      "citations": 0,
-      "year": 2022,
-      "venue": "N/A",
-      "url": "https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=26736004&asa=N&AN=155981554&h=6ShoPHa1VNW3eJA5GgTybJaBTlAf67eP1XlLt9BpgsMd3u%2BBlqn61nXbJK%2FplO%2FEaocOXnmiohLr%2Fujoy6JjRA%3D%3D&crl=c"
-    },
-    {
-      "title": "Pennaraptoran theropod dinosaurs: past progress and new frontiers.(Bulletin of the American Museum of Natural History, no. 440)",
-      "citations": 0,
-      "year": 2020,
-      "venue": "N/A",
-      "url": "https://digitallibrary.amnh.org/items/2a4a03b6-dd75-4d96-bdb3-6d214b993353"
-    },
-    {
       "title": "Peer Review Report For: The deep(er) roots of Eukaryotes and Akaryotes [version 1; peer review: 1 approved, 1 approved with reservations, 1 not approved]",
       "citations": 0,
       "year": 2020,
       "venue": "N/A",
       "url": "N/A"
-    },
-    {
-      "title": "Tempo and Mode: Using Genomic, Anatomical, and Life-History Data to Integrate the Micro-and Macroevolution of Birds",
-      "citations": 0,
-      "year": 2019,
-      "venue": "N/A",
-      "url": "https://search.proquest.com/openview/0944ba11c7dc9bdbfd11748cb2de4cfa/1?pq-origsite=gscholar&cbl=18750&diss=y"
-    },
-    {
-      "title": "Genomic Signature of the Lilliput Effect across the K/pg Extinction",
-      "citations": 0,
-      "year": 2016,
-      "venue": "N/A",
-      "url": "https://ui.adsabs.harvard.edu/abs/2016GSAA...4887815B/abstract"
     }
   ],
-  "generated_at": 1760231158,
+  "generated_at": 1760837404,
   "proxy_mode": "free"
 }
