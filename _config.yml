@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Jacob S. Berv, PhD"
 title_separator          : "-"
 name                     : &name "Jacob S. Berv"
-description              : &description "Life Sciences Fellow"
+description              : &description "Evolutionary Biologist and Schmidt AI in Science Fellow at the University of Michigan"
 url                      : https://jakeberv.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "jakeberv/jakeberv.github.io"
@@ -46,8 +46,14 @@ staticman:
       type               : "date"
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-atom_feed:
-  path                   : # blank (default) uses feed.xml
+#atom_feed:
+#  path                   : # blank (default) uses feed.xml
+
+feed:
+  excerpt_only: false
+  collections:
+    - news
+    - publications
 
 # SEO Related
 google_site_verification :
@@ -66,9 +72,14 @@ og_image                 : profile.png # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type: Person
+  name: "Jacob S. Berv"
+  links:
+    - https://scholar.google.com/citations?user=cQQaGZQAAAAJ&hl=en
+    - https://github.com/jakeberv
+    - https://orcid.org/0000-0002-5962-0621
+    - https://twitter.com/jakeberv
+    - https://www.linkedin.com/in/jake-berv/
 
 
 # Analytics
@@ -241,7 +252,7 @@ defaults:
       layout: single
       author_profile: true
       share: true
-      comment: true
+      comments: true
   # _talks
   - scope:
       path: ""
@@ -250,8 +261,6 @@ defaults:
       layout: talk
       author_profile: true
       share: true
-
-
 
 
 # Sass/SCSS
