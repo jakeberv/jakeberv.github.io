@@ -129,6 +129,54 @@
         <li style="margin: 0.1em 0; list-style-position: inside; font-size: 1.0em;">Total Citations: <strong>{{ site.data.scholar_metrics.citations }}</strong></li>
         <li style="margin: 0.1em 0; list-style-position: inside; font-size: 1.0em;">Total Publications: <strong>{{ site.data.scholar_metrics.total_publications }}</strong></li>
       </ul>
+            {% assign cites_by_year = site.data.scholar_metrics.cites_per_year %}
+      {% if cites_by_year and cites_by_year != empty %}
+      <div style="margin-top: 1em;">
+        <canvas id="scholarCitesChart" height="100"></canvas>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const cites = {{ cites_by_year | jsonify }};
+          const years = Object.keys(cites).map(y => parseInt(y, 10)).sort((a,b) => a - b);
+          const values = years.map(y => cites[y] || 0);
+
+          const ctx = document.getElementById("scholarCitesChart");
+          if (ctx && typeof Chart !== "undefined") {
+            new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: years,
+                datasets: [{
+                  label: 'Citations per Year',
+                  data: values,
+                  fill: false,
+                  tension: 0.25,
+                  borderColor: '#3366cc',
+                  backgroundColor: '#3366cc',
+                  pointRadius: 2,
+                  borderWidth: 2
+                }]
+              },
+              options: {
+                responsive: true,
+                plugins: {
+                  legend: { display: false },
+                  title: {
+                    display: true,
+                    text: 'Citations per Year',
+                    font: { size: 14 }
+                  }
+                },
+                scales: {
+                  x: { ticks: { font: { size: 11 } }, grid: { display: false } },
+                  y: { beginAtZero: true, ticks: { font: { size: 11 } } }
+                }
+              }
+            });
+          }
+        });
+      </script>
+      {% endif %}
     </div>
   </li>
       {% endif %}
@@ -148,6 +196,3 @@
 
 </div>
 
-<!-- DEBUG author-profile include is active -->
-<!-- DEBUG scholar_metrics: {{ site.data.scholar_metrics | jsonify }} -->
-<!-- DEBUG h_index: {{ site.data.scholar_metrics.h_index }} / i10: {{ site.data.scholar_metrics.i10_index }} / cites: {{ site.data.scholar_metrics.citations }} / pubs: {{ site.data.scholar_metrics.total_publications }} -->
