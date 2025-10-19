@@ -1,6 +1,7 @@
 ---
 permalink: /teaching-materials/
 title: "Teaching Materials"
+published: false
 header: 
   og_image: "teaching/pdp.png"
 ---

@@ -36,6 +36,9 @@ author_profile: true
 }
 </style>
 
+{% capture _news_feed %}{{ '/feed/news.xml' | relative_url }}{% endcapture %}
+<link rel="alternate" type="application/atom+xml" title="News — {{ site.title }}" href="{{ _news_feed }}">
+
 {% assign news_items = site.news
   | where_exp: "i", "i.date"
   | where_exp: "i", "i.date <= site.time"

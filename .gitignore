@@ -1,8 +1,23 @@
+# Jekyll build output
 _site/
+
+# R and RStudio files
+.Rproj.user
+*.Rproj
+.RData
+.Rhistory
+
+# Temporary / generated R scripts
+Untitled.R
+
+# LaTeX outputs from posts
 images/posts/*.tex
 images/posts/*.pdf
 images/posts/*.sty
+
+# Caches from RMarkdown or similar
 _source/*_cache
-.Rproj.user
-.Rdata
-.Rhistory
+
+# OS / editor junk files (safe to include)
+.DS_Store
+Thumbs.db

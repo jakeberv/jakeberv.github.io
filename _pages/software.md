@@ -134,3 +134,6 @@ hr.soft-sep {
 
 <div style="clear: both;"></div>
 </div>
+
+
+{% raw %}{% include software-faq-jsonld.html %}{% endraw %}
