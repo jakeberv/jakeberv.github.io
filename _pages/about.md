@@ -33,7 +33,7 @@ I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctora
   | reverse %}
 
 {% for item in news_items limit:10 %}
-  <div style="margin-bottom: 0.25em; line-height: 1.25; font-size: 0.75em;">
+  <div style="margin-bottom: 0.25em; line-height: 1.35; font-size: 0.85em;">
     <p style="margin: 0;">
       <strong>{{ item.date | date: "%B %-d, %Y" }}</strong> — 
       <a href="{{ item.url | relative_url }}" style="text-decoration: none;">
