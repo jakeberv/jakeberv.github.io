@@ -11,6 +11,6 @@ header:
 
 {% include base_path %}
 
-{% assign ordered_pages = site.collaborators \| sort:"order_number" %}
+{% assign ordered_pages = site.collaborators | sort: "order_number" %}
 
 {% for post in ordered_pages %} {% include archive-single.html type="grid" %} {% endfor %}
