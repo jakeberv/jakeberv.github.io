@@ -161,12 +161,10 @@ def main() -> int:
     print(f"[info] MAX_PUBS={MAX_PUBS}, CRAWL_DELAY={CRAWL_DELAY}s")
 
     pg_holder = {"pg": init_free_proxy()}
-
-    if REQUIRE_FREE_PROXY and pg_holder["pg"] is None:
-        print("[fatal] No free proxy could be configured and REQUIRE_FREE_PROXY=1. Exiting.")
-        return 2
-
-    if not REQUIRE_FREE_PROXY and pg_holder["pg"] is None:
+    
+    # If free proxy init failed, try ONE bootstrap run without proxy (even if REQUIRE_FREE_PROXY=1)
+    if pg_holder["pg"] is None:
+        print("[proxy] No free proxy available. Attempting ONE bootstrap run without proxy...")
         use_no_proxy()
 
     author = fetch_author_with_retries(pg_holder, retries=AUTHOR_FETCH_RETRIES)
@@ -176,15 +174,17 @@ def main() -> int:
 
     print(f"[info] ✅ Fetched author: {author.get('name', 'Unknown')}")
 
-    if not author.get("publications"):
-        try:
-            author = scholarly.fill(
-                author,
-                sections=["publications", "coauthors", "counts", "public_access"],
-            )
-        except Exception as e:
-            print(f"[warn] follow-up fill for publications failed: {e}")
-
+    # Always attempt a fuller fill and MERGE it (don’t replace), so we don’t lose hindex/i10index
+    try:
+        filled = scholarly.fill(
+            author,
+            sections=["basics", "indices", "publications", "coauthors", "counts", "public_access"],
+        )
+        if isinstance(filled, dict):
+            author.update(filled)  # shallow merge preserves any fields gathered earlier
+    except Exception as e:
+        print(f"[warn] follow-up fill failed: {e}")
+    
     publications_data = []
     pubs = author.get("publications", []) or []
     if MAX_PUBS > 0:
@@ -225,6 +225,47 @@ def main() -> int:
         "proxy_mode": "free" if pg_holder["pg"] else "none",
     }
 
+    # --- Preserve previous numeric metrics if this run lost them (e.g., proxy hiccup) ---
+    prev = {}
+    if OUT_PATH.exists():
+        try:
+            prev = json.loads(OUT_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            prev = {}
+
+    def _bad(v):
+        return v in (None, "", "N/A")
+
+    for k in ["h_index", "i10_index", "citations", "total_publications"]:
+        if _bad(scholar_data.get(k)) and not _bad(prev.get(k)):
+            scholar_data[k] = prev[k]
+    # --- end guard ---
+
+    # --- Hard & anomaly guards to avoid saving bad data ---
+    def _is_intlike(x):
+        try:
+            int(x)
+            return True
+        except Exception:
+            return False
+
+    essential_ok = _is_intlike(scholar_data.get("h_index")) and _is_intlike(scholar_data.get("i10_index"))
+    print(f"[debug] essential_ok={essential_ok}; h_index={scholar_data.get('h_index')} i10_index={scholar_data.get('i10_index')}")
+
+    # If citations suddenly drop by >40% vs previous, skip save (likely a bad scrape)
+    prev_cites = prev.get("citations")
+    cur_cites = scholar_data.get("citations")
+    if isinstance(prev_cites, int) and isinstance(cur_cites, int):
+        if cur_cites < max(0, int(prev_cites * 0.6)):
+            print(f"[warn] Citations dropped unusually ({cur_cites} < 60% of {prev_cites}); preserving previous JSON and skipping save.")
+            return 0
+
+    # If we already have a file and essentials are missing, skip save
+    if OUT_PATH.exists() and not essential_ok:
+        print("[warn] h-index and/or i10-index missing this run; preserving previous JSON and skipping save.")
+        return 0
+    # --- end guards ---
+    
     print(json.dumps(scholar_data, indent=2))
 
     try:
