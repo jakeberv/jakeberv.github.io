@@ -125,6 +125,9 @@ read_more: "enabled"
   </a>
 </figure>
 
+{% capture _pubs_feed %}{{ '/feed/publications.xml' | relative_url }}{% endcapture %}
+<link rel="alternate" type="application/atom+xml" title="Publications — {{ site.title }}" href="{{ _pubs_feed }}">
+
 {% if author.googlescholar %}
 <p>You can also find my articles on <a href="{{ author.googlescholar }}" target="_blank" rel="noopener">my Google Scholar profile</a>.</p>
 {% endif %}
@@ -152,3 +155,5 @@ read_more: "enabled"
 <hr>
 
 <p>See CV for other publications.</p>
+
+{% include publications-faq-jsonld.html %}

@@ -1,0 +1,145 @@
+<!-- Invisible FAQ schema for the Software page -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+
+    {
+      "@type": "Question",
+      "name": "What software tools do you maintain and what problems do they solve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I maintain research software focused on evolutionary biology and systematics, including tools for phylogenetic inference, macroevolutionary modeling, comparative methods, data wrangling for large genomic and trait datasets, and reproducible workflows for figure generation and manuscript pipelines."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Where can I find the source code and releases?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All active projects are linked from the Software page and hosted on GitHub under the jakeberv organization or my user account. Stable releases are available on GitHub Releases; some R or Python packages may also be available on CRAN, PyPI, or conda-forge as noted in each project’s README."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "How do I install the tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Installation instructions are provided per project. For R packages, install via install.packages() if on CRAN or remotes::install_github(\"owner/repo\"). For Python, use pip install package-name or conda install -c conda-forge package-name. Command-line tools distribute prebuilt binaries for macOS/Linux when possible; otherwise build from source following the README."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What are the software and data dependencies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dependencies are listed in each repository (DESCRIPTION for R, pyproject.toml/requirements.txt for Python, and environment.yml for conda). Typical dependencies include tidyverse/data.table (R), numpy/pandas/scipy/biopython (Python), and common phylogenetics libraries. System-level requirements and versions are specified in the README."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Which operating systems are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most tools support macOS and Linux. Windows support varies by project and may rely on WSL or Docker. Each repository’s README indicates tested platforms and any platform-specific notes."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "How do I run example workflows or reproduce paper results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Projects include reproducible examples (vignettes, notebooks, or Makefile/Snakemake targets) with small test datasets. Where applicable, I provide scripts and environment files to regenerate figures and tables used in publications."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "How should I cite the software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Citations are listed in each repository’s README or CITATION file, and often include a DOI (Zenodo or journal article). Please cite both the software DOI and any companion paper if provided."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What licenses do you use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open-source licenses are specified per project (e.g., MIT, BSD, GPL). See the LICENSE file in each repository for details on permissions and obligations."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "How can I report bugs or request features?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Please open an issue on the corresponding GitHub repository with a minimal reproducible example (inputs, commands, error output, and environment details). Feature requests are welcome—describe the use case and expected behavior."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Do you accept contributions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Contributions via pull requests are encouraged. Follow the repository’s CONTRIBUTING guidelines and code style, add tests where possible, and update documentation. For substantial changes, open an issue first to discuss scope and design."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Is there a roadmap or planned features?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Roadmaps are tracked as GitHub issues or project boards. Milestones summarize near-term goals such as performance improvements, expanded file-format support, and new comparative or macroevolutionary analyses."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Are datasets included or available separately?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Toy datasets ship with the repositories for examples and tests. Larger datasets are linked via DOIs or institutional repositories. Each project README explains how to download and verify dataset hashes."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Do you provide Docker or Conda environments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Where useful, I provide container images and/or conda environment.yml files to ensure reproducibility. Tags in container registries correspond to released versions."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "How stable are APIs and CLIs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Semantic versioning is used when possible. Breaking changes only occur in major releases and are noted in the CHANGELOG with migration guidance."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Who maintains the software and how is it supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Projects are maintained by Jacob S. Berv with occasional collaborators. Support is provided on a best-effort basis via GitHub issues. For collaboration inquiries, use the contact details on the site."
+      }
+    }
+
+  ]
+}
+</script>
