@@ -4,7 +4,7 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 13,
-  "citations": 2527,
+  "citations": 2529,
   "cites_per_year": {
     "2015": 14,
     "2016": 105,
@@ -14,9 +14,9 @@
     "2020": 307,
     "2021": 317,
     "2022": 307,
-    "2023": 258,
+    "2023": 259,
     "2024": 269,
-    "2025": 209
+    "2025": 210
   },
   "interests": [
     "Speciation",
@@ -233,7 +233,7 @@
     },
     {
       "name": "Sonal Singhal",
-      "affiliation": "Associate Professor, CSU Dominguez Hills",
+      "affiliation": "Professor, CSU Dominguez Hills",
       "scholar_id": "hGRmhQkAAAAJ"
     },
     {
@@ -404,7 +404,7 @@
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 1813,
+      "citations": 1815,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
@@ -522,6 +522,13 @@
       "url": "https://academic.oup.com/gbe/advance-article/doi/10.1093/gbe/evaf017/7998737"
     },
     {
+      "title": "Morphological diversity of the cetacean mandibular symphysis coincides with novel modes of aquatic feeding",
+      "citations": 0,
+      "year": 2025,
+      "venue": "N/A",
+      "url": "https://www.cambridge.org/core/journals/paleobiology/article/morphological-diversity-of-the-cetacean-mandibular-symphysis-coincides-with-novel-modes-of-aquatic-feeding/E26D07190859FF4B606098AACF19F246"
+    },
+    {
       "title": "Skeletal trait measurements for thousands of bird species",
       "citations": 0,
       "year": 2025,
@@ -534,13 +541,6 @@
       "year": 2025,
       "venue": "N/A",
       "url": "https://academic.oup.com/evolut/advance-article-abstract/doi/10.1093/evolut/qpaf080/8121435"
-    },
-    {
-      "title": "Morphological diversity of the cetacean mandibular symphysis coincides with novel modes of aquatic feeding",
-      "citations": 0,
-      "year": 2025,
-      "venue": "N/A",
-      "url": "https://www.cambridge.org/core/journals/paleobiology/article/morphological-diversity-of-the-cetacean-mandibular-symphysis-coincides-with-novel-modes-of-aquatic-feeding/E26D07190859FF4B606098AACF19F246"
     },
     {
       "title": "Variable patterns of phenotypic evolution among canonical ‘living fossil’lineages",
@@ -585,6 +585,6 @@
       "url": "https://ui.adsabs.harvard.edu/abs/2016GSAA...4887815B/abstract"
     }
   ],
-  "generated_at": 1760850660,
+  "generated_at": 1761440986,
   "proxy_mode": "free"
 }
