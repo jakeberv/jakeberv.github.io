@@ -5,17 +5,14 @@ layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 ---
-{{ page.date | date: "%B %d, %Y" }} -
 
 <div class="flex-container" style="display: flex; align-items: flex-start;">
   <img src="https://www.geosociety.org/images/GSA/logo/headerlogo.svg" 
-       style="max-height: 150px; width: auto; max-width: 100%; margin-right: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); flex-shrink: 0;" 
-       onmouseover="this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'" 
-       onmouseout="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" 
+       style="max-height: 150px; width: auto; max-width: 100%; margin-right: 18px; flex-shrink: 0;" 
        alt="GSA logo"/>
-  <p style="font-size: 0.85em; margin: 0; flex-grow: 1; align-self: flex-start; text-align: left;">
+  <p style="font-size: 0.9em; margin: 0; flex-grow: 1; align-self: flex-start; text-align: left; line-height: 1.45; color: #333;">
     Jacob Berv delivered a keynote talk for the Geological Society of America Pardee Symposium on 
-    “Impact Cratering and the Evolution of Life.” The keynote highlighted how impact events and 
+    <em>“Impact Cratering and the Evolution of Life.”</em> The keynote highlighted how impact events and 
     macroevolutionary recovery intersect with his research program.
   </p>
 </div>
