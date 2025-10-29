@@ -19,11 +19,14 @@ header:
   #    url: "https://github.com"
 ---
 
-# Welcome
+<style>
+  /* match the news excerpt text on the homepage */
+  .about-intro { font-size: 0.9em; line-height: 1.35; color: #333; margin: 0 0 0.6em 0; }
+  .about-intro a { text-decoration: none; }
+</style>
 
-I am an evolutionary biologist interested in building and deciphering the tree of life. My research integrates data from natural history, ecology, genomics, and paleontology—often through the application of novel computational tools—in order to understand the links between micro- and macroevolution.
-
-I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/) at the University of Michigan.
+Jacob (Jake) Berv is an evolutionary biologist interested in building and deciphering the tree of life. His research integrates data from natural history, ecology, genomics, and paleontology—often through the application of novel computational tools—in order to understand the links between micro- and macroevolution. Jake is currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/) at the University of Michigan.
+{: .about-intro}
 
 ##  News
 {% assign news_items = site.news
