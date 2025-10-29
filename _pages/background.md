@@ -12,7 +12,6 @@ title: "Background"
     color: #333; 
   }
 
-  /* make page title visually lighter/smaller to match site sections */
   h1.page__title {
     font-size: 1.2em;
     font-weight: 600;
@@ -58,16 +57,18 @@ title: "Background"
 </style>
 
 <div class="background-flex background-text" markdown="1">
-  <div class="text-col" markdown="1">
-    Jake is currently supported by an 
-    [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/)
-    at the University of Michigan.
-  </div>
-  <div class="img-col">
-    <a href="https://www.schmidtsciences.org/">
-      <img src="/images/SchmidtSciencesLogo.png" alt="Schmidt Sciences Logo">
-    </a>
-  </div>
+<div class="text-col" markdown="1">
+
+Jake is currently supported by an 
+[Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/)
+at the University of Michigan.
+
+</div>
+<div class="img-col">
+<a href="https://www.schmidtsciences.org/">
+  <img src="/images/SchmidtSciencesLogo.png" alt="Schmidt Sciences Logo">
+</a>
+</div>
 </div>
 
 ---
