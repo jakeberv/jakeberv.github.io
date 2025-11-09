@@ -4,19 +4,19 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 13,
-  "citations": 2531,
+  "citations": 2540,
   "cites_per_year": {
     "2015": 14,
     "2016": 105,
     "2017": 208,
-    "2018": 217,
+    "2018": 218,
     "2019": 273,
     "2020": 307,
     "2021": 317,
     "2022": 307,
     "2023": 258,
-    "2024": 267,
-    "2025": 215
+    "2024": 266,
+    "2025": 225
   },
   "interests": [
     "Speciation",
@@ -292,21 +292,6 @@
       "scholar_id": "T90NSF0AAAAJ"
     },
     {
-      "name": "Mia Levine",
-      "affiliation": "University of Pennsylvania",
-      "scholar_id": "Pt4QxysAAAAJ"
-    },
-    {
-      "name": "Gregg WC Thomas",
-      "affiliation": "Bioinformatics Scientist, Harvard University",
-      "scholar_id": "4pydfEUAAAAJ"
-    },
-    {
-      "name": "Jeffrey M. Good",
-      "affiliation": "Professor, University of Montana",
-      "scholar_id": "penpid8AAAAJ"
-    },
-    {
       "name": "Eric R. Gulson-Castillo",
       "affiliation": "Postdoctoral Associate, Yale University",
       "scholar_id": "lWPHsioAAAAJ"
@@ -320,6 +305,21 @@
       "name": "Abigail A. Kimmitt",
       "affiliation": "Hofstra University",
       "scholar_id": "j7OsXOwAAAAJ"
+    },
+    {
+      "name": "Mia Levine",
+      "affiliation": "University of Pennsylvania",
+      "scholar_id": "Pt4QxysAAAAJ"
+    },
+    {
+      "name": "Gregg WC Thomas",
+      "affiliation": "Bioinformatics Scientist, Harvard University",
+      "scholar_id": "4pydfEUAAAAJ"
+    },
+    {
+      "name": "Jeffrey M. Good",
+      "affiliation": "Professor, University of Montana",
+      "scholar_id": "penpid8AAAAJ"
     },
     {
       "name": "William Gearty",
@@ -400,11 +400,11 @@
     "not_available": 0
   },
   "total_publications": 26,
-  "publications_fetched": 20,
+  "publications_fetched": 26,
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 1815,
+      "citations": 1822,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
@@ -445,6 +445,27 @@
       "url": "https://academic.oup.com/evolut/article-abstract/72/3/630/6726732"
     },
     {
+      "title": "Timing the extant avian radiation: the rise of modern birds, and the importance of modeling molecular rate variation",
+      "citations": 45,
+      "year": 2019,
+      "venue": "N/A",
+      "url": "https://peerj.com/preprints/27521/"
+    },
+    {
+      "title": "Genomic phylogeography of the White-crowned Manakin Pseudopipra pipra (Aves: Pipridae) illuminates a continental-scale radiation out of the Andes",
+      "citations": 39,
+      "year": 2021,
+      "venue": "N/A",
+      "url": "https://www.sciencedirect.com/science/article/pii/S105579032100138X"
+    },
+    {
+      "title": "Ecological selectivity and the evolution of mammalian substrate preference across the K–Pg boundary",
+      "citations": 30,
+      "year": 2021,
+      "venue": "N/A",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ece3.8114"
+    },
+    {
       "title": "Recent divergence and lack of shared phylogeographic history characterize the diversification of neotropical savanna birds",
       "citations": 25,
       "year": 2021,
@@ -464,6 +485,20 @@
       "year": 2020,
       "venue": "N/A",
       "url": "https://scholar.google.com/scholar?cluster=14767977026164811401&hl=en&oi=scholarr"
+    },
+    {
+      "title": "Genome and life-history evolution link bird diversification to the end-Cretaceous mass extinction",
+      "citations": 17,
+      "year": 2024,
+      "venue": "N/A",
+      "url": "https://www.science.org/doi/abs/10.1126/sciadv.adp0114"
+    },
+    {
+      "title": "The pace of mitochondrial molecular evolution varies with seasonal migration distance",
+      "citations": 8,
+      "year": 2024,
+      "venue": "N/A",
+      "url": "https://academic.oup.com/evolut/article-abstract/78/1/160/7379636"
     },
     {
       "title": "Cran task view: Phylogenetics",
@@ -529,6 +564,13 @@
       "url": "https://digitallibrary.amnh.org/items/2a4a03b6-dd75-4d96-bdb3-6d214b993353"
     },
     {
+      "title": "Peer Review Report For: The deep(er) roots of Eukaryotes and Akaryotes [version 1; peer review: 1 approved, 1 approved with reservations, 1 not approved]",
+      "citations": 0,
+      "year": 2020,
+      "venue": "N/A",
+      "url": "N/A"
+    },
+    {
       "title": "Tempo and Mode: Using Genomic, Anatomical, and Life-History Data to Integrate the Micro-and Macroevolution of Birds",
       "citations": 0,
       "year": 2019,
@@ -543,6 +585,6 @@
       "url": "https://ui.adsabs.harvard.edu/abs/2016GSAA...4887815B/abstract"
     }
   ],
-  "generated_at": 1762047674,
+  "generated_at": 1762650573,
   "proxy_mode": "free"
 }
