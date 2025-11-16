@@ -174,17 +174,31 @@ def main() -> int:
 
     print(f"[info] ✅ Fetched author: {author.get('name', 'Unknown')}")
 
-    # Always attempt a fuller fill and MERGE it (don’t replace), so we don’t lose hindex/i10index
-    try:
-        filled = scholarly.fill(
-            author,
-            sections=["basics", "indices", "publications", "coauthors", "counts", "public_access"],
-        )
-        if isinstance(filled, dict):
-            author.update(filled)  # shallow merge preserves any fields gathered earlier
-    except Exception as e:
-        print(f"[warn] follow-up fill failed: {e}")
-    
+    # --- Load previous JSON before we start mutating things, for guards later ---
+    prev: Dict[str, Any] = {}
+    if OUT_PATH.exists():
+        try:
+            prev = json.loads(OUT_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            prev = {}
+
+    # --- Try to add extra sections *incrementally* so one bad section doesn't kill everything ---
+    extra_section_sets = [
+        ["publications"],
+        ["coauthors"],
+        ["counts"],
+        ["public_access"],
+    ]
+    for secs in extra_section_sets:
+        try:
+            print(f"[info] follow-up fill for sections={secs}...")
+            filled = scholarly.fill(author, sections=secs)
+            if isinstance(filled, dict):
+                author.update(filled)  # shallow merge preserves indices/basics we already have
+        except Exception as e:
+            print(f"[warn] follow-up fill for sections={secs} failed: {e}")
+
+    # ---------- Publications ----------
     publications_data = []
     pubs = author.get("publications", []) or []
     if MAX_PUBS > 0:
@@ -197,7 +211,7 @@ def main() -> int:
             publications_data.append(details)
         time.sleep(CRAWL_DELAY)
 
-    scholar_data = {
+    scholar_data: Dict[str, Any] = {
         "name": author.get("name", "N/A"),
         "affiliation": author.get("affiliation", "N/A"),
         "email_domain": author.get("email_domain", author.get("email", "N/A")),
@@ -226,20 +240,31 @@ def main() -> int:
     }
 
     # --- Preserve previous numeric metrics if this run lost them (e.g., proxy hiccup) ---
-    prev = {}
-    if OUT_PATH.exists():
-        try:
-            prev = json.loads(OUT_PATH.read_text(encoding="utf-8"))
-        except Exception:
-            prev = {}
-
     def _bad(v):
         return v in (None, "", "N/A")
 
     for k in ["h_index", "i10_index", "citations", "total_publications"]:
         if _bad(scholar_data.get(k)) and not _bad(prev.get(k)):
             scholar_data[k] = prev[k]
-    # --- end guard ---
+
+    # Preserve cites_per_year if this run produced an empty dict but previous had data
+    if isinstance(scholar_data.get("cites_per_year"), dict) and not scholar_data["cites_per_year"]:
+        prev_cpy = prev.get("cites_per_year")
+        if isinstance(prev_cpy, dict) and prev_cpy:
+            print("[warn] cites_per_year empty this run; preserving previous cites_per_year.")
+            scholar_data["cites_per_year"] = prev_cpy
+
+    # Preserve publications if this run failed to fetch any but we had some before
+    prev_pubs = prev.get("publications") or []
+    if not publications_data and prev_pubs:
+        print("[warn] No publications fetched this run; preserving previous publications list.")
+        scholar_data["publications"] = prev_pubs
+        scholar_data["publications_fetched"] = prev.get(
+            "publications_fetched", len(prev_pubs)
+        )
+        # Also preserve total_publications if we had a better value before
+        if not _bad(prev.get("total_publications")):
+            scholar_data["total_publications"] = prev["total_publications"]
 
     # --- Hard & anomaly guards to avoid saving bad data ---
     def _is_intlike(x):
@@ -264,7 +289,6 @@ def main() -> int:
     if OUT_PATH.exists() and not essential_ok:
         print("[warn] h-index and/or i10-index missing this run; preserving previous JSON and skipping save.")
         return 0
-    # --- end guards ---
     
     print(json.dumps(scholar_data, indent=2))
 
