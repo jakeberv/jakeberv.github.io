@@ -4,7 +4,7 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 13,
-  "citations": 2556,
+  "citations": 2562,
   "cites_per_year": {
     "2015": 14,
     "2016": 105,
@@ -15,8 +15,8 @@
     "2021": 317,
     "2022": 307,
     "2023": 258,
-    "2024": 267,
-    "2025": 234
+    "2024": 266,
+    "2025": 241
   },
   "interests": [
     "Speciation",
@@ -404,7 +404,7 @@
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 1830,
+      "citations": 1833,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
@@ -425,7 +425,7 @@
     },
     {
       "title": "An inverse latitudinal gradient in infection probability and phylogenetic diversity for Leucocytozoon blood parasites in New World birds",
-      "citations": 97,
+      "citations": 98,
       "year": 2020,
       "venue": "N/A",
       "url": "https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/1365-2656.13117"
@@ -453,7 +453,7 @@
     },
     {
       "title": "Genomic phylogeography of the White-crowned Manakin Pseudopipra pipra (Aves: Pipridae) illuminates a continental-scale radiation out of the Andes",
-      "citations": 38,
+      "citations": 39,
       "year": 2021,
       "venue": "N/A",
       "url": "https://www.sciencedirect.com/science/article/pii/S105579032100138X"
@@ -467,7 +467,7 @@
     },
     {
       "title": "Recent divergence and lack of shared phylogeographic history characterize the diversification of neotropical savanna birds",
-      "citations": 26,
+      "citations": 27,
       "year": 2021,
       "venue": "N/A",
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/jbi.14065"
@@ -585,6 +585,6 @@
       "url": "https://ui.adsabs.harvard.edu/abs/2016GSAA...4887815B/abstract"
     }
   ],
-  "generated_at": 1763333798,
+  "generated_at": 1763861251,
   "proxy_mode": "free"
 }
