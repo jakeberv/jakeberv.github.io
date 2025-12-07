@@ -4,7 +4,7 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 13,
-  "citations": 2563,
+  "citations": 2570,
   "cites_per_year": {
     "2015": 14,
     "2016": 105,
@@ -13,10 +13,10 @@
     "2019": 274,
     "2020": 308,
     "2021": 317,
-    "2022": 308,
+    "2022": 309,
     "2023": 257,
     "2024": 267,
-    "2025": 241
+    "2025": 247
   },
   "interests": [
     "Speciation",
@@ -404,7 +404,7 @@
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 1835,
+      "citations": 1840,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
@@ -439,7 +439,7 @@
     },
     {
       "title": "Complex coevolution of wing, tail, and vocal sounds of courting male bee hummingbirds",
-      "citations": 49,
+      "citations": 50,
       "year": 2018,
       "venue": "N/A",
       "url": "https://academic.oup.com/evolut/article-abstract/72/3/630/6726732"
@@ -522,6 +522,13 @@
       "url": "https://academic.oup.com/gbe/advance-article/doi/10.1093/gbe/evaf017/7998737"
     },
     {
+      "title": "Pennaraptoran theropod dinosaurs: past progress and new frontiers.(Bulletin of the American Museum of Natural History, no. 440)",
+      "citations": 1,
+      "year": 2020,
+      "venue": "N/A",
+      "url": "https://digitallibrary.amnh.org/items/2a4a03b6-dd75-4d96-bdb3-6d214b993353"
+    },
+    {
       "title": "Morphological diversity of the cetacean mandibular symphysis coincides with novel modes of aquatic feeding",
       "citations": 0,
       "year": 2025,
@@ -557,13 +564,6 @@
       "url": "https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=26736004&asa=N&AN=155981554&h=6ShoPHa1VNW3eJA5GgTybJaBTlAf67eP1XlLt9BpgsMd3u%2BBlqn61nXbJK%2FplO%2FEaocOXnmiohLr%2Fujoy6JjRA%3D%3D&crl=c"
     },
     {
-      "title": "Pennaraptoran theropod dinosaurs: past progress and new frontiers.(Bulletin of the American Museum of Natural History, no. 440)",
-      "citations": 0,
-      "year": 2020,
-      "venue": "N/A",
-      "url": "https://digitallibrary.amnh.org/items/2a4a03b6-dd75-4d96-bdb3-6d214b993353"
-    },
-    {
       "title": "Peer Review Report For: The deep(er) roots of Eukaryotes and Akaryotes [version 1; peer review: 1 approved, 1 approved with reservations, 1 not approved]",
       "citations": 0,
       "year": 2020,
@@ -585,6 +585,6 @@
       "url": "https://ui.adsabs.harvard.edu/abs/2016GSAA...4887815B/abstract"
     }
   ],
-  "generated_at": 1764465999,
+  "generated_at": 1765070182,
   "proxy_mode": "free"
 }
