@@ -4,19 +4,19 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 13,
-  "citations": 2581,
+  "citations": 2586,
   "cites_per_year": {
-    "2015": 14,
-    "2016": 105,
+    "2015": 13,
+    "2016": 106,
     "2017": 209,
-    "2018": 218,
+    "2018": 219,
     "2019": 274,
     "2020": 309,
-    "2021": 317,
-    "2022": 309,
+    "2021": 316,
+    "2022": 310,
     "2023": 257,
-    "2024": 268,
-    "2025": 258
+    "2024": 269,
+    "2025": 261
   },
   "interests": [
     "Speciation",
@@ -404,14 +404,14 @@
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 1845,
+      "citations": 1847,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
     },
     {
       "title": "Early evolution of modern birds structured by global forest collapse at the end-Cretaceous mass extinction",
-      "citations": 183,
+      "citations": 184,
       "year": 2018,
       "venue": "N/A",
       "url": "https://www.cell.com/current-biology/fulltext/S0960-9822(18)30534-7"
@@ -467,7 +467,7 @@
     },
     {
       "title": "Recent divergence and lack of shared phylogeographic history characterize the diversification of neotropical savanna birds",
-      "citations": 28,
+      "citations": 29,
       "year": 2021,
       "venue": "N/A",
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/jbi.14065"
@@ -522,6 +522,13 @@
       "url": "https://www.cambridge.org/core/journals/paleobiology/article/morphological-diversity-of-the-cetacean-mandibular-symphysis-coincides-with-novel-modes-of-aquatic-feeding/E26D07190859FF4B606098AACF19F246"
     },
     {
+      "title": "Habitat-associated evolutionary rates in deep-sea invertebrates",
+      "citations": 1,
+      "year": 2025,
+      "venue": "N/A",
+      "url": "https://academic.oup.com/evolut/advance-article-abstract/doi/10.1093/evolut/qpaf080/8121435"
+    },
+    {
       "title": "The genomic landscape, causes, and consequences of extensive phylogenomic discordance in murine rodents",
       "citations": 1,
       "year": 2025,
@@ -548,13 +555,6 @@
       "year": 2025,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/s41597-025-05234-y"
-    },
-    {
-      "title": "Habitat-associated evolutionary rates in deep-sea invertebrates",
-      "citations": 0,
-      "year": 2025,
-      "venue": "N/A",
-      "url": "https://academic.oup.com/evolut/advance-article-abstract/doi/10.1093/evolut/qpaf080/8121435"
     },
     {
       "title": "Acknowledgment to Reviewers of Birds in 2021",
@@ -585,6 +585,6 @@
       "url": "https://ui.adsabs.harvard.edu/abs/2016GSAA...4887815B/abstract"
     }
   ],
-  "generated_at": 1766279902,
+  "generated_at": 1766885529,
   "proxy_mode": "free"
 }
