@@ -4,7 +4,7 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 13,
-  "citations": 2586,
+  "citations": 2588,
   "cites_per_year": {
     "2015": 13,
     "2016": 106,
@@ -13,10 +13,11 @@
     "2019": 274,
     "2020": 309,
     "2021": 316,
-    "2022": 310,
+    "2022": 312,
     "2023": 257,
     "2024": 269,
-    "2025": 261
+    "2025": 260,
+    "2026": 1
   },
   "interests": [
     "Speciation",
@@ -363,7 +364,7 @@
     },
     {
       "name": "Brian C. Weeks",
-      "affiliation": "Asst Professor, School for Environment and Sustainability, University of Michigan",
+      "affiliation": "School for Environment and Sustainability, University of Michigan",
       "scholar_id": "7isF9EEAAAAJ"
     },
     {
@@ -399,12 +400,12 @@
     "available": 13,
     "not_available": 0
   },
-  "total_publications": 26,
-  "publications_fetched": 26,
+  "total_publications": 27,
+  "publications_fetched": 27,
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 1847,
+      "citations": 1848,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
@@ -439,7 +440,7 @@
     },
     {
       "title": "Complex coevolution of wing, tail, and vocal sounds of courting male bee hummingbirds",
-      "citations": 50,
+      "citations": 51,
       "year": 2018,
       "venue": "N/A",
       "url": "https://academic.oup.com/evolut/article-abstract/72/3/630/6726732"
@@ -550,6 +551,13 @@
       "url": "https://digitallibrary.amnh.org/items/2a4a03b6-dd75-4d96-bdb3-6d214b993353"
     },
     {
+      "title": "Morphological diversity of the cetacean mandibular symphysis coincides with novel modes of aquatic feeding–CORRIGENDUM",
+      "citations": 0,
+      "year": 2025,
+      "venue": "N/A",
+      "url": "https://www.cambridge.org/core/journals/paleobiology/article/morphological-diversity-of-the-cetacean-mandibular-symphysis-coincides-with-novel-modes-of-aquatic-feeding-corrigendum/627E33820DC8746FC5ADFF89C26C8C87"
+    },
+    {
       "title": "Skeletal trait measurements for thousands of bird species",
       "citations": 0,
       "year": 2025,
@@ -582,9 +590,9 @@
       "citations": 0,
       "year": 2016,
       "venue": "N/A",
-      "url": "https://ui.adsabs.harvard.edu/abs/2016GSAA...4887815B/abstract"
+      "url": "https://scholar.google.com/scholar?cluster=7071760361165695753&hl=en&oi=scholarr"
     }
   ],
-  "generated_at": 1766885529,
+  "generated_at": 1767492646,
   "proxy_mode": "free"
 }
