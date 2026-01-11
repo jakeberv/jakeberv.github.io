@@ -4,20 +4,20 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 13,
-  "citations": 2588,
+  "citations": 2594,
   "cites_per_year": {
     "2015": 13,
     "2016": 106,
     "2017": 209,
     "2018": 219,
     "2019": 274,
-    "2020": 309,
+    "2020": 307,
     "2021": 316,
     "2022": 312,
     "2023": 257,
-    "2024": 269,
-    "2025": 260,
-    "2026": 1
+    "2024": 268,
+    "2025": 266,
+    "2026": 4
   },
   "interests": [
     "Speciation",
@@ -353,16 +353,6 @@
       "scholar_id": "Ic3vLT4AAAAJ"
     },
     {
-      "name": "Rebecca J. Strauch",
-      "affiliation": "George Mason University",
-      "scholar_id": "BJeIl0AAAAAJ"
-    },
-    {
-      "name": "Nicholas D. Pyenson",
-      "affiliation": "Curator, National Museum of Natural History, Smithsonian Institution",
-      "scholar_id": "TPY3-ccAAAAJ"
-    },
-    {
       "name": "Brian C. Weeks",
       "affiliation": "School for Environment and Sustainability, University of Michigan",
       "scholar_id": "7isF9EEAAAAJ"
@@ -391,6 +381,16 @@
       "name": "Zhizhuo Zhou",
       "affiliation": "Stanford University",
       "scholar_id": "WjZyzbYAAAAJ"
+    },
+    {
+      "name": "Rebecca J. Strauch",
+      "affiliation": "George Mason University",
+      "scholar_id": "BJeIl0AAAAAJ"
+    },
+    {
+      "name": "Nicholas D. Pyenson",
+      "affiliation": "Curator, National Museum of Natural History, Smithsonian Institution",
+      "scholar_id": "TPY3-ccAAAAJ"
     }
   ],
   "profile_picture": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=cQQaGZQAAAAJ&citpid=4",
@@ -400,12 +400,12 @@
     "available": 13,
     "not_available": 0
   },
-  "total_publications": 27,
-  "publications_fetched": 27,
+  "total_publications": 26,
+  "publications_fetched": 25,
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 1848,
+      "citations": 1851,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
@@ -419,7 +419,7 @@
     },
     {
       "title": "Genomic signature of an avian Lilliput effect across the K-Pg extinction",
-      "citations": 126,
+      "citations": 127,
       "year": 2018,
       "venue": "N/A",
       "url": "https://academic.oup.com/sysbio/article-abstract/67/1/1/3960267"
@@ -446,29 +446,22 @@
       "url": "https://academic.oup.com/evolut/article-abstract/72/3/630/6726732"
     },
     {
-      "title": "Timing the extant avian radiation: the rise of modern birds, and the importance of modeling molecular rate variation",
-      "citations": 45,
-      "year": 2019,
-      "venue": "N/A",
-      "url": "https://peerj.com/preprints/27521/"
-    },
-    {
       "title": "Genomic phylogeography of the White-crowned Manakin Pseudopipra pipra (Aves: Pipridae) illuminates a continental-scale radiation out of the Andes",
-      "citations": 40,
+      "citations": 41,
       "year": 2021,
       "venue": "N/A",
       "url": "https://www.sciencedirect.com/science/article/pii/S105579032100138X"
     },
     {
       "title": "Ecological selectivity and the evolution of mammalian substrate preference across the K–Pg boundary",
-      "citations": 31,
+      "citations": 32,
       "year": 2021,
       "venue": "N/A",
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ece3.8114"
     },
     {
       "title": "Recent divergence and lack of shared phylogeographic history characterize the diversification of neotropical savanna birds",
-      "citations": 29,
+      "citations": 30,
       "year": 2021,
       "venue": "N/A",
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/jbi.14065"
@@ -516,13 +509,6 @@
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10491188/"
     },
     {
-      "title": "Morphological diversity of the cetacean mandibular symphysis coincides with novel modes of aquatic feeding",
-      "citations": 1,
-      "year": 2025,
-      "venue": "N/A",
-      "url": "https://www.cambridge.org/core/journals/paleobiology/article/morphological-diversity-of-the-cetacean-mandibular-symphysis-coincides-with-novel-modes-of-aquatic-feeding/E26D07190859FF4B606098AACF19F246"
-    },
-    {
       "title": "Habitat-associated evolutionary rates in deep-sea invertebrates",
       "citations": 1,
       "year": 2025,
@@ -551,11 +537,11 @@
       "url": "https://digitallibrary.amnh.org/items/2a4a03b6-dd75-4d96-bdb3-6d214b993353"
     },
     {
-      "title": "Morphological diversity of the cetacean mandibular symphysis coincides with novel modes of aquatic feeding–CORRIGENDUM",
+      "title": "Morphological diversity of the cetacean mandibular symphysis coincides with novel modes of aquatic feeding",
       "citations": 0,
       "year": 2025,
       "venue": "N/A",
-      "url": "https://www.cambridge.org/core/journals/paleobiology/article/morphological-diversity-of-the-cetacean-mandibular-symphysis-coincides-with-novel-modes-of-aquatic-feeding-corrigendum/627E33820DC8746FC5ADFF89C26C8C87"
+      "url": "https://www.cambridge.org/core/journals/paleobiology/article/morphological-diversity-of-the-cetacean-mandibular-symphysis-coincides-with-novel-modes-of-aquatic-feeding/E26D07190859FF4B606098AACF19F246"
     },
     {
       "title": "Skeletal trait measurements for thousands of bird species",
@@ -593,6 +579,6 @@
       "url": "https://scholar.google.com/scholar?cluster=7071760361165695753&hl=en&oi=scholarr"
     }
   ],
-  "generated_at": 1767492646,
+  "generated_at": 1768096136,
   "proxy_mode": "free"
 }
