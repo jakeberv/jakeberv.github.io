@@ -4,20 +4,20 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 13,
-  "citations": 2594,
+  "citations": 2616,
   "cites_per_year": {
     "2015": 13,
     "2016": 106,
     "2017": 209,
-    "2018": 219,
+    "2018": 221,
     "2019": 274,
     "2020": 307,
     "2021": 316,
     "2022": 312,
-    "2023": 257,
-    "2024": 268,
-    "2025": 266,
-    "2026": 4
+    "2023": 258,
+    "2024": 269,
+    "2025": 268,
+    "2026": 19
   },
   "interests": [
     "Speciation",
@@ -58,14 +58,14 @@
       "scholar_id": "wNmwYS4AAAAJ"
     },
     {
-      "name": "Kristof Zyskowski",
-      "affiliation": "Yale University, Peabody Museum of Natural History",
-      "scholar_id": "aEmILscAAAAJ"
-    },
-    {
       "name": "Camila C. Ribas",
       "affiliation": "Instituto Nacional de Pesquisas da Amazônia & American Museum of Natural History",
       "scholar_id": "-X2HGoYAAAAJ"
+    },
+    {
+      "name": "Kristof Zyskowski",
+      "affiliation": "Yale University, Peabody Museum of Natural History",
+      "scholar_id": "aEmILscAAAAJ"
     },
     {
       "name": "Teresa J. Feo",
@@ -114,7 +114,7 @@
     },
     {
       "name": "Alan Fecchio",
-      "affiliation": "",
+      "affiliation": "Universidade Estadual Paulista (UNESP Jaboticabal)",
       "scholar_id": "FgGcYjEAAAAJ"
     },
     {
@@ -188,26 +188,6 @@
       "scholar_id": "5wcNxu0AAAAJ"
     },
     {
-      "name": "Michael Landis",
-      "affiliation": "Assistant Professor at Washington University in St. Louis",
-      "scholar_id": "LxPnTjYAAAAJ"
-    },
-    {
-      "name": "Allison Hsiang",
-      "affiliation": "Researcher, Stockholm University",
-      "scholar_id": "3D-4Dn8AAAAJ"
-    },
-    {
-      "name": "Robert Lanfear",
-      "affiliation": "Professor, Australian National University",
-      "scholar_id": "Se6txrMAAAAJ"
-    },
-    {
-      "name": "Leonardo Campagna",
-      "affiliation": "Cornell Lab of Ornithology",
-      "scholar_id": "PtLhs74AAAAJ"
-    },
-    {
       "name": "Nathanael Walker-Hale",
       "affiliation": "Postdoctoral Research Associate, Department of Biosciences, Durham University",
       "scholar_id": "SeRf_xAAAAAJ"
@@ -253,6 +233,26 @@
       "scholar_id": "WhHTPMQAAAAJ"
     },
     {
+      "name": "Michael Landis",
+      "affiliation": "Assistant Professor at Washington University in St. Louis",
+      "scholar_id": "LxPnTjYAAAAJ"
+    },
+    {
+      "name": "Allison Hsiang",
+      "affiliation": "Researcher, Stockholm University",
+      "scholar_id": "3D-4Dn8AAAAJ"
+    },
+    {
+      "name": "Robert Lanfear",
+      "affiliation": "Professor, Australian National University",
+      "scholar_id": "Se6txrMAAAAJ"
+    },
+    {
+      "name": "Leonardo Campagna",
+      "affiliation": "Cornell Lab of Ornithology",
+      "scholar_id": "PtLhs74AAAAJ"
+    },
+    {
       "name": "Eric J. Sargis",
       "affiliation": "Professor, Yale University; Curator, Yale Peabody Museum",
       "scholar_id": "pk0CYUsAAAAJ"
@@ -293,21 +293,6 @@
       "scholar_id": "T90NSF0AAAAJ"
     },
     {
-      "name": "Eric R. Gulson-Castillo",
-      "affiliation": "Postdoctoral Associate, Yale University",
-      "scholar_id": "lWPHsioAAAAJ"
-    },
-    {
-      "name": "Teresa Pegan",
-      "affiliation": "University of Michigan",
-      "scholar_id": "7XYBoHEAAAAJ"
-    },
-    {
-      "name": "Abigail A. Kimmitt",
-      "affiliation": "Hofstra University",
-      "scholar_id": "j7OsXOwAAAAJ"
-    },
-    {
       "name": "Mia Levine",
       "affiliation": "University of Pennsylvania",
       "scholar_id": "Pt4QxysAAAAJ"
@@ -321,6 +306,21 @@
       "name": "Jeffrey M. Good",
       "affiliation": "Professor, University of Montana",
       "scholar_id": "penpid8AAAAJ"
+    },
+    {
+      "name": "Eric R. Gulson-Castillo",
+      "affiliation": "Postdoctoral Associate, Yale University",
+      "scholar_id": "lWPHsioAAAAJ"
+    },
+    {
+      "name": "Teresa Pegan",
+      "affiliation": "University of Michigan",
+      "scholar_id": "7XYBoHEAAAAJ"
+    },
+    {
+      "name": "Abigail A. Kimmitt",
+      "affiliation": "Hofstra University",
+      "scholar_id": "j7OsXOwAAAAJ"
     },
     {
       "name": "William Gearty",
@@ -348,11 +348,6 @@
       "scholar_id": "CK6Qg7gAAAAJ"
     },
     {
-      "name": "Rafael A. Rivero-Vega",
-      "affiliation": "PhD Candidate, University of Michigan",
-      "scholar_id": "Ic3vLT4AAAAJ"
-    },
-    {
       "name": "Brian C. Weeks",
       "affiliation": "School for Environment and Sustainability, University of Michigan",
       "scholar_id": "7isF9EEAAAAJ"
@@ -361,6 +356,11 @@
       "name": "Charlotte M Probst",
       "affiliation": "PhD student, University of Michigan",
       "scholar_id": "dRvjW1sAAAAJ"
+    },
+    {
+      "name": "Rafael A. Rivero-Vega",
+      "affiliation": "PhD Candidate, University of Michigan",
+      "scholar_id": "Ic3vLT4AAAAJ"
     },
     {
       "name": "Brett W. Benz",
@@ -397,29 +397,29 @@
   "homepage": "N/A",
   "organization": 4770128543809686866,
   "public_access": {
-    "available": 13,
+    "available": 14,
     "not_available": 0
   },
-  "total_publications": 26,
-  "publications_fetched": 25,
+  "total_publications": 27,
+  "publications_fetched": 27,
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 1851,
+      "citations": 1864,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
     },
     {
       "title": "Early evolution of modern birds structured by global forest collapse at the end-Cretaceous mass extinction",
-      "citations": 184,
+      "citations": 185,
       "year": 2018,
       "venue": "N/A",
       "url": "https://www.cell.com/current-biology/fulltext/S0960-9822(18)30534-7"
     },
     {
       "title": "Genomic signature of an avian Lilliput effect across the K-Pg extinction",
-      "citations": 127,
+      "citations": 128,
       "year": 2018,
       "venue": "N/A",
       "url": "https://academic.oup.com/sysbio/article-abstract/67/1/1/3960267"
@@ -440,21 +440,28 @@
     },
     {
       "title": "Complex coevolution of wing, tail, and vocal sounds of courting male bee hummingbirds",
-      "citations": 51,
+      "citations": 52,
       "year": 2018,
       "venue": "N/A",
       "url": "https://academic.oup.com/evolut/article-abstract/72/3/630/6726732"
     },
     {
+      "title": "Timing the extant avian radiation: the rise of modern birds, and the importance of modeling molecular rate variation",
+      "citations": 45,
+      "year": 2019,
+      "venue": "N/A",
+      "url": "https://peerj.com/preprints/27521/"
+    },
+    {
       "title": "Genomic phylogeography of the White-crowned Manakin Pseudopipra pipra (Aves: Pipridae) illuminates a continental-scale radiation out of the Andes",
-      "citations": 41,
+      "citations": 42,
       "year": 2021,
       "venue": "N/A",
       "url": "https://www.sciencedirect.com/science/article/pii/S105579032100138X"
     },
     {
       "title": "Ecological selectivity and the evolution of mammalian substrate preference across the K–Pg boundary",
-      "citations": 32,
+      "citations": 34,
       "year": 2021,
       "venue": "N/A",
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ece3.8114"
@@ -468,24 +475,24 @@
     },
     {
       "title": "Divergence in morphology, calls, song, mechanical sounds, and genetics supports species status for the Inaguan hummingbird (Trochilidae: Calliphlox “evelynae” lyrura)",
-      "citations": 22,
+      "citations": 21,
       "year": 2015,
       "venue": "N/A",
       "url": "https://academic.oup.com/auk/article-abstract/132/1/248/5149205"
+    },
+    {
+      "title": "Genome and life-history evolution link bird diversification to the end-Cretaceous mass extinction",
+      "citations": 20,
+      "year": 2024,
+      "venue": "N/A",
+      "url": "https://www.science.org/doi/abs/10.1126/sciadv.adp0114"
     },
     {
       "title": "Pennaraptoran theropod dinosaurs: past progress and new frontiers",
       "citations": 20,
       "year": 2020,
       "venue": "N/A",
-      "url": "https://scholar.google.com/scholar?cluster=14767977026164811401&hl=en&oi=scholarr"
-    },
-    {
-      "title": "Genome and life-history evolution link bird diversification to the end-Cretaceous mass extinction",
-      "citations": 17,
-      "year": 2024,
-      "venue": "N/A",
-      "url": "https://www.science.org/doi/abs/10.1126/sciadv.adp0114"
+      "url": "http://elearnshc.org:8080/jspui/handle/123456789/31440"
     },
     {
       "title": "The pace of mitochondrial molecular evolution varies with seasonal migration distance",
@@ -502,6 +509,13 @@
       "url": "https://mirror.truenetwork.ru/CRAN/web/views/Phylogenetics.html"
     },
     {
+      "title": "The genomic landscape, causes, and consequences of extensive phylogenomic discordance in murine rodents",
+      "citations": 2,
+      "year": 2025,
+      "venue": "N/A",
+      "url": "https://academic.oup.com/gbe/advance-article/doi/10.1093/gbe/evaf017/7998737"
+    },
+    {
       "title": "The genomic landscape, causes, and consequences of extensive phylogenomic discordance in Old World mice and rats",
       "citations": 2,
       "year": 2023,
@@ -516,13 +530,6 @@
       "url": "https://academic.oup.com/evolut/advance-article-abstract/doi/10.1093/evolut/qpaf080/8121435"
     },
     {
-      "title": "The genomic landscape, causes, and consequences of extensive phylogenomic discordance in murine rodents",
-      "citations": 1,
-      "year": 2025,
-      "venue": "N/A",
-      "url": "https://academic.oup.com/gbe/advance-article/doi/10.1093/gbe/evaf017/7998737"
-    },
-    {
       "title": "Variable patterns of phenotypic evolution among canonical ‘living fossil’lineages",
       "citations": 1,
       "year": 2024,
@@ -535,6 +542,13 @@
       "year": 2020,
       "venue": "N/A",
       "url": "https://digitallibrary.amnh.org/items/2a4a03b6-dd75-4d96-bdb3-6d214b993353"
+    },
+    {
+      "title": "Exploring the data demands and global opportunities for reconstructing morphological responses to climate change",
+      "citations": 0,
+      "year": 2026,
+      "venue": "N/A",
+      "url": "https://link.springer.com/article/10.1007/s10682-025-10368-x"
     },
     {
       "title": "Morphological diversity of the cetacean mandibular symphysis coincides with novel modes of aquatic feeding",
@@ -576,9 +590,9 @@
       "citations": 0,
       "year": 2016,
       "venue": "N/A",
-      "url": "https://scholar.google.com/scholar?cluster=7071760361165695753&hl=en&oi=scholarr"
+      "url": "https://ui.adsabs.harvard.edu/abs/2016GSAA...4887815B/abstract"
     }
   ],
-  "generated_at": 1768096136,
+  "generated_at": 1769911819,
   "proxy_mode": "free"
 }
