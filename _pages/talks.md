@@ -9,133 +9,122 @@ author_profile: true
 
 # Selected recorded talks
 
+<div class="talks-list">
 {% for talk in site.data.talks %}
-<div class="talks-entry" style="margin-bottom: 2em;">
-  <div class="talks-content">
-    <h2>
-      {% if talk.video_id %}
-      <a href="{{ talk.video_id }}" target="_blank">{{ talk.title }}</a>
-      {% else %}
-      {{ talk.title }}
-      {% endif %}
-    </h2>
-    <ul style="line-height: 1.2; padding-left: 20px; margin: 0;">
-      <li><strong>Event:</strong> {{ talk.event }}</li>
-      <li><strong>Date:</strong> {{ talk.date }}</li>
-      <li><strong>Location:</strong> {{ talk.location }}</li>
-    </ul>
-    {% if talk.slides_url %}
-    <p><a href="{{ talk.slides_url }}">View Slides</a></p>
-    {% endif %}
-    <p style="margin: 0.5em 0; line-height: 1.2; font-size: 0.9em;">
-      <strong>Description</strong><br>{{ talk.description }}
-    </p>
-  </div>
-  
-  {% if talk.playlist_image %}
-  <div class="talks-video">
-    <a href="{{ talk.video_id }}" title="Watch Video" target="_blank" class="talks-video-link">
-      <img src="{{ talk.playlist_image }}" alt="Playlist Preview" class="talks-preview-image">
-      <div class="play-button-overlay">
-        <!-- SVG play button code with mask cutout using youtube_id for uniqueness -->
-        <svg width="64" height="64" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
-          <mask id="mask{{ talk.youtube_id }}" x="0" y="0" width="68" height="68" maskUnits="userSpaceOnUse">
-            <rect x="0" y="0" width="68" height="68" fill="#ffffff"/>
-            <polygon points="27,20 27,48 49,34" fill="#000000"/>
-          </mask>
-          <circle cx="34" cy="34" r="32" fill="rgba(255, 255, 255, 0.7)" mask="url(#mask{{ talk.youtube_id }})"/>
-          <polygon points="27,20 27,48 49,34" fill="#ffffff" mask="url(#mask{{ talk.youtube_id }})"/>
-        </svg>
-      </div>
-    </a>
-  </div>
+  {% assign watch_url = nil %}
+  {% if talk.video_id %}
+    {% assign watch_url = talk.video_id %}
   {% elsif talk.youtube_id %}
-  <div class="talks-video">
-    <a href="http://www.youtube.com/watch?v={{ talk.youtube_id }}" title="Watch on YouTube" target="_blank" class="talks-video-link">
-      <img src="http://img.youtube.com/vi/{{ talk.youtube_id }}/0.jpg" alt="YouTube Preview" class="talks-preview-image">
-      <div class="play-button-overlay">
-        <!-- Same SVG play button code -->
-        <svg width="64" height="64" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
-          <mask id="mask{{ talk.youtube_id }}" x="0" y="0" width="68" height="68" maskUnits="userSpaceOnUse">
-            <rect x="0" y="0" width="68" height="68" fill="#ffffff"/>
-            <polygon points="27,20 27,48 49,34" fill="#000000"/>
-          </mask>
-          <circle cx="34" cy="34" r="32" fill="rgba(255, 255, 255, 0.7)" mask="url(#mask{{ talk.youtube_id }})"/>
-          <polygon points="27,20 27,48 49,34" fill="#ffffff" mask="url(#mask{{ talk.youtube_id }})"/>
-        </svg>
-      </div>
-    </a>
-  </div>
+    {% assign watch_url = "https://www.youtube.com/watch?v=" | append: talk.youtube_id %}
   {% endif %}
-</div>
+
+  <article class="talk-card">
+    <header class="talk-card__header">
+      <h2 class="talk-card__title">
+        {% if watch_url %}
+          <a href="{{ watch_url }}" target="_blank" rel="noopener">{{ talk.title }}</a>
+        {% else %}
+          {{ talk.title }}
+        {% endif %}
+      </h2>
+
+      <div class="talk-card__actions">
+        {% if talk.slides_url %}
+          <a class="btn btn--small" href="{{ talk.slides_url }}" target="_blank" rel="noopener">Slides</a>
+        {% endif %}
+        {% if watch_url %}
+          <a class="btn btn--small btn--primary" href="{{ watch_url }}" target="_blank" rel="noopener">Watch</a>
+        {% endif %}
+      </div>
+    </header>
+
+    <dl class="talk-card__meta">
+      {% if talk.event %}<div><dt>Event</dt><dd>{{ talk.event }}</dd></div>{% endif %}
+      {% if talk.date %}<div><dt>Date</dt><dd>{{ talk.date }}</dd></div>{% endif %}
+      {% if talk.location %}<div><dt>Location</dt><dd>{{ talk.location }}</dd></div>{% endif %}
+    </dl>
+
+    {% if talk.description %}
+      <p class="talk-card__desc">{{ talk.description }}</p>
+    {% endif %}
+  </article>
 {% endfor %}
+</div>
 
 <style>
-/* Existing styles... */
-
-.talks-entry {
-  display: grid;
-  grid-template-columns: 3fr 2fr; /* Adjusted for proper alignment */
-  column-gap: 30px; /* Increased gap for more space between description and video */
-  align-items: center; /* Center the items vertically */
-  margin-bottom: 2em;
+/* Talks page (text-only cards) */
+.talks-list{
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+  margin-top:1rem;
 }
 
-.talks-content {
-  padding-right: 1em; /* Added padding between text and video */
+.talk-card{
+  padding:1rem 1.1rem;
+  border:1px solid rgba(0,0,0,.12);
+  border-radius:14px;
+  background: rgba(255,255,255,.95);
+  box-shadow: 0 8px 20px rgba(0,0,0,.05);
 }
 
-.talks-video {
-  position: relative;
+.talk-card__header{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:1rem;
+  flex-wrap:wrap;
 }
 
-.talks-video-link {
-  display: block;
-  position: relative;
-  transition: box-shadow 0.3s ease; /* Shadow transition */
+.talk-card__title{
+  margin:0;
+  font-size:1.25rem;
+  line-height:1.25;
 }
 
-.talks-preview-image {
-  transition: transform 0.3s ease; /* Transform transition for scaling the image */
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0 auto; /* Center the image */
+.talk-card__title a{
+  text-decoration:none;
+}
+.talk-card__title a:hover{
+  text-decoration:underline;
 }
 
-.talks-video-link:hover .talks-preview-image,
-.talks-video-link:focus .talks-preview-image {
-  transform: scale(1.03); /* Slightly enlarge the image */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add shadow for depth */
+.talk-card__actions{
+  display:flex;
+  gap:.5rem;
+  flex-wrap:wrap;
 }
 
-.play-button-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 100; /* Ensured it is on top of other elements */
+.talk-card__meta{
+  margin:.75rem 0 .25rem 0;
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap:.4rem .8rem;
 }
 
-@media (max-width: 767px) {
-  .talks-entry {
-    grid-template-columns: 1fr; /* Single column on small screens */
-    align-items: flex-start; /* Align items to the start on small screens */
-  }
+.talk-card__meta dt{
+  font-size:.75rem;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  opacity:.7;
+}
 
-  .talks-video {
-    order: 2;
-    margin: auto; /* Center the video */
-    margin-top: 1em; /* Space between text and video on small screens */
-    width: 80%; /* Video preview width is 80% of the text column width */
-  }
+.talk-card__meta dd{
+  margin:0;
+  font-size:.95rem;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
 
-  .talks-video a {
-    width: 100%; /* Full width of the video container */
+.talk-card__desc{
+  margin:.6rem 0 0 0;
+  line-height:1.45;
+}
+
+@media (max-width: 900px){
+  .talk-card__meta{
+    grid-template-columns:1fr;
   }
 }
 </style>
