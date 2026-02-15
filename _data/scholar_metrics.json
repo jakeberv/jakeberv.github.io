@@ -4,7 +4,7 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 13,
-  "citations": 2615,
+  "citations": 2617,
   "cites_per_year": {
     "2015": 13,
     "2016": 106,
@@ -14,10 +14,10 @@
     "2020": 306,
     "2021": 316,
     "2022": 312,
-    "2023": 258,
+    "2023": 259,
     "2024": 270,
     "2025": 266,
-    "2026": 22
+    "2026": 23
   },
   "interests": [
     "Speciation",
@@ -134,7 +134,7 @@
     },
     {
       "name": "Nicholas J Clark",
-      "affiliation": "University of Queensland",
+      "affiliation": "SeonixBio",
       "scholar_id": "5bO9uxEAAAAJ"
     },
     {
@@ -406,11 +406,11 @@
     "not_available": 0
   },
   "total_publications": 27,
-  "publications_fetched": 25,
+  "publications_fetched": 27,
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 1866,
+      "citations": 1867,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
@@ -445,7 +445,7 @@
     },
     {
       "title": "Complex coevolution of wing, tail, and vocal sounds of courting male bee hummingbirds",
-      "citations": 52,
+      "citations": 53,
       "year": 2018,
       "venue": "N/A",
       "url": "https://academic.oup.com/evolut/article-abstract/72/3/630/6726732"
@@ -493,6 +493,13 @@
       "url": "https://www.science.org/doi/abs/10.1126/sciadv.adp0114"
     },
     {
+      "title": "Pennaraptoran theropod dinosaurs: past progress and new frontiers",
+      "citations": 20,
+      "year": 2020,
+      "venue": "N/A",
+      "url": "N/A"
+    },
+    {
       "title": "The pace of mitochondrial molecular evolution varies with seasonal migration distance",
       "citations": 9,
       "year": 2024,
@@ -511,7 +518,7 @@
       "citations": 2,
       "year": 2025,
       "venue": "N/A",
-      "url": "https://academic.oup.com/gbe/advance-article/doi/10.1093/gbe/evaf017/7998737"
+      "url": "https://academic.oup.com/gbe/article-pdf/doi/10.1093/gbe/evaf017/61752364/evaf017.pdf"
     },
     {
       "title": "The genomic landscape, causes, and consequences of extensive phylogenomic discordance in Old World mice and rats",
@@ -525,7 +532,7 @@
       "citations": 1,
       "year": 2025,
       "venue": "N/A",
-      "url": "https://academic.oup.com/evolut/advance-article-abstract/doi/10.1093/evolut/qpaf080/8121435"
+      "url": "https://academic.oup.com/evolut/article-abstract/79/7/1334/8121435"
     },
     {
       "title": "Variable patterns of phenotypic evolution among canonical ‘living fossil’lineages",
@@ -533,6 +540,13 @@
       "year": 2024,
       "venue": "N/A",
       "url": "https://www.biorxiv.org/content/10.1101/2024.11.14.623638.abstract"
+    },
+    {
+      "title": "Pennaraptoran theropod dinosaurs: past progress and new frontiers.(Bulletin of the American Museum of Natural History, no. 440)",
+      "citations": 1,
+      "year": 2020,
+      "venue": "N/A",
+      "url": "https://digitallibrary.amnh.org/items/2a4a03b6-dd75-4d96-bdb3-6d214b993353"
     },
     {
       "title": "Exploring the data demands and global opportunities for reconstructing morphological responses to climate change",
@@ -584,6 +598,6 @@
       "url": "https://ui.adsabs.harvard.edu/abs/2016GSAA...4887815B/abstract"
     }
   ],
-  "generated_at": 1770517243,
+  "generated_at": 1771186257,
   "proxy_mode": "free"
 }
