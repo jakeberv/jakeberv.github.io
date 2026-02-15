@@ -38,3 +38,113 @@
 .container:hover .overlay {
   opacity: 0.25;
 }
+
+/* ==========================================================================
+   Talks page (data-driven, compact, no thumbnails)
+   Safe: only targets new talks-specific classes used on /talks/
+   ========================================================================== */
+
+.talks-list{
+  display:flex;
+  flex-direction:column;
+  gap:.8rem;
+  margin-top:1rem;
+}
+
+.talk-card{
+  padding:.8rem .95rem;
+  border:1px solid rgba(0,0,0,.12);
+  border-radius:14px;
+  background: rgba(255,255,255,.95);
+  box-shadow: 0 8px 20px rgba(0,0,0,.05);
+}
+
+/* Header: title + actions, stays aligned even when title is long */
+.talk-card__header{
+  display:grid;
+  grid-template-columns: 1fr auto;
+  gap:.5rem .9rem;
+  align-items:start;
+}
+
+.talk-card__title{
+  margin:0;
+  font-size:1.06rem;
+  line-height:1.2;
+  overflow-wrap:anywhere;
+  word-break:normal;
+  min-width:0;
+}
+
+.talk-card__actions{
+  display:flex;
+  gap:.4rem;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  align-items:flex-start;
+}
+
+/* Keep buttons compact without affecting global .btn styles */
+.talk-card__actions .btn{
+  white-space:nowrap;
+  font-size:.82rem;
+  padding:.35rem .55rem;
+}
+
+/* One-line meta that wraps cleanly */
+.talk-card__meta-line{
+  margin-top:.4rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:.3rem .4rem;
+}
+
+/* "Chips" for event/date/location */
+.talk-chip{
+  display:inline-flex;
+  align-items:center;
+  padding:.15rem .45rem;
+  border-radius:999px;
+  border:1px solid rgba(0,0,0,.12);
+  background: rgba(0,0,0,.02);
+  font-size:.84rem;
+  line-height:1.15;
+  max-width:100%;
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+
+.talk-chip--event{
+  font-weight:600;
+}
+
+/* Description: compact but readable */
+.talk-card__desc{
+  margin:.5rem 0 0 0;
+  font-size:.88rem;
+  line-height:1.32;
+}
+
+.talk-card__desc-label{
+  display:inline-block;
+  font-size:.70rem;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  opacity:.7;
+  margin-right:.35rem;
+}
+
+.talk-card__desc-text{
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+
+/* Mobile: stack actions under title */
+@media (max-width: 900px){
+  .talk-card__header{
+    grid-template-columns: 1fr;
+  }
+  .talk-card__actions{
+    justify-content:flex-start;
+  }
+}
