@@ -6,109 +6,7 @@ author_profile: true
 read_more: "enabled"
 ---
 
-<style>
-/* === Anchor offset for sticky header === */
-.pub-year { 
-  scroll-margin-top: 96px; 
-}
-.pub-year:target::before {
-  content: "";
-  display: block;
-  height: 96px;
-  margin-top: -96px;
-}
-
-/* Jump nav + year headings */
-.pubs-jump { margin: .5rem 0 1rem 0; font-size: .95em; }
-.pubs-jump a { text-decoration: none; margin-right: .6em; }
-
-/* Year headings */
-.pub-year {
-  margin: 1.1rem 0 .55rem 0;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: .25rem;
-  font-weight: 600;
-}
-
-/* List spacing */
-.pub-list { list-style: none; margin: 0 0 1rem 0; padding: 0; }
-.pub-list > li { margin: 0 0 .6rem 0; }
-
-/* Publication item formatting */
-.archive__item { gap: .9rem; }
-.archive__item-details { flex-grow: 1; width: auto; }
-
-.archive__item-title {
-  margin-bottom: .12rem;
-  line-height: 1.25;
-  font-weight: 600;
-}
-.archive__item-title a { text-decoration: none; }
-.archive__item-title a:hover { text-decoration: underline; }
-
-.archive__item-details p {
-  margin: .15rem 0 .25rem 0;
-  font-size: .95em;
-  color: #555;
-  line-height: 1.45;
-}
-
-/* Icons */
-.archive__item-details a .fa,
-.archive__item-details a .fas,
-.archive__item-details a .fab {
-  opacity: .8;
-  transform: translateY(0);
-  transition: opacity .12s ease, transform .12s ease;
-}
-.archive__item-details a:hover .fa,
-.archive__item-details a:hover .fas,
-.archive__item-details a:hover .fab {
-  opacity: 1;
-  transform: translateY(-1px);
-}
-
-/* Altmetric column */
-.archive__item-altmetric { width: 15%; min-width: 140px; }
-@media (max-width: 860px) {
-  .archive__item { flex-direction: column; align-items: flex-start; }
-  .archive__item-altmetric { width: 100%; padding-left: 0; margin: .35rem 0 0 0; }
-}
-
-/* Cover image row - improved layout */
-.pub-covers {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  max-width: 70%;
-  margin: 0 auto 2rem auto; /* center and add spacing below */
-  justify-items: center;
-}
-
-.pub-covers a {
-  display: flex;
-  justify-content: center;
-}
-
-.pub-covers img {
-  max-height: 250px;
-  width: auto;
-  max-width: 100%;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  transition: box-shadow 0.3s ease;
-}
-
-.pub-covers img:hover {
-  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
-}
-
-@media (max-width: 720px) {
-  .pub-covers {
-    grid-template-columns: 1fr;
-    max-width: 90%;
-  }
-}
-</style>
+<div class="pubs-page">
 
 <figure class="pub-covers">
   <a href="https://doi.org/10.1016/j.cub.2018.04.062" target="_blank" rel="noopener">
@@ -157,3 +55,5 @@ read_more: "enabled"
 <p>See CV for other publications.</p>
 
 {% include publications-faq-jsonld.html %}
+
+</div>
