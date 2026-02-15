@@ -163,3 +163,16 @@
 @media (min-width: 769px) {
   .cv-iframe { width: 100%; display: block; }
 }
+
+/* ==========================================================================
+   Research page: phylo-methods poster iframe
+   Safe: only targets .phylo-methods-iframe on that page
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .phylo-methods-iframe { display: none; }
+}
+
+@media (min-width: 769px) {
+  .phylo-methods-iframe { width: 100%; display: block; }
+}

@@ -21,27 +21,20 @@ Global paleobotanical and palynological data show that the K-Pg Chicxulub impact
 
 My first paper on this topic focused on the potential impact of ecological filtering on arboreal birds in the Mesozoic. Cover illustration prepared by paleoartist Phillip Krzeminski.
 
-<head>
-  <style>
-    /* Hide the iframe on screens narrower than 768px */
-    @media (max-width: 768px) {
-      iframe {
-        display: none;
-      }
-    }
-    /* Show the iframe on screens wider than 768px */
-    @media (min-width: 769px) {
-      iframe {
-        width: 100%;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div style="overflow: auto;">
-    <iframe src="/files/pdf/research/curbio_28_11_3c.pdf" width="100%" height="500" frameborder="no" border="0" marginwidth="0" marginheight="0"></iframe>
-  </div>
-</body>
+<div style="overflow: auto;">
+  <iframe
+    class="phylo-methods-iframe"
+    src="/files/pdf/research/curbio_28_11_3c.pdf"
+    width="100%"
+    height="500"
+    frameborder="no"
+    border="0"
+    marginwidth="0"
+    marginheight="0"
+    title="Poster PDF">
+  </iframe>
+</div>
+
 [Artwork by Phillip Krzeminski](https://www.phillipmk.com/){: .btn--research}[Download Poster](/files/pdf/research/curbio_28_11_3c.pdf){: .btn--research}
 
 ---
