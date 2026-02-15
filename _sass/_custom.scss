@@ -148,3 +148,18 @@
     justify-content:flex-start;
   }
 }
+
+/* ==========================================================================
+   CV page (auto-latest PDF)
+   Safe: only targets .cv-iframe used on /cv/
+   ========================================================================== */
+
+/* Hide iframe on small screens (matches prior behavior) */
+@media (max-width: 768px) {
+  .cv-iframe { display: none; }
+}
+
+/* Show full-width iframe on larger screens */
+@media (min-width: 769px) {
+  .cv-iframe { width: 100%; display: block; }
+}
