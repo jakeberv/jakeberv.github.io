@@ -26,27 +26,18 @@ Resolving the evolutionary history of groups of organisms that are suspected to 
 The inference of the structure of the tree of life is a primary goal of systematic biology. Here, I highlight one example of phylogenetic inference in my research that 1) investigated the relationships among modern bird families and 2) estimated a new timescale of avian diversification ([Prum, Berv, et al. 2015, Nature](https://jakeberv.com/publication/2015-10-07-Prum_Berv_et_al_2015)). In this project, we leveraged advances in target-capture DNA sequencing to estimate that the diversification of modern birds comprises nine super-ordinal groups which evolved in close association with the K---Pg boundary. We presented strong support for novel relationships and the first "next-generation" phylogenomic evidence for hundreds of key relationships across the avian tree of life. In addition, we advanced several statistical approaches for [phylogenetic experimental design](https://academic.oup.com/sysbio/article/68/1/145/5043533). These approaches, which include metrics of "phylogenetic informativeness," empower researchers to design phylogenetic inference studies to have maximum statistical power to address specific questions.
 [Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Prum_Berv_et_al_2015.pdf){: .btn--research}[Download Poster](/files/pdf/research/23.5x70-poster.pdf){: .btn--research}
 
-<head>
-  <style>
-    /* Hide the iframe on screens narrower than 768px */
-    @media (max-width: 768px) {
-      iframe {
-        display: none;
-      }
-    }
-    /* Show the iframe on screens wider than 768px */
-    @media (min-width: 769px) {
-      iframe {
-        width: 100%;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div style="overflow: auto;">
-    <iframe src="/files/pdf/research/23.5x70-poster.pdf" height="500" frameborder="no" border="0" marginwidth="0" marginheight="0"></iframe>
-  </div>
-</body>
+<div style="overflow: auto;">
+  <iframe
+    class="phylo-history-iframe"
+    src="/files/pdf/research/23.5x70-poster.pdf"
+    height="500"
+    frameborder="no"
+    border="0"
+    marginwidth="0"
+    marginheight="0"
+    title="Poster PDF">
+  </iframe>
+</div>
 
 ### Divergence time estimation
 
@@ -79,28 +70,18 @@ Using a natural experiment in the energy-starved deep sea, where mussels and tub
   <p><em>Bivalvia and Annelida represent > 1 billion years of distinct evolutionary history</em></p>
 </div>
 
-<head>
-  <style>
-    /* Hide the iframe on screens narrower than 768px */
-    @media (max-width: 768px) {
-      iframe {
-        display: none;
-      }
-    }
-    /* Show the iframe on screens wider than 768px */
-    @media (min-width: 769px) {
-      iframe {
-        width: 100%;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div style="overflow: auto;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/zeZNcDHDMzo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  </div>
-</body>
-
+<div style="overflow: auto;">
+  <iframe
+    class="phylo-history-embed"
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/zeZNcDHDMzo"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
 
 In the deep sea, organic falls (e.g., whale falls), hydrothermal vents, and cold seeps create ephemeral patches of productivity that persist over different lengths of time, ranging from decades to millennia. These longevities induce a hard maximum on a community’s life cycle, and thus, are predicted to select for consumers with life-histories adapted to ephemeral resources.
 

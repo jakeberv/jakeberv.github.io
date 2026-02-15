@@ -298,3 +298,20 @@
 .masthead__menu-item a {
   font-size: 20px;
 }
+
+/* ==========================================================================
+   Research page: phylo-history embeds
+   Safe: only targets .phylo-history-iframe and .phylo-history-embed
+   ========================================================================== */
+
+/* Hide embeds on small screens (matches prior behavior on that page) */
+@media (max-width: 768px) {
+  .phylo-history-iframe { display: none; }
+  .phylo-history-embed { display: none; }
+}
+
+/* Show embeds on larger screens */
+@media (min-width: 769px) {
+  .phylo-history-iframe { width: 100%; display: block; }
+  .phylo-history-embed { width: 100%; display: block; }
+}
