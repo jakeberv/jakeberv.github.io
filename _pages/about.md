@@ -3,125 +3,101 @@ layout: about
 permalink: /
 title: "Jacob S. Berv"
 excerpt: "Evolutionary and Systematic Biologist"
+#title: "Jacob S. Berv, PhD"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 header:
   og_image: "research/persistence_of_memory-research.jpg"
+  #image: "research/persistence_of_memory-about-header.jpg"
   overlay_image: "research/persistence_of_memory-about-header.jpg"
-  overlay_filter: 0.35
+  overlay_filter: 0.35 # same as adding an opacity of 0.5 to a black background
+  #caption: "**Salvador Dalí**"
+  #actions:
+  #  - label: "Download"
+  #    url: "https://github.com"
 ---
 
-<div class="home-modern">
+# Welcome
 
-  <section class="home-hero" aria-label="Homepage introduction">
-    <p class="home-kicker">{{ site.description }}</p>
+I am an evolutionary biologist interested in building and deciphering the tree of life. My research integrates data from natural history, ecology, genomics, and paleontology—often through the application of novel computational tools—in order to understand the links between micro- and macroevolution.
 
-    <p class="home-lede">
-      <strong>Jacob (Jake) Berv</strong> is an evolutionary biologist interested in building and deciphering the tree of life.
-      His research integrates natural history, ecology, genomics, and paleontology—often through the application of novel computational tools—in order to understand the links between micro- and macroevolution.
+I am currently supported by an [Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship](https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/) at the University of Michigan.
+
+## News
+<style>
+  /* Page-local styles for the news list on About */
+  .about-news {
+    list-style: none;
+    margin: 0.25rem 0 0.75rem 0;
+    padding: 0;
+  }
+  .about-news li {
+    margin: 0;                       /* tighten */
+    padding: 0.35rem 0;              /* subtle breathing room */
+    border-bottom: 1px solid var(--color-border, rgba(0,0,0,0.08));
+  }
+  .about-news li:last-child { border-bottom: 0; }
+
+  .about-news .news-line {
+    margin: 0;
+    line-height: 1.35;
+  }
+  .about-news .news-date {
+    color: var(--color-muted, #6b7280);   /* muted */
+    font-size: 0.9em;
+    white-space: nowrap;
+  }
+  .about-news a.news-title {
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .about-news a.news-title:hover { border-bottom-color: currentColor; }
+
+  .about-news .news-excerpt {
+    margin: 0.15rem 0 0 0;           /* small gap under title line */
+    font-size: 0.92em;               /* lighter visual weight */
+    color: var(--color-muted, #6b7280);
+  }
+
+  /* Dark-mode friendly defaults if your theme doesn't set CSS vars */
+  @media (prefers-color-scheme: dark) {
+    .about-news li { border-bottom-color: rgba(255,255,255,0.12); }
+    .about-news .news-date,
+    .about-news .news-excerpt { color: rgba(255,255,255,0.7); }
+  }
+</style>
+
+{% assign news_items = site.news
+  | where_exp: "i", "i.date"
+  | where_exp: "i", "i.date <= site.time"
+  | sort: "date"
+  | reverse %}
+
+<ul class="about-news">
+{% for item in news_items limit:10 %}
+  <li>
+    <p class="news-line">
+      <span class="news-date">{{ item.date | date: "%b %-d, %Y" }}</span>
+      &nbsp;—&nbsp;
+      <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
     </p>
+    {% if item.excerpt %}
+    <p class="news-excerpt">{{ item.excerpt }}</p>
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>
 
-    <p class="home-now">
-      Currently supported by an
-      <a href="https://midas.umich.edu/news/michigan-institute-for-data-science-announces-new-fellows/" target="_blank" rel="noopener">Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship</a>
-      at the University of Michigan.
-    </p>
-  </section>
+<p style="margin-top: 0.8em;">
+  <a href="{{ '/news/' | relative_url }}" style="font-weight: 600; text-decoration: none;">
+    View all news →
+  </a>
+</p>
 
-  <section class="home-section" aria-label="Start here pathways">
-    <h2 class="home-section__title">Start here</h2>
+<br>
 
-    <div class="home-cards">
-      <a class="home-card" href="{{ '/research/phylo-history/' | relative_url }}">
-        <h3 class="home-card__title">Phylogeny</h3>
-        <p class="home-card__text">
-          Tree-of-life inference, deep-time natural history, and phylogenetic “experimental design.”
-        </p>
-        <span class="home-card__cta">Explore →</span>
-      </a>
-
-      <a class="home-card" href="{{ '/research/phylo-methods/' | relative_url }}">
-        <h3 class="home-card__title">Diversification</h3>
-        <p class="home-card__text">
-          Macroecology ↔ macroevolution, including K–Pg ecological filtering and trait-dependent evolution.
-        </p>
-        <span class="home-card__cta">Explore →</span>
-      </a>
-
-      <a class="home-card" href="{{ '/software/' | relative_url }}">
-        <h3 class="home-card__title">Software &amp; methods</h3>
-        <p class="home-card__text">
-          Open-source tools for evolutionary inference across traits and genomes (e.g., <em>bifrost</em>, <em>janus</em>).
-        </p>
-        <span class="home-card__cta">Explore →</span>
-      </a>
-    </div>
-  </section>
-
-  <section class="home-section" aria-label="Tools highlights">
-    <h2 class="home-section__title">Tools</h2>
-
-    <div class="home-tools">
-      <div class="home-tool">
-        <h3 class="home-tool__title">bifrost</h3>
-        <p class="home-tool__text">
-          Branch-level inference for multi-regime, multivariate trait evolution on phylogenies.
-        </p>
-        <p class="home-tool__links">
-          <a href="https://github.com/jakeberv/bifrost" target="_blank" rel="noopener">Repo</a>
-          <span class="home-dot">·</span>
-          <a href="https://jakeberv.com/bifrost" target="_blank" rel="noopener">Docs</a>
-          <span class="home-dot">·</span>
-          <a href="https://jakeberv.com/bifrost/articles/jaw-shape-vignette.html" target="_blank" rel="noopener">Getting started</a>
-        </p>
-      </div>
-
-      <div class="home-tool">
-        <h3 class="home-tool__title">janus</h3>
-        <p class="home-tool__text">
-          Detecting shifts in molecular substitution models or base composition across phylogenies.
-        </p>
-        <p class="home-tool__links">
-          <a href="https://git.sr.ht/~hms/janus" target="_blank" rel="noopener">Repo</a>
-          <span class="home-dot">·</span>
-          <a href="https://git.sr.ht/~hms/janus/tree/master/doc/index.md" target="_blank" rel="noopener">Docs</a>
-          <span class="home-dot">·</span>
-          <a href="https://www.science.org/doi/10.1126/sciadv.adp0114" target="_blank" rel="noopener">Paper</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="home-section" aria-label="Latest updates">
-    <h2 class="home-section__title">Latest updates</h2>
-
-    {% assign news_items = site.news
-      | where_exp: "i", "i.date"
-      | where_exp: "i", "i.date <= site.time"
-      | sort: "date"
-      | reverse %}
-
-    <ul class="home-news">
-      {% for item in news_items limit:5 %}
-      <li class="home-news__item">
-        <span class="home-news__date">{{ item.date | date: "%b %-d, %Y" }}</span>
-        <a class="home-news__title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-        {% if item.excerpt %}
-          <p class="home-news__excerpt">{{ item.excerpt | strip_html | strip_newlines | truncate: 160 }}</p>
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-
-    <p class="home-more">
-      <a class="home-more__link" href="{{ '/news/' | relative_url }}">View all updates →</a>
-    </p>
-  </section>
-
-  <small class="home-note">
-    The banner shows a portion of Salvador Dalí’s <em>Persistence of Memory</em>. Art historian Dawn Adès described the melting clocks as “an unconscious symbol of the relativity of space and time.” In evolutionary biology, time is also relative — and, outside paleontology, rarely absolute. Dalí’s pruned olive tree, overtaken by time, echoes the challenge of reconstructing the tree of life. In the upper left is a nod to Charles Darwin’s note, “I think,” from his famous <a href="https://www.amnh.org/exhibitions/darwin/the-idea-takes-shape/i-think">sketch of a phylogenetic tree</a>.
-  </small>
-
-</div>
+<small style="line-height: 1 !important; display: block; margin: 0;">
+The banner shows a portion of Salvador Dalí’s <em>Persistence of Memory</em>. Art historian Dawn Adès described the melting clocks as “an unconscious symbol of the relativity of space and time.” In evolutionary biology, time is also relative — and, outside paleontology, rarely absolute. Dalí’s pruned olive tree, overtaken by time, echoes the challenge of reconstructing the tree of life. In the upper left is a nod to Charles Darwin’s note, “I think,” from his famous <a href="https://www.amnh.org/exhibitions/darwin/the-idea-takes-shape/i-think">sketch of a phylogenetic tree</a>.
+</small>
