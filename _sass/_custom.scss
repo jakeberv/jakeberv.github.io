@@ -1,3 +1,4 @@
+```scss
 /* ==========================================================================
    CUSTOM CSS BY ME
    ========================================================================== */
@@ -113,11 +114,25 @@
   display:inline-block;
 }
 
+/* Consolidated summary styling (prevents "pill grows" + keeps chip-like behavior) */
 .talk-more > summary{
   list-style:none;
   cursor:pointer;
-  display:inline-flex;     /* ensure inline chip alignment across browsers */
+  display:inline-flex;        /* inline chip alignment across browsers */
   align-items:center;
+  margin:0;                   /* avoid UA default margins */
+  outline:none;
+  user-select:none;
+  box-sizing:border-box;
+  vertical-align:middle;
+  font-weight:400;            /* avoid bolding on focus in some UAs */
+  white-space:nowrap;         /* keeps "+N more ▸" together */
+}
+
+.talk-more > summary:focus,
+.talk-more > summary:focus-visible{
+  outline:none;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.12);
 }
 
 .talk-more > summary::-webkit-details-marker{
@@ -149,6 +164,11 @@
   opacity:.7;
   font-weight:600;
   list-style:none;
+
+  /* clickable indicator */
+  display:inline-flex;
+  align-items:center;
+  gap:.35rem;
 }
 
 .talk-desc__summary::-webkit-details-marker{
@@ -158,6 +178,21 @@
 /* Firefox marker removal */
 .talk-desc__summary::marker{
   content:"";
+}
+
+/* caret affordance */
+.talk-desc__summary::before{
+  content:"▸";
+  opacity:.8;
+}
+
+.talk-desc[open] > .talk-desc__summary::before{
+  content:"▾";
+}
+
+/* Optional: hover affordance */
+.talk-desc__summary:hover{
+  text-decoration: underline;
 }
 
 .talk-desc__body{
@@ -176,6 +211,16 @@
 }
 .talk-desc[open] > .talk-desc__summary{
   opacity: 1;
+}
+
+/* Optional caret for "+N more" */
+.talk-more > summary::after{
+  content:" ▸";
+  opacity:.7;
+}
+
+.talk-more[open] > summary::after{
+  content:" ▾";
 }
 
 /* "Chips" for event/date/location */
@@ -206,7 +251,6 @@
 .talk-chip--topic{ }
 .talk-chip--tool{ }
 .talk-chip--audience{ }
-
 
 /* Description: compact but readable (legacy; safe to keep even if unused now) */
 .talk-card__desc{
@@ -511,3 +555,4 @@
     text-decoration: none;
   }
 }
+```
