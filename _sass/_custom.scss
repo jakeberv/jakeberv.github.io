@@ -701,7 +701,7 @@
 }
 
 /* ==========================================================================
-   Software page polish
+   Software page polish (tuned)
    ========================================================================== */
 
 .software-card{
@@ -709,16 +709,17 @@
   border: 1px solid rgba(0,0,0,.12);
   border-radius: 14px;
   padding: 1rem 1.05rem;
-  margin: 1.1rem 0 1.6rem;
+  margin: 1.05rem 0 1.4rem;
   background: rgba(255,255,255,.98);
 
-  /* reduced shadow (was too strong) */
-  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+  /* much lighter shadow */
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
 
+/* headings a touch tighter */
 .software-card h2, .software-card h3{
   margin: .15rem 0 .25rem 0;
-  font-size: 1.15rem;
+  font-size: 1.12rem;
   line-height: 1.2;
 }
 
@@ -744,31 +745,33 @@ hr.soft-sep{
   margin: .85rem 0 .7rem;
 }
 
-/* Pills (now visible + aligned) */
+/* Pills: make them clearly visible + consistent spacing */
 .software-actions{
-  margin-top: .4rem;
+  margin-top: .45rem;
   display: flex;
   flex-wrap: wrap;
-  gap: .35rem .5rem;
+  gap: .4rem .55rem;
 }
 
 .software-actions a{
   display: inline-flex;
   align-items: center;
-  gap: .35rem;
-  padding: .22rem .65rem;
+  padding: .2rem .65rem;
   border-radius: 999px;
-  border: 1px solid rgba(0,0,0,.16);
+
+  /* stronger than before so you actually see the pill */
+  border: 1px solid rgba(0,0,0,.18);
   background: rgba(0,0,0,.03);
+
   text-decoration: none;
-  font-size: .95rem;
+  font-size: .93rem;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .software-actions a:hover{
-  border-color: rgba(0,0,0,.24);
+  border-color: rgba(0,0,0,.26);
   background: rgba(0,0,0,.05);
-  box-shadow: 0 4px 10px rgba(0,0,0,.06);
 }
 
 /* Images */
@@ -790,8 +793,8 @@ hr.soft-sep{
   margin: .45rem 0 .6rem 1.2rem;
   border-radius: 8px;
 
-  /* also slightly softened */
-  box-shadow: 0 4px 12px rgba(0,0,0,.10);
+  /* also toned down */
+  box-shadow: 0 2px 8px rgba(0,0,0,.10);
 }
 @media (max-width: 640px){
   .software-figure{
@@ -808,11 +811,11 @@ hr.soft-sep{
   .software-card{
     border-color: rgba(255,255,255,.14);
     background: rgba(255,255,255,.04);
-    box-shadow: 0 10px 24px rgba(0,0,0,.30);
+    box-shadow: 0 8px 20px rgba(0,0,0,.28);
   }
   .software-meta{ color: rgba(255,255,255,.70); }
   .software-actions a{
-    border-color: rgba(255,255,255,.16);
+    border-color: rgba(255,255,255,.18);
     background: rgba(255,255,255,.06);
   }
   hr.soft-sep{ border-top-color: rgba(255,255,255,.14); }
