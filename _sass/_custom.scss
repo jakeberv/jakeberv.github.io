@@ -529,6 +529,10 @@
    ========================================================================== */
 
 .news-page {
+  font-size: 0.9em;
+  line-height: 1.35;
+  color: #333;
+
   /* Offset anchor targets so they don't hide under the sticky header */
   .news-year-title { scroll-margin-top: 96px; }
   .news-year-title:target::before {
@@ -540,53 +544,94 @@
 
   /* Jump links */
   .news-jump {
-    margin: .5em 0 1em 0;
-    font-size: .95em;
+    margin: .45rem 0 1rem 0;
+    font-size: .82em;
+    text-transform: lowercase;
+    letter-spacing: .01em;
+    color: #555;
   }
   .news-jump__link {
     text-decoration: none;
-    margin-right: .5em;
+    margin-right: .42em;
+  }
+  .news-jump__link:hover {
+    text-decoration: underline;
   }
 
   /* Year headings */
   .news-year-title {
-    margin-top: 1.5em;
+    margin-top: 1.35rem;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 0.4em;
-    margin-bottom: 0.6em;
+    padding-bottom: 0.35rem;
+    margin-bottom: 0.55rem;
+    line-height: 1.2;
   }
 
   /* News list styling */
   .news-year {
     list-style: none;
-    margin: 0 0 1em 1.5em; /* subtle indent */
+    margin: 0 0 .95rem 0;
     padding: 0;
   }
 
   .news-item {
-    margin-bottom: 0.4em;
+    display: grid;
+    grid-template-columns: 6.75rem minmax(0, 1fr);
+    gap: .16rem .92rem;
+    align-items: baseline;
+    margin: 0 0 .34rem 0;
     line-height: 1.35;
   }
 
   .news-date {
-    display: inline-block;
-    width: 7.5em;       /* creates the "date column" */
+    display: block;
     color: #555;
-    font-size: 0.9em;
+    font-size: .85em;
     text-align: left;
+    white-space: nowrap;
   }
 
   .news-link {
     text-decoration: none;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .news-link:hover {
+    text-decoration: underline;
   }
 
   /* Back to top */
   .news-backtotop {
-    margin-top: 1em;
-    font-size: .95em;
+    margin-top: .95rem;
+    font-size: .9em;
   }
   .news-backtotop__link {
     text-decoration: none;
+  }
+  .news-backtotop__link:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 900px) {
+    .news-item {
+      grid-template-columns: 6.15rem minmax(0, 1fr);
+      gap: .14rem .8rem;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .news-year {
+      margin-bottom: 1rem;
+    }
+    .news-item {
+      grid-template-columns: 1fr;
+      gap: .08rem 0;
+      margin-bottom: .45rem;
+    }
+    .news-date {
+      font-weight: 600;
+      white-space: normal;
+    }
   }
 }
 
