@@ -562,3 +562,114 @@
     text-decoration: none;
   }
 }
+
+/* ==========================================================================
+   Background page (/background/) — modernized layout
+   Safe: only targets .bg-* classes used on that page
+   ========================================================================== */
+
+.bg-page{
+  font-size: 0.95em;
+  line-height: 1.45;
+}
+
+.bg-kicker{
+  margin: 0 0 .35rem 0;
+  font-size: .80em;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #4b5563;
+}
+
+/* Top "Current" card */
+.bg-current{
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 1rem;
+  align-items: start;
+  padding: .95rem 1rem;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 14px;
+  background: rgba(0,0,0,0.02);
+}
+
+.bg-current__text p{ margin: 0; }
+.bg-current__logo img{
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
+
+@media (max-width: 800px){
+  .bg-current{
+    grid-template-columns: 1fr;
+  }
+  .bg-current__logo{
+    max-width: 320px;
+  }
+}
+
+/* Dividers */
+.bg-divider{
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  margin: 1.15rem 0;
+}
+
+/* Timeline */
+.bg-timeline{
+  list-style: none;
+  margin: .25rem 0 0 0;
+  padding: 0;
+  display: grid;
+  gap: .9rem;
+}
+
+.bg-item{
+  display: grid;
+  grid-template-columns: 7.5em 1fr;
+  column-gap: 1rem;
+  row-gap: .15rem;
+}
+
+.bg-when{
+  font-size: .88em;
+  color: #4b5563;
+  white-space: nowrap;
+}
+
+.bg-what{
+  min-width: 0;
+}
+
+.bg-what p{
+  margin: 0 0 .35rem 0;
+}
+
+@media (max-width: 640px){
+  .bg-item{
+    grid-template-columns: 1fr;
+  }
+  .bg-when{
+    margin-bottom: -.25rem;
+  }
+}
+
+/* Affiliations grid */
+.bg-affiliations{
+  list-style: none;
+  margin: .25rem 0 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .4rem 1rem;
+}
+
+.bg-affiliations li{ margin: 0; }
+
+@media (max-width: 720px){
+  .bg-affiliations{
+    grid-template-columns: 1fr;
+  }
+}
