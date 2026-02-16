@@ -113,32 +113,25 @@
   display:inline-block;
 }
 
+/* Consolidated summary styling (fixes "pill grows" on click) */
 .talk-more > summary{
   list-style:none;
   cursor:pointer;
-  display:inline-flex;     /* ensure inline chip alignment across browsers */
+  display:inline-flex;     /* chip alignment */
   align-items:center;
+  margin:0;                /* prevent UA default margins */
+  outline:none;            /* prevent outline altering perceived size */
+  user-select:none;
+  box-sizing:border-box;
+  vertical-align:middle;
+  font-weight:400;         /* prevent UA bolding on summary */
+  white-space:nowrap;      /* keep +N more + caret together */
 }
 
-/* Prevent UA focus/active styles from making the "+N more" pill look bigger */
-.talk-more > summary{
-  margin: 0;                 /* some browsers add default margin */
-  outline: none;             /* remove outline that can look like growth */
-  user-select: none;
-}
-
-/* Use box-shadow for focus instead of outline (doesn't change layout/size) */
 .talk-more > summary:focus,
 .talk-more > summary:focus-visible{
-  outline: none;
+  outline:none;
   box-shadow: 0 0 0 2px rgba(0,0,0,.12);
-}
-
-/* Optional: stabilize baseline/height */
-.talk-more > summary.talk-chip{
-  box-sizing: border-box;
-  vertical-align: middle;
-  font-weight: 400;          /* some UAs bold focused summary */
 }
 
 .talk-more > summary::-webkit-details-marker{
@@ -148,6 +141,16 @@
 /* Firefox marker removal */
 .talk-more > summary::marker{
   content:"";
+}
+
+/* Optional caret for "+N more" */
+.talk-more > summary::after{
+  content:" ▸";
+  opacity:.7;
+}
+
+.talk-more[open] > summary::after{
+  content:" ▾";
 }
 
 .talk-more__content{
@@ -170,6 +173,10 @@
   opacity:.7;
   font-weight:600;
   list-style:none;
+
+  display:inline-flex;     /* clickable affordance */
+  align-items:center;
+  gap:.35rem;
 }
 
 .talk-desc__summary::-webkit-details-marker{
@@ -179,6 +186,21 @@
 /* Firefox marker removal */
 .talk-desc__summary::marker{
   content:"";
+}
+
+/* caret affordance for Description */
+.talk-desc__summary::before{
+  content:"▸";
+  opacity:.8;
+}
+
+.talk-desc[open] > .talk-desc__summary::before{
+  content:"▾";
+}
+
+/* Optional: hover affordance */
+.talk-desc__summary:hover{
+  text-decoration: underline;
 }
 
 .talk-desc__body{
@@ -228,7 +250,6 @@
 .talk-chip--tool{ }
 .talk-chip--audience{ }
 
-
 /* Description: compact but readable (legacy; safe to keep even if unused now) */
 .talk-card__desc{
   margin:.5rem 0 0 0;
@@ -258,37 +279,6 @@
   .talk-card__actions{
     justify-content:flex-start;
   }
-}
-
-/* Make Description look clickable + show caret affordance */
-.talk-desc__summary{
-  display: inline-flex;
-  align-items: center;
-  gap: .35rem;
-}
-
-.talk-desc__summary::before{
-  content: "▸";
-  opacity: .8;
-}
-
-.talk-desc[open] > .talk-desc__summary::before{
-  content: "▾";
-}
-
-/* Optional: hover affordance */
-.talk-desc__summary:hover{
-  text-decoration: underline;
-}
-
-
-.talk-more > summary::after{
-  content: " ▸";
-  opacity: .7;
-}
-
-.talk-more[open] > summary::after{
-  content: " ▾";
 }
 
 /* ==========================================================================
