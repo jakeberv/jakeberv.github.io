@@ -99,6 +99,85 @@
   gap:.3rem .4rem;
 }
 
+/* Label used for Topics/Tools/Audience rows */
+.talk-card__meta-label{
+  font-size:.70rem;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  opacity:.7;
+  margin-right:.35rem;
+}
+
+/* "+N more" expander (details) */
+.talk-more{
+  display:inline-block;
+}
+
+.talk-more > summary{
+  list-style:none;
+  cursor:pointer;
+  display:inline-flex;     /* ensure inline chip alignment across browsers */
+  align-items:center;
+}
+
+.talk-more > summary::-webkit-details-marker{
+  display:none;
+}
+
+/* Firefox marker removal */
+.talk-more > summary::marker{
+  content:"";
+}
+
+.talk-more__content{
+  margin-top:.35rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:.3rem .4rem;
+}
+
+/* Collapsible description */
+.talk-desc{
+  margin:.6rem 0 0 0;
+}
+
+.talk-desc__summary{
+  cursor:pointer;
+  font-size:.70rem;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  opacity:.7;
+  font-weight:600;
+  list-style:none;
+}
+
+.talk-desc__summary::-webkit-details-marker{
+  display:none;
+}
+
+/* Firefox marker removal */
+.talk-desc__summary::marker{
+  content:"";
+}
+
+.talk-desc__body{
+  margin-top:.45rem;
+  font-size:.88rem;
+  line-height:1.32;
+}
+
+.talk-desc__body p{
+  margin:.35rem 0;
+}
+
+/* Optional: clarify open state */
+.talk-more[open] > summary{
+  opacity: 1;
+}
+.talk-desc[open] > .talk-desc__summary{
+  opacity: 1;
+}
+
 /* "Chips" for event/date/location */
 .talk-chip{
   display:inline-flex;
@@ -118,7 +197,18 @@
   font-weight:600;
 }
 
-/* Description: compact but readable */
+/* Subtle differentiation for chip types */
+.talk-chip--more{
+  opacity:.8;
+  cursor:pointer;
+}
+
+.talk-chip--topic{ }
+.talk-chip--tool{ }
+.talk-chip--audience{ }
+
+
+/* Description: compact but readable (legacy; safe to keep even if unused now) */
 .talk-card__desc{
   margin:.5rem 0 0 0;
   font-size:.88rem;
@@ -421,5 +511,3 @@
     text-decoration: none;
   }
 }
-
-

@@ -10,8 +10,10 @@ author_profile: true
 # Selected recorded talks
 
 {%- comment -%}
-  Render newest-to-oldest by date (recommended once dates are ISO YYYY-MM-DD).
-  If you prefer the YAML order, replace talks_sorted with site.data.talks.
+  Newest -> oldest by date. If you want to preserve YAML order, replace:
+  talks_sorted = site.data.talks | sort: "date" | reverse
+  with:
+  talks_sorted = site.data.talks
 {%- endcomment -%}
 {% assign talks_sorted = site.data.talks | sort: "date" | reverse %}
 
@@ -24,7 +26,7 @@ author_profile: true
     {% assign watch_url = "https://www.youtube.com/watch?v=" | append: talk.youtube_id %}
   {% endif %}
 
-  {%- comment -%} Normalize "update" placeholders without changing your YAML {%- endcomment -%}
+  {%- comment -%} Hide placeholder descriptions like "update" (case/whitespace-insensitive) {%- endcomment -%}
   {% assign desc_lc = talk.description | default: "" | downcase | strip %}
 
   <article class="talk-card">
@@ -43,42 +45,106 @@ author_profile: true
 
     <div class="talk-card__meta-line" aria-label="Talk metadata">
       {% if talk.event %}<span class="talk-chip talk-chip--event">{{ talk.event }}</span>{% endif %}
-      {% if talk.date %}<span class="talk-chip">{{ talk.date }}</span>{% endif %}
+
+      {% if talk.date %}
+        <span class="talk-chip" title="{{ talk.date }}">
+          {{ talk.date | date: "%Y-%m-%d" }}
+        </span>
+      {% endif %}
+
       {% if talk.location %}<span class="talk-chip">{{ talk.location }}</span>{% endif %}
     </div>
 
+    {%- comment -%}
+      Chip rows: show first N, then "+N more" as a <details> that reveals the remaining chips.
+      No JS.
+    {%- endcomment -%}
+    {% assign max_chips = 6 %}
+
     {% if talk.key_topics and talk.key_topics.size > 0 %}
       <div class="talk-card__meta-line" aria-label="Talk topics">
-        <span class="talk-card__desc-label">Topics</span>
-        {% for t in talk.key_topics %}
-          <span class="talk-chip">{{ t }}</span>
+        <span class="talk-card__meta-label">Topics</span>
+
+        {% for t in talk.key_topics limit: max_chips %}
+          <span class="talk-chip talk-chip--topic">{{ t }}</span>
         {% endfor %}
+
+        {% if talk.key_topics.size > max_chips %}
+          <details class="talk-more">
+            <summary class="talk-chip talk-chip--more">
+              +{{ talk.key_topics.size | minus: max_chips }} more
+            </summary>
+            <div class="talk-more__content">
+              {% for t in talk.key_topics offset: max_chips %}
+                <span class="talk-chip talk-chip--topic">{{ t }}</span>
+              {% endfor %}
+            </div>
+          </details>
+        {% endif %}
       </div>
     {% endif %}
 
     {% if talk.software_tools and talk.software_tools.size > 0 %}
       <div class="talk-card__meta-line" aria-label="Talk software tools">
-        <span class="talk-card__desc-label">Tools</span>
-        {% for s in talk.software_tools %}
-          <span class="talk-chip">{{ s }}</span>
+        <span class="talk-card__meta-label">Tools</span>
+
+        {% for s in talk.software_tools limit: max_chips %}
+          {%- assign s_trim = s | strip -%}
+          {%- if s_trim == s_trim | downcase -%}
+            <span class="talk-chip talk-chip--tool">{{ s_trim | capitalize }}</span>
+          {%- else -%}
+            <span class="talk-chip talk-chip--tool">{{ s_trim }}</span>
+          {%- endif -%}
         {% endfor %}
+
+        {% if talk.software_tools.size > max_chips %}
+          <details class="talk-more">
+            <summary class="talk-chip talk-chip--more">
+              +{{ talk.software_tools.size | minus: max_chips }} more
+            </summary>
+            <div class="talk-more__content">
+              {% for s in talk.software_tools offset: max_chips %}
+                {%- assign s_trim = s | strip -%}
+                {%- if s_trim == s_trim | downcase -%}
+                  <span class="talk-chip talk-chip--tool">{{ s_trim | capitalize }}</span>
+                {%- else -%}
+                  <span class="talk-chip talk-chip--tool">{{ s_trim }}</span>
+                {%- endif -%}
+              {% endfor %}
+            </div>
+          </details>
+        {% endif %}
       </div>
     {% endif %}
 
     {% if talk.audience and talk.audience.size > 0 %}
       <div class="talk-card__meta-line" aria-label="Talk audience">
-        <span class="talk-card__desc-label">Audience</span>
-        {% for a in talk.audience %}
-          <span class="talk-chip">{{ a }}</span>
+        <span class="talk-card__meta-label">Audience</span>
+
+        {% for a in talk.audience limit: max_chips %}
+          <span class="talk-chip talk-chip--audience">{{ a }}</span>
         {% endfor %}
+
+        {% if talk.audience.size > max_chips %}
+          <details class="talk-more">
+            <summary class="talk-chip talk-chip--more">
+              +{{ talk.audience.size | minus: max_chips }} more
+            </summary>
+            <div class="talk-more__content">
+              {% for a in talk.audience offset: max_chips %}
+                <span class="talk-chip talk-chip--audience">{{ a }}</span>
+              {% endfor %}
+            </div>
+          </details>
+        {% endif %}
       </div>
     {% endif %}
 
     {% if talk.description and desc_lc != "update" %}
-      <p class="talk-card__desc">
-        <span class="talk-card__desc-label">Description</span>
-        <span class="talk-card__desc-text">{{ talk.description | markdownify }}</span>
-      </p>
+      <details class="talk-desc">
+        <summary class="talk-desc__summary">Description</summary>
+        <div class="talk-desc__body">{{ talk.description | markdownify }}</div>
+      </details>
     {% endif %}
   </article>
 {% endfor %}
