@@ -1,23 +1,25 @@
 - title: "15,000 Skeletons, or How I Learned to Stop Worrying and Love the Phenotype"
   youtube_id: "i4mPfi5_5wk&t=1735s"
-  description: "Jake presents a high-throughput computer vision pipeline for digitizing avian skeletal morphology. He introduces 'Bifrost,' a multivariate phylogenetic comparative method designed to handle high-dimensional data without ordination. The talk demonstrates how these methods identify rate shifts in passerine evolution that correlate with major Cenozoic climate events."
-  date: "2024-07-29"
+  description: "Conference talk (Macroevolution V) presenting a computer vision workflow for large-scale digitization of avian skeletal morphology. Describes use of convolutional neural networks (including U-Net and Mask R-CNN approaches) to extract linear measurements from museum specimens with low error (reported RMSE ~0.89 mm). Introduces the Skelevision pipeline and outlines integration with multivariate phylogenetic models to detect shifts in high-dimensional phenotypic evolution across passerine radiations."
+  date: "2024-07-28"
   event: "3rd Joint Congress on Evolutionary Biology"
   location: "Montreal, QC, Canada"
   video_id: "https://www.youtube.com/watch?v=i4mPfi5_5wk&t=1735s"
   key_topics:
     - "Computer Vision"
-    - "Phenomics"
-    - "Macroevolution"
-    - "Cenozoic Climate"
+    - "Imageomics"
+    - "Museum Specimens"
+    - "Avian Skeletal Morphology"
+    - "U-Net"
+    - "Mask R-CNN"
+    - "Multivariate Evolution"
+    - "Phylogenetic Comparative Methods"
   software_tools:
-    - "Bifrost"
-    - "PCMfit"
-    - "MVmorph"
+    - "bifrost"
 
 - title: "Tempo and Mode: Applying Phyogenetic Natural History to Integrate Micro- and Macrovolution"
   youtube_id: "OFiJDjPANNI"
-  description: "Berv explores the 'Phylogenetic Natural History' framework, integrating genomics and paleontology to study the K-Pg mass extinction. He presents evidence for a genomic 'early burst' in birds, where shifts in substitution rates and base composition align with the 'Lilliput Effect' and transitions in metabolic allometry following the Chicxulub impact."
+  description: "Invited seminar applying a 'Phylogenetic Natural History' framework to integrate genomic and paleontological data in macroevolutionary inference. Focuses on molecular heterogeneity around the K–Pg boundary, shifts in substitution dynamics and base composition, and their implications for life-history evolution, metabolic scaling, and interpretation of diversification tempo."
   date: "2023-03-23"
   event: "Invited Seminar"
   location: "University of Toronto"
@@ -25,15 +27,16 @@
   key_topics:
     - "Phylogenetic Natural History"
     - "K-Pg Mass Extinction"
-    - "Lilliput Effect"
+    - "Molecular Evolution"
+    - "Base-Composition Shifts"
     - "Molecular Clock Heterogeneity"
+    - "Life-History Evolution"
   software_tools:
-    - "Janus"
-    - "Phylogenetic Comparative Methods"
+    - "janus"
   
 - title: "EARTH 437 Lecture - Modern Birds"
   youtube_id: "G6rNxdSf5I4"
-  description: "A pedagogical overview of avian systematics presented to the University of Michigan Paleobiology course. The lecture covers the historical challenges of bird classification, the transition from morphological to genomic datasets, and the current consensus on the rapid radiation of crown birds in the early Cenozoic."
+  description: "Guest lecture for University of Michigan Paleobiology course covering avian systematics and phylogenomics. Reviews historical morphology-based classification, the transition to genome-scale data, and evidence for rapid early-Cenozoic radiation of crown birds."
   date: "2021-12-07"
   event: "Guest Lecture"
   location: "University of Michigan"
@@ -41,7 +44,7 @@
   key_topics:
     - "Avian Systematics"
     - "Phylogenomics"
-    - "Rocks vs. Clocks"
+    - "Fossils vs. Molecular Clocks"
     - "Crown Bird Radiation"
   audience:
     - "Undergraduate/Graduate Students"
@@ -49,62 +52,108 @@
 
 - title: "Molecular Early Burst associted with the Diversification of birds at the K-Pg boundary"
   youtube_id: "tAECFiSZR74"
-  description: "In this invited seminar, Jake presents research addressing the 'rocks versus clocks' conflict in avian evolutionary history. He discusses how complex patterns of genome evolution—specifically a 'molecular early burst' associated with the K-Pg mass extinction—can distort traditional molecular clock estimates. The talk highlights how accounting for this genomic heterogeneity can reconcile fossil and molecular data, supporting a rapid radiation of modern birds following the extinction event."
+  description: "Invited seminar discussing the 'rocks versus clocks' problem in avian evolutionary history and evidence for pronounced heterogeneity in molecular evolution near the K–Pg boundary. Frames a 'molecular early burst' hypothesis linking genomic shifts across coding and noncoding regions to life-history evolution, body mass, and metabolic scaling following the end-Cretaceous mass extinction."
   date: "2022-10-12"
   event: "Invited Seminar, host: Dr. Lauren Sallan"
   location: "Okinawa Institute of Science and Technology"
   video_id: https://www.youtube.com/watch?v=tAECFiSZR74
+  key_topics:
+    - "K-Pg Mass Extinction"
+    - "Molecular Early Burst"
+    - "Genome Evolution"
+    - "Molecular Clock Bias"
+    - "Life-History Evolution"
+  software_tools:
+    - "janus"
   #slides_url: "http://example.com/slides/bird-evolution.pdf"
 
 - title: "Molecular Early Burst associated with the Diversification of birds at the K-Pg boundary"
   youtube_id: "JJ2HKO1Z_CM"
-  description: "Presented at the University of Michigan EEB Tuesday Lunch Seminar, this talk investigates how the K-Pg mass extinction structured the evolutionary potential of modern birds. Jake details a novel analytical framework that identifies 'molecular early bursts'—heterogeneous shifts in nucleotide substitution rates—across exons, introns, and mitochondrial genomes. The presentation demonstrates how these genomic shifts correlate with macroevolutionary changes in body mass and metabolic allometry, providing evidence that the extinction event triggered integrated patterns of evolution across avian physiology and life history."
-  date: "2022-9-20"
+  description: "Department seminar presenting genomic evidence for heterogeneity in avian molecular evolution across exons, introns, untranslated regions, and mitochondrial genomes near the K–Pg boundary. Highlights correlations between genomic shifts and macroevolutionary changes in developmental mode, body mass, and metabolic allometry."
+  date: "2022-09-20"
   event: "Department of EEB Tuesday Lunch Seminar"
   location: "University of Michigan"
   video_id: https://www.youtube.com/watch?v=JJ2HKO1Z_CM
+  key_topics:
+    - "K-Pg Boundary"
+    - "Genome Evolution"
+    - "Substitution Rate Heterogeneity"
+    - "Developmental Mode"
+    - "Body Mass Evolution"
+    - "Metabolic Scaling"
+  software_tools:
+    - "janus"
   #slides_url: "http://example.com/slides/bird-evolution.pdf"
   
 - title: "Ghosts in the Machine of diversification analysis"
   youtube_id: "shpUFy6PfhE"
-  description: "update"
-  date: "2021-10-7"
+  description: "Seminar examining how statistical diversification models can yield spurious correlations under model misspecification. Uses simulations to demonstrate that weak correlations between traits and molecular evolutionary rates can generate artifactual associations with speciation rates, potentially explaining some reported large-scale diversification gradients."
+  date: "2021-10-07"
   event: "Department of EEB Virtual Seminar"
   location: "University of Michigan"
   video_id: https://www.youtube.com/watch?v=shpUFy6PfhE
+  key_topics:
+    - "Diversification Models"
+    - "Speciation Rate Inference"
+    - "Simulation"
+    - "Model Misspecification"
+    - "Statistical Artifacts"
+    - "Latitudinal Diversity Gradient"
   #slides_url: "http://example.com/slides/bird-evolution.pdf"
   
 - title: "Molecular Early Burst at the K--Pg"
   youtube_id: "hh32R8yvYSg"
-  description: "update"
-  date: "2022-7-21"
+  description: "Conference talk discussing evidence for heterogeneous molecular evolution in birds across genomic compartments near the K–Pg boundary. Explores implications for divergence-time estimation, developmental transitions, and macroevolutionary rate shifts."
+  date: "2022-07-21"
   event: "Invited Seminar"
   location: "The III Meeting of Systematics, Biogeography, and Evolution"
   video_id: https://www.youtube.com/watch?v=hh32R8yvYSg
+  key_topics:
+    - "K-Pg Boundary"
+    - "Molecular Early Burst"
+    - "Genome Evolution"
+    - "Molecular Clocks"
+    - "Body Mass Evolution"
+  software_tools:
+    - "janus"
   #slides_url: "http://example.com/slides/bird-evolution.pdf"
   
 - title: "Embracing uncertainty: Using genomic, anatomical, and life-history data to integrate the micro and macroevolution of birds"
   youtube_id: "Bes2SRRsseM"
-  description: "update"
+  description: "Invited seminar integrating genomic, anatomical, and life-history data to bridge microevolutionary processes and macroevolutionary patterns in birds. Emphasizes uncertainty-aware inference across data types."
   date: "2020-11-12"
   event: "Invited Seminar, host: Dr. Liam Revell"
   location: "UMass Boston"
   video_id: https://www.youtube.com/watch?v=Bes2SRRsseM
+  key_topics:
+    - "Integrative Evolution"
+    - "Genomics"
+    - "Anatomy"
+    - "Life-History Evolution"
+    - "Macroevolution"
+    - "Uncertainty"
   #slides_url: "http://example.com/slides/bird-evolution.pdf"
   
 - title: "Genomic phylogeography of the White-crowned Manakin"
   youtube_id: "SUS-nMTYYeg"
-  description: "update"
-  date: "2020-8-10"
+  description: "Conference talk presenting genomic phylogeographic analysis of Pseudopipra pipra using ddRAD and mitochondrial DNA data. Demonstrates population structure aligned with Neotropical landscape barriers, evidence for Andean origins with subsequent Amazonian diversification, and support for a species complex with multiple independently evolving lineages."
+  date: "2020-08-10"
   event: "North American Ornithological Congress"
   location: "Virtual"
   video_id: https://www.youtube.com/watch?v=SUS-nMTYYeg
+  key_topics:
+    - "Phylogeography"
+    - "ddRAD"
+    - "Mitochondrial DNA"
+    - "Neotropics"
+    - "Andean Diversification"
+    - "Species Delimitation"
   #slides_url: "http://example.com/slides/bird-evolution.pdf"
   
 - title: "PhD. Defense Seminar"
   youtube_id: "8A-j2DccpTw&list=PLt6TWRNEKcmUMXvUPbpFPVvb7Z8d0UbaN"
-  description: "update"
-  date: "2019-5-20"
+  description: "PhD defense seminar recording (Part 1 of a playlist)."
+  date: "2019-05-20"
   event: "Jacob Berv Exit Seminar"
   location: "Cornell University"
   playlist_image: https://i3.ytimg.com/vi/8A-j2DccpTw/maxresdefault.jpg
@@ -113,10 +162,8 @@
   
 - title: "Evolution 2018 Ernst Mayr Presentation"
   video_id: "https://programme.europa-organisation.com/slides/programme_jointCongressEvolBiology-2018/webconf/365_19082018_1420_rabelais_Jacob_Berv_63/index.html"
-  description: "update"
-  date: "2018-8-19"
+  description: "Ernst Mayr Award finalist presentation delivered at Evolution 2018."
+  date: "2018-08-19"
   event: "Ernst Mayr Award Talk"
   location: "Montpellier, France"
   #slides_url: "http://example.com/slides/bird-evolution.pdf"
-  
-  
