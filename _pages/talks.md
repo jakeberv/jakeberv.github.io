@@ -47,26 +47,27 @@ author_profile: true
       {% if talk.location %}<span class="talk-chip">{{ talk.location }}</span>{% endif %}
     </div>
 
-    {% assign max_topics = 4 %}
+    {% assign max_topics = 3 %}
 
     {% if talk.key_topics and talk.key_topics.size > 0 %}
-      {% assign topics_has_more = talk.key_topics.size > max_topics %}
+      {% assign topics_more_count = talk.key_topics.size | minus: max_topics %}
+      {% assign topics_has_more = topics_more_count > 0 %}
       <div class="talk-card__meta-line" aria-label="Talk topics">
         <span class="talk-card__desc-label">Topics</span>
 
         {% for t in talk.key_topics limit: max_topics %}
           {% if topics_has_more and forloop.last %}
-            <span class="talk-chip-pair">
+            <div class="talk-chip-pair">
               <span class="talk-chip talk-chip--topic">{{ t }}</span>
               <details class="talk-more">
-                <summary class="talk-chip talk-chip--more">+{{ talk.key_topics.size | minus: max_topics }} more</summary>
+                <summary class="talk-chip talk-chip--more">+{{ topics_more_count }} more</summary>
                 <div class="talk-more__content">
                   {% for t2 in talk.key_topics offset: max_topics %}
                     <span class="talk-chip talk-chip--topic">{{ t2 }}</span>
                   {% endfor %}
                 </div>
               </details>
-            </span>
+            </div>
           {% else %}
             <span class="talk-chip talk-chip--topic">{{ t }}</span>
           {% endif %}
