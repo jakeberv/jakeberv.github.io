@@ -8,6 +8,9 @@ tags:
   - keynote
   - conference_talk
 ---
+Jacob Berv delivered an invited Pardee keynote at GSA 2025 on impact cratering and macroevolutionary recovery (DOI: 10.1130/abs/2025AM-11105).
+
+<!--news-excerpt-->
 
 <span class="news-inline" style="display: inline-flex; align-items: flex-start;">
   <img src="https://www.geosociety.org/images/GSA/logo/headerlogo.svg" 
@@ -21,7 +24,6 @@ tags:
   </span>
 </span>
 
-<!--news-excerpt-->
 <hr>
 Invited Pardee keynote at GSA 2025 on impact cratering and macroevolutionary recovery (DOI: 10.1130/abs/2025AM-11105).
 

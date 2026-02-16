@@ -7,11 +7,15 @@ excerpt_separator: "<!--news-excerpt-->"
 tags:
   - conference_talk
 ---
+Jacob Berv presented research on computer-vision applications to avian skeletal evolution at the 3rd Joint Congress on Evolutionary Biology in Montreal, QC, Canada. [YouTube recording](https://www.youtube.com/watch?v=i4mPfi5_5wk&t=1735s).
+
+<!--news-excerpt-->
+
 <div class="flex-container" style="display: flex; align-items: flex-start;">
   <img src="/images/posts/EVO2024-title.jpg" 
        style="max-height: 200px; width: auto; max-width: 100%; margin-right: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); flex-shrink: 0;" 
        alt="Title slide from conference talk"/>
-  <p style="font-size: 0.85em; margin: 0; flex-grow: 1; align-self: flex-start; text-align: left;">Jacob Berv presented research on computer-vision applications to avian skeletal evolution at the 3rd Joint Congress on Evolutionary Biology in Montreal, QC, Canada. The talk, "15,000 Skeletons, or How I Learned to Stop Worrying and Love the Phenotype," was recorded and is available on YouTube <a href="https://www.youtube.com/watch?v=i4mPfi5_5wk&t=1735s">here</a>.</p>
+  <p style="font-size: 0.85em; margin: 0; flex-grow: 1; align-self: flex-start; text-align: left;">Title slide from the Montreal presentation, "15,000 Skeletons, or How I Learned to Stop Worrying and Love the Phenotype." The recording is available on YouTube <a href="https://www.youtube.com/watch?v=i4mPfi5_5wk&t=1735s">here</a>.</p>
 </div>
 
 <style>
@@ -37,7 +41,6 @@ tags:
   }
 </style>
 
-<!--news-excerpt-->
 <hr>
 The 3rd Joint Congress on Evolutionary Biology is the joint meeting of the American Society of Naturalists, the European Society for Evolutionary Biology, the Society of Systematic Biologists and the Society for the Study of Evolution. The meeting is one of the premier international opportunities for sharing research on evolutionary biology.
 

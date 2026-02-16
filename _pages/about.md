@@ -28,14 +28,14 @@ header:
 <strong>Jacob (Jake) Berv</strong> is an evolutionary biologist interested in building and deciphering the tree of life. His research integrates data from natural history, ecology, genomics, and paleontology—often through the application of novel computational tools—in order to understand the links between micro- and macroevolution.
 {: .about-intro}
 
-##  News
+## Recent News
 {% assign news_items = site.news
   | where_exp: "i", "i.date"
   | where_exp: "i", "i.date <= site.time"
   | sort: "date"
   | reverse %}
 
-{% for item in news_items limit:10 %}
+{% for item in news_items limit:5 %}
   <div style="margin-bottom: 0.25em; line-height: 1.35; font-size: 0.85em;">
     <p style="margin: 0;">
       <strong>{{ item.date | date: "%B %-d, %Y" }}</strong> — 
