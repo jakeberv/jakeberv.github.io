@@ -598,3 +598,113 @@
     text-decoration: none;
   }
 }
+
+/* ==========================================================================
+   Background page (/background/)
+   Scoped to .bg-page so it won't affect other pages
+   ========================================================================== */
+
+.bg-page{
+  font-size: 0.9em;
+  line-height: 1.35;
+  color: #333;
+}
+
+/* Small section label (matches about/news vibe) */
+.bg-kicker{
+  margin: 0 0 .35rem 0;
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  opacity: .65;
+  font-weight: 600;
+}
+
+/* Current “card” */
+.bg-current{
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 1rem 1.5rem;
+  align-items: start;
+
+  padding: .9rem 1rem;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 14px;
+  background: rgba(255,255,255,.95);
+  box-shadow: 0 8px 20px rgba(0,0,0,.05);
+}
+
+.bg-current__logo a{ display: block; }
+.bg-current__logo img{
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
+
+.bg-divider{
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 1.1rem 0;
+}
+
+/* Timeline */
+.bg-timeline{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: .85rem;
+}
+
+.bg-item{
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: .2rem 1rem;
+  align-items: start;
+}
+
+.bg-when{
+  font-size: .85em;
+  color: #555;
+  white-space: nowrap;
+}
+
+.bg-what{ min-width: 0; }
+.bg-what p{ margin: .15rem 0; }
+
+/* Affiliations grid */
+.bg-affiliations{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: .35rem 1.3rem;
+}
+
+.bg-affiliations li{ margin: 0; }
+.bg-affiliations a{ text-decoration: none; }
+.bg-affiliations a:hover{ text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 900px){
+  .bg-current{
+    grid-template-columns: 1fr;
+  }
+  .bg-current__logo{
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 600px){
+  .bg-item{
+    grid-template-columns: 1fr;
+  }
+  .bg-when{
+    font-weight: 600;
+  }
+}
