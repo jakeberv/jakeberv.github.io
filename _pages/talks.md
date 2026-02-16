@@ -52,65 +52,77 @@ author_profile: true
     {% assign max_audience = 6 %}
 
     {% if talk.key_topics and talk.key_topics.size > 0 %}
+      {% assign topics_has_more = talk.key_topics.size > max_topics %}
       <div class="talk-card__meta-line" aria-label="Talk topics">
         <span class="talk-card__desc-label">Topics</span>
 
         {% for t in talk.key_topics limit: max_topics %}
-          <span class="talk-chip">{{ t }}</span>
+          {% if topics_has_more and forloop.last %}
+            <span class="talk-chip-pair">
+              <span class="talk-chip">{{ t }}</span>
+              <details class="talk-more">
+                <summary class="talk-chip talk-chip--more">+{{ talk.key_topics.size | minus: max_topics }} more</summary>
+                <div class="talk-more__content">
+                  {% for t2 in talk.key_topics offset: max_topics %}
+                    <span class="talk-chip">{{ t2 }}</span>
+                  {% endfor %}
+                </div>
+              </details>
+            </span>
+          {% else %}
+            <span class="talk-chip">{{ t }}</span>
+          {% endif %}
         {% endfor %}
-
-        {% if talk.key_topics.size > max_topics %}
-          <details class="talk-more">
-            <summary class="talk-chip talk-chip--more">+{{ talk.key_topics.size | minus: max_topics }} more</summary>
-            <div class="talk-more__content">
-              {% for t in talk.key_topics offset: max_topics %}
-                <span class="talk-chip">{{ t }}</span>
-              {% endfor %}
-            </div>
-          </details>
-        {% endif %}
       </div>
     {% endif %}
 
     {% if talk.software_tools and talk.software_tools.size > 0 %}
+      {% assign tools_has_more = talk.software_tools.size > max_tools %}
       <div class="talk-card__meta-line" aria-label="Talk software tools">
         <span class="talk-card__desc-label">Tools</span>
 
         {% for s in talk.software_tools limit: max_tools %}
-          <span class="talk-chip">{{ s }}</span>
+          {% if tools_has_more and forloop.last %}
+            <span class="talk-chip-pair">
+              <span class="talk-chip">{{ s }}</span>
+              <details class="talk-more">
+                <summary class="talk-chip talk-chip--more">+{{ talk.software_tools.size | minus: max_tools }} more</summary>
+                <div class="talk-more__content">
+                  {% for s2 in talk.software_tools offset: max_tools %}
+                    <span class="talk-chip">{{ s2 }}</span>
+                  {% endfor %}
+                </div>
+              </details>
+            </span>
+          {% else %}
+            <span class="talk-chip">{{ s }}</span>
+          {% endif %}
         {% endfor %}
-
-        {% if talk.software_tools.size > max_tools %}
-          <details class="talk-more">
-            <summary class="talk-chip talk-chip--more">+{{ talk.software_tools.size | minus: max_tools }} more</summary>
-            <div class="talk-more__content">
-              {% for s in talk.software_tools offset: max_tools %}
-                <span class="talk-chip">{{ s }}</span>
-              {% endfor %}
-            </div>
-          </details>
-        {% endif %}
       </div>
     {% endif %}
 
     {% if talk.audience and talk.audience.size > 0 %}
+      {% assign audience_has_more = talk.audience.size > max_audience %}
       <div class="talk-card__meta-line" aria-label="Talk audience">
         <span class="talk-card__desc-label">Audience</span>
 
         {% for a in talk.audience limit: max_audience %}
-          <span class="talk-chip">{{ a }}</span>
+          {% if audience_has_more and forloop.last %}
+            <span class="talk-chip-pair">
+              <span class="talk-chip">{{ a }}</span>
+              <details class="talk-more">
+                <summary class="talk-chip talk-chip--more">+{{ talk.audience.size | minus: max_audience }} more</summary>
+                <div class="talk-more__content">
+                  {% for a2 in talk.audience offset: max_audience %}
+                    <span class="talk-chip">{{ a2 }}</span>
+                  {% endfor %}
+                </div>
+              </details>
+            </span>
+          {% else %}
+            <span class="talk-chip">{{ a }}</span>
+          {% endif %}
         {% endfor %}
-
-        {% if talk.audience.size > max_audience %}
-          <details class="talk-more">
-            <summary class="talk-chip talk-chip--more">+{{ talk.audience.size | minus: max_audience }} more</summary>
-            <div class="talk-more__content">
-              {% for a in talk.audience offset: max_audience %}
-                <span class="talk-chip">{{ a }}</span>
-              {% endfor %}
-            </div>
-          </details>
-        {% endif %}
       </div>
     {% endif %}
 
