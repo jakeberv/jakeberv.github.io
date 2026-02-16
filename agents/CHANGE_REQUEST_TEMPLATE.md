@@ -39,7 +39,7 @@ Describe the end result in 1-3 sentences.
 
 ## Git preferences
 
-- Edit on `main`? (yes/no)
+- Edit on `master`? (yes/no)
 - If no, branch name:
 - Commit locally? (yes/no)
 - Push to remote? (yes/no)
@@ -66,14 +66,14 @@ Do not edit binary files.
 
 Acceptance criteria:
 1) README is repo-specific and references AGENTS and agents index.
-2) AGENTS defines main-branch confirmation and commit/push prompts.
+2) AGENTS defines master-branch confirmation and commit/push prompts.
 3) INDEX lists all templates in agents/.
 
 Verification:
 Run ls and git status; confirm only docs changed.
 
 Git preferences:
-Edit on main? yes
+Edit on master? yes
 Commit locally? ask first
 Push to remote? ask first
 ```

@@ -8,8 +8,8 @@ This file defines how bots should operate in this repository so changes are pred
 
 ## Default Branch and Edit Policy
 
-1. Default target branch is `main`.
-2. Before the first write action in a task, the bot must ask for confirmation to edit on `main`.
+1. Default target branch is `master`.
+2. Before the first write action in a task, the bot must ask for confirmation to edit on `master`.
 3. If the user explicitly asks for a new branch, create/use that branch for the task.
 4. Do not assume a PR workflow unless explicitly requested.
 
