@@ -35,6 +35,12 @@ This file defines how bots should operate in this repository so changes are pred
 2. If unexpected unrelated workspace mutations appear, stop and ask the user how to proceed.
 3. Preserve user changes; do not revert unrelated edits.
 
+## Spec Sync Policy
+
+1. If a task changes documented behavior, schema, policy, workflow expectations, or operating conventions, update the relevant files in `agents/` in the same change.
+2. Content-only edits that do not change behavior/schema/policy do not require spec updates.
+3. If no relevant spec exists, create or extend the closest template and update `agents/INDEX.md` when files are added, removed, or renamed.
+
 ## Completion Prompts (Required)
 
 After making edits, bots must ask both of the following:
