@@ -99,21 +99,25 @@
   gap:.3rem .4rem;
 }
 
-/* Keep the last topic chip + "+N more" together so "+N more" is never orphaned */
+/* Keep the last topic chip + "+N more" together so "+N more" is never orphaned
+   FIX: align-items:flex-start prevents the vertical "lift/drop" when details opens */
 .talk-chip-pair{
   display:inline-flex;
-  align-items:center;
+  align-items:flex-start; /* <-- key fix */
   gap:.3rem .4rem;
   flex-wrap:nowrap;
   max-width:100%;
   min-width:0;
 }
+
 .talk-chip-pair > .talk-chip--topic{
   flex: 1 1 auto;
   min-width:0;
 }
+
 .talk-chip-pair > .talk-more{
   flex: 0 0 auto;
+  align-self:flex-start; /* keep the +N pill pinned to the top */
 }
 
 /* Label used for Topics/Tools/Audience rows */
@@ -142,7 +146,7 @@
   outline:none;
   user-select:none;
   box-sizing:border-box;
-  vertical-align:middle;
+  vertical-align:top;
   font-weight:400;
   white-space:nowrap;
   -webkit-tap-highlight-color: transparent;
@@ -157,7 +161,7 @@
   content:"";
 }
 
-/* No ring on mouse-click focus (prevents "pill grows") */
+/* No ring on mouse-click focus */
 .talk-more > summary:focus{
   box-shadow:none;
 }
@@ -183,14 +187,15 @@
   transform: rotate(90deg);
 }
 
+/* Tighter spacing so expanded chips sit naturally under the +N pill */
 .talk-more__content{
-  margin-top:.20rem;
+  margin-top:.12rem; /* <-- slight tighten */
   display:flex;
   flex-wrap:wrap;
   gap:.3rem .4rem;
 }
 
-/* Make topic chips single-line so they don't "scale" taller than others */
+/* Make chips single-line to avoid height jumps */
 .talk-chip--topic,
 .talk-chip--tool,
 .talk-chip--audience{
