@@ -111,27 +111,30 @@
 /* "+N more" expander (details) */
 .talk-more{
   display:inline-block;
+  margin:0;
+  padding:0;
 }
 
-/* Consolidated summary styling (fixes "pill grows" on click) */
+/* Summary styling (stabilized to prevent size change on click) */
 .talk-more > summary{
   list-style:none;
   cursor:pointer;
-  display:inline-flex;     /* chip alignment */
+  display:inline-flex;
   align-items:center;
-  margin:0;                /* prevent UA default margins */
-  outline:none;            /* prevent outline altering perceived size */
+  margin:0;
+  outline:none;
   user-select:none;
   box-sizing:border-box;
   vertical-align:middle;
-  font-weight:400;         /* prevent UA bolding on summary */
-  white-space:nowrap;      /* keep +N more + caret together */
+  font-weight:400;
+  white-space:nowrap;
 }
 
+/* Focus ring INSIDE the pill (no "growth" illusion) */
 .talk-more > summary:focus,
 .talk-more > summary:focus-visible{
   outline:none;
-  box-shadow: 0 0 0 2px rgba(0,0,0,.12);
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.12);
 }
 
 .talk-more > summary::-webkit-details-marker{
@@ -143,14 +146,20 @@
   content:"";
 }
 
-/* Optional caret for "+N more" */
+/* Fixed-width caret that ROTATES (prevents width jitter) */
 .talk-more > summary::after{
-  content:" ▸";
+  content:"▸";
+  display:inline-block;
+  width:1ch;
+  margin-left:.25rem;
   opacity:.7;
+  transform: rotate(0deg);
+  transform-origin: 50% 50%;
+  transition: transform .12s ease;
 }
 
 .talk-more[open] > summary::after{
-  content:" ▾";
+  transform: rotate(90deg);
 }
 
 .talk-more__content{
@@ -174,7 +183,7 @@
   font-weight:600;
   list-style:none;
 
-  display:inline-flex;     /* clickable affordance */
+  display:inline-flex;
   align-items:center;
   gap:.35rem;
 }
