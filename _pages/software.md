@@ -27,12 +27,11 @@ title: "Software"
 </div>
 
 <div class="software-actions">
-📦 <a href="https://github.com/jakeberv/bifrost">Repository</a> &nbsp;•&nbsp;
-📖 <a href="https://jakeberv.com/bifrost">Documentation (pkgdown)</a> &nbsp;•&nbsp;
-📄 <a href="https://jakeberv.com/bifrost/articles/jaw-shape-vignette.html">Getting Started vignette</a>
+<a href="https://github.com/jakeberv/bifrost">📦 Repository</a>
+<a href="https://jakeberv.com/bifrost">📖 Documentation (pkgdown)</a>
+<a href="https://jakeberv.com/bifrost/articles/jaw-shape-vignette.html">📄 Getting started</a>
 </div>
 
-<div style="clear: both;"></div>
 </div>
 
 <div class="software-card" markdown="1">
@@ -51,18 +50,17 @@ title: "Software"
 
 <div class="software-meta">
 <small>
-<strong>Highlights:</strong> Command-line workflow written in Go; integrates with <code>NLopt</code> for optimization; identifies shifts in substitution models and base composition; supports uncertainty analyses and outputs trees annotated by model.  A complementary implementation written in C is available as part of the <a href="http://git.sr.ht/~hms/hringhorni"><code>hringhorni</code></a> package, optimized for speed and large-scale analyses.
+<strong>Highlights:</strong> Command-line workflow written in Go; integrates with <code>NLopt</code> for optimization; identifies shifts in substitution models and base composition; supports uncertainty analyses and outputs trees annotated by model. A complementary implementation written in C is available as part of the <a href="http://git.sr.ht/~hms/hringhorni"><code>hringhorni</code></a> package, optimized for speed and large-scale analyses.
 </small>
 </div>
 
 <div class="software-actions">
-📦 <a href="https://git.sr.ht/~hms/janus">Repository</a> &nbsp;•&nbsp;
-📖 <a href="https://git.sr.ht/~hms/janus/tree/master/doc/index.md">Documentation</a> &nbsp;•&nbsp;
-📄 <a href="https://www.science.org/doi/10.1126/sciadv.adp0114">Berv&nbsp;et&nbsp;al.&nbsp;2024, <em>Science Advances</em></a> &nbsp;•&nbsp;
-📄 <a href="https://doi.org/10.1111/nph.19099">Smith&nbsp;et&nbsp;al.&nbsp;2023, <em>New Phytologist</em></a>
+<a href="https://git.sr.ht/~hms/janus">📦 Repository</a>
+<a href="https://git.sr.ht/~hms/janus/tree/master/doc/index.md">📖 Documentation</a>
+<a href="https://www.science.org/doi/10.1126/sciadv.adp0114">📄 Science Advances 2024</a>
+<a href="https://doi.org/10.1111/nph.19099">📄 New Phytologist 2023</a>
 </div>
 
-<div style="clear: both;"></div>
 </div>
 
 {% include software-faq-jsonld.html %}

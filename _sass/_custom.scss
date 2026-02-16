@@ -701,7 +701,7 @@
 }
 
 /* ==========================================================================
-   Software page polish (works with existing markup)
+   Software page polish
    ========================================================================== */
 
 .software-card{
@@ -710,8 +710,10 @@
   border-radius: 14px;
   padding: 1rem 1.05rem;
   margin: 1.1rem 0 1.6rem;
-  background: rgba(255,255,255,.95);
-  box-shadow: 0 8px 20px rgba(0,0,0,.05);
+  background: rgba(255,255,255,.98);
+
+  /* reduced shadow (was too strong) */
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
 }
 
 .software-card h2, .software-card h3{
@@ -736,24 +738,37 @@
   display: block;
 }
 
-/* Action links as “chips” (CSS-only, no markup changes) */
-.software-actions{
-  margin-top: .35rem;
-  font-size: .95rem;
+hr.soft-sep{
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,.12);
+  margin: .85rem 0 .7rem;
 }
+
+/* Pills (now visible + aligned) */
+.software-actions{
+  margin-top: .4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem .5rem;
+}
+
 .software-actions a{
   display: inline-flex;
   align-items: center;
-  padding: .18rem .55rem;
+  gap: .35rem;
+  padding: .22rem .65rem;
   border-radius: 999px;
-  border: 1px solid rgba(0,0,0,.12);
-  background: rgba(0,0,0,.02);
+  border: 1px solid rgba(0,0,0,.16);
+  background: rgba(0,0,0,.03);
   text-decoration: none;
-  margin: .1rem .15rem .1rem 0;
+  font-size: .95rem;
+  line-height: 1.2;
 }
+
 .software-actions a:hover{
-  border-color: rgba(0,0,0,.22);
-  box-shadow: 0 6px 14px rgba(0,0,0,.06);
+  border-color: rgba(0,0,0,.24);
+  background: rgba(0,0,0,.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,.06);
 }
 
 /* Images */
@@ -774,7 +789,9 @@
   max-width: 260px;
   margin: .45rem 0 .6rem 1.2rem;
   border-radius: 8px;
-  box-shadow: 0 8px 18px rgba(0,0,0,.10);
+
+  /* also slightly softened */
+  box-shadow: 0 4px 12px rgba(0,0,0,.10);
 }
 @media (max-width: 640px){
   .software-figure{
@@ -786,23 +803,17 @@
   }
 }
 
-hr.soft-sep{
-  border: 0;
-  border-top: 1px solid rgba(0,0,0,.12);
-  margin: .85rem 0 .7rem;
-}
-
 /* Dark mode */
 @media (prefers-color-scheme: dark){
   .software-card{
     border-color: rgba(255,255,255,.14);
     background: rgba(255,255,255,.04);
-    box-shadow: 0 12px 26px rgba(0,0,0,.35);
+    box-shadow: 0 10px 24px rgba(0,0,0,.30);
   }
   .software-meta{ color: rgba(255,255,255,.70); }
   .software-actions a{
-    border-color: rgba(255,255,255,.14);
-    background: rgba(255,255,255,.05);
+    border-color: rgba(255,255,255,.16);
+    background: rgba(255,255,255,.06);
   }
   hr.soft-sep{ border-top-color: rgba(255,255,255,.14); }
 }
