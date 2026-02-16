@@ -4,6 +4,8 @@ date: 2025-02-01
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+tags:
+  - publication
 ---
 Jacob Berv co-authored "Skeletal trait measurements for thousands of bird species" in *Scientific Data*.
 

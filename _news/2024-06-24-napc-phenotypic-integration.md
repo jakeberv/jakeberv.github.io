@@ -4,6 +4,8 @@ date: 2024-06-24
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+tags:
+  - conference_talk
 ---
 Jacob Berv presented "15,000 Passerine Skeletons Illuminate Time-Heterogeneous Patterns of Phenotypic Integration" at the North American Paleontological Congress in Ann Arbor, Michigan.
 

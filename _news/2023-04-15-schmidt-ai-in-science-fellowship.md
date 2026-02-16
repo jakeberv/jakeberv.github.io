@@ -4,8 +4,11 @@ date: 2023-04-15
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+tags:
+  - award
+  - fellowship
 ---
-Jacob Berv was awarded $208,000 from the Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship to advance AI-enabled biodiversity research.
+Jacob Berv was awarded the Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship ($208,000) to advance AI-enabled biodiversity research at the University of Michigan. [MIDAS announcement](https://midas.umich.edu/2022-ai-in-science-fellows/) | [Schmidt program](https://www.schmidtsciences.org/ai-in-science/)
 
 <!--news-excerpt-->
-The fellowship provided resources to integrate machine learning with museum collections.
+The fellowship supported integration of machine learning, biodiversity data, and museum collections.

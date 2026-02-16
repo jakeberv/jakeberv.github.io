@@ -4,6 +4,9 @@ date: 2020-08-12
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+tags:
+  - conference_talk
+  - invited_talk
 ---
 Jacob Berv gave an invited symposium talk at the virtual North American Ornithological Congress.
 

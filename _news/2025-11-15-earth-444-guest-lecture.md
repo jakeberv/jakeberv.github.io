@@ -4,8 +4,10 @@ date: 2025-11-15
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+tags:
+  - guest_lecture
 ---
-Jacob Berv will be a guest lecturer in molecular systematics for the Analytical Paleobiology course (EARTH 444) at the University of Michigan.
+Jacob Berv gave a guest lecture on Molecular Systematics for University of Michigan EARTH 444 (Analytical Paleobiology) in November 2025.
 
 <!--news-excerpt-->
-The session focuses on telling evolutionary time.
+The session focused on molecular-systematic methods for integrating evolutionary history across deep time.

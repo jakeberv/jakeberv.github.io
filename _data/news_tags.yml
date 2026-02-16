@@ -1,0 +1,129 @@
+# Canonical news tag taxonomy for files in `_news/`.
+# Use `slug` values in front matter, e.g.:
+#
+# tags:
+#   - publication
+#   - conference_talk
+
+version: 1
+updated: 2026-02-16
+
+usage_rules:
+  primary_tags_per_item: "1-3 recommended"
+  allow_mixed_groups: true
+  modifiers_optional: true
+
+tags:
+  - slug: publication
+    label: Publication
+    group: research_output
+    usage: primary
+    description: Peer-reviewed articles, chapters, or other scholarly publications.
+
+  - slug: software_release
+    label: Software Release
+    group: research_output
+    usage: primary
+    description: Public release of research software or packages.
+
+  - slug: conference_talk
+    label: Conference Talk
+    group: presentations
+    usage: primary
+    description: Contributed talk, symposium talk, or conference presentation.
+
+  - slug: invited_talk
+    label: Invited Talk
+    group: presentations
+    usage: primary
+    description: Invited seminar, invited speaker slot, or invited departmental talk.
+
+  - slug: keynote
+    label: Keynote
+    group: presentations
+    usage: primary
+    description: Keynote lectures at conferences or scientific events.
+
+  - slug: guest_lecture
+    label: Guest Lecture
+    group: presentations
+    usage: primary
+    description: Guest lectures in courses or formal teaching settings.
+
+  - slug: workshop_led
+    label: Workshop Led
+    group: training_teaching
+    usage: primary
+    description: Workshops or tutorials organized and led.
+
+  - slug: workshop_training
+    label: Workshop Training
+    group: training_teaching
+    usage: primary
+    description: Workshops attended/completed as trainee or participant.
+
+  - slug: certificate
+    label: Certificate
+    group: training_teaching
+    usage: primary
+    description: Formal certificate completion.
+
+  - slug: award
+    label: Award
+    group: recognition_funding
+    usage: primary
+    description: Awards, finalist recognitions, and prize distinctions.
+
+  - slug: grant
+    label: Grant
+    group: recognition_funding
+    usage: primary
+    description: Research, dissertation, postdoctoral, or travel grants.
+
+  - slug: fellowship
+    label: Fellowship
+    group: recognition_funding
+    usage: primary
+    description: Fellowships awarded, accepted, or started.
+
+  - slug: travel_support
+    label: Travel Support
+    group: recognition_funding
+    usage: modifier
+    description: Funding support specifically for workshop or conference travel.
+
+  - slug: service
+    label: Service
+    group: service_engagement
+    usage: primary
+    description: Professional service such as co-maintenance, co-organization, or editing.
+
+  - slug: outreach
+    label: Outreach
+    group: service_engagement
+    usage: primary
+    description: Public engagement, K-12 programming, and science communication outreach.
+
+  - slug: advocacy
+    label: Advocacy
+    group: service_engagement
+    usage: primary
+    description: Academic equity, anti-harassment, or community advocacy roles.
+
+  - slug: fieldwork
+    label: Fieldwork
+    group: service_engagement
+    usage: primary
+    description: Field collection, expedition, or specimen-acquisition activity.
+
+  - slug: media_consulting
+    label: Media Consulting
+    group: service_engagement
+    usage: primary
+    description: Scientific consulting for media or public-facing productions.
+
+  - slug: career_milestone
+    label: Career Milestone
+    group: career
+    usage: primary
+    description: Major career milestones such as degree completion.
