@@ -99,14 +99,6 @@
   gap:.3rem .4rem;
 }
 
-/* Keep the last chip + "+N more" together so "+N more" is never orphaned */
-.talk-chip-pair{
-  display:inline-flex;
-  align-items:center;
-  gap:.3rem .4rem;
-  flex-wrap:nowrap;
-}
-
 /* Label used for Topics/Tools/Audience rows */
 .talk-card__meta-label{
   font-size:.70rem;
@@ -123,7 +115,7 @@
   padding:0;
 }
 
-/* Summary styling */
+/* Summary styling (stabilized to prevent size change on click) */
 .talk-more > summary{
   list-style:none;
   cursor:pointer;
@@ -138,6 +130,13 @@
   white-space:nowrap;
 }
 
+/* Focus ring INSIDE the pill (no "growth" illusion) */
+.talk-more > summary:focus,
+.talk-more > summary:focus-visible{
+  outline:none;
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.12);
+}
+
 .talk-more > summary::-webkit-details-marker{
   display:none;
 }
@@ -145,16 +144,6 @@
 /* Firefox marker removal */
 .talk-more > summary::marker{
   content:"";
-}
-
-/* Only show focus ring for keyboard navigation (prevents "pill grows" on mouse click) */
-.talk-more > summary:focus{
-  outline:none;
-  box-shadow:none;
-}
-.talk-more > summary:focus-visible{
-  outline:none;
-  box-shadow: inset 0 0 0 2px rgba(0,0,0,.12);
 }
 
 /* Fixed-width caret that ROTATES (prevents width jitter) */
