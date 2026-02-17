@@ -344,6 +344,8 @@
 
 .software-page .software-card__body {
   min-width: 0;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .software-page .software-card__body h2,
@@ -355,7 +357,10 @@
 }
 
 .software-page .software-card__media {
+  grid-column: 2;
+  grid-row: 1;
   justify-self: end;
+  align-self: start;
   width: min(180px, 34vw);
 }
 
@@ -418,10 +423,20 @@
     gap: 0.7rem 0;
   }
 
+  .software-page .software-card__body,
   .software-page .software-card__media {
+    grid-column: 1;
+  }
+
+  .software-page .software-card__media {
+    grid-row: 1;
     justify-self: center;
     width: min(230px, 72vw);
     margin-bottom: 0.2rem;
+  }
+
+  .software-page .software-card__body {
+    grid-row: 2;
   }
 
   .software-page .software-logo {
