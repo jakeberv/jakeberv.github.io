@@ -6,8 +6,9 @@ author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 tags:
   - publication
+  - student_contribution
 ---
-Jacob Berv (shared first authorship) co-authored "Ecological selectivity and the evolution of mammalian substrate preference across the K–Pg boundary" in *Ecology and Evolution*. [DOI](https://doi.org/10.1002/ece3.8114)
+Jacob Berv (shared first authorship) co-authored "Ecological selectivity and the evolution of mammalian substrate preference across the K-Pg boundary" in *Ecology and Evolution* with graduate advisee Jonathan J. Hughes. [DOI](https://doi.org/10.1002/ece3.8114)
 
 <!--news-excerpt-->
 Additional details: Hughes, J. J., Berv, J. S., Chester, S. G. B., Sargis, E. J., & Field, D. J. (2021). *Ecology and Evolution*, 11, 14540-14554. https://doi.org/10.1002/ece3.8114

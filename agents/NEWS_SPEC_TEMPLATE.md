@@ -27,6 +27,7 @@ This template defines the recommended schema for files in `_news/`.
 - Source of truth: `_data/news_tags.yml`
 - Tag values in news front matter must use `slug` values from that file.
 - Recommended usage: `1-3` primary tags per item, plus optional modifier tags.
+- Use `student_contribution` (modifier tag) when a student advisee is a notable contributor (for example lead/co-lead author or presenter).
 
 ## Strongly recommended body structure
 1. First paragraph: short full item text.

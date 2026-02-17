@@ -1,0 +1,14 @@
+---
+title: "Publication: Bee Hummingbird Coevolution in Evolution"
+date: 2018-03-01
+layout: archive
+author_profile: true
+excerpt_separator: "<!--news-excerpt-->"
+tags:
+  - publication
+---
+Jacob Berv co-authored "Complex coevolution of wing, tail, and vocal sounds of courting male bee hummingbirds," published in *Evolution* (2018). [DOI](https://doi.org/10.1111/evo.13432)
+
+<!--news-excerpt-->
+Co-authored an *Evolution* paper on coevolution of morphology and courtship sounds in bee hummingbirds.
+

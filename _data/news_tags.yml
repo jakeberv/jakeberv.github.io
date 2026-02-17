@@ -92,6 +92,12 @@ tags:
     usage: modifier
     description: Funding support specifically for workshop or conference travel.
 
+  - slug: student_contribution
+    label: Student Contribution
+    group: training_teaching
+    usage: modifier
+    description: Indicates notable contribution by a student advisee (for example as lead/co-lead author or presenter).
+
   - slug: service
     label: Service
     group: service_engagement
