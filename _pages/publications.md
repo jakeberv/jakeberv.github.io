@@ -10,16 +10,16 @@ read_more: "enabled"
 
 <figure class="pub-covers">
   <a href="https://doi.org/10.1016/j.cub.2018.04.062" target="_blank" rel="noopener">
-    <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/CurrBio.jpg" alt="Current Biology cover">
+    <img src="/images/research/CurrBio.jpg" alt="Current Biology cover">
   </a>
   <a href="http://digitallibrary.amnh.org/handle/2246/7237" target="_blank" rel="noopener">
-    <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/amnh_bulletin.jpg" alt="AMNH Bulletin cover">
+    <img src="/images/research/amnh_bulletin.jpg" alt="AMNH Bulletin cover">
   </a>
   <a href="https://doi.org/10.1093/sysbio/syx064" target="_blank" rel="noopener">
-    <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/syst_biol.jpg" alt="Systematic Biology cover">
+    <img src="/images/research/syst_biol.jpg" alt="Systematic Biology cover">
   </a>
   <a href="https://doi.org/10.1126/sciadv.adp0114" target="_blank" rel="noopener">
-    <img src="https://github.com/jakeberv/jakeberv.github.io/raw/master/images/research/science_advances.jpg" alt="Science Advances cover">
+    <img src="/images/research/science_advances.jpg" alt="Science Advances cover">
   </a>
 </figure>
 
