@@ -346,8 +346,8 @@
   grid-template-columns: minmax(0, 1fr) 170px;
   gap: 0.6rem 1rem;
   align-items: start;
-  margin-bottom: 0.75rem;
-  padding-bottom: 0.65rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.55rem;
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -401,7 +401,7 @@
 .software-page .soft-sep {
   border: 0;
   border-top: 1px solid #e5e7eb;
-  margin: 0.9rem 0 0.75rem;
+  margin: 0.75rem 0 0.65rem;
 }
 
 .software-page .software-meta {
@@ -419,6 +419,12 @@
 .software-page .software-actions a {
   text-decoration: none;
   border-bottom: 1px solid transparent;
+}
+
+.software-page .software-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.5rem;
 }
 
 .software-page .software-actions a:hover {
