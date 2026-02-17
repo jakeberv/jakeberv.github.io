@@ -11,3 +11,6 @@ comments:
 
 sass:
   style: expanded
+
+# Avoid GitHub API calls during local preview (prevents metadata hangs).
+github: false

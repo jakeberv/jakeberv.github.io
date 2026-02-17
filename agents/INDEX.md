@@ -18,7 +18,7 @@ This directory contains spec templates and process guides for bot-assisted and h
 ### Architecture and data flow
 
 - [`agents/SITE_ARCHITECTURE_SPEC_TEMPLATE.md`](SITE_ARCHITECTURE_SPEC_TEMPLATE.md)  
-  Use when documenting or planning structural/site-wide changes.
+  Use when documenting or planning structural/site-wide changes, including local preview/build runbook details.
 
 - [`agents/IMPACT_DATA_PIPELINE_SPEC_TEMPLATE.md`](IMPACT_DATA_PIPELINE_SPEC_TEMPLATE.md)  
   Use when planning updates to impact metrics inputs (`_data/scholar_metrics.json`, `_data/map_data.json`) and related scripts/workflows.

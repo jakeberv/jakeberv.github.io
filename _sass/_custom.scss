@@ -318,6 +318,118 @@
 }
 
 /* ==========================================================================
+   Software page (/software/)
+   Scoped to .software-page so it won't affect other archive pages
+   ========================================================================== */
+
+.software-page {
+  font-size: 0.9em;
+  line-height: 1.35;
+  color: #333;
+}
+
+.software-page .software-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.7rem 1.25rem;
+  align-items: start;
+
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  margin: 1rem 0 1.45rem;
+  background: rgba(255,255,255,.95);
+  box-shadow: 0 8px 20px rgba(0,0,0,.05);
+}
+
+.software-page .software-card__body {
+  min-width: 0;
+}
+
+.software-page .software-card__body h2,
+.software-page .software-card__body h3 {
+  margin-top: 0.15rem;
+  margin-bottom: 0.3rem;
+  font-size: 1.26rem;
+  line-height: 1.2;
+}
+
+.software-page .software-card__media {
+  justify-self: end;
+  width: min(180px, 34vw);
+}
+
+.software-page .software-card__media--linked a {
+  display: block;
+}
+
+.software-page .software-logo,
+.software-page .software-figure {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.software-page .software-logo {
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.software-page .software-figure {
+  max-width: 240px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.08);
+}
+
+.software-page .soft-sep {
+  border: 0;
+  border-top: 1px solid #e5e7eb;
+  margin: 0.9rem 0 0.75rem;
+}
+
+.software-page .software-meta {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.65rem;
+}
+
+.software-page .software-meta small {
+  font-size: 0.9em;
+  line-height: 1.4;
+  display: block;
+}
+
+.software-page .software-actions a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.software-page .software-actions a:hover {
+  border-bottom-color: currentColor;
+}
+
+.software-page .software-card code {
+  letter-spacing: normal;
+}
+
+@media (max-width: 760px) {
+  .software-page .software-card {
+    grid-template-columns: 1fr;
+    gap: 0.7rem 0;
+  }
+
+  .software-page .software-card__media {
+    justify-self: center;
+    width: min(230px, 72vw);
+    margin-bottom: 0.2rem;
+  }
+
+  .software-page .software-logo {
+    max-height: 100px;
+  }
+}
+
+/* ==========================================================================
    CV page (auto-latest PDF)
    Safe: only targets .cv-iframe used on /cv/
    ========================================================================== */
