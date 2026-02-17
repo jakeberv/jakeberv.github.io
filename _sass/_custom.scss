@@ -506,26 +506,35 @@
 }
 
 .author-metrics {
-  margin-top: 0.8em;
+  margin-top: 0.75rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid #ddd;
   white-space: normal;
 }
 
 .author-metrics__title {
   display: block;
-  margin-left: 0;
-  font-size: 1.05em;
+  margin: 0 0 0.3rem 0;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.68;
+  font-weight: 600;
 }
 
 .author-metrics__list {
-  list-style-type: disc;
-  margin-left: 0;
+  list-style: none;
+  margin: 0;
   padding-left: 0;
+  display: grid;
+  gap: 0.18rem;
 }
 
 .author-metrics__item {
-  margin: 0.1em 0;
-  list-style-position: inside;
-  font-size: 1em;
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.25;
+  white-space: nowrap;
 }
 
 /* ==========================================================================
