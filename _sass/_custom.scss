@@ -375,7 +375,10 @@
 }
 
 .software-page .software-figure {
-  max-width: 240px;
+  width: auto;
+  max-width: 100%;
+  max-height: 120px;
+  object-fit: contain;
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0,0,0,.08);
 }
@@ -420,6 +423,10 @@
   }
 
   .software-page .software-logo {
+    max-height: 100px;
+  }
+
+  .software-page .software-figure {
     max-height: 100px;
   }
 }
