@@ -6,6 +6,7 @@ author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 tags:
   - fellowship
+  - career_milestone
 ---
 Jacob Berv began the Michigan Life Sciences Fellowship at the University of Michigan Life Sciences Institute.
 

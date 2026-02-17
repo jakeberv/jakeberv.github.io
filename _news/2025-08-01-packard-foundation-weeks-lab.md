@@ -6,6 +6,7 @@ author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
 tags:
   - fellowship
+  - career_milestone
 ---
 Jacob Berv began a Packard Foundation-funded postdoctoral appointment in Brian Weeks' lab at the University of Michigan School for Environment and Sustainability in August 2025.
 
