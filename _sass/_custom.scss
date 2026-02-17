@@ -532,9 +532,10 @@
 
 .author-metrics__item {
   margin: 0;
-  font-size: 0.82rem;
-  line-height: 1.25;
+  font-size: 0.88rem;
+  line-height: 1.3;
   white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 
 /* ==========================================================================
