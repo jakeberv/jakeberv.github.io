@@ -7,15 +7,18 @@ title: "Software"
 <div class="software-page">
 
   <div class="software-card">
-    <div class="software-card__media">
-      <img class="software-logo" src="https://raw.githubusercontent.com/jakeberv/bifrost/main/man/figures/logo.png" alt="bifrost hex sticker" loading="lazy" decoding="async" />
+    <div class="software-card__head">
+      <div class="software-card__titleblock">
+        <h3>bifrost</h3>
+        <p class="software-card__subtitle"><strong>Branch-level Inference Framework for Recognizing Optimal Shifts in Traits</strong></p>
+      </div>
+
+      <div class="software-card__media">
+        <img class="software-logo" src="https://raw.githubusercontent.com/jakeberv/bifrost/main/man/figures/logo.png" alt="bifrost hex sticker" loading="lazy" decoding="async" />
+      </div>
     </div>
 
     <div class="software-card__body">
-      <h3>bifrost</h3>
-
-      <p><strong>Branch-level Inference Framework for Recognizing Optimal Shifts in Traits</strong></p>
-
       <p><code>bifrost</code> is an R package for branch-level inference of multi-regime, multivariate trait evolution on phylogenies. It uses penalized-likelihood multivariate GLS to detect where, when, and how evolutionary rate regimes shift across a tree, operating directly in trait space (no PCA required) and scaling to high-dimensional datasets and large phylogenies. A pre-print describing this package is forthcoming (Berv et al.).</p>
 
       <hr class="soft-sep" />
@@ -33,17 +36,20 @@ title: "Software"
   </div>
 
   <div class="software-card">
-    <div class="software-card__media software-card__media--linked">
-      <a href="https://en.wikipedia.org/wiki/Waltham_Abbey_Church" target="_blank" rel="noopener">
-        <img class="software-figure" src="/images/software/janus.webp" alt="janus logo" loading="lazy" decoding="async" />
-      </a>
+    <div class="software-card__head">
+      <div class="software-card__titleblock">
+        <h3>janus</h3>
+        <p class="software-card__subtitle"><strong>Detecting molecular model shifts on phylogenies</strong></p>
+      </div>
+
+      <div class="software-card__media software-card__media--linked">
+        <a href="https://en.wikipedia.org/wiki/Waltham_Abbey_Church" target="_blank" rel="noopener">
+          <img class="software-figure" src="/images/software/janus.webp" alt="janus logo" loading="lazy" decoding="async" />
+        </a>
+      </div>
     </div>
 
     <div class="software-card__body">
-      <h3>janus</h3>
-
-      <p><strong>Detecting molecular model shifts on phylogenies</strong></p>
-
       <p><code>janus</code> is a program for detecting shifts in molecular substitution models or base composition across phylogenies. It analyzes sequence data with a fixed tree to pinpoint where compositional changes occur and outputs annotated trees for visualization in tools like FigTree. The method was first introduced in <strong>Smith et al. 2023, <a href="https://doi.org/10.1111/nph.19099"><em>New Phytologist</em></a></strong>, revealing compositional shifts linked to major evolutionary transitions in plants, and I contributed large-scale simulation workflows used in <strong>Berv et al. 2024 (<em>Science Advances</em>)</strong>, where we applied <code>janus</code> to study molecular evolution in avian genomes.</p>
 
       <hr class="soft-sep" />
