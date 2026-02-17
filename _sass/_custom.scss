@@ -493,6 +493,42 @@
 }
 
 /* ==========================================================================
+   Sidebar profile cleanup
+   ========================================================================== */
+
+.author-profile {
+  border-right: 0 solid currentColor;
+}
+
+.author__urls .fa-fw,
+.author__urls .ai-fw {
+  padding-right: 1.5em;
+}
+
+.author-metrics {
+  margin-top: 0.8em;
+  white-space: normal;
+}
+
+.author-metrics__title {
+  display: block;
+  margin-left: 0;
+  font-size: 1.05em;
+}
+
+.author-metrics__list {
+  list-style-type: disc;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.author-metrics__item {
+  margin: 0.1em 0;
+  list-style-position: inside;
+  font-size: 1em;
+}
+
+/* ==========================================================================
    Research page: phylo-history embeds
    Safe: only targets .phylo-history-iframe and .phylo-history-embed
    ========================================================================== */
