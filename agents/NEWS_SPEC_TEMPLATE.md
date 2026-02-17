@@ -26,6 +26,9 @@ This template defines the recommended schema for files in `_news/`.
 ## Canonical tag taxonomy
 - Source of truth: `_data/news_tags.yml`
 - Tag values in news front matter must use `slug` values from that file.
+- Front matter must store leaf tags only (for example `publication`, `conference_talk`, `grant`).
+- Do not add umbrella/group tags directly to news item front matter.
+- Umbrella categories are derived from each leaf tag's `group` value in `_data/news_tags.yml`.
 - Recommended usage: `1-3` primary tags per item, plus optional modifier tags.
 - Use `student_contribution` (modifier tag) when a student advisee is a notable contributor (for example lead/co-lead author or presenter).
 
