@@ -1,0 +1,27 @@
+{% include base_path %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="{{ include.type | default: "grid" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    <h2 class="archive__item-title" itemprop="headline">
+      <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+    </h2>
+
+    {% if post.excerpt %}
+      <div class="archive__item-excerpt" itemprop="description">
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">
+          <div class="container">
+            {{ post.excerpt }}
+            <div class="overlay">
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endif %}
+  </article>
+</div>

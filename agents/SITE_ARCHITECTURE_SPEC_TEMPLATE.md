@@ -19,22 +19,21 @@ Use this template to document the current architecture of this Jekyll site befor
 
 ### Local preview runbook (recommended)
 
-Use these commands to build/preview locally before pushing:
+Use this workflow to build/preview locally before pushing:
 
-1. Ensure Homebrew Ruby 3.3 is on PATH
-   - `export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"`
-2. Install gems (once per dependency change)
-   - `bundle _2.5.18_ install`
-3. Build locally (quick validation)
-   - `bundle _2.5.18_ exec jekyll build --safe --quiet --config _config.yml,_config.dev.yml`
-4. Serve locally for preview
-   - `bundle _2.5.18_ exec jekyll serve --safe --config _config.yml,_config.dev.yml --host 127.0.0.1 --port 4001`
-5. Open preview in browser
+1. Run the preview script from repo root
+   - `./scripts/local_preview.command`
+2. Open preview in browser
    - `http://127.0.0.1:4001/`
-6. Stop server
+3. Stop server
    - `Ctrl+C` (foreground), or `pkill -f jekyll` if needed
 
+Optional:
+- Build-only validation: `./scripts/local_preview.command --build-only`
+- Custom port: `./scripts/local_preview.command --port 4010`
+
 Notes:
+- `scripts/local_preview.command` prefers Homebrew Ruby 3.3 at `/opt/homebrew/opt/ruby@3.3/bin/bundle`.
 - `_config.dev.yml` sets `github: false` for local runs to avoid GitHub metadata API hangs.
 - `--safe` mirrors GitHub Pages-safe behavior and is preferred for local preview checks.
 - Local output is written to `_site/` (build artifact folder).

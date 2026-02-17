@@ -488,6 +488,163 @@
 }
 
 /* ==========================================================================
+   Research page (/research/)
+   Scoped to .research-page to avoid affecting research project subpages
+   ========================================================================== */
+
+.research-page {
+  color: #333;
+  font-size: 1em;
+  line-height: 1.55;
+}
+
+.research-page .research-figure {
+  margin: 0 0 1.45rem 0;
+}
+
+.research-page .research-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.research-page .research-caption {
+  margin-top: 0.65rem;
+  color: #555;
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+.research-page .research-figure--field {
+  width: 75%;
+  margin: 1.35rem auto 1.75rem;
+}
+
+.research-page .research-lead {
+  max-width: 72ch;
+  margin: 0 0 1.2rem 0;
+  line-height: 1.62;
+}
+
+.research-page .research-theme-list {
+  max-width: 72ch;
+  margin: 0 0 1.6rem 1.25rem;
+}
+
+.research-page .research-theme-list li {
+  margin-bottom: 0.55rem;
+  line-height: 1.55;
+}
+
+.research-page .research-questions {
+  max-width: 72ch;
+  margin: 1.35rem 0 1.45rem;
+  padding: 1.15rem 1.25rem 1.05rem;
+  border: 1px solid #e3e6ea;
+  border-radius: 14px;
+  background: rgba(255,255,255,.92);
+}
+
+.research-page .research-kicker {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.76rem;
+  line-height: 1.1;
+  letter-spacing: 0.045em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #66707c;
+}
+
+.research-page .research-questions ol {
+  margin: 0 0 0 1.25rem;
+}
+
+.research-page .research-questions li {
+  margin-bottom: 0.55rem;
+  line-height: 1.5;
+}
+
+.research-page .research-context {
+  max-width: 72ch;
+  margin: 1.15rem 0;
+  line-height: 1.62;
+}
+
+.research-page .research-grid {
+  margin-top: 0.65rem;
+}
+
+.research-page .research-areas-title {
+  margin: 1.4rem 0 0.8rem;
+  font-size: 0.82rem;
+  line-height: 1.1;
+  letter-spacing: 0.045em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #66707c;
+}
+
+.research-page .research-grid .grid__item {
+  margin-bottom: 0.95rem;
+}
+
+.research-page .research-grid .archive__item {
+  height: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.research-page .research-grid .archive__item-title {
+  margin: 0 0 0.55rem;
+  font-size: 1.02rem;
+  line-height: 1.25;
+}
+
+.research-page .research-grid .archive__item-excerpt {
+  margin: 0;
+}
+
+.research-page .research-grid .archive__item-excerpt .container {
+  max-width: 100%;
+  border: 1px solid #e3e5e8;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  transition: border-color .14s ease, box-shadow .14s ease, transform .14s ease;
+}
+
+.research-page .research-grid .archive__item-excerpt .container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.research-page .research-grid .archive__item:hover .container {
+  border-color: #d0d7e2;
+  box-shadow: 0 6px 14px rgba(0,0,0,.07);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 760px) {
+  .research-page .research-figure--field {
+    width: 100%;
+  }
+
+  .research-page .research-questions {
+    padding: 0.95rem 1.05rem 0.9rem;
+  }
+
+  .research-page .research-areas-title {
+    margin-top: 1.15rem;
+  }
+
+  .research-page .research-grid .grid__item {
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* ==========================================================================
    Publications page
    Scoped to .pubs-page to avoid affecting other archive pages
    ========================================================================== */

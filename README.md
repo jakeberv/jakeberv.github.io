@@ -29,11 +29,16 @@ No special branching workflow is required unless explicitly chosen for a task.
 
 If you want to run the site locally:
 
-1. Install dependencies with `bundle install`.
-2. Serve the site with `bundle exec jekyll serve`.
-3. Open `http://localhost:4000`.
+1. Run local preview (build + serve):
+   - `./scripts/local_preview.command`
+2. Open:
+   - `http://127.0.0.1:4001/`
+3. Stop preview:
+   - `Ctrl+C`
 
-If dependency resolution fails, remove `Gemfile.lock` and reinstall.
+Optional:
+- Build only (no server): `./scripts/local_preview.command --build-only`
+- Custom port: `./scripts/local_preview.command --port 4010`
 
 ## LLM/Bot Collaboration
 
