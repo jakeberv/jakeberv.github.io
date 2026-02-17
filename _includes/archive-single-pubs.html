@@ -29,7 +29,6 @@
 
     <div class="archive__item-details">
       {% if post.collection == 'publications' %}
-        <p>
         <h2 class="archive__item-title" itemprop="headline">
       {% if post.collection == 'publications' %}
         {{ title }}
@@ -38,11 +37,11 @@
       {% else %}
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
       {% endif %}
-          </h2>
-          {% if post.citation %}
-            {{ post.citation }}
-          {% endif %}
-          <br>
+        </h2>
+        {% if post.citation %}
+          <p>{{ post.citation }}</p>
+        {% endif %}
+        <p>
           {% if post.link %}
             <a href="{{ post.link }}"><i class="fas fa-fw fa-link zoom" aria-hidden="true"></i></a>
           {% endif %}
@@ -78,7 +77,7 @@
     </div>
 
     {% if post.link %}
-      <div class="archive__item-altmetric" style="width: 15%; padding-left: 1rem;">
+      <div class="archive__item-altmetric">
         <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
         <div data-badge-popover="bottom" data-badge-type="donut" data-doi="{{ post.link }}" data-condensed="true" data-hide-no-mentions="true" data-hide-less-than="1" class="altmetric-embed"></div>
       </div>

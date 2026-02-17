@@ -380,13 +380,21 @@
   .pub-list > li { margin: 0 0 .6rem 0; }
 
   /* Publication item formatting (scoped so it won't affect other pages) */
-  .archive__item { gap: .9rem; }
-  .archive__item-details { flex-grow: 1; width: auto; }
+  .archive__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .9rem;
+    font-size: 16px;
+  }
+
+  .archive__item-details { flex-grow: 1; width: 80%; }
 
   .archive__item-title {
     margin-bottom: .12rem;
     line-height: 1.25;
     font-weight: 600;
+    font-size: 20px;
   }
   .archive__item-title a { text-decoration: none; }
   .archive__item-title a:hover { text-decoration: underline; }
@@ -413,8 +421,25 @@
     transform: translateY(-1px);
   }
 
+  .read-more-link {
+    font-size: 15px;
+    font-weight: normal;
+    color: #2a79ab;
+    text-decoration: underline;
+  }
+
+  .read-more-link:hover {
+    color: #1d5578;
+  }
+
   /* Altmetric column */
-  .archive__item-altmetric { width: 15%; min-width: 140px; }
+  .archive__item-altmetric {
+    width: 15%;
+    min-width: 140px;
+    padding-left: 1rem;
+    margin-right: 2rem;
+  }
+
   @media (max-width: 860px) {
     .archive__item { flex-direction: column; align-items: flex-start; }
     .archive__item-altmetric { width: 100%; padding-left: 0; margin: .35rem 0 0 0; }
@@ -482,45 +507,6 @@
 @media (min-width: 769px) {
   .phylo-history-iframe { width: 100%; display: block; }
   .phylo-history-embed { width: 100%; display: block; }
-}
-
-/* ==========================================================================
-   Publications include: archive-single-pubs styling
-   Scoped to .pubs-page so it won't affect other pages
-   ========================================================================== */
-
-.pubs-page {
-  .archive__item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 16px;
-  }
-
-  .archive__item-details {
-    flex-grow: 1;
-    width: 80%;
-  }
-
-  .archive__item-altmetric {
-    margin-right: 2rem;
-    width: 20%;
-  }
-
-  .archive__item-title {
-    font-size: 20px;
-  }
-
-  .read-more-link {
-    font-size: 15px;
-    font-weight: normal;
-    color: #2a79ab;
-    text-decoration: underline;
-  }
-
-  .read-more-link:hover {
-    color: #1d5578;
-  }
 }
 
 /* ==========================================================================
