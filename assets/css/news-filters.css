@@ -197,6 +197,12 @@
   line-height: 1.35;
 }
 
+.home-news .home-news-item__summary,
+.home-news .home-news-item__summary * {
+  font-size: 0.82rem !important;
+  line-height: 1.35 !important;
+}
+
 .home-news .home-news-item__summary img {
   display: none !important;
 }
