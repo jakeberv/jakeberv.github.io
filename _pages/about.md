@@ -60,7 +60,7 @@ header:
       datetime="{{ item.date | date_to_xmlschema }}"
       aria-label="{{ item.date | date: '%B %-d, %Y' }}"
     >
-      {{ item.date | date: "%b %-d" | upcase }}
+      {{ item.date | date: "%b %-d '%y" | upcase }}
     </time>
     <div class="home-news-item__body">
       <p class="home-news-item__title">
