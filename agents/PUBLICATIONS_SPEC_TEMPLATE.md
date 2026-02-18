@@ -56,8 +56,12 @@ These are optional today, but recommended for **new** entries:
 ### Authors (structured)
 - `authors` *(list of strings, in display order; no HTML)*  
 - Optional:
+  - `student_authors` *(list of author strings; subset of `authors` to mark advisee/student contributors without HTML color tags)*
   - `equal_contrib` *(list of author strings)*  
   - `corresponding_author` *(string or list)*
+
+Rendering note:
+- New list renderers can annotate `student_authors` with `†` and `equal_contrib` with `*`, while preserving `citation` fallback for legacy entries.
 
 ### Abstract (structured)
 - `abstract` *(YAML block scalar; preferred so the publications list can show it)*
@@ -131,6 +135,7 @@ featured: false
 authors:
   - "LAST, F. M."
   - "LAST, F. M."
+student_authors: []                              # optional subset of authors to highlight as student advisees
 equal_contrib: []                                # optional
 corresponding_author: ""                         # optional
 

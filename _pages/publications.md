@@ -8,20 +8,23 @@ read_more: "enabled"
 
 <div class="pubs-page">
 
-<figure class="pub-covers">
-  <a href="https://doi.org/10.1016/j.cub.2018.04.062" target="_blank" rel="noopener">
-    <img src="/images/research/CurrBio.jpg" alt="Current Biology cover">
-  </a>
-  <a href="http://digitallibrary.amnh.org/handle/2246/7237" target="_blank" rel="noopener">
-    <img src="/images/research/amnh_bulletin.jpg" alt="AMNH Bulletin cover">
-  </a>
-  <a href="https://doi.org/10.1093/sysbio/syx064" target="_blank" rel="noopener">
-    <img src="/images/research/syst_biol.jpg" alt="Systematic Biology cover">
-  </a>
-  <a href="https://doi.org/10.1126/sciadv.adp0114" target="_blank" rel="noopener">
-    <img src="/images/research/science_advances.jpg" alt="Science Advances cover">
-  </a>
-</figure>
+<div class="pub-covers-wrap">
+  <p class="pub-kicker">Selected Covers</p>
+  <figure class="pub-covers">
+    <a href="https://doi.org/10.1016/j.cub.2018.04.062" target="_blank" rel="noopener">
+      <img src="/images/research/CurrBio.jpg" alt="Current Biology cover">
+    </a>
+    <a href="http://digitallibrary.amnh.org/handle/2246/7237" target="_blank" rel="noopener">
+      <img src="/images/research/amnh_bulletin.jpg" alt="AMNH Bulletin cover">
+    </a>
+    <a href="https://doi.org/10.1093/sysbio/syx064" target="_blank" rel="noopener">
+      <img src="/images/research/syst_biol.jpg" alt="Systematic Biology cover">
+    </a>
+    <a href="https://doi.org/10.1126/sciadv.adp0114" target="_blank" rel="noopener">
+      <img src="/images/research/science_advances.jpg" alt="Science Advances cover">
+    </a>
+  </figure>
+</div>
 
 {% capture _pubs_feed %}{{ '/feed/publications.xml' | relative_url }}{% endcapture %}
 <link rel="alternate" type="application/atom+xml" title="Publications — {{ site.title }}" href="{{ _pubs_feed }}">
@@ -45,10 +48,12 @@ read_more: "enabled"
 <h3 id="y{{ y.name }}" class="pub-year">{{ y.name }}</h3>
 <ul class="pub-list">
 {% for post in y.items %}
-  <li>{% include archive-single-pubs.html %}</li>
+  <li>{% include archive-single-pubs-v2.html %}</li>
 {% endfor %}
 </ul>
 {% endfor %}
+
+<script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
 
 <hr>
 

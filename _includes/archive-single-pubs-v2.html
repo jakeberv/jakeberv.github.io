@@ -1,0 +1,122 @@
+{% include base_path %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+{% assign link_url = post.link | default: "" | strip %}
+{% assign doi_value = post.doi | default: "" | strip %}
+{% assign link_lc = link_url | downcase %}
+{% if doi_value == "" and link_lc contains "doi.org/" %}
+  {% assign doi_value = link_lc | replace: "https://dx.doi.org/", "" | replace: "http://dx.doi.org/", "" | replace: "https://doi.org/", "" | replace: "http://doi.org/", "" | split: "?" | first | split: "#" | first | strip %}
+{% endif %}
+
+{% assign doi_url = "" %}
+{% if doi_value != "" %}
+  {% assign doi_url = "https://doi.org/" | append: doi_value %}
+{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="pub-entry{% if doi_value != "" %} pub-entry--has-altmetric{% endif %}" itemscope itemtype="http://schema.org/CreativeWork">
+    <div class="pub-entry__date" aria-label="{{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: "%b %d" | upcase }}</div>
+
+    <div class="pub-entry__body">
+      <h2 class="pub-entry__title" itemprop="headline">
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+      </h2>
+
+      {% if post.authors and post.authors.size > 0 %}
+        {% assign show_student_key = false %}
+        {% assign show_equal_key = false %}
+        <p class="pub-entry__authors">
+          {% for author in post.authors %}
+            {% assign has_star = false %}
+            {% if author contains "*" %}{% assign has_star = true %}{% endif %}
+            <span class="pub-author">
+              {{ author }}
+              {% if post.student_authors and post.student_authors contains author %}<sup class="pub-author-mark">&dagger;</sup>{% assign show_student_key = true %}{% endif %}
+              {% if post.equal_contrib and post.equal_contrib contains author %}{% assign show_equal_key = true %}{% if has_star == false %}<sup class="pub-author-mark">*</sup>{% endif %}{% endif %}
+            </span>{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+          {% if show_student_key or show_equal_key %}
+            <span class="pub-entry__notes-inline">&nbsp;&middot;&nbsp;{% if show_student_key %}&dagger; student advisee{% endif %}{% if show_student_key and show_equal_key %} &middot; {% endif %}{% if show_equal_key %}* equal contribution{% endif %}</span>
+          {% endif %}
+        </p>
+      {% elsif post.citation %}
+        <p class="pub-entry__citation">{{ post.citation }}</p>
+      {% endif %}
+
+      <div class="pub-entry__meta-row">
+        <p class="pub-entry__meta">
+          {% if post.venue %}{{ post.venue }}{% endif %}
+          {% if post.date %}{% if post.venue %} · {% endif %}{{ post.date | date: "%Y" }}{% endif %}
+          {% if doi_value != "" %} · DOI <a href="{{ doi_url }}" target="_blank" rel="noopener">{{ doi_value }}</a>{% endif %}
+          {% if doi_value == "" and link_url != "" %} · <a href="{{ link_url }}" target="_blank" rel="noopener">External link</a>{% endif %}
+        </p>
+      </div>
+
+      {% if post.type or (post.tags and post.tags.size > 0) %}
+        <p class="pub-entry__topics">
+          {% if post.type %}{{ post.type }}{% endif %}{% if post.tags and post.tags.size > 0 %}{% if post.type %} · {% endif %}{{ post.tags | join: ", " }}{% endif %}
+        </p>
+      {% endif %}
+
+      <p class="pub-entry__actions">
+        {% if doi_url != "" %}
+          <a href="{{ doi_url }}" class="pub-action" target="_blank" rel="noopener" title="DOI"><i class="fas fa-fw fa-link zoom" aria-hidden="true"></i><span class="sr-only">DOI</span></a>
+        {% elsif link_url != "" %}
+          <a href="{{ link_url }}" class="pub-action" target="_blank" rel="noopener" title="External link"><i class="fas fa-fw fa-link zoom" aria-hidden="true"></i><span class="sr-only">External link</span></a>
+        {% endif %}
+        {% if post.paperurl %}
+          <a href="{{ post.paperurl }}" class="pub-action" target="_blank" rel="noopener" title="PDF"><i class="fas fa-fw fa-file-pdf zoom" aria-hidden="true"></i><span class="sr-only">PDF</span></a>
+        {% endif %}
+        {% if post.code %}
+          <a href="{{ post.code }}" class="pub-action" target="_blank" rel="noopener" title="Code"><i class="fas fa-fw fa-code zoom" aria-hidden="true"></i><span class="sr-only">Code</span></a>
+        {% endif %}
+        {% if post.github %}
+          <a href="{{ post.github }}" class="pub-action" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-fw fa-github zoom" aria-hidden="true"></i><span class="sr-only">GitHub</span></a>
+        {% endif %}
+        {% if post.data_url %}
+          <a href="{{ post.data_url }}" class="pub-action" target="_blank" rel="noopener" title="Data"><i class="fas fa-fw fa-database zoom" aria-hidden="true"></i><span class="sr-only">Data</span></a>
+        {% endif %}
+        {% if post.supplement_url %}
+          <a href="{{ post.supplement_url }}" class="pub-action" target="_blank" rel="noopener" title="Supplement"><i class="fas fa-fw fa-file-alt zoom" aria-hidden="true"></i><span class="sr-only">Supplement</span></a>
+        {% endif %}
+        {% if post.slides_url %}
+          <a href="{{ post.slides_url }}" class="pub-action" target="_blank" rel="noopener" title="Slides"><i class="fas fa-fw fa-images zoom" aria-hidden="true"></i><span class="sr-only">Slides</span></a>
+        {% endif %}
+        {% if post.video_url %}
+          <a href="{{ post.video_url }}" class="pub-action" target="_blank" rel="noopener" title="Video"><i class="fas fa-fw fa-play-circle zoom" aria-hidden="true"></i><span class="sr-only">Video</span></a>
+        {% endif %}
+        {% if post.project_url %}
+          <a href="{{ post.project_url }}" class="pub-action" target="_blank" rel="noopener" title="Project"><i class="fas fa-fw fa-globe zoom" aria-hidden="true"></i><span class="sr-only">Project</span></a>
+        {% endif %}
+        {% if site.read_more == "enabled" or page.read_more == "enabled" %}
+          <a href="{{ base_path }}{{ post.url }}" class="pub-action pub-action--readmore" rel="permalink"><span>Read more</span></a>
+        {% endif %}
+      </p>
+
+      {% if post.abstract %}
+        <details class="pub-entry__abstract">
+          <summary>Abstract</summary>
+          <blockquote><p>{{ post.abstract }}</p></blockquote>
+        </details>
+      {% endif %}
+    </div>
+
+    {% if doi_value != "" %}
+      <div class="pub-entry__altmetric">
+        <div
+          data-badge-popover="bottom"
+          data-badge-type="donut"
+          data-doi="{{ doi_value }}"
+          data-condensed="true"
+          data-hide-no-mentions="true"
+          data-hide-less-than="1"
+          class="altmetric-embed"></div>
+      </div>
+    {% endif %}
+  </article>
+</div>
