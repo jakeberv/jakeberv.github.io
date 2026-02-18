@@ -1,0 +1,402 @@
+outlet,mentions,publication_spread,latest_date,domains,composite_score
+Unknown,911,12,,,920.6
+en.wikipedia.org,66,8,2025-12-13T18:14:40,en.wikipedia.org,72.4
+es.wikipedia.org,23,3,2025-12-11T17:11:07,es.wikipedia.org,25.4
+vi.wikipedia.org,20,3,2024-10-29T15:23:41,vi.wikipedia.org,22.4
+zh.wikipedia.org,19,3,2025-10-10T16:39:22,zh.wikipedia.org,21.4
+sr.wikipedia.org,19,2,2025-10-02T15:20:06,sr.wikipedia.org,20.6
+Phys.org,13,8,2024-07-31T18:00:02,ct.moreover.com;phys.org,19.4
+uk.wikipedia.org,14,4,2025-07-15T23:35:21,uk.wikipedia.org,17.2
+pt.wikipedia.org,11,6,2025-11-30T18:36:22,pt.wikipedia.org,15.8
+Yahoo! News,12,4,2024-08-12T01:39:37,ca.news.yahoo.com;ct.moreover.com;in.news.yahoo.com;news.yahoo.com;uk.news.yahoo.com,15.2
+fr.wikipedia.org,11,5,2025-11-14T16:02:20,fr.wikipedia.org,15.0
+EurekAlert!,8,7,2024-07-31T18:06:11,ct.moreover.com;eurekalert.org,13.6
+cs.wikipedia.org,11,2,2025-02-19T20:03:55,cs.wikipedia.org,12.6
+Science Daily,7,7,2024-07-31T21:09:51,ct.moreover.com;sciencedaily.com,12.6
+The Conversation,10,3,2024-03-11T13:10:38,ct.moreover.com;theconversation.com,12.4
+youtube.com,9,4,2024-09-28T09:00:27,youtube.com,12.2
+Sci-News,7,6,2024-08-02T20:24:47,feedproxy.google.com;sci-news.com;sci.news,11.8
+ro.wikipedia.org,10,2,2025-12-24T15:22:56,ro.wikipedia.org,11.6
+MSN,9,3,2025-05-10T15:31:37,ct.moreover.com;msn.com,11.4
+it.wikipedia.org,9,3,2026-02-01T16:40:39,it.wikipedia.org,11.4
+Raptormaniacs,6,5,2025-01-27T19:14:00,albertonykus.blogspot.com,10.0
+The Raw Story,8,2,2023-12-27T12:52:43,rawstory.com,9.6
+ca.wikipedia.org,8,2,2026-02-15T18:52:36,ca.wikipedia.org,9.6
+Mirage News,6,4,2024-07-31T18:06:55,ct.moreover.com;miragenews.com,9.2
+Futurity,5,5,2021-11-03T17:55:49,futurity.org,9.0
+Science Alert,6,3,2024-08-12T01:39:37,ct.moreover.com;sciencealert.com,8.4
+pl.wikipedia.org,6,3,2021-07-22T19:10:01,pl.wikipedia.org,8.4
+Naked Science,6,2,2021-10-14T09:55:49,naked-science.ru,7.6
+ru.wikipedia.org,5,3,2021-05-18T16:10:47,ru.wikipedia.org,7.4
+science,5,3,2018-05-25T19:37:18,reddit.com,7.4
+Sci-News.com,4,4,2021-10-15T18:43:11,sci-news.com,7.2
+Newswise,4,4,2021-11-17T00:00:00,newswise.com,7.2
+Technology.org,4,4,2018-05-25T05:20:25,feedproxy.google.com;technology.org,7.2
+Species New to Science,4,4,2018-05-25T02:43:00,novataxa.blogspot.com,7.2
+id.wikipedia.org,5,2,2026-02-11T08:26:08,id.wikipedia.org,6.6
+Yahoo!,4,3,2025-05-10T12:00:00,ct.moreover.com;yahoo.com,6.4
+Brinkwire,4,3,2018-05-24T19:32:29,en.brinkwire.com,6.4
+fa.wikipedia.org,5,1,2024-03-31T09:45:46,fa.wikipedia.org,5.8
+Google News,5,1,2022-11-26T17:10:01,news.google.com,5.8
+Scitech Daily,3,3,2024-08-08T16:06:08,ct.moreover.com;scitechdaily.com,5.4
+Science Blog,3,3,2021-10-14T13:39:03,feedproxy.google.com;scienceblog.com,5.4
+Colecionadores de Ossos,3,3,2021-10-11T19:00:19,facebook.com,5.4
+Cornell Chronicle,3,3,2021-10-11T14:10:00,news.cornell.edu,5.4
+Popular Science,3,3,2024-07-31T19:21:49,ct.moreover.com;popsci.com,5.4
+Ibis - international journal of avian science,3,3,2024-08-06T09:00:37,facebook.com,5.4
+SciBlogs,3,3,2018-05-25T21:46:08,sciblogs.co.nz,5.4
+Joseph W. Brown,3,3,2017-12-15T10:09:45,bsky.app,5.4
+Science Newsline,3,3,2017-09-22T15:40:00,sciencenewsline.com,5.4
+On the River of History,4,1,2019-03-03T14:40:47,podcasts.com,4.8
+Evolution News & Science Today,3,2,2024-02-23T14:45:00,ct.moreover.com;evolutionnews.org,4.6
+Big News Network,3,2,2023-12-19T18:39:17,,4.6
+ja.wikipedia.org,3,2,2023-08-05T08:52:33,ja.wikipedia.org,4.6
+Interesting Engineering,3,2,2022-11-27T08:47:32,interestingengineering.com,4.6
+Daily Mail,3,2,2018-05-25T00:02:13,,4.6
+Inverse,3,2,2022-12-04T20:00:25,inverse.com,4.6
+de.wikipedia.org,3,2,2023-02-26T15:36:57,de.wikipedia.org,4.6
+tr.wikipedia.org,3,2,2021-09-21T11:55:28,tr.wikipedia.org,4.6
+Nicols Diez,3,2,2015-10-18T07:24:38,plus.google.com,4.6
+bsky.app,3,2,2025-09-22T04:20:30,bsky.app,4.6
+Current Biology,3,1,2018-05-24T16:03:07,facebook.com,3.8
+no.wikipedia.org,3,1,2025-07-15T14:06:07,no.wikipedia.org,3.8
+ar.wikipedia.org,3,1,2023-02-05T14:31:37,ar.wikipedia.org,3.8
+Nachrichten Welt,3,1,2022-11-27T04:02:21,nach-welt.com,3.8
+journalbreak.Com,3,1,2022-11-27T01:08:20,journalbreak.com,3.8
+Firstpost,3,1,2022-11-25T07:59:21,firstpost.com,3.8
+Evrim A?ac?,2,2,2025-02-13T09:46:37,evrimagaci.org,3.6
+AB-News Russia,2,2,2024-08-12T06:24:24,ab-news.ru,3.6
+Yale News,2,2,2021-10-11T14:00:38,news.yale.edu,3.6
+University of Michigan News,2,2,2024-07-31T18:00:00,ct.moreover.com;news.umich.edu,3.6
+The Archaeology News Network,2,2,2021-10-11T11:00:00,archaeologynewsnetwork.blogspot.co.uk;archaeologynewsnetwork.blogspot.com,3.6
+Nouvelles du monde,2,2,2024-08-18T06:46:33,ct.moreover.com;nouvelles-du-monde.com,3.6
+Devdiscourse,2,2,2023-12-20T06:46:15,devdiscourse.com,3.6
+Toronto Telegraph,2,2,2023-12-19T18:39:17,torontotelegraph.com,3.6
+Business Insider,2,2,2023-07-12T12:53:00,businessinsider.com,3.6
+Alert Breaking News - US,2,2,2022-10-27T18:44:19,us.alertbreakingnews.com,3.6
+Astrobiology Magazine,2,2,2018-05-29T11:57:06,astrobio.net,3.6
+ZAP,2,2,2024-08-03T20:30:00,zap.aeiou.pt,3.6
+PLOS Paleo Community,2,2,2018-05-25T16:43:54,blogs.plos.org,3.6
+Lab Manager,2,2,2021-11-17T17:10:43,labmanager.com,3.6
+Wallowology,2,2,2024-08-06T16:53:51,facebook.com,3.6
+Smithsonian Magazine,2,2,2018-05-24T15:13:09,smithsonianmag.com,3.6
+All About Birds,2,2,2018-05-24T15:03:03,allaboutbirds.org,3.6
+ScienMag,2,2,2024-07-31T18:20:19,scienmag.com,3.6
+1TV.ge,2,2,2024-08-12T11:34:41,1tv.ge;ct.moreover.com,3.6
+My Science,2,2,2024-07-31T00:00:00,ct.moreover.com;myscience.org,3.6
+Times of India,2,1,2023-12-29T05:34:53,economictimes.indiatimes.com,2.8
+Yle.fi,2,1,2018-10-02T18:34:02,yle.fi,2.8
+BBC News,2,1,2018-05-24T16:48:17,,2.8
+Jacob Berv,2,1,2014-12-04T14:21:32,facebook.com,2.8
+hu.wikipedia.org,2,1,2020-08-14T07:55:48,hu.wikipedia.org,2.8
+Foreign Affairs New Zealand,2,1,2020-07-20T13:52:52,foreignaffairs.co.nz,2.8
+Daimonie,2,1,2016-05-18T22:19:03,facebook.com,2.8
+Radical Science News,2,1,2015-10-10T08:54:06,facebook.com,2.8
+Able Lawrence,2,1,2015-10-10T08:51:54,plus.google.com,2.8
+Chris Stringer,2,1,2025-06-20T20:49:52,bsky.app,2.8
+Tech Explorist,2,1,2024-08-01T11:07:08,ct.moreover.com;techexplorist.com,2.8
+Texas Nature Trackers - Texas Parks and Wildlife Dept Program,2,1,2015-02-05T15:50:48,facebook.com,2.8
+af.wikipedia.org,1,1,2025-01-13T14:12:10,af.wikipedia.org,1.8
+Qubit,1,1,2022-10-10T12:11:16,qubit.hu,1.8
+Dove Si Pu Parlare Di Ogni Cosa,1,1,2021-11-21T18:10:00,dovesipuoparlarediognicosa.blogspot.com,1.8
+Geology Page,1,1,2021-10-18T20:37:17,geologypage.com,1.8
+Ebiotrade,1,1,2021-10-15T04:24:12,ebiotrade.com,1.8
+Muy Interesante,1,1,2021-10-14T19:53:03,muyinteresante.es,1.8
+ScienceBlog.com,1,1,2021-10-14T13:39:03,scienceblog.com,1.8
+University of Cambridge,1,1,2021-10-14T12:10:32,cam.ac.uk,1.8
+Science Springs,1,1,2021-10-13T14:09:52,sciencesprings.wordpress.com,1.8
+Canaltech,1,1,2021-10-13T12:10:58,canaltech.com.br,1.8
+Technology Times,1,1,2021-10-12T19:06:21,technologytimes.pk,1.8
+Kopalnia Wiedzy,1,1,2021-10-12T11:34:19,kopalniawiedzy.pl,1.8
+True Viral News,1,1,2021-10-11T18:38:02,trueviralnews.com,1.8
+Iflscience,1,1,2023-12-22T11:53:09,iflscience.com,1.8
+Free Mail South Africa,1,1,2023-12-20T01:00:19,free-mail.co.za,1.8
+Business Insider India,1,1,2023-07-12T12:54:00,businessinsider.in,1.8
+Yahoo! Finance Canada,1,1,2023-07-12T12:53:00,ca.finance.yahoo.com,1.8
+Business Insider Nederland,1,1,2023-07-12T12:53:00,businessinsider.nl,1.8
+Jurassic Park Cast,1,1,2023-02-16T11:46:30,feed.podbean.com,1.8
+Newsbreak,1,1,2022-10-26T15:30:00,newsbreak.com,1.8
+he.wikipedia.org,1,1,2022-03-15T19:31:43,he.wikipedia.org,1.8
+The Dinosource,1,1,2021-04-02T15:00:00,feeds.buzzsprout.com,1.8
+New York Times,1,1,2020-03-18T21:27:31,nytimes.com,1.8
+Guokr.com,1,1,2019-09-14T03:47:09,guokr.com,1.8
+Palmesopyr,1,1,2018-11-23T11:45:00,facebook.com,1.8
+Letters from Gondwana.,1,1,2018-11-16T15:28:15,paleonerdish.wordpress.com,1.8
+Times of Malta,1,1,2018-07-01T11:41:14,timesofmalta.com,1.8
+HowStuffWorks,1,1,2018-06-06T18:00:05,animals.howstuffworks.com,1.8
+The Independent,1,1,2018-06-06T16:34:53,,1.8
+Climate News Network,1,1,2018-06-05T08:13:20,climatenewsnetwork.net,1.8
+Taipei Times,1,1,2018-06-02T18:44:33,taipeitimes.com,1.8
+Sciences et Avenir,1,1,2018-06-01T06:00:00,,1.8
+MinnPost,1,1,2018-05-31T13:38:25,minnpost.com,1.8
+Space Daily,1,1,2018-05-30T14:45:39,spacedaily.com,1.8
+sg.hu,1,1,2018-05-29T16:07:28,sg.hu,1.8
+De Morgen,1,1,2018-05-29T09:08:25,demorgen.be,1.8
+Science and Life Russia,1,1,2018-05-29T05:04:00,nkj.ru,1.8
+Sign of the Times,1,1,2018-05-28T18:25:00,sott.net,1.8
+New York Post,1,1,2018-05-28T15:16:52,nypost.com,1.8
+dinosaur,1,1,2018-05-28T14:34:26,reddit.com,1.8
+dinosaurs,1,1,2018-05-28T14:33:53,reddit.com,1.8
+Die Welt,1,1,2018-05-28T07:21:40,welt.de,1.8
+Paperblog,1,1,2018-05-28T04:59:00,es.paperblog.com,1.8
+RT Network,1,1,2018-05-27T13:12:41,actualidad.rt.com,1.8
+Times Colonist,1,1,2018-05-27T12:40:00,timescolonist.com,1.8
+The Inquisitr,1,1,2018-05-27T11:38:48,inquisitr.com,1.8
+Fars News Agency,1,1,2018-05-27T08:42:48,en.farsnews.com,1.8
+Moontanman,1,1,2018-05-26T15:41:04,plus.google.com,1.8
+GuruMeditation,1,1,2018-05-26T09:33:29,gurumed.org,1.8
+The Siasat Daily,1,1,2018-05-26T06:52:08,siasat.com,1.8
+forskning.no,1,1,2018-05-26T03:00:01,forskning.no,1.8
+rare avis,1,1,2018-05-26T02:11:35,plus.google.com,1.8
+"N+1: ??????? ??????, ???????, ????????",1,1,2018-05-25T16:59:31,nplus1.ru,1.8
+Gazeta.ru,1,1,2018-05-25T16:33:54,gazeta.ru,1.8
+Futura-Sciences,1,1,2018-05-25T14:53:00,futura-sciences.com,1.8
+Newsweek,1,1,2018-05-25T14:31:23,,1.8
+New Kerala,1,1,2018-05-25T11:44:53,newkerala.com,1.8
+National Geographic,1,1,2018-05-25T10:46:25,nationalgeographic.it,1.8
+Daijiworld.com,1,1,2018-05-25T09:42:34,daijiworld.com,1.8
+CanIndia,1,1,2018-05-25T09:36:00,canindia.com,1.8
+Green Report (Italy),1,1,2018-05-25T09:00:05,greenreport.it,1.8
+Radio New Zealand,1,1,2018-05-25T07:37:39,radionz.co.nz,1.8
+Clube Ornitologia Almadense,1,1,2018-05-25T06:08:56,facebook.com,1.8
+Gizmodo Australia,1,1,2018-05-25T01:00:00,,1.8
+Arcamax,1,1,2018-05-25T00:24:48,arcamax.com,1.8
+Business Standard,1,1,2018-05-25T00:00:00,business-standard.com,1.8
+Herald Mail Media,1,1,2018-05-24T23:09:00,heraldmailmedia.com,1.8
+The Eagle,1,1,2018-05-24T23:09:00,theeagle.com,1.8
+Actualit Houssenia Writing,1,1,2018-05-24T22:00:52,actualite.housseniawriting.com,1.8
+Gizmodo UK,1,1,2018-05-24T22:00:28,,1.8
+Science News,1,1,2018-05-24T21:44:51,sciencenews.org,1.8
+ZME Science,1,1,2018-05-24T21:36:20,feedproxy.google.com,1.8
+Booster Shots - latimes.com,1,1,2018-05-24T21:30:00,latimes.com,1.8
+Los Angeles Times,1,1,2018-05-24T21:30:00,,1.8
+The Scientist Magazine,1,1,2018-05-24T20:35:50,the-scientist.com,1.8
+Long Room,1,1,2018-05-24T19:15:53,longroom.com,1.8
+SVT,1,1,2018-05-24T18:52:10,svt.se,1.8
+Neue Zrcher Zeitung (NZZ),1,1,2018-05-24T18:00:00,,1.8
+BT News,1,1,2018-05-24T17:51:25,home.bt.com,1.8
+charlie mashara,1,1,2018-05-24T17:14:26,plus.google.com,1.8
+The Guardian,1,1,2018-05-24T16:56:57,,1.8
+Scientias,1,1,2018-05-24T16:54:46,scientias.nl,1.8
+Hell Creek,1,1,2018-05-24T16:10:45,facebook.com,1.8
+Der Standard,1,1,2018-05-24T16:06:37,derstandard.at,1.8
+Potsdamer Neueste Nachrichten,1,1,2018-05-24T15:47:07,pnn.de,1.8
+Der Tagesspiegel,1,1,2018-05-24T15:47:07,tagesspiegel.de,1.8
+Europa Press,1,1,2018-05-24T15:40:46,europapress.es,1.8
+Gizmodo,1,1,2018-05-24T15:35:56,,1.8
+??? ???????,1,1,2018-05-24T15:34:05,ria.ru,1.8
+Metro UK,1,1,2018-05-24T15:32:42,,1.8
+Science/AAAS,1,1,2018-05-24T15:05:00,sciencemag.org,1.8
+CNN News,1,1,2018-05-24T15:03:52,cnn.com,1.8
+Evening Express,1,1,2018-05-24T15:02:04,,1.8
+The Evening Telegraph,1,1,2018-05-24T15:02:02,,1.8
+azfamily.com,1,1,2018-05-24T15:02:00,azfamily.com,1.8
+wissenschaft.de,1,1,2018-05-24T15:00:37,wissenschaft.de,1.8
+"Science news, comment and analysis | theguardian.com",1,1,2018-05-24T15:00:21,theguardian.com,1.8
+Discover Top Stories,1,1,2018-05-24T15:00:15,feedproxy.google.com,1.8
+Discover Magazine,1,1,2018-05-24T15:00:15,blogs.discovermagazine.com,1.8
+International Business Times,1,1,2018-05-24T15:00:02,ibtimes.com,1.8
+El Confidencial,1,1,2018-05-24T15:00:00,elconfidencial.com,1.8
+Irish Examiner,1,1,2018-05-24T15:00:00,irishexaminer.com,1.8
+The Mirror,1,1,2018-05-24T15:00:00,,1.8
+Inside Science,1,1,2018-05-24T14:56:05,insidescience.org,1.8
+The Atlantic,1,1,2018-05-24T11:00:00,theatlantic.com,1.8
+Action News Now,1,1,2018-05-24T00:00:00,actionnewsnow.com,1.8
+biology.stackexchange.com,1,1,2014-11-18T04:57:00,biology.stackexchange.com,1.8
+BioLounge,1,1,2015-02-07T04:46:13,facebook.com,1.8
+Edna Maria Kuller,1,1,2015-01-27T15:42:25,facebook.com,1.8
+Orestes Batista Minigildo Filho,1,1,2015-01-25T01:44:55,facebook.com,1.8
+Andrea Scott,1,1,2014-12-15T04:02:10,facebook.com,1.8
+Mnica Ferreira Do Nascimento,1,1,2014-12-12T19:52:07,facebook.com,1.8
+Biosfera Itinerari,1,1,2014-12-11T23:16:49,facebook.com,1.8
+Natural Selection,1,1,2014-12-10T21:32:59,facebook.com,1.8
+Elvalle Bill,1,1,2014-12-06T13:28:40,facebook.com,1.8
+Dimitris Karayiannis,1,1,2014-12-05T18:40:28,facebook.com,1.8
+Jaci Junior,1,1,2014-12-05T12:59:51,facebook.com,1.8
+Sbastien Lacomblez,1,1,2014-12-05T07:20:18,facebook.com,1.8
+Leonardo Torres,1,1,2014-12-05T00:37:46,facebook.com,1.8
+Joo Batista Torres Rocha,1,1,2014-12-05T00:30:39,facebook.com,1.8
+Oswaldo Sanchez T,1,1,2014-12-04T23:07:33,facebook.com,1.8
+Entendeu ou quer que desenhe?,1,1,2014-12-04T22:14:36,facebook.com,1.8
+Poncho Miranda,1,1,2014-12-04T20:45:28,facebook.com,1.8
+Giacomo Bracchi,1,1,2014-12-04T20:28:43,facebook.com,1.8
+Jardines Ecolgicos Topotepuy,1,1,2014-12-04T17:18:04,facebook.com,1.8
+Thiago Moura,1,1,2014-12-04T16:31:17,facebook.com,1.8
+Peilin Chen,1,1,2014-12-04T14:40:38,facebook.com,1.8
+Yasuaki Sakakihara,1,1,2014-12-04T14:31:42,facebook.com,1.8
+Daniel Santos,1,1,2014-12-04T13:05:07,facebook.com,1.8
+Vicente Fernando Gavilanez Brito,1,1,2014-12-04T12:26:20,facebook.com,1.8
+Aves de Paraty,1,1,2014-12-04T12:25:23,facebook.com,1.8
+Sylvia Paraty,1,1,2014-12-04T12:25:10,facebook.com,1.8
+Juergen Brand,1,1,2014-12-04T12:22:15,facebook.com,1.8
+Antonio Rea,1,1,2014-12-04T11:39:10,facebook.com,1.8
+Costa Rica BirdFair,1,1,2014-12-04T10:22:39,facebook.com,1.8
+WILD Travel / Central America,1,1,2014-12-04T10:22:23,facebook.com,1.8
+Leandro De Oliveira Caetano,1,1,2014-12-04T09:13:44,facebook.com,1.8
+Biodiversity Heritage Library Africa,1,1,2014-12-04T05:35:06,facebook.com,1.8
+Bruno Lima,1,1,2014-12-04T04:54:01,facebook.com,1.8
+Magno F. Dos Santos,1,1,2014-12-04T04:47:39,facebook.com,1.8
+Italo Celis Reategui,1,1,2014-12-04T03:12:14,facebook.com,1.8
+Bucear PARA Conservar,1,1,2014-12-04T03:01:35,facebook.com,1.8
+Yemay Toro Lopez,1,1,2014-12-04T03:00:56,facebook.com,1.8
+Andy Gray,1,1,2014-11-21T15:05:20,facebook.com,1.8
+Juan Gabriel Vasquez Soto,1,1,2014-10-31T15:09:39,facebook.com,1.8
+Michelle Ashworth,1,1,2014-10-15T22:38:41,facebook.com,1.8
+Brightsurf Science News and Current Events,1,1,2014-10-15T07:11:00,brightsurf.com,1.8
+Health Medicinet,1,1,2014-10-15T06:23:58,healthmedicinet.com,1.8
+Vctor Gamarra-Toledo,1,1,2014-09-24T18:49:25,facebook.com,1.8
+Environmental News Network,1,1,2021-11-17T19:48:28,enn.com,1.8
+Bioengineer.org,1,1,2021-11-17T14:12:37,bioengineer.org,1.8
+"Marcos K. Pinheiro / ""Marcos Wyvern"" (Marcosaurus)",1,1,2025-09-22T12:43:48,bsky.app,1.8
+Dr. Tanya Samman,1,1,2025-09-21T18:12:26,bsky.app,1.8
+"Thomas R. Holtz, Jr.",1,1,2025-09-21T13:16:56,bsky.app,1.8
+Jake Berv,1,1,2025-09-17T21:34:52,bsky.app,1.8
+Eric Ekdale,1,1,2025-09-17T20:06:17,bsky.app,1.8
+Rebecca J. Strauch,1,1,2025-09-17T18:27:36,bsky.app,1.8
+bn.wikipedia.org,1,1,2026-01-20T06:59:58,bn.wikipedia.org,1.8
+Alberta Claw,1,1,2025-06-17T12:24:27,bsky.app,1.8
+Ukrainian Independent Information Agency,1,1,2025-05-25T01:32:00,ct.moreover.com,1.8
+Science & Vie,1,1,2025-05-14T11:30:41,ct.moreover.com,1.8
+Mandarinian,1,1,2025-05-10T22:13:28,mandarinian.news,1.8
+inkl,1,1,2025-05-10T00:00:00,ct.moreover.com,1.8
+Avian Hybrids,1,1,2024-06-05T07:00:00,avianhybrids.wordpress.com,1.8
+nl.wikipedia.org,1,1,2023-07-23T12:50:30,nl.wikipedia.org,1.8
+Singularity Hub,1,1,2022-12-08T16:28:39,singularityhub.com,1.8
+dclm,1,1,2022-12-04T12:11:46,dclm.es,1.8
+Madriddigital24horas,1,1,2022-12-04T11:09:48,madriddigital24horas.com,1.8
+Bilbao24horas,1,1,2022-12-04T08:03:51,bilbao24horas.com,1.8
+El Portaluco,1,1,2022-12-04T05:41:01,elportaluco.com,1.8
+TheObjective,1,1,2022-12-04T02:30:00,theobjective.com,1.8
+Cambio Poltico,1,1,2022-12-01T22:11:33,cambiopolitico.com,1.8
+South Africa Today,1,1,2022-11-30T18:38:20,southafricatoday.net,1.8
+Yahoo! Espaa,1,1,2022-11-30T10:10:52,,1.8
+The Free Library,1,1,2022-11-29T00:00:00,thefreelibrary.com,1.8
+Devon Live,1,1,2022-11-27T14:51:43,,1.8
+Cornwall Live,1,1,2022-11-27T14:51:43,,1.8
+Lincolnshire Live,1,1,2022-11-27T14:51:43,,1.8
+EssexLive,1,1,2022-11-27T14:51:43,,1.8
+DerbyshireLive,1,1,2022-11-27T14:51:43,,1.8
+Kent Live,1,1,2022-11-27T14:51:43,,1.8
+Herts Live,1,1,2022-11-27T14:51:43,,1.8
+The Plymouth Herald,1,1,2022-11-27T14:51:43,,1.8
+Leicester Mercury,1,1,2022-11-27T14:51:43,,1.8
+NottinghamshireLive,1,1,2022-11-27T14:51:43,,1.8
+Grimsby Live,1,1,2022-11-27T14:51:43,,1.8
+BelfastLive,1,1,2022-11-27T14:30:00,,1.8
+Coventry Telegraph,1,1,2022-11-27T14:30:00,,1.8
+Surrey Live,1,1,2022-11-27T14:30:00,,1.8
+Wales Online,1,1,2022-11-27T14:30:00,,1.8
+Cambridge News,1,1,2022-11-27T14:30:00,,1.8
+BerkshireLive,1,1,2022-11-27T14:30:00,,1.8
+Cheshire Live,1,1,2022-11-27T14:30:00,,1.8
+North Wales Daily Post,1,1,2022-11-27T14:30:00,,1.8
+Today UK News,1,1,2022-11-26T22:24:01,todayuknews.com,1.8
+Swift Telecast,1,1,2022-11-26T17:13:24,swifttelecast.com,1.8
+"The Science Times, United States",1,1,2022-11-26T04:01:20,sciencetimes.com,1.8
+Presseraum,1,1,2022-11-25T13:18:01,presseraum.at,1.8
+The Deccan Herald,1,1,2022-11-25T06:58:47,deccanherald.com,1.8
+RTE Online,1,1,2022-11-25T06:54:50,rte.ie,1.8
+Newslanes,1,1,2022-11-25T06:24:20,newslanes.com,1.8
+Verve times,1,1,2022-11-25T05:33:41,vervetimes.com,1.8
+UK Time News,1,1,2022-11-25T05:02:03,uktimenews.com,1.8
+The Print,1,1,2022-11-25T04:30:35,theprint.in,1.8
+Latestly,1,1,2022-11-25T04:20:14,latestly.com,1.8
+sv.wikipedia.org,1,1,2022-10-06T13:57:35,sv.wikipedia.org,1.8
+Heads Or Tails,1,1,2022-05-11T11:39:38,anchor.fm,1.8
+el.wikipedia.org,1,1,2021-07-12T21:14:10,el.wikipedia.org,1.8
+Marginal Revolution,1,1,2021-06-30T15:44:00,feedproxy.google.com,1.8
+Medium US,1,1,2021-06-30T12:36:07,medium.com,1.8
+Scroll India,1,1,2019-09-17T18:00:03,feedproxy.google.com,1.8
+Business Insider Singapore,1,1,2019-02-27T16:08:39,businessinsider.sg,1.8
+Business Insider Australia,1,1,2019-02-27T16:08:39,businessinsider.com.au,1.8
+Evolution News &amp; Views,1,1,2018-06-27T08:08:09,evolutionnews.org,1.8
+BMC series blog,1,1,2018-06-25T08:20:20,blogs.biomedcentral.com,1.8
+Nesslig 20,1,1,2018-04-16T21:13:16,plus.google.com,1.8
+Nethar6,1,1,2017-08-06T20:45:11,plus.google.com,1.8
+British Ornithologists' Union,1,1,2017-03-13T07:30:00,bou.org.uk,1.8
+hardono putro,1,1,2016-01-05T08:53:19,plus.google.com,1.8
+The Panda's Thumb,1,1,2016-01-04T16:00:00,pandasthumb.org,1.8
+Paulo Fonseca,1,1,2015-12-18T15:56:07,plus.google.com,1.8
+The Genealogical World of Phylogenetic Networks,1,1,2015-11-04T05:30:00,phylonetworks.blogspot.com,1.8
+Nature Middle East,1,1,2015-10-22T09:27:00,facebook.com,1.8
+Tim Blackburn,1,1,2015-10-22T08:46:26,bsky.app,1.8
+??360????,1,1,2015-10-22T00:00:00,bio360.net,1.8
+IFLScience - Plants and Animals,1,1,2015-10-16T11:36:00,iflscience.com,1.8
+Technology Org,1,1,2015-10-14T01:10:00,technology.org,1.8
+Paulo Prates Jr,1,1,2015-10-14T00:07:01,plus.google.com,1.8
+Science World Report,1,1,2015-10-13T19:40:08,scienceworldreport.com,1.8
+CollidEscape,1,1,2015-10-13T13:30:24,facebook.com,1.8
+Hirado,1,1,2015-10-13T10:33:00,hirado.hu,1.8
+Divulgative Biology/Biologa divulgativa,1,1,2015-10-13T08:31:18,facebook.com,1.8
+Rafael Miranda-Esquivel,1,1,2015-10-13T04:20:09,plus.google.com,1.8
+Fosil Paleontologia,1,1,2015-10-12T23:55:10,facebook.com,1.8
+Francis (th)E mule Science's News,1,1,2015-10-12T11:04:00,francis.naukas.com,1.8
+Novataxa | Species New to Science,1,1,2015-10-12T05:32:22,facebook.com,1.8
+Tam McD,1,1,2015-10-10T19:36:15,plus.google.com,1.8
+ladygouldian.com,1,1,2015-10-10T11:10:08,facebook.com,1.8
+"""&#1041;&#1080;&#1086;&#1084;&#1086;&#1083;&#1077;&#1082;&#1091;&#1083;&#1072;""",1,1,2015-10-10T07:38:00,biomolecula.ru,1.8
+???,1,1,2015-10-10T04:44:06,plus.google.com,1.8
+Emma Kendrick,1,1,2015-10-09T22:16:37,plus.google.com,1.8
+Dawn Hardin,1,1,2015-10-09T17:59:30,plus.google.com,1.8
+Roman Anisimov,1,1,2015-10-09T16:45:56,plus.google.com,1.8
+A DC Birding Blog,1,1,2015-10-09T14:00:00,dendroica.blogspot.com,1.8
+PPGBT - Programa de Ps Graduao em Biodiversidade Tropical,1,1,2015-10-09T13:57:44,facebook.com,1.8
+Tech Times,1,1,2015-10-09T10:06:28,techtimes.com,1.8
+????? ? ???????,1,1,2015-10-08T17:40:38,facebook.com,1.8
+Ps Graduao em Zoologia UFMG,1,1,2015-10-08T17:14:49,facebook.com,1.8
+Arstechnica,1,1,2015-10-08T16:23:15,arstechnica.com,1.8
+Ars Technica,1,1,2015-10-08T16:23:00,arstechnica.com,1.8
+IOL,1,1,2015-10-08T13:30:00,,1.8
+Journal of Indonesian Ornithology - KUKILA,1,1,2015-10-08T10:18:52,facebook.com,1.8
+David ?ern,1,1,2015-10-07T23:27:55,plus.google.com,1.8
+Voice of America,1,1,2015-10-07T22:22:09,voanews.com,1.8
+Ben Sheldon,1,1,2015-10-07T19:10:18,bsky.app,1.8
+Yahoo! News India,1,1,2015-10-07T17:59:30,in.news.yahoo.com,1.8
+Agencia SINC,1,1,2015-10-07T17:00:02,agenciasinc.es,1.8
+Philly.com,1,1,2015-10-07T17:00:01,philly.com,1.8
+Reuters,1,1,2015-10-07T17:00:01,,1.8
+Thomson Reuters Foundation,1,1,2015-10-07T17:00:00,trust.org,1.8
+The Academic Minute,1,1,2025-09-16T04:01:35,academicminute.org,1.8
+SolarPunkTradwife,1,1,2025-06-20T23:31:44,bsky.app,1.8
+Roberto Rozzi,1,1,2025-06-20T21:50:47,bsky.app,1.8
+"Climate, Ecology, War & More - Dr Glen Barry BigEarthData.ai",1,1,2025-05-29T03:44:44,bsky.app,1.8
+Noticias de la tierra,1,1,2024-04-08T15:39:30,noticiasdelatierra.com,1.8
+Laboratory Equipment,1,1,2017-09-22T13:37:02,laboratoryequipment.com,1.8
+Breitbart News Network,1,1,2017-09-21T17:00:22,breitbart.com,1.8
+UPI.com,1,1,2017-09-21T16:47:35,upi.com,1.8
+Fossil Birds,1,1,2017-07-18T16:49:35,facebook.com,1.8
+phy_papers,1,1,2024-12-24T05:38:59,bsky.app,1.8
+Eliot Miller,1,1,2024-12-23T10:31:58,bsky.app,1.8
+Catherine Sheard,1,1,2024-12-23T08:58:08,bsky.app,1.8
+David Tan,1,1,2024-12-23T07:54:45,bsky.app,1.8
+Adam Lendvai,1,1,2024-12-23T07:32:51,bsky.app,1.8
+bioRxiv Evolutionary Biology,1,1,2024-12-23T06:32:42,bsky.app,1.8
+bioRxivpreprint,1,1,2024-12-23T06:32:41,bsky.app,1.8
+Crazy Nauka,1,1,2024-08-20T17:28:22,spreaker.com,1.8
+Nipponese.news,1,1,2024-08-18T10:03:01,nipponese.news,1.8
+Popmech,1,1,2024-08-18T05:58:07,ct.moreover.com,1.8
+Tiempo.com,1,1,2024-08-18T05:30:00,ct.moreover.com,1.8
+ABC.es,1,1,2024-08-18T02:37:03,ct.moreover.com,1.8
+CIKAVOSTI,1,1,2024-08-15T16:34:27,cikavosti.com,1.8
+meteored.com.ar,1,1,2024-08-14T18:29:55,meteored.com.ar,1.8
+Descopera,1,1,2024-08-14T12:00:15,ct.moreover.com,1.8
+On.ge,1,1,2024-08-14T10:52:07,ct.moreover.com,1.8
+ChitChat Post Espana,1,1,2024-08-14T01:05:52,chitchatpost.com,1.8
+Origo,1,1,2024-08-13T06:38:46,ct.moreover.com,1.8
+Olhar Digital,1,1,2024-08-12T14:25:34,ct.moreover.com,1.8
+NewsBytes,1,1,2024-08-12T11:43:58,ct.moreover.com,1.8
+WION,1,1,2024-08-12T05:07:58,ct.moreover.com,1.8
+Biology of Aging News,1,1,2024-08-07T20:29:05,facebook.com,1.8
+Illustreret Videnskab,1,1,2024-08-05T17:00:34,ct.moreover.com,1.8
+Illustrerad Vetenskap,1,1,2024-08-05T15:14:43,illvet.se,1.8
+National Geographic en Espaol,1,1,2024-08-03T00:32:37,ct.moreover.com,1.8
+COSMOS magazine,1,1,2024-08-02T12:30:00,ct.moreover.com,1.8
+India Today,1,1,2024-08-02T06:18:49,ct.moreover.com,1.8
+Astrobiology Web,1,1,2024-08-01T17:49:11,ct.moreover.com,1.8
+Earth,1,1,2024-08-01T15:00:00,ct.moreover.com,1.8
+Technology Networks,1,1,2024-08-01T00:00:00,ct.moreover.com,1.8
+Technobahn,1,1,2015-02-12T17:11:00,w2.technobahn.com,1.8
+Caribbean Birding Trail,1,1,2015-01-02T20:13:32,facebook.com,1.8
+Gail Woon,1,1,2014-12-25T00:27:07,facebook.com,1.8
+Eric Carey,1,1,2014-12-24T13:33:10,facebook.com,1.8
+Birds Caribbean,1,1,2014-12-24T04:05:51,facebook.com,1.8

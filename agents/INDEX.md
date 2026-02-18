@@ -23,6 +23,9 @@ This directory contains spec templates and process guides for bot-assisted and h
 - [`agents/IMPACT_DATA_PIPELINE_SPEC_TEMPLATE.md`](IMPACT_DATA_PIPELINE_SPEC_TEMPLATE.md)  
   Use when planning updates to impact metrics inputs (`_data/scholar_metrics.json`, `_data/map_data.json`) and related scripts/workflows.
 
+- [`agents/IMPACT_DASHBOARD_PIPELINE_SPEC.md`](IMPACT_DASHBOARD_PIPELINE_SPEC.md)  
+  Use for the `/impact/` dashboard pipeline (`_publications` + scholar/map + altmetric raw -> generated JSON/CSV -> include-based page embed -> local/deploy build hooks).
+
 - [`agents/CAREER_FOOTPRINT_PIPELINE_SPEC.md`](CAREER_FOOTPRINT_PIPELINE_SPEC.md)  
   Use for the `/background/` career footprint map pipeline (`_news` geo front matter -> generated JSON -> page embed -> Actions deploy).
 

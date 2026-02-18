@@ -1,0 +1,95 @@
+{
+  "generated_at_utc": "2026-02-18T02:50:59.818975+00:00",
+  "summary": {
+    "tracked_with_mentions": 12,
+    "tracked_no_mentions": 0,
+    "not_tracked": 9,
+    "scholar_unmatched": 1,
+    "scholar_ignored_non_research": 2,
+    "altmetric_unmatched": 0,
+    "altmetric_alias_matched": 4,
+    "ambiguous": 0
+  },
+  "scholar_unmatched": [
+    {
+      "title": "Pennaraptoran theropod dinosaurs: past progress and new frontiers",
+      "year": 2020,
+      "citations": 20,
+      "venue": "N/A",
+      "url": "N/A",
+      "doi": ""
+    }
+  ],
+  "scholar_ignored_non_research": [
+    {
+      "title": "Acknowledgment to Reviewers of Birds in 2021",
+      "year": 2022,
+      "citations": 0,
+      "venue": "N/A",
+      "url": "https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=26736004&asa=N&AN=155981554&h=6ShoPHa1VNW3eJA5GgTybJaBTlAf67eP1XlLt9BpgsMd3u%2BBlqn61nXbJK%2FplO%2FEaocOXnmiohLr%2Fujoy6JjRA%3D%3D&crl=c",
+      "reason": "non_research_output"
+    },
+    {
+      "title": "Peer Review Report For: The deep(er) roots of Eukaryotes and Akaryotes [version 1; peer review: 1 approved, 1 approved with reservations, 1 not approved]",
+      "year": 2020,
+      "citations": 0,
+      "venue": "N/A",
+      "url": "N/A",
+      "reason": "non_research_output"
+    }
+  ],
+  "altmetric_unmatched": [],
+  "altmetric_alias_matched": [
+    {
+      "doi": "10.1038/nature19417",
+      "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
+      "source_file": "2026-02-16_mentions_10.1038_nature19417.csv",
+      "rows": 6,
+      "canonical_publication_id": "pub_002",
+      "reason": "doi_alias_or_title_reconciled"
+    },
+    {
+      "doi": "10.1101/2023.08.01.551470",
+      "title": "The pace of mitochondrial molecular evolution varies with seasonal migration distance",
+      "source_file": "2026-02-16_mentions_10.1101_2023.08.01.551470.csv",
+      "rows": 12,
+      "canonical_publication_id": "pub_019",
+      "reason": "doi_alias_or_title_reconciled"
+    },
+    {
+      "doi": "10.1101/2024.12.19.629481",
+      "title": "Skeletal trait measurements for thousands of bird species",
+      "source_file": "2026-02-16_mentions_10.1101_2024.12.19.629481.csv",
+      "rows": 8,
+      "canonical_publication_id": "pub_016",
+      "reason": "doi_alias_or_title_reconciled"
+    },
+    {
+      "doi": "10.1101/713081",
+      "title": "Genomic phylogeography of the White-crowned Manakin Pseudopipra pipra (Aves: Pipridae) illuminates a continental-scale radiation out of the Andes",
+      "source_file": "2026-02-16_mentions_10.1101_713081.csv",
+      "rows": 15,
+      "canonical_publication_id": "pub_011",
+      "reason": "doi_alias_or_title_reconciled"
+    }
+  ],
+  "tracked_doi_count": 16,
+  "tracked_dois": [
+    "10.1002/ece3.8114",
+    "10.1016/j.cub.2018.04.062",
+    "10.1016/j.ympev.2014.09.001",
+    "10.1016/j.ympev.2021.107205",
+    "10.1017/pab.2025.10061",
+    "10.1038/nature15697",
+    "10.1038/nature19417",
+    "10.1038/s41597-025-05234-y",
+    "10.1093/evolut/qpad200",
+    "10.1093/sysbio/syx064",
+    "10.1101/2023.08.01.551470",
+    "10.1101/2024.12.19.629481",
+    "10.1101/713081",
+    "10.1111/evo.13432",
+    "10.1126/sciadv.adp0114",
+    "10.1642/auk-14-108.1"
+  ]
+}

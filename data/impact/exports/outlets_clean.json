@@ -1,0 +1,3210 @@
+[
+  {
+    "outlet": "Unknown",
+    "mentions": 911,
+    "publication_spread": 12,
+    "latest_date": "",
+    "domains": "",
+    "composite_score": 920.6
+  },
+  {
+    "outlet": "en.wikipedia.org",
+    "mentions": 66,
+    "publication_spread": 8,
+    "latest_date": "2025-12-13T18:14:40",
+    "domains": "en.wikipedia.org",
+    "composite_score": 72.4
+  },
+  {
+    "outlet": "es.wikipedia.org",
+    "mentions": 23,
+    "publication_spread": 3,
+    "latest_date": "2025-12-11T17:11:07",
+    "domains": "es.wikipedia.org",
+    "composite_score": 25.4
+  },
+  {
+    "outlet": "vi.wikipedia.org",
+    "mentions": 20,
+    "publication_spread": 3,
+    "latest_date": "2024-10-29T15:23:41",
+    "domains": "vi.wikipedia.org",
+    "composite_score": 22.4
+  },
+  {
+    "outlet": "zh.wikipedia.org",
+    "mentions": 19,
+    "publication_spread": 3,
+    "latest_date": "2025-10-10T16:39:22",
+    "domains": "zh.wikipedia.org",
+    "composite_score": 21.4
+  },
+  {
+    "outlet": "sr.wikipedia.org",
+    "mentions": 19,
+    "publication_spread": 2,
+    "latest_date": "2025-10-02T15:20:06",
+    "domains": "sr.wikipedia.org",
+    "composite_score": 20.6
+  },
+  {
+    "outlet": "Phys.org",
+    "mentions": 13,
+    "publication_spread": 8,
+    "latest_date": "2024-07-31T18:00:02",
+    "domains": "ct.moreover.com;phys.org",
+    "composite_score": 19.4
+  },
+  {
+    "outlet": "uk.wikipedia.org",
+    "mentions": 14,
+    "publication_spread": 4,
+    "latest_date": "2025-07-15T23:35:21",
+    "domains": "uk.wikipedia.org",
+    "composite_score": 17.2
+  },
+  {
+    "outlet": "pt.wikipedia.org",
+    "mentions": 11,
+    "publication_spread": 6,
+    "latest_date": "2025-11-30T18:36:22",
+    "domains": "pt.wikipedia.org",
+    "composite_score": 15.8
+  },
+  {
+    "outlet": "Yahoo! News",
+    "mentions": 12,
+    "publication_spread": 4,
+    "latest_date": "2024-08-12T01:39:37",
+    "domains": "ca.news.yahoo.com;ct.moreover.com;in.news.yahoo.com;news.yahoo.com;uk.news.yahoo.com",
+    "composite_score": 15.2
+  },
+  {
+    "outlet": "fr.wikipedia.org",
+    "mentions": 11,
+    "publication_spread": 5,
+    "latest_date": "2025-11-14T16:02:20",
+    "domains": "fr.wikipedia.org",
+    "composite_score": 15.0
+  },
+  {
+    "outlet": "EurekAlert!",
+    "mentions": 8,
+    "publication_spread": 7,
+    "latest_date": "2024-07-31T18:06:11",
+    "domains": "ct.moreover.com;eurekalert.org",
+    "composite_score": 13.6
+  },
+  {
+    "outlet": "cs.wikipedia.org",
+    "mentions": 11,
+    "publication_spread": 2,
+    "latest_date": "2025-02-19T20:03:55",
+    "domains": "cs.wikipedia.org",
+    "composite_score": 12.6
+  },
+  {
+    "outlet": "Science Daily",
+    "mentions": 7,
+    "publication_spread": 7,
+    "latest_date": "2024-07-31T21:09:51",
+    "domains": "ct.moreover.com;sciencedaily.com",
+    "composite_score": 12.6
+  },
+  {
+    "outlet": "The Conversation",
+    "mentions": 10,
+    "publication_spread": 3,
+    "latest_date": "2024-03-11T13:10:38",
+    "domains": "ct.moreover.com;theconversation.com",
+    "composite_score": 12.4
+  },
+  {
+    "outlet": "youtube.com",
+    "mentions": 9,
+    "publication_spread": 4,
+    "latest_date": "2024-09-28T09:00:27",
+    "domains": "youtube.com",
+    "composite_score": 12.2
+  },
+  {
+    "outlet": "Sci-News",
+    "mentions": 7,
+    "publication_spread": 6,
+    "latest_date": "2024-08-02T20:24:47",
+    "domains": "feedproxy.google.com;sci-news.com;sci.news",
+    "composite_score": 11.8
+  },
+  {
+    "outlet": "ro.wikipedia.org",
+    "mentions": 10,
+    "publication_spread": 2,
+    "latest_date": "2025-12-24T15:22:56",
+    "domains": "ro.wikipedia.org",
+    "composite_score": 11.6
+  },
+  {
+    "outlet": "MSN",
+    "mentions": 9,
+    "publication_spread": 3,
+    "latest_date": "2025-05-10T15:31:37",
+    "domains": "ct.moreover.com;msn.com",
+    "composite_score": 11.4
+  },
+  {
+    "outlet": "it.wikipedia.org",
+    "mentions": 9,
+    "publication_spread": 3,
+    "latest_date": "2026-02-01T16:40:39",
+    "domains": "it.wikipedia.org",
+    "composite_score": 11.4
+  },
+  {
+    "outlet": "Raptormaniacs",
+    "mentions": 6,
+    "publication_spread": 5,
+    "latest_date": "2025-01-27T19:14:00",
+    "domains": "albertonykus.blogspot.com",
+    "composite_score": 10.0
+  },
+  {
+    "outlet": "The Raw Story",
+    "mentions": 8,
+    "publication_spread": 2,
+    "latest_date": "2023-12-27T12:52:43",
+    "domains": "rawstory.com",
+    "composite_score": 9.6
+  },
+  {
+    "outlet": "ca.wikipedia.org",
+    "mentions": 8,
+    "publication_spread": 2,
+    "latest_date": "2026-02-15T18:52:36",
+    "domains": "ca.wikipedia.org",
+    "composite_score": 9.6
+  },
+  {
+    "outlet": "Mirage News",
+    "mentions": 6,
+    "publication_spread": 4,
+    "latest_date": "2024-07-31T18:06:55",
+    "domains": "ct.moreover.com;miragenews.com",
+    "composite_score": 9.2
+  },
+  {
+    "outlet": "Futurity",
+    "mentions": 5,
+    "publication_spread": 5,
+    "latest_date": "2021-11-03T17:55:49",
+    "domains": "futurity.org",
+    "composite_score": 9.0
+  },
+  {
+    "outlet": "Science Alert",
+    "mentions": 6,
+    "publication_spread": 3,
+    "latest_date": "2024-08-12T01:39:37",
+    "domains": "ct.moreover.com;sciencealert.com",
+    "composite_score": 8.4
+  },
+  {
+    "outlet": "pl.wikipedia.org",
+    "mentions": 6,
+    "publication_spread": 3,
+    "latest_date": "2021-07-22T19:10:01",
+    "domains": "pl.wikipedia.org",
+    "composite_score": 8.4
+  },
+  {
+    "outlet": "Naked Science",
+    "mentions": 6,
+    "publication_spread": 2,
+    "latest_date": "2021-10-14T09:55:49",
+    "domains": "naked-science.ru",
+    "composite_score": 7.6
+  },
+  {
+    "outlet": "ru.wikipedia.org",
+    "mentions": 5,
+    "publication_spread": 3,
+    "latest_date": "2021-05-18T16:10:47",
+    "domains": "ru.wikipedia.org",
+    "composite_score": 7.4
+  },
+  {
+    "outlet": "science",
+    "mentions": 5,
+    "publication_spread": 3,
+    "latest_date": "2018-05-25T19:37:18",
+    "domains": "reddit.com",
+    "composite_score": 7.4
+  },
+  {
+    "outlet": "Sci-News.com",
+    "mentions": 4,
+    "publication_spread": 4,
+    "latest_date": "2021-10-15T18:43:11",
+    "domains": "sci-news.com",
+    "composite_score": 7.2
+  },
+  {
+    "outlet": "Newswise",
+    "mentions": 4,
+    "publication_spread": 4,
+    "latest_date": "2021-11-17T00:00:00",
+    "domains": "newswise.com",
+    "composite_score": 7.2
+  },
+  {
+    "outlet": "Technology.org",
+    "mentions": 4,
+    "publication_spread": 4,
+    "latest_date": "2018-05-25T05:20:25",
+    "domains": "feedproxy.google.com;technology.org",
+    "composite_score": 7.2
+  },
+  {
+    "outlet": "Species New to Science",
+    "mentions": 4,
+    "publication_spread": 4,
+    "latest_date": "2018-05-25T02:43:00",
+    "domains": "novataxa.blogspot.com",
+    "composite_score": 7.2
+  },
+  {
+    "outlet": "id.wikipedia.org",
+    "mentions": 5,
+    "publication_spread": 2,
+    "latest_date": "2026-02-11T08:26:08",
+    "domains": "id.wikipedia.org",
+    "composite_score": 6.6
+  },
+  {
+    "outlet": "Yahoo!",
+    "mentions": 4,
+    "publication_spread": 3,
+    "latest_date": "2025-05-10T12:00:00",
+    "domains": "ct.moreover.com;yahoo.com",
+    "composite_score": 6.4
+  },
+  {
+    "outlet": "Brinkwire",
+    "mentions": 4,
+    "publication_spread": 3,
+    "latest_date": "2018-05-24T19:32:29",
+    "domains": "en.brinkwire.com",
+    "composite_score": 6.4
+  },
+  {
+    "outlet": "fa.wikipedia.org",
+    "mentions": 5,
+    "publication_spread": 1,
+    "latest_date": "2024-03-31T09:45:46",
+    "domains": "fa.wikipedia.org",
+    "composite_score": 5.8
+  },
+  {
+    "outlet": "Google News",
+    "mentions": 5,
+    "publication_spread": 1,
+    "latest_date": "2022-11-26T17:10:01",
+    "domains": "news.google.com",
+    "composite_score": 5.8
+  },
+  {
+    "outlet": "Scitech Daily",
+    "mentions": 3,
+    "publication_spread": 3,
+    "latest_date": "2024-08-08T16:06:08",
+    "domains": "ct.moreover.com;scitechdaily.com",
+    "composite_score": 5.4
+  },
+  {
+    "outlet": "Science Blog",
+    "mentions": 3,
+    "publication_spread": 3,
+    "latest_date": "2021-10-14T13:39:03",
+    "domains": "feedproxy.google.com;scienceblog.com",
+    "composite_score": 5.4
+  },
+  {
+    "outlet": "Colecionadores de Ossos",
+    "mentions": 3,
+    "publication_spread": 3,
+    "latest_date": "2021-10-11T19:00:19",
+    "domains": "facebook.com",
+    "composite_score": 5.4
+  },
+  {
+    "outlet": "Cornell Chronicle",
+    "mentions": 3,
+    "publication_spread": 3,
+    "latest_date": "2021-10-11T14:10:00",
+    "domains": "news.cornell.edu",
+    "composite_score": 5.4
+  },
+  {
+    "outlet": "Popular Science",
+    "mentions": 3,
+    "publication_spread": 3,
+    "latest_date": "2024-07-31T19:21:49",
+    "domains": "ct.moreover.com;popsci.com",
+    "composite_score": 5.4
+  },
+  {
+    "outlet": "Ibis - international journal of avian science",
+    "mentions": 3,
+    "publication_spread": 3,
+    "latest_date": "2024-08-06T09:00:37",
+    "domains": "facebook.com",
+    "composite_score": 5.4
+  },
+  {
+    "outlet": "SciBlogs",
+    "mentions": 3,
+    "publication_spread": 3,
+    "latest_date": "2018-05-25T21:46:08",
+    "domains": "sciblogs.co.nz",
+    "composite_score": 5.4
+  },
+  {
+    "outlet": "Joseph W. Brown",
+    "mentions": 3,
+    "publication_spread": 3,
+    "latest_date": "2017-12-15T10:09:45",
+    "domains": "bsky.app",
+    "composite_score": 5.4
+  },
+  {
+    "outlet": "Science Newsline",
+    "mentions": 3,
+    "publication_spread": 3,
+    "latest_date": "2017-09-22T15:40:00",
+    "domains": "sciencenewsline.com",
+    "composite_score": 5.4
+  },
+  {
+    "outlet": "On the River of History",
+    "mentions": 4,
+    "publication_spread": 1,
+    "latest_date": "2019-03-03T14:40:47",
+    "domains": "podcasts.com",
+    "composite_score": 4.8
+  },
+  {
+    "outlet": "Evolution News & Science Today",
+    "mentions": 3,
+    "publication_spread": 2,
+    "latest_date": "2024-02-23T14:45:00",
+    "domains": "ct.moreover.com;evolutionnews.org",
+    "composite_score": 4.6
+  },
+  {
+    "outlet": "Big News Network",
+    "mentions": 3,
+    "publication_spread": 2,
+    "latest_date": "2023-12-19T18:39:17",
+    "domains": "",
+    "composite_score": 4.6
+  },
+  {
+    "outlet": "ja.wikipedia.org",
+    "mentions": 3,
+    "publication_spread": 2,
+    "latest_date": "2023-08-05T08:52:33",
+    "domains": "ja.wikipedia.org",
+    "composite_score": 4.6
+  },
+  {
+    "outlet": "Interesting Engineering",
+    "mentions": 3,
+    "publication_spread": 2,
+    "latest_date": "2022-11-27T08:47:32",
+    "domains": "interestingengineering.com",
+    "composite_score": 4.6
+  },
+  {
+    "outlet": "Daily Mail",
+    "mentions": 3,
+    "publication_spread": 2,
+    "latest_date": "2018-05-25T00:02:13",
+    "domains": "",
+    "composite_score": 4.6
+  },
+  {
+    "outlet": "Inverse",
+    "mentions": 3,
+    "publication_spread": 2,
+    "latest_date": "2022-12-04T20:00:25",
+    "domains": "inverse.com",
+    "composite_score": 4.6
+  },
+  {
+    "outlet": "de.wikipedia.org",
+    "mentions": 3,
+    "publication_spread": 2,
+    "latest_date": "2023-02-26T15:36:57",
+    "domains": "de.wikipedia.org",
+    "composite_score": 4.6
+  },
+  {
+    "outlet": "tr.wikipedia.org",
+    "mentions": 3,
+    "publication_spread": 2,
+    "latest_date": "2021-09-21T11:55:28",
+    "domains": "tr.wikipedia.org",
+    "composite_score": 4.6
+  },
+  {
+    "outlet": "Nicols Diez",
+    "mentions": 3,
+    "publication_spread": 2,
+    "latest_date": "2015-10-18T07:24:38",
+    "domains": "plus.google.com",
+    "composite_score": 4.6
+  },
+  {
+    "outlet": "bsky.app",
+    "mentions": 3,
+    "publication_spread": 2,
+    "latest_date": "2025-09-22T04:20:30",
+    "domains": "bsky.app",
+    "composite_score": 4.6
+  },
+  {
+    "outlet": "Current Biology",
+    "mentions": 3,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T16:03:07",
+    "domains": "facebook.com",
+    "composite_score": 3.8
+  },
+  {
+    "outlet": "no.wikipedia.org",
+    "mentions": 3,
+    "publication_spread": 1,
+    "latest_date": "2025-07-15T14:06:07",
+    "domains": "no.wikipedia.org",
+    "composite_score": 3.8
+  },
+  {
+    "outlet": "ar.wikipedia.org",
+    "mentions": 3,
+    "publication_spread": 1,
+    "latest_date": "2023-02-05T14:31:37",
+    "domains": "ar.wikipedia.org",
+    "composite_score": 3.8
+  },
+  {
+    "outlet": "Nachrichten Welt",
+    "mentions": 3,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T04:02:21",
+    "domains": "nach-welt.com",
+    "composite_score": 3.8
+  },
+  {
+    "outlet": "journalbreak.Com",
+    "mentions": 3,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T01:08:20",
+    "domains": "journalbreak.com",
+    "composite_score": 3.8
+  },
+  {
+    "outlet": "Firstpost",
+    "mentions": 3,
+    "publication_spread": 1,
+    "latest_date": "2022-11-25T07:59:21",
+    "domains": "firstpost.com",
+    "composite_score": 3.8
+  },
+  {
+    "outlet": "Evrim A?ac?",
+    "mentions": 2,
+    "publication_spread": 2,
+    "latest_date": "2025-02-13T09:46:37",
+    "domains": "evrimagaci.org",
+    "composite_score": 3.6
+  },
+  {
+    "outlet": "AB-News Russia",
+    "mentions": 2,
+    "publication_spread": 2,
+    "latest_date": "2024-08-12T06:24:24",
+    "domains": "ab-news.ru",
+    "composite_score": 3.6
+  },
+  {
+    "outlet": "Yale News",
+    "mentions": 2,
+    "publication_spread": 2,
+    "latest_date": "2021-10-11T14:00:38",
+    "domains": "news.yale.edu",
+    "composite_score": 3.6
+  },
+  {
+    "outlet": "University of Michigan News",
+    "mentions": 2,
+    "publication_spread": 2,
+    "latest_date": "2024-07-31T18:00:00",
+    "domains": "ct.moreover.com;news.umich.edu",
+    "composite_score": 3.6
+  },
+  {
+    "outlet": "The Archaeology News Network",
+    "mentions": 2,
+    "publication_spread": 2,
+    "latest_date": "2021-10-11T11:00:00",
+    "domains": "archaeologynewsnetwork.blogspot.co.uk;archaeologynewsnetwork.blogspot.com",
+    "composite_score": 3.6
+  },
+  {
+    "outlet": "Nouvelles du monde",
+    "mentions": 2,
+    "publication_spread": 2,
+    "latest_date": "2024-08-18T06:46:33",
+    "domains": "ct.moreover.com;nouvelles-du-monde.com",
+    "composite_score": 3.6
+  },
+  {
+    "outlet": "Devdiscourse",
+    "mentions": 2,
+    "publication_spread": 2,
+    "latest_date": "2023-12-20T06:46:15",
+    "domains": "devdiscourse.com",
+    "composite_score": 3.6
+  },
+  {
+    "outlet": "Toronto Telegraph",
+    "mentions": 2,
+    "publication_spread": 2,
+    "latest_date": "2023-12-19T18:39:17",
+    "domains": "torontotelegraph.com",
+    "composite_score": 3.6
+  },
+  {
+    "outlet": "Business Insider",
+    "mentions": 2,
+    "publication_spread": 2,
+    "latest_date": "2023-07-12T12:53:00",
+    "domains": "businessinsider.com",
+    "composite_score": 3.6
+  },
+  {
+    "outlet": "Alert Breaking News - US",
+    "mentions": 2,
+    "publication_spread": 2,
+    "latest_date": "2022-10-27T18:44:19",
+    "domains": "us.alertbreakingnews.com",
+    "composite_score": 3.6
+  },
+  {
+    "outlet": "Astrobiology Magazine",
+    "mentions": 2,
+    "publication_spread": 2,
+    "latest_date": "2018-05-29T11:57:06",
+    "domains": "astrobio.net",
+    "composite_score": 3.6
+  },
+  {
+    "outlet": "ZAP",
+    "mentions": 2,
+    "publication_spread": 2,
+    "latest_date": "2024-08-03T20:30:00",
+    "domains": "zap.aeiou.pt",
+    "composite_score": 3.6
+  },
+  {
+    "outlet": "PLOS Paleo Community",
+    "mentions": 2,
+    "publication_spread": 2,
+    "latest_date": "2018-05-25T16:43:54",
+    "domains": "blogs.plos.org",
+    "composite_score": 3.6
+  },
+  {
+    "outlet": "Lab Manager",
+    "mentions": 2,
+    "publication_spread": 2,
+    "latest_date": "2021-11-17T17:10:43",
+    "domains": "labmanager.com",
+    "composite_score": 3.6
+  },
+  {
+    "outlet": "Wallowology",
+    "mentions": 2,
+    "publication_spread": 2,
+    "latest_date": "2024-08-06T16:53:51",
+    "domains": "facebook.com",
+    "composite_score": 3.6
+  },
+  {
+    "outlet": "Smithsonian Magazine",
+    "mentions": 2,
+    "publication_spread": 2,
+    "latest_date": "2018-05-24T15:13:09",
+    "domains": "smithsonianmag.com",
+    "composite_score": 3.6
+  },
+  {
+    "outlet": "All About Birds",
+    "mentions": 2,
+    "publication_spread": 2,
+    "latest_date": "2018-05-24T15:03:03",
+    "domains": "allaboutbirds.org",
+    "composite_score": 3.6
+  },
+  {
+    "outlet": "ScienMag",
+    "mentions": 2,
+    "publication_spread": 2,
+    "latest_date": "2024-07-31T18:20:19",
+    "domains": "scienmag.com",
+    "composite_score": 3.6
+  },
+  {
+    "outlet": "1TV.ge",
+    "mentions": 2,
+    "publication_spread": 2,
+    "latest_date": "2024-08-12T11:34:41",
+    "domains": "1tv.ge;ct.moreover.com",
+    "composite_score": 3.6
+  },
+  {
+    "outlet": "My Science",
+    "mentions": 2,
+    "publication_spread": 2,
+    "latest_date": "2024-07-31T00:00:00",
+    "domains": "ct.moreover.com;myscience.org",
+    "composite_score": 3.6
+  },
+  {
+    "outlet": "Times of India",
+    "mentions": 2,
+    "publication_spread": 1,
+    "latest_date": "2023-12-29T05:34:53",
+    "domains": "economictimes.indiatimes.com",
+    "composite_score": 2.8
+  },
+  {
+    "outlet": "Yle.fi",
+    "mentions": 2,
+    "publication_spread": 1,
+    "latest_date": "2018-10-02T18:34:02",
+    "domains": "yle.fi",
+    "composite_score": 2.8
+  },
+  {
+    "outlet": "BBC News",
+    "mentions": 2,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T16:48:17",
+    "domains": "",
+    "composite_score": 2.8
+  },
+  {
+    "outlet": "Jacob Berv",
+    "mentions": 2,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T14:21:32",
+    "domains": "facebook.com",
+    "composite_score": 2.8
+  },
+  {
+    "outlet": "hu.wikipedia.org",
+    "mentions": 2,
+    "publication_spread": 1,
+    "latest_date": "2020-08-14T07:55:48",
+    "domains": "hu.wikipedia.org",
+    "composite_score": 2.8
+  },
+  {
+    "outlet": "Foreign Affairs New Zealand",
+    "mentions": 2,
+    "publication_spread": 1,
+    "latest_date": "2020-07-20T13:52:52",
+    "domains": "foreignaffairs.co.nz",
+    "composite_score": 2.8
+  },
+  {
+    "outlet": "Daimonie",
+    "mentions": 2,
+    "publication_spread": 1,
+    "latest_date": "2016-05-18T22:19:03",
+    "domains": "facebook.com",
+    "composite_score": 2.8
+  },
+  {
+    "outlet": "Radical Science News",
+    "mentions": 2,
+    "publication_spread": 1,
+    "latest_date": "2015-10-10T08:54:06",
+    "domains": "facebook.com",
+    "composite_score": 2.8
+  },
+  {
+    "outlet": "Able Lawrence",
+    "mentions": 2,
+    "publication_spread": 1,
+    "latest_date": "2015-10-10T08:51:54",
+    "domains": "plus.google.com",
+    "composite_score": 2.8
+  },
+  {
+    "outlet": "Chris Stringer",
+    "mentions": 2,
+    "publication_spread": 1,
+    "latest_date": "2025-06-20T20:49:52",
+    "domains": "bsky.app",
+    "composite_score": 2.8
+  },
+  {
+    "outlet": "Tech Explorist",
+    "mentions": 2,
+    "publication_spread": 1,
+    "latest_date": "2024-08-01T11:07:08",
+    "domains": "ct.moreover.com;techexplorist.com",
+    "composite_score": 2.8
+  },
+  {
+    "outlet": "Texas Nature Trackers - Texas Parks and Wildlife Dept Program",
+    "mentions": 2,
+    "publication_spread": 1,
+    "latest_date": "2015-02-05T15:50:48",
+    "domains": "facebook.com",
+    "composite_score": 2.8
+  },
+  {
+    "outlet": "af.wikipedia.org",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2025-01-13T14:12:10",
+    "domains": "af.wikipedia.org",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Qubit",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-10-10T12:11:16",
+    "domains": "qubit.hu",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Dove Si Pu Parlare Di Ogni Cosa",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2021-11-21T18:10:00",
+    "domains": "dovesipuoparlarediognicosa.blogspot.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Geology Page",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2021-10-18T20:37:17",
+    "domains": "geologypage.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Ebiotrade",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2021-10-15T04:24:12",
+    "domains": "ebiotrade.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Muy Interesante",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2021-10-14T19:53:03",
+    "domains": "muyinteresante.es",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "ScienceBlog.com",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2021-10-14T13:39:03",
+    "domains": "scienceblog.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "University of Cambridge",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2021-10-14T12:10:32",
+    "domains": "cam.ac.uk",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Science Springs",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2021-10-13T14:09:52",
+    "domains": "sciencesprings.wordpress.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Canaltech",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2021-10-13T12:10:58",
+    "domains": "canaltech.com.br",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Technology Times",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2021-10-12T19:06:21",
+    "domains": "technologytimes.pk",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Kopalnia Wiedzy",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2021-10-12T11:34:19",
+    "domains": "kopalniawiedzy.pl",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "True Viral News",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2021-10-11T18:38:02",
+    "domains": "trueviralnews.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Iflscience",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2023-12-22T11:53:09",
+    "domains": "iflscience.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Free Mail South Africa",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2023-12-20T01:00:19",
+    "domains": "free-mail.co.za",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Business Insider India",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2023-07-12T12:54:00",
+    "domains": "businessinsider.in",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Yahoo! Finance Canada",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2023-07-12T12:53:00",
+    "domains": "ca.finance.yahoo.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Business Insider Nederland",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2023-07-12T12:53:00",
+    "domains": "businessinsider.nl",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Jurassic Park Cast",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2023-02-16T11:46:30",
+    "domains": "feed.podbean.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Newsbreak",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-10-26T15:30:00",
+    "domains": "newsbreak.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "he.wikipedia.org",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-03-15T19:31:43",
+    "domains": "he.wikipedia.org",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "The Dinosource",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2021-04-02T15:00:00",
+    "domains": "feeds.buzzsprout.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "New York Times",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2020-03-18T21:27:31",
+    "domains": "nytimes.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Guokr.com",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2019-09-14T03:47:09",
+    "domains": "guokr.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Palmesopyr",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-11-23T11:45:00",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Letters from Gondwana.",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-11-16T15:28:15",
+    "domains": "paleonerdish.wordpress.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Times of Malta",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-07-01T11:41:14",
+    "domains": "timesofmalta.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "HowStuffWorks",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-06-06T18:00:05",
+    "domains": "animals.howstuffworks.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "The Independent",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-06-06T16:34:53",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Climate News Network",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-06-05T08:13:20",
+    "domains": "climatenewsnetwork.net",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Taipei Times",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-06-02T18:44:33",
+    "domains": "taipeitimes.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Sciences et Avenir",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-06-01T06:00:00",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "MinnPost",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-31T13:38:25",
+    "domains": "minnpost.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Space Daily",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-30T14:45:39",
+    "domains": "spacedaily.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "sg.hu",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-29T16:07:28",
+    "domains": "sg.hu",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "De Morgen",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-29T09:08:25",
+    "domains": "demorgen.be",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Science and Life Russia",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-29T05:04:00",
+    "domains": "nkj.ru",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Sign of the Times",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-28T18:25:00",
+    "domains": "sott.net",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "New York Post",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-28T15:16:52",
+    "domains": "nypost.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "dinosaur",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-28T14:34:26",
+    "domains": "reddit.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "dinosaurs",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-28T14:33:53",
+    "domains": "reddit.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Die Welt",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-28T07:21:40",
+    "domains": "welt.de",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Paperblog",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-28T04:59:00",
+    "domains": "es.paperblog.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "RT Network",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-27T13:12:41",
+    "domains": "actualidad.rt.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Times Colonist",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-27T12:40:00",
+    "domains": "timescolonist.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "The Inquisitr",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-27T11:38:48",
+    "domains": "inquisitr.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Fars News Agency",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-27T08:42:48",
+    "domains": "en.farsnews.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Moontanman",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-26T15:41:04",
+    "domains": "plus.google.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "GuruMeditation",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-26T09:33:29",
+    "domains": "gurumed.org",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "The Siasat Daily",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-26T06:52:08",
+    "domains": "siasat.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "forskning.no",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-26T03:00:01",
+    "domains": "forskning.no",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "rare avis",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-26T02:11:35",
+    "domains": "plus.google.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "N+1: ??????? ??????, ???????, ????????",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-25T16:59:31",
+    "domains": "nplus1.ru",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Gazeta.ru",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-25T16:33:54",
+    "domains": "gazeta.ru",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Futura-Sciences",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-25T14:53:00",
+    "domains": "futura-sciences.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Newsweek",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-25T14:31:23",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "New Kerala",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-25T11:44:53",
+    "domains": "newkerala.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "National Geographic",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-25T10:46:25",
+    "domains": "nationalgeographic.it",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Daijiworld.com",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-25T09:42:34",
+    "domains": "daijiworld.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "CanIndia",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-25T09:36:00",
+    "domains": "canindia.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Green Report (Italy)",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-25T09:00:05",
+    "domains": "greenreport.it",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Radio New Zealand",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-25T07:37:39",
+    "domains": "radionz.co.nz",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Clube Ornitologia Almadense",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-25T06:08:56",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Gizmodo Australia",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-25T01:00:00",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Arcamax",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-25T00:24:48",
+    "domains": "arcamax.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Business Standard",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-25T00:00:00",
+    "domains": "business-standard.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Herald Mail Media",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T23:09:00",
+    "domains": "heraldmailmedia.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "The Eagle",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T23:09:00",
+    "domains": "theeagle.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Actualit Houssenia Writing",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T22:00:52",
+    "domains": "actualite.housseniawriting.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Gizmodo UK",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T22:00:28",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Science News",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T21:44:51",
+    "domains": "sciencenews.org",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "ZME Science",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T21:36:20",
+    "domains": "feedproxy.google.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Booster Shots - latimes.com",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T21:30:00",
+    "domains": "latimes.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Los Angeles Times",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T21:30:00",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "The Scientist Magazine",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T20:35:50",
+    "domains": "the-scientist.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Long Room",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T19:15:53",
+    "domains": "longroom.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "SVT",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T18:52:10",
+    "domains": "svt.se",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Neue Zrcher Zeitung (NZZ)",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T18:00:00",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "BT News",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T17:51:25",
+    "domains": "home.bt.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "charlie mashara",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T17:14:26",
+    "domains": "plus.google.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "The Guardian",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T16:56:57",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Scientias",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T16:54:46",
+    "domains": "scientias.nl",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Hell Creek",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T16:10:45",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Der Standard",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T16:06:37",
+    "domains": "derstandard.at",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Potsdamer Neueste Nachrichten",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T15:47:07",
+    "domains": "pnn.de",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Der Tagesspiegel",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T15:47:07",
+    "domains": "tagesspiegel.de",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Europa Press",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T15:40:46",
+    "domains": "europapress.es",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Gizmodo",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T15:35:56",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "??? ???????",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T15:34:05",
+    "domains": "ria.ru",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Metro UK",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T15:32:42",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Science/AAAS",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T15:05:00",
+    "domains": "sciencemag.org",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "CNN News",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T15:03:52",
+    "domains": "cnn.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Evening Express",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T15:02:04",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "The Evening Telegraph",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T15:02:02",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "azfamily.com",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T15:02:00",
+    "domains": "azfamily.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "wissenschaft.de",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T15:00:37",
+    "domains": "wissenschaft.de",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Science news, comment and analysis | theguardian.com",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T15:00:21",
+    "domains": "theguardian.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Discover Top Stories",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T15:00:15",
+    "domains": "feedproxy.google.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Discover Magazine",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T15:00:15",
+    "domains": "blogs.discovermagazine.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "International Business Times",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T15:00:02",
+    "domains": "ibtimes.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "El Confidencial",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T15:00:00",
+    "domains": "elconfidencial.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Irish Examiner",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T15:00:00",
+    "domains": "irishexaminer.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "The Mirror",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T15:00:00",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Inside Science",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T14:56:05",
+    "domains": "insidescience.org",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "The Atlantic",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T11:00:00",
+    "domains": "theatlantic.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Action News Now",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-05-24T00:00:00",
+    "domains": "actionnewsnow.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "biology.stackexchange.com",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-11-18T04:57:00",
+    "domains": "biology.stackexchange.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "BioLounge",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-02-07T04:46:13",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Edna Maria Kuller",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-01-27T15:42:25",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Orestes Batista Minigildo Filho",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-01-25T01:44:55",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Andrea Scott",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-15T04:02:10",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Mnica Ferreira Do Nascimento",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-12T19:52:07",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Biosfera Itinerari",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-11T23:16:49",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Natural Selection",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-10T21:32:59",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Elvalle Bill",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-06T13:28:40",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Dimitris Karayiannis",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-05T18:40:28",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Jaci Junior",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-05T12:59:51",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Sbastien Lacomblez",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-05T07:20:18",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Leonardo Torres",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-05T00:37:46",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Joo Batista Torres Rocha",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-05T00:30:39",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Oswaldo Sanchez T",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T23:07:33",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Entendeu ou quer que desenhe?",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T22:14:36",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Poncho Miranda",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T20:45:28",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Giacomo Bracchi",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T20:28:43",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Jardines Ecolgicos Topotepuy",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T17:18:04",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Thiago Moura",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T16:31:17",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Peilin Chen",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T14:40:38",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Yasuaki Sakakihara",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T14:31:42",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Daniel Santos",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T13:05:07",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Vicente Fernando Gavilanez Brito",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T12:26:20",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Aves de Paraty",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T12:25:23",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Sylvia Paraty",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T12:25:10",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Juergen Brand",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T12:22:15",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Antonio Rea",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T11:39:10",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Costa Rica BirdFair",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T10:22:39",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "WILD Travel / Central America",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T10:22:23",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Leandro De Oliveira Caetano",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T09:13:44",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Biodiversity Heritage Library Africa",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T05:35:06",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Bruno Lima",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T04:54:01",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Magno F. Dos Santos",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T04:47:39",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Italo Celis Reategui",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T03:12:14",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Bucear PARA Conservar",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T03:01:35",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Yemay Toro Lopez",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-04T03:00:56",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Andy Gray",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-11-21T15:05:20",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Juan Gabriel Vasquez Soto",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-10-31T15:09:39",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Michelle Ashworth",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-10-15T22:38:41",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Brightsurf Science News and Current Events",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-10-15T07:11:00",
+    "domains": "brightsurf.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Health Medicinet",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-10-15T06:23:58",
+    "domains": "healthmedicinet.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Vctor Gamarra-Toledo",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-09-24T18:49:25",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Environmental News Network",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2021-11-17T19:48:28",
+    "domains": "enn.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Bioengineer.org",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2021-11-17T14:12:37",
+    "domains": "bioengineer.org",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Marcos K. Pinheiro / \"Marcos Wyvern\" (Marcosaurus)",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2025-09-22T12:43:48",
+    "domains": "bsky.app",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Dr. Tanya Samman",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2025-09-21T18:12:26",
+    "domains": "bsky.app",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Thomas R. Holtz, Jr.",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2025-09-21T13:16:56",
+    "domains": "bsky.app",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Jake Berv",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2025-09-17T21:34:52",
+    "domains": "bsky.app",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Eric Ekdale",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2025-09-17T20:06:17",
+    "domains": "bsky.app",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Rebecca J. Strauch",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2025-09-17T18:27:36",
+    "domains": "bsky.app",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "bn.wikipedia.org",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2026-01-20T06:59:58",
+    "domains": "bn.wikipedia.org",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Alberta Claw",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2025-06-17T12:24:27",
+    "domains": "bsky.app",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Ukrainian Independent Information Agency",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2025-05-25T01:32:00",
+    "domains": "ct.moreover.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Science & Vie",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2025-05-14T11:30:41",
+    "domains": "ct.moreover.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Mandarinian",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2025-05-10T22:13:28",
+    "domains": "mandarinian.news",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "inkl",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2025-05-10T00:00:00",
+    "domains": "ct.moreover.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Avian Hybrids",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-06-05T07:00:00",
+    "domains": "avianhybrids.wordpress.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "nl.wikipedia.org",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2023-07-23T12:50:30",
+    "domains": "nl.wikipedia.org",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Singularity Hub",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-12-08T16:28:39",
+    "domains": "singularityhub.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "dclm",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-12-04T12:11:46",
+    "domains": "dclm.es",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Madriddigital24horas",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-12-04T11:09:48",
+    "domains": "madriddigital24horas.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Bilbao24horas",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-12-04T08:03:51",
+    "domains": "bilbao24horas.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "El Portaluco",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-12-04T05:41:01",
+    "domains": "elportaluco.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "TheObjective",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-12-04T02:30:00",
+    "domains": "theobjective.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Cambio Poltico",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-12-01T22:11:33",
+    "domains": "cambiopolitico.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "South Africa Today",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-30T18:38:20",
+    "domains": "southafricatoday.net",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Yahoo! Espaa",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-30T10:10:52",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "The Free Library",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-29T00:00:00",
+    "domains": "thefreelibrary.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Devon Live",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T14:51:43",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Cornwall Live",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T14:51:43",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Lincolnshire Live",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T14:51:43",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "EssexLive",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T14:51:43",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "DerbyshireLive",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T14:51:43",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Kent Live",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T14:51:43",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Herts Live",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T14:51:43",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "The Plymouth Herald",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T14:51:43",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Leicester Mercury",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T14:51:43",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "NottinghamshireLive",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T14:51:43",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Grimsby Live",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T14:51:43",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "BelfastLive",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T14:30:00",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Coventry Telegraph",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T14:30:00",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Surrey Live",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T14:30:00",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Wales Online",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T14:30:00",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Cambridge News",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T14:30:00",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "BerkshireLive",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T14:30:00",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Cheshire Live",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T14:30:00",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "North Wales Daily Post",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-27T14:30:00",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Today UK News",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-26T22:24:01",
+    "domains": "todayuknews.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Swift Telecast",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-26T17:13:24",
+    "domains": "swifttelecast.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "The Science Times, United States",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-26T04:01:20",
+    "domains": "sciencetimes.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Presseraum",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-25T13:18:01",
+    "domains": "presseraum.at",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "The Deccan Herald",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-25T06:58:47",
+    "domains": "deccanherald.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "RTE Online",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-25T06:54:50",
+    "domains": "rte.ie",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Newslanes",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-25T06:24:20",
+    "domains": "newslanes.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Verve times",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-25T05:33:41",
+    "domains": "vervetimes.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "UK Time News",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-25T05:02:03",
+    "domains": "uktimenews.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "The Print",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-25T04:30:35",
+    "domains": "theprint.in",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Latestly",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-11-25T04:20:14",
+    "domains": "latestly.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "sv.wikipedia.org",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-10-06T13:57:35",
+    "domains": "sv.wikipedia.org",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Heads Or Tails",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2022-05-11T11:39:38",
+    "domains": "anchor.fm",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "el.wikipedia.org",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2021-07-12T21:14:10",
+    "domains": "el.wikipedia.org",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Marginal Revolution",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2021-06-30T15:44:00",
+    "domains": "feedproxy.google.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Medium US",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2021-06-30T12:36:07",
+    "domains": "medium.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Scroll India",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2019-09-17T18:00:03",
+    "domains": "feedproxy.google.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Business Insider Singapore",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2019-02-27T16:08:39",
+    "domains": "businessinsider.sg",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Business Insider Australia",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2019-02-27T16:08:39",
+    "domains": "businessinsider.com.au",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Evolution News &amp; Views",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-06-27T08:08:09",
+    "domains": "evolutionnews.org",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "BMC series blog",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-06-25T08:20:20",
+    "domains": "blogs.biomedcentral.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Nesslig 20",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2018-04-16T21:13:16",
+    "domains": "plus.google.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Nethar6",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2017-08-06T20:45:11",
+    "domains": "plus.google.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "British Ornithologists' Union",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2017-03-13T07:30:00",
+    "domains": "bou.org.uk",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "hardono putro",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2016-01-05T08:53:19",
+    "domains": "plus.google.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "The Panda's Thumb",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2016-01-04T16:00:00",
+    "domains": "pandasthumb.org",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Paulo Fonseca",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-12-18T15:56:07",
+    "domains": "plus.google.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "The Genealogical World of Phylogenetic Networks",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-11-04T05:30:00",
+    "domains": "phylonetworks.blogspot.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Nature Middle East",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-22T09:27:00",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Tim Blackburn",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-22T08:46:26",
+    "domains": "bsky.app",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "??360????",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-22T00:00:00",
+    "domains": "bio360.net",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "IFLScience - Plants and Animals",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-16T11:36:00",
+    "domains": "iflscience.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Technology Org",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-14T01:10:00",
+    "domains": "technology.org",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Paulo Prates Jr",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-14T00:07:01",
+    "domains": "plus.google.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Science World Report",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-13T19:40:08",
+    "domains": "scienceworldreport.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "CollidEscape",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-13T13:30:24",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Hirado",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-13T10:33:00",
+    "domains": "hirado.hu",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Divulgative Biology/Biologa divulgativa",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-13T08:31:18",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Rafael Miranda-Esquivel",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-13T04:20:09",
+    "domains": "plus.google.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Fosil Paleontologia",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-12T23:55:10",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Francis (th)E mule Science's News",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-12T11:04:00",
+    "domains": "francis.naukas.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Novataxa | Species New to Science",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-12T05:32:22",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Tam McD",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-10T19:36:15",
+    "domains": "plus.google.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "ladygouldian.com",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-10T11:10:08",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "\"&#1041;&#1080;&#1086;&#1084;&#1086;&#1083;&#1077;&#1082;&#1091;&#1083;&#1072;\"",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-10T07:38:00",
+    "domains": "biomolecula.ru",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "???",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-10T04:44:06",
+    "domains": "plus.google.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Emma Kendrick",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-09T22:16:37",
+    "domains": "plus.google.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Dawn Hardin",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-09T17:59:30",
+    "domains": "plus.google.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Roman Anisimov",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-09T16:45:56",
+    "domains": "plus.google.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "A DC Birding Blog",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-09T14:00:00",
+    "domains": "dendroica.blogspot.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "PPGBT - Programa de Ps Graduao em Biodiversidade Tropical",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-09T13:57:44",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Tech Times",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-09T10:06:28",
+    "domains": "techtimes.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "????? ? ???????",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-08T17:40:38",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Ps Graduao em Zoologia UFMG",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-08T17:14:49",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Arstechnica",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-08T16:23:15",
+    "domains": "arstechnica.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Ars Technica",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-08T16:23:00",
+    "domains": "arstechnica.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "IOL",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-08T13:30:00",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Journal of Indonesian Ornithology - KUKILA",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-08T10:18:52",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "David ?ern",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-07T23:27:55",
+    "domains": "plus.google.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Voice of America",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-07T22:22:09",
+    "domains": "voanews.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Ben Sheldon",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-07T19:10:18",
+    "domains": "bsky.app",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Yahoo! News India",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-07T17:59:30",
+    "domains": "in.news.yahoo.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Agencia SINC",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-07T17:00:02",
+    "domains": "agenciasinc.es",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Philly.com",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-07T17:00:01",
+    "domains": "philly.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Reuters",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-07T17:00:01",
+    "domains": "",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Thomson Reuters Foundation",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-10-07T17:00:00",
+    "domains": "trust.org",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "The Academic Minute",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2025-09-16T04:01:35",
+    "domains": "academicminute.org",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "SolarPunkTradwife",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2025-06-20T23:31:44",
+    "domains": "bsky.app",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Roberto Rozzi",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2025-06-20T21:50:47",
+    "domains": "bsky.app",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Climate, Ecology, War & More - Dr Glen Barry BigEarthData.ai",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2025-05-29T03:44:44",
+    "domains": "bsky.app",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Noticias de la tierra",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-04-08T15:39:30",
+    "domains": "noticiasdelatierra.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Laboratory Equipment",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2017-09-22T13:37:02",
+    "domains": "laboratoryequipment.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Breitbart News Network",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2017-09-21T17:00:22",
+    "domains": "breitbart.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "UPI.com",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2017-09-21T16:47:35",
+    "domains": "upi.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Fossil Birds",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2017-07-18T16:49:35",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "phy_papers",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-12-24T05:38:59",
+    "domains": "bsky.app",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Eliot Miller",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-12-23T10:31:58",
+    "domains": "bsky.app",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Catherine Sheard",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-12-23T08:58:08",
+    "domains": "bsky.app",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "David Tan",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-12-23T07:54:45",
+    "domains": "bsky.app",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Adam Lendvai",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-12-23T07:32:51",
+    "domains": "bsky.app",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "bioRxiv Evolutionary Biology",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-12-23T06:32:42",
+    "domains": "bsky.app",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "bioRxivpreprint",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-12-23T06:32:41",
+    "domains": "bsky.app",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Crazy Nauka",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-20T17:28:22",
+    "domains": "spreaker.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Nipponese.news",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-18T10:03:01",
+    "domains": "nipponese.news",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Popmech",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-18T05:58:07",
+    "domains": "ct.moreover.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Tiempo.com",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-18T05:30:00",
+    "domains": "ct.moreover.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "ABC.es",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-18T02:37:03",
+    "domains": "ct.moreover.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "CIKAVOSTI",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-15T16:34:27",
+    "domains": "cikavosti.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "meteored.com.ar",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-14T18:29:55",
+    "domains": "meteored.com.ar",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Descopera",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-14T12:00:15",
+    "domains": "ct.moreover.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "On.ge",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-14T10:52:07",
+    "domains": "ct.moreover.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "ChitChat Post Espana",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-14T01:05:52",
+    "domains": "chitchatpost.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Origo",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-13T06:38:46",
+    "domains": "ct.moreover.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Olhar Digital",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-12T14:25:34",
+    "domains": "ct.moreover.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "NewsBytes",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-12T11:43:58",
+    "domains": "ct.moreover.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "WION",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-12T05:07:58",
+    "domains": "ct.moreover.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Biology of Aging News",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-07T20:29:05",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Illustreret Videnskab",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-05T17:00:34",
+    "domains": "ct.moreover.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Illustrerad Vetenskap",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-05T15:14:43",
+    "domains": "illvet.se",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "National Geographic en Espaol",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-03T00:32:37",
+    "domains": "ct.moreover.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "COSMOS magazine",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-02T12:30:00",
+    "domains": "ct.moreover.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "India Today",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-02T06:18:49",
+    "domains": "ct.moreover.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Astrobiology Web",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-01T17:49:11",
+    "domains": "ct.moreover.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Earth",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-01T15:00:00",
+    "domains": "ct.moreover.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Technology Networks",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2024-08-01T00:00:00",
+    "domains": "ct.moreover.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Technobahn",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-02-12T17:11:00",
+    "domains": "w2.technobahn.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Caribbean Birding Trail",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2015-01-02T20:13:32",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Gail Woon",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-25T00:27:07",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Eric Carey",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-24T13:33:10",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  },
+  {
+    "outlet": "Birds Caribbean",
+    "mentions": 1,
+    "publication_spread": 1,
+    "latest_date": "2014-12-24T04:05:51",
+    "domains": "facebook.com",
+    "composite_score": 1.8
+  }
+]

@@ -73,6 +73,9 @@ node scripts/qa/validate-news-geo.mjs
 echo "Generating career geo map data ..."
 node scripts/build-career-geo-data.mjs
 
+echo "Generating impact dashboard data ..."
+python3 scripts/build-impact-dashboard-data.py --repo-root "$ROOT_DIR" --out-dir "$ROOT_DIR/data/impact"
+
 echo "Building site with: ${BUNDLE_CMD[*]} exec jekyll build ..."
 "${BUNDLE_CMD[@]}" exec jekyll build --safe --config _config.yml,_config.dev.yml
 

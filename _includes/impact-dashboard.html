@@ -1,0 +1,150 @@
+<link rel="stylesheet" href="{{ '/assets/css/impact-dashboard.css' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+
+<div class="impact-dashboard" markdown="0">
+  <section
+    class="idb-shell"
+    id="impactDashboardApp"
+    data-dashboard-url="{{ '/data/impact/impact_dashboard.json' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}"
+    data-reconciliation-url="{{ '/data/impact/impact_reconciliation.json' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}"
+    data-world-url="https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
+    data-world-url-fallback="https://unpkg.com/world-atlas@2/countries-110m.json"
+    aria-label="Impact dashboard">
+    <header class="idb-header">
+      <p id="idbSubtitle" class="idb-subtitle">Citations, media coverage, and global reach.</p>
+      <div id="buildMeta" class="idb-meta"></div>
+    </header>
+
+    <section id="trustChips" class="idb-chips"></section>
+
+    <section id="kpiRow" class="idb-kpis"></section>
+
+    <section class="idb-top-insights">
+      <article class="card">
+        <details id="donutDetails" open>
+          <summary>Channels & highlights</summary>
+          <div class="idb-subcard">
+            <h2>Attention mix</h2>
+            <p class="idb-help">Share by Social, News, Reference, and Commentary</p>
+            <div class="idb-donut-wrap"><canvas id="donutChart"></canvas></div>
+            <h3 class="idb-subhead">Highlights</h3>
+            <ul id="highlightsList" class="idb-bullets"></ul>
+          </div>
+        </details>
+      </article>
+
+      <article class="card">
+        <details id="mapDetails" open>
+          <summary>Global reach</summary>
+          <div class="idb-subcard">
+            <div class="idb-map-header">
+              <h2>Global reach</h2>
+              <div id="mapModeButtons" class="idb-tabs"></div>
+            </div>
+            <div class="idb-map-wrap"><canvas id="mapChart"></canvas></div>
+            <p id="mapHint" class="idb-help"></p>
+          </div>
+        </details>
+      </article>
+    </section>
+
+    <section class="idb-main">
+      <article class="card">
+        <div class="idb-panel-head">
+          <h2>Impact over time</h2>
+          <div id="timelineModeButtons" class="idb-tabs" role="tablist" aria-label="Timeline mode"></div>
+        </div>
+        <p id="timelineLead" class="idb-help">Yearly view of citations and press coverage.</p>
+        <div class="idb-chart-wrap"><canvas id="timelineChart"></canvas></div>
+        <p id="timelineHint" class="idb-help"></p>
+      </article>
+
+      <article class="card">
+        <h2>Press coverage</h2>
+        <div id="coverageTabs" class="idb-tabs" role="tablist" aria-label="Coverage tabs"></div>
+        <ol id="coverageList" class="idb-list"></ol>
+      </article>
+    </section>
+
+    <section class="idb-controls card">
+      <div class="idb-controls-primary">
+        <div class="idb-field">
+          <label for="channelSelect">Channel</label>
+          <select id="channelSelect"></select>
+        </div>
+
+        <div class="idb-field">
+          <label for="publicationSelect">Publication</label>
+          <select id="publicationSelect"></select>
+        </div>
+      </div>
+
+      <details id="advancedFilters" class="idb-advanced">
+        <summary>Advanced filters</summary>
+        <div class="idb-controls-advanced">
+          <div class="idb-field">
+            <label for="granularitySelect">Granularity</label>
+            <select id="granularitySelect"></select>
+          </div>
+
+          <div class="idb-field idb-range-field">
+            <label id="yearRangeLabel" for="yearMin">Years</label>
+            <div class="idb-range-wrap">
+              <input id="yearMin" type="range" step="1">
+              <input id="yearMax" type="range" step="1">
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="card">
+      <details>
+        <summary>Downloads & Raw Preview</summary>
+
+        <div class="idb-toolbar">
+          <div id="previewButtons" class="idb-tabs"></div>
+          <input id="previewSearch" type="text" placeholder="Search rows...">
+        </div>
+
+        <div id="downloadLinks" class="idb-export-links"></div>
+
+        <div class="idb-table-wrap">
+          <table>
+            <thead id="previewThead"></thead>
+            <tbody id="previewTbody"></tbody>
+          </table>
+        </div>
+        <p id="previewHint" class="idb-help"></p>
+      </details>
+    </section>
+
+    <section class="card">
+      <details>
+        <summary>Method & Data Quality</summary>
+        <div class="idb-diag-grid">
+          <div>
+            <h3>Coverage & Match Counts</h3>
+            <ul id="diagCounts"></ul>
+          </div>
+          <div>
+            <h3>Unmatched Scholar Records</h3>
+            <ul id="diagScholar"></ul>
+          </div>
+          <div>
+            <h3>Unmatched Altmetric Records</h3>
+            <ul id="diagAltmetric"></ul>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <noscript>
+      <p><strong>Impact dashboard requires JavaScript.</strong></p>
+    </noscript>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-chart-geo@4.3.3/build/index.umd.min.js"></script>
+<script defer src="{{ '/assets/js/impact-dashboard.js' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>
