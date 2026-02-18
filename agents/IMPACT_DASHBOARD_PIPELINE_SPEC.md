@@ -76,6 +76,11 @@ Loaded by include:
 - topojson-client (CDN)
 - chartjs-chart-geo (CDN)
 
+Client data-fetch behavior:
+
+- `assets/js/impact-dashboard.js` loads dashboard JSON with default browser fetch caching (no explicit `cache: "no-store"`).
+- `_includes/impact-dashboard.html` appends `?v={{ site.time | date: '%Y%m%d%H%M%S' }}` to JSON/CSS/JS URLs to force fresh assets after each build/deploy.
+
 World topojson fetch order in client:
 
 1. `https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json`

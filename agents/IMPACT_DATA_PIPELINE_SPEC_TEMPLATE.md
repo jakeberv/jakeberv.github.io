@@ -15,6 +15,9 @@ This template documents how `/impact/` dashboard data is generated and maintaine
 - Runtime datasets loaded by the client:
   - `data/impact/impact_dashboard.json`
   - `data/impact/impact_reconciliation.json`
+- Client fetch/cache expectations:
+  - JSON fetch uses default browser caching behavior in `assets/js/impact-dashboard.js`.
+  - Include URLs for dashboard JSON/CSS/JS should use a build-time version query (for example `?v={{ site.time | date: '%Y%m%d%H%M%S' }}`) to invalidate stale caches after deploy.
 
 ## Build-time generator
 - Script: `scripts/build-impact-dashboard-data.py`

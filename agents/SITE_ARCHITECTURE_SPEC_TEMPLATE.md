@@ -81,6 +81,7 @@ Notes:
 - Page-level rendering behavior:
   - Which layouts are active:
   - Which includes are critical:
+  - Any asset-loading conventions (for example local site-relative image URLs in includes, not raw GitHub hotlinks):
 - Publications rendering path:
   - Index page:
   - Include used for each record:
@@ -105,6 +106,7 @@ Notes:
 - Local overrides:
 - Page-specific inline styles to keep/avoid:
 - Accessibility notes:
+- Asset delivery notes (for example optimized web-sized assets in `images/` with high-res originals excluded from build via `_config.yml`):
 
 ## 8) SEO and metadata
 - Global metadata source:
