@@ -34,6 +34,9 @@ This directory contains spec templates and process guides for bot-assisted and h
 - [`agents/PUBLICATIONS_SPEC_TEMPLATE.md`](PUBLICATIONS_SPEC_TEMPLATE.md)  
   Use for publication entry schema and compatibility expectations.
 
+- [`agents/PUBLICATIONS_TAGS_SPEC.md`](PUBLICATIONS_TAGS_SPEC.md)  
+  Use for canonical publication tag taxonomy and `type` vs `tags` usage rules.
+
 - [`agents/NEWS_SPEC_TEMPLATE.md`](NEWS_SPEC_TEMPLATE.md)  
   Use for `_news` item structure and excerpt conventions.
 

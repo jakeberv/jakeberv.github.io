@@ -1,0 +1,167 @@
+# Canonical publication tag taxonomy for files in `_publications/`.
+# Use `type` for publication format and `tags` for topical descriptors.
+#
+# Example:
+# type: article
+# tags: [birds, phylogenomics, macroevolution]
+
+version: 1
+updated: 2026-02-18
+
+usage_rules:
+  tags_per_item: "3-5 recommended"
+  allow_mixed_groups: true
+  require_tags: true
+  front_matter_leaf_tags_only: true
+  disallow_type_values_in_tags: true
+  disallow_venue_platform_tags_in_tags: true
+
+type_values:
+  - article
+  - preprint
+  - chapter
+  - thesis
+  - software
+
+groups:
+  - slug: taxa
+    label: Taxa
+    description: Biological groups or focal clades.
+
+  - slug: methods
+    label: Methods
+    description: Methods and data-inference frameworks.
+
+  - slug: processes
+    label: Processes and Themes
+    description: Evolutionary processes, ecological themes, and trait domains.
+
+  - slug: contexts
+    label: Contexts and Data Contexts
+    description: Environmental settings, data modality, and resource context.
+
+tags:
+  - slug: birds
+    label: Birds
+    group: taxa
+    description: Avian-focused studies and datasets.
+
+  - slug: mammals
+    label: Mammals
+    group: taxa
+    description: Mammalian clades and macroevolutionary analyses.
+
+  - slug: cetaceans
+    label: Cetaceans
+    group: taxa
+    description: Whale, dolphin, and porpoise-focused studies.
+
+  - slug: rodents
+    label: Rodents
+    group: taxa
+    description: Old World mice/rats and other rodent-focused analyses.
+
+  - slug: invertebrates
+    label: Invertebrates
+    group: taxa
+    description: Invertebrate macroevolution and molecular evolution studies.
+
+  - slug: fishes
+    label: Fishes
+    group: taxa
+    description: Fish-focused phylogenetic and phenotypic analyses.
+
+  - slug: phylogenetics
+    label: Phylogenetics
+    group: methods
+    description: Tree inference and comparative phylogenetic methods.
+
+  - slug: phylogenomics
+    label: Phylogenomics
+    group: methods
+    description: Genome-scale phylogenetic inference.
+
+  - slug: phylogeography
+    label: Phylogeography
+    group: methods
+    description: Population/genomic diversification in geographic context.
+
+  - slug: molecular-evolution
+    label: Molecular Evolution
+    group: processes
+    description: Rates and patterns of sequence/genome evolution.
+
+  - slug: macroevolution
+    label: Macroevolution
+    group: processes
+    description: Deep-time diversification and trait evolution.
+
+  - slug: mass-extinction
+    label: Mass Extinction
+    group: processes
+    description: K-Pg and other extinction-linked evolutionary dynamics.
+
+  - slug: morphology
+    label: Morphology
+    group: processes
+    description: Morphological variation, structure, and evolution.
+
+  - slug: functional-traits
+    label: Functional Traits
+    group: processes
+    description: Trait datasets and functional morphology metrics.
+
+  - slug: biogeography
+    label: Biogeography
+    group: processes
+    description: Spatial diversification and regional evolutionary history.
+
+  - slug: speciation
+    label: Speciation
+    group: processes
+    description: Population divergence and species-level splits.
+
+  - slug: behavior
+    label: Behavior
+    group: processes
+    description: Behavior and behavioral evolution.
+
+  - slug: bioacoustics
+    label: Bioacoustics
+    group: methods
+    description: Vocal and mechanical sound evolution.
+
+  - slug: disease-ecology
+    label: Disease Ecology
+    group: processes
+    description: Parasite infection ecology and host-parasite patterns.
+
+  - slug: deep-sea
+    label: Deep Sea
+    group: contexts
+    description: Deep-sea habitat contexts (vents, seeps, organic falls).
+
+  - slug: life-history
+    label: Life History
+    group: processes
+    description: Life-history strategy and trait syndromes.
+
+  - slug: climate-change
+    label: Climate Change
+    group: contexts
+    description: Climate-driven or climate-associated biological responses.
+
+  - slug: museum-collections
+    label: Museum Collections
+    group: contexts
+    description: Studies relying on specimen holdings and collection resources.
+
+  - slug: software-tools
+    label: Software Tools
+    group: methods
+    description: Software resources or tooling outputs.
+
+  - slug: migration
+    label: Migration
+    group: contexts
+    description: Seasonal migration and movement-related evolutionary patterns.

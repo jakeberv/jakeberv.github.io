@@ -46,8 +46,18 @@ These are optional today, but recommended for **new** entries:
 
 ### Identity & classification
 - `type` *(string; e.g., `article`, `preprint`, `chapter`, `dataset`, `software`, `thesis`)*
-- `tags` *(list of strings; used for filtering later; avoid repeating `type` as a tag value)*
+- `tags` *(list of topical slugs from `_data/publication_tags.yml`; do not repeat `type` or venue/platform labels)*
 - `featured` *(boolean; for homepage/featured sections later)*
+
+### Canonical publication tags
+- Source of truth: `_data/publication_tags.yml`
+- `type` must use one of `type_values` in `_data/publication_tags.yml`
+- `tags` must use `slug` values in `_data/publication_tags.yml`
+- Keep `type` and `tags` semantically separate:
+  - `type`: publication format (`article`, `preprint`, `chapter`, `thesis`, `software`)
+  - `tags`: topical descriptors (for example `birds`, `phylogenomics`, `macroevolution`)
+- Validate with:
+  - `./scripts/validate_publication_tags.sh`
 
 ### DOI / identifiers
 - `doi` *(string; bare DOI, e.g. `10.1016/j.ympev.2014.09.001`)*  

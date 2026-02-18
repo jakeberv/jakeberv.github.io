@@ -11,7 +11,7 @@ github:
 citation: '<FONT COLOR="#ff0000">Rivero-Vega, R. A.</FONT>, <b>Berv, J. S.</b>, Clarke, J. T., Friedman, M., Variable patterns of phenotypic evolution among canonical ‘living fossil’ lineages. <i>bioRxiv</i>. doi: <a href="https://doi.org/10.1101/2024.11.14.623638">https://doi.org/10.1101/2024.11.14.623638</a> <FONT COLOR="#ff0000">Student advisee</FONT>'
 doi: "10.1101/2024.11.14.623638"
 type: preprint
-tags: [preprint, biorxiv]
+tags: [fishes, morphology, macroevolution]
 featured: false
 authors:
   - "Rivero-Vega, R. A."
