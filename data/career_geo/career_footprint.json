@@ -1,8 +1,34 @@
 {
-  "generated_at": "2026-02-18T00:04:46.029Z",
+  "generated_at": "2026-02-18T00:26:23.719Z",
   "source": "_news geo front matter",
-  "entry_count": 164,
+  "entry_count": 166,
   "entries": [
+    {
+      "id": "2005-06-15-yale-school-of-medicine-molecular-neuroscience-internship",
+      "title": "Molecular Neuroscience Internship at Yale School of Medicine",
+      "url": "/news/2005-06-15-yale-school-of-medicine-molecular-neuroscience-internship/",
+      "date": "2005-06-15",
+      "year": 2005,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "New Haven, Connecticut",
+          "country_code": "US",
+          "lat": 41.3083,
+          "lon": -72.9279,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Began a Yale School of Medicine molecular neuroscience internship (Summer 2005; additional term in 2007-2008)."
+    },
     {
       "id": "2007-06-01-yachana-nature-reserve-field-assistant",
       "title": "Fieldwork: Yachana Nature Reserve Ecuador Field Assistant",
@@ -594,6 +620,32 @@
         }
       ],
       "excerpt": "Received Yale's Louis Sudler creative and performing arts award recognition."
+    },
+    {
+      "id": "2010-05-15-yale-prum-lab-research-technician",
+      "title": "Research Technician Appointment at Yale Began",
+      "url": "/news/2010-05-15-yale-prum-lab-research-technician/",
+      "date": "2010-05-15",
+      "year": 2010,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "New Haven, Connecticut",
+          "country_code": "US",
+          "lat": 41.3083,
+          "lon": -72.9279,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Began a Yale research technician appointment in the Prum Laboratory (2010-2013)."
     },
     {
       "id": "2010-06-27-evolution-2010-conference",

@@ -21,10 +21,10 @@ This template defines the recommended schema for files in `_news/`.
 - `layout: archive`
 - `author_profile: true`
 - `excerpt_separator: "<!--news-excerpt-->"`
+- `geo` (map-ready geographic encoding; required by CI validator in this repository)
 
 ## Optional front matter
 - `tags` (array of canonical slugs from `_data/news_tags.yml`)
-- `geo` (object for map-ready geographic hit encoding)
 
 ## Canonical tag taxonomy
 - Source of truth: `_data/news_tags.yml`
@@ -37,26 +37,32 @@ This template defines the recommended schema for files in `_news/`.
 
 ## Geo encoding for map parsing
 - Goal: keep all geodata self-contained in each news file front matter for downstream JS parsing.
-- `geo` is optional. Omit it when an item has no meaningful location context.
-- Recommended structure is country-first with optional localities:
-  - `geo.version` (integer, currently `1`)
-  - `geo.scope` (optional string: `event` default, `global`, or `virtual`)
-  - `geo.countries` (array; required when `geo.scope` is `event`)
-  - `geo.localities` (optional array for point-map overlays)
+- Repository policy: every `_news` entry must include a `geo` block so CI validation and map generation succeed.
+- Required structure:
+  - `geo.version` (integer, must be `1`)
+  - `geo.scope` (string: `event`, `global`, or `virtual`)
+  - `geo.countries` (array key required for all entries)
+  - `geo.localities` (array key required for all entries; may be `[]`)
 - `geo.countries[]` fields:
   - `code` (required; ISO 3166-1 alpha-2, uppercase, for example `US`, `EC`, `GB`)
+  - `region_m49` (required string; UN M49 3-digit region code, for example `021`)
   - `weight` (optional number; defaults to `1`)
-  - `region_m49` (optional string; UN M49 3-digit region code, for example `021`)
 - `geo.localities[]` fields:
   - `name` (required string)
   - `country_code` (required; ISO 3166-1 alpha-2)
   - `lat` (required number)
   - `lon` (required number)
   - `weight` (optional number; defaults to `1`)
+- Scope-specific rules enforced by validator:
+  - `geo.scope: global` may use an empty `countries` list.
+  - non-global scope must include at least one country row.
+- Locality-specific rules enforced by validator:
+  - use `localities: []` when no locality can be inferred.
+  - if `localities:` block is present, each item must include `name`, `country_code`, `lat`, and `lon`.
 - Parsing guidance:
   - Choropleth country density should use `geo.countries[].code`.
-  - If weights are used, sum by country (or normalize per entry if desired by the map logic).
-  - Localities should be treated as optional point data, not required for country-level mapping.
+  - Current career-footprint map aggregates to unique event counts per geography; duplicate country/locality rows within one entry are deduplicated at render time.
+  - `geo.scope` is preserved in generated JSON for compatibility, even though current UI aggregates all scopes together.
 
 ## Strongly recommended body structure
 1. First paragraph: short full item text.
@@ -80,11 +86,11 @@ geo:
   scope: event
   countries:
     - code: US
-      weight: 1
       region_m49: "021"
-    - code: EC
       weight: 1
+    - code: EC
       region_m49: "005"
+      weight: 1
   localities:
     - name: "Seattle"
       country_code: US
@@ -103,5 +109,7 @@ One-sentence excerpt used in list pages.
 - Excerpt separator exists exactly once.
 - Item appears in `/news/` year group and homepage recent list.
 - If `tags` is present, every tag exists in `_data/news_tags.yml`.
-- If `geo` is present, `geo.version` is set and country codes are valid ISO alpha-2.
-- If `geo.localities` is present, each locality has `name`, `country_code`, `lat`, and `lon`.
+- `geo` exists and includes `version`, `scope`, `countries`, and `localities` keys.
+- `geo.version` is `1`, and `geo.scope` is one of `event`, `virtual`, `global`.
+- Every country row includes ISO alpha-2 `code` and 3-digit `region_m49`.
+- `localities` is either `[]` or a complete list where each item has `name`, `country_code`, `lat`, and `lon`.

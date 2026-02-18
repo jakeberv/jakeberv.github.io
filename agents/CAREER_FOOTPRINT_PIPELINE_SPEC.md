@@ -8,6 +8,7 @@ Define how the `/background/` Global Career Footprint map is built from `_news` 
 
 - Source collection: `_news/*.md`
 - Required schema anchor: `geo:` block in front matter (validated by `scripts/qa/validate-news-geo.mjs`)
+- Non-inputs: `data/altmetric/*` and other impact dashboard sources are not used by this pipeline.
 
 ## Build-Time Generator
 
