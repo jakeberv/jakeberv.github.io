@@ -89,6 +89,14 @@ header:
     {% elsif item.excerpt contains "<img" and item.excerpt contains "src='" %}
       {% assign thumb_src = item.excerpt | split: "src='" | last | split: "'" | first | strip %}
     {% endif %}
+    {% assign excerpt_render_html = excerpt_html | strip %}
+    {% if thumb_src != "" and excerpt_render_html contains "<img" %}
+      {% assign excerpt_before_img = excerpt_render_html | split: "<img" | first %}
+      {% assign excerpt_after_img = excerpt_render_html | split: "<img" | last %}
+      {% assign excerpt_after_img = excerpt_after_img | split: ">" | last %}
+      {% capture excerpt_render_html %}{{ excerpt_before_img }}{{ excerpt_after_img }}{% endcapture %}
+      {% assign excerpt_render_html = excerpt_render_html | strip %}
+    {% endif %}
     <div class="home-news-item__excerpt{% if thumb_src != "" %} has-thumb{% endif %}">
       {% if thumb_src != "" %}
       <img
@@ -99,9 +107,13 @@ header:
         decoding="async"
       />
       {% endif %}
-      <p class="home-news-item__summary">
-        {{ excerpt_text }}
-      </p>
+      <div class="home-news-item__summary">
+        {% if excerpt_render_html != "" %}
+          {{ excerpt_render_html }}
+        {% else %}
+          {{ excerpt_text }}
+        {% endif %}
+      </div>
     </div>
     </div>
   </article>
@@ -222,6 +234,14 @@ header:
         {% elsif item.excerpt contains "<img" and item.excerpt contains "src='" %}
           {% assign thumb_src = item.excerpt | split: "src='" | last | split: "'" | first | strip %}
         {% endif %}
+        {% assign excerpt_render_html = excerpt_html | strip %}
+        {% if thumb_src != "" and excerpt_render_html contains "<img" %}
+          {% assign excerpt_before_img = excerpt_render_html | split: "<img" | first %}
+          {% assign excerpt_after_img = excerpt_render_html | split: "<img" | last %}
+          {% assign excerpt_after_img = excerpt_after_img | split: ">" | last %}
+          {% capture excerpt_render_html %}{{ excerpt_before_img }}{{ excerpt_after_img }}{% endcapture %}
+          {% assign excerpt_render_html = excerpt_render_html | strip %}
+        {% endif %}
         <div class="home-news-item__excerpt{% if thumb_src != "" %} has-thumb{% endif %}">
           {% if thumb_src != "" %}
           <img
@@ -232,9 +252,13 @@ header:
             decoding="async"
           />
           {% endif %}
-          <p class="home-news-item__summary">
-            {{ excerpt_text }}
-          </p>
+          <div class="home-news-item__summary">
+            {% if excerpt_render_html != "" %}
+              {{ excerpt_render_html }}
+            {% else %}
+              {{ excerpt_text }}
+            {% endif %}
+          </div>
         </div>
         </div>
       </article>

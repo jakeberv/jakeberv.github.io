@@ -179,11 +179,13 @@
 }
 
 .home-news .home-news-item__thumb {
+  display: block;
   width: 84px;
-  max-width: 100%;
+  min-width: 84px;
   height: auto;
   max-height: 88px;
   object-fit: contain;
+  object-position: left top;
   margin-right: 0.2rem;
   border: 0;
   border-radius: 0;
@@ -250,6 +252,8 @@
 
   .home-news .home-news-item__thumb {
     width: 72px;
+    min-width: 72px;
+    height: auto;
     max-height: 76px;
   }
 }
