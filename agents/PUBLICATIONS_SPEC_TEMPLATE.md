@@ -13,11 +13,14 @@ Your publications index page groups and renders items from the `publications` co
 - Each item is rendered by an include that expects these fields when present:
   - `title` (required)
   - `date` (required; also used for year grouping)
+  - `doi` (optional but preferred; drives DOI text/link and Altmetric badge)
   - `citation` (optional but widely used; currently rendered as HTML)
-  - `link` (optional; used for the external link icon and **Altmetric** embed)
+  - `link` (optional; used as fallback external link, and DOI fallback source when it is a `doi.org` URL)
   - `paperurl` (optional; PDF icon)
   - `code` (optional; code icon)
   - `github` (optional; GitHub icon)
+  - `authors`, `student_authors`, `equal_contrib` (optional; structured author line + contribution markers/notes)
+  - `type`, `tags` (optional; topic line, with duplicate `type` values removed from displayed tags)
   - `abstract` (optional; displayed in a collapsible `<details>` block)
 
 ✅ **Compatibility rule:** keep existing fields (`citation`, `link`, `paperurl`, `code`, `github`) even if you add new structured fields.
@@ -43,13 +46,14 @@ These are optional today, but recommended for **new** entries:
 
 ### Identity & classification
 - `type` *(string; e.g., `article`, `preprint`, `chapter`, `dataset`, `software`, `thesis`)*
-- `tags` *(list of strings; used for filtering later)*
+- `tags` *(list of strings; used for filtering later; avoid repeating `type` as a tag value)*
 - `featured` *(boolean; for homepage/featured sections later)*
 
 ### DOI / identifiers
 - `doi` *(string; bare DOI, e.g. `10.1016/j.ympev.2014.09.001`)*  
   Keep `link` as the DOI URL for backwards compatibility:
   - `link: https://doi.org/<doi>`
+- Renderer fallback: if `doi` is missing and `link` points to `doi.org`, DOI is inferred from `link` for DOI display and Altmetric.
 - Optional identifiers (use when available):
   - `pmid`, `pmcid`, `arxiv`, `isbn`
 
@@ -62,6 +66,7 @@ These are optional today, but recommended for **new** entries:
 
 Rendering note:
 - New list renderers can annotate `student_authors` with `†` and `equal_contrib` with `*`, while preserving `citation` fallback for legacy entries.
+- `student_authors` and `equal_contrib` entries should exactly match values in `authors` (including punctuation and any `*` marker) so annotations resolve correctly.
 
 ### Abstract (structured)
 - `abstract` *(YAML block scalar; preferred so the publications list can show it)*
@@ -81,17 +86,26 @@ Many existing pages use `citation` with HTML (e.g., bolding your name). Keep tha
 
 Later, you can migrate to structured citations, but don’t remove `citation` until templates stop depending on it.
 
-### 2) Keep `link` for Altmetric + link icon
-The current include uses `post.link` for:
-- external-link icon
-- Altmetric embed `data-doi`
+### 2) Keep `doi` + `link` compatibility for DOI/Altmetric and external-link rendering
+The current include resolves DOI in this order:
+- `post.doi` (preferred)
+- derived from `post.link` only when `link` is a `doi.org` URL
+
+If DOI resolves, the list renders DOI text/link, DOI icon, and Altmetric badge.
+If DOI does not resolve but `link` exists, the list renders a generic external link.
 
 **Recommendation:**  
 - Store `doi` as bare DOI string (future-friendly)
-- Store `link` as `https://doi.org/<doi>` (current behavior)
+- Store `link` as `https://doi.org/<doi>` for backwards compatibility
 
 ### 3) Keep `paperurl`, `code`, `github`
 Even if you add `pdf`, `repo`, etc., keep the legacy keys for existing templates.
+
+### 4) Prefer repository-mirrored PDFs for `paperurl`
+For consistency with current entries, prefer:
+- `paperurl: https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/<FILE>.pdf`
+
+This avoids brittle publisher/session URLs and keeps download buttons stable.
 
 ---
 
@@ -117,7 +131,7 @@ venue: "JOURNAL / OUTLET"
 
 # Backwards-compatible links (keep these)
 link: "https://doi.org/DOI_GOES_HERE"            # external link; used by icons + altmetric
-paperurl: "URL_TO_PDF"                           # PDF icon
+paperurl: "https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/FILE.pdf"  # preferred PDF mirror
 
 # Optional legacy icons (keep if used)
 code: "URL_TO_CODE_OR_REPO"
@@ -129,7 +143,7 @@ citation: "AUTHORS (YEAR). TITLE. <i>JOURNAL</i>. https://doi.org/DOI"
 # New structured fields (recommended)
 doi: "DOI_GOES_HERE"                             # bare DOI string
 type: article                                    # article | preprint | chapter | dataset | software | thesis
-tags: [TAG1, TAG2, TAG3]
+tags: [TAG1, TAG2]                               # avoid repeating `type` in tags
 featured: false
 
 authors:
@@ -176,7 +190,7 @@ permalink: /publication/YYYY-MM-DD-SLUG
 date: YYYY-MM-DD
 venue: "OUTLET"
 link: "https://doi.org/DOI"
-paperurl: "URL_TO_PDF"
+paperurl: "https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/FILE.pdf"
 citation: "..."
 ---
 ```

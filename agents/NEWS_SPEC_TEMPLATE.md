@@ -15,6 +15,7 @@ This template defines the recommended schema for files in `_news/`.
 - Homepage category filters show the 5 most recent items within the selected umbrella category.
 - Homepage hides umbrella chips that have zero matching items.
 - Homepage list keeps title, date, and excerpt display, and inserts year delimiters when visible items span multiple years.
+- Homepage "View all news" link preserves the active umbrella filter via `?category=<umbrella-group-slug>`.
 - Excerpt text is split by `<!--news-excerpt-->`.
 - News page supports client-side filtering by umbrella category (derived from `_data/news_tags.yml`).
 - Active news filter can be shared/persisted with `?category=<umbrella-group-slug>` on `/news/`.
