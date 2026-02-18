@@ -1919,7 +1919,7 @@ function initControls() {
 }
 
 async function loadJson(path) {
-  const res = await fetch(path, { cache: "no-store" });
+  const res = await fetch(path);
   if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
   return res.json();
 }

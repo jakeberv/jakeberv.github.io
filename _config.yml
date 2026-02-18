@@ -158,6 +158,7 @@ exclude:
   - log
   - node_modules
   - package.json
+  - images/originals/profile-full.png
   - tmp
   - vendor
 keep_files:
