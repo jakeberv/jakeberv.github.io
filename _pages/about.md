@@ -19,14 +19,25 @@ header:
   #    url: "https://github.com"
 ---
 
-<style>
-  /* match the news excerpt text on the homepage */
-  .about-intro { font-size: 0.9em; line-height: 1.35; color: #333; margin: 0 0 0.6em 0; }
-  .about-intro a { text-decoration: none; }
-</style>
-
-<strong>Jacob (Jake) Berv</strong> is an evolutionary biologist interested in building and deciphering the tree of life. His research integrates data from natural history, ecology, genomics, and paleontology—often through the application of novel computational tools—in order to understand the links between micro- and macroevolution.
-{: .about-intro}
+<div class="home-intro">
+  <div class="home-intro__text">
+    <p class="about-intro"><strong>Jacob (Jake) Berv</strong> is an evolutionary biologist interested in building and deciphering the tree of life. His research integrates data from natural history, ecology, genomics, and paleontology—often through the application of novel computational tools—in order to understand the links between micro- and macroevolution.</p>
+    <p class="about-intro about-intro--follow">He is the lead developer of <code>bifrost</code> and a contributor to <code>janus</code>; explore featured tools on the <a href="{{ '/software/' | relative_url }}">Software page</a>.</p>
+    <div class="home-intro__badges" aria-label="Software badges">
+      <a class="home-intro__badge home-intro__badge--bifrost" href="{{ '/software/' | relative_url }}" title="bifrost software card on the Software page">
+        <img src="https://raw.githubusercontent.com/jakeberv/bifrost/main/man/figures/logo.png" alt="bifrost logo" loading="lazy" decoding="async" />
+      </a>
+      <a class="home-intro__badge home-intro__badge--janus" href="{{ '/software/' | relative_url }}" title="janus software card on the Software page">
+        <img src="/images/software/janus.webp" alt="janus logo" loading="lazy" decoding="async" />
+      </a>
+    </div>
+  </div>
+  <figure class="home-intro__media">
+    <a class="home-intro__media-link" href="{{ '/background/' | relative_url }}" title="View Background page">
+      <img src="/images/research/home-intro-binoculars.jpg" alt="Jacob Berv during bird survey fieldwork" loading="lazy" decoding="async" />
+    </a>
+  </figure>
+</div>
 
 ## Recent News
 {% assign news_items = site.news
