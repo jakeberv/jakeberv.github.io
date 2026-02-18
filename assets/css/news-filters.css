@@ -184,9 +184,10 @@
   height: auto;
   max-height: 88px;
   object-fit: contain;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  background: #fff;
+  margin-right: 0.2rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
 }
 
 .home-news .home-news-item__summary {
