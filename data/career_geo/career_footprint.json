@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-18T07:34:16.404Z",
+  "generated_at": "2026-02-18T17:38:03.802Z",
   "source": "_news geo front matter",
   "entry_count": 165,
   "entries": [
@@ -1414,10 +1414,10 @@
       "excerpt": "Received recurring Athena Fund support from the Cornell Lab of Ornithology (2013-2015)."
     },
     {
-      "id": "2015-12-15-nature-comprehensive-bird-phylogeny",
+      "id": "2015-10-07-nature-comprehensive-bird-phylogeny",
       "title": "Publication: Comprehensive Phylogeny of Birds in Nature",
-      "url": "/news/2015-12-15-nature-comprehensive-bird-phylogeny/",
-      "date": "2015-12-15",
+      "url": "/news/2015-10-07-nature-comprehensive-bird-phylogeny/",
+      "date": "2015-10-07",
       "year": 2015,
       "scope": "event",
       "countries": [
@@ -2532,10 +2532,10 @@
       "excerpt": "Completed the U-M Museum of Natural History Science Communication Certificate."
     },
     {
-      "id": "2020-11-12-umass-boston-seminar",
+      "id": "2020-11-20-umass-boston-seminar",
       "title": "Invited Seminar: University of Massachusetts Boston Biology",
-      "url": "/news/2020-11-12-umass-boston-seminar/",
-      "date": "2020-11-12",
+      "url": "/news/2020-11-20-umass-boston-seminar/",
+      "date": "2020-11-20",
       "year": 2020,
       "scope": "event",
       "countries": [
@@ -2844,10 +2844,10 @@
       "excerpt": "The seminar presented models of post-extinction diversification across birds, genomes, and deep-time data."
     },
     {
-      "id": "2021-12-05-vertebrate-paleontology-guest-lecture",
+      "id": "2021-12-06-vertebrate-paleontology-guest-lecture",
       "title": "Guest Lecture: Evolution of Birds for Vertebrate Paleontology",
-      "url": "/news/2021-12-05-vertebrate-paleontology-guest-lecture/",
-      "date": "2021-12-05",
+      "url": "/news/2021-12-06-vertebrate-paleontology-guest-lecture/",
+      "date": "2021-12-06",
       "year": 2021,
       "scope": "event",
       "countries": [
@@ -3156,10 +3156,10 @@
       "excerpt": "The seminar emphasized museum-enabled macroevolutionary research and comparative genomic inference."
     },
     {
-      "id": "2022-10-15-okinawa-institute-talk",
+      "id": "2022-10-12-okinawa-institute-talk",
       "title": "Invited Talk at the Okinawa Institute of Science and Technology",
-      "url": "/news/2022-10-15-okinawa-institute-talk/",
-      "date": "2022-10-15",
+      "url": "/news/2022-10-12-okinawa-institute-talk/",
+      "date": "2022-10-12",
       "year": 2022,
       "scope": "event",
       "countries": [
@@ -3650,10 +3650,10 @@
       "excerpt": "Contributed service support and abstract-volume editing at NAPC 2024 in Ann Arbor."
     },
     {
-      "id": "2024-06-24-napc-phenotypic-integration",
+      "id": "2024-06-21-napc-phenotypic-integration",
       "title": "Talk: Phenotypic Integration at the North American Paleontological Congress",
-      "url": "/news/2024-06-24-napc-phenotypic-integration/",
-      "date": "2024-06-24",
+      "url": "/news/2024-06-21-napc-phenotypic-integration/",
+      "date": "2024-06-21",
       "year": 2024,
       "scope": "event",
       "countries": [
@@ -3832,32 +3832,6 @@
       "excerpt": "Additional details: Thomas, G. W. C., Hughes, J. J., Kumon, T., Berv, J. S., Nordgren, C. E., Lampson, M., Levine, M., Searle, J. B., & Good, J. M. (2025). Genome Biology and Evolution, evaf017. https://doi.org/10.1093/gbe/evaf017"
     },
     {
-      "id": "2025-01-15-bifrost-cran-package-release",
-      "title": "bifrost R Package Released on CRAN",
-      "url": "/news/2025-01-15-bifrost-cran-package-release/",
-      "date": "2025-01-15",
-      "year": 2025,
-      "scope": "event",
-      "countries": [
-        {
-          "code": "US",
-          "name": "United States",
-          "region_m49": "021",
-          "weight": 1
-        }
-      ],
-      "localities": [
-        {
-          "name": "Ann Arbor, Michigan",
-          "country_code": "US",
-          "lat": 42.2808,
-          "lon": -83.743,
-          "weight": 1
-        }
-      ],
-      "excerpt": "bifrost, an R package for branch-level evolutionary inference, was released on CRAN. Package page"
-    },
-    {
       "id": "2025-01-20-deep-sea-invertebrate-substitution-rates",
       "title": "Publication: Habitat-Associated Substitution Rates in Deep-Sea Invertebrates",
       "url": "/news/2025-01-20-deep-sea-invertebrate-substitution-rates/",
@@ -3989,7 +3963,7 @@
     },
     {
       "id": "2025-08-01-packard-foundation-weeks-lab",
-      "title": "Packard Foundation Postdoctoral Fellowship in the Weeks Lab",
+      "title": "Postdoctoral Fellowship in the Weeks Lab (funded by the Packard Foundation)",
       "url": "/news/2025-08-01-packard-foundation-weeks-lab/",
       "date": "2025-08-01",
       "year": 2025,
@@ -4233,6 +4207,32 @@
         }
       ],
       "excerpt": "Published a 2026 Evolutionary Ecology paper on climate-linked morphological responses and global data priorities."
+    },
+    {
+      "id": "2026-01-21-bifrost-cran-package-release",
+      "title": "bifrost R Package Released on CRAN",
+      "url": "/news/2026-01-21-bifrost-cran-package-release/",
+      "date": "2026-01-21",
+      "year": 2026,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "bifrost, an R package for branch-level evolutionary inference, was released on CRAN. Package page"
     }
   ]
 }

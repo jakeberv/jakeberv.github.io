@@ -1,6 +1,6 @@
 ---
 title: "Guest Lecture: Evolution of Birds for Vertebrate Paleontology"
-date: 2021-12-05
+date: 2021-12-06
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"

@@ -1,6 +1,6 @@
 ---
 title: "Invited Talk at the Okinawa Institute of Science and Technology"
-date: 2022-10-15
+date: 2022-10-12
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"

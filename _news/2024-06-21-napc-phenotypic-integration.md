@@ -1,6 +1,6 @@
 ---
 title: "Talk: Phenotypic Integration at the North American Paleontological Congress"
-date: 2024-06-24
+date: 2024-06-21
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"

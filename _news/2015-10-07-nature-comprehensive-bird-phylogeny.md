@@ -1,6 +1,6 @@
 ---
 title: "Publication: Comprehensive Phylogeny of Birds in Nature"
-date: 2015-12-15
+date: 2015-10-07
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
