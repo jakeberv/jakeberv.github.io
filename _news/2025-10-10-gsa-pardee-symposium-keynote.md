@@ -4,6 +4,7 @@ date: 2025-10-10
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+pinned: true
 geo:
   version: 1
   scope: event
