@@ -5,7 +5,7 @@ layout: archive
 author_profile: true
 ---
 
-<div class="news-page" data-news-page>
+<div class="news-page" data-news-page data-news-scroll-on-click="false">
 
 {% capture _news_feed %}{{ '/feed/news.xml' | relative_url }}{% endcapture %}
 <link rel="alternate" type="application/atom+xml" title="News — {{ site.title }}" href="{{ _news_feed }}">

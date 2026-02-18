@@ -40,31 +40,158 @@ header:
 </div>
 
 ## Recent News
+<link rel="stylesheet" href="{{ '/assets/css/news-filters.css' | relative_url }}">
+
 {% assign news_items = site.news
   | where_exp: "i", "i.date"
   | where_exp: "i", "i.date <= site.time"
   | sort: "date"
   | reverse %}
+{% assign tag_defs = site.data.news_tags.tags %}
+{% assign umbrella_groups = site.data.news_tags.umbrella_groups %}
 
-{% for item in news_items limit:5 %}
-  <div style="margin-bottom: 0.25em; line-height: 1.35; font-size: 0.85em;">
-    <p style="margin: 0;">
-      <strong>{{ item.date | date: "%B %-d, %Y" }}</strong> — 
-      <a href="{{ item.url | relative_url }}" style="text-decoration: none;">
-        {{ item.title }}
-      </a>
-    </p>
-    <p style="margin: 0.15em 0 0 0; font-size: 0.9em;">
-      {{ item.excerpt }}
-    </p>
+{% if news_items.size > 0 %}
+<div
+  class="home-news tex2jax_ignore mathjax_ignore"
+  data-news-page
+  data-news-limit="5"
+  data-news-scroll-on-click="false"
+>
+  <div class="news-filters home-news-filters" data-news-filters role="toolbar" aria-label="Filter recent news by umbrella category">
+    <button
+      type="button"
+      class="news-filter is-active"
+      data-news-filter
+      data-group="all"
+      aria-pressed="true"
+    >
+      All
+      <span class="news-filter-count">{{ news_items.size }}</span>
+    </button>
+
+    {% for group in umbrella_groups %}
+      {% assign group_count = 0 %}
+      {% for i in news_items %}
+        {% assign has_group = false %}
+        {% if i.tags %}
+          {% for tag_slug in i.tags %}
+            {% assign tag_def = tag_defs | where: "slug", tag_slug | first %}
+            {% if tag_def and tag_def.group == group.slug %}
+              {% assign has_group = true %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        {% if has_group %}
+          {% assign group_count = group_count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      {% if group_count > 0 %}
+      <button
+        type="button"
+        class="news-filter"
+        data-news-filter
+        data-group="{{ group.slug }}"
+        aria-pressed="false"
+      >
+        {{ group.label }}
+        <span class="news-filter-count">{{ group_count }}</span>
+      </button>
+      {% endif %}
+    {% endfor %}
   </div>
-{% endfor %}
 
-<p style="margin-top: 0.8em;">
-  <a href="{{ '/news/' | relative_url }}" style="font-weight: 600; text-decoration: none;">
+  <p class="news-empty home-news-empty" data-news-empty hidden>No news entries match this category yet.</p>
+
+  {% assign year_groups = news_items | group_by_exp: "i", "i.date | date: '%Y'" %}
+  {% for year in year_groups %}
+  <section class="home-news-year-block" data-news-year-block data-year="{{ year.name }}">
+    <h3 class="home-news-year-title">{{ year.name }}</h3>
+
+    {% for item in year.items %}
+      {% assign group_tokens = "" %}
+      {% if item.tags %}
+        {% for tag_slug in item.tags %}
+          {% assign tag_def = tag_defs | where: "slug", tag_slug | first %}
+          {% if tag_def %}
+            {% capture group_token %}|{{ tag_def.group }}|{% endcapture %}
+            {% unless group_tokens contains group_token %}
+              {% capture group_tokens %}{{ group_tokens }}{{ group_token }}{% endcapture %}
+            {% endunless %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      {% assign item_groups = group_tokens | replace: "|", " " | strip %}
+      <article
+        class="home-news-item"
+        data-news-item
+        data-groups="{{ item_groups | escape_once }}"
+        data-tags="{{ item.tags | join: ' ' | escape_once }}"
+      >
+        <time
+          class="home-news-item__date"
+          datetime="{{ item.date | date_to_xmlschema }}"
+          aria-label="{{ item.date | date: '%B %-d, %Y' }}"
+        >
+          {{ item.date | date: "%b %-d" | upcase }}
+        </time>
+        <div class="home-news-item__body">
+          <p class="home-news-item__title">
+            <a href="{{ item.url | relative_url }}" class="home-news-item__link">
+              {{ item.title }}
+            </a>
+          </p>
+        {% assign summary_parts = item.content | split: "<!--news-excerpt-->" %}
+        {% assign summary_html = summary_parts | last | strip %}
+        {% assign summary_teaser = summary_html | split: "<hr" | first | split: "<style" | first | split: "<script" | first | strip %}
+        {% assign summary_text = summary_teaser | strip_html | strip_newlines | replace: "  ", " " | strip %}
+        {% assign fallback_text = item.excerpt | strip_html | strip_newlines | replace: "  ", " " | strip %}
+        {% assign excerpt_html = item.excerpt %}
+        {% assign excerpt_text = fallback_text %}
+        {% if summary_parts.size > 1 and summary_text != "" %}
+          {% assign excerpt_html = summary_teaser %}
+          {% assign excerpt_text = summary_text %}
+        {% endif %}
+        {% assign thumb_src = "" %}
+        {% if excerpt_html contains "<img" and excerpt_html contains 'src="' %}
+          {% assign thumb_src = excerpt_html | split: 'src="' | last | split: '"' | first | strip %}
+        {% elsif excerpt_html contains "<img" and excerpt_html contains "src='" %}
+          {% assign thumb_src = excerpt_html | split: "src='" | last | split: "'" | first | strip %}
+        {% elsif item.excerpt contains "<img" and item.excerpt contains 'src="' %}
+          {% assign thumb_src = item.excerpt | split: 'src="' | last | split: '"' | first | strip %}
+        {% elsif item.excerpt contains "<img" and item.excerpt contains "src='" %}
+          {% assign thumb_src = item.excerpt | split: "src='" | last | split: "'" | first | strip %}
+        {% endif %}
+        <div class="home-news-item__excerpt{% if thumb_src != "" %} has-thumb{% endif %}">
+          {% if thumb_src != "" %}
+          <img
+            src="{{ thumb_src }}"
+            alt=""
+            class="home-news-item__thumb"
+            loading="lazy"
+            decoding="async"
+          />
+          {% endif %}
+          <p class="home-news-item__summary">
+            {{ excerpt_text }}
+          </p>
+        </div>
+        </div>
+      </article>
+    {% endfor %}
+  </section>
+  {% endfor %}
+</div>
+{% else %}
+<p>No news items yet.</p>
+{% endif %}
+
+<p class="home-news-all-link">
+  <a href="{{ '/news/' | relative_url }}" data-news-all-link data-base-href="{{ '/news/' | relative_url }}">
     View all news →
   </a>
 </p>
+
+<script src="{{ '/assets/js/news-filters.js' | relative_url }}" defer></script>
 
 <br>
 

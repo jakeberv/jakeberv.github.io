@@ -10,7 +10,11 @@ This template defines the recommended schema for files in `_news/`.
 
 ## Current rendering behavior
 - News index page reads `site.news`, filters out future-dated items, sorts by date descending, and groups by year.
-- Homepage shows latest items with title, date, and excerpt.
+- Homepage (`/`) reads the same `site.news` source and supports umbrella-category chip filters.
+- Homepage `All` filter shows the 5 most recent items across all categories.
+- Homepage category filters show the 5 most recent items within the selected umbrella category.
+- Homepage hides umbrella chips that have zero matching items.
+- Homepage list keeps title, date, and excerpt display, and inserts year delimiters when visible items span multiple years.
 - Excerpt text is split by `<!--news-excerpt-->`.
 - News page supports client-side filtering by umbrella category (derived from `_data/news_tags.yml`).
 - Active news filter can be shared/persisted with `?category=<umbrella-group-slug>` on `/news/`.
