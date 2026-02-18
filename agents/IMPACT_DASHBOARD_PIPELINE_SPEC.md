@@ -5,10 +5,10 @@ Defines how `/impact/` is rendered from generated data and which scripts/workflo
 
 ## Page Integration
 
-- Page file: `/Users/cotinga/Documents/jakeberv.github.io/_pages/impact.md`
-- Include shell: `/Users/cotinga/Documents/jakeberv.github.io/_includes/impact-dashboard.html`
-- Client logic: `/Users/cotinga/Documents/jakeberv.github.io/assets/js/impact-dashboard.js`
-- Client styles: `/Users/cotinga/Documents/jakeberv.github.io/assets/css/impact-dashboard.css`
+- Page file: `_pages/impact.md`
+- Include shell: `_includes/impact-dashboard.html`
+- Client logic: `assets/js/impact-dashboard.js`
+- Client styles: `assets/css/impact-dashboard.css`
 
 The page is include-driven (no inline chart logic in `impact.md`).
 
@@ -16,20 +16,20 @@ The page is include-driven (no inline chart logic in `impact.md`).
 
 The builder reads:
 
-- `/Users/cotinga/Documents/jakeberv.github.io/_publications/*.md`
-- `/Users/cotinga/Documents/jakeberv.github.io/_data/scholar_metrics.json`
-- `/Users/cotinga/Documents/jakeberv.github.io/_data/map_data.json`
-- `/Users/cotinga/Documents/jakeberv.github.io/data/altmetric/raw/*.csv`
+- `_publications/*.md`
+- `_data/scholar_metrics.json`
+- `_data/map_data.json`
+- `data/altmetric/raw/*.csv`
 
 ## Generated Outputs
 
 Builder script:
 
-- `/Users/cotinga/Documents/jakeberv.github.io/scripts/build-impact-dashboard-data.py`
+- `scripts/build-impact-dashboard-data.py`
 
 Default output directory:
 
-- `/Users/cotinga/Documents/jakeberv.github.io/data/impact/`
+- `data/impact/`
 
 Generated files:
 
@@ -44,12 +44,12 @@ Dataset catalog links in `impact_dashboard.json` are absolute site paths under `
 
 Local preview hook:
 
-- `/Users/cotinga/Documents/jakeberv.github.io/scripts/local_preview.command`
+- `scripts/local_preview.command`
 - Runs `python3 scripts/build-impact-dashboard-data.py` before `jekyll build`.
 
 Deploy hook:
 
-- `/Users/cotinga/Documents/jakeberv.github.io/.github/workflows/deploy_site.yml`
+- `.github/workflows/deploy_site.yml`
 - Runs `python3 scripts/build-impact-dashboard-data.py` before Jekyll build.
 
 This ensures impact data is regenerated at deploy/build time when source inputs change.
