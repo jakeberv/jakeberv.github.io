@@ -11,6 +11,9 @@ This template defines the recommended schema for files in `_news/`.
 ## Current rendering behavior
 - News index page reads `site.news`, filters out future-dated items, sorts by date descending, and groups by year.
 - Homepage (`/`) reads the same `site.news` source and supports umbrella-category chip filters.
+- Homepage optionally renders a `Pinned News` block above `Recent News` when one or more entries include `pinned: true`.
+- Pinned block is sorted by date descending and capped at 3 entries.
+- Pinned entries may also appear in the `Recent News` list.
 - Homepage `All` filter shows the 5 most recent items across all categories.
 - Homepage category filters show the 5 most recent items within the selected umbrella category.
 - Homepage hides umbrella chips that have zero matching items.
@@ -30,6 +33,7 @@ This template defines the recommended schema for files in `_news/`.
 
 ## Optional front matter
 - `tags` (array of canonical slugs from `_data/news_tags.yml`)
+- `pinned` (boolean; when `true`, item is eligible for homepage `Pinned News`)
 
 ## Canonical tag taxonomy
 - Source of truth: `_data/news_tags.yml`
@@ -83,6 +87,7 @@ date: YYYY-MM-DD
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+# pinned: true
 tags:
   - conference_talk
   - invited_talk

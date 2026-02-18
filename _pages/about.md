@@ -39,7 +39,6 @@ header:
   </figure>
 </div>
 
-## Recent News
 <link rel="stylesheet" href="{{ '/assets/css/news-filters.css' | relative_url }}">
 
 {% assign news_items = site.news
@@ -49,6 +48,68 @@ header:
   | reverse %}
 {% assign tag_defs = site.data.news_tags.tags %}
 {% assign umbrella_groups = site.data.news_tags.umbrella_groups %}
+{% assign pinned_items = news_items | where: "pinned", true %}
+
+{% if pinned_items.size > 0 %}
+<h2>Pinned News</h2>
+<div class="home-news home-news--pinned tex2jax_ignore mathjax_ignore">
+  {% for item in pinned_items limit: 3 %}
+  <article class="home-news-item">
+    <time
+      class="home-news-item__date"
+      datetime="{{ item.date | date_to_xmlschema }}"
+      aria-label="{{ item.date | date: '%B %-d, %Y' }}"
+    >
+      {{ item.date | date: "%b %-d" | upcase }}
+    </time>
+    <div class="home-news-item__body">
+      <p class="home-news-item__title">
+        <a href="{{ item.url | relative_url }}" class="home-news-item__link">
+          {{ item.title }}
+        </a>
+      </p>
+    {% assign summary_parts = item.content | split: "<!--news-excerpt-->" %}
+    {% assign summary_html = summary_parts | last | strip %}
+    {% assign summary_teaser = summary_html | split: "<hr" | first | split: "<style" | first | split: "<script" | first | strip %}
+    {% assign summary_text = summary_teaser | strip_html | strip_newlines | replace: "  ", " " | strip %}
+    {% assign fallback_text = item.excerpt | strip_html | strip_newlines | replace: "  ", " " | strip %}
+    {% assign excerpt_html = item.excerpt %}
+    {% assign excerpt_text = fallback_text %}
+    {% if summary_parts.size > 1 and summary_text != "" %}
+      {% assign excerpt_html = summary_teaser %}
+      {% assign excerpt_text = summary_text %}
+    {% endif %}
+    {% assign thumb_src = "" %}
+    {% if excerpt_html contains "<img" and excerpt_html contains 'src="' %}
+      {% assign thumb_src = excerpt_html | split: 'src="' | last | split: '"' | first | strip %}
+    {% elsif excerpt_html contains "<img" and excerpt_html contains "src='" %}
+      {% assign thumb_src = excerpt_html | split: "src='" | last | split: "'" | first | strip %}
+    {% elsif item.excerpt contains "<img" and item.excerpt contains 'src="' %}
+      {% assign thumb_src = item.excerpt | split: 'src="' | last | split: '"' | first | strip %}
+    {% elsif item.excerpt contains "<img" and item.excerpt contains "src='" %}
+      {% assign thumb_src = item.excerpt | split: "src='" | last | split: "'" | first | strip %}
+    {% endif %}
+    <div class="home-news-item__excerpt{% if thumb_src != "" %} has-thumb{% endif %}">
+      {% if thumb_src != "" %}
+      <img
+        src="{{ thumb_src }}"
+        alt=""
+        class="home-news-item__thumb"
+        loading="lazy"
+        decoding="async"
+      />
+      {% endif %}
+      <p class="home-news-item__summary">
+        {{ excerpt_text }}
+      </p>
+    </div>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+{% endif %}
+
+## Recent News
 
 {% if news_items.size > 0 %}
 <div
