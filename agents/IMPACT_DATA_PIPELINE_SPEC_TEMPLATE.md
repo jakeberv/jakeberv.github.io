@@ -23,7 +23,7 @@ This template documents how `/impact/` dashboard data is generated and maintaine
 - Script: `scripts/build-impact-dashboard-data.py`
 - Default invocation:
   - `python3 scripts/build-impact-dashboard-data.py --repo-root "$ROOT_DIR" --out-dir "$ROOT_DIR/data/impact"`
-- Reach script (optional but recommended for outlet prominence/ranking):
+- Reach refresh script (API-backed; run on controlled schedule/manual trigger):
   - `scripts/build-impact-reach-data.py`
   - `python3 scripts/build-impact-reach-data.py --repo-root "$ROOT_DIR" --out-dir "$ROOT_DIR/data/impact/reach"`
 
@@ -41,6 +41,12 @@ This template documents how `/impact/` dashboard data is generated and maintaine
 - `data/impact/reach/outlet_reach.json`
 - `data/impact/reach/outlet_reach.csv`
 - `data/impact/reach/reach_metadata.json`
+- `data/impact/reach/time_adjusted_mentions_reach.json`
+- `data/impact/reach/time_adjusted_mentions_reach.csv`
+- `data/impact/reach/time_adjusted_outlet_reach.json`
+- `data/impact/reach/time_adjusted_outlet_reach.csv`
+- `data/impact/reach/tranco_snapshots_used.json`
+- `data/impact/reach/tranco_snapshots_used.csv`
 
 Dataset links in `impact_dashboard.json` should remain site-absolute (`/data/impact/exports/...`) so downloads resolve in local preview and on deployed Pages.
 
@@ -112,12 +118,18 @@ Dataset links in `impact_dashboard.json` should remain site-absolute (`/data/imp
 ### Deploy-time generation
 - Workflow file: `.github/workflows/deploy_site.yml`
 - Required behavior: run `scripts/build-impact-dashboard-data.py` before `jekyll build`.
-- Required behavior: run `scripts/build-impact-reach-data.py` before `jekyll build`.
+- Required behavior: verify committed reach datasets exist before `jekyll build`.
 
 ### Local preview generation
 - Script: `scripts/local_preview.command`
 - Required behavior: run `scripts/build-impact-dashboard-data.py` before local `jekyll build`.
-- Required behavior: run `scripts/build-impact-reach-data.py` before local `jekyll build`.
+- Required behavior: use committed reach datasets (do not run API-backed reach refresh).
+
+### Reach refresh generation
+- Workflow file: `.github/workflows/refresh_impact_reach_data.yml`
+- Required behavior: run `scripts/build-impact-reach-data.py` on schedule and manual trigger.
+- Required behavior: apply conservative lookup controls (`--historical-window-days`, `--historical-max-date-lookups`, `--historical-date-api-delay-ms`).
+- Required behavior: commit only `data/impact/reach/*` outputs when they changed.
 
 ### Upstream source refreshes
 - Scholar refresh workflow: `.github/workflows/fetch_scholar_data.yml` updates `_data/scholar_metrics.json`.
@@ -130,7 +142,8 @@ Dataset links in `impact_dashboard.json` should remain site-absolute (`/data/imp
 - `dataset_catalog` paths correspond to files present under `data/impact/exports/`.
 - `data/impact/reach/reach_metadata.json` reports non-zero ranked domains when network or cache is available.
 - `/impact/` loads charts/tables without console errors.
-- Local preview and deploy workflows both regenerate impact data before Jekyll build.
+- Deploy and local preview paths avoid live API refresh for reach data.
+- Reach refresh workflow updates committed reach outputs on controlled cadence.
 
 ## Runbook notes
 - If upstream source formats change, update parser/normalization logic in `scripts/build-impact-dashboard-data.py` before regenerating outputs.

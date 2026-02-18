@@ -1,0 +1,105 @@
+name: Refresh Impact Reach Data
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+    inputs:
+      historical_granularity:
+        description: "Historical granularity"
+        required: false
+        default: "quarter"
+        type: choice
+        options:
+          - quarter
+          - month
+      historical_window_days:
+        description: "Nearest-date lookup window (+/- days)"
+        required: false
+        default: "10"
+      historical_max_date_lookups:
+        description: "Max date lookups per run (0 disables cap)"
+        required: false
+        default: "250"
+      historical_date_api_delay_ms:
+        description: "Delay between date lookups (ms)"
+        required: false
+        default: "250"
+      force_download:
+        description: "Force redownload of Tranco snapshots"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-impact-reach-data
+  cancel-in-progress: false
+
+jobs:
+  refresh-reach:
+    runs-on: ubuntu-latest
+    env:
+      HISTORICAL_GRANULARITY: ${{ github.event.inputs.historical_granularity || 'quarter' }}
+      HISTORICAL_WINDOW_DAYS: ${{ github.event.inputs.historical_window_days || '10' }}
+      HISTORICAL_MAX_DATE_LOOKUPS: ${{ github.event.inputs.historical_max_date_lookups || '250' }}
+      HISTORICAL_DATE_API_DELAY_MS: ${{ github.event.inputs.historical_date_api_delay_ms || '250' }}
+      FORCE_DOWNLOAD: ${{ github.event.inputs.force_download || 'false' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: master
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Refresh impact reach datasets
+        run: |
+          set -euo pipefail
+          ARGS=(
+            --repo-root "$GITHUB_WORKSPACE"
+            --out-dir "$GITHUB_WORKSPACE/data/impact/reach"
+            --historical-granularity "$HISTORICAL_GRANULARITY"
+            --historical-window-days "$HISTORICAL_WINDOW_DAYS"
+            --historical-max-date-lookups "$HISTORICAL_MAX_DATE_LOOKUPS"
+            --historical-date-api-delay-ms "$HISTORICAL_DATE_API_DELAY_MS"
+          )
+          if [[ "$FORCE_DOWNLOAD" == "true" ]]; then
+            ARGS+=(--force-download)
+          fi
+          python3 scripts/build-impact-reach-data.py "${ARGS[@]}"
+
+      - name: Commit and push reach data updates
+        if: ${{ success() }}
+        run: |
+          set -euo pipefail
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git checkout master
+
+          git add \
+            data/impact/reach/outlet_reach.json \
+            data/impact/reach/outlet_reach.csv \
+            data/impact/reach/reach_metadata.json \
+            data/impact/reach/time_adjusted_mentions_reach.json \
+            data/impact/reach/time_adjusted_mentions_reach.csv \
+            data/impact/reach/time_adjusted_outlet_reach.json \
+            data/impact/reach/time_adjusted_outlet_reach.csv \
+            data/impact/reach/tranco_snapshots_used.json \
+            data/impact/reach/tranco_snapshots_used.csv
+
+          if git diff --cached --quiet; then
+            echo "No reach dataset changes to commit"
+            exit 0
+          fi
+
+          git commit -m "Refresh impact reach datasets"
+          git pull --rebase origin master
+          git push origin master

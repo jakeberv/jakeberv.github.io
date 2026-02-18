@@ -76,8 +76,19 @@ node scripts/build-career-geo-data.mjs
 echo "Generating impact dashboard data ..."
 python3 scripts/build-impact-dashboard-data.py --repo-root "$ROOT_DIR" --out-dir "$ROOT_DIR/data/impact"
 
-echo "Generating impact reach data ..."
-python3 scripts/build-impact-reach-data.py --repo-root "$ROOT_DIR" --out-dir "$ROOT_DIR/data/impact/reach"
+echo "Using committed impact reach data (no API refresh during local preview)."
+for required in \
+  "$ROOT_DIR/data/impact/reach/outlet_reach.json" \
+  "$ROOT_DIR/data/impact/reach/reach_metadata.json" \
+  "$ROOT_DIR/data/impact/reach/time_adjusted_mentions_reach.json" \
+  "$ROOT_DIR/data/impact/reach/time_adjusted_outlet_reach.json" \
+  "$ROOT_DIR/data/impact/reach/tranco_snapshots_used.json"; do
+  if [[ ! -f "$required" ]]; then
+    echo "Missing reach dataset: $required"
+    echo "Run scripts/build-impact-reach-data.py manually before preview."
+    exit 1
+  fi
+done
 
 echo "Building site with: ${BUNDLE_CMD[*]} exec jekyll build ..."
 "${BUNDLE_CMD[@]}" exec jekyll build --safe --config _config.yml,_config.dev.yml

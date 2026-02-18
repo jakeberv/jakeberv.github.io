@@ -24,7 +24,7 @@ Impact dashboard builder reads:
 Impact reach builder reads:
 
 - `data/impact/exports/news_mentions_clean.json` (preferred) or `.csv`
-- Tranco top-domain list (network fetch with local cache fallback)
+- Tranco top-domain list + historical date snapshots (network fetch with local cache fallback)
 
 ## Generated Outputs
 
@@ -49,6 +49,19 @@ Generated files:
 - `reach/outlet_reach.json`
 - `reach/outlet_reach.csv`
 - `reach/reach_metadata.json`
+- `reach/time_adjusted_mentions_reach.json`
+- `reach/time_adjusted_mentions_reach.csv`
+- `reach/time_adjusted_outlet_reach.json`
+- `reach/time_adjusted_outlet_reach.csv`
+- `reach/tranco_snapshots_used.json`
+- `reach/tranco_snapshots_used.csv`
+
+Historical Tranco lookup guardrails (default behavior):
+
+- Uses cache first (`reach/.cache/tranco_cache_index.json` and cached zip files).
+- Applies request pacing: `--historical-date-api-delay-ms` (default `250`).
+- Applies per-run lookup cap: `--historical-max-date-lookups` (default `250`, `0` disables cap).
+- Uses bounded nearest-date probing: `--historical-window-days` (default `10`).
 
 Dataset catalog links in `impact_dashboard.json` are absolute site paths under `/data/impact/exports/`.
 
@@ -58,15 +71,22 @@ Local preview hook:
 
 - `scripts/local_preview.command`
 - Runs `python3 scripts/build-impact-dashboard-data.py` before `jekyll build`.
-- Runs `python3 scripts/build-impact-reach-data.py` before `jekyll build`.
+- Uses committed reach datasets (no Tranco API calls during preview).
 
 Deploy hook:
 
 - `.github/workflows/deploy_site.yml`
 - Runs `python3 scripts/build-impact-dashboard-data.py` before Jekyll build.
-- Runs `python3 scripts/build-impact-reach-data.py` before Jekyll build.
+- Verifies committed reach datasets exist before Jekyll build.
 
-This ensures impact and reach datasets are regenerated at deploy/build time when source inputs change.
+Reach refresh hook:
+
+- `.github/workflows/refresh_impact_reach_data.yml`
+- Scheduled weekly (`cron: 17 6 * * 1`) and manual (`workflow_dispatch`).
+- Runs `python3 scripts/build-impact-reach-data.py` with conservative historical lookup defaults.
+- Commits and pushes updated `data/impact/reach/*` outputs only when values changed.
+
+This keeps deploy/build deterministic while still refreshing API-backed reach data on a controlled cadence.
 
 ## Runtime Dependencies
 
