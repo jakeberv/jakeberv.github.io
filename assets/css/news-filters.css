@@ -185,16 +185,20 @@
   height: auto;
   max-height: 88px;
   object-fit: contain;
-  object-position: left top;
+  object-position: center top;
   margin-right: 0.2rem;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
+  border: 1px solid #d7dde5;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .home-news .home-news-item__summary {
   margin: 0;
   line-height: 1.35;
+}
+
+.home-news .home-news-item__summary img {
+  display: none !important;
 }
 
 .home-news .home-news-item__excerpt > :first-child {
