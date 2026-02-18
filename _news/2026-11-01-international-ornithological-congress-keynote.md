@@ -20,6 +20,7 @@ geo:
 tags:
   - keynote
   - conference_talk
+  - invited_talk
 ---
 Jacob Berv was invited to deliver a keynote in the Macroevolution symposium at the International Ornithological Congress (November 2026). [IOC 2026](https://iocongress2026.org/)
 

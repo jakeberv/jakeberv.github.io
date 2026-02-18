@@ -19,6 +19,7 @@ geo:
       weight: 1
 tags:
   - conference_talk
+  - invited_talk
 ---
 Jacob Berv presented a long-format virtual talk at the III Meeting of Systematics, Biogeography, and Evolution on molecular early burst and bird diversification across the K–Pg boundary.
 

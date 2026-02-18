@@ -19,6 +19,7 @@ geo:
       weight: 1
 tags:
   - grant
+  - fellowship
 ---
 Jacob Berv received Environmental Fellowship for Study and Research support in both 2008 and 2009.
 

@@ -19,6 +19,7 @@ geo:
       weight: 1
 tags:
   - grant
+  - fellowship
 ---
 Jacob Berv received the Yale College Dean's Research Fellowship in the Sciences in May 2009.
 

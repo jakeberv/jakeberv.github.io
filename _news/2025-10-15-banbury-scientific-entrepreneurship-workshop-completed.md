@@ -19,6 +19,7 @@ geo:
       weight: 1
 tags:
   - workshop_training
+  - travel_support
 ---
 Jacob Berv completed the "AI in Science Entrepreneurship" workshop at the Cold Spring Harbor Banbury Center in October 2025 with Schmidt Sciences travel support. [Banbury Center](https://www.cshl.edu/Banbury/)
 

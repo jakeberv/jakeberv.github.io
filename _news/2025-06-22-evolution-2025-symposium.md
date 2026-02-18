@@ -19,6 +19,7 @@ geo:
       weight: 1
 tags:
   - conference_talk
+  - service
 ---
 At Evolution 2025 in Athens, Georgia (June 20-24), Jacob Berv presented "An inverse latitudinal gradient in body plan evolution reflects a legacy of deep-time radiations" and co-organized a sponsored symposium on AI applications in ecology and evolutionary biology. [Program](https://www.evolutionmeetings.org/uploads/4/8/8/0/48804503/evolution_2025_program_inperson_final.pdf)
 

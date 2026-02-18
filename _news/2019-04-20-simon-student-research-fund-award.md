@@ -19,9 +19,9 @@ geo:
       weight: 1
 tags:
   - grant
+  - fellowship
 ---
 Jacob Berv received the Melinda and Irwin Simon Student Research Fund (Cornell Lab of Ornithology Fellowship) in Spring 2019.
 
 <!--news-excerpt-->
 Received the Simon Student Research Fund fellowship support through the Cornell Lab of Ornithology.
-

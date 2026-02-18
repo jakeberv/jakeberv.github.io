@@ -19,6 +19,7 @@ geo:
       weight: 1
 tags:
   - workshop_led
+  - service
 ---
 Jacob Berv led the University of Michigan Institute for Data & AI in Society workshop "Visualizing and Presenting Data."
 

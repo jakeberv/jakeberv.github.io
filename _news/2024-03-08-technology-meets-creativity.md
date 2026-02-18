@@ -19,6 +19,7 @@ geo:
       weight: 1
 tags:
   - workshop_led
+  - service
 ---
 Jacob Berv organized and led "Technology Meets Creativity: Exploring the Potential of Artificial Intelligence for the Arts" at the University of Michigan, a MIDAS/Arts Initiative event on AI and creative practice. [Event](https://midas.umich.edu/events/technology-meets-creativity-workshop/)
 

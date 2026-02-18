@@ -20,6 +20,8 @@ geo:
 tags:
   - award
   - keynote
+  - travel_support
+  - invited_talk
 ---
 Jacob Berv received the Geological Society of America Pardee Keynote Speaker Travel Award ($2,000) in connection with the 2025 invited Pardee keynote. [Session page](https://gsameetings.secure-platform.com/connects25/solicitations/103002/sessiongallery/schedule/items/95017/application/11105)
 

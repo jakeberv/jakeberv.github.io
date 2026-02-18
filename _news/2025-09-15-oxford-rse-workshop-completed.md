@@ -19,6 +19,7 @@ geo:
       weight: 1
 tags:
   - workshop_training
+  - travel_support
 ---
 Jacob Berv completed the 2nd Research Software Engineering Workshop at the University of Oxford in September 2025 with Schmidt Sciences travel support.
 
