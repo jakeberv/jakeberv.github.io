@@ -1,6 +1,6 @@
 ---
 title: "bifrost R Package Released on CRAN"
-date: 2025-01-15
+date: 2026-01-21
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
