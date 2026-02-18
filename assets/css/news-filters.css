@@ -187,9 +187,9 @@
   object-fit: contain;
   object-position: center top;
   margin-right: 0.2rem;
-  border: 1px solid #d7dde5;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 .home-news .home-news-item__summary {
