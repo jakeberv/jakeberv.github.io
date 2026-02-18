@@ -51,7 +51,10 @@ author_profile: true
 
     {% if talk.key_topics and talk.key_topics.size > 0 %}
       {% assign topics_more_count = talk.key_topics.size | minus: max_topics %}
-      {% assign topics_has_more = topics_more_count > 0 %}
+      {% assign topics_has_more = false %}
+      {% if topics_more_count > 0 %}
+        {% assign topics_has_more = true %}
+      {% endif %}
       <div class="talk-card__meta-line" aria-label="Talk topics">
         <span class="talk-card__desc-label">Topics</span>
 

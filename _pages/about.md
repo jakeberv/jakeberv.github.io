@@ -79,32 +79,14 @@ header:
       {% assign excerpt_html = summary_teaser %}
       {% assign excerpt_text = summary_text %}
     {% endif %}
-    {% assign thumb_src = "" %}
-    {% if excerpt_html contains "<img" and excerpt_html contains 'src="' %}
-      {% assign thumb_src = excerpt_html | split: 'src="' | last | split: '"' | first | strip %}
-    {% elsif excerpt_html contains "<img" and excerpt_html contains "src='" %}
-      {% assign thumb_src = excerpt_html | split: "src='" | last | split: "'" | first | strip %}
-    {% elsif item.excerpt contains "<img" and item.excerpt contains 'src="' %}
-      {% assign thumb_src = item.excerpt | split: 'src="' | last | split: '"' | first | strip %}
-    {% elsif item.excerpt contains "<img" and item.excerpt contains "src='" %}
-      {% assign thumb_src = item.excerpt | split: "src='" | last | split: "'" | first | strip %}
+    {% assign pinned_summary = excerpt_text | replace: "  ", " " | strip %}
+    {% assign sentence_parts = pinned_summary | split: ". " %}
+    {% if sentence_parts.size > 1 %}
+      {% assign pinned_summary = sentence_parts | first | strip | append: "." %}
     {% endif %}
-    <div class="home-news-item__excerpt{% if thumb_src != "" %} has-thumb{% endif %}">
-      {% if thumb_src != "" %}
-      <img
-        src="{{ thumb_src }}"
-        alt=""
-        class="home-news-item__thumb"
-        loading="lazy"
-        decoding="async"
-      />
-      {% endif %}
+    <div class="home-news-item__excerpt">
       <div class="home-news-item__summary">
-        {% if excerpt_html != "" %}
-          {{ excerpt_html }}
-        {% else %}
-          {{ excerpt_text }}
-        {% endif %}
+        {{ pinned_summary | escape }}
       </div>
     </div>
     </div>
@@ -113,11 +95,11 @@ header:
 </div>
 {% endif %}
 
-## Recent News
+<h2 class="home-news-heading home-news-heading--recent">Recent News</h2>
 
 {% if news_items.size > 0 %}
 <div
-  class="home-news tex2jax_ignore mathjax_ignore"
+  class="home-news home-news--recent tex2jax_ignore mathjax_ignore"
   data-news-page
   data-news-limit="5"
   data-news-scroll-on-click="false"
@@ -205,45 +187,6 @@ header:
               {{ item.title }}
             </a>
           </p>
-        {% assign summary_parts = item.content | split: "<!--news-excerpt-->" %}
-        {% assign summary_html = summary_parts | last | strip %}
-        {% assign summary_teaser = summary_html | split: "<hr" | first | split: "<style" | first | split: "<script" | first | strip %}
-        {% assign summary_text = summary_teaser | strip_html | strip_newlines | replace: "  ", " " | strip %}
-        {% assign fallback_text = item.excerpt | strip_html | strip_newlines | replace: "  ", " " | strip %}
-        {% assign excerpt_html = item.excerpt %}
-        {% assign excerpt_text = fallback_text %}
-        {% if summary_parts.size > 1 and summary_text != "" %}
-          {% assign excerpt_html = summary_teaser %}
-          {% assign excerpt_text = summary_text %}
-        {% endif %}
-        {% assign thumb_src = "" %}
-        {% if excerpt_html contains "<img" and excerpt_html contains 'src="' %}
-          {% assign thumb_src = excerpt_html | split: 'src="' | last | split: '"' | first | strip %}
-        {% elsif excerpt_html contains "<img" and excerpt_html contains "src='" %}
-          {% assign thumb_src = excerpt_html | split: "src='" | last | split: "'" | first | strip %}
-        {% elsif item.excerpt contains "<img" and item.excerpt contains 'src="' %}
-          {% assign thumb_src = item.excerpt | split: 'src="' | last | split: '"' | first | strip %}
-        {% elsif item.excerpt contains "<img" and item.excerpt contains "src='" %}
-          {% assign thumb_src = item.excerpt | split: "src='" | last | split: "'" | first | strip %}
-        {% endif %}
-        <div class="home-news-item__excerpt{% if thumb_src != "" %} has-thumb{% endif %}">
-          {% if thumb_src != "" %}
-          <img
-            src="{{ thumb_src }}"
-            alt=""
-            class="home-news-item__thumb"
-            loading="lazy"
-            decoding="async"
-          />
-          {% endif %}
-          <div class="home-news-item__summary">
-            {% if excerpt_html != "" %}
-              {{ excerpt_html }}
-            {% else %}
-              {{ excerpt_text }}
-            {% endif %}
-          </div>
-        </div>
         </div>
       </article>
     {% endfor %}
