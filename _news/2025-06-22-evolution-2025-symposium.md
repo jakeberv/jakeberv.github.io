@@ -4,6 +4,19 @@ date: 2025-06-22
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+geo:
+  version: 1
+  scope: event
+  countries:
+    - code: US
+      weight: 1
+      region_m49: "021"
+  localities:
+    - name: "Athens, Georgia"
+      country_code: US
+      lat: 33.9519
+      lon: -83.3576
+      weight: 1
 tags:
   - conference_talk
 ---

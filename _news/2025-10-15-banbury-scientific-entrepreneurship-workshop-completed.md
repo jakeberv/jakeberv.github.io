@@ -4,6 +4,19 @@ date: 2025-10-15
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+geo:
+  version: 1
+  scope: event
+  countries:
+    - code: US
+      weight: 1
+      region_m49: "021"
+  localities:
+    - name: "Cold Spring Harbor, New York"
+      country_code: US
+      lat: 40.8715
+      lon: -73.4568
+      weight: 1
 tags:
   - workshop_training
 ---

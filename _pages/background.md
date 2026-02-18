@@ -71,6 +71,10 @@ As a graduate student, Jake investigated several <a href="https://jakeberv.com/p
 
 <hr class="bg-divider" />
 
+{% include career-footprint-map.html %}
+
+<hr class="bg-divider" />
+
 <div class="bg-section">
 <p class="bg-kicker">Affiliations</p>
 

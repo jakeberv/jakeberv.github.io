@@ -1,0 +1,92 @@
+<div class="bg-section bg-career-footprint" markdown="0">
+  <p class="bg-kicker">Global Career Footprint</p>
+  <p class="bg-career-footprint__lede">
+    Geographic distribution of geo-tagged career events encoded in <code>_news</code> front matter.
+  </p>
+
+  <section
+    class="cfp-shell"
+    id="careerFootprintApp"
+    aria-label="Global Career Footprint map"
+    markdown="0"
+    data-data-url="{{ '/data/career_geo/career_footprint.json' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}"
+    data-world-url="https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
+    data-world-url-fallback="https://unpkg.com/world-atlas@2/countries-110m.json">
+    <section class="cfp-controls" aria-label="Map controls">
+      <div class="cfp-control-group" role="group" aria-label="View mode">
+        <button class="cfp-chip is-active" data-control="mode" data-value="countries">Country Footprint</button>
+        <button class="cfp-chip" data-control="mode" data-value="localities">Locality Hotspots</button>
+      </div>
+
+      <div class="cfp-control-group" role="group" aria-label="Time window">
+        <button class="cfp-chip is-active" data-control="window" data-value="all">All Time</button>
+        <button class="cfp-chip" data-control="window" data-value="10y">Last 10y</button>
+        <button class="cfp-chip" data-control="window" data-value="5y">Last 5y</button>
+      </div>
+
+      <label class="cfp-toggle">
+        <input type="checkbox" data-toggle="exclude-us" />
+        <span>Exclude US</span>
+      </label>
+
+      <button class="cfp-chip cfp-chip-reset" data-action="reset" type="button">Reset</button>
+    </section>
+
+    <section class="cfp-kpis" aria-label="Summary metrics">
+      <article class="cfp-kpi-card">
+        <p class="cfp-kpi-label">Career Events in View</p>
+        <p class="cfp-kpi-value" data-kpi="entries">-</p>
+      </article>
+      <article class="cfp-kpi-card">
+        <p class="cfp-kpi-label">Countries Reached</p>
+        <p class="cfp-kpi-value" data-kpi="countries">-</p>
+      </article>
+      <article class="cfp-kpi-card">
+        <p class="cfp-kpi-label">Mapped Localities</p>
+        <p class="cfp-kpi-value" data-kpi="localities">-</p>
+      </article>
+      <article class="cfp-kpi-card">
+        <p class="cfp-kpi-label">Highest Density Location</p>
+        <p class="cfp-kpi-value cfp-kpi-hotspot" data-kpi="hotspot">-</p>
+      </article>
+    </section>
+
+    <section class="cfp-layout">
+      <article class="cfp-map-card">
+        <div class="cfp-map-head">
+          <div>
+            <h3 class="cfp-map-title" id="cfpMapTitle" data-map-title>Country Footprint</h3>
+            <p class="cfp-map-subtitle" id="cfpMapSubtitle" data-map-subtitle>Color intensity shows event counts per country.</p>
+          </div>
+          <div class="cfp-legend" data-legend></div>
+        </div>
+
+        <div class="cfp-map-wrap">
+          <svg class="cfp-map" viewBox="0 0 980 520" role="img" aria-labelledby="cfpMapTitle cfpMapSubtitle"></svg>
+          <div class="cfp-tooltip" data-tooltip hidden></div>
+        </div>
+      </article>
+
+      <aside class="cfp-insight-card">
+        <section>
+          <h4>Top Countries in Footprint</h4>
+          <div class="cfp-rank-list" data-top-countries></div>
+        </section>
+
+        <section>
+          <h4>Top Localities by Event Count</h4>
+          <div class="cfp-rank-list" data-top-localities></div>
+        </section>
+
+        <section>
+          <h4>Recent Geo-Tagged Career Events</h4>
+          <div class="cfp-recent-list" data-recent-entries></div>
+        </section>
+      </aside>
+    </section>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+<script src="{{ '/assets/js/career-footprint-map.js' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}" defer></script>

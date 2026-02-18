@@ -4,6 +4,19 @@ date: 2017-08-10
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+geo:
+  version: 1
+  scope: event
+  countries:
+    - code: AR
+      weight: 1
+      region_m49: "005"
+  localities:
+    - name: "Puerto Iguazu"
+      country_code: AR
+      lat: -25.5952
+      lon: -54.5734
+      weight: 1
 tags:
   - conference_talk
 ---

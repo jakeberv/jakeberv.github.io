@@ -4,6 +4,19 @@ date: 2010-06-27
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+geo:
+  version: 1
+  scope: event
+  countries:
+    - code: US
+      weight: 1
+      region_m49: "021"
+  localities:
+    - name: "Portland, Oregon"
+      country_code: US
+      lat: 45.5152
+      lon: -122.6784
+      weight: 1
 tags:
   - conference_talk
 ---

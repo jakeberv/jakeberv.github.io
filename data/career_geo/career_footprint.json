@@ -1,0 +1,4212 @@
+{
+  "generated_at": "2026-02-18T00:04:46.029Z",
+  "source": "_news geo front matter",
+  "entry_count": 164,
+  "entries": [
+    {
+      "id": "2007-06-01-yachana-nature-reserve-field-assistant",
+      "title": "Fieldwork: Yachana Nature Reserve Ecuador Field Assistant",
+      "url": "/news/2007-06-01-yachana-nature-reserve-field-assistant/",
+      "date": "2007-06-01",
+      "year": 2007,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "EC",
+          "name": "Ecuador",
+          "region_m49": "005",
+          "weight": 1
+        }
+      ],
+      "localities": [],
+      "excerpt": "Served as a field assistant at Yachana Nature Reserve in Ecuador."
+    },
+    {
+      "id": "2007-06-15-yachana-technical-high-school-conservation-outreach",
+      "title": "Outreach: Yachana Technical High School Conservation Presentations",
+      "url": "/news/2007-06-15-yachana-technical-high-school-conservation-outreach/",
+      "date": "2007-06-15",
+      "year": 2007,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "EC",
+          "name": "Ecuador",
+          "region_m49": "005",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Yachana, Napo Province",
+          "country_code": "EC",
+          "lat": -0.905,
+          "lon": -77.807,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Delivered school outreach presentations on conservation research in Ecuador."
+    },
+    {
+      "id": "2007-07-01-phase-072-expedition-report-publication",
+      "title": "Publication: Phase 072 Expedition Report",
+      "url": "/news/2007-07-01-phase-072-expedition-report-publication/",
+      "date": "2007-07-01",
+      "year": 2007,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "EC",
+          "name": "Ecuador",
+          "region_m49": "005",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Yachana, Napo Province",
+          "country_code": "EC",
+          "lat": -0.905,
+          "lon": -77.807,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Co-authored the 2007 Phase 072 Expedition Report for Yachana Foundation and MECN."
+    },
+    {
+      "id": "2008-05-15-tzaneen-primary-school-megafauna-outreach",
+      "title": "Outreach: Tzaneen Primary School Megafauna Presentations",
+      "url": "/news/2008-05-15-tzaneen-primary-school-megafauna-outreach/",
+      "date": "2008-05-15",
+      "year": 2008,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "ZA",
+          "name": "South Africa",
+          "region_m49": "018",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Tzaneen, Limpopo",
+          "country_code": "ZA",
+          "lat": -23.8333,
+          "lon": 30.1667,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Contributed to school outreach talks on megafauna research in South Africa."
+    },
+    {
+      "id": "2008-06-15-karongwe-reserve-field-assistant",
+      "title": "Fieldwork: Karongwe Reserve South Africa Field Assistant",
+      "url": "/news/2008-06-15-karongwe-reserve-field-assistant/",
+      "date": "2008-06-15",
+      "year": 2008,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "ZA",
+          "name": "South Africa",
+          "region_m49": "018",
+          "weight": 1
+        }
+      ],
+      "localities": [],
+      "excerpt": "Served as a field assistant at Karongwe Reserve in South Africa."
+    },
+    {
+      "id": "2008-10-15-yale-globalist-international-photography-contest-second-place",
+      "title": "Award: Yale Globalist International Photography Contest (2nd Place)",
+      "url": "/news/2008-10-15-yale-globalist-international-photography-contest-second-place/",
+      "date": "2008-10-15",
+      "year": 2008,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "New Haven, Connecticut",
+          "country_code": "US",
+          "lat": 41.3083,
+          "lon": -72.9279,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Won second place in Yale Globalist's international photography contest."
+    },
+    {
+      "id": "2009-01-15-yale-environmental-news-photo-feature",
+      "title": "Award: Yale Environmental News Photo Feature (2009)",
+      "url": "/news/2009-01-15-yale-environmental-news-photo-feature/",
+      "date": "2009-01-15",
+      "year": 2009,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "New Haven, Connecticut",
+          "country_code": "US",
+          "lat": 41.3083,
+          "lon": -72.9279,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received photography feature recognition in Yale Environmental News (Winter 2009)."
+    },
+    {
+      "id": "2009-04-15-photographers-forum-college-photography-finalist",
+      "title": "Award: Photographer's Forum College Photography Contest Finalist",
+      "url": "/news/2009-04-15-photographers-forum-college-photography-finalist/",
+      "date": "2009-04-15",
+      "year": 2009,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "New Haven, Connecticut",
+          "country_code": "US",
+          "lat": 41.3083,
+          "lon": -72.9279,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Named finalist in Photographer's Forum's annual college photography contest."
+    },
+    {
+      "id": "2009-05-15-yale-college-deans-research-fellowship-sciences",
+      "title": "Grant: Yale College Dean's Research Fellowship in the Sciences",
+      "url": "/news/2009-05-15-yale-college-deans-research-fellowship-sciences/",
+      "date": "2009-05-15",
+      "year": 2009,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "New Haven, Connecticut",
+          "country_code": "US",
+          "lat": 41.3083,
+          "lon": -72.9279,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received Yale College Dean's fellowship support for undergraduate research."
+    },
+    {
+      "id": "2009-05-20-yale-peabody-museum-summer-fellowship",
+      "title": "Fellowship: Yale Peabody Museum Summer Fellowship",
+      "url": "/news/2009-05-20-yale-peabody-museum-summer-fellowship/",
+      "date": "2009-05-20",
+      "year": 2009,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "New Haven, Connecticut",
+          "country_code": "US",
+          "lat": 41.3083,
+          "lon": -72.9279,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received Yale Peabody Museum summer fellowship support."
+    },
+    {
+      "id": "2009-05-22-yale-science-and-engineering-association-fellowship",
+      "title": "Fellowship: Yale Science and Engineering Association Fellowship",
+      "url": "/news/2009-05-22-yale-science-and-engineering-association-fellowship/",
+      "date": "2009-05-22",
+      "year": 2009,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "New Haven, Connecticut",
+          "country_code": "US",
+          "lat": 41.3083,
+          "lon": -72.9279,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received the Yale Science and Engineering Association Fellowship."
+    },
+    {
+      "id": "2009-05-25-environmental-fellowship-study-research-series",
+      "title": "Grant: Environmental Fellowship for Study and Research (2008-2009)",
+      "url": "/news/2009-05-25-environmental-fellowship-study-research-series/",
+      "date": "2009-05-25",
+      "year": 2009,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "New Haven, Connecticut",
+          "country_code": "US",
+          "lat": 41.3083,
+          "lon": -72.9279,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received Environmental Fellowship support across two consecutive years (2008-2009)."
+    },
+    {
+      "id": "2009-05-28-alan-s-tetelman-fellowship-study-abroad",
+      "title": "Fellowship: Alan S. Tetelman Fellowship for Study Abroad",
+      "url": "/news/2009-05-28-alan-s-tetelman-fellowship-study-abroad/",
+      "date": "2009-05-28",
+      "year": 2009,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "New Haven, Connecticut",
+          "country_code": "US",
+          "lat": 41.3083,
+          "lon": -72.9279,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received the Alan S. Tetelman Fellowship for study-abroad research support."
+    },
+    {
+      "id": "2009-05-30-cook-richter-scholarship",
+      "title": "Grant: Paul K. and Evelyn Elizabeth Cook Richter Scholarship",
+      "url": "/news/2009-05-30-cook-richter-scholarship/",
+      "date": "2009-05-30",
+      "year": 2009,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "New Haven, Connecticut",
+          "country_code": "US",
+          "lat": 41.3083,
+          "lon": -72.9279,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received the Cook Richter Scholarship in support of undergraduate research."
+    },
+    {
+      "id": "2009-08-20-national-conservation-division-suriname-invited-talk",
+      "title": "Invited Talk: National Conservation Division of Suriname",
+      "url": "/news/2009-08-20-national-conservation-division-suriname-invited-talk/",
+      "date": "2009-08-20",
+      "year": 2009,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "SR",
+          "name": "Suriname",
+          "region_m49": "005",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Paramaribo",
+          "country_code": "SR",
+          "lat": 5.852,
+          "lon": -55.2038,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Delivered an invited presentation in Suriname on savanna bird population genetics."
+    },
+    {
+      "id": "2009-08-20-suriname-collecting-expedition-leader-fieldwork",
+      "title": "Fieldwork: Suriname Collecting Expedition Leader",
+      "url": "/news/2009-08-20-suriname-collecting-expedition-leader-fieldwork/",
+      "date": "2009-08-20",
+      "year": 2009,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "SR",
+          "name": "Suriname",
+          "region_m49": "005",
+          "weight": 1
+        }
+      ],
+      "localities": [],
+      "excerpt": "Led a Suriname collecting expedition through the Yale Peabody Museum."
+    },
+    {
+      "id": "2009-10-01-mellon-forum-undergraduate-research-grant",
+      "title": "Grant: Mellon Forum Undergraduate Research Grant",
+      "url": "/news/2009-10-01-mellon-forum-undergraduate-research-grant/",
+      "date": "2009-10-01",
+      "year": 2009,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "New Haven, Connecticut",
+          "country_code": "US",
+          "lat": 41.3083,
+          "lon": -72.9279,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received Mellon Forum undergraduate research grant support."
+    },
+    {
+      "id": "2009-11-15-ecuador-collecting-expedition-leader-fieldwork",
+      "title": "Fieldwork: Ecuador Collecting Expedition Leader",
+      "url": "/news/2009-11-15-ecuador-collecting-expedition-leader-fieldwork/",
+      "date": "2009-11-15",
+      "year": 2009,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "EC",
+          "name": "Ecuador",
+          "region_m49": "005",
+          "weight": 1
+        }
+      ],
+      "localities": [],
+      "excerpt": "Led a biological collecting expedition in Ecuador."
+    },
+    {
+      "id": "2009-12-17-smithsonian-photo-of-the-day-recognition",
+      "title": "Award: Smithsonian.com Photo of the Day Recognition",
+      "url": "/news/2009-12-17-smithsonian-photo-of-the-day-recognition/",
+      "date": "2009-12-17",
+      "year": 2009,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "New Haven, Connecticut",
+          "country_code": "US",
+          "lat": 41.3083,
+          "lon": -72.9279,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received Smithsonian.com Photo of the Day recognition."
+    },
+    {
+      "id": "2010-01-10-yale-environmental-news-photo-feature",
+      "title": "Award: Yale Environmental News Photo Feature (2009-2010)",
+      "url": "/news/2010-01-10-yale-environmental-news-photo-feature/",
+      "date": "2010-01-10",
+      "year": 2010,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "New Haven, Connecticut",
+          "country_code": "US",
+          "lat": 41.3083,
+          "lon": -72.9279,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received photography feature recognition in Yale Environmental News (Fall/Winter 2009/2010)."
+    },
+    {
+      "id": "2010-01-15-natural-history-magazine-online-photo-feature",
+      "title": "Award: Natural History Magazine Online Photo Feature",
+      "url": "/news/2010-01-15-natural-history-magazine-online-photo-feature/",
+      "date": "2010-01-15",
+      "year": 2010,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "New Haven, Connecticut",
+          "country_code": "US",
+          "lat": 41.3083,
+          "lon": -72.9279,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received photography feature recognition in Natural History Magazine Online."
+    },
+    {
+      "id": "2010-04-06-yale-davenport-mellon-forum-invited-talk",
+      "title": "Invited Talk: Yale Davenport Mellon Forum",
+      "url": "/news/2010-04-06-yale-davenport-mellon-forum-invited-talk/",
+      "date": "2010-04-06",
+      "year": 2010,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "New Haven, Connecticut",
+          "country_code": "US",
+          "lat": 41.3083,
+          "lon": -72.9279,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Presented invited work at Yale's Davenport Mellon Forum on Amazonian phylogeography."
+    },
+    {
+      "id": "2010-04-28-yale-davenport-senior-symposium-invited-talk",
+      "title": "Invited Talk: Yale Davenport College Senior Symposium",
+      "url": "/news/2010-04-28-yale-davenport-senior-symposium-invited-talk/",
+      "date": "2010-04-28",
+      "year": 2010,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "New Haven, Connecticut",
+          "country_code": "US",
+          "lat": 41.3083,
+          "lon": -72.9279,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Delivered an invited Yale symposium presentation on Amazonian phylogeography and speciation."
+    },
+    {
+      "id": "2010-05-15-louis-sudler-creative-performing-arts-award",
+      "title": "Award: Louis Sudler Award for Creative and Performing Arts",
+      "url": "/news/2010-05-15-louis-sudler-creative-performing-arts-award/",
+      "date": "2010-05-15",
+      "year": 2010,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "New Haven, Connecticut",
+          "country_code": "US",
+          "lat": 41.3083,
+          "lon": -72.9279,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received Yale's Louis Sudler creative and performing arts award recognition."
+    },
+    {
+      "id": "2010-06-27-evolution-2010-conference",
+      "title": "Talk: Evolution 2010 Conference",
+      "url": "/news/2010-06-27-evolution-2010-conference/",
+      "date": "2010-06-27",
+      "year": 2010,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Portland, Oregon",
+          "country_code": "US",
+          "lat": 45.5152,
+          "lon": -122.6784,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Presented South American savanna bird phylogeography research at Evolution 2010."
+    },
+    {
+      "id": "2010-08-26-international-ornithological-congress-talk",
+      "title": "Talk: 25th International Ornithological Congress",
+      "url": "/news/2010-08-26-international-ornithological-congress-talk/",
+      "date": "2010-08-26",
+      "year": 2010,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "BR",
+          "name": "Brazil",
+          "region_m49": "005",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Campos do Jordao, Sao Paulo",
+          "country_code": "BR",
+          "lat": -22.7396,
+          "lon": -45.5915,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Presented at the 25th International Ornithological Congress in Brazil."
+    },
+    {
+      "id": "2010-12-06-yale-institute-biospheric-studies-invited-talk",
+      "title": "Invited Talk: Yale Institute for Biospheric Studies",
+      "url": "/news/2010-12-06-yale-institute-biospheric-studies-invited-talk/",
+      "date": "2010-12-06",
+      "year": 2010,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "New Haven, Connecticut",
+          "country_code": "US",
+          "lat": 41.3083,
+          "lon": -72.9279,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Delivered an invited Yale talk on savanna bird phylogeography and radio telemetry methods."
+    },
+    {
+      "id": "2011-05-15-papua-new-guinea-field-assistant",
+      "title": "Fieldwork: Papua New Guinea Field Assistant",
+      "url": "/news/2011-05-15-papua-new-guinea-field-assistant/",
+      "date": "2011-05-15",
+      "year": 2011,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "PG",
+          "name": "Papua New Guinea",
+          "region_m49": "054",
+          "weight": 1
+        }
+      ],
+      "localities": [],
+      "excerpt": "Participated in field-assistant research work in Milne Bay, Papua New Guinea."
+    },
+    {
+      "id": "2011-09-15-yale-environmental-news-photo-feature",
+      "title": "Award: Yale Environmental News Photo Feature (2011)",
+      "url": "/news/2011-09-15-yale-environmental-news-photo-feature/",
+      "date": "2011-09-15",
+      "year": 2011,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "New Haven, Connecticut",
+          "country_code": "US",
+          "lat": 41.3083,
+          "lon": -72.9279,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received photography feature recognition in Yale Environmental News (Fall 2011)."
+    },
+    {
+      "id": "2011-10-15-guatemala-field-assistant",
+      "title": "Fieldwork: Guatemala Field Assistant",
+      "url": "/news/2011-10-15-guatemala-field-assistant/",
+      "date": "2011-10-15",
+      "year": 2011,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "GT",
+          "name": "Guatemala",
+          "region_m49": "013",
+          "weight": 1
+        }
+      ],
+      "localities": [],
+      "excerpt": "Completed field-assistant research work in Guatemala."
+    },
+    {
+      "id": "2012-07-08-first-joint-congress-on-evolutionary-biology-talk",
+      "title": "Talk: First Joint Congress on Evolutionary Biology",
+      "url": "/news/2012-07-08-first-joint-congress-on-evolutionary-biology-talk/",
+      "date": "2012-07-08",
+      "year": 2012,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "CA",
+          "name": "Canada",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ottawa, Ontario",
+          "country_code": "CA",
+          "lat": 45.4215,
+          "lon": -75.6972,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Presented Emberizoides population-genetics research at Evolution 2012 in Ottawa."
+    },
+    {
+      "id": "2013-03-15-honduras-field-assistant",
+      "title": "Fieldwork: Honduras Field Assistant",
+      "url": "/news/2013-03-15-honduras-field-assistant/",
+      "date": "2013-03-15",
+      "year": 2013,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "HN",
+          "name": "Honduras",
+          "region_m49": "013",
+          "weight": 1
+        }
+      ],
+      "localities": [],
+      "excerpt": "Completed field-assistant research work in Honduras."
+    },
+    {
+      "id": "2013-03-20-centro-universitario-regional-litoral-atlantico-invited-talk",
+      "title": "Invited Talk: Centro Universitario Regional del Litoral Atlantico",
+      "url": "/news/2013-03-20-centro-universitario-regional-litoral-atlantico-invited-talk/",
+      "date": "2013-03-20",
+      "year": 2013,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "HN",
+          "name": "Honduras",
+          "region_m49": "013",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "La Ceiba",
+          "country_code": "HN",
+          "lat": 15.7597,
+          "lon": -86.7822,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Delivered an invited talk in Honduras on linking genetics and evolutionary trees."
+    },
+    {
+      "id": "2013-10-15-writing-7101-writing-in-the-majors-seminar",
+      "title": "Completed Writing 7101: Writing in the Majors Seminar",
+      "url": "/news/2013-10-15-writing-7101-writing-in-the-majors-seminar/",
+      "date": "2013-10-15",
+      "year": 2013,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Completed Writing 7101 training on writing pedagogy and course design."
+    },
+    {
+      "id": "2014-01-20-kenya-field-ecology-teaching-assistant-fieldwork",
+      "title": "Fieldwork: Kenya Field Ecology Teaching Assistant",
+      "url": "/news/2014-01-20-kenya-field-ecology-teaching-assistant-fieldwork/",
+      "date": "2014-01-20",
+      "year": 2014,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "KE",
+          "name": "Kenya",
+          "region_m49": "014",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Nanyuki / Laikipia",
+          "country_code": "KE",
+          "lat": 0.0167,
+          "lon": 37.0739,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Served as a Kenya field ecology teaching assistant during Cornell's tropical field course."
+    },
+    {
+      "id": "2014-01-25-bioee-2650-graduate-teaching-assistant",
+      "title": "Service: Graduate Teaching Assistant for BIOEE 2650",
+      "url": "/news/2014-01-25-bioee-2650-graduate-teaching-assistant/",
+      "date": "2014-01-25",
+      "year": 2014,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "KE",
+          "name": "Kenya",
+          "region_m49": "014",
+          "weight": 1
+        }
+      ],
+      "localities": [],
+      "excerpt": "Served as graduate teaching assistant for Cornell's tropical field ecology course in Kenya."
+    },
+    {
+      "id": "2014-04-10-tyson-graduate-fellowship",
+      "title": "Fellowship: Tyson Graduate Fellowship",
+      "url": "/news/2014-04-10-tyson-graduate-fellowship/",
+      "date": "2014-04-10",
+      "year": 2014,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received the Tyson Graduate Fellowship in support of doctoral research."
+    },
+    {
+      "id": "2014-04-15-nsf-graduate-research-fellowship",
+      "title": "NSF Graduate Research Fellowship",
+      "url": "/news/2014-04-15-nsf-graduate-research-fellowship/",
+      "date": "2014-04-15",
+      "year": 2014,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Awarded an NSF Graduate Research Fellowship (DGE-1650441) in Spring 2014."
+    },
+    {
+      "id": "2014-06-20-next-gen-sequencing-phylogenomics-workshop",
+      "title": "Completed Next Gen Sequencing and Phylogenomics Workshop",
+      "url": "/news/2014-06-20-next-gen-sequencing-phylogenomics-workshop/",
+      "date": "2014-06-20",
+      "year": 2014,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Durham, North Carolina",
+          "country_code": "US",
+          "lat": 35.994,
+          "lon": -78.8986,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Completed NESCent workshop training in next-generation sequencing and phylogenomics."
+    },
+    {
+      "id": "2014-06-22-evolution-2014-presentation",
+      "title": "Talk: Evolution 2014",
+      "url": "/news/2014-06-22-evolution-2014-presentation/",
+      "date": "2014-06-22",
+      "year": 2014,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Raleigh, North Carolina",
+          "country_code": "US",
+          "lat": 35.7796,
+          "lon": -78.6382,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Presented Neotropical cotinga phylogeny research at Evolution 2014 in Raleigh."
+    },
+    {
+      "id": "2014-07-15-kramer-graduate-fellowship",
+      "title": "Fellowship: Kramer Graduate Fellowship",
+      "url": "/news/2014-07-15-kramer-graduate-fellowship/",
+      "date": "2014-07-15",
+      "year": 2014,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received the Kramer Graduate Fellowship for summer doctoral research support."
+    },
+    {
+      "id": "2014-07-20-orenstein-fund-grant",
+      "title": "Grant: Orenstein Fund",
+      "url": "/news/2014-07-20-orenstein-fund-grant/",
+      "date": "2014-07-20",
+      "year": 2014,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received Orenstein Fund support during doctoral research in Summer 2014."
+    },
+    {
+      "id": "2014-09-15-cornell-lab-ornithology-invited-seminar",
+      "title": "Invited Seminar: Cornell Lab of Ornithology",
+      "url": "/news/2014-09-15-cornell-lab-ornithology-invited-seminar/",
+      "date": "2014-09-15",
+      "year": 2014,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Invited seminar at the Cornell Lab of Ornithology on multilocus cotinga phylogeny."
+    },
+    {
+      "id": "2014-10-15-neotropical-cotingas-phylogeny-paper",
+      "title": "Publication: Neotropical Cotingas Phylogeny",
+      "url": "/news/2014-10-15-neotropical-cotingas-phylogeny-paper/",
+      "date": "2014-10-15",
+      "year": 2014,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Published a comprehensive Neotropical cotinga phylogeny and revised classification."
+    },
+    {
+      "id": "2014-12-17-inaguan-hummingbird-species-status-paper",
+      "title": "Publication: Inaguan Hummingbird Species Status Study",
+      "url": "/news/2014-12-17-inaguan-hummingbird-species-status-paper/",
+      "date": "2014-12-17",
+      "year": 2014,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Co-authored a study in The Auk supporting species status for the Inaguan hummingbird."
+    },
+    {
+      "id": "2015-02-05-cornell-evogroup-invited-seminar",
+      "title": "Invited Seminar: Cornell EEB EvoGroup",
+      "url": "/news/2015-02-05-cornell-evogroup-invited-seminar/",
+      "date": "2015-02-05",
+      "year": 2015,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Invited Cornell EvoGroup seminar on breeding-system and dimorphism evolution in cotingas."
+    },
+    {
+      "id": "2015-04-15-charlie-treman-jr-graduate-fellowship",
+      "title": "Fellowship: Charlie E. Treman, Jr. Graduate Fellowship",
+      "url": "/news/2015-04-15-charlie-treman-jr-graduate-fellowship/",
+      "date": "2015-04-15",
+      "year": 2015,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received the Charlie E. Treman, Jr. Graduate Fellowship at Cornell."
+    },
+    {
+      "id": "2015-04-20-andrew-w-mellon-student-research-grant",
+      "title": "Grant: Andrew W. Mellon Student Research Grant",
+      "url": "/news/2015-04-20-andrew-w-mellon-student-research-grant/",
+      "date": "2015-04-20",
+      "year": 2015,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received an Andrew W. Mellon Student Research Grant in 2015."
+    },
+    {
+      "id": "2015-06-26-phylogenetic-comparative-methods-workshop-evolution",
+      "title": "Completed Phylogenetic Comparative Methods Workshop (Evolution 2015)",
+      "url": "/news/2015-06-26-phylogenetic-comparative-methods-workshop-evolution/",
+      "date": "2015-06-26",
+      "year": 2015,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "BR",
+          "name": "Brazil",
+          "region_m49": "005",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Guaruja, Sao Paulo",
+          "country_code": "BR",
+          "lat": -23.9928,
+          "lon": -46.2564,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Completed workshop training in phylogenetic comparative methods at Evolution 2015."
+    },
+    {
+      "id": "2015-06-28-evolution-2015-conference",
+      "title": "Talk: Evolution 2015 Conference",
+      "url": "/news/2015-06-28-evolution-2015-conference/",
+      "date": "2015-06-28",
+      "year": 2015,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "BR",
+          "name": "Brazil",
+          "region_m49": "005",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Guaruja, Sao Paulo",
+          "country_code": "BR",
+          "lat": -23.9928,
+          "lon": -46.2564,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Presented avian phylogeny research at Evolution 2015 in Guaruja, Brazil."
+    },
+    {
+      "id": "2015-07-10-brazil-manakin-vocalization-survey-fieldwork",
+      "title": "Fieldwork: Brazil Manakin Vocalization Survey",
+      "url": "/news/2015-07-10-brazil-manakin-vocalization-survey-fieldwork/",
+      "date": "2015-07-10",
+      "year": 2015,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "BR",
+          "name": "Brazil",
+          "region_m49": "005",
+          "weight": 1
+        }
+      ],
+      "localities": [],
+      "excerpt": "Completed Brazil fieldwork focused on manakin vocalization surveys."
+    },
+    {
+      "id": "2015-07-15-nsf-ssb-travel-award",
+      "title": "Award: NSF-Society of Systematic Biologists Travel Award",
+      "url": "/news/2015-07-15-nsf-ssb-travel-award/",
+      "date": "2015-07-15",
+      "year": 2015,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received NSF-SSB travel support for conference participation in 2015."
+    },
+    {
+      "id": "2015-07-20-neotropical-ornithological-congress-talk",
+      "title": "Talk: X Neotropical Ornithological Congress",
+      "url": "/news/2015-07-20-neotropical-ornithological-congress-talk/",
+      "date": "2015-07-20",
+      "year": 2015,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "BR",
+          "name": "Brazil",
+          "region_m49": "005",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Manaus, Amazonas",
+          "country_code": "BR",
+          "lat": -3.119,
+          "lon": -60.0217,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Presented work on genomic species delimitation and biogeography at the X Neotropical Ornithological Congress."
+    },
+    {
+      "id": "2015-09-15-ssb-graduate-student-research-award",
+      "title": "Award: Society of Systematic Biologists Graduate Student Research Award",
+      "url": "/news/2015-09-15-ssb-graduate-student-research-award/",
+      "date": "2015-09-15",
+      "year": 2015,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received the SSB Graduate Student Research Award in support of dissertation research."
+    },
+    {
+      "id": "2015-10-01-cornell-lab-ornithology-athena-fund-support-series",
+      "title": "Grant: Cornell Lab of Ornithology Athena Fund Support (2013-2015)",
+      "url": "/news/2015-10-01-cornell-lab-ornithology-athena-fund-support-series/",
+      "date": "2015-10-01",
+      "year": 2015,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received recurring Athena Fund support from the Cornell Lab of Ornithology (2013-2015)."
+    },
+    {
+      "id": "2015-12-15-nature-comprehensive-bird-phylogeny",
+      "title": "Publication: Comprehensive Phylogeny of Birds in Nature",
+      "url": "/news/2015-12-15-nature-comprehensive-bird-phylogeny/",
+      "date": "2015-12-15",
+      "year": 2015,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Co-authored a landmark Nature paper on avian phylogeny using targeted genomic sequencing."
+    },
+    {
+      "id": "2016-04-10-andrew-w-mellon-student-research-grant",
+      "title": "Grant: Andrew W. Mellon Student Research Grant (2016)",
+      "url": "/news/2016-04-10-andrew-w-mellon-student-research-grant/",
+      "date": "2016-04-10",
+      "year": 2016,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received a second Andrew W. Mellon Student Research Grant in 2016."
+    },
+    {
+      "id": "2016-04-15-suny-esf-earth-week-invited-speaker",
+      "title": "Invited Talk at SUNY ESF Earth Week",
+      "url": "/news/2016-04-15-suny-esf-earth-week-invited-speaker/",
+      "date": "2016-04-15",
+      "year": 2016,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Syracuse, New York",
+          "country_code": "US",
+          "lat": 43.0481,
+          "lon": -76.1474,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Presented an invited Earth Week seminar at SUNY ESF in Syracuse."
+    },
+    {
+      "id": "2016-04-20-sigma-xi-small-grant",
+      "title": "Grant: Sigma-Xi Small Grant",
+      "url": "/news/2016-04-20-sigma-xi-small-grant/",
+      "date": "2016-04-20",
+      "year": 2016,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received Sigma-Xi small-grant support for dissertation research."
+    },
+    {
+      "id": "2016-06-30-wd-hamilton-award-finalist",
+      "title": "W.D. Hamilton Award Finalist",
+      "url": "/news/2016-06-30-wd-hamilton-award-finalist/",
+      "date": "2016-06-30",
+      "year": 2016,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "W.D. Hamilton Award finalist at Evolution 2016, presenting on post-K–Pg avian molecular-rate shifts."
+    },
+    {
+      "id": "2016-08-18-north-american-ornithological-congress-washington-talk",
+      "title": "Talk: North American Ornithological Congress (Washington, DC)",
+      "url": "/news/2016-08-18-north-american-ornithological-congress-washington-talk/",
+      "date": "2016-08-18",
+      "year": 2016,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Washington, District of Columbia",
+          "country_code": "US",
+          "lat": 38.9072,
+          "lon": -77.0369,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Presented research on post K-Pg body-size change and avian molecular clocks at NAOC 2016."
+    },
+    {
+      "id": "2016-09-15-cornell-lab-ornithology-fall-seminar",
+      "title": "Invited Seminar: Cornell Lab of Ornithology (Fall 2016)",
+      "url": "/news/2016-09-15-cornell-lab-ornithology-fall-seminar/",
+      "date": "2016-09-15",
+      "year": 2016,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Delivered an invited fall seminar at the Cornell Lab of Ornithology in 2016."
+    },
+    {
+      "id": "2016-09-26-gsa-special-symposium-talk",
+      "title": "Special Symposium Talk at GSA 2016",
+      "url": "/news/2016-09-26-gsa-special-symposium-talk/",
+      "date": "2016-09-26",
+      "year": 2016,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Denver, Colorado",
+          "country_code": "US",
+          "lat": 39.7392,
+          "lon": -104.9903,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Presented a GSA 2016 symposium talk on genomic signatures of the avian K–Pg Lilliput effect."
+    },
+    {
+      "id": "2016-10-15-suny-orange-invited-lecture",
+      "title": "Invited Talk: SUNY Orange Community College",
+      "url": "/news/2016-10-15-suny-orange-invited-lecture/",
+      "date": "2016-10-15",
+      "year": 2016,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Middletown, New York",
+          "country_code": "US",
+          "lat": 41.4459,
+          "lon": -74.4229,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Delivered an invited lecture at SUNY Orange on modern evolutionary biology and bird diversity."
+    },
+    {
+      "id": "2016-11-01-cornell-bioee3730-guest-lecture-phylogenetic-systematics",
+      "title": "Guest Lecture: Cornell BioEE3730 Phylogenetic Systematics",
+      "url": "/news/2016-11-01-cornell-bioee3730-guest-lecture-phylogenetic-systematics/",
+      "date": "2016-11-01",
+      "year": 2016,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Delivered a guest lecture on phylogenetic systematics in Cornell BioEE3730."
+    },
+    {
+      "id": "2016-11-12-larry-king-memorial-keynote",
+      "title": "Larry King Memorial Keynote Lecture",
+      "url": "/news/2016-11-12-larry-king-memorial-keynote/",
+      "date": "2016-11-12",
+      "year": 2016,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Rochester, New York",
+          "country_code": "US",
+          "lat": 43.1566,
+          "lon": -77.6088,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Delivered the Larry J. King Memorial keynote on bird recovery and radiation after the end-Cretaceous extinction."
+    },
+    {
+      "id": "2017-04-15-nsf-doctoral-dissertation-improvement-grant",
+      "title": "NSF Doctoral Dissertation Improvement Grant",
+      "url": "/news/2017-04-15-nsf-doctoral-dissertation-improvement-grant/",
+      "date": "2017-04-15",
+      "year": 2017,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Awarded an NSF DDIG (DEB-1700786) in Spring 2017 for dissertation research."
+    },
+    {
+      "id": "2017-05-15-cornell-eeb-graduate-student-association-service",
+      "title": "Service: Cornell EEB Graduate Student Association Roles",
+      "url": "/news/2017-05-15-cornell-eeb-graduate-student-association-service/",
+      "date": "2017-05-15",
+      "year": 2017,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Served in multiple Cornell EEB GSA leadership and committee roles between 2013 and 2017."
+    },
+    {
+      "id": "2017-07-01-paul-p-feeny-graduate-student-research-fund-series",
+      "title": "Grant: Paul P. Feeny Graduate Student Research Fund (2014-2017)",
+      "url": "/news/2017-07-01-paul-p-feeny-graduate-student-research-fund-series/",
+      "date": "2017-07-01",
+      "year": 2017,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received four years of Paul P. Feeny Graduate Student Research Fund support (2014-2017)."
+    },
+    {
+      "id": "2017-08-10-ornithological-congress-americas-genomic-advances-symposium",
+      "title": "Talk: Ornithological Congress of the Americas Genomic Advances Symposium",
+      "url": "/news/2017-08-10-ornithological-congress-americas-genomic-advances-symposium/",
+      "date": "2017-08-10",
+      "year": 2017,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "AR",
+          "name": "Argentina",
+          "region_m49": "005",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Puerto Iguazu",
+          "country_code": "AR",
+          "lat": -25.5952,
+          "lon": -54.5734,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Presented White-crowned manakin phylogeography research in the Genomic Advances Symposium at OCA 2017."
+    },
+    {
+      "id": "2017-08-24-svp-special-symposium-talk",
+      "title": "Special Symposium Talk at SVP 2017",
+      "url": "/news/2017-08-24-svp-special-symposium-talk/",
+      "date": "2017-08-24",
+      "year": 2017,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "CA",
+          "name": "Canada",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Calgary, Alberta",
+          "country_code": "CA",
+          "lat": 51.0447,
+          "lon": -114.0719,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Special symposium presentation at SVP 2017 (Calgary) on post-K–Pg avian molecular evolution."
+    },
+    {
+      "id": "2017-09-01-evolutionary-quantitative-genetics-workshop",
+      "title": "Completed Evolutionary Quantitative Genetics Workshop",
+      "url": "/news/2017-09-01-evolutionary-quantitative-genetics-workshop/",
+      "date": "2017-09-01",
+      "year": 2017,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Friday Harbor, Washington",
+          "country_code": "US",
+          "lat": 48.5343,
+          "lon": -123.0171,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Completed advanced workshop training in evolutionary quantitative genetics at Friday Harbor Labs."
+    },
+    {
+      "id": "2017-09-15-cornell-graduate-student-preview-weekend-service",
+      "title": "Service: Cornell Graduate Student Preview Weekend",
+      "url": "/news/2017-09-15-cornell-graduate-student-preview-weekend-service/",
+      "date": "2017-09-15",
+      "year": 2017,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Joined the founding team for Cornell's Preview Weekend to support inclusive graduate recruitment and mentorship."
+    },
+    {
+      "id": "2018-01-15-systematic-biology-avian-lilliput-effect",
+      "title": "Publication: Avian Lilliput Effect in Systematic Biology",
+      "url": "/news/2018-01-15-systematic-biology-avian-lilliput-effect/",
+      "date": "2018-01-15",
+      "year": 2018,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Published a Systematic Biology study on genomic signatures of an avian Lilliput effect across the K–Pg boundary."
+    },
+    {
+      "id": "2018-01-20-magic-school-bus-rides-again-media-consulting",
+      "title": "Media Consulting: The Magic School Bus Rides Again",
+      "url": "/news/2018-01-20-magic-school-bus-rides-again-media-consulting/",
+      "date": "2018-01-20",
+      "year": 2018,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Provided scientific consulting on evolution and ornithology for The Magic School Bus Rides Again."
+    },
+    {
+      "id": "2018-03-01-bee-hummingbird-coevolution-paper",
+      "title": "Publication: Bee Hummingbird Coevolution in Evolution",
+      "url": "/news/2018-03-01-bee-hummingbird-coevolution-paper/",
+      "date": "2018-03-01",
+      "year": 2018,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Co-authored an Evolution paper on coevolution of morphology and courtship sounds in bee hummingbirds."
+    },
+    {
+      "id": "2018-05-15-current-biology-forest-collapse-modern-birds",
+      "title": "Publication: End-Cretaceous Forest Collapse and Modern Birds",
+      "url": "/news/2018-05-15-current-biology-forest-collapse-modern-birds/",
+      "date": "2018-05-15",
+      "year": 2018,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Co-authored a Current Biology paper linking end-Cretaceous forest collapse to early modern bird evolution."
+    },
+    {
+      "id": "2018-06-10-sse-travel-award",
+      "title": "Award: Society for the Study of Evolution Travel Award",
+      "url": "/news/2018-06-10-sse-travel-award/",
+      "date": "2018-06-10",
+      "year": 2018,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received an SSE Travel Award supporting participation in Evolution 2018."
+    },
+    {
+      "id": "2018-06-15-publishers-award-systematic-research",
+      "title": "Publisher's Award for Excellence in Systematic Research",
+      "url": "/news/2018-06-15-publishers-award-systematic-research/",
+      "date": "2018-06-15",
+      "year": 2018,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received the OUP Publisher's Award for Excellence in Systematic Research (SSB/Systematic Biology)."
+    },
+    {
+      "id": "2018-06-30-schmidt-science-fellows-finalist",
+      "title": "Schmidt Science Fellows Finalist",
+      "url": "/news/2018-06-30-schmidt-science-fellows-finalist/",
+      "date": "2018-06-30",
+      "year": 2018,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Named a Schmidt Science Fellows finalist (Cornell nomination) during the inaugural program cycle."
+    },
+    {
+      "id": "2018-07-01-smbe-young-investigator-travel-award",
+      "title": "Award: SMBE Young Investigator Travel Award",
+      "url": "/news/2018-07-01-smbe-young-investigator-travel-award/",
+      "date": "2018-07-01",
+      "year": 2018,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received an SMBE Young Investigator Travel Award in support of 2018 conference travel."
+    },
+    {
+      "id": "2018-07-10-smbe-divergence-time-symposium-talk",
+      "title": "Symposium Talk at SMBE 2018",
+      "url": "/news/2018-07-10-smbe-divergence-time-symposium-talk/",
+      "date": "2018-07-10",
+      "year": 2018,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "JP",
+          "name": "Japan",
+          "region_m49": "030",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Yokohama",
+          "country_code": "JP",
+          "lat": 35.4437,
+          "lon": 139.638,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Symposium talk at SMBE 2018 on avian divergence-time inference and K–Pg-associated body-size shifts."
+    },
+    {
+      "id": "2018-08-20-ernst-mayr-award-finalist-talk",
+      "title": "Ernst Mayr Award Finalist Talk at Evolution 2018",
+      "url": "/news/2018-08-20-ernst-mayr-award-finalist-talk/",
+      "date": "2018-08-20",
+      "year": 2018,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "FR",
+          "name": "France",
+          "region_m49": "155",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Montpellier",
+          "country_code": "FR",
+          "lat": 43.611,
+          "lon": 3.8767,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Ernst Mayr Award finalist talk at Evolution 2018 in Montpellier on avian divergence times and K–Pg dynamics."
+    },
+    {
+      "id": "2018-12-01-bioee-1780-graduate-teaching-assistant",
+      "title": "Service: Graduate Teaching Assistant for BIOEE 1780",
+      "url": "/news/2018-12-01-bioee-1780-graduate-teaching-assistant/",
+      "date": "2018-12-01",
+      "year": 2018,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Served as graduate teaching assistant for BIOEE 1780 across four Cornell terms."
+    },
+    {
+      "id": "2019-04-15-nsf-postdoctoral-research-fellowship-awarded-declined",
+      "title": "NSF Postdoctoral Research Fellowship Awarded (Declined)",
+      "url": "/news/2019-04-15-nsf-postdoctoral-research-fellowship-awarded-declined/",
+      "date": "2019-04-15",
+      "year": 2019,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Awarded an NSF PRFB in Spring 2019 (awarded and declined)."
+    },
+    {
+      "id": "2019-04-20-simon-student-research-fund-award",
+      "title": "Grant: Melinda and Irwin Simon Student Research Fund",
+      "url": "/news/2019-04-20-simon-student-research-fund-award/",
+      "date": "2019-04-20",
+      "year": 2019,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received the Simon Student Research Fund fellowship support through the Cornell Lab of Ornithology."
+    },
+    {
+      "id": "2019-06-15-netflix-scientific-media-consulting",
+      "title": "Scientific Media Consulting for Netflix",
+      "url": "/news/2019-06-15-netflix-scientific-media-consulting/",
+      "date": "2019-06-15",
+      "year": 2019,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Served as a scientific media consultant for Netflix's The Magic School Bus Rides Again."
+    },
+    {
+      "id": "2019-08-01-phd-completion",
+      "title": "Ph.D. in Ecology and Evolutionary Biology Awarded",
+      "url": "/news/2019-08-01-phd-completion/",
+      "date": "2019-08-01",
+      "year": 2019,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "This doctoral training laid the foundation for ongoing research in macroevolution."
+    },
+    {
+      "id": "2019-08-30-tempo-and-mode-dissertation",
+      "title": "Publication: Tempo and Mode Dissertation",
+      "url": "/news/2019-08-30-tempo-and-mode-dissertation/",
+      "date": "2019-08-30",
+      "year": 2019,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Published the doctoral dissertation on integrating genomic, anatomical, and life-history data in bird macroevolution."
+    },
+    {
+      "id": "2019-10-15-journal-animal-ecology-leucocytozoon-paper",
+      "title": "Publication: Leucocytozoon Diversity in Journal of Animal Ecology",
+      "url": "/news/2019-10-15-journal-animal-ecology-leucocytozoon-paper/",
+      "date": "2019-10-15",
+      "year": 2019,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Co-authored a Journal of Animal Ecology study on Leucocytozoon infection and diversity gradients."
+    },
+    {
+      "id": "2019-11-01-michigan-life-sciences-fellowship",
+      "title": "Michigan Life Sciences Fellowship Began",
+      "url": "/news/2019-11-01-michigan-life-sciences-fellowship/",
+      "date": "2019-11-01",
+      "year": 2019,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ithaca, New York",
+          "country_code": "US",
+          "lat": 42.443,
+          "lon": -76.5019,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The fellowship supported interdisciplinary research spanning evolution, genomics, and museum science."
+    },
+    {
+      "id": "2020-01-20-pennaraptoran-theropod-chapter",
+      "title": "Publication: Timing the Extant Avian Radiation",
+      "url": "/news/2020-01-20-pennaraptoran-theropod-chapter/",
+      "date": "2020-01-20",
+      "year": 2020,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Additional details: Field, D. J., Berv, J. S., Hsiang, A. Y., Lanfear, R., Landis, M. J., & Dornburg, A. (2020). In M. Pittman & X. Xu (Eds.), Bulletin of the American Museum of Natural History, 440, 159-181. https://digitallibrary.amnh...."
+    },
+    {
+      "id": "2020-03-10-postdoctoral-college-teaching-short-course",
+      "title": "Completed Postdoctoral College Teaching Short Course",
+      "url": "/news/2020-03-10-postdoctoral-college-teaching-short-course/",
+      "date": "2020-03-10",
+      "year": 2020,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Completed UM's postdoctoral short course on evidence-based college teaching in science and engineering."
+    },
+    {
+      "id": "2020-03-15-teaching-in-stem-certificate",
+      "title": "Earned the Teaching in STEM Certificate",
+      "url": "/news/2020-03-15-teaching-in-stem-certificate/",
+      "date": "2020-03-15",
+      "year": 2020,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The program emphasized inclusive pedagogy and active-learning strategies in science teaching."
+    },
+    {
+      "id": "2020-08-12-north-american-ornithological-congress",
+      "title": "Invited Symposium Talk: North American Ornithological Congress",
+      "url": "/news/2020-08-12-north-american-ornithological-congress/",
+      "date": "2020-08-12",
+      "year": 2020,
+      "scope": "virtual",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The presentation explored large-scale patterns of avian diversification."
+    },
+    {
+      "id": "2020-09-15-science-communication-fellowship",
+      "title": "Science Communication Fellow at the U-M Natural History Museum",
+      "url": "/news/2020-09-15-science-communication-fellowship/",
+      "date": "2020-09-15",
+      "year": 2020,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The fellowship supported public programs translating macroevolution and biodiversity science."
+    },
+    {
+      "id": "2020-10-14-society-for-vertebrate-paleontology-talk",
+      "title": "Society for Vertebrate Paleontology 2020 Presentation",
+      "url": "/news/2020-10-14-society-for-vertebrate-paleontology-talk/",
+      "date": "2020-10-14",
+      "year": 2020,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Jonathan J. Hughes presented co-authored work at SVP 2020 on mammalian arboreality and macroevolution across the K-Pg boundary."
+    },
+    {
+      "id": "2020-10-15-science-communication-certificate",
+      "title": "Science Communication Certificate Completed",
+      "url": "/news/2020-10-15-science-communication-certificate/",
+      "date": "2020-10-15",
+      "year": 2020,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Completed the U-M Museum of Natural History Science Communication Certificate."
+    },
+    {
+      "id": "2020-11-12-umass-boston-seminar",
+      "title": "Invited Seminar: University of Massachusetts Boston Biology",
+      "url": "/news/2020-11-12-umass-boston-seminar/",
+      "date": "2020-11-12",
+      "year": 2020,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Boston, Massachusetts",
+          "country_code": "US",
+          "lat": 42.3601,
+          "lon": -71.0589,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The seminar focused on integrating genomic, anatomical, and life-history evidence in bird evolution."
+    },
+    {
+      "id": "2021-01-15-advanced-r-programming-workshop",
+      "title": "Completed Advanced R Programming Workshop",
+      "url": "/news/2021-01-15-advanced-r-programming-workshop/",
+      "date": "2021-01-15",
+      "year": 2021,
+      "scope": "virtual",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Completed virtual advanced R programming training through Physalia in January 2021."
+    },
+    {
+      "id": "2021-01-25-neotropical-savanna-birds",
+      "title": "Publication: Neotropical Savanna Bird Diversification",
+      "url": "/news/2021-01-25-neotropical-savanna-birds/",
+      "date": "2021-01-25",
+      "year": 2021,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Additional details: van Els, P., Zarza, E., Rocha Moreira, L., Gómez-Bahamón, V., Santana, A., Aleixo, A., Ribas, C. C., do Rêgo, P. S., Santos, M. P. D., Zyskowski, K., Prum, R. O., & Berv, J. S. (2021). Journal of Biogeography. https:/..."
+    },
+    {
+      "id": "2021-02-05-white-crowned-manakin-phylogeography",
+      "title": "Publication: Genomic Phylogeography of the White-crowned Manakin",
+      "url": "/news/2021-02-05-white-crowned-manakin-phylogeography/",
+      "date": "2021-02-05",
+      "year": 2021,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Additional details: Berv, J. S., Campagna, L., Feo, T. J., Castro-Astor, I., Ribas, C. C., Prum, R. O., & Lovette, I. J. (2021). Molecular Phylogenetics and Evolution, 164, 107205. https://doi.org/10.1016/j.ympev.2021.107205"
+    },
+    {
+      "id": "2021-02-15-mammalian-substrate-preference",
+      "title": "Publication: Mammalian Substrate Preference Across the K–Pg",
+      "url": "/news/2021-02-15-mammalian-substrate-preference/",
+      "date": "2021-02-15",
+      "year": 2021,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Additional details: Hughes, J. J., Berv, J. S., Chester, S. G. B., Sargis, E. J., & Field, D. J. (2021). Ecology and Evolution, 11, 14540-14554. https://doi.org/10.1002/ece3.8114"
+    },
+    {
+      "id": "2021-03-15-ann-arbor-public-schools-evolution-outreach",
+      "title": "Outreach: Ann Arbor Public Schools Evolution Presentations",
+      "url": "/news/2021-03-15-ann-arbor-public-schools-evolution-outreach/",
+      "date": "2021-03-15",
+      "year": 2021,
+      "scope": "virtual",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Delivered K-12 outreach presentations on evolutionary biology for Ann Arbor Public Schools."
+    },
+    {
+      "id": "2021-04-20-michigan-dna-day",
+      "title": "Outreach: Michigan DNA Day Evolution Module",
+      "url": "/news/2021-04-20-michigan-dna-day/",
+      "date": "2021-04-20",
+      "year": 2021,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The program combined hands-on genomics activities with scientific career outreach for Michigan high school students."
+    },
+    {
+      "id": "2021-06-04-friends-um-museum-paleontology-talk",
+      "title": "Invited Talk for Friends of the U-M Museum of Paleontology",
+      "url": "/news/2021-06-04-friends-um-museum-paleontology-talk/",
+      "date": "2021-06-04",
+      "year": 2021,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Presented an invited public seminar for the Friends of the U-M Museum of Paleontology (FUMMP)."
+    },
+    {
+      "id": "2021-06-15-american-society-of-mammologists-meeting-talk",
+      "title": "Talk: American Society of Mammologists Meeting 2021",
+      "url": "/news/2021-06-15-american-society-of-mammologists-meeting-talk/",
+      "date": "2021-06-15",
+      "year": 2021,
+      "scope": "virtual",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Jonathan J. Hughes presented co-authored work on mammalian arboreality across the K-Pg boundary at ASM 2021."
+    },
+    {
+      "id": "2021-06-21-evolution-2021-conference",
+      "title": "Talk: Evolution 2021 Virtual Conference",
+      "url": "/news/2021-06-21-evolution-2021-conference/",
+      "date": "2021-06-21",
+      "year": 2021,
+      "scope": "virtual",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The talk presented evidence for molecular-rate shifts associated with early post-K–Pg bird diversification."
+    },
+    {
+      "id": "2021-06-24-evolution-2021-seasonal-migration-talk",
+      "title": "Talk: Evolution 2021 (Seasonal Migration and Molecular Evolution)",
+      "url": "/news/2021-06-24-evolution-2021-seasonal-migration-talk/",
+      "date": "2021-06-24",
+      "year": 2021,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Teresa Pegan presented co-authored research on migration-associated molecular evolution at Evolution 2021."
+    },
+    {
+      "id": "2021-10-15-university-of-michigan-eeb-seminar",
+      "title": "Invited Seminar: University of Michigan Ecology and Evolutionary Biology",
+      "url": "/news/2021-10-15-university-of-michigan-eeb-seminar/",
+      "date": "2021-10-15",
+      "year": 2021,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The seminar presented models of post-extinction diversification across birds, genomes, and deep-time data."
+    },
+    {
+      "id": "2021-12-05-vertebrate-paleontology-guest-lecture",
+      "title": "Guest Lecture: Evolution of Birds for Vertebrate Paleontology",
+      "url": "/news/2021-12-05-vertebrate-paleontology-guest-lecture/",
+      "date": "2021-12-05",
+      "year": 2021,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The lecture explored fossil-calibrated timelines and major transitions in avian evolutionary history."
+    },
+    {
+      "id": "2022-01-05-cran-phylogenetics-task-view",
+      "title": "Service: Co-maintainer for the CRAN Phylogenetics Task View",
+      "url": "/news/2022-01-05-cran-phylogenetics-task-view/",
+      "date": "2022-01-05",
+      "year": 2022,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "This service role supported open-source phylogenetics and comparative biology software."
+    },
+    {
+      "id": "2022-01-15-shiny-app-development-workshop",
+      "title": "Completed Shiny App Development Workshop",
+      "url": "/news/2022-01-15-shiny-app-development-workshop/",
+      "date": "2022-01-15",
+      "year": 2022,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Completed Physalia training in Shiny app development for research tools."
+    },
+    {
+      "id": "2022-01-20-museum-of-paleontology-seminar",
+      "title": "Invited Seminar: University of Michigan Museum of Paleontology",
+      "url": "/news/2022-01-20-museum-of-paleontology-seminar/",
+      "date": "2022-01-20",
+      "year": 2022,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The talk highlighted macroevolutionary patterns in birds using museum collections."
+    },
+    {
+      "id": "2022-02-15-machine-learning-in-r-workshop",
+      "title": "Completed Machine Learning in R Workshop",
+      "url": "/news/2022-02-15-machine-learning-in-r-workshop/",
+      "date": "2022-02-15",
+      "year": 2022,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Completed Physalia workshop training in machine learning with R."
+    },
+    {
+      "id": "2022-03-15-comparative-genomics-workshop",
+      "title": "Completed Comparative Genomics Workshop",
+      "url": "/news/2022-03-15-comparative-genomics-workshop/",
+      "date": "2022-03-15",
+      "year": 2022,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Completed comparative genomics training through Physalia."
+    },
+    {
+      "id": "2022-05-12-cornell-evo-day-invited-talk",
+      "title": "Invited Talk at Cornell EEB Evo Day 2022",
+      "url": "/news/2022-05-12-cornell-evo-day-invited-talk/",
+      "date": "2022-05-12",
+      "year": 2022,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Invited seminar delivered at Cornell EEB Evo Day 2022."
+    },
+    {
+      "id": "2022-05-20-rackham-professional-development-certificate",
+      "title": "Completed Rackham Professional Development Certificate",
+      "url": "/news/2022-05-20-rackham-professional-development-certificate/",
+      "date": "2022-05-20",
+      "year": 2022,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The training strengthened mentorship and leadership practices in interdisciplinary research teams."
+    },
+    {
+      "id": "2022-06-10-upper-peninsula-fieldwork",
+      "title": "Fieldwork: Boreal Migrant Collection in Michigan",
+      "url": "/news/2022-06-10-upper-peninsula-fieldwork/",
+      "date": "2022-06-10",
+      "year": 2022,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Marquette, Michigan",
+          "country_code": "US",
+          "lat": 46.5436,
+          "lon": -87.3954,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The effort expanded museum resources for macroevolutionary and conservation research."
+    },
+    {
+      "id": "2022-06-25-evolution-2022-conference",
+      "title": "Talk: Evolution 2022 Conference",
+      "url": "/news/2022-06-25-evolution-2022-conference/",
+      "date": "2022-06-25",
+      "year": 2022,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Cleveland, Ohio",
+          "country_code": "US",
+          "lat": 41.4993,
+          "lon": -81.6944,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The presentation examined rapid diversification following the end-Cretaceous event."
+    },
+    {
+      "id": "2022-07-15-systematics-biogeography-evolution-long-format-talk",
+      "title": "Talk: III Meeting of Systematics, Biogeography, and Evolution",
+      "url": "/news/2022-07-15-systematics-biogeography-evolution-long-format-talk/",
+      "date": "2022-07-15",
+      "year": 2022,
+      "scope": "virtual",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Delivered a long-format invited virtual talk at the III Meeting of Systematics, Biogeography, and Evolution."
+    },
+    {
+      "id": "2022-09-20-university-of-michigan-eeb-seminar",
+      "title": "Invited Seminar: University of Michigan Ecology and Evolutionary Biology",
+      "url": "/news/2022-09-20-university-of-michigan-eeb-seminar/",
+      "date": "2022-09-20",
+      "year": 2022,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The seminar emphasized museum-enabled macroevolutionary research and comparative genomic inference."
+    },
+    {
+      "id": "2022-10-15-okinawa-institute-talk",
+      "title": "Invited Talk at the Okinawa Institute of Science and Technology",
+      "url": "/news/2022-10-15-okinawa-institute-talk/",
+      "date": "2022-10-15",
+      "year": 2022,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "JP",
+          "name": "Japan",
+          "region_m49": "030",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Naha, Okinawa",
+          "country_code": "JP",
+          "lat": 26.2124,
+          "lon": 127.6809,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The seminar focused on comparative genomics and avian diversification across deep time."
+    },
+    {
+      "id": "2022-12-10-academic-parity-movement",
+      "title": "Joined the Academic Parity Movement",
+      "url": "/news/2022-12-10-academic-parity-movement/",
+      "date": "2022-12-10",
+      "year": 2022,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The role supported anti-bullying advocacy and researcher well-being in higher-education communities."
+    },
+    {
+      "id": "2023-01-05-mitochondrial-migration-distance",
+      "title": "Publication: Mitochondrial Evolution and Migration Distance",
+      "url": "/news/2023-01-05-mitochondrial-migration-distance/",
+      "date": "2023-01-05",
+      "year": 2023,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Additional details: Pegan, M. T., Berv, J. S., Gulson-Castillo, E. R., Kimmitt, A. A., & Winger, B. M. (2023). Evolution. https://doi.org/10.1093/evolut/qpad200"
+    },
+    {
+      "id": "2023-01-14-ssb-standalone-talk",
+      "title": "Talk: SSB Standalone Meeting in México City",
+      "url": "/news/2023-01-14-ssb-standalone-talk/",
+      "date": "2023-01-14",
+      "year": 2023,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "MX",
+          "name": "Mexico",
+          "region_m49": "013",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Mexico City",
+          "country_code": "MX",
+          "lat": 19.4326,
+          "lon": -99.1332,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The talk examined how diversification models handle hidden evolutionary processes in comparative analyses."
+    },
+    {
+      "id": "2023-01-20-ssb-phylogenetic-comparative-methods-workshop",
+      "title": "SSB Workshop on Phylogenetic Comparative Methods",
+      "url": "/news/2023-01-20-ssb-phylogenetic-comparative-methods-workshop/",
+      "date": "2023-01-20",
+      "year": 2023,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "MX",
+          "name": "Mexico",
+          "region_m49": "013",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Chamela Field Station, Jalisco",
+          "country_code": "MX",
+          "lat": 19.5,
+          "lon": -105.05,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Completed an intensive SSB workshop in phylogenetic inference and comparative methods."
+    },
+    {
+      "id": "2023-02-15-university-of-toronto-seminar",
+      "title": "Invited Seminar: University of Toronto Ecology and Evolutionary Biology",
+      "url": "/news/2023-02-15-university-of-toronto-seminar/",
+      "date": "2023-02-15",
+      "year": 2023,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "CA",
+          "name": "Canada",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Toronto, Ontario",
+          "country_code": "CA",
+          "lat": 43.6532,
+          "lon": -79.3832,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The visit highlighted how macroevolutionary research benefits from integrating museum-scale datasets and comparative models."
+    },
+    {
+      "id": "2023-04-03-cran-phylogenetics-task-view-2023-update",
+      "title": "CRAN Phylogenetics Task View 2023 Update",
+      "url": "/news/2023-04-03-cran-phylogenetics-task-view-2023-update/",
+      "date": "2023-04-03",
+      "year": 2023,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Contributed to the 2023-04-03 update of the CRAN Phylogenetics Task View."
+    },
+    {
+      "id": "2023-04-15-schmidt-ai-in-science-fellowship",
+      "title": "Eric and Wendy Schmidt AI in Science Fellowship Award",
+      "url": "/news/2023-04-15-schmidt-ai-in-science-fellowship/",
+      "date": "2023-04-15",
+      "year": 2023,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The fellowship supported integration of machine learning, biodiversity data, and museum collections."
+    },
+    {
+      "id": "2023-06-23-evolution-2023-conference",
+      "title": "Talk: Evolution 2023 Conference",
+      "url": "/news/2023-06-23-evolution-2023-conference/",
+      "date": "2023-06-23",
+      "year": 2023,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Albuquerque, New Mexico",
+          "country_code": "US",
+          "lat": 35.0844,
+          "lon": -106.6504,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The talk focused on bird diversification and macroevolutionary dynamics after mass extinction events."
+    },
+    {
+      "id": "2023-08-15-schmidt-ai-fellowship-start",
+      "title": "Schmidt AI in Science Postdoctoral Fellowship Began",
+      "url": "/news/2023-08-15-schmidt-ai-fellowship-start/",
+      "date": "2023-08-15",
+      "year": 2023,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The fellowship supported integration of AI methods with biodiversity data science at the University of Michigan."
+    },
+    {
+      "id": "2023-10-15-deep-learning-for-biologists-workshop",
+      "title": "Completed Deep Learning for Biologists Workshop",
+      "url": "/news/2023-10-15-deep-learning-for-biologists-workshop/",
+      "date": "2023-10-15",
+      "year": 2023,
+      "scope": "virtual",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Completed Physalia training in deep learning methods for biology (virtual, October 2023)."
+    },
+    {
+      "id": "2023-11-10-guest-lecture-molecular-systematics",
+      "title": "Guest Lecture on Molecular Systematics",
+      "url": "/news/2023-11-10-guest-lecture-molecular-systematics/",
+      "date": "2023-11-10",
+      "year": 2023,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The session covered practical phylogenomic approaches for integrating molecular and paleobiological evidence."
+    },
+    {
+      "id": "2023-11-22-indo-pacific-fish-conference",
+      "title": "Talk: Indo-Pacific Fish Conference",
+      "url": "/news/2023-11-22-indo-pacific-fish-conference/",
+      "date": "2023-11-22",
+      "year": 2023,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "NZ",
+          "name": "New Zealand",
+          "region_m49": "053",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Auckland",
+          "country_code": "NZ",
+          "lat": -36.8509,
+          "lon": 174.7645,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The meeting supported new collaborations across marine and terrestrial biodiversity research."
+    },
+    {
+      "id": "2024-03-08-technology-meets-creativity",
+      "title": "Workshop: Technology Meets Creativity",
+      "url": "/news/2024-03-08-technology-meets-creativity/",
+      "date": "2024-03-08",
+      "year": 2024,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The workshop brought together artists, researchers, and technologists to explore responsible generative AI."
+    },
+    {
+      "id": "2024-04-12-postdoctoral-symposium-talk",
+      "title": "Invited Talk at the Postdoctoral Symposium in Human Genetics",
+      "url": "/news/2024-04-12-postdoctoral-symposium-talk/",
+      "date": "2024-04-12",
+      "year": 2024,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The seminar showed how large-scale phenotypic datasets can inform evolutionary and comparative biology."
+    },
+    {
+      "id": "2024-05-15-midas-visualizing-and-presenting-data-workshop",
+      "title": "Workshop: Visualizing and Presenting Data (Spring Session)",
+      "url": "/news/2024-05-15-midas-visualizing-and-presenting-data-workshop/",
+      "date": "2024-05-15",
+      "year": 2024,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Led the spring 2024 MIDAS workshop on AI-assisted data visualization and presentation."
+    },
+    {
+      "id": "2024-06-18-cvpr-computer-vision-for-science-co-organizer",
+      "title": "Service: CVPR Computer Vision for Science Co-organizer",
+      "url": "/news/2024-06-18-cvpr-computer-vision-for-science-co-organizer/",
+      "date": "2024-06-18",
+      "year": 2024,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Seattle, Washington",
+          "country_code": "US",
+          "lat": 47.6062,
+          "lon": -122.3321,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Co-organized the CVPR 2024 Computer Vision for Science workshop across computer vision and scientific domains."
+    },
+    {
+      "id": "2024-06-19-cvpr-computer-vision-for-science",
+      "title": "Invited Speaker at the CVPR Computer Vision for Science Workshop",
+      "url": "/news/2024-06-19-cvpr-computer-vision-for-science/",
+      "date": "2024-06-19",
+      "year": 2024,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Seattle, Washington",
+          "country_code": "US",
+          "lat": 47.6062,
+          "lon": -122.3321,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The talk shared biodiversity imaging and phenomics workflows with the computer vision community."
+    },
+    {
+      "id": "2024-06-20-napc-abstract-volume-editing-service",
+      "title": "Service at NAPC 2024: Abstract Volume Editing",
+      "url": "/news/2024-06-20-napc-abstract-volume-editing-service/",
+      "date": "2024-06-20",
+      "year": 2024,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Contributed service support and abstract-volume editing at NAPC 2024 in Ann Arbor."
+    },
+    {
+      "id": "2024-06-24-napc-phenotypic-integration",
+      "title": "Talk: Phenotypic Integration at the North American Paleontological Congress",
+      "url": "/news/2024-06-24-napc-phenotypic-integration/",
+      "date": "2024-06-24",
+      "year": 2024,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The talk showcased museum-scale analyses of passerine skeletal evolution."
+    },
+    {
+      "id": "2024-07-30-3rd-Joint-Congress-on-Evolutionary-Biology",
+      "title": "3rd Joint Congress on Evolutionary Biology",
+      "url": "/news/2024-07-30-3rd-Joint-Congress-on-Evolutionary-Biology/",
+      "date": "2024-07-30",
+      "year": 2024,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "CA",
+          "name": "Canada",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Montreal, Quebec",
+          "country_code": "CA",
+          "lat": 45.5019,
+          "lon": -73.5674,
+          "weight": 1
+        }
+      ],
+      "excerpt": "<div class=\"flex-container\" style=\"display: flex; align-items: flex-start;\""
+    },
+    {
+      "id": "2024-08-01-science-advances",
+      "title": "Genome and life-history evolution link bird diversification to the end-Cretaceous mass extinction",
+      "url": "/news/2024-08-01-science-advances/",
+      "date": "2024-08-01",
+      "year": 2024,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "<div class=\"flex-container\" style=\"display: flex; align-items: flex-start;\""
+    },
+    {
+      "id": "2024-11-14-living-fossil-lineages-phenotypic-evolution-preprint",
+      "title": "Publication: Phenotypic Evolution Patterns in Living Fossil Lineages",
+      "url": "/news/2024-11-14-living-fossil-lineages-phenotypic-evolution-preprint/",
+      "date": "2024-11-14",
+      "year": 2024,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Posted a new bioRxiv preprint examining variable phenotypic evolution patterns across living fossil lineages."
+    },
+    {
+      "id": "2024-11-15-midas-generative-ai-tutorials",
+      "title": "Workshop: Visualizing and Presenting Data (Fall Session)",
+      "url": "/news/2024-11-15-midas-generative-ai-tutorials/",
+      "date": "2024-11-15",
+      "year": 2024,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The workshop focused on practical strategies for data visualization and scientific communication."
+    },
+    {
+      "id": "2025-01-05-sse-symposium-award",
+      "title": "Society for the Study of Evolution Symposium Award",
+      "url": "/news/2025-01-05-sse-symposium-award/",
+      "date": "2025-01-05",
+      "year": 2025,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The award supported an inclusive symposium on AI applications in ecology and evolution."
+    },
+    {
+      "id": "2025-01-10-murine-rodent-phylogenomic-discordance",
+      "title": "Publication: Phylogenomic Discordance in Murine Rodents",
+      "url": "/news/2025-01-10-murine-rodent-phylogenomic-discordance/",
+      "date": "2025-01-10",
+      "year": 2025,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Additional details: Thomas, G. W. C., Hughes, J. J., Kumon, T., Berv, J. S., Nordgren, C. E., Lampson, M., Levine, M., Searle, J. B., & Good, J. M. (2025). Genome Biology and Evolution, evaf017. https://doi.org/10.1093/gbe/evaf017"
+    },
+    {
+      "id": "2025-01-15-bifrost-cran-package-release",
+      "title": "bifrost R Package Released on CRAN",
+      "url": "/news/2025-01-15-bifrost-cran-package-release/",
+      "date": "2025-01-15",
+      "year": 2025,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "bifrost, an R package for branch-level evolutionary inference, was released on CRAN. Package page"
+    },
+    {
+      "id": "2025-01-20-deep-sea-invertebrate-substitution-rates",
+      "title": "Publication: Habitat-Associated Substitution Rates in Deep-Sea Invertebrates",
+      "url": "/news/2025-01-20-deep-sea-invertebrate-substitution-rates/",
+      "date": "2025-01-20",
+      "year": 2025,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Additional details: Weiss, A. K., & Berv, J. S. (2025). Evolution, 79(7), 1334-1348. https://doi.org/10.1093/evolut/qpaf080"
+    },
+    {
+      "id": "2025-02-01-skeletal-trait-measurements",
+      "title": "Publication: Skeletal Trait Measurements for Bird Species",
+      "url": "/news/2025-02-01-skeletal-trait-measurements/",
+      "date": "2025-02-01",
+      "year": 2025,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Additional details: Weeks, B. C., Zhou, Z., Probst, C. M., Berv, J. S., O'Brien, B. K., Benz, B. W., Skeen, H. R., Ziebell, M., Bodt, L., & Fouhey, D. F. (2025). Scientific Data, 12, 884. https://doi.org/10.1038/s41597-025-05234-y"
+    },
+    {
+      "id": "2025-03-01-cetacean-mandibular-symphysis",
+      "title": "Publication: Cetacean Mandibular Symphysis Diversity",
+      "url": "/news/2025-03-01-cetacean-mandibular-symphysis/",
+      "date": "2025-03-01",
+      "year": 2025,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Additional details: Strauch, R. J., Berv, J. S., Fraser, D., Pyenson, N. D., & Peredo, C. M. (2025). Paleobiology, 1-10. https://doi.org/10.1017/pab.2025.10061"
+    },
+    {
+      "id": "2025-06-18-cvpr-computer-vision-for-science-co-organizer-2025",
+      "title": "Service: CVPR 2025 Computer Vision for Science Co-organizer",
+      "url": "/news/2025-06-18-cvpr-computer-vision-for-science-co-organizer-2025/",
+      "date": "2025-06-18",
+      "year": 2025,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Co-organized the CVPR 2025 Computer Vision for Science workshop across vision and life-science research communities."
+    },
+    {
+      "id": "2025-06-22-evolution-2025-symposium",
+      "title": "Presentation and AI Symposium at Evolution 2025",
+      "url": "/news/2025-06-22-evolution-2025-symposium/",
+      "date": "2025-06-22",
+      "year": 2025,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Athens, Georgia",
+          "country_code": "US",
+          "lat": 33.9519,
+          "lon": -83.3576,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The symposium highlighted AI-enabled comparative methods and cross-disciplinary collaboration in evolutionary biology."
+    },
+    {
+      "id": "2025-08-01-packard-foundation-weeks-lab",
+      "title": "Packard Foundation Postdoctoral Fellowship in the Weeks Lab",
+      "url": "/news/2025-08-01-packard-foundation-weeks-lab/",
+      "date": "2025-08-01",
+      "year": 2025,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The role advanced collaborative research connecting museum collections, macroevolution, and climate resilience."
+    },
+    {
+      "id": "2025-09-01-travel-grants-rse-banbury",
+      "title": "Travel Grants for Oxford RSE and Banbury Center Workshops",
+      "url": "/news/2025-09-01-travel-grants-rse-banbury/",
+      "date": "2025-09-01",
+      "year": 2025,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "GB",
+          "name": "United Kingdom",
+          "region_m49": "154",
+          "weight": 1
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Oxford",
+          "country_code": "GB",
+          "lat": 51.752,
+          "lon": -1.2577,
+          "weight": 1
+        },
+        {
+          "name": "Cold Spring Harbor, New York",
+          "country_code": "US",
+          "lat": 40.8715,
+          "lon": -73.4568,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The support backed training that links open-science software engineering and scientific entrepreneurship in biodiversity research."
+    },
+    {
+      "id": "2025-09-15-oxford-rse-workshop-completed",
+      "title": "Completed Oxford Research Software Engineering Workshop",
+      "url": "/news/2025-09-15-oxford-rse-workshop-completed/",
+      "date": "2025-09-15",
+      "year": 2025,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "GB",
+          "name": "United Kingdom",
+          "region_m49": "154",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Oxford",
+          "country_code": "GB",
+          "lat": 51.752,
+          "lon": -1.2577,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Completed the Oxford research software engineering workshop, expanding reproducible computing workflows for scientific projects."
+    },
+    {
+      "id": "2025-10-01-openai-for-science-award",
+      "title": "OpenAI for Science Award",
+      "url": "/news/2025-10-01-openai-for-science-award/",
+      "date": "2025-10-01",
+      "year": 2025,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received an OpenAI for Science award supporting model-enabled research in computational evolutionary biology."
+    },
+    {
+      "id": "2025-10-10-gsa-pardee-symposium-keynote",
+      "title": "Invited Keynote at the GSA Pardee Symposium",
+      "url": "/news/2025-10-10-gsa-pardee-symposium-keynote/",
+      "date": "2025-10-10",
+      "year": 2025,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "<span class=\"news-inline\" style=\"display: inline-flex; align-items: flex-start;\""
+    },
+    {
+      "id": "2025-10-15-banbury-scientific-entrepreneurship-workshop-completed",
+      "title": "Completed Banbury Scientific Entrepreneurship Workshop",
+      "url": "/news/2025-10-15-banbury-scientific-entrepreneurship-workshop-completed/",
+      "date": "2025-10-15",
+      "year": 2025,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Cold Spring Harbor, New York",
+          "country_code": "US",
+          "lat": 40.8715,
+          "lon": -73.4568,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Completed the Banbury Center workshop on AI in science entrepreneurship."
+    },
+    {
+      "id": "2025-10-15-gsa-pardee-keynote-travel-award",
+      "title": "Award: GSA Pardee Keynote Speaker Travel Award",
+      "url": "/news/2025-10-15-gsa-pardee-keynote-travel-award/",
+      "date": "2025-10-15",
+      "year": 2025,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Received the GSA Pardee Keynote Speaker Travel Award in support of the 2025 invited keynote."
+    },
+    {
+      "id": "2025-11-15-earth-444-guest-lecture",
+      "title": "Guest Lecture on Molecular Systematics for EARTH 444",
+      "url": "/news/2025-11-15-earth-444-guest-lecture/",
+      "date": "2025-11-15",
+      "year": 2025,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The session focused on molecular-systematic methods for integrating evolutionary history across deep time."
+    },
+    {
+      "id": "2026-01-13-peer-review-milestone-66-verified-reviews",
+      "title": "Service: Peer Review Milestone (66 Verified Reviews)",
+      "url": "/news/2026-01-13-peer-review-milestone-66-verified-reviews/",
+      "date": "2026-01-13",
+      "year": 2026,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Reached a milestone of 66 verified peer reviews across leading evolutionary and interdisciplinary journals."
+    },
+    {
+      "id": "2026-01-15-evolutionary-ecology-morphological-responses-paper",
+      "title": "Publication: Morphological Responses to Climate Change",
+      "url": "/news/2026-01-15-evolutionary-ecology-morphological-responses-paper/",
+      "date": "2026-01-15",
+      "year": 2026,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Published a 2026 Evolutionary Ecology paper on climate-linked morphological responses and global data priorities."
+    }
+  ]
+}

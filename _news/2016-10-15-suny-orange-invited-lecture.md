@@ -4,6 +4,19 @@ date: 2016-10-15
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+geo:
+  version: 1
+  scope: event
+  countries:
+    - code: US
+      weight: 1
+      region_m49: "021"
+  localities:
+    - name: "Middletown, New York"
+      country_code: US
+      lat: 41.4459
+      lon: -74.4229
+      weight: 1
 tags:
   - invited_talk
 ---

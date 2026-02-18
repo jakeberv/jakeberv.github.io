@@ -4,6 +4,19 @@ date: 2023-01-20
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+geo:
+  version: 1
+  scope: event
+  countries:
+    - code: MX
+      weight: 1
+      region_m49: "013"
+  localities:
+    - name: "Chamela Field Station, Jalisco"
+      country_code: MX
+      lat: 19.5
+      lon: -105.05
+      weight: 1
 tags:
   - workshop_training
 ---

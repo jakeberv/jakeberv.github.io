@@ -4,6 +4,19 @@ date: 2008-05-15
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+geo:
+  version: 1
+  scope: event
+  countries:
+    - code: ZA
+      weight: 1
+      region_m49: "018"
+  localities:
+    - name: "Tzaneen, Limpopo"
+      country_code: ZA
+      lat: -23.8333
+      lon: 30.1667
+      weight: 1
 tags:
   - outreach
 ---

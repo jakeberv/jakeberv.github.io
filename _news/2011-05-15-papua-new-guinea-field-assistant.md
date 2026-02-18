@@ -4,6 +4,14 @@ date: 2011-05-15
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+geo:
+  version: 1
+  scope: event
+  countries:
+    - code: PG
+      weight: 1
+      region_m49: "054"
+  localities: []
 tags:
   - fieldwork
 ---

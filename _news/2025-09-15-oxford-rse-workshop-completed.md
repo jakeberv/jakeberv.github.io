@@ -4,6 +4,19 @@ date: 2025-09-15
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+geo:
+  version: 1
+  scope: event
+  countries:
+    - code: GB
+      weight: 1
+      region_m49: "154"
+  localities:
+    - name: "Oxford"
+      country_code: GB
+      lat: 51.752
+      lon: -1.2577
+      weight: 1
 tags:
   - workshop_training
 ---

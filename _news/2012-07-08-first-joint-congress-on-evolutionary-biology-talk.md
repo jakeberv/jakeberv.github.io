@@ -4,6 +4,19 @@ date: 2012-07-08
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+geo:
+  version: 1
+  scope: event
+  countries:
+    - code: CA
+      weight: 1
+      region_m49: "021"
+  localities:
+    - name: "Ottawa, Ontario"
+      country_code: CA
+      lat: 45.4215
+      lon: -75.6972
+      weight: 1
 tags:
   - conference_talk
 ---

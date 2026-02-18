@@ -4,6 +4,19 @@ date: 2016-09-26
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+geo:
+  version: 1
+  scope: event
+  countries:
+    - code: US
+      weight: 1
+      region_m49: "021"
+  localities:
+    - name: "Denver, Colorado"
+      country_code: US
+      lat: 39.7392
+      lon: -104.9903
+      weight: 1
 tags:
   - conference_talk
 ---

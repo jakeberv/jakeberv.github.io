@@ -4,6 +4,14 @@ date: 2008-06-15
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+geo:
+  version: 1
+  scope: event
+  countries:
+    - code: ZA
+      weight: 1
+      region_m49: "018"
+  localities: []
 tags:
   - fieldwork
 ---

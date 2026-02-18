@@ -4,6 +4,19 @@ date: 2017-08-24
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+geo:
+  version: 1
+  scope: event
+  countries:
+    - code: CA
+      weight: 1
+      region_m49: "021"
+  localities:
+    - name: "Calgary, Alberta"
+      country_code: CA
+      lat: 51.0447
+      lon: -114.0719
+      weight: 1
 tags:
   - conference_talk
 ---

@@ -4,6 +4,19 @@ date: 2020-11-12
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+geo:
+  version: 1
+  scope: event
+  countries:
+    - code: US
+      weight: 1
+      region_m49: "021"
+  localities:
+    - name: "Boston, Massachusetts"
+      country_code: US
+      lat: 42.3601
+      lon: -71.0589
+      weight: 1
 tags:
   - invited_talk
 ---

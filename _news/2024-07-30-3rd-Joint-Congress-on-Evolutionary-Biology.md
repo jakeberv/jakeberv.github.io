@@ -4,6 +4,19 @@ date: 2024-07-30
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+geo:
+  version: 1
+  scope: event
+  countries:
+    - code: CA
+      weight: 1
+      region_m49: "021"
+  localities:
+    - name: "Montreal, Quebec"
+      country_code: CA
+      lat: 45.5019
+      lon: -73.5674
+      weight: 1
 tags:
   - conference_talk
 ---

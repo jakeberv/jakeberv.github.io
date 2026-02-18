@@ -24,6 +24,7 @@ This template defines the recommended schema for files in `_news/`.
 
 ## Optional front matter
 - `tags` (array of canonical slugs from `_data/news_tags.yml`)
+- `geo` (object for map-ready geographic hit encoding)
 
 ## Canonical tag taxonomy
 - Source of truth: `_data/news_tags.yml`
@@ -33,6 +34,29 @@ This template defines the recommended schema for files in `_news/`.
 - Umbrella categories are derived from each leaf tag's `group` value in `_data/news_tags.yml`.
 - Recommended usage: `1-3` primary tags per item, plus optional modifier tags.
 - Use `student_contribution` (modifier tag) when a student advisee is a notable contributor (for example lead/co-lead author or presenter).
+
+## Geo encoding for map parsing
+- Goal: keep all geodata self-contained in each news file front matter for downstream JS parsing.
+- `geo` is optional. Omit it when an item has no meaningful location context.
+- Recommended structure is country-first with optional localities:
+  - `geo.version` (integer, currently `1`)
+  - `geo.scope` (optional string: `event` default, `global`, or `virtual`)
+  - `geo.countries` (array; required when `geo.scope` is `event`)
+  - `geo.localities` (optional array for point-map overlays)
+- `geo.countries[]` fields:
+  - `code` (required; ISO 3166-1 alpha-2, uppercase, for example `US`, `EC`, `GB`)
+  - `weight` (optional number; defaults to `1`)
+  - `region_m49` (optional string; UN M49 3-digit region code, for example `021`)
+- `geo.localities[]` fields:
+  - `name` (required string)
+  - `country_code` (required; ISO 3166-1 alpha-2)
+  - `lat` (required number)
+  - `lon` (required number)
+  - `weight` (optional number; defaults to `1`)
+- Parsing guidance:
+  - Choropleth country density should use `geo.countries[].code`.
+  - If weights are used, sum by country (or normalize per entry if desired by the map logic).
+  - Localities should be treated as optional point data, not required for country-level mapping.
 
 ## Strongly recommended body structure
 1. First paragraph: short full item text.
@@ -51,6 +75,22 @@ excerpt_separator: "<!--news-excerpt-->"
 tags:
   - conference_talk
   - invited_talk
+geo:
+  version: 1
+  scope: event
+  countries:
+    - code: US
+      weight: 1
+      region_m49: "021"
+    - code: EC
+      weight: 1
+      region_m49: "005"
+  localities:
+    - name: "Seattle"
+      country_code: US
+      lat: 47.6062
+      lon: -122.3321
+      weight: 1
 ---
 Full news text (1-3 sentences) with any links.
 
@@ -63,3 +103,5 @@ One-sentence excerpt used in list pages.
 - Excerpt separator exists exactly once.
 - Item appears in `/news/` year group and homepage recent list.
 - If `tags` is present, every tag exists in `_data/news_tags.yml`.
+- If `geo` is present, `geo.version` is set and country codes are valid ISO alpha-2.
+- If `geo.localities` is present, each locality has `name`, `country_code`, `lat`, and `lon`.

@@ -60,7 +60,18 @@ if ! command -v python3 >/dev/null 2>&1; then
   exit 1
 fi
 
+if ! command -v node >/dev/null 2>&1; then
+  echo "node is required to generate career geo map data."
+  exit 1
+fi
+
 cd "$ROOT_DIR"
+
+echo "Validating _news geo front matter ..."
+node scripts/qa/validate-news-geo.mjs
+
+echo "Generating career geo map data ..."
+node scripts/build-career-geo-data.mjs
 
 echo "Building site with: ${BUNDLE_CMD[*]} exec jekyll build ..."
 "${BUNDLE_CMD[@]}" exec jekyll build --safe --config _config.yml,_config.dev.yml

@@ -4,6 +4,19 @@ date: 2018-08-20
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+geo:
+  version: 1
+  scope: event
+  countries:
+    - code: FR
+      weight: 1
+      region_m49: "155"
+  localities:
+    - name: "Montpellier"
+      country_code: FR
+      lat: 43.611
+      lon: 3.8767
+      weight: 1
 tags:
   - conference_talk
   - award

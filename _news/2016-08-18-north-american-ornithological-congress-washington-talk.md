@@ -4,6 +4,19 @@ date: 2016-08-18
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+geo:
+  version: 1
+  scope: event
+  countries:
+    - code: US
+      weight: 1
+      region_m49: "021"
+  localities:
+    - name: "Washington, District of Columbia"
+      country_code: US
+      lat: 38.9072
+      lon: -77.0369
+      weight: 1
 tags:
   - conference_talk
 ---

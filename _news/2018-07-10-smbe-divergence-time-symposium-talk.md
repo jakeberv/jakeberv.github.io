@@ -4,6 +4,19 @@ date: 2018-07-10
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+geo:
+  version: 1
+  scope: event
+  countries:
+    - code: JP
+      weight: 1
+      region_m49: "030"
+  localities:
+    - name: "Yokohama"
+      country_code: JP
+      lat: 35.4437
+      lon: 139.638
+      weight: 1
 tags:
   - conference_talk
 ---

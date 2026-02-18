@@ -4,6 +4,14 @@ date: 2014-01-25
 layout: archive
 author_profile: true
 excerpt_separator: "<!--news-excerpt-->"
+geo:
+  version: 1
+  scope: event
+  countries:
+    - code: KE
+      weight: 1
+      region_m49: "014"
+  localities: []
 tags:
   - service
   - fieldwork
