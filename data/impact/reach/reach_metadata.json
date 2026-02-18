@@ -1,0 +1,155 @@
+{
+  "generated_at_utc": "2026-02-18T18:09:32.616294+00:00",
+  "input": {
+    "source_path": "/Users/cotinga/Documents/jakeberv.github.io/data/impact/exports/news_mentions_clean.json",
+    "news_mentions_rows": 302,
+    "unique_domains": 159
+  },
+  "source": {
+    "source": "tranco_api",
+    "list_id": "9WJY2",
+    "download_url": "https://tranco-list.eu/download/9WJY2/1000000",
+    "created_on": "2026-02-17T22:00:02.262610",
+    "retrieved_at_utc": "2026-02-18T18:09:27.272042+00:00",
+    "cache_hit": false,
+    "zip_path": "/Users/cotinga/Documents/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_9WJY2.csv.zip",
+    "ranked_domains": 999969
+  },
+  "coverage": {
+    "domains_matched": 138,
+    "domains_unmatched": 21,
+    "domain_match_rate": 0.8679,
+    "mentions_ranked": 275,
+    "mentions_total": 302,
+    "mention_coverage_rate": 0.9106
+  },
+  "top_unmatched_domains": [
+    {
+      "domain": "journalbreak.com",
+      "mentions": 3,
+      "top_outlet": "journalbreak.Com",
+      "last_mention_date": "2022-11-27T01:08:20"
+    },
+    {
+      "domain": "nach-welt.com",
+      "mentions": 3,
+      "top_outlet": "Nachrichten Welt",
+      "last_mention_date": "2022-11-27T04:02:21"
+    },
+    {
+      "domain": "torontotelegraph.com",
+      "mentions": 2,
+      "top_outlet": "Toronto Telegraph",
+      "last_mention_date": "2023-12-19T18:39:17"
+    },
+    {
+      "domain": "us.alertbreakingnews.com",
+      "mentions": 2,
+      "top_outlet": "Alert Breaking News - US",
+      "last_mention_date": "2022-10-27T18:44:19"
+    },
+    {
+      "domain": "bilbao24horas.com",
+      "mentions": 1,
+      "top_outlet": "Bilbao24horas",
+      "last_mention_date": "2022-12-04T08:03:51"
+    },
+    {
+      "domain": "cambiopolitico.com",
+      "mentions": 1,
+      "top_outlet": "Cambio Poltico",
+      "last_mention_date": "2022-12-01T22:11:33"
+    },
+    {
+      "domain": "chitchatpost.com",
+      "mentions": 1,
+      "top_outlet": "ChitChat Post Espana",
+      "last_mention_date": "2024-08-14T01:05:52"
+    },
+    {
+      "domain": "dclm.es",
+      "mentions": 1,
+      "top_outlet": "dclm",
+      "last_mention_date": "2022-12-04T12:11:46"
+    },
+    {
+      "domain": "elportaluco.com",
+      "mentions": 1,
+      "top_outlet": "El Portaluco",
+      "last_mention_date": "2022-12-04T05:41:01"
+    },
+    {
+      "domain": "free-mail.co.za",
+      "mentions": 1,
+      "top_outlet": "Free Mail South Africa",
+      "last_mention_date": "2023-12-20T01:00:19"
+    },
+    {
+      "domain": "longroom.com",
+      "mentions": 1,
+      "top_outlet": "Long Room",
+      "last_mention_date": "2018-05-24T19:15:53"
+    },
+    {
+      "domain": "madriddigital24horas.com",
+      "mentions": 1,
+      "top_outlet": "Madriddigital24horas",
+      "last_mention_date": "2022-12-04T11:09:48"
+    },
+    {
+      "domain": "newslanes.com",
+      "mentions": 1,
+      "top_outlet": "Newslanes",
+      "last_mention_date": "2022-11-25T06:24:20"
+    },
+    {
+      "domain": "nipponese.news",
+      "mentions": 1,
+      "top_outlet": "Nipponese.news",
+      "last_mention_date": "2024-08-18T10:03:01"
+    },
+    {
+      "domain": "noticiasdelatierra.com",
+      "mentions": 1,
+      "top_outlet": "Noticias de la tierra",
+      "last_mention_date": "2024-04-08T15:39:30"
+    },
+    {
+      "domain": "presseraum.at",
+      "mentions": 1,
+      "top_outlet": "Presseraum",
+      "last_mention_date": "2022-11-25T13:18:01"
+    },
+    {
+      "domain": "swifttelecast.com",
+      "mentions": 1,
+      "top_outlet": "Swift Telecast",
+      "last_mention_date": "2022-11-26T17:13:24"
+    },
+    {
+      "domain": "technologytimes.pk",
+      "mentions": 1,
+      "top_outlet": "Technology Times",
+      "last_mention_date": "2021-10-12T19:06:21"
+    },
+    {
+      "domain": "trueviralnews.com",
+      "mentions": 1,
+      "top_outlet": "True Viral News",
+      "last_mention_date": "2021-10-11T18:38:02"
+    },
+    {
+      "domain": "uktimenews.com",
+      "mentions": 1,
+      "top_outlet": "UK Time News",
+      "last_mention_date": "2022-11-25T05:02:03"
+    },
+    {
+      "domain": "w2.technobahn.com",
+      "mentions": 1,
+      "top_outlet": "Technobahn",
+      "last_mention_date": "2015-02-12T17:11:00"
+    }
+  ],
+  "warnings": []
+}

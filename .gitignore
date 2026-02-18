@@ -21,3 +21,10 @@ _source/*_cache
 # OS / editor junk files (safe to include)
 .DS_Store
 Thumbs.db
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Reach ranking download cache
+data/impact/reach/.cache/

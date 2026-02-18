@@ -61,6 +61,27 @@ Runtime map dependencies:
 - D3 + TopoJSON from pinned CDN URLs
 - World basemap topology from CDN (with fallback URL)
 
+## Impact Reach Data Pipeline
+
+Reach-proxy data for impact news outlets is generated at:
+
+- `data/impact/reach/outlet_reach.json`
+- `data/impact/reach/outlet_reach.csv`
+- `data/impact/reach/reach_metadata.json`
+
+Builder:
+
+- `scripts/build-impact-reach-data.py`
+
+Default invocation:
+
+- `python3 scripts/build-impact-reach-data.py --repo-root "$ROOT_DIR" --out-dir "$ROOT_DIR/data/impact/reach"`
+
+Source notes:
+
+- Uses `data/impact/exports/news_mentions_clean.json` (or CSV fallback) as outlet-domain input.
+- Uses Tranco top-domain ranking as a free reach proxy (with local cache fallback under `data/impact/reach/.cache/`).
+
 ## LLM/Bot Collaboration
 
 Repository-level bot operating policy:

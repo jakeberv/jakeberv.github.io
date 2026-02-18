@@ -39,6 +39,9 @@ jobs:
       - name: Generate impact dashboard data
         run: python3 scripts/build-impact-dashboard-data.py --repo-root "$GITHUB_WORKSPACE" --out-dir "$GITHUB_WORKSPACE/data/impact"
 
+      - name: Generate impact reach data
+        run: python3 scripts/build-impact-reach-data.py --repo-root "$GITHUB_WORKSPACE" --out-dir "$GITHUB_WORKSPACE/data/impact/reach"
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:

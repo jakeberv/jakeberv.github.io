@@ -14,18 +14,27 @@ The page is include-driven (no inline chart logic in `impact.md`).
 
 ## Data Inputs
 
-The builder reads:
+Impact dashboard builder reads:
 
 - `_publications/*.md`
 - `_data/scholar_metrics.json`
 - `_data/map_data.json`
 - `data/altmetric/raw/*.csv`
 
+Impact reach builder reads:
+
+- `data/impact/exports/news_mentions_clean.json` (preferred) or `.csv`
+- Tranco top-domain list (network fetch with local cache fallback)
+
 ## Generated Outputs
 
 Builder script:
 
 - `scripts/build-impact-dashboard-data.py`
+
+Reach script:
+
+- `scripts/build-impact-reach-data.py`
 
 Default output directory:
 
@@ -37,6 +46,9 @@ Generated files:
 - `impact_reconciliation.json`
 - `exports/*.json`
 - `exports/*.csv`
+- `reach/outlet_reach.json`
+- `reach/outlet_reach.csv`
+- `reach/reach_metadata.json`
 
 Dataset catalog links in `impact_dashboard.json` are absolute site paths under `/data/impact/exports/`.
 
@@ -46,13 +58,15 @@ Local preview hook:
 
 - `scripts/local_preview.command`
 - Runs `python3 scripts/build-impact-dashboard-data.py` before `jekyll build`.
+- Runs `python3 scripts/build-impact-reach-data.py` before `jekyll build`.
 
 Deploy hook:
 
 - `.github/workflows/deploy_site.yml`
 - Runs `python3 scripts/build-impact-dashboard-data.py` before Jekyll build.
+- Runs `python3 scripts/build-impact-reach-data.py` before Jekyll build.
 
-This ensures impact data is regenerated at deploy/build time when source inputs change.
+This ensures impact and reach datasets are regenerated at deploy/build time when source inputs change.
 
 ## Runtime Dependencies
 

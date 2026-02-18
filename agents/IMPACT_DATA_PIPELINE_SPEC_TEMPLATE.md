@@ -20,6 +20,9 @@ This template documents how `/impact/` dashboard data is generated and maintaine
 - Script: `scripts/build-impact-dashboard-data.py`
 - Default invocation:
   - `python3 scripts/build-impact-dashboard-data.py --repo-root "$ROOT_DIR" --out-dir "$ROOT_DIR/data/impact"`
+- Reach script (optional but recommended for outlet prominence/ranking):
+  - `scripts/build-impact-reach-data.py`
+  - `python3 scripts/build-impact-reach-data.py --repo-root "$ROOT_DIR" --out-dir "$ROOT_DIR/data/impact/reach"`
 
 ## Upstream inputs
 - `_publications/*.md` (canonical publication registry + metadata)
@@ -32,6 +35,9 @@ This template documents how `/impact/` dashboard data is generated and maintaine
 - `data/impact/impact_reconciliation.json`
 - `data/impact/exports/*.json`
 - `data/impact/exports/*.csv`
+- `data/impact/reach/outlet_reach.json`
+- `data/impact/reach/outlet_reach.csv`
+- `data/impact/reach/reach_metadata.json`
 
 Dataset links in `impact_dashboard.json` should remain site-absolute (`/data/impact/exports/...`) so downloads resolve in local preview and on deployed Pages.
 
@@ -103,10 +109,12 @@ Dataset links in `impact_dashboard.json` should remain site-absolute (`/data/imp
 ### Deploy-time generation
 - Workflow file: `.github/workflows/deploy_site.yml`
 - Required behavior: run `scripts/build-impact-dashboard-data.py` before `jekyll build`.
+- Required behavior: run `scripts/build-impact-reach-data.py` before `jekyll build`.
 
 ### Local preview generation
 - Script: `scripts/local_preview.command`
 - Required behavior: run `scripts/build-impact-dashboard-data.py` before local `jekyll build`.
+- Required behavior: run `scripts/build-impact-reach-data.py` before local `jekyll build`.
 
 ### Upstream source refreshes
 - Scholar refresh workflow: `.github/workflows/fetch_scholar_data.yml` updates `_data/scholar_metrics.json`.
@@ -117,6 +125,7 @@ Dataset links in `impact_dashboard.json` should remain site-absolute (`/data/imp
 - Builder exits successfully.
 - `data/impact/impact_dashboard.json` and `data/impact/impact_reconciliation.json` parse as valid JSON.
 - `dataset_catalog` paths correspond to files present under `data/impact/exports/`.
+- `data/impact/reach/reach_metadata.json` reports non-zero ranked domains when network or cache is available.
 - `/impact/` loads charts/tables without console errors.
 - Local preview and deploy workflows both regenerate impact data before Jekyll build.
 
