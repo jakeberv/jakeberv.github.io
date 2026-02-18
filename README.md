@@ -40,7 +40,13 @@ If you want to run the site locally:
 
 Optional:
 - Build only (no server): `./scripts/local_preview.command --build-only`
+- Force clean full rebuild (skip incremental): `./scripts/local_preview.command --full-build`
+- Run geo/impact data regeneration + validation: `./scripts/local_preview.command --with-data`
+- Skip geo/impact data regeneration explicitly: `./scripts/local_preview.command --skip-data`
 - Custom port: `./scripts/local_preview.command --port 4010`
+- Always run full data + full build path: `./scripts/local_preview_fullbuild.command`
+
+By default, local preview skips geo/impact data regeneration and uses Jekyll incremental builds for faster iteration. If incremental fails, the script automatically retries once with a full rebuild.
 
 ## Career Footprint Data Pipeline
 

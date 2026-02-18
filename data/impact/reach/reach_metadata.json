@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-02-18T20:33:25.748124+00:00",
+  "generated_at_utc": "2026-02-18T23:26:41.315404+00:00",
   "input": {
     "source_path": "/Users/cotinga/Documents/jakeberv.github.io/data/impact/exports/news_mentions_clean.json",
     "news_mentions_rows_input": 345,
@@ -13,11 +13,11 @@
     }
   },
   "source": {
-    "source": "tranco_api",
+    "source": "unavailable",
     "list_id": "9WJY2",
     "download_url": "https://tranco-list.eu/download/9WJY2/1000000",
     "created_on": "2026-02-17T22:00:02.262610",
-    "retrieved_at_utc": "2026-02-18T20:32:47.744636+00:00",
+    "retrieved_at_utc": "2026-02-18T23:26:04.917282+00:00",
     "cache_hit": true,
     "zip_path": "/Users/cotinga/Documents/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_9WJY2.csv.zip",
     "ranked_domains": 132
@@ -47,7 +47,7 @@
     "latest_snapshot_date": "2025-05-15",
     "unresolved_period_keys": [],
     "date_api_lookups_attempted": 0,
-    "date_api_lookup_cap": 250,
+    "date_api_lookup_cap": 50,
     "date_api_lookup_cap_hit": false,
     "date_api_delay_ms": 250
   },
@@ -179,5 +179,7 @@
       "last_mention_date": "2015-02-12T17:11:00"
     }
   ],
-  "warnings": []
+  "warnings": [
+    "Unable to fetch Tranco latest metadata endpoints; attempting cached latest list."
+  ]
 }

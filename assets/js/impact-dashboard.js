@@ -4,6 +4,8 @@ if (!root) return;
 
 const DATA_PATH = root.dataset.dashboardUrl || "/data/impact/impact_dashboard.json";
 const RECON_PATH = root.dataset.reconciliationUrl || "/data/impact/impact_reconciliation.json";
+const REACH_MENTIONS_PATH = root.dataset.reachMentionsUrl || "/data/impact/reach/time_adjusted_mentions_reach.json";
+const REACH_METADATA_PATH = root.dataset.reachMetadataUrl || "/data/impact/reach/reach_metadata.json";
 const WORLD_TOPO_URLS = [
   root.dataset.worldUrl || "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
   root.dataset.worldUrlFallback || "https://unpkg.com/world-atlas@2/countries-110m.json",
@@ -51,6 +53,15 @@ const PREVIEW_OPTIONS = [
 
 const SOCIAL_TYPES = new Set(["X Post", "Bluesky post", "Facebook post", "Reddit post", "Google+ post"]);
 const MEDIA_REFERENCE_TYPES = new Set(["News story", "Blog post", "Video", "Podcast episode", "Wikipedia page", "Q&A post"]);
+const EXCLUDED_REACH_DOMAINS = new Set(["ct.moreover.com", "feedproxy.google.com", "news.google.com"]);
+const OUTLET_PANEL_TOP_N = 12;
+const IMPRESSION_MODEL = {
+  visits_at_rank_1: 500_000_000,
+  rank_exponent: 0.62,
+  share_low: 0.0002,
+  share_mid: 0.0005,
+  share_high: 0.001,
+};
 
 const COLORS = {
   social: "rgba(43, 111, 169, 0.84)",
@@ -90,10 +101,14 @@ const charts = {
   timeline: null,
   donut: null,
   map: null,
+  reachMatrix: null,
+  impressionsEstimate: null,
 };
 
 let rawDashboard = null;
 let reconciliation = null;
+let reachMentionsRaw = [];
+let reachMetadataRaw = {};
 let dataModel = null;
 let worldCountries = null;
 let renderToken = 0;
@@ -127,6 +142,10 @@ const el = {
   mapModeButtons: q("#mapModeButtons"),
   mapChart: q("#mapChart"),
   mapHint: q("#mapHint"),
+  reachMatrixChart: q("#reachMatrixChart"),
+  reachMatrixHint: q("#reachMatrixHint"),
+  impressionsEstimateChart: q("#impressionsEstimateChart"),
+  impressionsEstimateHint: q("#impressionsEstimateHint"),
 
   coverageTabs: q("#coverageTabs"),
   coverageList: q("#coverageList"),
@@ -161,6 +180,13 @@ function toNumber(value) {
 
 function fmtNumber(value) {
   return new Intl.NumberFormat("en-US").format(toNumber(value));
+}
+
+function fmtCompactNumber(value) {
+  return new Intl.NumberFormat("en-US", {
+    notation: "compact",
+    maximumFractionDigits: 1,
+  }).format(toNumber(value));
 }
 
 function safeText(value) {
@@ -202,6 +228,35 @@ function normalizeText(value) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
+}
+
+function isExcludedReachDomain(domain) {
+  const d = String(domain || "").trim().toLowerCase();
+  if (!d) return false;
+  return EXCLUDED_REACH_DOMAINS.has(d);
+}
+
+function normalizeOutletIdentity(outlet, domain) {
+  const raw = String(outlet || "").trim();
+  const text = normalizeText(raw);
+
+  if (text.includes("yahoo")) return { key: "outlet:yahoo_news", label: "Yahoo! News" };
+  if (text === "msn" || text.includes(" msn ") || text.startsWith("msn ")) return { key: "outlet:msn", label: "MSN" };
+  if (text.includes("google news")) return { key: "outlet:google_news", label: "Google News" };
+  if (text.includes("science daily")) return { key: "outlet:science_daily", label: "Science Daily" };
+  if (text.includes("phys org") || text.includes("physorg")) return { key: "outlet:phys_org", label: "Phys.org" };
+  if (text.includes("eurekalert")) return { key: "outlet:eurekalert", label: "EurekAlert!" };
+
+  if (raw && text && text !== "unknown") {
+    return { key: `outlet:${text}`, label: raw };
+  }
+
+  const normalizedDomain = String(domain || "").trim().toLowerCase();
+  if (normalizedDomain) {
+    return { key: `domain:${normalizedDomain}`, label: normalizedDomain };
+  }
+
+  return { key: "outlet:unknown", label: "Unknown" };
 }
 
 function extractDomain(url) {
@@ -332,6 +387,19 @@ function normalizeMentionRow(row) {
     story_cluster_key: String(row.story_cluster_key || "").trim(),
     sentiment: String(row.sentiment || "").trim(),
     attention_score: toNumber(row.attention_score),
+  };
+}
+
+function normalizeReachMentionRow(row) {
+  return {
+    mention_id: String(row.mention_id || "").trim(),
+    mention_date: dateIsoDay(row.mention_date || ""),
+    domain: String(row.domain || "").trim().toLowerCase(),
+    outlet: String(row.outlet || "").trim(),
+    canonical_publication_id: String(row.canonical_publication_id || "").trim(),
+    tranco_rank_at_date: toNumber(row.tranco_rank_at_date),
+    reach_score_at_date: toNumber(row.reach_score_at_date),
+    snapshot_offset_days: toNumber(row.snapshot_offset_days),
   };
 }
 
@@ -585,10 +653,23 @@ function normalizeHighlights(takeaways) {
   return [];
 }
 
-function normalizeData(raw) {
+function normalizeData(raw, reachMentionsInput = [], reachMetadataInput = {}) {
   const mentions = (raw.mentions || []).map(normalizeMentionRow);
   const canonicalPublications = normalizeCanonicalPublications(raw.canonical_publications || []);
   const canonicalById = new Map(canonicalPublications.map((p) => [p.canonical_publication_id, p]));
+  const reachMentions = (Array.isArray(reachMentionsInput) ? reachMentionsInput : [])
+    .map(normalizeReachMentionRow)
+    .filter((row) => row.mention_id);
+  const reachMentionById = new Map();
+  for (const row of reachMentions) {
+    if (!reachMentionById.has(row.mention_id)) {
+      reachMentionById.set(row.mention_id, row);
+    }
+  }
+  const reachSummary =
+    reachMetadataInput && typeof reachMetadataInput === "object" && reachMetadataInput.time_adjusted
+      ? reachMetadataInput.time_adjusted
+      : {};
 
   const rawSeries = raw.citation_series || {};
   const derivedMonth = buildSeriesFromMentions(mentions, "month");
@@ -642,6 +723,9 @@ function normalizeData(raw) {
     mentions,
     canonicalPublications,
     canonicalById,
+    reachMentionById,
+    reachMentionsTotal: reachMentions.length,
+    reachSummary,
 
     series: {
       month: monthRows,
@@ -786,6 +870,165 @@ function aggregateOutlets(mentions) {
       composite_score: Math.round((r.weighted_mentions + 0.6 * r.publication_spread) * 100) / 100,
     }))
     .sort((a, b) => b.composite_score - a.composite_score || b.mentions - a.mentions);
+}
+
+function buildReachOutletMatrixRows(newsMentions) {
+  if (!dataModel?.reachMentionById?.size) return [];
+
+  const byOutlet = new Map();
+  for (const mention of newsMentions) {
+    const reach = dataModel.reachMentionById.get(mention.mention_id);
+    if (!reach) continue;
+
+    const domain = String(reach.domain || mention.domain || "").trim().toLowerCase();
+    if (!domain) continue;
+    if (isExcludedReachDomain(domain)) continue;
+
+    const outletIdentity = normalizeOutletIdentity(reach.outlet || mention.outlet, domain);
+    if (!byOutlet.has(outletIdentity.key)) {
+      byOutlet.set(outletIdentity.key, {
+        outlet_key: outletIdentity.key,
+        outlet: outletIdentity.label,
+        mentions: 0,
+        ranked_mentions: 0,
+        reach_score_sum: 0,
+        publication_ids: new Set(),
+        domain_counts: new Map(),
+        latest_date: "",
+      });
+    }
+
+    const rec = byOutlet.get(outletIdentity.key);
+    rec.outlet = outletIdentity.label;
+    rec.mentions += 1;
+    rec.domain_counts.set(domain, (rec.domain_counts.get(domain) || 0) + 1);
+
+    if (mention.canonical_publication_id) {
+      rec.publication_ids.add(mention.canonical_publication_id);
+    }
+
+    const score = toNumber(reach.reach_score_at_date);
+    const rank = toNumber(reach.tranco_rank_at_date);
+    if (rank > 0 && score > 0) {
+      rec.ranked_mentions += 1;
+      rec.reach_score_sum += score;
+    }
+
+    const mentionDate = mention.mention_date || reach.mention_date || "";
+    if (mentionDate && (!rec.latest_date || mentionDate > rec.latest_date)) {
+      rec.latest_date = mentionDate;
+    }
+  }
+
+  return [...byOutlet.values()]
+    .map((rec) => {
+      let top_domain = "";
+      let top_domain_mentions = 0;
+      for (const [name, count] of rec.domain_counts.entries()) {
+        if (count > top_domain_mentions) {
+          top_domain = name;
+          top_domain_mentions = count;
+        }
+      }
+
+      const mean_reach_score = rec.ranked_mentions ? rec.reach_score_sum / rec.ranked_mentions : 0;
+      const coverage_rate = rec.mentions ? rec.ranked_mentions / rec.mentions : 0;
+      const publication_spread = rec.publication_ids.size;
+      const impact_score = rec.mentions * (mean_reach_score / 100);
+
+      return {
+        outlet_key: rec.outlet_key,
+        outlet: rec.outlet,
+        mentions: rec.mentions,
+        ranked_mentions: rec.ranked_mentions,
+        coverage_rate,
+        mean_reach_score: Math.round(mean_reach_score * 100) / 100,
+        publication_spread,
+        domain_count: rec.domain_counts.size,
+        top_domain,
+        top_domain_mentions,
+        latest_date: rec.latest_date,
+        impact_score: Math.round(impact_score * 100) / 100,
+      };
+    })
+    .sort((a, b) => b.impact_score - a.impact_score || b.mentions - a.mentions || b.mean_reach_score - a.mean_reach_score);
+}
+
+function estimateMonthlyVisitsFromRank(rank) {
+  const safeRank = Math.max(1, toNumber(rank));
+  return IMPRESSION_MODEL.visits_at_rank_1 * Math.pow(safeRank, -IMPRESSION_MODEL.rank_exponent);
+}
+
+function buildOutletImpressionRows(newsMentions) {
+  if (!dataModel?.reachMentionById?.size) return [];
+
+  const byOutlet = new Map();
+  for (const mention of newsMentions) {
+    const reach = dataModel.reachMentionById.get(mention.mention_id);
+    if (!reach) continue;
+
+    const domain = String(reach.domain || mention.domain || "").trim().toLowerCase();
+    if (!domain) continue;
+    if (isExcludedReachDomain(domain)) continue;
+
+    const outletIdentity = normalizeOutletIdentity(reach.outlet || mention.outlet, domain);
+    if (!byOutlet.has(outletIdentity.key)) {
+      byOutlet.set(outletIdentity.key, {
+        outlet_key: outletIdentity.key,
+        outlet: outletIdentity.label,
+        mentions: 0,
+        ranked_mentions: 0,
+        low_impressions: 0,
+        mid_impressions: 0,
+        high_impressions: 0,
+        publication_ids: new Set(),
+        domain_counts: new Map(),
+      });
+    }
+
+    const rec = byOutlet.get(outletIdentity.key);
+    rec.outlet = outletIdentity.label;
+    rec.mentions += 1;
+    rec.domain_counts.set(domain, (rec.domain_counts.get(domain) || 0) + 1);
+    if (mention.canonical_publication_id) {
+      rec.publication_ids.add(mention.canonical_publication_id);
+    }
+
+    const rank = toNumber(reach.tranco_rank_at_date);
+    if (rank <= 0) continue;
+    const visits = estimateMonthlyVisitsFromRank(rank);
+    rec.ranked_mentions += 1;
+    rec.low_impressions += visits * IMPRESSION_MODEL.share_low;
+    rec.mid_impressions += visits * IMPRESSION_MODEL.share_mid;
+    rec.high_impressions += visits * IMPRESSION_MODEL.share_high;
+  }
+
+  return [...byOutlet.values()]
+    .map((rec) => {
+      let top_domain = "";
+      let top_domain_mentions = 0;
+      for (const [name, count] of rec.domain_counts.entries()) {
+        if (count > top_domain_mentions) {
+          top_domain = name;
+          top_domain_mentions = count;
+        }
+      }
+      return {
+        outlet_key: rec.outlet_key,
+        outlet: rec.outlet,
+        mentions: rec.mentions,
+        ranked_mentions: rec.ranked_mentions,
+        publication_spread: rec.publication_ids.size,
+        domain_count: rec.domain_counts.size,
+        top_domain,
+        top_domain_mentions,
+        low_impressions: rec.low_impressions,
+        mid_impressions: rec.mid_impressions,
+        high_impressions: rec.high_impressions,
+      };
+    })
+    .filter((row) => row.ranked_mentions > 0)
+    .sort((a, b) => b.mid_impressions - a.mid_impressions);
 }
 
 function storyKey(mention) {
@@ -1034,6 +1277,39 @@ function deriveViewModel() {
   const newsMentions = filteredMentions.filter((m) => m.mention_type === "News story");
   const recent = dedupeRecentMentions(newsMentions.length ? newsMentions : filteredMentions, 40);
   const newsOutlets = new Set(newsMentions.map((m) => m.outlet).filter(Boolean));
+  const reachMatrixRowsRaw = buildReachOutletMatrixRows(newsMentions);
+  const impressionRowsRaw = buildOutletImpressionRows(newsMentions);
+  const impressionByOutletKey = new Map(impressionRowsRaw.map((row) => [row.outlet_key, row]));
+  const alignedRows = reachMatrixRowsRaw.filter((row) => impressionByOutletKey.has(row.outlet_key));
+  const reachMatrixRows = alignedRows.slice(0, OUTLET_PANEL_TOP_N);
+  const impressionRows = reachMatrixRows.map((row) => impressionByOutletKey.get(row.outlet_key)).filter(Boolean);
+  const reachMentionsMatchedAny = newsMentions.reduce((sum, mention) => {
+    return sum + (dataModel.reachMentionById.has(mention.mention_id) ? 1 : 0);
+  }, 0);
+  const reachMentionsExcludedSyndication = newsMentions.reduce((sum, mention) => {
+    const reach = dataModel.reachMentionById.get(mention.mention_id);
+    if (!reach) return sum;
+    const domain = String(reach.domain || mention.domain || "").trim().toLowerCase();
+    return sum + (isExcludedReachDomain(domain) ? 1 : 0);
+  }, 0);
+  const reachMatrixMentionsUsed = reachMatrixRows.reduce((sum, row) => sum + toNumber(row.mentions), 0);
+  const reachMatrixRankedMentions = reachMatrixRows.reduce((sum, row) => sum + toNumber(row.ranked_mentions), 0);
+  const reachMatrixSummary = {
+    outlets: reachMatrixRows.length,
+    mentions_total: newsMentions.length,
+    mentions_matched_any: reachMentionsMatchedAny,
+    mentions_excluded_syndication: reachMentionsExcludedSyndication,
+    mentions_used: reachMatrixMentionsUsed,
+    mentions_ranked: reachMatrixRankedMentions,
+    missing_mentions: Math.max(0, newsMentions.length - reachMentionsMatchedAny),
+    ranked_coverage_rate: reachMatrixMentionsUsed ? reachMatrixRankedMentions / reachMatrixMentionsUsed : 0,
+  };
+  const impressionSummary = {
+    outlets_ranked: impressionRows.length,
+    total_mid_impressions: impressionRows.reduce((sum, row) => sum + toNumber(row.mid_impressions), 0),
+    total_low_impressions: impressionRows.reduce((sum, row) => sum + toNumber(row.low_impressions), 0),
+    total_high_impressions: impressionRows.reduce((sum, row) => sum + toNumber(row.high_impressions), 0),
+  };
 
   const countriesMention = aggregateCountries(filteredMentions);
   const countriesForMap = countriesMention.length ? countriesMention : dataModel.altCountries;
@@ -1087,6 +1363,11 @@ function deriveViewModel() {
     `Dated mentions ${fmtNumber(dataModel.metrics.altmetric_dated_mentions)} / ${fmtNumber(dataModel.metrics.altmetric_mentions_total)}`,
     `WOS geo sample ${fmtNumber(dataModel.citationPoints.length)} points`,
   ];
+  if (dataModel.reachSummary?.enabled) {
+    const reachCoveragePct = Math.round(toNumber(dataModel.reachSummary.ranked_coverage_rate) * 100);
+    const offsetDays = fmtNumber(toNumber(dataModel.reachSummary.median_abs_snapshot_offset_days));
+    chips.push(`Reach coverage ${reachCoveragePct}% (median snapshot offset ${offsetDays}d)`);
+  }
 
   if (state.channel !== "all") {
     const channelLabel = CHANNEL_OPTIONS.find((x) => x.key === state.channel)?.label || state.channel;
@@ -1134,6 +1415,10 @@ function deriveViewModel() {
     mapHint,
     mapCitationPoints: dataModel.citationPoints,
     mapMentionCountries: countriesForMap,
+    reachMatrixRows,
+    reachMatrixSummary,
+    impressionRows,
+    impressionSummary,
 
     publications,
     outlets,
@@ -1617,6 +1902,275 @@ async function renderMap(vm, token) {
   }
 }
 
+function matrixColorForReach(score) {
+  const t = Math.min(1, Math.max(0, toNumber(score) / 100));
+  const low = [197, 218, 242];
+  const high = [29, 99, 163];
+  const r = Math.round(lerp(low[0], high[0], t));
+  const g = Math.round(lerp(low[1], high[1], t));
+  const b = Math.round(lerp(low[2], high[2], t));
+  return `rgba(${r}, ${g}, ${b}, 0.78)`;
+}
+
+function matrixBorderColorForReach(score) {
+  const t = Math.min(1, Math.max(0, toNumber(score) / 100));
+  const low = [106, 130, 158];
+  const high = [20, 77, 132];
+  const r = Math.round(lerp(low[0], high[0], t));
+  const g = Math.round(lerp(low[1], high[1], t));
+  const b = Math.round(lerp(low[2], high[2], t));
+  return `rgba(${r}, ${g}, ${b}, 0.95)`;
+}
+
+function renderReachMatrix(vm) {
+  if (!el.reachMatrixChart || !el.reachMatrixHint) return;
+
+  charts.reachMatrix?.destroy();
+
+  const rows = (vm.reachMatrixRows || []).slice(0, OUTLET_PANEL_TOP_N);
+  if (!rows.length) {
+    const ctx = el.reachMatrixChart.getContext("2d");
+    if (ctx) {
+      ctx.clearRect(0, 0, el.reachMatrixChart.width, el.reachMatrixChart.height);
+    }
+    el.reachMatrixHint.textContent = "No reach-ranked news mentions are available in the current filter scope.";
+    return;
+  }
+
+  const labels = rows.map((row) => clipped(row.outlet || "Unknown outlet", 42));
+  const data = rows.map((row) => toNumber(row.impact_score));
+
+  charts.reachMatrix = new Chart(el.reachMatrixChart.getContext("2d"), {
+    type: "bar",
+    data: {
+      labels,
+      datasets: [
+        {
+          label: "Impact score",
+          data,
+          backgroundColor: rows.map((row) => matrixColorForReach(row.mean_reach_score)),
+          borderColor: rows.map((row) => matrixBorderColorForReach(row.mean_reach_score)),
+          borderWidth: 1,
+          borderRadius: 5,
+          barThickness: 18,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      indexAxis: "y",
+      interaction: { mode: "index", intersect: false },
+      scales: {
+        x: {
+          beginAtZero: true,
+          title: { display: true, text: "Impact score (mentions x reach/100)" },
+          ticks: {
+            callback(value) {
+              return Number.isFinite(value) ? value.toFixed(1) : "";
+            },
+          },
+        },
+        y: {
+          ticks: { autoSkip: false },
+        },
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            title(items) {
+              const i = items?.[0]?.dataIndex ?? -1;
+              const row = rows[i];
+              return row ? clipped(row.outlet || "Outlet", 70) : "Outlet";
+            },
+            label(ctx) {
+              const row = rows[ctx.dataIndex];
+              if (!row) return "";
+              return [
+                `Impact score: ${row.impact_score.toFixed(2)}`,
+                `Mentions: ${fmtNumber(row.mentions)}`,
+                `Avg reach score: ${row.mean_reach_score.toFixed(1)}`,
+                `Publication spread: ${fmtNumber(row.publication_spread)}`,
+                `Domains observed: ${fmtNumber(row.domain_count)} (top: ${row.top_domain || "n/a"})`,
+                `Rank coverage: ${Math.round(toNumber(row.coverage_rate) * 100)}%`,
+              ];
+            },
+          },
+        },
+      },
+    },
+  });
+
+  const summary = vm.reachMatrixSummary || {};
+  const coveragePct = Math.round(toNumber(summary.ranked_coverage_rate) * 100);
+  let hint = `Showing top ${fmtNumber(rows.length)} outlets by impact score. Matched ${fmtNumber(summary.mentions_matched_any)} of ${fmtNumber(
+    summary.mentions_total
+  )} news mentions to reach data.`;
+  if (toNumber(summary.mentions_excluded_syndication) > 0) {
+    hint += ` Excluded ${fmtNumber(summary.mentions_excluded_syndication)} syndicated mentions.`;
+  }
+  hint += ` Ranked coverage in charted set: ${coveragePct}%.`;
+  if (toNumber(summary.missing_mentions) > 0) {
+    hint += ` Missing domain/reach rows for ${fmtNumber(summary.missing_mentions)} mentions.`;
+  }
+  el.reachMatrixHint.textContent = hint;
+}
+
+function renderImpressionsPanel(vm) {
+  if (!el.impressionsEstimateChart || !el.impressionsEstimateHint) return;
+
+  charts.impressionsEstimate?.destroy();
+
+  const rows = (vm.impressionRows || []).slice(0, OUTLET_PANEL_TOP_N);
+  if (!rows.length) {
+    const ctx = el.impressionsEstimateChart.getContext("2d");
+    if (ctx) {
+      ctx.clearRect(0, 0, el.impressionsEstimateChart.width, el.impressionsEstimateChart.height);
+    }
+    el.impressionsEstimateHint.textContent = "No impression estimates are available in this filter scope.";
+    return;
+  }
+
+  const labels = rows.map((row) => clipped(row.outlet || "Unknown outlet", 36));
+  const rangeData = rows.map((row, idx) => ({
+    x: [toNumber(row.low_impressions), toNumber(row.high_impressions)],
+    y: labels[idx],
+    row,
+  }));
+  const lowCapData = rows.map((row, idx) => ({
+    x: toNumber(row.low_impressions),
+    y: labels[idx],
+    row,
+  }));
+  const highCapData = rows.map((row, idx) => ({
+    x: toNumber(row.high_impressions),
+    y: labels[idx],
+    row,
+  }));
+  const midData = rows.map((row, idx) => ({
+    x: toNumber(row.mid_impressions),
+    y: labels[idx],
+    row,
+  }));
+  const positiveLows = rows.map((row) => toNumber(row.low_impressions)).filter((value) => value > 0);
+  const positiveHighs = rows.map((row) => toNumber(row.high_impressions)).filter((value) => value > 0);
+  const axisMinRaw = positiveLows.length ? Math.min(...positiveLows) : 1_000;
+  const axisMaxRaw = positiveHighs.length ? Math.max(...positiveHighs) : 1_000_000;
+  const axisMin = Math.max(1, Math.pow(10, Math.floor(Math.log10(axisMinRaw))));
+  const axisMax = Math.max(axisMin * 10, Math.pow(10, Math.ceil(Math.log10(axisMaxRaw))));
+
+  charts.impressionsEstimate = new Chart(el.impressionsEstimateChart.getContext("2d"), {
+    type: "bar",
+    data: {
+      labels,
+      datasets: [
+        {
+          label: "Low-high range",
+          data: rangeData,
+          backgroundColor: "rgba(57, 140, 210, 0.18)",
+          borderColor: "rgba(40, 103, 178, 0.85)",
+          borderWidth: 2,
+          borderRadius: 0,
+          barThickness: 6,
+        },
+        {
+          type: "scatter",
+          label: "Low",
+          data: lowCapData,
+          showLine: false,
+          pointRadius: 3.2,
+          pointHoverRadius: 3.8,
+          pointStyle: "rect",
+          pointBackgroundColor: "rgba(40, 103, 178, 0.88)",
+          pointBorderColor: "#ffffff",
+          pointBorderWidth: 0.8,
+        },
+        {
+          type: "scatter",
+          label: "High",
+          data: highCapData,
+          showLine: false,
+          pointRadius: 3.2,
+          pointHoverRadius: 3.8,
+          pointStyle: "rect",
+          pointBackgroundColor: "rgba(40, 103, 178, 0.88)",
+          pointBorderColor: "#ffffff",
+          pointBorderWidth: 0.8,
+        },
+        {
+          type: "line",
+          label: "Mid",
+          data: midData,
+          showLine: false,
+          pointRadius: 4,
+          pointHoverRadius: 4.8,
+          pointBackgroundColor: "rgba(20, 77, 132, 0.96)",
+          pointBorderColor: "#ffffff",
+          pointBorderWidth: 1.2,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      indexAxis: "y",
+      interaction: { mode: "nearest", intersect: true },
+      scales: {
+        x: {
+          type: "logarithmic",
+          min: axisMin,
+          max: axisMax,
+          title: { display: true, text: "Potential impressions (modeled)" },
+          ticks: {
+            callback(value) {
+              const n = toNumber(value);
+              if (n <= 0) return "";
+              const p = Math.log10(n);
+              if (Math.abs(p - Math.round(p)) > 1e-6) return "";
+              return fmtCompactNumber(n);
+            },
+          },
+        },
+        y: {
+          ticks: { autoSkip: false },
+        },
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            title(items) {
+              const row = items?.[0]?.raw?.row;
+              return row ? clipped(row.outlet || "Outlet", 70) : "Outlet";
+            },
+            label(ctx) {
+              const row = ctx.raw?.row;
+              if (!row) return "";
+              return [
+                `Low-high: ${fmtCompactNumber(row.low_impressions)} - ${fmtCompactNumber(row.high_impressions)}`,
+                `Mid: ${fmtCompactNumber(row.mid_impressions)}`,
+                `Mentions: ${fmtNumber(row.mentions)} | Pubs: ${fmtNumber(row.publication_spread)}`,
+              ];
+            },
+          },
+        },
+      },
+    },
+  });
+
+  const summary = vm.impressionSummary || {};
+  const totalLow = fmtCompactNumber(summary.total_low_impressions || 0);
+  const totalMid = fmtCompactNumber(summary.total_mid_impressions || 0);
+  const totalHigh = fmtCompactNumber(summary.total_high_impressions || 0);
+
+  el.impressionsEstimateHint.textContent = `Top ${fmtNumber(rows.length)} outlets (same order as impact ranking). Charted-set modeled impressions: ${totalLow} - ${totalHigh} (mid ${totalMid}). Model: visits = ${
+    IMPRESSION_MODEL.visits_at_rank_1 / 1_000_000
+  }M * rank^-${IMPRESSION_MODEL.rank_exponent}; per-mention share ${IMPRESSION_MODEL.share_low * 100}%-${
+    IMPRESSION_MODEL.share_high * 100
+  }%.`;
+}
+
 function coverageRowsForTab(vm) {
   if (state.activeCoverageTab === "outlets") {
     return vm.outlets.slice(0, 14).map((row) => ({
@@ -1843,6 +2397,8 @@ async function renderAll() {
   renderTrustChips(vm);
   renderKpis(vm);
   renderTimeline(vm);
+  renderReachMatrix(vm);
+  renderImpressionsPanel(vm);
   renderCoverage(vm);
   if (!el.donutDetails || el.donutDetails.open) {
     renderDonut(vm);
@@ -1924,12 +2480,30 @@ async function loadJson(path) {
   return res.json();
 }
 
+async function loadJsonOptional(path, fallbackValue) {
+  try {
+    return await loadJson(path);
+  } catch (err) {
+    console.warn(`Optional dataset unavailable: ${path}`, err);
+    return fallbackValue;
+  }
+}
+
 async function boot() {
   assertRequiredDom();
 
-  rawDashboard = await loadJson(DATA_PATH);
-  reconciliation = await loadJson(RECON_PATH);
-  dataModel = normalizeData(rawDashboard);
+  const [dashboardData, reconciliationData, reachMentionsData, reachMetadataData] = await Promise.all([
+    loadJson(DATA_PATH),
+    loadJson(RECON_PATH),
+    loadJsonOptional(REACH_MENTIONS_PATH, []),
+    loadJsonOptional(REACH_METADATA_PATH, {}),
+  ]);
+
+  rawDashboard = dashboardData;
+  reconciliation = reconciliationData;
+  reachMentionsRaw = Array.isArray(reachMentionsData) ? reachMentionsData : [];
+  reachMetadataRaw = reachMetadataData && typeof reachMetadataData === "object" ? reachMetadataData : {};
+  dataModel = normalizeData(rawDashboard, reachMentionsRaw, reachMetadataRaw);
 
   initControls();
   renderDownloadLinks();

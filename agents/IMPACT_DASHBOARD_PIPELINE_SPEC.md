@@ -70,7 +70,8 @@ Dataset catalog links in `impact_dashboard.json` are absolute site paths under `
 Local preview hook:
 
 - `scripts/local_preview.command`
-- Runs `python3 scripts/build-impact-dashboard-data.py` before `jekyll build`.
+- Default path skips impact data regeneration for faster UI/content iteration.
+- Data-refresh path: run `./scripts/local_preview.command --with-data` to execute `python3 scripts/build-impact-dashboard-data.py` before `jekyll build`.
 - Uses committed reach datasets (no Tranco API calls during preview).
 
 Deploy hook:
@@ -99,6 +100,9 @@ Loaded by include:
 Client data-fetch behavior:
 
 - `assets/js/impact-dashboard.js` loads dashboard JSON with default browser fetch caching (no explicit `cache: "no-store"`).
+- `assets/js/impact-dashboard.js` also loads reach datasets for the outlet impact ranking:
+  - `/data/impact/reach/time_adjusted_mentions_reach.json`
+  - `/data/impact/reach/reach_metadata.json`
 - `_includes/impact-dashboard.html` appends `?v={{ site.time | date: '%Y%m%d%H%M%S' }}` to JSON/CSS/JS URLs to force fresh assets after each build/deploy.
 
 World topojson fetch order in client:
@@ -110,4 +114,16 @@ World topojson fetch order in client:
 
 - `Mention countries` uses a log-scaled choropleth ramp to reduce US dominance.
 - `Citing authors (WOS)` remains unchanged as a bubble map.
+- `Outlet impact ranking` uses a horizontal bar chart:
+  - Rank: top normalized outlets by impact score (`mentions * mean publish-time reach / 100`)
+  - Excludes syndicated/proxy domains from the ranked score
+  - Color: reach level (mean publish-time reach score)
+  - Tooltip: domains observed, mentions, reach score, publication spread, rank coverage
+- `Estimated Impressions` side panel uses a model-based proxy per outlet:
+  - Visits model: `visits = 500M * rank^-0.62` (rank from time-adjusted Tranco snapshot)
+  - Per-mention article-share bounds: `0.02%` (low), `0.05%` (mid), `0.10%` (high)
+  - Displays low/high ranges as horizontal intervals with a mid-point marker
+  - Uses a logarithmic x-axis so lower-impression outlets remain readable
+  - Uses the same top-outlet set and order as outlet impact ranking
+  - Uses same syndication/proxy exclusions as outlet impact ranking
 - Reconciliation and export tables are rendered client-side from generated JSON.

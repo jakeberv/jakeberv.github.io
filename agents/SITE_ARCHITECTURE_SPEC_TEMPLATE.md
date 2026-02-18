@@ -30,7 +30,10 @@ Use this workflow to build/preview locally before pushing:
 
 Optional:
 - Build-only validation: `./scripts/local_preview.command --build-only`
+- Run geo/impact data regeneration + validation: `./scripts/local_preview.command --with-data`
+- Skip geo/impact data regeneration explicitly: `./scripts/local_preview.command --skip-data`
 - Custom port: `./scripts/local_preview.command --port 4010`
+- Always run full data + full build path: `./scripts/local_preview_fullbuild.command`
 
 Notes:
 - `scripts/local_preview.command` prefers Homebrew Ruby 3.3 at `/opt/homebrew/opt/ruby@3.3/bin/bundle`.

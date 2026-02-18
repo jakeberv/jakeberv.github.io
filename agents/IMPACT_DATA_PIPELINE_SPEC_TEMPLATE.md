@@ -122,7 +122,8 @@ Dataset links in `impact_dashboard.json` should remain site-absolute (`/data/imp
 
 ### Local preview generation
 - Script: `scripts/local_preview.command`
-- Required behavior: run `scripts/build-impact-dashboard-data.py` before local `jekyll build`.
+- Default behavior: skips impact data regeneration for faster UI/content-only iteration.
+- Data-refresh behavior: run with `--with-data` to execute `scripts/build-impact-dashboard-data.py` before local `jekyll build`.
 - Required behavior: use committed reach datasets (do not run API-backed reach refresh).
 
 ### Reach refresh generation

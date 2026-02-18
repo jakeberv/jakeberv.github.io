@@ -6,6 +6,8 @@
     id="impactDashboardApp"
     data-dashboard-url="{{ '/data/impact/impact_dashboard.json' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}"
     data-reconciliation-url="{{ '/data/impact/impact_reconciliation.json' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}"
+    data-reach-mentions-url="{{ '/data/impact/reach/time_adjusted_mentions_reach.json' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}"
+    data-reach-metadata-url="{{ '/data/impact/reach/reach_metadata.json' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}"
     data-world-url="https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
     data-world-url-fallback="https://unpkg.com/world-atlas@2/countries-110m.json"
     aria-label="Impact dashboard">
@@ -62,6 +64,26 @@
         <h2>Press coverage</h2>
         <div id="coverageTabs" class="idb-tabs" role="tablist" aria-label="Coverage tabs"></div>
         <ol id="coverageList" class="idb-list"></ol>
+      </article>
+    </section>
+
+    <section class="idb-reach-row">
+      <article class="card idb-reach-card">
+        <div class="idb-panel-head">
+          <h2>Outlet impact ranking</h2>
+        </div>
+        <p class="idb-help">Top normalized outlets by impact score (mentions x publish-time reach). Syndication domains are excluded.</p>
+        <div class="idb-chart-wrap idb-reach-matrix-wrap"><canvas id="reachMatrixChart"></canvas></div>
+        <p id="reachMatrixHint" class="idb-help"></p>
+      </article>
+
+      <article class="card idb-impressions-card">
+        <div class="idb-panel-head">
+          <h2>Estimated Impressions</h2>
+        </div>
+        <p class="idb-help">Modeled potential impressions by outlet (low-mid-high). Line span = low-high, dot = mid.</p>
+        <div class="idb-chart-wrap idb-impressions-wrap"><canvas id="impressionsEstimateChart"></canvas></div>
+        <p id="impressionsEstimateHint" class="idb-help"></p>
       </article>
     </section>
 

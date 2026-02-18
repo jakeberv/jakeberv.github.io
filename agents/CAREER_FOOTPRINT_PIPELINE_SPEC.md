@@ -45,11 +45,19 @@ Define how the `/background/` Global Career Footprint map is built from `_news` 
 
 ## Local Preview Workflow
 
-`scripts/local_preview.command` must run:
+Default local preview fast path:
+
+- `scripts/local_preview.command` skips geo validation/generation for faster UI/content iteration.
+
+When geo/news data changes, run:
 
 1. `node scripts/qa/validate-news-geo.mjs`
 2. `node scripts/build-career-geo-data.mjs`
 3. Jekyll build/serve
+
+Equivalent one-command path:
+
+- `./scripts/local_preview.command --with-data`
 
 ## GitHub Actions Workflow
 

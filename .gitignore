@@ -1,5 +1,6 @@
 # Jekyll build output
 _site/
+.jekyll-metadata
 
 # R and RStudio files
 .Rproj.user
