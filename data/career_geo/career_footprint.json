@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-02-18T02:50:59.624Z",
+  "generated_at": "2026-02-18T07:34:16.404Z",
   "source": "_news geo front matter",
-  "entry_count": 166,
+  "entry_count": 165,
   "entries": [
     {
       "id": "2005-06-15-yale-school-of-medicine-molecular-neuroscience-internship",
@@ -4207,32 +4207,6 @@
         }
       ],
       "excerpt": "The session focused on molecular-systematic methods for integrating evolutionary history across deep time."
-    },
-    {
-      "id": "2026-01-13-peer-review-milestone-66-verified-reviews",
-      "title": "Service: Peer Review Milestone (66 Verified Reviews)",
-      "url": "/news/2026-01-13-peer-review-milestone-66-verified-reviews/",
-      "date": "2026-01-13",
-      "year": 2026,
-      "scope": "event",
-      "countries": [
-        {
-          "code": "US",
-          "name": "United States",
-          "region_m49": "021",
-          "weight": 1
-        }
-      ],
-      "localities": [
-        {
-          "name": "Ann Arbor, Michigan",
-          "country_code": "US",
-          "lat": 42.2808,
-          "lon": -83.743,
-          "weight": 1
-        }
-      ],
-      "excerpt": "Reached a milestone of 66 verified peer reviews across leading evolutionary and interdisciplinary journals."
     },
     {
       "id": "2026-01-15-evolutionary-ecology-morphological-responses-paper",
