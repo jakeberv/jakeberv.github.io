@@ -14,7 +14,9 @@ title: "Software"
       </div>
 
       <div class="software-card__media">
-        <img class="software-logo" src="https://raw.githubusercontent.com/jakeberv/bifrost/main/man/figures/logo.png" alt="bifrost hex sticker" loading="lazy" decoding="async" />
+        <span class="software-card__badge">
+          <img class="software-card__badge-image" src="https://raw.githubusercontent.com/jakeberv/bifrost/main/man/figures/logo.png" alt="bifrost hex sticker" loading="lazy" decoding="async" />
+        </span>
       </div>
     </div>
 
@@ -42,9 +44,9 @@ title: "Software"
         <p class="software-card__subtitle"><strong>Detecting molecular model shifts on phylogenies</strong></p>
       </div>
 
-      <div class="software-card__media software-card__media--linked">
-        <a href="https://en.wikipedia.org/wiki/Waltham_Abbey_Church" target="_blank" rel="noopener">
-          <img class="software-figure" src="/images/software/janus.webp" alt="janus logo" loading="lazy" decoding="async" />
+      <div class="software-card__media">
+        <a class="software-card__badge" href="https://en.wikipedia.org/wiki/Waltham_Abbey_Church" target="_blank" rel="noopener">
+          <img class="software-card__badge-image" src="/images/software/janus.webp" alt="janus logo" loading="lazy" decoding="async" />
         </a>
       </div>
     </div>
