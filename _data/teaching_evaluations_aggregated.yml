@@ -1,0 +1,319 @@
+source:
+  pdf: "/files/pdf/teaching/teaching_philosophy.pdf"
+  extractor: "pdftotext -layout + awk"
+  extracted_on: "2026-02-19"
+  parsed_terms:
+    - "fall_2013"
+    - "fall_2014"
+    - "fall_2015"
+    - "fall_2018"
+
+overall:
+  teaching_questions:
+    range: "q08-q22"
+    n_answered: 492
+    no_response: 18
+    weighted_mean: 4.4982
+    pct_4_5: 88.01
+    pct_1_2: 3.25
+  self_report_questions:
+    range: "q23-q25"
+    n_answered: 98
+    no_response: 4
+    weighted_mean: 3.7963
+    pct_4_5: 64.29
+    pct_1_2: 14.29
+
+term_aggregates:
+  - term_id: "fall_2013"
+    label: "Fall 2013"
+    teaching:
+      item_count: 15
+      n_answered: 180
+      no_response: 0
+      weighted_mean: 4.0940
+      pct_4_5: 77.22
+      pct_1_2: 7.22
+    overall_q22:
+      weighted_mean: 4.0000
+      n_answered: 12
+      no_response: 0
+      pct_4_5: 75.00
+    self_report:
+      item_count: 3
+      n_answered: 35
+      no_response: 1
+      weighted_mean: 3.7414
+      pct_4_5: 57.14
+      pct_1_2: 5.71
+  - term_id: "fall_2014"
+    label: "Fall 2014"
+    teaching:
+      item_count: 15
+      n_answered: 120
+      no_response: 0
+      weighted_mean: 4.7020
+      pct_4_5: 91.67
+      pct_1_2: 0.83
+    overall_q22:
+      weighted_mean: 4.7500
+      n_answered: 8
+      no_response: 0
+      pct_4_5: 87.50
+    self_report:
+      item_count: 3
+      n_answered: 24
+      no_response: 0
+      weighted_mean: 3.7933
+      pct_4_5: 66.67
+      pct_1_2: 20.83
+  - term_id: "fall_2015"
+    label: "Fall 2015"
+    teaching:
+      item_count: 15
+      n_answered: 105
+      no_response: 0
+      weighted_mean: 4.8667
+      pct_4_5: 98.10
+      pct_1_2: 0.95
+    overall_q22:
+      weighted_mean: 5.0000
+      n_answered: 7
+      no_response: 0
+      pct_4_5: 100.00
+    self_report:
+      item_count: 3
+      n_answered: 21
+      no_response: 0
+      weighted_mean: 4.0967
+      pct_4_5: 76.19
+      pct_1_2: 14.29
+  - term_id: "fall_2018"
+    label: "Fall 2018"
+    teaching:
+      item_count: 15
+      n_answered: 87
+      no_response: 18
+      weighted_mean: 4.6085
+      pct_4_5: 93.10
+      pct_1_2: 1.15
+    overall_q22:
+      weighted_mean: 4.6700
+      n_answered: 6
+      no_response: 1
+      pct_4_5: 100.00
+    self_report:
+      item_count: 3
+      n_answered: 18
+      no_response: 3
+      weighted_mean: 3.5567
+      pct_4_5: 61.11
+      pct_1_2: 22.22
+
+question_aggregates:
+  - question_id: "q08"
+    question_number: 8
+    category: "teaching"
+    item: 'Seems knowledgeable in the subject matter'
+    terms: 4
+    n_answered: 33
+    no_response: 1
+    weighted_mean: 4.7273
+    pct_4_5: 96.97
+    pct_1_2: 0.00
+  - question_id: "q09"
+    question_number: 9
+    category: "teaching"
+    item: 'Is well prepared for class'
+    terms: 4
+    n_answered: 33
+    no_response: 1
+    weighted_mean: 4.4867
+    pct_4_5: 87.88
+    pct_1_2: 0.00
+  - question_id: "q10"
+    question_number: 10
+    category: "teaching"
+    item: 'Uses class time efficiently'
+    terms: 4
+    n_answered: 33
+    no_response: 1
+    weighted_mean: 3.9709
+    pct_4_5: 75.76
+    pct_1_2: 9.09
+  - question_id: "q11"
+    question_number: 11
+    category: "teaching"
+    item: 'Stimulates deeper thinking about the subject'
+    terms: 4
+    n_answered: 33
+    no_response: 1
+    weighted_mean: 4.7582
+    pct_4_5: 93.94
+    pct_1_2: 0.00
+  - question_id: "q12"
+    question_number: 12
+    category: "teaching"
+    item: 'Makes me feel free to ask questions'
+    terms: 4
+    n_answered: 33
+    no_response: 1
+    weighted_mean: 4.7873
+    pct_4_5: 96.97
+    pct_1_2: 0.00
+  - question_id: "q13"
+    question_number: 13
+    category: "teaching"
+    item: 'Provides clear and comprehensive explanations'
+    terms: 4
+    n_answered: 33
+    no_response: 1
+    weighted_mean: 4.1797
+    pct_4_5: 81.82
+    pct_1_2: 6.06
+  - question_id: "q14"
+    question_number: 14
+    category: "teaching"
+    item: 'Communicates interest in helping students learn'
+    terms: 4
+    n_answered: 33
+    no_response: 1
+    weighted_mean: 4.7255
+    pct_4_5: 93.94
+    pct_1_2: 0.00
+  - question_id: "q15"
+    question_number: 15
+    category: "teaching"
+    item: 'Is willing to help students outside of class'
+    terms: 4
+    n_answered: 33
+    no_response: 1
+    weighted_mean: 4.7582
+    pct_4_5: 93.94
+    pct_1_2: 3.03
+  - question_id: "q16"
+    question_number: 16
+    category: "teaching"
+    item: 'Conveys enthusiasm in teaching the material'
+    terms: 4
+    n_answered: 33
+    no_response: 1
+    weighted_mean: 4.9073
+    pct_4_5: 96.97
+    pct_1_2: 0.00
+  - question_id: "q17"
+    question_number: 17
+    category: "teaching"
+    item: 'Is organized in presenting the material'
+    terms: 4
+    n_answered: 32
+    no_response: 2
+    weighted_mean: 4.0947
+    pct_4_5: 75.00
+    pct_1_2: 6.25
+  - question_id: "q18"
+    question_number: 18
+    category: "teaching"
+    item: 'Involves everyone in class'
+    terms: 4
+    n_answered: 32
+    no_response: 2
+    weighted_mean: 4.3450
+    pct_4_5: 81.25
+    pct_1_2: 9.38
+  - question_id: "q19"
+    question_number: 19
+    category: "teaching"
+    item: 'Grades Equitably'
+    terms: 4
+    n_answered: 33
+    no_response: 1
+    weighted_mean: 4.6067
+    pct_4_5: 93.94
+    pct_1_2: 0.00
+  - question_id: "q20"
+    question_number: 20
+    category: "teaching"
+    item: 'Comments on my work in ways that help me learn'
+    terms: 4
+    n_answered: 32
+    no_response: 2
+    weighted_mean: 4.4719
+    pct_4_5: 87.50
+    pct_1_2: 3.12
+  - question_id: "q21"
+    question_number: 21
+    category: "teaching"
+    item: 'Realizes when students do NOT understand'
+    terms: 4
+    n_answered: 33
+    no_response: 1
+    weighted_mean: 4.1200
+    pct_4_5: 75.76
+    pct_1_2: 9.09
+  - question_id: "q22"
+    question_number: 22
+    category: "teaching"
+    item: 'Overall the quality of my TA''s teaching'
+    terms: 4
+    n_answered: 33
+    no_response: 1
+    weighted_mean: 4.5158
+    pct_4_5: 87.88
+    pct_1_2: 3.03
+  - question_id: "q23"
+    question_number: 23
+    category: "self_report"
+    item: 'Your interest in taking the course before you enrolled'
+    terms: 4
+    n_answered: 32
+    no_response: 2
+    weighted_mean: 3.1253
+    pct_4_5: 46.88
+    pct_1_2: 34.38
+  - question_id: "q24"
+    question_number: 24
+    category: "self_report"
+    item: 'Your effort to learn in this course (studying, doing assignments, thinking about ideas)'
+    terms: 4
+    n_answered: 33
+    no_response: 1
+    weighted_mean: 4.0603
+    pct_4_5: 72.73
+    pct_1_2: 3.03
+  - question_id: "q25"
+    question_number: 25
+    category: "self_report"
+    item: 'The amount that you have learned in the course thus far'
+    terms: 4
+    n_answered: 33
+    no_response: 1
+    weighted_mean: 4.1830
+    pct_4_5: 72.73
+    pct_1_2: 6.06
+
+top_positive_teaching_items:
+  - question_id: "q16"
+    item: 'Conveys enthusiasm in teaching the material'
+    weighted_mean: 4.9073
+    pct_4_5: 96.97
+  - question_id: "q12"
+    item: 'Makes me feel free to ask questions'
+    weighted_mean: 4.7873
+    pct_4_5: 96.97
+  - question_id: "q11"
+    item: 'Stimulates deeper thinking about the subject'
+    weighted_mean: 4.7582
+    pct_4_5: 93.94
+  - question_id: "q15"
+    item: 'Is willing to help students outside of class'
+    weighted_mean: 4.7582
+    pct_4_5: 93.94
+  - question_id: "q08"
+    item: 'Seems knowledgeable in the subject matter'
+    weighted_mean: 4.7273
+    pct_4_5: 96.97
+  - question_id: "q14"
+    item: 'Communicates interest in helping students learn'
+    weighted_mean: 4.7255
+    pct_4_5: 93.94
