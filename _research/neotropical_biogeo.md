@@ -9,6 +9,25 @@ landing_tags:
   - Neotropics
   - Population Genomics
   - Speciation
+method_families:
+  - population_genomic_inference
+  - biogeographic_inference
+  - lineage_delimitation
+  - genomic_data_generation
+  - integrative_synthesis
+method_tags:
+  - continental_population_genomics
+  - snp_ddrad_population_genomics
+  - coalescent_inference
+  - population_structure_admixture
+  - introgression_hybridization
+  - phylogeography
+  - barrier_based_biogeography
+  - andean_species_pump_testing
+  - species_delimitation
+  - lineage_diagnosis
+  - chromosome_scale_assembly
+  - long_read_scaffolding
 header: 
   og_image: "research/geographie_der_Pflanzen-resized.jpg"
 ---

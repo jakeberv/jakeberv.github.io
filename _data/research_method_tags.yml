@@ -1,0 +1,916 @@
+version: 4
+canonical_name: research_method_tags
+description: Canonical, method-first tag registry for landing-page summaries, publication tagging, faceted filtering, and method crosswalks.
+last_updated: 2026-02-19
+
+registry_rules:
+  source_of_truth: true
+  intended_uses:
+    - High-level "methods I use" tagging on landing pages
+    - Fine-grained method tagging for projects, papers, and talks
+    - Faceted filtering/search in future site components
+  tagging_guidance:
+    high_level_tag_unit: method_family
+    detailed_tag_unit: tag
+    recommended_family_tags_per_item: "1-3"
+    recommended_detailed_tags_per_item: "3-8"
+  allowed_priority_levels: [core, supporting, emerging]
+  allowed_scope_levels: [population_scale, clade_scale, deep_time, multi_scale]
+  allowed_analysis_types:
+    - inference
+    - quantification
+    - data_generation
+    - model_comparison
+    - validation
+    - integration
+
+method_family_order:
+  - phylogenetic_inference
+  - temporal_inference
+  - comparative_trait_modeling
+  - population_genomic_inference
+  - biogeographic_inference
+  - diversification_inference
+  - model_selection_uncertainty
+  - simulation_and_validation
+  - phenotypic_quantification
+  - genomic_data_generation
+  - lineage_delimitation
+  - integrative_synthesis
+
+method_families:
+  - id: phylogenetic_inference
+    label: Phylogenetic Inference
+    short_label: Phylogenetics
+    description: Methods for estimating evolutionary relationships from sequence data.
+    example_tags: [target_capture_phylogenomics, uce_phylogenomics, branch_support_bootstrap]
+  - id: temporal_inference
+    label: Divergence-Time and Molecular-Rate Inference
+    short_label: Time and Rate Inference
+    description: Methods for dating clades and modeling rate variation across lineages and time.
+    example_tags: [divergence_time_estimation, fossil_calibration, fossilized_birth_death_dating]
+  - id: comparative_trait_modeling
+    label: Comparative Trait Modeling
+    short_label: Comparative Modeling
+    description: Methods that evaluate trait evolution while accounting for phylogenetic non-independence.
+    example_tags: [phylogenetic_comparative_methods, ancestral_state_reconstruction, pgls_phylogenetic_regression]
+  - id: population_genomic_inference
+    label: Population Genomic and Reticulation Inference
+    short_label: Population Genomics
+    description: Methods for population structure, coalescent history, admixture, introgression, and gene flow.
+    example_tags: [coalescent_inference, population_structure_admixture, snp_ddrad_population_genomics]
+  - id: biogeographic_inference
+    label: Biogeographic Inference
+    short_label: Biogeography
+    description: Methods linking diversification and lineage history to geography and environmental barriers.
+    example_tags: [barrier_based_biogeography, andean_species_pump_testing, phylogeography]
+  - id: diversification_inference
+    label: Diversification Dynamics Inference
+    short_label: Diversification
+    description: Methods for speciation-extinction dynamics and macroevolutionary rate variation.
+    example_tags: [speciation_extinction_modeling, time_heterogeneous_diversification, macroevolutionary_rate_shift_analysis]
+  - id: model_selection_uncertainty
+    label: Model Selection and Uncertainty Quantification
+    short_label: Model Selection
+    description: Methods for ranking competing models and summarizing inferential uncertainty.
+    example_tags: [model_selection_information_criteria, bayes_factor_model_comparison, posterior_uncertainty_quantification]
+  - id: simulation_and_validation
+    label: Simulation and Model Validation
+    short_label: Simulation and Validation
+    description: Methods for stress-testing assumptions, assessing artifacts, and checking identifiability.
+    example_tags: [forward_simulation_studies, model_misspecification_assessment, identifiability_and_power_analysis]
+  - id: phenotypic_quantification
+    label: Phenotypic and Behavioral Quantification
+    short_label: Phenotype and Behavior
+    description: Methods for measuring and modeling morphology, bioacoustics, and behavioral traits.
+    example_tags: [bioacoustic_feature_analysis, allometric_fossil_reconstruction, morphometric_analysis]
+  - id: genomic_data_generation
+    label: Genomic Data Generation and Assembly
+    short_label: Genomics Infrastructure
+    description: Methods for marker generation, sequencing design, and chromosome-scale genomic resources.
+    example_tags: [short_read_marker_generation, phyluce_pipeline, chromosome_scale_assembly]
+  - id: lineage_delimitation
+    label: Species and Lineage Delimitation
+    short_label: Delimitation
+    description: Methods for defining, diagnosing, and evaluating lineage boundaries.
+    example_tags: [species_delimitation, lineage_diagnosis, cryptic_diversity_assessment]
+  - id: integrative_synthesis
+    label: Integrative Fossil-Genomic-Phenotypic Synthesis
+    short_label: Integrative Synthesis
+    description: Methods combining fossil, genomic, ecological, and phenotypic evidence into unified inference.
+    example_tags: [fossil_genomic_data_integration, deep_time_hypothesis_testing, multi_source_trait_synthesis]
+
+tags:
+  - id: target_capture_phylogenomics
+    label: Target-Capture Phylogenomics
+    method_family: phylogenetic_inference
+    scope: clade_scale
+    analysis_type: data_generation
+    data_modalities: [sequence_data]
+    aliases: [target capture, anchored hybrid enrichment, exon capture]
+    keywords: [target-capture, phylogenomics, sequencing design]
+    priority: core
+  - id: uce_phylogenomics
+    label: UCE-Based Phylogenomics
+    method_family: phylogenetic_inference
+    scope: clade_scale
+    analysis_type: inference
+    data_modalities: [sequence_data]
+    aliases: [ultraconserved elements, UCEs]
+    keywords: [UCE, ultraconserved, phylogenomics]
+    priority: core
+  - id: bayesian_phylogenetic_inference
+    label: Bayesian Phylogenetic Inference
+    method_family: phylogenetic_inference
+    scope: multi_scale
+    analysis_type: inference
+    data_modalities: [sequence_data]
+    aliases: [Bayesian tree inference, MCMC phylogenetics]
+    keywords: [Bayesian, MCMC, posterior]
+    priority: core
+  - id: maximum_likelihood_phylogenetics
+    label: Maximum-Likelihood Phylogenetic Inference
+    method_family: phylogenetic_inference
+    scope: multi_scale
+    analysis_type: inference
+    data_modalities: [sequence_data]
+    aliases: [ML phylogenetics]
+    keywords: [maximum likelihood, likelihood-based inference]
+    priority: core
+  - id: phylogenetic_informativeness
+    label: Phylogenetic Informativeness and Experimental Design
+    method_family: phylogenetic_inference
+    scope: clade_scale
+    analysis_type: model_comparison
+    data_modalities: [sequence_data]
+    aliases: [phylogenetic informativeness profiling]
+    keywords: [experimental design, locus selection, informativeness]
+    priority: supporting
+  - id: partition_scheme_modeling
+    label: Partition-Scheme and Substitution-Model Selection
+    method_family: phylogenetic_inference
+    scope: clade_scale
+    analysis_type: model_comparison
+    data_modalities: [sequence_data]
+    aliases: [PartitionFinder-based design, partition optimization]
+    keywords: [partitioning, substitution models, partitionfinder]
+    priority: supporting
+  - id: branch_support_bootstrap
+    label: Bootstrap-Based Branch-Support Inference
+    method_family: phylogenetic_inference
+    scope: multi_scale
+    analysis_type: quantification
+    data_modalities: [sequence_data]
+    aliases: [bootstrap support]
+    keywords: [bootstrap, branch support, node confidence]
+    priority: core
+  - id: ultrafast_bootstrap_support
+    label: Ultrafast Bootstrap Support
+    method_family: phylogenetic_inference
+    scope: clade_scale
+    analysis_type: quantification
+    data_modalities: [sequence_data]
+    aliases: [UFBoot]
+    keywords: [ultrafast bootstrap, IQ-TREE support]
+    priority: supporting
+  - id: mitochondrial_marker_phylogenetics
+    label: Mitochondrial Marker Phylogenetics
+    method_family: phylogenetic_inference
+    scope: multi_scale
+    analysis_type: inference
+    data_modalities: [sequence_data]
+    aliases: [mitochondrial loci, CO1 phylogenetics]
+    keywords: [mitochondrial, CO1, marker phylogenetics]
+    priority: supporting
+  - id: phylogenetic_network_inference
+    label: Phylogenetic Network Inference
+    method_family: phylogenetic_inference
+    scope: clade_scale
+    analysis_type: inference
+    data_modalities: [sequence_data]
+    aliases: [reticulate phylogenetics, network-based phylogeny]
+    keywords: [network inference, reticulate evolution, non-tree history]
+    priority: emerging
+
+  - id: divergence_time_estimation
+    label: Divergence-Time Estimation
+    method_family: temporal_inference
+    scope: deep_time
+    analysis_type: inference
+    data_modalities: [sequence_data, fossil_data]
+    aliases: [molecular dating, node dating]
+    keywords: [divergence time, timetree, dating]
+    priority: core
+  - id: molecular_clock_modeling
+    label: Molecular Clock Modeling
+    method_family: temporal_inference
+    scope: deep_time
+    analysis_type: inference
+    data_modalities: [sequence_data]
+    aliases: [clock models, relaxed clocks]
+    keywords: [molecular clock, rate models]
+    priority: core
+  - id: fossil_calibration
+    label: Fossil Calibration Frameworks
+    method_family: temporal_inference
+    scope: deep_time
+    analysis_type: inference
+    data_modalities: [fossil_data, sequence_data]
+    aliases: [fossil constraints, calibration priors]
+    keywords: [fossil calibration, temporal constraints]
+    priority: core
+  - id: lineage_rate_heterogeneity
+    label: Lineage-Specific Rate Heterogeneity Modeling
+    method_family: temporal_inference
+    scope: deep_time
+    analysis_type: inference
+    data_modalities: [sequence_data, life_history_data]
+    aliases: [among-lineage rate variation]
+    keywords: [rate heterogeneity, tempo, molecular rate variation]
+    priority: core
+  - id: clock_model_partitioning
+    label: Clock-Model Partitioning and Partition Sensitivity
+    method_family: temporal_inference
+    scope: deep_time
+    analysis_type: model_comparison
+    data_modalities: [sequence_data]
+    aliases: [clock partitioning]
+    keywords: [partitioning, rate partitions, sensitivity]
+    priority: supporting
+  - id: fossilized_birth_death_dating
+    label: Fossilized Birth-Death Dating
+    method_family: temporal_inference
+    scope: deep_time
+    analysis_type: inference
+    data_modalities: [fossil_data, sequence_data]
+    aliases: [FBD process]
+    keywords: [fossilized birth-death, diversification-through-time priors]
+    priority: supporting
+  - id: tip_dating_inference
+    label: Tip-Dating Inference
+    method_family: temporal_inference
+    scope: deep_time
+    analysis_type: inference
+    data_modalities: [fossil_data, sequence_data]
+    aliases: [dated-tip inference]
+    keywords: [tip dating, fossil tip ages, temporal priors]
+    priority: supporting
+  - id: penalized_likelihood_dating
+    label: Penalized-Likelihood Dating
+    method_family: temporal_inference
+    scope: deep_time
+    analysis_type: inference
+    data_modalities: [sequence_data, fossil_data]
+    aliases: [treePL dating]
+    keywords: [treepl, penalized likelihood, time calibration]
+    priority: supporting
+
+  - id: phylogenetic_comparative_methods
+    label: Phylogenetic Comparative Methods
+    method_family: comparative_trait_modeling
+    scope: multi_scale
+    analysis_type: inference
+    data_modalities: [sequence_data, phenotypic_data, life_history_data]
+    aliases: [PCM, comparative phylogenetics]
+    keywords: [comparative, phylogenetic correction, trait tests]
+    priority: core
+  - id: ancestral_state_reconstruction
+    label: Ancestral-State Reconstruction
+    method_family: comparative_trait_modeling
+    scope: clade_scale
+    analysis_type: inference
+    data_modalities: [phenotypic_data, sequence_data]
+    aliases: [ASR]
+    keywords: [ancestral state, character history]
+    priority: core
+  - id: stochastic_character_mapping
+    label: Stochastic Character Mapping
+    method_family: comparative_trait_modeling
+    scope: clade_scale
+    analysis_type: inference
+    data_modalities: [phenotypic_data, sequence_data]
+    aliases: [SCM]
+    keywords: [stochastic mapping, transition history]
+    priority: core
+  - id: trait_evolution_modeling
+    label: Trait Evolution Modeling
+    method_family: comparative_trait_modeling
+    scope: multi_scale
+    analysis_type: inference
+    data_modalities: [phenotypic_data, behavioral_data]
+    aliases: [trait process models]
+    keywords: [trait evolution, model comparison]
+    priority: core
+  - id: life_history_rate_association
+    label: Life-History and Evolutionary-Rate Association Models
+    method_family: comparative_trait_modeling
+    scope: deep_time
+    analysis_type: inference
+    data_modalities: [life_history_data, sequence_data]
+    aliases: [life-history correlates]
+    keywords: [life history, rate correlates, comparative regression]
+    priority: core
+  - id: correlated_trait_evolution
+    label: Correlated Trait Evolution Tests
+    method_family: comparative_trait_modeling
+    scope: clade_scale
+    analysis_type: inference
+    data_modalities: [phenotypic_data, behavioral_data]
+    aliases: [trait correlation models]
+    keywords: [correlated evolution, trait association]
+    priority: supporting
+  - id: pgls_phylogenetic_regression
+    label: Phylogenetic Generalized Least Squares
+    method_family: comparative_trait_modeling
+    scope: clade_scale
+    analysis_type: inference
+    data_modalities: [phenotypic_data, life_history_data, sequence_data]
+    aliases: [PGLS]
+    keywords: [pgls, phylogenetic regression, comparative regression]
+    priority: supporting
+  - id: ou_process_trait_models
+    label: Ornstein-Uhlenbeck Trait-Process Modeling
+    method_family: comparative_trait_modeling
+    scope: clade_scale
+    analysis_type: inference
+    data_modalities: [phenotypic_data, behavioral_data, sequence_data]
+    aliases: [OUwie, OUCH]
+    keywords: [ou process, adaptive optima, ouwie, ouch]
+    priority: supporting
+
+  - id: continental_population_genomics
+    label: Continental-Scale Population Genomics
+    method_family: population_genomic_inference
+    scope: population_scale
+    analysis_type: inference
+    data_modalities: [sequence_data, geographic_data]
+    aliases: [large-scale population genomics]
+    keywords: [population genomics, range-wide sampling]
+    priority: core
+  - id: phylogeography
+    label: Phylogeographic Inference
+    method_family: population_genomic_inference
+    scope: population_scale
+    analysis_type: inference
+    data_modalities: [sequence_data, geographic_data]
+    aliases: [genomic phylogeography]
+    keywords: [phylogeography, geographic structure]
+    priority: core
+  - id: coalescent_inference
+    label: Coalescent-Based Inference
+    method_family: population_genomic_inference
+    scope: population_scale
+    analysis_type: inference
+    data_modalities: [sequence_data]
+    aliases: [coalescent models]
+    keywords: [coalescent, population history]
+    priority: core
+  - id: population_structure_admixture
+    label: Population Structure and Admixture Analysis
+    method_family: population_genomic_inference
+    scope: population_scale
+    analysis_type: inference
+    data_modalities: [sequence_data]
+    aliases: [STRUCTURE-like inference, admixture models]
+    keywords: [structure, admixture, clustering]
+    priority: core
+  - id: introgression_hybridization
+    label: Introgression and Hybridization Inference
+    method_family: population_genomic_inference
+    scope: population_scale
+    analysis_type: inference
+    data_modalities: [sequence_data]
+    aliases: [reticulate evolution, gene flow inference]
+    keywords: [introgression, hybridization, secondary contact]
+    priority: core
+  - id: demographic_modeling
+    label: Demographic History Modeling
+    method_family: population_genomic_inference
+    scope: population_scale
+    analysis_type: inference
+    data_modalities: [sequence_data]
+    aliases: [historical demography]
+    keywords: [demographic inference, population size history]
+    priority: core
+  - id: ordination_pca
+    label: Ordination and PCA for Genomic Structure
+    method_family: population_genomic_inference
+    scope: population_scale
+    analysis_type: quantification
+    data_modalities: [sequence_data]
+    aliases: [PCA structure analysis]
+    keywords: [PCA, ordination, structure]
+    priority: supporting
+  - id: snp_ddrad_population_genomics
+    label: SNP and ddRAD Population-Genomic Inference
+    method_family: population_genomic_inference
+    scope: population_scale
+    analysis_type: inference
+    data_modalities: [sequence_data]
+    aliases: [SNP genotyping, ddRAD workflows, RADseq population genomics]
+    keywords: [SNP, ddRAD, RADseq, genotyping]
+    priority: core
+  - id: gene_flow_secondary_contact
+    label: Gene-Flow and Secondary-Contact Inference
+    method_family: population_genomic_inference
+    scope: population_scale
+    analysis_type: inference
+    data_modalities: [sequence_data, geographic_data]
+    aliases: [secondary contact tests]
+    keywords: [gene flow, secondary contact, reticulation]
+    priority: supporting
+
+  - id: barrier_based_biogeography
+    label: Barrier-Based Biogeographic Inference
+    method_family: biogeographic_inference
+    scope: multi_scale
+    analysis_type: inference
+    data_modalities: [geographic_data, sequence_data]
+    aliases: [riverine and montane barrier tests]
+    keywords: [barriers, rivers, Andes, dispersal limits]
+    priority: core
+  - id: andean_species_pump_testing
+    label: Andean Species Pump Hypothesis Testing
+    method_family: biogeographic_inference
+    scope: clade_scale
+    analysis_type: inference
+    data_modalities: [geographic_data, sequence_data]
+    aliases: [mountain-driven diversification tests]
+    keywords: [Andean uplift, mountain heterogeneity]
+    priority: core
+  - id: macroecology_macroevolution_linkage
+    label: Macroecology-Macroevolution Linkage
+    method_family: biogeographic_inference
+    scope: deep_time
+    analysis_type: integration
+    data_modalities: [ecological_data, fossil_data, sequence_data]
+    aliases: [ecological filtering in deep time]
+    keywords: [macroecology, macroevolution, ecological filtering]
+    priority: core
+  - id: geographic_range_transition_modeling
+    label: Geographic Range Transition Modeling
+    method_family: biogeographic_inference
+    scope: clade_scale
+    analysis_type: inference
+    data_modalities: [geographic_data, sequence_data]
+    aliases: [range-shift modeling]
+    keywords: [range transitions, dispersal history, geographic shifts]
+    priority: supporting
+  - id: elevational_gradient_divergence
+    label: Elevational-Gradient Divergence Analysis
+    method_family: biogeographic_inference
+    scope: population_scale
+    analysis_type: inference
+    data_modalities: [geographic_data, sequence_data]
+    aliases: [elevation-based divergence tests]
+    keywords: [elevation, montane gradients, divergence]
+    priority: supporting
+
+  - id: speciation_extinction_modeling
+    label: Speciation-Extinction Modeling
+    method_family: diversification_inference
+    scope: deep_time
+    analysis_type: inference
+    data_modalities: [sequence_data, fossil_data]
+    aliases: [birth-death modeling]
+    keywords: [speciation, extinction, diversification]
+    priority: core
+  - id: time_heterogeneous_diversification
+    label: Time-Heterogeneous Diversification Models
+    method_family: diversification_inference
+    scope: deep_time
+    analysis_type: inference
+    data_modalities: [sequence_data, fossil_data]
+    aliases: [time-variable diversification]
+    keywords: [time heterogeneity, diversification rate shifts]
+    priority: core
+  - id: macroevolutionary_rate_shift_analysis
+    label: Macroevolutionary Rate-Shift Analysis
+    method_family: diversification_inference
+    scope: deep_time
+    analysis_type: inference
+    data_modalities: [sequence_data, fossil_data]
+    aliases: [rate shift detection]
+    keywords: [rate shifts, tempo and mode]
+    priority: supporting
+  - id: state_dependent_diversification_tests
+    label: State-Dependent Diversification Tests
+    method_family: diversification_inference
+    scope: clade_scale
+    analysis_type: inference
+    data_modalities: [phenotypic_data, sequence_data]
+    aliases: [trait-dependent diversification]
+    keywords: [state-dependent, trait-associated diversification]
+    priority: supporting
+  - id: extinction_filtering_inference
+    label: Extinction-Filtering Inference
+    method_family: diversification_inference
+    scope: deep_time
+    analysis_type: integration
+    data_modalities: [fossil_data, ecological_data, sequence_data]
+    aliases: [ecological filtering after extinction]
+    keywords: [extinction filtering, post-extinction dynamics]
+    priority: core
+
+  - id: model_selection_information_criteria
+    label: Information-Criterion Model Selection
+    method_family: model_selection_uncertainty
+    scope: multi_scale
+    analysis_type: model_comparison
+    data_modalities: [sequence_data, phenotypic_data]
+    aliases: [AIC model selection]
+    keywords: [AIC, information criteria, model ranking]
+    priority: core
+  - id: bayes_factor_model_comparison
+    label: Bayes-Factor Model Comparison
+    method_family: model_selection_uncertainty
+    scope: multi_scale
+    analysis_type: model_comparison
+    data_modalities: [sequence_data, phenotypic_data]
+    aliases: [Bayes factor testing]
+    keywords: [Bayes factor, Bayesian model comparison]
+    priority: supporting
+  - id: posterior_uncertainty_quantification
+    label: Posterior Uncertainty Quantification
+    method_family: model_selection_uncertainty
+    scope: multi_scale
+    analysis_type: quantification
+    data_modalities: [sequence_data, phenotypic_data]
+    aliases: [credible-interval summarization]
+    keywords: [uncertainty, posterior intervals, confidence]
+    priority: core
+  - id: sensitivity_analysis
+    label: Sensitivity Analysis
+    method_family: model_selection_uncertainty
+    scope: multi_scale
+    analysis_type: validation
+    data_modalities: [sequence_data, phenotypic_data, fossil_data]
+    aliases: [assumption sensitivity testing]
+    keywords: [sensitivity analysis, robustness checks]
+    priority: supporting
+
+  - id: forward_simulation_studies
+    label: Forward Simulation Studies
+    method_family: simulation_and_validation
+    scope: multi_scale
+    analysis_type: validation
+    data_modalities: [synthetic_data]
+    aliases: [simulation-based sensitivity analysis]
+    keywords: [simulation, stress test, sensitivity]
+    priority: core
+  - id: model_misspecification_assessment
+    label: Model Misspecification and Artifact Assessment
+    method_family: simulation_and_validation
+    scope: multi_scale
+    analysis_type: validation
+    data_modalities: [synthetic_data, sequence_data]
+    aliases: [inference artifact detection]
+    keywords: [misspecification, methodological artifact, bias]
+    priority: core
+  - id: identifiability_and_power_analysis
+    label: Identifiability and Power Analysis
+    method_family: simulation_and_validation
+    scope: multi_scale
+    analysis_type: validation
+    data_modalities: [synthetic_data]
+    aliases: [model identifiability]
+    keywords: [identifiability, power, inferential robustness]
+    priority: core
+  - id: posterior_predictive_checks
+    label: Posterior Predictive Checks
+    method_family: simulation_and_validation
+    scope: multi_scale
+    analysis_type: validation
+    data_modalities: [sequence_data, phenotypic_data]
+    aliases: [predictive adequacy checks]
+    keywords: [posterior predictive, model adequacy]
+    priority: supporting
+  - id: artifact_detection_benchmarking
+    label: Artifact Detection and Benchmarking
+    method_family: simulation_and_validation
+    scope: multi_scale
+    analysis_type: validation
+    data_modalities: [synthetic_data, sequence_data]
+    aliases: [benchmark tests]
+    keywords: [artifact detection, benchmarking, false positives]
+    priority: supporting
+
+  - id: bioacoustic_feature_analysis
+    label: Bioacoustic Feature Analysis
+    method_family: phenotypic_quantification
+    scope: clade_scale
+    analysis_type: quantification
+    data_modalities: [acoustic_data, behavioral_data]
+    aliases: [acoustic phenotyping, vocal trait quantification]
+    keywords: [acoustic, vocal, signal analysis]
+    priority: core
+  - id: behavioral_trait_evolution
+    label: Behavioral Trait Evolution Modeling
+    method_family: phenotypic_quantification
+    scope: clade_scale
+    analysis_type: inference
+    data_modalities: [behavioral_data, sequence_data]
+    aliases: [behavioral character evolution]
+    keywords: [behavior, display traits, evolutionary modeling]
+    priority: core
+  - id: sexual_selection_inference
+    label: Sexual Selection Inference
+    method_family: phenotypic_quantification
+    scope: clade_scale
+    analysis_type: inference
+    data_modalities: [phenotypic_data, behavioral_data]
+    aliases: [sexual trait evolution]
+    keywords: [sexual selection, dimorphism, courtship]
+    priority: core
+  - id: allometric_fossil_reconstruction
+    label: Allometric Fossil Reconstruction
+    method_family: phenotypic_quantification
+    scope: deep_time
+    analysis_type: quantification
+    data_modalities: [fossil_data, morphological_data]
+    aliases: [body-mass allometry]
+    keywords: [allometric scaling, fossil reconstruction, body mass]
+    priority: core
+  - id: morphometric_analysis
+    label: Morphometric Analysis
+    method_family: phenotypic_quantification
+    scope: clade_scale
+    analysis_type: quantification
+    data_modalities: [morphological_data]
+    aliases: [shape analysis]
+    keywords: [morphometrics, shape, phenotype]
+    priority: supporting
+  - id: geometric_morphometrics
+    label: Geometric Morphometrics
+    method_family: phenotypic_quantification
+    scope: clade_scale
+    analysis_type: quantification
+    data_modalities: [morphological_data]
+    aliases: [landmark-based shape analysis]
+    keywords: [geometric morphometrics, landmark data]
+    priority: supporting
+  - id: display_trait_mechanics
+    label: Display-Trait Mechanical Analysis
+    method_family: phenotypic_quantification
+    scope: clade_scale
+    analysis_type: quantification
+    data_modalities: [behavioral_data, phenotypic_data, acoustic_data]
+    aliases: [feather-sound mechanics]
+    keywords: [display mechanics, feather instruments, signal production]
+    priority: supporting
+  - id: vocalization_typology
+    label: Vocalization Type Delimitation
+    method_family: phenotypic_quantification
+    scope: population_scale
+    analysis_type: quantification
+    data_modalities: [acoustic_data]
+    aliases: [call-type classification]
+    keywords: [vocalization types, acoustic typology, call classification]
+    priority: supporting
+
+  - id: short_read_marker_generation
+    label: Short-Read Marker Generation
+    method_family: genomic_data_generation
+    scope: population_scale
+    analysis_type: data_generation
+    data_modalities: [sequence_data]
+    aliases: [short-read sequencing workflows]
+    keywords: [short-read sequencing, marker generation]
+    priority: core
+  - id: chromosome_scale_assembly
+    label: Chromosome-Scale Genome Assembly
+    method_family: genomic_data_generation
+    scope: clade_scale
+    analysis_type: data_generation
+    data_modalities: [genomic_assembly_data]
+    aliases: [chromosome-level assembly]
+    keywords: [genome assembly, chromosome scale]
+    priority: core
+  - id: long_read_scaffolding
+    label: Long-Read and Scaffolding Pipelines
+    method_family: genomic_data_generation
+    scope: clade_scale
+    analysis_type: data_generation
+    data_modalities: [genomic_assembly_data]
+    aliases: [PacBio HiFi, Hi-C, optical mapping]
+    keywords: [long-read, HiFi, Hi-C, optical mapping]
+    priority: core
+  - id: marker_panel_design
+    label: Marker Panel and Locus Design
+    method_family: genomic_data_generation
+    scope: clade_scale
+    analysis_type: data_generation
+    data_modalities: [sequence_data]
+    aliases: [locus panel design]
+    keywords: [marker design, loci selection, sequencing panel]
+    priority: supporting
+  - id: reference_genome_curation
+    label: Reference Genome Curation
+    method_family: genomic_data_generation
+    scope: clade_scale
+    analysis_type: data_generation
+    data_modalities: [genomic_assembly_data]
+    aliases: [assembly curation]
+    keywords: [curation, assembly quality, reference genomes]
+    priority: supporting
+  - id: phyluce_pipeline
+    label: PhyLUCE and UCE Workflow Pipelines
+    method_family: genomic_data_generation
+    scope: clade_scale
+    analysis_type: data_generation
+    data_modalities: [sequence_data]
+    aliases: [PhyLUCE processing, UCE pipeline]
+    keywords: [phyluce, UCE workflow, locus assembly]
+    priority: supporting
+
+  - id: species_delimitation
+    label: Species Delimitation
+    method_family: lineage_delimitation
+    scope: population_scale
+    analysis_type: inference
+    data_modalities: [sequence_data, phenotypic_data, acoustic_data, geographic_data]
+    aliases: [taxonomic delimitation]
+    keywords: [species delimitation, lineage boundaries]
+    priority: core
+  - id: lineage_diagnosis
+    label: Lineage Diagnosis and Diagnosability Testing
+    method_family: lineage_delimitation
+    scope: population_scale
+    analysis_type: inference
+    data_modalities: [sequence_data, phenotypic_data, acoustic_data]
+    aliases: [diagnosable lineage testing]
+    keywords: [lineage diagnosis, diagnosability]
+    priority: core
+  - id: cryptic_diversity_assessment
+    label: Cryptic Diversity Assessment
+    method_family: lineage_delimitation
+    scope: population_scale
+    analysis_type: integration
+    data_modalities: [sequence_data, phenotypic_data, geographic_data]
+    aliases: [cryptic species analysis]
+    keywords: [cryptic diversity, hidden lineages]
+    priority: core
+  - id: taxonomy_evidence_synthesis
+    label: Taxonomic Evidence Synthesis
+    method_family: lineage_delimitation
+    scope: population_scale
+    analysis_type: integration
+    data_modalities: [sequence_data, phenotypic_data, behavioral_data, geographic_data]
+    aliases: [integrative taxonomy]
+    keywords: [taxonomy, evidence synthesis, species decisions]
+    priority: supporting
+
+  - id: fossil_genomic_data_integration
+    label: Fossil and Genomic Data Integration
+    method_family: integrative_synthesis
+    scope: deep_time
+    analysis_type: integration
+    data_modalities: [fossil_data, sequence_data]
+    aliases: [total-evidence style synthesis]
+    keywords: [fossil, genomic, joint inference]
+    priority: core
+  - id: deep_time_hypothesis_testing
+    label: Deep-Time Hypothesis Testing
+    method_family: integrative_synthesis
+    scope: deep_time
+    analysis_type: integration
+    data_modalities: [fossil_data, sequence_data, ecological_data]
+    aliases: [macroevolutionary hypothesis testing]
+    keywords: [deep time, K-Pg, historical contingency]
+    priority: core
+  - id: multi_source_trait_synthesis
+    label: Multi-Source Trait Synthesis
+    method_family: integrative_synthesis
+    scope: multi_scale
+    analysis_type: integration
+    data_modalities: [anatomical_data, behavioral_data, life_history_data, sequence_data]
+    aliases: [integrative phenotype synthesis]
+    keywords: [anatomy, behavior, life history, genomics]
+    priority: core
+  - id: cross_scale_inference
+    label: Cross-Scale Evolutionary Inference
+    method_family: integrative_synthesis
+    scope: multi_scale
+    analysis_type: integration
+    data_modalities: [sequence_data, fossil_data, population_data]
+    aliases: [micro-to-macro inference]
+    keywords: [cross-scale, microevolution, macroevolution]
+    priority: supporting
+  - id: total_evidence_synthesis
+    label: Total-Evidence Synthesis
+    method_family: integrative_synthesis
+    scope: deep_time
+    analysis_type: integration
+    data_modalities: [fossil_data, sequence_data, phenotypic_data]
+    aliases: [combined evidence frameworks]
+    keywords: [total evidence, joint datasets, integrated dating]
+    priority: supporting
+  - id: ecology_life_history_integration
+    label: Ecology-Life-History Integration
+    method_family: integrative_synthesis
+    scope: multi_scale
+    analysis_type: integration
+    data_modalities: [ecological_data, life_history_data, sequence_data]
+    aliases: [eco-evolutionary synthesis]
+    keywords: [ecology, life history, evolutionary rates]
+    priority: supporting
+
+display_groups:
+  landing_page_method_families:
+    - phylogenetic_inference
+    - temporal_inference
+    - comparative_trait_modeling
+    - population_genomic_inference
+    - biogeographic_inference
+    - diversification_inference
+    - model_selection_uncertainty
+    - simulation_and_validation
+    - phenotypic_quantification
+    - genomic_data_generation
+    - lineage_delimitation
+    - integrative_synthesis
+  concise_landing_page_method_families:
+    - phylogenetic_inference
+    - temporal_inference
+    - comparative_trait_modeling
+    - population_genomic_inference
+    - diversification_inference
+    - model_selection_uncertainty
+    - simulation_and_validation
+    - integrative_synthesis
+  page_emphasis_method_families:
+    phylogeny_page: [phylogenetic_inference, temporal_inference, diversification_inference, simulation_and_validation]
+    biogeography_page: [population_genomic_inference, biogeographic_inference, lineage_delimitation]
+    diversification_page: [diversification_inference, model_selection_uncertainty, simulation_and_validation]
+    phenotype_page: [comparative_trait_modeling, phenotypic_quantification, integrative_synthesis]
+
+quick_tag_sets:
+  phylogeny_page_core_tags:
+    - target_capture_phylogenomics
+    - uce_phylogenomics
+    - branch_support_bootstrap
+    - partition_scheme_modeling
+    - divergence_time_estimation
+    - molecular_clock_modeling
+    - fossil_calibration
+    - fossilized_birth_death_dating
+    - lineage_rate_heterogeneity
+    - speciation_extinction_modeling
+    - model_misspecification_assessment
+  biogeography_page_core_tags:
+    - continental_population_genomics
+    - snp_ddrad_population_genomics
+    - coalescent_inference
+    - population_structure_admixture
+    - introgression_hybridization
+    - phylogeography
+    - barrier_based_biogeography
+    - andean_species_pump_testing
+    - species_delimitation
+  diversification_page_core_tags:
+    - speciation_extinction_modeling
+    - time_heterogeneous_diversification
+    - macroevolutionary_rate_shift_analysis
+    - extinction_filtering_inference
+    - model_selection_information_criteria
+    - forward_simulation_studies
+    - identifiability_and_power_analysis
+  phenotype_page_core_tags:
+    - phylogenetic_comparative_methods
+    - stochastic_character_mapping
+    - pgls_phylogenetic_regression
+    - bioacoustic_feature_analysis
+    - behavioral_trait_evolution
+    - ou_process_trait_models
+    - allometric_fossil_reconstruction
+    - morphometric_analysis
+    - vocalization_typology
+    - multi_source_trait_synthesis
+
+software_to_tag_map:
+  BEAST:
+    - bayesian_phylogenetic_inference
+    - divergence_time_estimation
+    - fossil_calibration
+  MrBayes:
+    - bayesian_phylogenetic_inference
+  RAxML:
+    - maximum_likelihood_phylogenetics
+    - branch_support_bootstrap
+  IQ-TREE:
+    - maximum_likelihood_phylogenetics
+    - ultrafast_bootstrap_support
+  PartitionFinder:
+    - partition_scheme_modeling
+  treePL:
+    - penalized_likelihood_dating
+  PhyLUCE:
+    - phyluce_pipeline
+    - uce_phylogenomics
+  STRUCTURE:
+    - population_structure_admixture
+  OUwie:
+    - ou_process_trait_models
+  phytools:
+    - phylogenetic_comparative_methods
+    - pgls_phylogenetic_regression

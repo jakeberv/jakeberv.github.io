@@ -58,6 +58,8 @@ header:
 
 {% assign ordered_pages = site.research | sort: "order_number" %}
 
+{% include research-method-explorer.html methods=site.data.research_method_tags %}
+
 <div class="research-grid">
 {% for post in ordered_pages %} {% include archive-single-research-grid.html type="grid" %} {% endfor %}
 </div>

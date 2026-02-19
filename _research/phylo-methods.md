@@ -9,6 +9,23 @@ landing_tags:
   - Diversification
   - Macroevolution
   - Simulation
+method_families:
+  - diversification_inference
+  - simulation_and_validation
+  - model_selection_uncertainty
+  - comparative_trait_modeling
+  - biogeographic_inference
+method_tags:
+  - speciation_extinction_modeling
+  - time_heterogeneous_diversification
+  - macroevolutionary_rate_shift_analysis
+  - extinction_filtering_inference
+  - model_selection_information_criteria
+  - forward_simulation_studies
+  - identifiability_and_power_analysis
+  - model_misspecification_assessment
+  - stochastic_character_mapping
+  - macroecology_macroevolution_linkage
 header: 
   og_image: "research/Yggdrasil-cropped.jpg"
 ---

@@ -9,6 +9,27 @@ landing_tags:
   - Phylogenomics
   - Molecular Evolution
   - Deep Time
+method_families:
+  - phylogenetic_inference
+  - temporal_inference
+  - diversification_inference
+  - model_selection_uncertainty
+  - simulation_and_validation
+  - integrative_synthesis
+method_tags:
+  - target_capture_phylogenomics
+  - uce_phylogenomics
+  - bayesian_phylogenetic_inference
+  - maximum_likelihood_phylogenetics
+  - partition_scheme_modeling
+  - branch_support_bootstrap
+  - divergence_time_estimation
+  - molecular_clock_modeling
+  - fossil_calibration
+  - lineage_rate_heterogeneity
+  - speciation_extinction_modeling
+  - model_misspecification_assessment
+  - fossil_genomic_data_integration
 header:
   og_image: "research/haeckel_humm.jpg"
 ---

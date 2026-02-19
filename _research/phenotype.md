@@ -9,6 +9,27 @@ landing_tags:
   - Phenotypic Evolution
   - Sexual Selection
   - Fossil Reconstruction
+method_families:
+  - comparative_trait_modeling
+  - phenotypic_quantification
+  - lineage_delimitation
+  - integrative_synthesis
+  - temporal_inference
+method_tags:
+  - phylogenetic_comparative_methods
+  - stochastic_character_mapping
+  - pgls_phylogenetic_regression
+  - trait_evolution_modeling
+  - bioacoustic_feature_analysis
+  - behavioral_trait_evolution
+  - sexual_selection_inference
+  - allometric_fossil_reconstruction
+  - morphometric_analysis
+  - geometric_morphometrics
+  - vocalization_typology
+  - species_delimitation
+  - multi_source_trait_synthesis
+  - lineage_rate_heterogeneity
 header: 
   og_image: "research/Haeckle-Demonema-header-web.jpg"
 ---

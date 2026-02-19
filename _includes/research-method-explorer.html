@@ -1,0 +1,150 @@
+{% assign methods = include.methods | default: site.data.research_method_tags %}
+{% assign family_ids = methods.display_groups.landing_page_method_families | default: methods.method_family_order %}
+
+<section class="research-tag-explorer" aria-label="Methods taxonomy explorer">
+  <style>
+    .research-tag-explorer {
+      margin: 0.95rem 0 1.2rem;
+      padding: 0.72rem;
+      border-radius: 14px;
+      border: 1px solid rgba(17, 66, 56, 0.12);
+      background: linear-gradient(135deg, #f8fbf9 0%, #f2f7f3 100%);
+      box-shadow: 0 8px 24px -20px rgba(19, 49, 43, 0.75);
+    }
+
+    .research-tag-explorer__title {
+      margin: 0;
+      font-size: 0.94rem;
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+    }
+
+    .research-tag-explorer__copy {
+      margin: 0.24rem 0 0.5rem;
+      font-size: 0.77rem;
+      color: rgba(15, 49, 41, 0.84);
+      line-height: 1.35;
+    }
+
+    .research-tag-explorer__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+      gap: 0.34rem;
+    }
+
+    .research-tag-family {
+      border: 1px solid rgba(20, 69, 58, 0.18);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      overflow: hidden;
+    }
+
+    .research-tag-family summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.45rem;
+      padding: 0.4rem 0.48rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #164036;
+      user-select: none;
+    }
+
+    .research-tag-family summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .research-tag-family summary:focus-visible {
+      outline: 2px solid rgba(22, 104, 88, 0.6);
+      outline-offset: -2px;
+    }
+
+    .research-tag-family summary::after {
+      content: "+";
+      flex: 0 0 auto;
+      width: 0.94rem;
+      height: 0.94rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      border: 1px solid rgba(20, 69, 58, 0.2);
+      background: rgba(240, 249, 244, 0.95);
+      color: rgba(20, 69, 58, 0.9);
+      line-height: 1;
+    }
+
+    .research-tag-family[open] summary::after {
+      content: "-";
+    }
+
+    .research-tag-family__count {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: rgba(20, 69, 58, 0.78);
+      border: 1px solid rgba(20, 69, 58, 0.16);
+      border-radius: 999px;
+      padding: 0.1rem 0.36rem;
+      background: rgba(233, 246, 239, 0.88);
+      line-height: 1.2;
+    }
+
+    .research-tag-family__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.24rem;
+      padding: 0 0.48rem 0.48rem;
+    }
+
+    .research-tag-family__tag {
+      font-size: 0.64rem;
+      line-height: 1.1;
+      font-weight: 600;
+      color: #1a4a3f;
+      border: 1px solid rgba(20, 69, 58, 0.16);
+      border-radius: 999px;
+      background: rgba(248, 252, 249, 0.95);
+      padding: 0.2rem 0.42rem;
+    }
+
+    @media (max-width: 720px) {
+      .research-tag-explorer {
+        padding: 0.72rem;
+      }
+
+      .research-tag-explorer__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <h3 class="research-tag-explorer__title">Methods Used in My Research</h3>
+  <p class="research-tag-explorer__copy">Click a method family to reveal associated tags.</p>
+
+  <div class="research-tag-explorer__grid">
+    {% for family_id in family_ids %}
+      {% assign family = methods.method_families | where: "id", family_id | first %}
+      {% assign family_tags = methods.tags | where: "method_family", family_id %}
+      {% if family and family_tags.size > 0 %}
+        <details class="research-tag-family">
+          <summary title="{{ family.label }}">
+            <span>{{ family.short_label | default: family.label }}</span>
+            <span class="research-tag-family__count">{{ family_tags.size }}</span>
+          </summary>
+          <div class="research-tag-family__tags">
+            {% for tag in family_tags %}
+              <span class="research-tag-family__tag">{{ tag.label }}</span>
+            {% endfor %}
+          </div>
+        </details>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
