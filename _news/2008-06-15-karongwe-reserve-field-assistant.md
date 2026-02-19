@@ -18,4 +18,4 @@ tags:
 Jacob Berv participated as a field assistant at Karongwe Reserve in Limpopo Province, South Africa (May-July 2008).
 
 <!--news-excerpt-->
-Served as a field assistant at Karongwe Reserve in South Africa.
+Jacob Berv served as a field assistant at Karongwe Reserve in South Africa.

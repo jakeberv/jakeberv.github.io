@@ -24,4 +24,4 @@ tags:
 On June 4, 2021, Jacob Berv gave an invited public talk for the Friends of the University of Michigan Museum of Paleontology (FUMMP). [FUMMP](https://lsa.umich.edu/paleontology/friends-of-the-university-of-michigan--museum-of-paleontology.html)
 
 <!--news-excerpt-->
-Presented an invited public seminar for the Friends of the U-M Museum of Paleontology (FUMMP).
+Jacob Berv presented an invited public seminar for the Friends of the U-M Museum of Paleontology (FUMMP).

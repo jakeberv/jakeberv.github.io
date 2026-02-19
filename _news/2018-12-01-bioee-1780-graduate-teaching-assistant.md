@@ -23,4 +23,4 @@ tags:
 Jacob Berv served as graduate teaching assistant for BIOEE 1780 (Evolutionary Biology and Diversity) at Cornell across multiple terms (Fall 2013, 2014, 2015, and 2018), including writing-intensive seminar instruction.
 
 <!--news-excerpt-->
-Served as graduate teaching assistant for BIOEE 1780 across four Cornell terms.
+Jacob Berv served as graduate teaching assistant for BIOEE 1780 across four Cornell terms.

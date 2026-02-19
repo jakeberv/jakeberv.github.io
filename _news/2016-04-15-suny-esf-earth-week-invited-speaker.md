@@ -23,4 +23,4 @@ tags:
 Jacob Berv gave an invited Earth Week seminar at SUNY ESF (Syracuse, NY) in April 2016.
 
 <!--news-excerpt-->
-Presented an invited Earth Week seminar at SUNY ESF in Syracuse.
+Jacob Berv presented an invited Earth Week seminar at SUNY ESF in Syracuse.

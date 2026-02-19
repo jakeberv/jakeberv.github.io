@@ -23,4 +23,4 @@ tags:
 Jacob Berv delivered an invited seminar at the Cornell Lab of Ornithology: "A Comprehensive Multilocus Phylogeny of the Neotropical Cotingas."
 
 <!--news-excerpt-->
-Invited seminar at the Cornell Lab of Ornithology on multilocus cotinga phylogeny.
+Jacob Berv gave an invited seminar at the Cornell Lab of Ornithology on multilocus cotinga phylogeny.

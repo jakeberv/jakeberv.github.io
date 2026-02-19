@@ -20,7 +20,7 @@ geo:
 tags:
   - award
 ---
-Jacob Berv's photography was featured in *Yale Environmental News* (Fall/Winter 2009/2010), including visual work tied to savanna specialist ancestry and differentiation research.
+Jacob Berv's photography appeared in *Yale Environmental News* (Fall/Winter 2009/2010), including visual work tied to savanna specialist ancestry and differentiation research.
 
 <!--news-excerpt-->
-Received photography feature recognition in *Yale Environmental News* (Fall/Winter 2009/2010).
+Jacob Berv received photography feature recognition in *Yale Environmental News* (Fall/Winter 2009/2010).

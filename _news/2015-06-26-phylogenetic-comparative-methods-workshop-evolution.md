@@ -23,4 +23,4 @@ tags:
 Jacob Berv completed the SSE/SSB/ASN Workshop on Phylogenetic Comparative Methods at the Evolution 2015 meeting in Guaruja, Brazil.
 
 <!--news-excerpt-->
-Completed workshop training in phylogenetic comparative methods at Evolution 2015.
+Jacob Berv completed workshop training in phylogenetic comparative methods at Evolution 2015.

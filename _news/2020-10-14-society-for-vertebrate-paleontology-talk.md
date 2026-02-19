@@ -21,7 +21,7 @@ tags:
   - conference_talk
   - student_contribution
 ---
-At the 2020 Society for Vertebrate Paleontology meeting, Jonathan J. Hughes presented co-authored research with Jacob Berv and colleagues on mammalian arboreality and the K-Pg mass extinction.
+At the 2020 Society for Vertebrate Paleontology meeting, Jonathan J. Hughes presented co-authored research with Jacob Berv and colleagues on mammalian arboreality and the K–Pg mass extinction.
 
 <!--news-excerpt-->
-Jonathan J. Hughes presented co-authored work at SVP 2020 on mammalian arboreality and macroevolution across the K-Pg boundary.
+Jonathan J. Hughes presented co-authored work at SVP 2020 on mammalian arboreality and macroevolution across the K–Pg boundary.

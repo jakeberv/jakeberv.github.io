@@ -23,4 +23,4 @@ tags:
 Jacob Berv received the Yale Science and Engineering Association Fellowship in May 2009.
 
 <!--news-excerpt-->
-Received the Yale Science and Engineering Association Fellowship.
+Jacob Berv received the Yale Science and Engineering Association Fellowship.

@@ -23,4 +23,4 @@ tags:
 Jacob Berv completed a workshop on next-generation sequencing and phylogenomics at the National Evolutionary Synthesis Center (Durham, NC) in 2014.
 
 <!--news-excerpt-->
-Completed NESCent workshop training in next-generation sequencing and phylogenomics.
+Jacob Berv completed NESCent workshop training in next-generation sequencing and phylogenomics.

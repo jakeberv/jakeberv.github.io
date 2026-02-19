@@ -19,4 +19,4 @@ tags:
 Jacob Berv served as graduate teaching assistant for BIOEE 2650 (Tropical Field Ecology and Behavior) at Cornell in Winter 2014, supporting intensive field-based instruction in Kenya.
 
 <!--news-excerpt-->
-Served as graduate teaching assistant for Cornell's tropical field ecology course in Kenya.
+Jacob Berv served as graduate teaching assistant for Cornell's tropical field ecology course in Kenya.

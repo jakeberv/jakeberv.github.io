@@ -23,4 +23,4 @@ tags:
 Jacob Berv received a Yale Peabody Museum Summer Fellowship in May 2009.
 
 <!--news-excerpt-->
-Received Yale Peabody Museum summer fellowship support.
+Jacob Berv received Yale Peabody Museum summer fellowship support.

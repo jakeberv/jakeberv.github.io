@@ -20,7 +20,7 @@ geo:
 tags:
   - award
 ---
-Jacob Berv was named a finalist in the Photographer's Forum 29th Annual College Photography Contest (Spring 2009).
+Jacob Berv earned finalist recognition in the Photographer's Forum 29th Annual College Photography Contest (Spring 2009).
 
 <!--news-excerpt-->
-Named finalist in Photographer's Forum's annual college photography contest.
+Jacob Berv was named a finalist in Photographer's Forum's annual college photography contest.

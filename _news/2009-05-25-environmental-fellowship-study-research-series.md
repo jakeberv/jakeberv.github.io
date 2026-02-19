@@ -24,4 +24,4 @@ tags:
 Jacob Berv received Environmental Fellowship for Study and Research support in both 2008 and 2009.
 
 <!--news-excerpt-->
-Received Environmental Fellowship support across two consecutive years (2008-2009).
+Jacob Berv received Environmental Fellowship support across two consecutive years (2008-2009).

@@ -18,4 +18,4 @@ tags:
 Jacob Berv participated in field research in Guatemala as a field assistant in October 2011.
 
 <!--news-excerpt-->
-Completed field-assistant research work in Guatemala.
+Jacob Berv completed field-assistant research work in Guatemala.

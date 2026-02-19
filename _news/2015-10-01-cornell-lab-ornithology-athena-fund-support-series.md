@@ -23,4 +23,4 @@ tags:
 Jacob Berv received recurring Athena Fund support from the Cornell Lab of Ornithology in Fall 2013, Fall 2014, and Fall 2015.
 
 <!--news-excerpt-->
-Received recurring Athena Fund support from the Cornell Lab of Ornithology (2013-2015).
+Jacob Berv received recurring Athena Fund support from the Cornell Lab of Ornithology (2013-2015).

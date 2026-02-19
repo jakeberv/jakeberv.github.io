@@ -23,4 +23,4 @@ tags:
 Jacob Berv completed the University of Michigan Museum of Natural History Science Communication Certificate.
 
 <!--news-excerpt-->
-Completed the U-M Museum of Natural History Science Communication Certificate.
+Jacob Berv completed the U-M Museum of Natural History Science Communication Certificate.

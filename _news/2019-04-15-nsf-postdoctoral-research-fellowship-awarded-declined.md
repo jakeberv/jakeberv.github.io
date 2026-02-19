@@ -21,7 +21,7 @@ tags:
   - award
   - fellowship
 ---
-Jacob Berv was awarded an NSF Postdoctoral Research Fellowship in Biology in Spring 2019 ($207,000) and later declined the award.
+Jacob Berv received an NSF Postdoctoral Research Fellowship in Biology in Spring 2019 ($207,000) and later declined the award.
 
 <!--news-excerpt-->
-Awarded an NSF PRFB in Spring 2019 (awarded and declined).
+Jacob Berv received an NSF PRFB in Spring 2019 and later declined it.

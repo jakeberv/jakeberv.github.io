@@ -23,4 +23,4 @@ tags:
 Jacob Berv won second place in the Yale Globalist Magazine International Photography Contest (Fall 2008) for "Lions in Karongwe."
 
 <!--news-excerpt-->
-Won second place in Yale Globalist's international photography contest.
+Jacob Berv won second place in Yale Globalist's international photography contest.

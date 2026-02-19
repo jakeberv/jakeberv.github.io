@@ -23,4 +23,4 @@ tags:
 Jacob Berv gave an invited talk at the Yale Davenport Mellon Forum on phylogeography and the origin of species in Amazonia.
 
 <!--news-excerpt-->
-Presented invited work at Yale's Davenport Mellon Forum on Amazonian phylogeography.
+Jacob Berv presented invited work at Yale's Davenport Mellon Forum on Amazonian phylogeography.

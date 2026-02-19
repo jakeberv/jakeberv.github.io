@@ -23,4 +23,4 @@ tags:
 Jacob Berv received the Mellon Forum Undergraduate Research Grant in Fall 2009.
 
 <!--news-excerpt-->
-Received Mellon Forum undergraduate research grant support.
+Jacob Berv received Mellon Forum undergraduate research grant support.

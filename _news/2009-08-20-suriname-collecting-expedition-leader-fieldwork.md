@@ -18,4 +18,4 @@ tags:
 Jacob Berv led a collecting expedition in Suriname (Para District) in August 2009 through the Yale Peabody Museum.
 
 <!--news-excerpt-->
-Led a Suriname collecting expedition through the Yale Peabody Museum.
+Jacob Berv led a Suriname collecting expedition through the Yale Peabody Museum.

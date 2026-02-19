@@ -21,7 +21,7 @@ tags:
   - award
   - conference_talk
 ---
-Jacob Berv was a finalist for the Society for the Study of Evolution W.D. Hamilton Award and presented "Post-K/Pg Extinction Lilliput Effect May Influence Avian Molecular Clocks" in the Hamilton symposium at Evolution 2016 (Austin). [Program](https://www.evolutionmeetings.org/uploads/4/8/8/0/48804503/evolution_2016_final_pdf_program.pdf)
+Jacob Berv became a finalist for the Society for the Study of Evolution W.D. Hamilton Award and presented "Post-K/Pg Extinction Lilliput Effect May Influence Avian Molecular Clocks" in the Hamilton symposium at Evolution 2016 (Austin). [Program](https://www.evolutionmeetings.org/uploads/4/8/8/0/48804503/evolution_2016_final_pdf_program.pdf)
 
 <!--news-excerpt-->
-W.D. Hamilton Award finalist at Evolution 2016, presenting on post-K–Pg avian molecular-rate shifts.
+Jacob Berv was a W.D. Hamilton Award finalist at Evolution 2016, presenting on post-K–Pg avian molecular-rate shifts.

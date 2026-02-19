@@ -24,4 +24,4 @@ tags:
 Jacob Berv received the Yale College Dean's Research Fellowship in the Sciences in May 2009.
 
 <!--news-excerpt-->
-Received Yale College Dean's fellowship support for undergraduate research.
+Jacob Berv received Yale College Dean's fellowship support for undergraduate research.

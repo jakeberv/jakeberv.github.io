@@ -24,5 +24,5 @@ tags:
 Jacob Berv received a Society for Molecular Biology and Evolution Young Investigator Travel Award in Spring 2018 to support conference participation.
 
 <!--news-excerpt-->
-Received an SMBE Young Investigator Travel Award in support of 2018 conference travel.
+Jacob Berv received an SMBE Young Investigator Travel Award in support of 2018 conference travel.
 

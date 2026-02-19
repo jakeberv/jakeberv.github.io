@@ -24,4 +24,4 @@ tags:
 Jacob Berv organized and led the spring MIDAS Generative AI tutorial, "Data Analysis: Visualizing and Presenting Data," focused on AI-assisted data-visualization workflows in R. [Event](https://midas.umich.edu/events/data-analysis-visualizing-and-presenting-data-2/)
 
 <!--news-excerpt-->
-Led the spring 2024 MIDAS workshop on AI-assisted data visualization and presentation.
+Jacob Berv led the spring 2024 MIDAS workshop on AI-assisted data visualization and presentation.

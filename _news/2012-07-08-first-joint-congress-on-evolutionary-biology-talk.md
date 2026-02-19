@@ -23,4 +23,4 @@ tags:
 At the First Joint Congress on Evolutionary Biology in Ottawa (July 6-10, 2012), Jacob Berv presented "Emberizoides (Aves: Thraupidae) population genetics reveal novel biogeographic connections across Amazonia." [Program](https://www.evolutionmeetings.org/uploads/4/8/8/0/48804503/2012_program.pdf)
 
 <!--news-excerpt-->
-Presented Emberizoides population-genetics research at Evolution 2012 in Ottawa.
+Jacob Berv presented Emberizoides population-genetics research at Evolution 2012 in Ottawa.

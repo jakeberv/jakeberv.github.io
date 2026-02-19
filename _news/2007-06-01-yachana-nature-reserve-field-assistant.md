@@ -18,4 +18,4 @@ tags:
 Jacob Berv participated as a field assistant at Yachana Nature Reserve in Ecuador (May-June 2007).
 
 <!--news-excerpt-->
-Served as a field assistant at Yachana Nature Reserve in Ecuador.
+Jacob Berv served as a field assistant at Yachana Nature Reserve in Ecuador.

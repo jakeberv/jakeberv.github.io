@@ -23,4 +23,4 @@ tags:
 Jacob Berv received the Orenstein Fund in Summer 2014 in support of doctoral research activities.
 
 <!--news-excerpt-->
-Received Orenstein Fund support during doctoral research in Summer 2014.
+Jacob Berv received Orenstein Fund support during doctoral research in Summer 2014.

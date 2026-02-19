@@ -20,7 +20,7 @@ geo:
 tags:
   - award
 ---
-Jacob Berv was selected as a Schmidt Science Fellows finalist, nominated by Cornell University, in the program's inaugural selection cycle. [Program overview](https://schmidtsciencefellows.org/)
+Cornell University nominated Jacob Berv as a Schmidt Science Fellows finalist in the program's inaugural selection cycle. [Program overview](https://schmidtsciencefellows.org/)
 
 <!--news-excerpt-->
-Named a Schmidt Science Fellows finalist (Cornell nomination) during the inaugural program cycle.
+Jacob Berv was named a Schmidt Science Fellows finalist (Cornell nomination) during the inaugural program cycle.

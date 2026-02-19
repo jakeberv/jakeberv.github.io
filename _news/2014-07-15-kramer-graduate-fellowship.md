@@ -23,4 +23,4 @@ tags:
 Jacob Berv received the Kramer Graduate Fellowship (Cornell Lab of Ornithology Summer Fellowship) in Summer 2014.
 
 <!--news-excerpt-->
-Received the Kramer Graduate Fellowship for summer doctoral research support.
+Jacob Berv received the Kramer Graduate Fellowship for summer doctoral research support.

@@ -23,4 +23,4 @@ tags:
 Jacob Berv received repeated support from the Paul P. Feeny Graduate Student Research Fund (Cornell EEB) across Summer 2014, Summer 2015, Summer 2016, and Summer 2017.
 
 <!--news-excerpt-->
-Received four years of Paul P. Feeny Graduate Student Research Fund support (2014-2017).
+Jacob Berv received four years of Paul P. Feeny Graduate Student Research Fund support (2014-2017).

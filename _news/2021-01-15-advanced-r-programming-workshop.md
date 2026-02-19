@@ -23,4 +23,4 @@ tags:
 Jacob Berv completed Physalia's virtual Advanced R Programming training in January 2021, expanding reproducible software workflows for research. [Physalia](https://www.physalia-courses.org/)
 
 <!--news-excerpt-->
-Completed virtual advanced R programming training through Physalia in January 2021.
+Jacob Berv completed virtual advanced R programming training through Physalia in January 2021.

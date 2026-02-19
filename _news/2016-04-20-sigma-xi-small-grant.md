@@ -23,4 +23,4 @@ tags:
 Jacob Berv received a Sigma-Xi Small Grant in Spring 2016 to support dissertation research.
 
 <!--news-excerpt-->
-Received Sigma-Xi small-grant support for dissertation research.
+Jacob Berv received Sigma-Xi small-grant support for dissertation research.

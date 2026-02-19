@@ -20,7 +20,7 @@ geo:
 tags:
   - award
 ---
-Jacob Berv received an OpenAI for Science award ($2,400) to apply GPT-Pro and other frontier models to computational evolutionary biology workflows. [OpenAI for Science](https://openai.com/science/)
+Jacob Berv received an OpenAI for Science award ($2,400) to apply GPT-Pro and other large language models to computational evolutionary biology workflows. [OpenAI for Science](https://openai.com/science/)
 
 <!--news-excerpt-->
-Received an OpenAI for Science award supporting model-enabled research in computational evolutionary biology.
+Jacob Berv received an OpenAI for Science award supporting model-enabled research in computational evolutionary biology.

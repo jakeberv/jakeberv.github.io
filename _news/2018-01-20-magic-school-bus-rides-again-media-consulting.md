@@ -23,4 +23,4 @@ tags:
 As part of scientific media consulting work (2017-2021), Jacob Berv provided guidance on evolutionary biology and ornithology for *The Magic School Bus Rides Again*.
 
 <!--news-excerpt-->
-Provided scientific consulting on evolution and ornithology for *The Magic School Bus Rides Again*.
+Jacob Berv provided scientific consulting on evolution and ornithology for *The Magic School Bus Rides Again*.

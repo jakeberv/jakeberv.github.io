@@ -23,4 +23,4 @@ tags:
 Jacob Berv gave an invited lecture at SUNY Orange Community College, "Dino-Birds? How modern evolutionary biology has changed our understanding of bird diversity."
 
 <!--news-excerpt-->
-Delivered an invited lecture at SUNY Orange on modern evolutionary biology and bird diversity.
+Jacob Berv delivered an invited lecture at SUNY Orange on modern evolutionary biology and bird diversity.

@@ -23,4 +23,4 @@ tags:
 Jacob Berv completed Physalia's virtual "Deep Learning for Biologists" training in October 2023, expanding practical machine-learning workflows for biological research. [Physalia](https://www.physalia-courses.org/)
 
 <!--news-excerpt-->
-Completed Physalia training in deep learning methods for biology (virtual, October 2023).
+Jacob Berv completed Physalia training in deep learning methods for biology (virtual, October 2023).

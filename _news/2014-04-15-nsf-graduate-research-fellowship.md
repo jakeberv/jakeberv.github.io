@@ -23,4 +23,4 @@ tags:
 Jacob Berv received a National Science Foundation Graduate Research Fellowship (DGE-1650441) in Spring 2014, supporting doctoral research in evolutionary biology.
 
 <!--news-excerpt-->
-Awarded an NSF Graduate Research Fellowship (DGE-1650441) in Spring 2014.
+Jacob Berv received an NSF Graduate Research Fellowship (DGE-1650441) in Spring 2014.

@@ -18,4 +18,4 @@ tags:
 Jacob Berv conducted field research in Brazil on manakin vocalization surveys in July 2015.
 
 <!--news-excerpt-->
-Completed Brazil fieldwork focused on manakin vocalization surveys.
+Jacob Berv completed Brazil fieldwork focused on manakin vocalization surveys.

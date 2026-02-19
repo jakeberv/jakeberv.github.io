@@ -23,4 +23,4 @@ tags:
 At the Geological Society of America 2016 Annual Meeting (Denver, Sept 25-28), Jacob Berv presented "Genomic Signature of the Lilliput Effect Across the K/Pg Extinction" in the session *New Approaches to Phylogenetic Paleobiology*. [Abstract](https://gsa.confex.com/gsa/2016AM/webprogram/Paper287815.html)
 
 <!--news-excerpt-->
-Presented a GSA 2016 symposium talk on genomic signatures of the avian K–Pg Lilliput effect.
+Jacob Berv presented a GSA 2016 symposium talk on genomic signatures of the avian K–Pg Lilliput effect.

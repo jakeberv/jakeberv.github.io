@@ -23,4 +23,4 @@ tags:
 Jacob Berv presented at the 25th International Ornithological Congress (Campos do Jordao, Sao Paulo, Brazil) in August 2010.
 
 <!--news-excerpt-->
-Presented at the 25th International Ornithological Congress in Brazil.
+Jacob Berv presented at the 25th International Ornithological Congress in Brazil.

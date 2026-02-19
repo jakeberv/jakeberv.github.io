@@ -23,5 +23,5 @@ tags:
 Jacob Berv presented at the X Neotropical Ornithological Congress (Manaus, Brazil) on genomic approaches to species delimitation and historical biogeography in the White-crowned Manakin.
 
 <!--news-excerpt-->
-Presented work on genomic species delimitation and biogeography at the X Neotropical Ornithological Congress.
+Jacob Berv presented work on genomic species delimitation and biogeography at the X Neotropical Ornithological Congress.
 

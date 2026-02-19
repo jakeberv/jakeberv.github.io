@@ -23,4 +23,4 @@ tags:
 Jacob Berv received the Alan S. Tetelman Fellowship for Study Abroad in May 2009.
 
 <!--news-excerpt-->
-Received the Alan S. Tetelman Fellowship for study-abroad research support.
+Jacob Berv received the Alan S. Tetelman Fellowship for study-abroad research support.

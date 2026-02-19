@@ -23,4 +23,4 @@ tags:
 Jacob Berv completed a Physalia workshop on Shiny app development in R.
 
 <!--news-excerpt-->
-Completed Physalia training in Shiny app development for research tools.
+Jacob Berv completed Physalia training in Shiny app development for research tools.

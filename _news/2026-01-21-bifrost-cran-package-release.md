@@ -21,7 +21,7 @@ geo:
 tags:
   - software_release
 ---
-The bifrost R package for branch-level evolutionary inference was released on CRAN, with Jacob Berv as lead developer. [Package page](https://cran.r-universe.dev/bifrost)
+Jacob Berv released the bifrost R package for branch-level evolutionary inference on CRAN as lead developer. [Package page](https://cran.r-universe.dev/bifrost)
 
 <!--news-excerpt-->
-bifrost, an R package for branch-level evolutionary inference, was released on CRAN. [Package page](https://cran.r-universe.dev/bifrost)
+The package enables branch-level evolutionary inference workflows in R and is available on CRAN. [Package page](https://cran.r-universe.dev/bifrost)

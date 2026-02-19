@@ -20,7 +20,7 @@ geo:
 tags:
   - award
 ---
-Jacob Berv's photography was featured in *Yale Environmental News* (Winter 2009), including images from summer research at Karongwe Game Reserve.
+Jacob Berv's photography appeared in *Yale Environmental News* (Winter 2009), including images from summer research at Karongwe Game Reserve.
 
 <!--news-excerpt-->
-Received photography feature recognition in *Yale Environmental News* (Winter 2009).
+Jacob Berv received photography feature recognition in *Yale Environmental News* (Winter 2009).

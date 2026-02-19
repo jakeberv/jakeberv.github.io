@@ -23,4 +23,4 @@ tags:
 Jacob Berv co-authored a *Journal of Animal Ecology* paper on latitudinal patterns in *Leucocytozoon* infection probability and phylogenetic diversity in New World birds.
 
 <!--news-excerpt-->
-Co-authored a *Journal of Animal Ecology* study on *Leucocytozoon* infection and diversity gradients.
+Jacob Berv co-authored a *Journal of Animal Ecology* study on *Leucocytozoon* infection and diversity gradients.

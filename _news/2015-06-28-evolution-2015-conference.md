@@ -23,4 +23,4 @@ tags:
 At Evolution 2015 in Guaruja, Brazil, Jacob Berv presented on a comprehensive genomic phylogeny of birds using targeted next-generation sequencing.
 
 <!--news-excerpt-->
-Presented avian phylogeny research at Evolution 2015 in Guaruja, Brazil.
+Jacob Berv presented avian phylogeny research at Evolution 2015 in Guaruja, Brazil.

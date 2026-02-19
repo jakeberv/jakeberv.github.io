@@ -23,4 +23,4 @@ tags:
 Jacob Berv completed the Evolutionary Quantitative Genetics workshop at Friday Harbor Labs in 2017.
 
 <!--news-excerpt-->
-Completed advanced workshop training in evolutionary quantitative genetics at Friday Harbor Labs.
+Jacob Berv completed advanced workshop training in evolutionary quantitative genetics at Friday Harbor Labs.

@@ -23,4 +23,4 @@ tags:
 Jacob Berv and Daniel Field co-authored "Genomic Signature of an Avian Lilliput Effect across the K-Pg Extinction" in *Systematic Biology*. [DOI](https://doi.org/10.1093/sysbio/syx064)
 
 <!--news-excerpt-->
-Published a *Systematic Biology* study on genomic signatures of an avian Lilliput effect across the K–Pg boundary.
+Jacob Berv published a *Systematic Biology* study on genomic signatures of an avian Lilliput effect across the K–Pg boundary.

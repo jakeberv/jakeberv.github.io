@@ -18,4 +18,4 @@ tags:
 Jacob Berv led a collecting expedition in Ecuador in November 2009.
 
 <!--news-excerpt-->
-Led a biological collecting expedition in Ecuador.
+Jacob Berv led a biological collecting expedition in Ecuador.

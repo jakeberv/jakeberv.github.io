@@ -23,4 +23,4 @@ tags:
 Jacob Berv gave an invited talk at Centro Universitario Regional del Litoral Atlantico (La Ceiba, Honduras): "From Genes to Trees."
 
 <!--news-excerpt-->
-Delivered an invited talk in Honduras on linking genetics and evolutionary trees.
+Jacob Berv delivered an invited talk in Honduras on linking genetics and evolutionary trees.

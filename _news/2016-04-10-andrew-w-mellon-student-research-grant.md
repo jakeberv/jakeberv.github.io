@@ -23,4 +23,4 @@ tags:
 Jacob Berv received an Andrew W. Mellon Student Research Grant in Spring 2016.
 
 <!--news-excerpt-->
-Received a second Andrew W. Mellon Student Research Grant in 2016.
+Jacob Berv received a second Andrew W. Mellon Student Research Grant in 2016.

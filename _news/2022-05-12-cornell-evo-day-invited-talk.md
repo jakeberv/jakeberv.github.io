@@ -23,4 +23,4 @@ tags:
 Jacob Berv gave an invited seminar for Cornell University's Department of Ecology and Evolutionary Biology Evo Day 2022.
 
 <!--news-excerpt-->
-Invited seminar delivered at Cornell EEB Evo Day 2022.
+Jacob Berv delivered an invited seminar at Cornell EEB Evo Day 2022.

@@ -23,4 +23,4 @@ tags:
 Jacob Berv completed a Physalia workshop focused on machine learning methods in R.
 
 <!--news-excerpt-->
-Completed Physalia workshop training in machine learning with R.
+Jacob Berv completed Physalia workshop training in machine learning with R.

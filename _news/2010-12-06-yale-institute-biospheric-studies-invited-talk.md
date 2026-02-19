@@ -23,4 +23,4 @@ tags:
 Jacob Berv gave an invited oral presentation at the Yale Institute for Biospheric Studies on Suriname savanna bird phylogeography and radio tracking of cryptic birds.
 
 <!--news-excerpt-->
-Delivered an invited Yale talk on savanna bird phylogeography and radio telemetry methods.
+Jacob Berv delivered an invited Yale talk on savanna bird phylogeography and radio telemetry methods.

@@ -23,4 +23,4 @@ tags:
 Through the University of Michigan Natural History Museum, Jacob Berv delivered virtual evolution presentations to Ann Arbor Public School students during Winter-Spring 2020-2021.
 
 <!--news-excerpt-->
-Delivered K-12 outreach presentations on evolutionary biology for Ann Arbor Public Schools.
+Jacob Berv delivered K-12 outreach presentations on evolutionary biology for Ann Arbor Public Schools.

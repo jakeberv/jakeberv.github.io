@@ -24,4 +24,4 @@ tags:
 Jacob Berv served as a founding team member for Cornell's Graduate Student Preview Weekend (2017-2019), an all-expenses-paid recruitment and mentoring program for underrepresented prospective graduate students.
 
 <!--news-excerpt-->
-Joined the founding team for Cornell's Preview Weekend to support inclusive graduate recruitment and mentorship.
+Jacob Berv joined the founding team for Cornell's Preview Weekend to support inclusive graduate recruitment and mentorship.

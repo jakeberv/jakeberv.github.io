@@ -20,7 +20,7 @@ geo:
 tags:
   - award
 ---
-Jacob Berv's photography was featured in *Natural History Magazine Online* in the piece "Another Tenderfoot."
+Jacob Berv's photography appeared in *Natural History Magazine Online* in the piece "Another Tenderfoot."
 
 <!--news-excerpt-->
-Received photography feature recognition in *Natural History Magazine Online*.
+Jacob Berv received photography feature recognition in *Natural History Magazine Online*.

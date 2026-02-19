@@ -23,4 +23,4 @@ tags:
 Jacob Berv gave a guest lecture in Cornell BioEE3730 (Biodiversity and Biology of Marine Invertebrates) on phylogenetic systematics during his doctoral training at Cornell.
 
 <!--news-excerpt-->
-Delivered a guest lecture on phylogenetic systematics in Cornell BioEE3730.
+Jacob Berv delivered a guest lecture on phylogenetic systematics in Cornell BioEE3730.

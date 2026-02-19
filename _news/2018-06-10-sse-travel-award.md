@@ -24,5 +24,5 @@ tags:
 Jacob Berv received a Society for the Study of Evolution Travel Award in Spring 2018.
 
 <!--news-excerpt-->
-Received an SSE Travel Award supporting participation in Evolution 2018.
+Jacob Berv received an SSE Travel Award supporting participation in Evolution 2018.
 

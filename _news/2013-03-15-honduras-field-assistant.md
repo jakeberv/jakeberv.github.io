@@ -18,4 +18,4 @@ tags:
 Jacob Berv participated in field research in Honduras as a field assistant in March 2013.
 
 <!--news-excerpt-->
-Completed field-assistant research work in Honduras.
+Jacob Berv completed field-assistant research work in Honduras.

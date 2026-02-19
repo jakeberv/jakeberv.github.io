@@ -23,4 +23,4 @@ tags:
 Jacob Berv completed Cornell University's Writing 7101 seminar through the John S. Knight Institute for Writing in the Disciplines (Fall 2013).
 
 <!--news-excerpt-->
-Completed Writing 7101 training on writing pedagogy and course design.
+Jacob Berv completed Writing 7101 training on writing pedagogy and course design.

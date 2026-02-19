@@ -23,4 +23,4 @@ tags:
 Jacob Berv completed a Physalia workshop in comparative genomics methods.
 
 <!--news-excerpt-->
-Completed comparative genomics training through Physalia.
+Jacob Berv completed comparative genomics training through Physalia.

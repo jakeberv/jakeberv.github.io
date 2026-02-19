@@ -20,7 +20,7 @@ geo:
 tags:
   - award
 ---
-A photograph by Jacob Berv was featured as Smithsonian.com Photo of the Day on December 17, 2009.
+Smithsonian.com selected a photograph by Jacob Berv as Photo of the Day on December 17, 2009.
 
 <!--news-excerpt-->
-Received Smithsonian.com Photo of the Day recognition.
+Jacob Berv received Smithsonian.com Photo of the Day recognition.

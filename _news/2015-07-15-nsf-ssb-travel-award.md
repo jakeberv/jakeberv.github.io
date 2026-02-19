@@ -24,4 +24,4 @@ tags:
 Jacob Berv received an NSF-Society of Systematic Biologists Travel Award in Summer 2015.
 
 <!--news-excerpt-->
-Received NSF-SSB travel support for conference participation in 2015.
+Jacob Berv received NSF-SSB travel support for conference participation in 2015.

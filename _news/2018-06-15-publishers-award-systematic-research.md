@@ -23,4 +23,4 @@ tags:
 Jacob Berv received the Oxford University Press Publisher's Award for Excellence in Systematic Research from the Society of Systematic Biologists, recognizing student-led work in *Systematic Biology*. [Award page](https://www.systbio.org/publishers-award.html)
 
 <!--news-excerpt-->
-Received the OUP Publisher's Award for Excellence in Systematic Research (SSB/Systematic Biology).
+Jacob Berv received the OUP Publisher's Award for Excellence in Systematic Research (SSB/Systematic Biology).

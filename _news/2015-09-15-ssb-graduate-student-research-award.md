@@ -23,5 +23,5 @@ tags:
 Jacob Berv received a Society of Systematic Biologists Graduate Student Research Award in Fall 2015.
 
 <!--news-excerpt-->
-Received the SSB Graduate Student Research Award in support of dissertation research.
+Jacob Berv received the SSB Graduate Student Research Award in support of dissertation research.
 

@@ -23,4 +23,4 @@ tags:
 Jacob Berv co-authored "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing," published in *Nature* (online October 7, 2015). [DOI](https://doi.org/10.1038/nature15697)
 
 <!--news-excerpt-->
-Co-authored a landmark *Nature* paper on avian phylogeny using targeted genomic sequencing.
+Jacob Berv co-authored a landmark *Nature* paper on avian phylogeny using targeted genomic sequencing.

@@ -23,4 +23,4 @@ tags:
 At Evolution 2010 in Portland, Oregon, Jacob Berv presented work on the phylogeography of South American savanna birds.
 
 <!--news-excerpt-->
-Presented South American savanna bird phylogeography research at Evolution 2010.
+Jacob Berv presented South American savanna bird phylogeography research at Evolution 2010.

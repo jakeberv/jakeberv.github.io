@@ -23,4 +23,4 @@ tags:
 Jacob Berv joined the Academic Parity Movement in December 2022 as the first representative from Ecology and Evolutionary Biology, contributing to anti-bullying workshop content for researchers facing discrimination and harassment. [Academic Parity Movement](https://paritymovement.org/)
 
 <!--news-excerpt-->
-The role supported anti-bullying advocacy and researcher well-being in higher-education communities.
+He contributed to anti-bullying workshop development and researcher well-being initiatives in higher education.

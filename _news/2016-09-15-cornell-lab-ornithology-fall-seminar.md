@@ -23,4 +23,4 @@ tags:
 Jacob Berv gave an invited fall seminar at the Cornell Lab of Ornithology (Ithaca, NY) in September 2016.
 
 <!--news-excerpt-->
-Delivered an invited fall seminar at the Cornell Lab of Ornithology in 2016.
+Jacob Berv delivered an invited fall seminar at the Cornell Lab of Ornithology in 2016.

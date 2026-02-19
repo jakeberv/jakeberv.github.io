@@ -30,7 +30,7 @@ Jacob Berv's cover article in *Science Advances* examined genomic and life-histo
   <img src="/images/research/science_advances.jpg"
        style="max-height: 250px; width: auto; max-width: 100%; margin-right: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); flex-shrink: 0;" 
        alt="Science Advances cover"/>
-  <p style="font-size: 0.85em; margin: 0; flex-grow: 1; align-self: flex-start; text-align: left;">Published as a cover article in <em>Science Advances</em>, this study examines how avian genomes and life-history traits shifted after the end-Cretaceous (K-Pg) mass extinction. Analyses across exons, introns, untranslated regions, and mitochondrial genomes identified major changes in molecular evolution linked to development, body mass, and metabolic scaling, supporting a central role for the K-Pg event in the early diversification of modern birds.</p>
+  <p style="font-size: 0.85em; margin: 0; flex-grow: 1; align-self: flex-start; text-align: left;">Published as a cover article in <em>Science Advances</em>, this study examines how avian genomes and life-history traits shifted after the end-Cretaceous (K–Pg) mass extinction. Analyses across exons, introns, untranslated regions, and mitochondrial genomes identified major changes in molecular evolution linked to development, body mass, and metabolic scaling, supporting a central role for the K–Pg event in the early diversification of modern birds.</p>
 </div>
 
 <style>

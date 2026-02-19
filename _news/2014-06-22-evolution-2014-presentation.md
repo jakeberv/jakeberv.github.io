@@ -23,4 +23,4 @@ tags:
 At Evolution 2014 in Raleigh (June 20-24), Jacob Berv presented "A Comprehensive Multilocus Phylogeny of the Neotropical Cotingas with Comparative Analysis of Breeding System and Plumage Dimorphism." See the [Program](https://www.evolutionmeetings.org/uploads/4/8/8/0/48804503/2014_program.pdf) and [Abstracts](https://www.evolutionmeetings.org/uploads/4/8/8/0/48804503/abstracts.printing.final.pdf).
 
 <!--news-excerpt-->
-Presented Neotropical cotinga phylogeny research at Evolution 2014 in Raleigh.
+Jacob Berv presented Neotropical cotinga phylogeny research at Evolution 2014 in Raleigh.

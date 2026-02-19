@@ -23,5 +23,5 @@ tags:
 Jacob Berv completed the University of Michigan Center for Research on Learning and Teaching Postdoctoral Short Course on College Teaching in Science and Engineering (Winter 2020).
 
 <!--news-excerpt-->
-Completed UM's postdoctoral short course on evidence-based college teaching in science and engineering.
+Jacob Berv completed UM's postdoctoral short course on evidence-based college teaching in science and engineering.
 

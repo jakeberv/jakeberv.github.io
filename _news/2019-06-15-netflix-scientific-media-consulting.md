@@ -23,4 +23,4 @@ tags:
 Jacob Berv served as a scientific media consultant for Netflix's *The Magic School Bus Rides Again*, advising on evolutionary biology and ornithology.
 
 <!--news-excerpt-->
-Served as a scientific media consultant for Netflix's *The Magic School Bus Rides Again*.
+Jacob Berv served as a scientific media consultant for Netflix's *The Magic School Bus Rides Again*.

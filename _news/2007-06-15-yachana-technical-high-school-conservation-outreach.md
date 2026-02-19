@@ -23,4 +23,4 @@ tags:
 Jacob Berv contributed to team presentations on conservation research at Yachana Technical High School in Napo Province, Ecuador (June 2007).
 
 <!--news-excerpt-->
-Delivered school outreach presentations on conservation research in Ecuador.
+Jacob Berv delivered school outreach presentations on conservation research in Ecuador.

@@ -23,4 +23,4 @@ tags:
 Jacob Berv participated in team outreach presentations on megafauna research at Tzaneen Primary School in Limpopo Province, South Africa (May 2008).
 
 <!--news-excerpt-->
-Contributed to school outreach talks on megafauna research in South Africa.
+Jacob Berv contributed to school outreach talks on megafauna research in South Africa.

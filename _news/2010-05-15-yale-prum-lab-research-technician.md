@@ -23,4 +23,4 @@ tags:
 Jacob Berv began a research technician appointment in the Prum Laboratory at Yale University in May 2010, a role he held through August 2013.
 
 <!--news-excerpt-->
-Began a Yale research technician appointment in the Prum Laboratory (2010-2013).
+Jacob Berv began a Yale research technician appointment in the Prum Laboratory (2010-2013).

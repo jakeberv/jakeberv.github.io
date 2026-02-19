@@ -23,4 +23,4 @@ tags:
 Jacob Berv gave an invited Cornell EEB EvoGroup seminar on the decoupling of breeding system and sexual dimorphism in Neotropical cotingas.
 
 <!--news-excerpt-->
-Invited Cornell EvoGroup seminar on breeding-system and dimorphism evolution in cotingas.
+Jacob Berv gave an invited Cornell EvoGroup seminar on breeding-system and dimorphism evolution in cotingas.

@@ -20,7 +20,7 @@ geo:
 tags:
   - conference_talk
 ---
-Jacob Berv presented at the North American Ornithological Congress in Washington, DC (August 2016) on post K-Pg extinction body-size dynamics and avian molecular clocks.
+Jacob Berv presented at the North American Ornithological Congress in Washington, DC (August 2016) on post K–Pg extinction body-size dynamics and avian molecular clocks.
 
 <!--news-excerpt-->
-Presented research on post K-Pg body-size change and avian molecular clocks at NAOC 2016.
+Jacob Berv presented research on post K–Pg body-size change and avian molecular clocks at NAOC 2016.
