@@ -4,6 +4,11 @@ layout: single-portfolio
 excerpt: "<img src='/images/research/Haeckle-Demonema-header-web.jpg' alt='Haeckle-Demonema'>"
 collection: research
 order_number: 4
+landing_summary: "Integrating anatomy, behavior, life history, and genomic data to study phenotypic evolution through time."
+landing_tags:
+  - Phenotypic Evolution
+  - Sexual Selection
+  - Fossil Reconstruction
 header: 
   og_image: "research/Haeckle-Demonema-header-web.jpg"
 ---

@@ -4,6 +4,11 @@ layout: single-portfolio
 excerpt: "<img src='/images/research/geographie_der_Pflanzen-resized.jpg' alt='Map of Mount Chimborazo in Ecuador. By depicting plant life according to elevation, this map connects disparate climate zones across the globe.'>"
 collection: research
 order_number: 2
+landing_summary: "Continental-scale population genomics and biogeographic inference across Neotropical bird radiations."
+landing_tags:
+  - Neotropics
+  - Population Genomics
+  - Speciation
 header: 
   og_image: "research/geographie_der_Pflanzen-resized.jpg"
 ---

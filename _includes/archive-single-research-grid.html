@@ -5,23 +5,36 @@
 {% else %}
   {% assign title = post.title %}
 {% endif %}
+{% assign title_plain = post.title | strip_html | strip %}
 
 <div class="{{ include.type | default: "grid" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <h2 class="archive__item-title" itemprop="headline">
-      <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-    </h2>
+  <article class="archive__item research-area-card" itemscope itemtype="http://schema.org/CreativeWork">
+    <a class="research-area-card__linkwrap" href="{{ base_path }}{{ post.url }}" rel="permalink" aria-label="Explore {{ title_plain }}">
+      <h2 class="archive__item-title research-area-card__title" itemprop="headline">{{ title }}</h2>
 
-    {% if post.excerpt %}
-      <div class="archive__item-excerpt" itemprop="description">
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">
-          <div class="container">
+      {% if post.excerpt %}
+        <div class="archive__item-excerpt research-area-card__media" itemprop="description">
+          <div class="research-area-card__image-wrap">
             {{ post.excerpt }}
-            <div class="overlay">
-            </div>
           </div>
-        </a>
-      </div>
-    {% endif %}
+        </div>
+      {% endif %}
+
+      {% if post.landing_summary %}
+        <p class="research-area-card__summary">{{ post.landing_summary }}</p>
+      {% endif %}
+
+      {% if post.landing_tags and post.landing_tags.size > 0 %}
+        <p class="research-area-card__tags" aria-label="Research area tags">
+        {% for tag in post.landing_tags %}
+          <span class="research-area-card__tag">{{ tag }}</span>
+        {% endfor %}
+        </p>
+      {% endif %}
+
+      <p class="research-area-card__actions">
+        <span class="research-area-card__link">Explore {{ title_plain }}</span>
+      </p>
+    </a>
   </article>
 </div>

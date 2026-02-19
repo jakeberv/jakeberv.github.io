@@ -4,6 +4,11 @@ layout: single-portfolio
 excerpt: "<img src='/images/research/Yggdrasil-cropped.jpg' alt='Yggdrasil'>"
 collection: research
 order_number: 3
+landing_summary: "Linking macroevolutionary dynamics to ecological filtering, extinction events, and simulation-based model evaluation."
+landing_tags:
+  - Diversification
+  - Macroevolution
+  - Simulation
 header: 
   og_image: "research/Yggdrasil-cropped.jpg"
 ---

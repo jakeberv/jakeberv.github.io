@@ -4,6 +4,11 @@ layout: single-portfolio
 excerpt: "<img src='/images/research/haeckel_humm.jpg' alt='Ernst Haeckel Hummingbirds Plate #99'>"
 collection: research
 order_number: 1
+landing_summary: "Testing deep-time hypotheses with phylogenomic inference, molecular models, and fossil-calibrated timescales."
+landing_tags:
+  - Phylogenomics
+  - Molecular Evolution
+  - Deep Time
 header:
   og_image: "research/haeckel_humm.jpg"
 ---
