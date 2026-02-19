@@ -1347,20 +1347,712 @@
 }
 
 /* ==========================================================================
-   Research page: phylo-history embeds
-   Safe: only targets .phylo-history-iframe and .phylo-history-embed
+   Research subpage: Phylogeny (/research/phylo-history/)
+   Safe: only targets .phylo-history-page and related embed classes
    ========================================================================== */
 
-/* Hide embeds on small screens (matches prior behavior on that page) */
+.phylo-history-page {
+  max-width: 72ch;
+  color: #31363f;
+  font-size: 1rem;
+}
+
+.phylo-history-page h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin: 1.15rem 0 0.52rem;
+  font-size: 1.18rem;
+  line-height: 1.22;
+}
+
+.phylo-history-page .phylo-lede {
+  margin: 0.65rem 0 0.78rem;
+  line-height: 1.58;
+}
+
+.phylo-history-page .phylo-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.36rem 0.48rem;
+  align-items: center;
+  margin: 0 0 1rem;
+  padding: 0.45rem 0.5rem;
+  border: 1px solid #dde3eb;
+  border-radius: 999px;
+  background: #f8fafd;
+  font-size: 0.82rem;
+}
+
+.phylo-history-page .phylo-jump__label {
+  color: #5d6775;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-right: 0.15rem;
+}
+
+.phylo-history-page .phylo-jump a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.phylo-history-page .phylo-jump a:hover {
+  border-bottom-color: currentColor;
+}
+
+.phylo-history-page .phylo-module {
+  margin: 0 0 1.18rem;
+  padding: 0.9rem 0.95rem 0.78rem;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.04);
+  scroll-margin-top: 96px;
+}
+
+.phylo-history-page .phylo-module > p {
+  margin: 0 0 0.72rem;
+  line-height: 1.56;
+}
+
+.phylo-history-page .phylo-figure {
+  margin: 0.52rem 0 0.62rem;
+}
+
+.phylo-history-page .phylo-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #dfe6ee;
+  border-radius: 10px;
+}
+
+.phylo-history-page .phylo-figure--hero img {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.phylo-history-page .phylo-figure figcaption {
+  margin-top: 0.46rem;
+  font-size: 0.86rem;
+  line-height: 1.36;
+  color: #5a6674;
+}
+
+.phylo-history-page .phylo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.46rem;
+  margin: 0.52rem 0 0.65rem;
+}
+
+.phylo-history-page .btn--research {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.24rem 0.52rem;
+  border: 1px solid #8fa3b7;
+  border-radius: 999px;
+  background: #f7fbff;
+  color: #235f85;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none !important;
+}
+
+.phylo-history-page .btn--research:hover {
+  color: #1a4f73 !important;
+  border-color: #5f809b;
+  background: #eaf3fb;
+}
+
+.phylo-history-page .phylo-actions--return {
+  margin-top: 0.95rem;
+}
+
+.phylo-history-page .phylo-disclosure {
+  margin: 0.58rem 0 0.16rem;
+}
+
+.phylo-history-page .phylo-disclosure > summary {
+  cursor: pointer;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #245b7f;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+}
+
+.phylo-history-page .phylo-disclosure > summary::-webkit-details-marker {
+  display: none;
+}
+
+.phylo-history-page .phylo-disclosure > summary::before {
+  content: "▸";
+  color: #5f7f9a;
+}
+
+.phylo-history-page .phylo-disclosure[open] > summary::before {
+  content: "▾";
+}
+
+.phylo-history-page .phylo-embed-wrap {
+  margin-top: 0.5rem;
+  overflow: auto;
+}
+
+.phylo-history-page .phylo-embed-note {
+  margin: 0.45rem 0 0;
+  font-size: 0.82rem;
+  color: #5f6774;
+}
+
+/* Hide heavy embeds on small screens; surface direct links in notes */
 @media (max-width: 768px) {
   .phylo-history-iframe { display: none; }
   .phylo-history-embed { display: none; }
 }
 
-/* Show embeds on larger screens */
 @media (min-width: 769px) {
   .phylo-history-iframe { width: 100%; display: block; }
   .phylo-history-embed { width: 100%; display: block; }
+}
+
+@media (max-width: 760px) {
+  .phylo-history-page .phylo-module {
+    padding: 0.76rem 0.82rem 0.7rem;
+  }
+
+  .phylo-history-page .phylo-jump {
+    border-radius: 13px;
+    padding: 0.46rem 0.52rem;
+  }
+
+  .phylo-history-page .phylo-actions {
+    gap: 0.32rem 0.42rem;
+  }
+}
+
+/* ==========================================================================
+   Research subpage: Biogeography (/research/neotropical_biogeo/)
+   Safe: only targets .neotropical-biogeo-page
+   ========================================================================== */
+
+.neotropical-biogeo-page {
+  max-width: 72ch;
+  color: #31363f;
+  font-size: 1rem;
+}
+
+.neotropical-biogeo-page h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin: 1.15rem 0 0.52rem;
+  font-size: 1.18rem;
+  line-height: 1.22;
+}
+
+.neotropical-biogeo-page .biogeo-lede {
+  margin: 0.65rem 0 0.78rem;
+  line-height: 1.58;
+}
+
+.neotropical-biogeo-page .biogeo-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.36rem 0.48rem;
+  align-items: center;
+  margin: 0 0 1rem;
+  padding: 0.45rem 0.5rem;
+  border: 1px solid #dde3eb;
+  border-radius: 999px;
+  background: #f8fafd;
+  font-size: 0.82rem;
+}
+
+.neotropical-biogeo-page .biogeo-jump__label {
+  color: #5d6775;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-right: 0.15rem;
+}
+
+.neotropical-biogeo-page .biogeo-jump a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.neotropical-biogeo-page .biogeo-jump a:hover {
+  border-bottom-color: currentColor;
+}
+
+.neotropical-biogeo-page .biogeo-module {
+  margin: 0 0 1.18rem;
+  padding: 0.9rem 0.95rem 0.78rem;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.04);
+  scroll-margin-top: 96px;
+}
+
+.neotropical-biogeo-page .biogeo-module > p {
+  margin: 0 0 0.72rem;
+  line-height: 1.56;
+}
+
+.neotropical-biogeo-page .biogeo-figure {
+  margin: 0.52rem 0 0.62rem;
+}
+
+.neotropical-biogeo-page .biogeo-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #dfe6ee;
+  border-radius: 10px;
+}
+
+.neotropical-biogeo-page .biogeo-figure--hero img {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.neotropical-biogeo-page .biogeo-figure figcaption {
+  margin-top: 0.46rem;
+  font-size: 0.86rem;
+  line-height: 1.36;
+  color: #5a6674;
+}
+
+.neotropical-biogeo-page .biogeo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.46rem;
+  margin: 0.52rem 0 0.65rem;
+}
+
+.neotropical-biogeo-page .btn--research {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.24rem 0.52rem;
+  border: 1px solid #8fa3b7;
+  border-radius: 999px;
+  background: #f7fbff;
+  color: #235f85;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none !important;
+}
+
+.neotropical-biogeo-page .btn--research:hover {
+  color: #1a4f73 !important;
+  border-color: #5f809b;
+  background: #eaf3fb;
+}
+
+.neotropical-biogeo-page .biogeo-actions--return {
+  margin-top: 0.95rem;
+}
+
+.neotropical-biogeo-page .biogeo-note {
+  margin: 0.28rem 0 0.1rem;
+  font-size: 0.9rem;
+  color: #5e6976;
+}
+
+@media (max-width: 760px) {
+  .neotropical-biogeo-page .biogeo-module {
+    padding: 0.76rem 0.82rem 0.7rem;
+  }
+
+  .neotropical-biogeo-page .biogeo-jump {
+    border-radius: 13px;
+    padding: 0.46rem 0.52rem;
+  }
+
+  .neotropical-biogeo-page .biogeo-actions {
+    gap: 0.32rem 0.42rem;
+  }
+}
+
+/* ==========================================================================
+   Research subpage: Diversification (/research/phylo-methods/)
+   Safe: only targets .phylo-methods-page
+   ========================================================================== */
+
+.phylo-methods-page {
+  max-width: 72ch;
+  color: #31363f;
+  font-size: 1rem;
+}
+
+.phylo-methods-page h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin: 1.15rem 0 0.52rem;
+  font-size: 1.18rem;
+  line-height: 1.22;
+}
+
+.phylo-methods-page .methods-lede {
+  margin: 0.65rem 0 0.78rem;
+  line-height: 1.58;
+}
+
+.phylo-methods-page .methods-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.36rem 0.48rem;
+  align-items: center;
+  margin: 0 0 1rem;
+  padding: 0.45rem 0.5rem;
+  border: 1px solid #dde3eb;
+  border-radius: 999px;
+  background: #f8fafd;
+  font-size: 0.82rem;
+}
+
+.phylo-methods-page .methods-jump__label {
+  color: #5d6775;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-right: 0.15rem;
+}
+
+.phylo-methods-page .methods-jump a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.phylo-methods-page .methods-jump a:hover {
+  border-bottom-color: currentColor;
+}
+
+.phylo-methods-page .methods-module {
+  margin: 0 0 1.18rem;
+  padding: 0.9rem 0.95rem 0.78rem;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.04);
+  scroll-margin-top: 96px;
+}
+
+.phylo-methods-page .methods-module > p {
+  margin: 0 0 0.72rem;
+  line-height: 1.56;
+}
+
+.phylo-methods-page .methods-figure {
+  margin: 0.52rem 0 0.62rem;
+}
+
+.phylo-methods-page .methods-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #dfe6ee;
+  border-radius: 10px;
+}
+
+.phylo-methods-page .methods-figure--hero img {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.phylo-methods-page .methods-figure--narrow {
+  max-width: 35rem;
+}
+
+.phylo-methods-page .methods-figure figcaption {
+  margin-top: 0.46rem;
+  font-size: 0.86rem;
+  line-height: 1.36;
+  color: #5a6674;
+}
+
+.phylo-methods-page .methods-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.46rem;
+  margin: 0.52rem 0 0.65rem;
+}
+
+.phylo-methods-page .btn--research {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.24rem 0.52rem;
+  border: 1px solid #8fa3b7;
+  border-radius: 999px;
+  background: #f7fbff;
+  color: #235f85;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none !important;
+}
+
+.phylo-methods-page .btn--research:hover {
+  color: #1a4f73 !important;
+  border-color: #5f809b;
+  background: #eaf3fb;
+}
+
+.phylo-methods-page .methods-actions--return {
+  margin-top: 0.95rem;
+}
+
+.phylo-methods-page .methods-disclosure {
+  margin: 0.58rem 0 0.16rem;
+}
+
+.phylo-methods-page .methods-disclosure > summary {
+  cursor: pointer;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #245b7f;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+}
+
+.phylo-methods-page .methods-disclosure > summary::-webkit-details-marker {
+  display: none;
+}
+
+.phylo-methods-page .methods-disclosure > summary::before {
+  content: "▸";
+  color: #5f7f9a;
+}
+
+.phylo-methods-page .methods-disclosure[open] > summary::before {
+  content: "▾";
+}
+
+.phylo-methods-page .methods-embed-wrap {
+  margin-top: 0.5rem;
+  overflow: auto;
+}
+
+.phylo-methods-page .methods-embed-note {
+  margin: 0.45rem 0 0;
+  font-size: 0.82rem;
+  color: #5f6774;
+}
+
+@media (max-width: 760px) {
+  .phylo-methods-page .methods-module {
+    padding: 0.76rem 0.82rem 0.7rem;
+  }
+
+  .phylo-methods-page .methods-jump {
+    border-radius: 13px;
+    padding: 0.46rem 0.52rem;
+  }
+
+  .phylo-methods-page .methods-actions {
+    gap: 0.32rem 0.42rem;
+  }
+}
+
+/* ==========================================================================
+   Research subpage: Phenotype (/research/phenotype/)
+   Safe: only targets .phenotype-page
+   ========================================================================== */
+
+.phenotype-page {
+  max-width: 72ch;
+  color: #31363f;
+  font-size: 1rem;
+}
+
+.phenotype-page h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin: 1.15rem 0 0.52rem;
+  font-size: 1.18rem;
+  line-height: 1.22;
+}
+
+.phenotype-page h3 {
+  margin: 0.4rem 0 0.45rem;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.phenotype-page .phenotype-lede {
+  margin: 0.65rem 0 0.78rem;
+  line-height: 1.58;
+}
+
+.phenotype-page .phenotype-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.36rem 0.48rem;
+  align-items: center;
+  margin: 0 0 1rem;
+  padding: 0.45rem 0.5rem;
+  border: 1px solid #dde3eb;
+  border-radius: 999px;
+  background: #f8fafd;
+  font-size: 0.82rem;
+}
+
+.phenotype-page .phenotype-jump__label {
+  color: #5d6775;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-right: 0.15rem;
+}
+
+.phenotype-page .phenotype-jump a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.phenotype-page .phenotype-jump a:hover {
+  border-bottom-color: currentColor;
+}
+
+.phenotype-page .phenotype-module {
+  margin: 0 0 1.18rem;
+  padding: 0.9rem 0.95rem 0.78rem;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.04);
+  scroll-margin-top: 96px;
+}
+
+.phenotype-page .phenotype-module > p {
+  margin: 0 0 0.72rem;
+  line-height: 1.56;
+}
+
+.phenotype-page .phenotype-keypoints {
+  margin: 0.18rem 0 0.72rem 1.1rem;
+}
+
+.phenotype-page .phenotype-keypoints li {
+  margin: 0 0 0.34rem;
+  line-height: 1.52;
+}
+
+.phenotype-page .phenotype-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+  gap: 0.72rem 0.9rem;
+  align-items: start;
+  margin-top: 0.4rem;
+}
+
+.phenotype-page .phenotype-copy p {
+  margin: 0 0 0.66rem;
+  line-height: 1.54;
+}
+
+.phenotype-page .phenotype-figure {
+  margin: 0.52rem 0 0.62rem;
+}
+
+.phenotype-page .phenotype-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #dfe6ee;
+  border-radius: 10px;
+}
+
+.phenotype-page .phenotype-figure--hero img {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.phenotype-page .phenotype-figure--narrow {
+  max-width: 36rem;
+}
+
+.phenotype-page .phenotype-figure figcaption {
+  margin-top: 0.46rem;
+  font-size: 0.86rem;
+  line-height: 1.36;
+  color: #5a6674;
+}
+
+.phenotype-page .phenotype-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.46rem;
+  margin: 0.52rem 0 0.65rem;
+}
+
+.phenotype-page .btn--research {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.24rem 0.52rem;
+  border: 1px solid #8fa3b7;
+  border-radius: 999px;
+  background: #f7fbff;
+  color: #235f85;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none !important;
+}
+
+.phenotype-page .btn--research:hover {
+  color: #1a4f73 !important;
+  border-color: #5f809b;
+  background: #eaf3fb;
+}
+
+.phenotype-page .phenotype-actions--return {
+  margin-top: 0.95rem;
+}
+
+.phenotype-page .phenotype-note {
+  margin: 0.22rem 0 0.12rem;
+  color: #5e6976;
+}
+
+@media (max-width: 760px) {
+  .phenotype-page .phenotype-module {
+    padding: 0.76rem 0.82rem 0.7rem;
+  }
+
+  .phenotype-page .phenotype-jump {
+    border-radius: 13px;
+    padding: 0.46rem 0.52rem;
+  }
+
+  .phenotype-page .phenotype-split {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+  }
+
+  .phenotype-page .phenotype-actions {
+    gap: 0.32rem 0.42rem;
+  }
 }
 
 /* ==========================================================================

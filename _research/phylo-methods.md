@@ -13,60 +13,90 @@ header:
   og_image: "research/Yggdrasil-cropped.jpg"
 ---
 
-<figure>
-  <img src="/images/research/swans-reflecting-elephants.jpg" alt="Swans Reflecting Elephants by Salvador Dalí"/>
-  <figcaption> Swans Reflecting Elephants, Dalí 1937. A "spontaneous method of irrational understanding based upon the interpretative critical association of delirious phenomena."</figcaption>
+<div class="phylo-methods-page">
+
+<figure class="methods-figure methods-figure--hero">
+  <img src="/images/research/swans-reflecting-elephants.jpg" alt="Swans Reflecting Elephants by Salvador Dali" />
+  <figcaption><em>Swans Reflecting Elephants</em> (Dalí, 1937), described by the artist as a spontaneous method of irrational understanding through critical association.</figcaption>
 </figure>
 
-"Diversification" refers to the process by which a single ancestral species gives rise to a variety of descendant species that differ from each other in morphology, behavior, and/or other traits. This process is often driven by natural selection, which favors genetic variation that confer advantages in a particular environment. Bursts of diversification are often associated with major evolutionary innovations, such as the development of new morphological structures or ecological adaptations, that allow organisms to exploit new niches and environments.
+<p class="methods-lede">Diversification describes how a single ancestral lineage gives rise to multiple descendant species that differ in morphology, behavior, and ecology. In my work, this process is studied at the intersection of ecological filtering, macroevolutionary dynamics, and statistical model behavior.</p>
 
-## The intersection between Macroecology and Macroevolution
+<nav class="methods-jump" aria-label="Jump to section">
+  <span class="methods-jump__label">On this page</span>
+  <a href="#methods-macroecology">Macroecology + Macroevolution</a>
+  <a href="#methods-comparative">Comparative Extensions</a>
+  <a href="#methods-simulation">Simulation Modeling</a>
+</nav>
 
-Global paleobotanical and palynological data show that the K-Pg Chicxulub impact triggered widespread destruction of forests. In a paper we [published in Current Biology](https://doi.org/10.1016/j.cub.2018.04.062), my co-authors and I suggest that ecological filtering due to the loss of plant cover across the K-Pg boundary selected against any animals committed to arboreal ecologies, resulting in a predominantly non-arboreal post- extinction fauna. Mesozoic adaptation to arboreality thus predicts macroecological patterns of Cenozoic diversification. [Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Field_et_al_2018.pdf){: .btn--research}
+<section id="methods-macroecology" class="methods-module">
+  <h2>The Intersection of Macroecology and Macroevolution</h2>
 
-My first paper on this topic focused on the potential impact of ecological filtering on arboreal birds in the Mesozoic. Cover illustration prepared by paleoartist Phillip Krzeminski.
+  <p>Global paleobotanical and palynological records indicate that the K-Pg Chicxulub impact triggered widespread forest collapse. In <a href="https://doi.org/10.1016/j.cub.2018.04.062">Field et al. 2018, <em>Current Biology</em></a>, we proposed that this ecological disruption filtered against strongly arboreal lineages, producing a predominantly non-arboreal post-extinction fauna. Under this framework, Mesozoic adaptation to arboreality predicts macroecological patterns of Cenozoic diversification.</p>
 
-<div style="overflow: auto;">
-  <iframe
-    class="phylo-methods-iframe"
-    src="/files/pdf/research/curbio_28_11_3c.pdf"
-    width="100%"
-    height="500"
-    frameborder="no"
-    border="0"
-    marginwidth="0"
-    marginheight="0"
-    title="Poster PDF">
-  </iframe>
-</div>
+  <p class="methods-actions">
+    <a class="btn--research" href="https://doi.org/10.1016/j.cub.2018.04.062">Read in Current Biology</a>
+    <a class="btn--research" href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Field_et_al_2018.pdf">Download Paper</a>
+  </p>
 
-[Artwork by Phillip Krzeminski](https://www.phillipmk.com/){: .btn--research}[Download Poster](/files/pdf/research/curbio_28_11_3c.pdf){: .btn--research}
+  <p>My first paper on this topic focused on ecological filtering in Mesozoic arboreal birds; cover art was prepared by paleoartist Phillip Krzeminski.</p>
 
----
+  <details class="methods-disclosure">
+    <summary>View poster inline</summary>
+    <div class="methods-embed-wrap">
+      <iframe
+        class="phylo-methods-iframe"
+        src="/files/pdf/research/curbio_28_11_3c.pdf"
+        width="100%"
+        height="500"
+        frameborder="no"
+        border="0"
+        marginwidth="0"
+        marginheight="0"
+        title="Current Biology poster PDF">
+      </iframe>
+    </div>
+    <p class="methods-embed-note">On mobile, use <a href="/files/pdf/research/curbio_28_11_3c.pdf">this direct poster link</a>.</p>
+  </details>
 
-<div style="display: flex;">
-  <div style="width: 60%; margin-right: 1em;">
+  <p class="methods-actions">
+    <a class="btn--research" href="https://www.phillipmk.com/">Artwork by Phillip Krzeminski</a>
+    <a class="btn--research" href="/files/pdf/research/curbio_28_11_3c.pdf">Download Poster</a>
+  </p>
+</section>
+
+<section id="methods-comparative" class="methods-module">
+  <h2>Comparative Extensions</h2>
+
+  <figure class="methods-figure methods-figure--narrow">
     <a href="https://doi.org/10.1002/ece3.8114">
-      <img src="/images/research/ece38114-fig-0003-m.jpg" width="100%" style="display: block;"/>
+      <img src="/images/research/ece38114-fig-0003-m.jpg" alt="Transition frequency through time in mammals" />
     </a>
-    <figcaption style="text-align: left;">Transition frequency through time</figcaption>
-  </div>
-  <div style="flex: 1; display: flex; flex-direction: column;">
-    <p style="margin-top: 0; align-self: flex-start;">We later investigated the same hypothesis in <a href="https://onlinelibrary.wiley.com/doi/10.1002/ece3.8114">mammals</a> and discovered similar, albeit somewhat more ambiguous patterns. As part of this work, I developed a new tool for analyzing ancestral state transitions from stochastic character maps</p>
-  </div>
+    <figcaption>Transition frequency through time.</figcaption>
+  </figure>
+
+  <p>We later evaluated the same hypothesis in <a href="https://onlinelibrary.wiley.com/doi/10.1002/ece3.8114">mammals</a> and found similar, though more ambiguous, patterns. As part of that study, I developed tools for analyzing ancestral-state transitions from stochastic character maps.</p>
+
+  <p class="methods-actions">
+    <a class="btn--research" href="https://github.com/jakeberv/mammal_arboreality">GitHub Repo</a>
+    <a class="btn--research" href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Hughes_et_al_2021.pdf">Download Paper</a>
+  </p>
+
+  <p>I am currently extending these questions to Cenozoic diversification in frogs.</p>
+</section>
+
+<section id="methods-simulation" class="methods-module">
+  <h2>Modeling Diversification Through Simulation</h2>
+
+  <p>Statistical models of speciation and extinction have transformed macroevolutionary inference, but model assumptions can also drive misleading conclusions. In ongoing work, I use simulations to test when diversification models may infer predetermined outcomes under biologically unrealistic scenarios, particularly when time-heterogeneous molecular evolution is ignored. These analyses indicate that some broad global patterns reported across taxa may be methodological artifacts.</p>
+
+  <p class="methods-actions">
+    <a class="btn--research" href="https://bit.ly/berv_umich_2021">2021 Seminar Recording</a>
+  </p>
+</section>
+
+<p class="methods-actions methods-actions--return">
+  <a class="btn--research" href="https://www.jakeberv.com/research">Return to Research Home</a>
+</p>
+
 </div>
-<div style="text-align: left;">
-<a href="https://github.com/jakeberv/mammal_arboreality" class="btn--research">Github repo</a><a href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Hughes_et_al_2021.pdf" class="btn--research">Download Paper</a>
-</div>
-
-I am currently examining these patterns across the Cenozoic diversification of frogs.
-
----
-
-## Modeling diversification through simulation
-
-The application of statistical models to the study of speciation and extinction has revolutionized our understanding of macroevolutionary history. Recently, several studies have reported inverse latitudinal gradients in speciation rates, contrary to predictions from ecological theory, which posits that the latitudinal diversity gradient derives from increased speciation toward the tropics. In research currently in final prep, I investigated these global patterns using simulations to study whether and when the models commonly used to study patterns of diversification may provide misleading results. I have focused on identifying scenarios where a lack of biological realism concerning time-heterogeneous patterns of molecular evolution can drive pre-determined outcomes in statistical analyses of lineage diversification. Incorporating increased biological realism into these models, I show that global patterns reported in the literature across many taxonomic groups may be statistical artifacts.
-[2021 Seminar recording](https://bit.ly/berv_umich_2021){: .btn--research}
-
----
-[Return to Research Home](https://www.jakeberv.com/research){: .btn--research}

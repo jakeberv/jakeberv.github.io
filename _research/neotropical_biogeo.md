@@ -13,29 +13,66 @@ header:
   og_image: "research/geographie_der_Pflanzen-resized.jpg"
 ---
 
-<figure>
-  <img src="/images/research/biogeography-bands.jpeg" alt="Physical Tableau of mountain ranges showing elevation bands in vegetation and characteristics of the physical environment in the Andes, Tenerife, the Himalayas, the Alps and Lappland (Berghaus, 1892)"/>
-  <figcaption> Physical Tableau of mountain ranges showing elevation bands in vegetation and characteristics of the physical environment in the Andes, Tenerife, the Himalayas, the Alps and Lappland (Berghaus, 1892) </figcaption>
+<div class="neotropical-biogeo-page">
+
+<figure class="biogeo-figure biogeo-figure--hero">
+  <img src="/images/research/biogeography-bands.jpeg" alt="Physical tableau showing elevation bands in vegetation and environmental features across multiple mountain ranges." />
+  <figcaption>Physical tableau of mountain ranges showing elevational structure in vegetation and abiotic conditions across the Andes, Tenerife, Himalayas, Alps, and Lappland (Berghaus, 1892).</figcaption>
 </figure>
 
-[Biogeography](https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.13616) is the study of evolution across geographic space. Although much of my recent work pertains to broad-scale evolutionary phenomena operating across geologic time, I also manage a parallel research track focused on more recent timescales. The most significant of these interests relates to the biogeography and evolution of neotropical suboscine passerines, a species-rich group of modern birds representing ~10% of living bird diversity.
+<p class="biogeo-lede"><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.13616">Biogeography</a> is the study of evolution across geographic space. Alongside my broad-scale work on deep-time evolution, I lead a parallel research program focused on recent diversification in Neotropical suboscine passerines, a clade representing roughly 10% of living bird diversity.</p>
 
-## Continental-scale Population Genomics
+<nav class="biogeo-jump" aria-label="Jump to section">
+  <span class="biogeo-jump__label">On this page</span>
+  <a href="#biogeo-popgen">Population Genomics</a>
+  <a href="#biogeo-barriers">Spatial Barriers</a>
+  <a href="#biogeo-collab">Collaboration</a>
+</nav>
 
-<a href="https://www.sciencedirect.com/science/article/pii/S105579032100138X?via%3Dihub#:~:text=Fig.%201.,of%20this%20figure."><img src="/images/research/Figure1_optimized_twitter.jpeg" width="85%" style="display: block; margin: 0 auto;"/></a>
+<section id="biogeo-popgen" class="biogeo-module">
+  <h2>Continental-Scale Population Genomics</h2>
 
-Recently, I published results from a project representing a decade-long international collaboration investigating the cryptic species complex Pseudopipra pipra (Berv et al. 2021, Molecular Phylogenetics and Evolution). Pseudopipra is a genus of small, charismatic suboscine birds  that is found across various dispersal barriers, including elevational gradients of the Andes, major Amazonian rivers, the open habitat Cerrado, tepuis, and the Isthmus of Panama. As such, this group is well suited for assessing patterns of phylogenomic differentiation across a nested set of spatial scales in Neotropical forests. 
-<a href="https://www.sciencedirect.com/science/article/pii/S105579032100138X?via%3Dihub#:~:text=Fig.%203.,)%20R%20packages."><img src="/images/research/Figure3_optimized.png" width="85%" style="display: block; margin: 0 auto;"/></a>
+  <p>This project represents a decade-long international collaboration investigating the cryptic species complex <em>Pseudopipra pipra</em> (<a href="https://doi.org/10.1016/j.ympev.2021.107085">Berv et al. 2021, <em>Molecular Phylogenetics and Evolution</em></a>).</p>
 
-Our study applied short-read sequencing technology to generate thousands of genetic markers from a continental-scale sample of ~300 individual birds. The technique applied, combined with our phylogenetic experimental design, allowed us to interrogate several hypotheses about the origins of biodiversity in the Amazonian and Andean regions of the Neotropics. Our principal conclusion supports the hypothesis that the Andes mountains have acted as a “species pump” for some taxa – contributing to the hyper-diverse communities inhabiting these ecosystems. Currently, we are generating a chromosome assembly with PacBio HiFi, Hi-C, and optical mapping for future investigations of speciation dynamics in this system.
+  <p class="biogeo-actions">
+    <a class="btn--research" href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_et_al_2021.pdf">Download Paper</a>
+    <a class="btn--research" href="https://youtu.be/SUS-nMTYYeg">2020 AOS Conference Talk</a>
+    <a class="btn--research" href="https://beta.nsf.gov/news/more-bird-species-tropics-previously-thought">Press Coverage (NSF)</a>
+  </p>
 
-[Download Paper](https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_et_al_2021.pdf){: .btn--research}[2020 AOS Conference Talk](https://youtu.be/SUS-nMTYYeg){: .btn--research}
+  <figure class="biogeo-figure biogeo-figure--wide">
+    <a href="https://www.sciencedirect.com/science/article/pii/S105579032100138X?via%3Dihub#:~:text=Fig.%201.,of%20this%20figure.">
+      <img src="/images/research/Figure1_optimized_twitter.jpeg" alt="Sampling map and genomic design for Pseudopipra population genomics." />
+    </a>
+  </figure>
 
-My investigations of Pseudopipra have required close collaboration with scientists at the [Instituto Nacional de Pesquisas da Amazônia](https://www.gov.br/inpa/pt-br) (INPA) in Manaus, Brazil. As we emerge from COVID-19, I hope to re-invigorate these relationships and resume field studies and specimen collection efforts with students from my home institution.
+  <p>Our study applied short-read sequencing to generate thousands of markers from a continental dataset of approximately 300 individuals, enabling direct tests of hypotheses about Amazonian and Andean biodiversity assembly.</p>
 
-[Press coverage from NSF](https://beta.nsf.gov/news/more-bird-species-tropics-previously-thought)
+  <figure class="biogeo-figure biogeo-figure--wide">
+    <a href="https://www.sciencedirect.com/science/article/pii/S105579032100138X?via%3Dihub#:~:text=Fig.%203.,)%20R%20packages.">
+      <img src="/images/research/Figure3_optimized.png" alt="Population structure and phylogenomic differentiation across Pseudopipra lineages." />
+    </a>
+  </figure>
+</section>
 
-Field work photos coming soon.
+<section id="biogeo-barriers" class="biogeo-module">
+  <h2>Spatial Barriers and Speciation Dynamics</h2>
 
----
-[Return to Research Home](https://www.jakeberv.com/research){: .btn--research}
+  <p><em>Pseudopipra</em> lineages occur across multiple dispersal barriers, including elevational gradients in the Andes, major Amazonian rivers, the Cerrado, tepuis, and the Isthmus of Panama. This geographic structure makes the system unusually informative for testing how barriers at different scales shape divergence.</p>
+
+  <p>Our principal result supports the hypothesis that Andean uplift and mountain-associated environmental heterogeneity can act as a species pump for some Neotropical taxa, contributing to exceptionally high regional diversity.</p>
+</section>
+
+<section id="biogeo-collab" class="biogeo-module">
+  <h2>Collaboration and Ongoing Work</h2>
+
+  <p>This research depends on close collaboration with colleagues at the <a href="https://www.gov.br/inpa/pt-br">Instituto Nacional de Pesquisas da Amazônia (INPA)</a> in Manaus, Brazil. Current work includes chromosome-scale assembly development using PacBio HiFi, Hi-C, and optical mapping to support future analyses of speciation dynamics.</p>
+
+  <p class="biogeo-note">Fieldwork image updates for this project are in progress.</p>
+</section>
+
+<p class="biogeo-actions biogeo-actions--return">
+  <a class="btn--research" href="https://www.jakeberv.com/research">Return to Research Home</a>
+</p>
+
+</div>
