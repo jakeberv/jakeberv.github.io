@@ -48,6 +48,43 @@ Optional:
 
 By default, local preview skips geo/impact data regeneration and uses Jekyll incremental builds for faster iteration. If incremental fails, the script automatically retries once with a full rebuild.
 
+## UI Experiment Note (Sidebar Rail)
+
+Documented for future iteration; not enabled in current site CSS.
+
+Goal: color the entire fixed left rail on desktop while keeping the top masthead white.
+
+Approach that worked in preview:
+
+```css
+@media (min-width: 57.8125em) {
+  body {
+    --left-rail-w: calc(50vw - 294.5px);
+    background-image: linear-gradient(
+      to right,
+      #eef3f8 0,
+      #eef3f8 var(--left-rail-w),
+      transparent var(--left-rail-w),
+      transparent 100%
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .sidebar {
+    background-color: #eef3f8;
+  }
+}
+
+@media (min-width: 80em) {
+  body {
+    --left-rail-w: calc(50vw - 411px);
+  }
+}
+```
+
+This lets the color rail continue under the fixed white masthead while aligning the rail boundary with the start of page content.
+
 ## Career Footprint Data Pipeline
 
 The Background page map reads generated data at:
