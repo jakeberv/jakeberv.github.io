@@ -1,5 +1,5 @@
 outlet,mentions,publication_spread,latest_date,domains,composite_score
-Unknown,911,12,,,920.6
+x.com,911,12,2025-09-17T18:40:20.803000,x.com,920.6
 en.wikipedia.org,66,8,2025-12-13T18:14:40,en.wikipedia.org,72.4
 es.wikipedia.org,23,3,2025-12-11T17:11:07,es.wikipedia.org,25.4
 vi.wikipedia.org,20,3,2024-10-29T15:23:41,vi.wikipedia.org,22.4
@@ -56,7 +56,7 @@ Daily Mail,3,2,2018-05-25T00:02:13,,4.6
 Inverse,3,2,2022-12-04T20:00:25,inverse.com,4.6
 de.wikipedia.org,3,2,2023-02-26T15:36:57,de.wikipedia.org,4.6
 tr.wikipedia.org,3,2,2021-09-21T11:55:28,tr.wikipedia.org,4.6
-Nicols Diez,3,2,2015-10-18T07:24:38,plus.google.com,4.6
+Nicolás Diez,3,2,2015-10-18T07:24:38,plus.google.com,4.6
 bsky.app,3,2,2025-09-22T04:20:30,bsky.app,4.6
 Current Biology,3,1,2018-05-24T16:03:07,facebook.com,3.8
 no.wikipedia.org,3,1,2025-07-15T14:06:07,no.wikipedia.org,3.8
@@ -98,7 +98,7 @@ Tech Explorist,2,1,2024-08-01T11:07:08,ct.moreover.com;techexplorist.com,2.8
 Texas Nature Trackers - Texas Parks and Wildlife Dept Program,2,1,2015-02-05T15:50:48,facebook.com,2.8
 af.wikipedia.org,1,1,2025-01-13T14:12:10,af.wikipedia.org,1.8
 Qubit,1,1,2022-10-10T12:11:16,qubit.hu,1.8
-Dove Si Pu Parlare Di Ogni Cosa,1,1,2021-11-21T18:10:00,dovesipuoparlarediognicosa.blogspot.com,1.8
+Dove Si Può Parlare Di Ogni Cosa,1,1,2021-11-21T18:10:00,dovesipuoparlarediognicosa.blogspot.com,1.8
 Geology Page,1,1,2021-10-18T20:37:17,geologypage.com,1.8
 Ebiotrade,1,1,2021-10-15T04:24:12,ebiotrade.com,1.8
 Muy Interesante,1,1,2021-10-14T19:53:03,muyinteresante.es,1.8
@@ -164,7 +164,7 @@ Arcamax,1,1,2018-05-25T00:24:48,arcamax.com,1.8
 Business Standard,1,1,2018-05-25T00:00:00,business-standard.com,1.8
 Herald Mail Media,1,1,2018-05-24T23:09:00,heraldmailmedia.com,1.8
 The Eagle,1,1,2018-05-24T23:09:00,theeagle.com,1.8
-Actualit Houssenia Writing,1,1,2018-05-24T22:00:52,actualite.housseniawriting.com,1.8
+Actualité Houssenia Writing,1,1,2018-05-24T22:00:52,actualite.housseniawriting.com,1.8
 Gizmodo UK,1,1,2018-05-24T22:00:28,,1.8
 Science News,1,1,2018-05-24T21:44:51,sciencenews.org,1.8
 ZME Science,1,1,2018-05-24T21:36:20,feedproxy.google.com,1.8
@@ -173,7 +173,7 @@ Los Angeles Times,1,1,2018-05-24T21:30:00,,1.8
 The Scientist Magazine,1,1,2018-05-24T20:35:50,the-scientist.com,1.8
 Long Room,1,1,2018-05-24T19:15:53,longroom.com,1.8
 SVT,1,1,2018-05-24T18:52:10,svt.se,1.8
-Neue Zrcher Zeitung (NZZ),1,1,2018-05-24T18:00:00,,1.8
+Neue Zürcher Zeitung (NZZ),1,1,2018-05-24T18:00:00,,1.8
 BT News,1,1,2018-05-24T17:51:25,home.bt.com,1.8
 charlie mashara,1,1,2018-05-24T17:14:26,plus.google.com,1.8
 The Guardian,1,1,2018-05-24T16:56:57,,1.8
@@ -207,20 +207,20 @@ BioLounge,1,1,2015-02-07T04:46:13,facebook.com,1.8
 Edna Maria Kuller,1,1,2015-01-27T15:42:25,facebook.com,1.8
 Orestes Batista Minigildo Filho,1,1,2015-01-25T01:44:55,facebook.com,1.8
 Andrea Scott,1,1,2014-12-15T04:02:10,facebook.com,1.8
-Mnica Ferreira Do Nascimento,1,1,2014-12-12T19:52:07,facebook.com,1.8
+Mônica Ferreira Do Nascimento,1,1,2014-12-12T19:52:07,facebook.com,1.8
 Biosfera Itinerari,1,1,2014-12-11T23:16:49,facebook.com,1.8
 Natural Selection,1,1,2014-12-10T21:32:59,facebook.com,1.8
 Elvalle Bill,1,1,2014-12-06T13:28:40,facebook.com,1.8
 Dimitris Karayiannis,1,1,2014-12-05T18:40:28,facebook.com,1.8
 Jaci Junior,1,1,2014-12-05T12:59:51,facebook.com,1.8
-Sbastien Lacomblez,1,1,2014-12-05T07:20:18,facebook.com,1.8
+Sébastien Lacomblez,1,1,2014-12-05T07:20:18,facebook.com,1.8
 Leonardo Torres,1,1,2014-12-05T00:37:46,facebook.com,1.8
-Joo Batista Torres Rocha,1,1,2014-12-05T00:30:39,facebook.com,1.8
+João Batista Torres Rocha,1,1,2014-12-05T00:30:39,facebook.com,1.8
 Oswaldo Sanchez T,1,1,2014-12-04T23:07:33,facebook.com,1.8
 Entendeu ou quer que desenhe?,1,1,2014-12-04T22:14:36,facebook.com,1.8
 Poncho Miranda,1,1,2014-12-04T20:45:28,facebook.com,1.8
 Giacomo Bracchi,1,1,2014-12-04T20:28:43,facebook.com,1.8
-Jardines Ecolgicos Topotepuy,1,1,2014-12-04T17:18:04,facebook.com,1.8
+Jardines Ecológicos Topotepuy,1,1,2014-12-04T17:18:04,facebook.com,1.8
 Thiago Moura,1,1,2014-12-04T16:31:17,facebook.com,1.8
 Peilin Chen,1,1,2014-12-04T14:40:38,facebook.com,1.8
 Yasuaki Sakakihara,1,1,2014-12-04T14:31:42,facebook.com,1.8
@@ -244,7 +244,7 @@ Juan Gabriel Vasquez Soto,1,1,2014-10-31T15:09:39,facebook.com,1.8
 Michelle Ashworth,1,1,2014-10-15T22:38:41,facebook.com,1.8
 Brightsurf Science News and Current Events,1,1,2014-10-15T07:11:00,brightsurf.com,1.8
 Health Medicinet,1,1,2014-10-15T06:23:58,healthmedicinet.com,1.8
-Vctor Gamarra-Toledo,1,1,2014-09-24T18:49:25,facebook.com,1.8
+Víctor Gamarra-Toledo,1,1,2014-09-24T18:49:25,facebook.com,1.8
 Environmental News Network,1,1,2021-11-17T19:48:28,enn.com,1.8
 Bioengineer.org,1,1,2021-11-17T14:12:37,bioengineer.org,1.8
 "Marcos K. Pinheiro / ""Marcos Wyvern"" (Marcosaurus)",1,1,2025-09-22T12:43:48,bsky.app,1.8
@@ -267,9 +267,9 @@ Madriddigital24horas,1,1,2022-12-04T11:09:48,madriddigital24horas.com,1.8
 Bilbao24horas,1,1,2022-12-04T08:03:51,bilbao24horas.com,1.8
 El Portaluco,1,1,2022-12-04T05:41:01,elportaluco.com,1.8
 TheObjective,1,1,2022-12-04T02:30:00,theobjective.com,1.8
-Cambio Poltico,1,1,2022-12-01T22:11:33,cambiopolitico.com,1.8
+Cambio Político,1,1,2022-12-01T22:11:33,cambiopolitico.com,1.8
 South Africa Today,1,1,2022-11-30T18:38:20,southafricatoday.net,1.8
-Yahoo! Espaa,1,1,2022-11-30T10:10:52,,1.8
+Yahoo! España,1,1,2022-11-30T10:10:52,,1.8
 The Free Library,1,1,2022-11-29T00:00:00,thefreelibrary.com,1.8
 Devon Live,1,1,2022-11-27T14:51:43,,1.8
 Cornwall Live,1,1,2022-11-27T14:51:43,,1.8
@@ -327,7 +327,7 @@ Paulo Prates Jr,1,1,2015-10-14T00:07:01,plus.google.com,1.8
 Science World Report,1,1,2015-10-13T19:40:08,scienceworldreport.com,1.8
 CollidEscape,1,1,2015-10-13T13:30:24,facebook.com,1.8
 Hirado,1,1,2015-10-13T10:33:00,hirado.hu,1.8
-Divulgative Biology/Biologa divulgativa,1,1,2015-10-13T08:31:18,facebook.com,1.8
+Divulgative Biology/Biología divulgativa,1,1,2015-10-13T08:31:18,facebook.com,1.8
 Rafael Miranda-Esquivel,1,1,2015-10-13T04:20:09,plus.google.com,1.8
 Fosil Paleontologia,1,1,2015-10-12T23:55:10,facebook.com,1.8
 Francis (th)E mule Science's News,1,1,2015-10-12T11:04:00,francis.naukas.com,1.8
@@ -340,15 +340,15 @@ Emma Kendrick,1,1,2015-10-09T22:16:37,plus.google.com,1.8
 Dawn Hardin,1,1,2015-10-09T17:59:30,plus.google.com,1.8
 Roman Anisimov,1,1,2015-10-09T16:45:56,plus.google.com,1.8
 A DC Birding Blog,1,1,2015-10-09T14:00:00,dendroica.blogspot.com,1.8
-PPGBT - Programa de Ps Graduao em Biodiversidade Tropical,1,1,2015-10-09T13:57:44,facebook.com,1.8
+PPGBT - Programa de Pós Graduação em Biodiversidade Tropical,1,1,2015-10-09T13:57:44,facebook.com,1.8
 Tech Times,1,1,2015-10-09T10:06:28,techtimes.com,1.8
 ????? ? ???????,1,1,2015-10-08T17:40:38,facebook.com,1.8
-Ps Graduao em Zoologia UFMG,1,1,2015-10-08T17:14:49,facebook.com,1.8
+Pós Graduação em Zoologia UFMG,1,1,2015-10-08T17:14:49,facebook.com,1.8
 Arstechnica,1,1,2015-10-08T16:23:15,arstechnica.com,1.8
 Ars Technica,1,1,2015-10-08T16:23:00,arstechnica.com,1.8
 IOL,1,1,2015-10-08T13:30:00,,1.8
 Journal of Indonesian Ornithology - KUKILA,1,1,2015-10-08T10:18:52,facebook.com,1.8
-David ?ern,1,1,2015-10-07T23:27:55,plus.google.com,1.8
+David ?erný,1,1,2015-10-07T23:27:55,plus.google.com,1.8
 Voice of America,1,1,2015-10-07T22:22:09,voanews.com,1.8
 Ben Sheldon,1,1,2015-10-07T19:10:18,bsky.app,1.8
 Yahoo! News India,1,1,2015-10-07T17:59:30,in.news.yahoo.com,1.8
@@ -389,7 +389,7 @@ WION,1,1,2024-08-12T05:07:58,ct.moreover.com,1.8
 Biology of Aging News,1,1,2024-08-07T20:29:05,facebook.com,1.8
 Illustreret Videnskab,1,1,2024-08-05T17:00:34,ct.moreover.com,1.8
 Illustrerad Vetenskap,1,1,2024-08-05T15:14:43,illvet.se,1.8
-National Geographic en Espaol,1,1,2024-08-03T00:32:37,ct.moreover.com,1.8
+National Geographic en Español,1,1,2024-08-03T00:32:37,ct.moreover.com,1.8
 COSMOS magazine,1,1,2024-08-02T12:30:00,ct.moreover.com,1.8
 India Today,1,1,2024-08-02T06:18:49,ct.moreover.com,1.8
 Astrobiology Web,1,1,2024-08-01T17:49:11,ct.moreover.com,1.8

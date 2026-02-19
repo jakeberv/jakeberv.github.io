@@ -1,10 +1,10 @@
 [
   {
-    "outlet": "Unknown",
+    "outlet": "x.com",
     "mentions": 911,
     "publication_spread": 12,
-    "latest_date": "",
-    "domains": "",
+    "latest_date": "2025-09-17T18:40:20.803000",
+    "domains": "x.com",
     "composite_score": 920.6
   },
   {
@@ -456,7 +456,7 @@
     "composite_score": 4.6
   },
   {
-    "outlet": "Nicols Diez",
+    "outlet": "Nicolás Diez",
     "mentions": 3,
     "publication_spread": 2,
     "latest_date": "2015-10-18T07:24:38",
@@ -792,7 +792,7 @@
     "composite_score": 1.8
   },
   {
-    "outlet": "Dove Si Pu Parlare Di Ogni Cosa",
+    "outlet": "Dove Si Può Parlare Di Ogni Cosa",
     "mentions": 1,
     "publication_spread": 1,
     "latest_date": "2021-11-21T18:10:00",
@@ -1320,7 +1320,7 @@
     "composite_score": 1.8
   },
   {
-    "outlet": "Actualit Houssenia Writing",
+    "outlet": "Actualité Houssenia Writing",
     "mentions": 1,
     "publication_spread": 1,
     "latest_date": "2018-05-24T22:00:52",
@@ -1392,7 +1392,7 @@
     "composite_score": 1.8
   },
   {
-    "outlet": "Neue Zrcher Zeitung (NZZ)",
+    "outlet": "Neue Zürcher Zeitung (NZZ)",
     "mentions": 1,
     "publication_spread": 1,
     "latest_date": "2018-05-24T18:00:00",
@@ -1664,7 +1664,7 @@
     "composite_score": 1.8
   },
   {
-    "outlet": "Mnica Ferreira Do Nascimento",
+    "outlet": "Mônica Ferreira Do Nascimento",
     "mentions": 1,
     "publication_spread": 1,
     "latest_date": "2014-12-12T19:52:07",
@@ -1712,7 +1712,7 @@
     "composite_score": 1.8
   },
   {
-    "outlet": "Sbastien Lacomblez",
+    "outlet": "Sébastien Lacomblez",
     "mentions": 1,
     "publication_spread": 1,
     "latest_date": "2014-12-05T07:20:18",
@@ -1728,7 +1728,7 @@
     "composite_score": 1.8
   },
   {
-    "outlet": "Joo Batista Torres Rocha",
+    "outlet": "João Batista Torres Rocha",
     "mentions": 1,
     "publication_spread": 1,
     "latest_date": "2014-12-05T00:30:39",
@@ -1768,7 +1768,7 @@
     "composite_score": 1.8
   },
   {
-    "outlet": "Jardines Ecolgicos Topotepuy",
+    "outlet": "Jardines Ecológicos Topotepuy",
     "mentions": 1,
     "publication_spread": 1,
     "latest_date": "2014-12-04T17:18:04",
@@ -1960,7 +1960,7 @@
     "composite_score": 1.8
   },
   {
-    "outlet": "Vctor Gamarra-Toledo",
+    "outlet": "Víctor Gamarra-Toledo",
     "mentions": 1,
     "publication_spread": 1,
     "latest_date": "2014-09-24T18:49:25",
@@ -2144,7 +2144,7 @@
     "composite_score": 1.8
   },
   {
-    "outlet": "Cambio Poltico",
+    "outlet": "Cambio Político",
     "mentions": 1,
     "publication_spread": 1,
     "latest_date": "2022-12-01T22:11:33",
@@ -2160,7 +2160,7 @@
     "composite_score": 1.8
   },
   {
-    "outlet": "Yahoo! Espaa",
+    "outlet": "Yahoo! España",
     "mentions": 1,
     "publication_spread": 1,
     "latest_date": "2022-11-30T10:10:52",
@@ -2624,7 +2624,7 @@
     "composite_score": 1.8
   },
   {
-    "outlet": "Divulgative Biology/Biologa divulgativa",
+    "outlet": "Divulgative Biology/Biología divulgativa",
     "mentions": 1,
     "publication_spread": 1,
     "latest_date": "2015-10-13T08:31:18",
@@ -2728,7 +2728,7 @@
     "composite_score": 1.8
   },
   {
-    "outlet": "PPGBT - Programa de Ps Graduao em Biodiversidade Tropical",
+    "outlet": "PPGBT - Programa de Pós Graduação em Biodiversidade Tropical",
     "mentions": 1,
     "publication_spread": 1,
     "latest_date": "2015-10-09T13:57:44",
@@ -2752,7 +2752,7 @@
     "composite_score": 1.8
   },
   {
-    "outlet": "Ps Graduao em Zoologia UFMG",
+    "outlet": "Pós Graduação em Zoologia UFMG",
     "mentions": 1,
     "publication_spread": 1,
     "latest_date": "2015-10-08T17:14:49",
@@ -2792,7 +2792,7 @@
     "composite_score": 1.8
   },
   {
-    "outlet": "David ?ern",
+    "outlet": "David ?erný",
     "mentions": 1,
     "publication_spread": 1,
     "latest_date": "2015-10-07T23:27:55",
@@ -3120,7 +3120,7 @@
     "composite_score": 1.8
   },
   {
-    "outlet": "National Geographic en Espaol",
+    "outlet": "National Geographic en Español",
     "mentions": 1,
     "publication_spread": 1,
     "latest_date": "2024-08-03T00:32:37",

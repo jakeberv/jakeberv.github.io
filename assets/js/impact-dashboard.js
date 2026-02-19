@@ -36,10 +36,8 @@ const MAP_MODE_OPTIONS = [
 ];
 
 const COVERAGE_TAB_OPTIONS = [
-  { key: "outlets", label: "Top outlets" },
+  { key: "major_outlets", label: "Major outlets" },
   { key: "recent", label: "Recent news" },
-  { key: "stories", label: "Story clusters" },
-  { key: "pubs", label: "Top publications" },
 ];
 
 const PREVIEW_OPTIONS = [
@@ -54,6 +52,7 @@ const PREVIEW_OPTIONS = [
 const SOCIAL_TYPES = new Set(["X Post", "Bluesky post", "Facebook post", "Reddit post", "Google+ post"]);
 const MEDIA_REFERENCE_TYPES = new Set(["News story", "Blog post", "Video", "Podcast episode", "Wikipedia page", "Q&A post"]);
 const EXCLUDED_REACH_DOMAINS = new Set(["ct.moreover.com", "feedproxy.google.com", "news.google.com"]);
+const MAJOR_OUTLET_TOP_QUANTILE = 0.2;
 const OUTLET_PANEL_TOP_N = 12;
 const IMPRESSION_MODEL = {
   visits_at_rank_1: 500_000_000,
@@ -86,13 +85,13 @@ const MIX_BUCKETS = [
 ];
 
 const state = {
-  channel: "news_only",
+  channel: "all",
   publication: "all",
   timelineMode: "scholarly_vs_press",
   granularity: "month",
   yearRange: [2018, new Date().getFullYear()],
   mapMode: "citations",
-  activeCoverageTab: "outlets",
+  activeCoverageTab: "major_outlets",
   preview: "mentions",
   previewSearch: "",
 };
@@ -137,7 +136,7 @@ const el = {
   timelineHint: q("#timelineHint"),
 
   donutChart: q("#donutChart"),
-  highlightsList: q("#highlightsList"),
+  donutTrends: q("#donutTrends"),
 
   mapModeButtons: q("#mapModeButtons"),
   mapChart: q("#mapChart"),
@@ -149,8 +148,6 @@ const el = {
 
   coverageTabs: q("#coverageTabs"),
   coverageList: q("#coverageList"),
-  donutDetails: q("#donutDetails"),
-  mapDetails: q("#mapDetails"),
 
   previewButtons: q("#previewButtons"),
   previewSearch: q("#previewSearch"),
@@ -760,6 +757,17 @@ function renderButtonGroup(container, options, activeKey, onClick, attrs = {}) {
   }
 }
 
+function setActiveButtonGroupKey(container, key) {
+  if (!container) return;
+  for (const btn of container.querySelectorAll("button")) {
+    const active = btn.dataset.key === key;
+    btn.classList.toggle("active", active);
+    if (btn.hasAttribute("aria-selected")) {
+      btn.setAttribute("aria-selected", active ? "true" : "false");
+    }
+  }
+}
+
 function isDefaultYearRange() {
   return state.yearRange[0] === dataModel.yearBounds.minYear && state.yearRange[1] === dataModel.yearBounds.maxYear;
 }
@@ -870,6 +878,226 @@ function aggregateOutlets(mentions) {
       composite_score: Math.round((r.weighted_mentions + 0.6 * r.publication_spread) * 100) / 100,
     }))
     .sort((a, b) => b.composite_score - a.composite_score || b.mentions - a.mentions);
+}
+
+function upperBound(sortedValues, value) {
+  let lo = 0;
+  let hi = sortedValues.length;
+  while (lo < hi) {
+    const mid = Math.floor((lo + hi) / 2);
+    if (sortedValues[mid] <= value) {
+      lo = mid + 1;
+    } else {
+      hi = mid;
+    }
+  }
+  return lo;
+}
+
+function percentileFromSorted(sortedValues, value) {
+  if (!sortedValues.length) return 0;
+  return upperBound(sortedValues, value) / sortedValues.length;
+}
+
+function buildMajorOutletRows(newsMentions) {
+  if (!dataModel?.reachMentionById?.size) return [];
+
+  const rankedMentions = [];
+  for (const mention of newsMentions) {
+    const reach = dataModel.reachMentionById.get(mention.mention_id);
+    if (!reach) continue;
+
+    const domain = String(reach.domain || mention.domain || "").trim().toLowerCase();
+    if (!domain || isExcludedReachDomain(domain)) continue;
+
+    const rank = toNumber(reach.tranco_rank_at_date);
+    const score = toNumber(reach.reach_score_at_date);
+    if (rank <= 0 || score <= 0) continue;
+
+    const mentionDate = mention.mention_date || reach.mention_date || "";
+    const mentionDt = parseDate(mentionDate);
+    const mentionDay = mentionDate ? String(mentionDate).slice(0, 10) : (mentionDt ? mentionDt.toISOString().slice(0, 10) : "undated");
+    const mentionYear = mention.year || (mentionDt ? mentionDt.getUTCFullYear() : null);
+    const titleNorm = normalizeText(mention.mention_title || mention.title || "");
+    const pubTitleNorm = normalizeText(mention.canonical_publication_title || "");
+    const storyKey = titleNorm ? `${titleNorm}|${mentionDay}` : `${domain}|${mentionDay}|${pubTitleNorm || "untitled"}`;
+    const outletIdentity = normalizeOutletIdentity(reach.outlet || mention.outlet, domain);
+
+    rankedMentions.push({
+      mention_id: mention.mention_id,
+      mention_date: mentionDate,
+      mention_dt: mentionDt,
+      mention_year: Number.isFinite(mentionYear) ? mentionYear : null,
+      story_key: storyKey,
+      outlet_key: outletIdentity.key,
+      outlet: outletIdentity.label,
+      domain,
+      canonical_publication_id: mention.canonical_publication_id,
+      reach_score_at_date: score,
+    });
+  }
+
+  if (!rankedMentions.length) return [];
+
+  const sortedReachScores = rankedMentions.map((m) => m.reach_score_at_date).sort((a, b) => a - b);
+  const p99Index = Math.max(0, Math.min(sortedReachScores.length - 1, Math.ceil(sortedReachScores.length * 0.99) - 1));
+  const reachCap = sortedReachScores[p99Index];
+  for (const row of rankedMentions) {
+    row.reach_score_winsorized = Math.min(row.reach_score_at_date, reachCap);
+  }
+
+  const storyOutletSet = new Map();
+  const storyEarliest = new Map();
+  for (const row of rankedMentions) {
+    if (!storyOutletSet.has(row.story_key)) {
+      storyOutletSet.set(row.story_key, new Set());
+    }
+    storyOutletSet.get(row.story_key).add(row.outlet_key);
+
+    if (row.mention_dt) {
+      const prev = storyEarliest.get(row.story_key);
+      if (!prev || row.mention_dt < prev) {
+        storyEarliest.set(row.story_key, row.mention_dt);
+      }
+    }
+  }
+
+  const byOutlet = new Map();
+  for (const row of rankedMentions) {
+    if (!byOutlet.has(row.outlet_key)) {
+      byOutlet.set(row.outlet_key, {
+        outlet_key: row.outlet_key,
+        outlet: row.outlet,
+        mentions: 0,
+        ranked_mentions: 0,
+        reaches: [],
+        reaches_winsorized: [],
+        stories: new Set(),
+        publication_ids: new Set(),
+        years: new Set(),
+        domains: new Map(),
+        syndicated_mentions: 0,
+        first_by_story: new Map(),
+      });
+    }
+
+    const rec = byOutlet.get(row.outlet_key);
+    rec.outlet = row.outlet;
+    rec.mentions += 1;
+    rec.ranked_mentions += 1;
+    rec.reaches.push(row.reach_score_at_date);
+    rec.reaches_winsorized.push(row.reach_score_winsorized);
+    rec.stories.add(row.story_key);
+
+    if (row.canonical_publication_id) {
+      rec.publication_ids.add(row.canonical_publication_id);
+    }
+    if (row.mention_year) {
+      rec.years.add(row.mention_year);
+    }
+    rec.domains.set(row.domain, (rec.domains.get(row.domain) || 0) + 1);
+
+    if ((storyOutletSet.get(row.story_key)?.size || 0) >= 4) {
+      rec.syndicated_mentions += 1;
+    }
+
+    let firstPoints = 0;
+    const earliest = storyEarliest.get(row.story_key);
+    if (earliest && row.mention_dt) {
+      const daysSinceFirst = (row.mention_dt.getTime() - earliest.getTime()) / 86_400_000;
+      if (daysSinceFirst <= 0.01) firstPoints = 1.0;
+      else if (daysSinceFirst <= 1.0) firstPoints = 0.5;
+    }
+    const existing = rec.first_by_story.get(row.story_key) || 0;
+    if (firstPoints > existing) {
+      rec.first_by_story.set(row.story_key, firstPoints);
+    }
+  }
+
+  const metricRows = [...byOutlet.values()].map((rec) => {
+    const mentions = rec.mentions;
+    const ranked = rec.ranked_mentions;
+    const uniqueStories = rec.stories.size;
+    const publicationBreadth = rec.publication_ids.size;
+    const persistenceYears = rec.years.size;
+    const extraMentions = Math.max(0, mentions - uniqueStories);
+    const cappedVolume = uniqueStories + 0.25 * extraMentions;
+    const logCappedVolume = Math.log1p(cappedVolume);
+    const syndicatedShare = mentions ? rec.syndicated_mentions / mentions : 0;
+    const rankCoverageRate = mentions ? ranked / mentions : 0;
+    const firstReportRate = uniqueStories
+      ? [...rec.first_by_story.values()].reduce((sum, value) => sum + value, 0) / uniqueStories
+      : 0;
+    const peakReach = rec.reaches.length ? Math.max(...rec.reaches) : 0;
+    const peakReachWinsorized = rec.reaches_winsorized.length ? Math.max(...rec.reaches_winsorized) : 0;
+    const meanReach = rec.reaches.length
+      ? rec.reaches.reduce((sum, value) => sum + value, 0) / rec.reaches.length
+      : 0;
+    const meanReachWinsorized = rec.reaches_winsorized.length
+      ? rec.reaches_winsorized.reduce((sum, value) => sum + value, 0) / rec.reaches_winsorized.length
+      : 0;
+
+    return {
+      outlet_key: rec.outlet_key,
+      outlet: rec.outlet,
+      mentions,
+      ranked_mentions: ranked,
+      peak_reach: peakReach,
+      peak_reach_winsorized: peakReachWinsorized,
+      mean_reach: meanReach,
+      mean_reach_winsorized: meanReachWinsorized,
+      unique_stories: uniqueStories,
+      publication_breadth: publicationBreadth,
+      persistence_years: persistenceYears,
+      log_capped_volume: logCappedVolume,
+      first_report_rate: firstReportRate,
+      syndicated_share: syndicatedShare,
+      rank_coverage_rate: rankCoverageRate,
+    };
+  });
+
+  const sortedPeak = metricRows.map((row) => row.peak_reach_winsorized).sort((a, b) => a - b);
+  const sortedMean = metricRows.map((row) => row.mean_reach_winsorized).sort((a, b) => a - b);
+  const sortedStories = metricRows.map((row) => row.unique_stories).sort((a, b) => a - b);
+  const sortedBreadth = metricRows.map((row) => row.publication_breadth).sort((a, b) => a - b);
+  const sortedVolume = metricRows.map((row) => row.log_capped_volume).sort((a, b) => a - b);
+  const sortedYears = metricRows.map((row) => row.persistence_years).sort((a, b) => a - b);
+  const sortedFirst = metricRows.map((row) => row.first_report_rate).sort((a, b) => a - b);
+
+  for (const row of metricRows) {
+    const peakPct = percentileFromSorted(sortedPeak, row.peak_reach_winsorized);
+    const meanPct = percentileFromSorted(sortedMean, row.mean_reach_winsorized);
+    const storyPct = percentileFromSorted(sortedStories, row.unique_stories);
+    const breadthPct = percentileFromSorted(sortedBreadth, row.publication_breadth);
+    const volumePct = percentileFromSorted(sortedVolume, row.log_capped_volume);
+    const yearsPct = percentileFromSorted(sortedYears, row.persistence_years);
+    const firstPct = percentileFromSorted(sortedFirst, row.first_report_rate);
+    const syndicationPenalty = 0.1 * Math.pow(Math.max(0, row.syndicated_share - 0.5), 2);
+
+    row.prominence_score =
+      0.34 * peakPct +
+      0.2 * meanPct +
+      0.12 * storyPct +
+      0.08 * breadthPct +
+      0.04 * volumePct +
+      0.12 * yearsPct +
+      0.1 * firstPct -
+      syndicationPenalty;
+
+    row.confidence = 0.6 * (row.ranked_mentions / (row.ranked_mentions + 2)) + 0.4 * row.rank_coverage_rate;
+  }
+
+  metricRows.sort(
+    (a, b) =>
+      b.prominence_score - a.prominence_score ||
+      b.confidence - a.confidence ||
+      b.peak_reach_winsorized - a.peak_reach_winsorized ||
+      b.mentions - a.mentions ||
+      a.outlet.localeCompare(b.outlet)
+  );
+
+  const cutoff = Math.max(1, Math.ceil(metricRows.length * MAJOR_OUTLET_TOP_QUANTILE));
+  return metricRows.slice(0, cutoff);
 }
 
 function buildReachOutletMatrixRows(newsMentions) {
@@ -1143,6 +1371,29 @@ function aggregatePublications(mentions) {
   }));
 }
 
+function buildDonutTrendRows(modeALabels, modeARowByLabel) {
+  const maxPoints = state.granularity === "month" ? 24 : state.granularity === "quarter" ? 16 : 12;
+  const labels = modeALabels.slice(-maxPoints);
+
+  return MIX_BUCKETS.map((bucket) => {
+    const points = labels.map((label) => {
+      const row = modeARowByLabel.get(label);
+      const total = toNumber(row?.total);
+      if (total <= 0) return 0;
+      return (toNumber(row?.[bucket.key]) / total) * 100;
+    });
+    const first = points.length ? points[0] : 0;
+    const last = points.length ? points[points.length - 1] : 0;
+    return {
+      key: bucket.key,
+      label: bucket.label,
+      color: bucket.donut,
+      points,
+      delta_pp: last - first,
+    };
+  });
+}
+
 function dedupeRecentMentions(mentions, limit = 30) {
   const sorted = [...mentions].sort((a, b) => (b.mention_date || "").localeCompare(a.mention_date || ""));
   const seen = new Set();
@@ -1165,62 +1416,6 @@ function dedupeRecentMentions(mentions, limit = 30) {
   }
 
   return rows;
-}
-
-function buildHighlights(vm) {
-  const lines = [];
-
-  const defaultMode =
-    (state.channel === "all" || state.channel === "news_only") &&
-    state.publication === "all" &&
-    state.granularity === "month" &&
-    isDefaultYearRange() &&
-    state.mapMode === "citations";
-
-  if (defaultMode && dataModel.defaultHighlights.length) {
-    lines.push(...dataModel.defaultHighlights.slice(0, 1));
-  }
-
-  if (vm.timelineRows.length) {
-    const peak = [...vm.timelineRows].sort((a, b) => b.total - a.total)[0];
-    if (peak) {
-      lines.push(`Peak coverage: ${peak.label} (${fmtNumber(peak.total)} mentions)`);
-    }
-  }
-
-  const topPressOutlet = vm.outlets.find((o) => o.news_mentions > 0 && normalizeText(o.outlet) !== "unknown");
-  if (topPressOutlet) {
-    lines.push(
-      `Top press outlet: ${topPressOutlet.outlet} (${fmtNumber(topPressOutlet.news_mentions)} news stories)`
-    );
-  }
-
-  const topStory = vm.stories.find((s) => s.news_mentions > 0);
-  if (topStory) {
-    lines.push(
-      `Strongest story cluster: ${clipped(topStory.title, 62)} (${fmtNumber(topStory.news_mentions)} news; ${fmtNumber(
-        topStory.publication_spread
-      )} pubs)`
-    );
-  }
-
-  const deduped = [];
-  const seen = new Set();
-  let hasPeak = false;
-  for (const line of lines) {
-    const lower = String(line || "").toLowerCase();
-    if (lower.startsWith("peak coverage")) {
-      if (hasPeak) continue;
-      hasPeak = true;
-    }
-    const norm = normalizeText(line);
-    if (seen.has(norm)) continue;
-    seen.add(norm);
-    deduped.push(line);
-    if (deduped.length >= 3) break;
-  }
-
-  return deduped;
 }
 
 function deriveViewModel() {
@@ -1251,6 +1446,7 @@ function deriveViewModel() {
     data: modeALabels.map((label) => toNumber(modeARowByLabel.get(label)?.[bucket.key] || 0)),
   })).filter((ds) => ds.data.some((value) => value > 0));
   const modeATotalLine = modeALabels.map((label) => toNumber(modeARowByLabel.get(label)?.total || 0));
+  const donutTrendRows = buildDonutTrendRows(modeALabels, modeARowByLabel);
 
   const yearLabels = [];
   for (let y = state.yearRange[0]; y <= state.yearRange[1]; y++) {
@@ -1276,13 +1472,12 @@ function deriveViewModel() {
   const stories = aggregateStories(filteredMentions);
   const newsMentions = filteredMentions.filter((m) => m.mention_type === "News story");
   const recent = dedupeRecentMentions(newsMentions.length ? newsMentions : filteredMentions, 40);
+  const majorOutlets = buildMajorOutletRows(newsMentions);
   const newsOutlets = new Set(newsMentions.map((m) => m.outlet).filter(Boolean));
   const reachMatrixRowsRaw = buildReachOutletMatrixRows(newsMentions);
   const impressionRowsRaw = buildOutletImpressionRows(newsMentions);
-  const impressionByOutletKey = new Map(impressionRowsRaw.map((row) => [row.outlet_key, row]));
-  const alignedRows = reachMatrixRowsRaw.filter((row) => impressionByOutletKey.has(row.outlet_key));
-  const reachMatrixRows = alignedRows.slice(0, OUTLET_PANEL_TOP_N);
-  const impressionRows = reachMatrixRows.map((row) => impressionByOutletKey.get(row.outlet_key)).filter(Boolean);
+  const reachMatrixRows = reachMatrixRowsRaw.slice(0, OUTLET_PANEL_TOP_N);
+  const impressionRows = impressionRowsRaw.slice(0, OUTLET_PANEL_TOP_N);
   const reachMentionsMatchedAny = newsMentions.reduce((sum, mention) => {
     return sum + (dataModel.reachMentionById.has(mention.mention_id) ? 1 : 0);
   }, 0);
@@ -1350,12 +1545,6 @@ function deriveViewModel() {
       label: "Outlets",
       meta: "News outlets in scope",
     },
-    {
-      id: "coverage",
-      number: `${fmtNumber(dataModel.metrics.tracked_publications)} / ${fmtNumber(dataModel.metrics.canonical_publications_total)}`,
-      label: "Tracked pubs",
-      meta: `Coverage ${Math.round(toNumber(dataModel.metrics.tracked_publication_coverage_ratio) * 100)}%`,
-    },
   ];
 
   const chips = [
@@ -1382,16 +1571,15 @@ function deriveViewModel() {
 
   const undatedInScope = filteredMentions.filter((m) => !m.has_date).length;
   const undatedPulseScope = scopeMentionsNoChannel.filter((m) => !m.has_date).length;
-  const lineContext = selectedPub ? "Citation series is portfolio baseline." : "Citation series is Google Scholar cites/year.";
   const timelineHint =
     state.timelineMode === "scholarly_vs_press"
-      ? `Year mode. News line uses dated news mentions in current filter. Undated rows in scope: ${fmtNumber(undatedInScope)}. ${lineContext}`
-      : `Press pulse stacks Social, News, Reference, Commentary across all channels in current publication/year scope. Undated rows in scope: ${fmtNumber(undatedPulseScope)}.`;
+      ? `Dated news in scope: undated rows ${fmtNumber(undatedInScope)}.`
+      : `All-channel mix in scope: undated rows ${fmtNumber(undatedPulseScope)}.`;
 
   const mapHint =
     state.mapMode === "citations"
-      ? "Citing-author geography from Web of Science sample (binned to 2 degree grid)."
-      : "Altmetric mention countries for the current filter scope (log-scaled color ramp).";
+      ? "Web of Science citing-author geography (2° bins)."
+      : "Altmetric mention countries in current filter scope.";
 
   return {
     subtitle: dataModel.description,
@@ -1410,8 +1598,7 @@ function deriveViewModel() {
     timelineHint,
 
     channelTotals,
-    highlights: buildHighlights({ timelineRows, outlets, stories, publications }),
-
+    donutTrendRows,
     mapHint,
     mapCitationPoints: dataModel.citationPoints,
     mapMentionCountries: countriesForMap,
@@ -1422,6 +1609,7 @@ function deriveViewModel() {
 
     publications,
     outlets,
+    majorOutlets,
     stories,
     recent,
   };
@@ -1445,13 +1633,17 @@ function renderControls() {
   el.yearRangeLabel.textContent = `Years (${state.yearRange[0]}-${state.yearRange[1]})`;
 
   renderButtonGroup(el.mapModeButtons, MAP_MODE_OPTIONS, state.mapMode, (key) => {
+    if (key === state.mapMode) return;
     state.mapMode = key;
-    void renderAll();
+    setActiveButtonGroupKey(el.mapModeButtons, key);
+    void renderMapPanelOnly();
   });
 
   renderButtonGroup(el.timelineModeButtons, TIMELINE_MODE_OPTIONS, state.timelineMode, (key) => {
+    if (key === state.timelineMode) return;
     state.timelineMode = key;
-    void renderAll();
+    setActiveButtonGroupKey(el.timelineModeButtons, key);
+    renderTimelinePanelOnly();
   });
 
   renderButtonGroup(
@@ -1459,8 +1651,10 @@ function renderControls() {
     COVERAGE_TAB_OPTIONS,
     state.activeCoverageTab,
     (key) => {
+      if (key === state.activeCoverageTab) return;
       state.activeCoverageTab = key;
-      void renderAll();
+      setActiveButtonGroupKey(el.coverageTabs, key);
+      renderCoveragePanelOnly();
     },
     { role: "tab", ariaSelected: true }
   );
@@ -1543,7 +1737,7 @@ function renderTimeline(vm) {
         },
       },
     });
-    el.timelineLead.textContent = "Yearly scholarly citations (bars) versus yearly news mentions (line).";
+    el.timelineLead.textContent = "Citations/year (bars) and news mentions/year (line).";
   } else {
     charts.timeline = new Chart(el.timelineChart.getContext("2d"), {
       data: {
@@ -1596,7 +1790,7 @@ function renderTimeline(vm) {
         },
       },
     });
-    el.timelineLead.textContent = "Stacked mention mix over time with total mentions trend.";
+    el.timelineLead.textContent = "Channel mix over time with total mentions.";
   }
 
   el.timelineHint.textContent = vm.timelineHint;
@@ -1636,14 +1830,81 @@ function renderDonut(vm) {
       },
     },
   });
+
+  renderDonutTrends(vm);
 }
 
-function renderHighlights(vm) {
-  if (!vm.highlights.length) {
-    el.highlightsList.innerHTML = '<li class="idb-empty">No highlights available for this scope.</li>';
+function sparklinePath(points, width, height) {
+  if (!points.length) return "";
+  if (points.length === 1) {
+    const y = height - (Math.max(0, Math.min(100, toNumber(points[0]))) / 100) * height;
+    return `M 0 ${y.toFixed(2)} L ${width.toFixed(2)} ${y.toFixed(2)}`;
+  }
+
+  const step = width / (points.length - 1);
+  return points
+    .map((point, index) => {
+      const x = index * step;
+      const clamped = Math.max(0, Math.min(100, toNumber(point)));
+      const y = height - (clamped / 100) * height;
+      return `${index === 0 ? "M" : "L"} ${x.toFixed(2)} ${y.toFixed(2)}`;
+    })
+    .join(" ");
+}
+
+function sparklineAreaPath(points, width, height) {
+  if (!points.length) return "";
+  if (points.length === 1) {
+    const clamped = Math.max(0, Math.min(100, toNumber(points[0])));
+    const y = height - (clamped / 100) * height;
+    return `M 0 ${height.toFixed(2)} L 0 ${y.toFixed(2)} L ${width.toFixed(2)} ${y.toFixed(2)} L ${width.toFixed(2)} ${height.toFixed(
+      2
+    )} Z`;
+  }
+
+  const step = width / (points.length - 1);
+  const curve = points
+    .map((point, index) => {
+      const x = index * step;
+      const clamped = Math.max(0, Math.min(100, toNumber(point)));
+      const y = height - (clamped / 100) * height;
+      return `${index === 0 ? "L" : "L"} ${x.toFixed(2)} ${y.toFixed(2)}`;
+    })
+    .join(" ");
+  return `M 0 ${height.toFixed(2)} ${curve} L ${width.toFixed(2)} ${height.toFixed(2)} Z`;
+}
+
+function renderDonutTrends(vm) {
+  const rows = Array.isArray(vm.donutTrendRows) ? vm.donutTrendRows : [];
+  if (!rows.length) {
+    el.donutTrends.innerHTML = '<p class="idb-empty">No trend data.</p>';
     return;
   }
-  el.highlightsList.innerHTML = vm.highlights.map((line) => `<li>${safeText(line)}</li>`).join("");
+
+  const width = 140;
+  const height = 18;
+  el.donutTrends.innerHTML = rows
+    .map((row) => {
+      const path = sparklinePath(row.points, width, height);
+      const areaPath = sparklineAreaPath(row.points, width, height);
+      const delta = toNumber(row.delta_pp);
+      const deltaClass = delta > 0.1 ? "up" : delta < -0.1 ? "down" : "flat";
+      const deltaText = `${delta > 0 ? "+" : ""}${delta.toFixed(1)}pp`;
+      return `<div class="idb-donut-trend-row"><span class="idb-donut-trend-label">${safeText(
+        row.label
+      )}</span><svg class="idb-donut-trend-spark" viewBox="0 0 ${safeText(width)} ${safeText(
+        height
+      )}" preserveAspectRatio="none" aria-hidden="true"><path class="idb-donut-trend-track" d="M 0 ${safeText(
+        (height / 2).toFixed(2)
+      )} L ${safeText(width.toFixed(2))} ${safeText(
+        (height / 2).toFixed(2)
+      )}"></path><path class="idb-donut-trend-area" style="fill:${safeText(row.color)}" d="${safeText(
+        areaPath
+      )}"></path><path class="idb-donut-trend-line" style="stroke:${safeText(row.color)}" d="${safeText(
+        path
+      )}"></path></svg><span class="idb-donut-trend-delta ${safeText(deltaClass)}">${safeText(deltaText)}</span></div>`;
+    })
+    .join("");
 }
 
 function binCitationPoints(points, binDegrees = 2) {
@@ -1850,7 +2111,7 @@ async function renderMap(vm, token) {
           },
         },
       });
-      el.mapHint.textContent = "Fallback scatter view for citation geography (topojson unavailable).";
+      el.mapHint.textContent = "Fallback scatter for citation geography.";
       return;
     }
   }
@@ -1898,7 +2159,7 @@ async function renderMap(vm, token) {
     el.mapHint.textContent = vm.mapHint;
   } catch {
     renderMapFallbackBar(vm.mapMentionCountries, { logX: true });
-    el.mapHint.textContent = "Fallback country bar view (log scale, topojson unavailable).";
+    el.mapHint.textContent = "Fallback country bars (log scale).";
   }
 }
 
@@ -2004,15 +2265,11 @@ function renderReachMatrix(vm) {
 
   const summary = vm.reachMatrixSummary || {};
   const coveragePct = Math.round(toNumber(summary.ranked_coverage_rate) * 100);
-  let hint = `Showing top ${fmtNumber(rows.length)} outlets by impact score. Matched ${fmtNumber(summary.mentions_matched_any)} of ${fmtNumber(
+  let hint = `Top ${fmtNumber(rows.length)} outlets by impact score. Reach matched for ${fmtNumber(summary.mentions_matched_any)} of ${fmtNumber(
     summary.mentions_total
-  )} news mentions to reach data.`;
-  if (toNumber(summary.mentions_excluded_syndication) > 0) {
-    hint += ` Excluded ${fmtNumber(summary.mentions_excluded_syndication)} syndicated mentions.`;
-  }
-  hint += ` Ranked coverage in charted set: ${coveragePct}%.`;
+  )} news mentions (${coveragePct}% chart coverage).`;
   if (toNumber(summary.missing_mentions) > 0) {
-    hint += ` Missing domain/reach rows for ${fmtNumber(summary.missing_mentions)} mentions.`;
+    hint += ` Missing reach rows: ${fmtNumber(summary.missing_mentions)}.`;
   }
   el.reachMatrixHint.textContent = hint;
 }
@@ -2164,14 +2421,21 @@ function renderImpressionsPanel(vm) {
   const totalMid = fmtCompactNumber(summary.total_mid_impressions || 0);
   const totalHigh = fmtCompactNumber(summary.total_high_impressions || 0);
 
-  el.impressionsEstimateHint.textContent = `Top ${fmtNumber(rows.length)} outlets (same order as impact ranking). Charted-set modeled impressions: ${totalLow} - ${totalHigh} (mid ${totalMid}). Model: visits = ${
-    IMPRESSION_MODEL.visits_at_rank_1 / 1_000_000
-  }M * rank^-${IMPRESSION_MODEL.rank_exponent}; per-mention share ${IMPRESSION_MODEL.share_low * 100}%-${
-    IMPRESSION_MODEL.share_high * 100
-  }%.`;
+  el.impressionsEstimateHint.textContent = `Top ${fmtNumber(rows.length)} outlets by modeled impressions. Chart total: ${totalLow} - ${totalHigh} (mid ${totalMid}).`;
 }
 
 function coverageRowsForTab(vm) {
+  if (state.activeCoverageTab === "major_outlets") {
+    return vm.majorOutlets.slice(0, 14).map((row) => ({
+      title: row.outlet,
+      subtitle: `Prominence ${row.prominence_score.toFixed(3)} • Confidence ${row.confidence.toFixed(2)} • Stories ${fmtNumber(
+        row.unique_stories
+      )} • Years ${fmtNumber(row.persistence_years)}`,
+      count: row.mentions,
+      url: "",
+    }));
+  }
+
   if (state.activeCoverageTab === "outlets") {
     return vm.outlets.slice(0, 14).map((row) => ({
       title: row.outlet,
@@ -2386,6 +2650,23 @@ function renderMethod() {
     : "<li>None</li>";
 }
 
+function renderTimelinePanelOnly() {
+  const vm = deriveViewModel();
+  renderTimeline(vm);
+}
+
+async function renderMapPanelOnly() {
+  renderToken += 1;
+  const token = renderToken;
+  const vm = deriveViewModel();
+  await renderMap(vm, token);
+}
+
+function renderCoveragePanelOnly() {
+  const vm = deriveViewModel();
+  renderCoverage(vm);
+}
+
 async function renderAll() {
   renderToken += 1;
   const token = renderToken;
@@ -2400,14 +2681,9 @@ async function renderAll() {
   renderReachMatrix(vm);
   renderImpressionsPanel(vm);
   renderCoverage(vm);
-  if (!el.donutDetails || el.donutDetails.open) {
-    renderDonut(vm);
-    renderHighlights(vm);
-  }
-  if (!el.mapDetails || el.mapDetails.open) {
-    await renderMap(vm, token);
-    if (token !== renderToken) return;
-  }
+  renderDonut(vm);
+  await renderMap(vm, token);
+  if (token !== renderToken) return;
   renderPreviewTable();
 }
 
@@ -2463,14 +2739,6 @@ function initControls() {
   el.previewSearch.addEventListener("input", () => {
     state.previewSearch = el.previewSearch.value;
     renderPreviewTable();
-  });
-
-  el.donutDetails?.addEventListener("toggle", () => {
-    void renderAll();
-  });
-
-  el.mapDetails?.addEventListener("toggle", () => {
-    void renderAll();
   });
 }
 

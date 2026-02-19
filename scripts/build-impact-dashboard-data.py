@@ -18,6 +18,7 @@ from __future__ import annotations
 import argparse
 import csv
 import difflib
+import io
 import json
 import re
 import sys
@@ -32,6 +33,8 @@ from urllib.parse import unquote, urlparse
 
 SOCIAL_TYPES = {"X Post", "Bluesky post", "Facebook post", "Reddit post", "Google+ post"}
 MEDIA_REFERENCE_TYPES = {"News story", "Blog post", "Video", "Podcast episode", "Wikipedia page", "Q&A post"}
+TWITTER_SNOWFLAKE_EPOCH_MS = 1288834974657
+X_STATUS_URL_PREFIX = "https://x.com/i/web/status/"
 NON_RESEARCH_TITLE_PATTERNS = [
     re.compile(r"^acknowledg(?:e)?ment to reviewers"),
     re.compile(r"^peer review report for"),
@@ -160,6 +163,59 @@ def parse_maybe_date(value: str) -> Optional[datetime]:
         except ValueError:
             continue
     return None
+
+
+def read_altmetric_csv_rows(csv_path: Path) -> Tuple[List[Dict], str]:
+    raw = csv_path.read_bytes()
+    for encoding in ("utf-8-sig", "cp1252", "latin-1"):
+        try:
+            text = raw.decode(encoding)
+            rows = list(csv.DictReader(io.StringIO(text)))
+            return rows, encoding
+        except UnicodeDecodeError:
+            continue
+
+    text = raw.decode("utf-8", errors="replace")
+    rows = list(csv.DictReader(io.StringIO(text)))
+    return rows, "utf-8-replace"
+
+
+def parse_x_snowflake_date(external_id: str) -> Optional[datetime]:
+    value = (external_id or "").strip()
+    if not value or not value.isdigit():
+        return None
+
+    try:
+        snowflake = int(value)
+    except ValueError:
+        return None
+
+    try:
+        timestamp_ms = (snowflake >> 22) + TWITTER_SNOWFLAKE_EPOCH_MS
+        dt_utc = datetime.fromtimestamp(timestamp_ms / 1000, tz=timezone.utc)
+    except (OverflowError, OSError, ValueError):
+        return None
+
+    year = dt_utc.year
+    if year < 2006 or year > datetime.now(timezone.utc).year + 1:
+        return None
+
+    return dt_utc.replace(tzinfo=None)
+
+
+def infer_mention_date(mention_type: str, external_id: str) -> Optional[datetime]:
+    if mention_type == "X Post":
+        return parse_x_snowflake_date(external_id)
+    return None
+
+
+def infer_mention_url(mention_type: str, external_id: str) -> str:
+    if mention_type != "X Post":
+        return ""
+    value = (external_id or "").strip()
+    if not value.isdigit():
+        return ""
+    return f"{X_STATUS_URL_PREFIX}{value}"
 
 
 def month_key(dt: datetime) -> str:
@@ -529,8 +585,7 @@ def load_altmetric(altmetric_dir: Path, doi_to_pub: Dict[str, Publication]) -> T
     unmatched_by_doi: List[Dict] = []
 
     for csv_path in sorted(altmetric_dir.glob("*.csv")):
-        with csv_path.open("r", encoding="utf-8", errors="replace", newline="") as f:
-            rows = list(csv.DictReader(f))
+        rows, source_encoding = read_altmetric_csv_rows(csv_path)
 
         if not rows:
             continue
@@ -559,7 +614,10 @@ def load_altmetric(altmetric_dir: Path, doi_to_pub: Dict[str, Publication]) -> T
 
         for idx, r in enumerate(rows, start=1):
             mtype = clean_free_text(r.get("Mention Type", "")) or "Unknown"
+            external_id = clean_free_text(r.get("External Mention ID", ""))
             mdate = parse_maybe_date(r.get("Mention Date", ""))
+            if not mdate:
+                mdate = infer_mention_date(mtype, external_id)
             has_date = mdate is not None
             if has_date:
                 dated_mentions += 1
@@ -567,7 +625,22 @@ def load_altmetric(altmetric_dir: Path, doi_to_pub: Dict[str, Publication]) -> T
                 undated_mentions += 1
             type_counts[mtype] += 1
 
-            mention_url = clean_free_text(r.get("Mention URL", ""))
+            mention_url_raw = clean_free_text(r.get("Mention URL", ""))
+            inferred_mention_url = infer_mention_url(mtype, external_id) if not mention_url_raw else ""
+            mention_url = mention_url_raw or inferred_mention_url
+            details_page_url = clean_free_text(r.get("Details Page URL", ""))
+
+            # Keep domain clustering tied to direct mention URLs only (real or inferred X status URL).
+            mention_link = mention_url or details_page_url
+            if mention_url_raw:
+                mention_link_source = "mention_url"
+            elif inferred_mention_url:
+                mention_link_source = "inferred_x_status"
+            elif details_page_url:
+                mention_link_source = "altmetric_details_url"
+            else:
+                mention_link_source = ""
+
             domain = domain_from_url(mention_url)
 
             mention = {
@@ -587,7 +660,12 @@ def load_altmetric(altmetric_dir: Path, doi_to_pub: Dict[str, Publication]) -> T
                 "mention_title": clean_free_text(r.get("Mention Title", "")),
                 "country": normalize_country(clean_free_text(r.get("Country", ""))),
                 "mention_url": mention_url,
-                "external_id": clean_free_text(r.get("External Mention ID", "")),
+                "mention_url_raw": mention_url_raw,
+                "inferred_mention_url": inferred_mention_url,
+                "details_page_url": details_page_url,
+                "mention_link": mention_link,
+                "mention_link_source": mention_link_source,
+                "external_id": external_id,
                 "sentiment": clean_free_text(r.get("Sentiment Analysis", "")),
                 "attention_score": attention_score,
                 "domain": domain,
@@ -606,6 +684,7 @@ def load_altmetric(altmetric_dir: Path, doi_to_pub: Dict[str, Publication]) -> T
             "mentions": len(rows),
             "dated_mentions": dated_mentions,
             "undated_mentions": undated_mentions,
+            "source_encoding": source_encoding,
             "mention_type_counts": dict(type_counts),
         }
 
@@ -1361,12 +1440,21 @@ def build_artifacts(
                 "super_category": m.get("super_category", ""),
                 "mention_date": m.get("mention_date", ""),
                 "has_date": m.get("has_date", False),
+                "year": m.get("year", ""),
+                "year_month": m.get("year_month", ""),
+                "year_quarter": m.get("year_quarter", ""),
                 "outlet": m.get("outlet", ""),
                 "outlet_raw": m.get("outlet_or_author", ""),
                 "domain": m.get("domain", ""),
                 "country": m.get("country", ""),
                 "mention_title": m.get("mention_title", ""),
                 "mention_url": m.get("mention_url", ""),
+                "mention_url_raw": m.get("mention_url_raw", ""),
+                "inferred_mention_url": m.get("inferred_mention_url", ""),
+                "details_page_url": m.get("details_page_url", ""),
+                "mention_link": m.get("mention_link", ""),
+                "mention_link_source": m.get("mention_link_source", ""),
+                "external_id": m.get("external_id", ""),
                 "sentiment": m.get("sentiment", ""),
                 "attention_score": m.get("attention_score", 0),
                 "source_file": m.get("source_file", ""),

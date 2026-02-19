@@ -65,6 +65,18 @@ Historical Tranco lookup guardrails (default behavior):
 
 Dataset catalog links in `impact_dashboard.json` are absolute site paths under `/data/impact/exports/`.
 
+Altmetric parse normalization (in `scripts/build-impact-dashboard-data.py`):
+
+- CSV decode order is `utf-8-sig`, then `cp1252`, then `latin-1`, with UTF-8 replacement fallback only if all fail.
+- `Mention Date` is parsed directly when present; for `X Post`, missing dates are inferred from `External Mention ID` (Twitter/X snowflake timestamp).
+- `mention_url` is emitted as the best direct link (raw `Mention URL` or inferred `https://x.com/i/web/status/<id>` for X).
+- Exports retain provenance fields for downstream QA/use:
+  - `mention_url_raw`
+  - `inferred_mention_url`
+  - `details_page_url` (Altmetric details page)
+  - `mention_link` (best available display link)
+  - `mention_link_source` (`mention_url`, `inferred_x_status`, `altmetric_details_url`)
+
 ## Build Hooks
 
 Local preview hook:

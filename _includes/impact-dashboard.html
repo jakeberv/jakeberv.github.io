@@ -21,31 +21,20 @@
     <section id="kpiRow" class="idb-kpis"></section>
 
     <section class="idb-top-insights">
-      <article class="card">
-        <details id="donutDetails" open>
-          <summary>Channels & highlights</summary>
-          <div class="idb-subcard">
-            <h2>Attention mix</h2>
-            <p class="idb-help">Share by Social, News, Reference, and Commentary</p>
-            <div class="idb-donut-wrap"><canvas id="donutChart"></canvas></div>
-            <h3 class="idb-subhead">Highlights</h3>
-            <ul id="highlightsList" class="idb-bullets"></ul>
-          </div>
-        </details>
+      <article class="card idb-donut-card">
+        <h2>Attention mix</h2>
+        <p class="idb-help">Share of Social, News, Reference, and Commentary.</p>
+        <div class="idb-donut-wrap"><canvas id="donutChart"></canvas></div>
+        <div id="donutTrends" class="idb-donut-trends"></div>
       </article>
 
       <article class="card">
-        <details id="mapDetails" open>
-          <summary>Global reach</summary>
-          <div class="idb-subcard">
-            <div class="idb-map-header">
-              <h2>Global reach</h2>
-              <div id="mapModeButtons" class="idb-tabs"></div>
-            </div>
-            <div class="idb-map-wrap"><canvas id="mapChart"></canvas></div>
-            <p id="mapHint" class="idb-help"></p>
-          </div>
-        </details>
+        <div class="idb-map-header">
+          <h2>Global reach</h2>
+          <div id="mapModeButtons" class="idb-tabs"></div>
+        </div>
+        <div class="idb-map-wrap"><canvas id="mapChart"></canvas></div>
+        <p id="mapHint" class="idb-help"></p>
       </article>
     </section>
 
@@ -55,7 +44,7 @@
           <h2>Impact over time</h2>
           <div id="timelineModeButtons" class="idb-tabs" role="tablist" aria-label="Timeline mode"></div>
         </div>
-        <p id="timelineLead" class="idb-help">Yearly view of citations and press coverage.</p>
+        <p id="timelineLead" class="idb-help">Citations and coverage over time.</p>
         <div class="idb-chart-wrap"><canvas id="timelineChart"></canvas></div>
         <p id="timelineHint" class="idb-help"></p>
       </article>
@@ -72,7 +61,7 @@
         <div class="idb-panel-head">
           <h2>Outlet impact ranking</h2>
         </div>
-        <p class="idb-help">Top normalized outlets by impact score (mentions x publish-time reach). Syndication domains are excluded.</p>
+        <p class="idb-help">Normalized outlet impact score (mentions x reach).</p>
         <div class="idb-chart-wrap idb-reach-matrix-wrap"><canvas id="reachMatrixChart"></canvas></div>
         <p id="reachMatrixHint" class="idb-help"></p>
       </article>
@@ -81,40 +70,45 @@
         <div class="idb-panel-head">
           <h2>Estimated Impressions</h2>
         </div>
-        <p class="idb-help">Modeled potential impressions by outlet (low-mid-high). Line span = low-high, dot = mid.</p>
+        <p class="idb-help">Potential impressions by outlet (low-mid-high).</p>
         <div class="idb-chart-wrap idb-impressions-wrap"><canvas id="impressionsEstimateChart"></canvas></div>
         <p id="impressionsEstimateHint" class="idb-help"></p>
       </article>
     </section>
 
     <section class="idb-controls card">
-      <div class="idb-controls-primary">
-        <div class="idb-field">
-          <label for="channelSelect">Channel</label>
-          <select id="channelSelect"></select>
-        </div>
+      <details id="filtersDetails" class="idb-filters">
+        <summary>Filters</summary>
+        <div class="idb-controls-body">
+          <div class="idb-controls-primary">
+            <div class="idb-field">
+              <label for="channelSelect">Channel</label>
+              <select id="channelSelect"></select>
+            </div>
 
-        <div class="idb-field">
-          <label for="publicationSelect">Publication</label>
-          <select id="publicationSelect"></select>
-        </div>
-      </div>
-
-      <details id="advancedFilters" class="idb-advanced">
-        <summary>Advanced filters</summary>
-        <div class="idb-controls-advanced">
-          <div class="idb-field">
-            <label for="granularitySelect">Granularity</label>
-            <select id="granularitySelect"></select>
-          </div>
-
-          <div class="idb-field idb-range-field">
-            <label id="yearRangeLabel" for="yearMin">Years</label>
-            <div class="idb-range-wrap">
-              <input id="yearMin" type="range" step="1">
-              <input id="yearMax" type="range" step="1">
+            <div class="idb-field">
+              <label for="publicationSelect">Publication</label>
+              <select id="publicationSelect"></select>
             </div>
           </div>
+
+          <details id="advancedFilters" class="idb-advanced">
+            <summary>Advanced filters</summary>
+            <div class="idb-controls-advanced">
+              <div class="idb-field">
+                <label for="granularitySelect">Granularity</label>
+                <select id="granularitySelect"></select>
+              </div>
+
+              <div class="idb-field idb-range-field">
+                <label id="yearRangeLabel" for="yearMin">Years</label>
+                <div class="idb-range-wrap">
+                  <input id="yearMin" type="range" step="1">
+                  <input id="yearMax" type="range" step="1">
+                </div>
+              </div>
+            </div>
+          </details>
         </div>
       </details>
     </section>
