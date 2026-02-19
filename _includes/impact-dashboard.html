@@ -22,8 +22,11 @@
 
     <section class="idb-top-insights">
       <article class="card idb-donut-card">
-        <h2>Attention mix</h2>
-        <p class="idb-help">Share of Social, News, Reference, and Commentary.</p>
+        <div class="idb-panel-head idb-donut-head">
+          <h2>Attention mix</h2>
+          <div id="donutScopeButtons" class="idb-tabs idb-donut-scope-tabs" role="tablist" aria-label="Attention mix scope"></div>
+        </div>
+        <p class="idb-help">Share by channel (toggle includes/excludes Social).</p>
         <div class="idb-donut-wrap"><canvas id="donutChart"></canvas></div>
         <div id="donutTrends" class="idb-donut-trends"></div>
       </article>

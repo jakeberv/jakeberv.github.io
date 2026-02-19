@@ -40,6 +40,11 @@ const COVERAGE_TAB_OPTIONS = [
   { key: "recent", label: "Recent news" },
 ];
 
+const DONUT_SCOPE_OPTIONS = [
+  { key: "all", label: "All channels" },
+  { key: "exclude_social", label: "Exclude social" },
+];
+
 const PREVIEW_OPTIONS = [
   { key: "mentions", label: "Mentions" },
   { key: "news", label: "News" },
@@ -86,6 +91,7 @@ const MIX_BUCKETS = [
 
 const state = {
   channel: "all",
+  donutScope: "all",
   publication: "all",
   timelineMode: "scholarly_vs_press",
   granularity: "month",
@@ -137,6 +143,7 @@ const el = {
 
   donutChart: q("#donutChart"),
   donutTrends: q("#donutTrends"),
+  donutScopeButtons: q("#donutScopeButtons"),
 
   mapModeButtons: q("#mapModeButtons"),
   mapChart: q("#mapChart"),
@@ -292,6 +299,17 @@ function mentionMixBucket(mention) {
 
 function emptyMixTotals() {
   return { social: 0, news: 0, reference: 0, commentary: 0 };
+}
+
+function donutBucketsForScope() {
+  if (state.donutScope === "exclude_social") {
+    return MIX_BUCKETS.filter((bucket) => bucket.key !== "social");
+  }
+  return MIX_BUCKETS;
+}
+
+function mixBucketSum(row, buckets) {
+  return buckets.reduce((sum, bucket) => sum + toNumber(row?.[bucket.key]), 0);
 }
 
 function mentionWeight(mention) {
@@ -1371,14 +1389,15 @@ function aggregatePublications(mentions) {
   }));
 }
 
-function buildDonutTrendRows(modeALabels, modeARowByLabel) {
+function buildDonutTrendRows(modeALabels, modeARowByLabel, buckets) {
+  const activeBuckets = Array.isArray(buckets) && buckets.length ? buckets : MIX_BUCKETS;
   const maxPoints = state.granularity === "month" ? 24 : state.granularity === "quarter" ? 16 : 12;
   const labels = modeALabels.slice(-maxPoints);
 
-  return MIX_BUCKETS.map((bucket) => {
+  return activeBuckets.map((bucket) => {
     const points = labels.map((label) => {
       const row = modeARowByLabel.get(label);
-      const total = toNumber(row?.total);
+      const total = mixBucketSum(row, activeBuckets);
       if (total <= 0) return 0;
       return (toNumber(row?.[bucket.key]) / total) * 100;
     });
@@ -1439,6 +1458,7 @@ function deriveViewModel() {
   const modeARows = buildTimelineRowsFromMentions(scopeMentionsNoChannel);
   const modeALabels = modeARows.length ? modeARows.map((row) => row.label) : labels;
   const modeARowByLabel = new Map(modeARows.map((row) => [row.label, row]));
+  const donutBuckets = donutBucketsForScope();
   const modeAStacked = MIX_BUCKETS.map((bucket) => ({
     key: bucket.key,
     label: bucket.label,
@@ -1446,7 +1466,7 @@ function deriveViewModel() {
     data: modeALabels.map((label) => toNumber(modeARowByLabel.get(label)?.[bucket.key] || 0)),
   })).filter((ds) => ds.data.some((value) => value > 0));
   const modeATotalLine = modeALabels.map((label) => toNumber(modeARowByLabel.get(label)?.total || 0));
-  const donutTrendRows = buildDonutTrendRows(modeALabels, modeARowByLabel);
+  const donutTrendRows = buildDonutTrendRows(modeALabels, modeARowByLabel, donutBuckets);
 
   const yearLabels = [];
   for (let y = state.yearRange[0]; y <= state.yearRange[1]; y++) {
@@ -1466,6 +1486,9 @@ function deriveViewModel() {
   for (const m of scopeMentionsNoChannel) {
     channelTotals[mentionMixBucket(m)] += 1;
   }
+  const donutChannelTotals = Object.fromEntries(
+    donutBuckets.map((bucket) => [bucket.key, toNumber(channelTotals[bucket.key])])
+  );
 
   const publications = aggregatePublications(filteredMentions);
   const outlets = aggregateOutlets(filteredMentions);
@@ -1598,6 +1621,8 @@ function deriveViewModel() {
     timelineHint,
 
     channelTotals,
+    donutBuckets,
+    donutChannelTotals,
     donutTrendRows,
     mapHint,
     mapCitationPoints: dataModel.citationPoints,
@@ -1638,6 +1663,19 @@ function renderControls() {
     setActiveButtonGroupKey(el.mapModeButtons, key);
     void renderMapPanelOnly();
   });
+
+  renderButtonGroup(
+    el.donutScopeButtons,
+    DONUT_SCOPE_OPTIONS,
+    state.donutScope,
+    (key) => {
+      if (key === state.donutScope) return;
+      state.donutScope = key;
+      setActiveButtonGroupKey(el.donutScopeButtons, key);
+      renderDonutPanelOnly();
+    },
+    { role: "tab", ariaSelected: true }
+  );
 
   renderButtonGroup(el.timelineModeButtons, TIMELINE_MODE_OPTIONS, state.timelineMode, (key) => {
     if (key === state.timelineMode) return;
@@ -1797,10 +1835,10 @@ function renderTimeline(vm) {
 }
 
 function renderDonut(vm) {
-  const segments = MIX_BUCKETS.map((bucket) => ({
+  const segments = vm.donutBuckets.map((bucket) => ({
     key: bucket.key,
     label: bucket.label,
-    value: toNumber(vm.channelTotals[bucket.key]),
+    value: toNumber(vm.donutChannelTotals[bucket.key]),
     color: bucket.donut,
   })).filter((seg) => seg.value > 0);
 
@@ -2665,6 +2703,11 @@ async function renderMapPanelOnly() {
 function renderCoveragePanelOnly() {
   const vm = deriveViewModel();
   renderCoverage(vm);
+}
+
+function renderDonutPanelOnly() {
+  const vm = deriveViewModel();
+  renderDonut(vm);
 }
 
 async function renderAll() {

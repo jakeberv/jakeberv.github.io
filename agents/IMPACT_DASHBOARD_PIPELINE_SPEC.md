@@ -125,6 +125,7 @@ World topojson fetch order in client:
 ## Notes
 
 - `Mention countries` uses a log-scaled choropleth ramp to reduce US dominance.
+- `Attention mix` includes a local scope toggle (`All channels` vs `Exclude social`) that only re-renders the donut + sparkline strip.
 - `Citing authors (WOS)` remains unchanged as a bubble map.
 - `Outlet impact ranking` uses a horizontal bar chart:
   - Rank: top normalized outlets by impact score (`mentions * mean publish-time reach / 100`)

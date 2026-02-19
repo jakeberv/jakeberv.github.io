@@ -346,6 +346,21 @@
   row-gap: 0.32rem;
 }
 
+.impact-dashboard .idb-donut-head {
+  align-items: flex-start;
+}
+
+.impact-dashboard .idb-donut-scope-tabs {
+  justify-content: flex-end;
+  gap: 0.24rem;
+}
+
+.impact-dashboard .idb-donut-scope-tabs .idb-tab {
+  padding: 0.16rem 0.56rem;
+  font-size: 0.74rem;
+  line-height: 1.2;
+}
+
 .impact-dashboard .idb-donut-card > .idb-help {
   margin-top: 0;
 }
@@ -648,6 +663,15 @@
     height: auto;
     min-height: 0;
     overflow: visible;
+  }
+
+  .impact-dashboard .idb-donut-head {
+    flex-wrap: wrap;
+  }
+
+  .impact-dashboard .idb-donut-scope-tabs {
+    width: 100%;
+    justify-content: flex-start;
   }
 
 }
