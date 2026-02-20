@@ -1,7 +1,7 @@
-version: 4
+version: 6
 canonical_name: research_method_tags
 description: Canonical, method-first tag registry for landing-page summaries, publication tagging, faceted filtering, and method crosswalks.
-last_updated: 2026-02-19
+last_updated: 2026-02-20
 
 registry_rules:
   source_of_truth: true
@@ -23,6 +23,10 @@ registry_rules:
     - model_comparison
     - validation
     - integration
+  validation_policy:
+    deprecated_aliases: disallow
+    legacy_method_family_links: disallow
+    tag_constraints: error
 
 method_family_order:
   - phylogenetic_inference
@@ -49,6 +53,7 @@ method_families:
     short_label: Time and Rate Inference
     description: Methods for dating clades and modeling rate variation across lineages and time.
     example_tags: [divergence_time_estimation, fossil_calibration, fossilized_birth_death_dating]
+    requires_any_tags: [divergence_time_estimation, molecular_clock_modeling, fossil_calibration, fossilized_birth_death_dating, tip_dating_inference, penalized_likelihood_dating, clock_model_partitioning]
   - id: comparative_trait_modeling
     label: Comparative Trait Modeling
     short_label: Comparative Modeling
@@ -67,7 +72,7 @@ method_families:
   - id: diversification_inference
     label: Diversification Dynamics Inference
     short_label: Diversification
-    description: Methods for speciation-extinction dynamics and macroevolutionary rate variation.
+    description: Methods for speciation-extinction dynamics and diversification rate variation.
     example_tags: [speciation_extinction_modeling, time_heterogeneous_diversification, macroevolutionary_rate_shift_analysis]
   - id: model_selection_uncertainty
     label: Model Selection and Uncertainty Quantification
@@ -209,6 +214,7 @@ tags:
     data_modalities: [sequence_data]
     aliases: [clock models, relaxed clocks]
     keywords: [molecular clock, rate models]
+    usage_notes: Use when strict/relaxed clock formulations or lineage-rate priors are explicitly estimated or compared.
     priority: core
   - id: fossil_calibration
     label: Fossil Calibration Frameworks
@@ -319,6 +325,24 @@ tags:
     aliases: [trait correlation models]
     keywords: [correlated evolution, trait association]
     priority: supporting
+  - id: phylogenetic_hierarchical_modeling
+    label: Phylogenetic Hierarchical Modeling
+    method_family: comparative_trait_modeling
+    scope: multi_scale
+    analysis_type: inference
+    data_modalities: [phenotypic_data, sequence_data, ecological_data]
+    aliases: [phylogenetic mixed models, phylogenetic GLMM, Bayesian phylogenetic hierarchical models]
+    keywords: [hierarchical model, phylogenetic random effects, phylogenetic GLMM, Bayesian hierarchical]
+    priority: supporting
+  - id: trait_transition_rate_shift_analysis
+    label: Trait-Transition Rate-Shift Analysis
+    method_family: comparative_trait_modeling
+    scope: deep_time
+    analysis_type: inference
+    data_modalities: [phenotypic_data, sequence_data, fossil_data]
+    aliases: [character transition tempo analysis, transition-rate-through-time analysis]
+    keywords: [trait transition rates, character tempo, transition rate shifts]
+    priority: supporting
   - id: pgls_phylogenetic_regression
     label: Phylogenetic Generalized Least Squares
     method_family: comparative_trait_modeling
@@ -364,6 +388,7 @@ tags:
     data_modalities: [sequence_data]
     aliases: [coalescent models]
     keywords: [coalescent, population history]
+    usage_notes: Use only when an explicit coalescent model or coalescent-derived estimator is fit (e.g., MSC frameworks, SVDquartets, *BEAST species trees).
     priority: core
   - id: population_structure_admixture
     label: Population Structure and Admixture Analysis
@@ -485,13 +510,14 @@ tags:
     keywords: [time heterogeneity, diversification rate shifts]
     priority: core
   - id: macroevolutionary_rate_shift_analysis
-    label: Macroevolutionary Rate-Shift Analysis
+    label: Diversification Rate-Shift Analysis
     method_family: diversification_inference
     scope: deep_time
     analysis_type: inference
     data_modalities: [sequence_data, fossil_data]
-    aliases: [rate shift detection]
-    keywords: [rate shifts, tempo and mode]
+    aliases: [macroevolutionary rate-shift analysis, rate shift detection]
+    keywords: [diversification rate shifts, speciation rates, extinction rates]
+    usage_notes: Reserve for diversification-rate analyses. For character-transition tempo through time, prefer trait_transition_rate_shift_analysis.
     priority: supporting
   - id: state_dependent_diversification_tests
     label: State-Dependent Diversification Tests
@@ -538,6 +564,8 @@ tags:
     data_modalities: [sequence_data, phenotypic_data]
     aliases: [credible-interval summarization]
     keywords: [uncertainty, posterior intervals, confidence]
+    requires_any: [bayesian_phylogenetic_inference, divergence_time_estimation, phylogenetic_hierarchical_modeling]
+    usage_notes: Use when Bayesian posterior distributions/credible intervals are explicitly summarized for focal parameters or ancestral states.
     priority: core
   - id: sensitivity_analysis
     label: Sensitivity Analysis
@@ -576,6 +604,33 @@ tags:
     aliases: [model identifiability]
     keywords: [identifiability, power, inferential robustness]
     priority: core
+  - id: temporal_sampling_threshold_analysis
+    label: Temporal Sampling-Threshold Analysis
+    method_family: simulation_and_validation
+    scope: multi_scale
+    analysis_type: validation
+    data_modalities: [phenotypic_data, ecological_data]
+    aliases: [minimum-time-series threshold analysis]
+    keywords: [sampling duration, minimum years, trend recovery]
+    priority: supporting
+  - id: missing_data_imputation_validation
+    label: Missing-Data Imputation Validation
+    method_family: simulation_and_validation
+    scope: multi_scale
+    analysis_type: validation
+    data_modalities: [phenotypic_data, sequence_data]
+    aliases: [imputation robustness testing]
+    keywords: [missing data, imputation, cross-validation, RMSE]
+    priority: supporting
+  - id: collection_coverage_gap_analysis
+    label: Collection Coverage and Gap Analysis
+    method_family: simulation_and_validation
+    scope: multi_scale
+    analysis_type: integration
+    data_modalities: [geographic_data, collection_metadata, phenotypic_data]
+    aliases: [specimen coverage mapping]
+    keywords: [coverage gaps, collection bias, spatial sampling]
+    priority: supporting
   - id: posterior_predictive_checks
     label: Posterior Predictive Checks
     method_family: simulation_and_validation
@@ -814,6 +869,15 @@ tags:
     aliases: [eco-evolutionary synthesis]
     keywords: [ecology, life history, evolutionary rates]
     priority: supporting
+  - id: community_resource_curation
+    label: Community Resource Curation and Maintenance
+    method_family: integrative_synthesis
+    scope: multi_scale
+    analysis_type: integration
+    data_modalities: [software_metadata, literature_metadata, taxonomy_metadata]
+    aliases: [task view curation, software ecosystem curation]
+    keywords: [community resource, package curation, methods catalog, maintenance]
+    priority: supporting
 
 display_groups:
   landing_page_method_families:
@@ -879,9 +943,11 @@ quick_tag_sets:
     - phylogenetic_comparative_methods
     - stochastic_character_mapping
     - pgls_phylogenetic_regression
+    - phylogenetic_hierarchical_modeling
     - bioacoustic_feature_analysis
     - behavioral_trait_evolution
     - ou_process_trait_models
+    - trait_transition_rate_shift_analysis
     - allometric_fossil_reconstruction
     - morphometric_analysis
     - vocalization_typology
@@ -914,3 +980,8 @@ software_to_tag_map:
   phytools:
     - phylogenetic_comparative_methods
     - pgls_phylogenetic_regression
+    - trait_transition_rate_shift_analysis
+  MCMCglmm:
+    - phylogenetic_hierarchical_modeling
+  Rphylopars:
+    - missing_data_imputation_validation

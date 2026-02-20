@@ -49,6 +49,25 @@ These are optional today, but recommended for **new** entries:
 - `tags` *(list of topical slugs from `_data/publication_tags.yml`; do not repeat `type` or venue/platform labels)*
 - `featured` *(boolean; for homepage/featured sections later)*
 
+### Research method linkage (required for new publications, recommended for legacy backfill)
+- Source of truth for method IDs: `_data/research_method_tags.yml`
+- `method_families` *(list of `method_families[].id` values)*
+- `method_tags` *(list of `tags[].id` values)*
+- Optional curation metadata:
+  - `method_tag_confidence` *(string; e.g., `high`, `medium`, `low`)*
+- Keep method-linkage fields additive; do not remove legacy `tags` (publication-topics) fields.
+- Strict validation:
+  - No deprecated-alias fallback; `method_tags` and `method_families` must use canonical IDs.
+  - Taxonomy constraints (family/tag alignment, co-tag requirements, and orphan family checks) are hard failures.
+- Validate with:
+  - `./scripts/validate_publication_method_tags.sh`
+  - Default policy mode fails untagged publications with `date >= 2026-02-19`
+  - Strict all-untagged mode: `./scripts/validate_publication_method_tags.sh --fail-on-untagged`
+  - Temporary migration bypass: `./scripts/validate_publication_method_tags.sh --allow-untagged`
+- Coverage report:
+  - `./scripts/report_publication_method_coverage.sh`
+  - JSON output: `./scripts/report_publication_method_coverage.sh --json`
+
 ### Canonical publication tags
 - Source of truth: `_data/publication_tags.yml`
 - `type` must use one of `type_values` in `_data/publication_tags.yml`
@@ -156,6 +175,11 @@ type: article                                    # article | preprint | chapter 
 tags: [TAG1, TAG2]                               # avoid repeating `type` in tags
 featured: false
 
+# Required for new entries: method linkage to canonical method taxonomy
+method_families: [phylogenetic_inference]        # IDs from _data/research_method_tags.yml method_families[].id
+method_tags: [maximum_likelihood_phylogenetics]  # IDs from _data/research_method_tags.yml tags[].id
+method_tag_confidence: medium                    # optional curation confidence
+
 authors:
   - "LAST, F. M."
   - "LAST, F. M."
@@ -189,7 +213,7 @@ Recommended citation: AUTHORS (YEAR). TITLE. JOURNAL. https://doi.org/DOI
 
 ---
 
-## Minimal example (works today)
+## Minimal example (legacy compatibility only)
 At minimum, this will render correctly in your current publications list:
 
 ```yaml

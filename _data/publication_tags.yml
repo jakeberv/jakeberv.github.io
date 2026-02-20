@@ -5,8 +5,8 @@
 # type: article
 # tags: [birds, phylogenomics, macroevolution]
 
-version: 1
-updated: 2026-02-18
+version: 2
+updated: 2026-02-20
 
 usage_rules:
   tags_per_item: "3-5 recommended"
@@ -160,6 +160,11 @@ tags:
     label: Software Tools
     group: methods
     description: Software resources or tooling outputs.
+
+  - slug: community-resource
+    label: Community Resource
+    group: contexts
+    description: Community-maintained infrastructure, catalogs, and shared research resources.
 
   - slug: migration
     label: Migration

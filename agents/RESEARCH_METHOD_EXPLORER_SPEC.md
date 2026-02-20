@@ -7,10 +7,18 @@ Status: Deferred (not currently live)
 - Preserve implementation ideas from the matrix prototype without keeping the complexity on the live page.
 
 ## Live implementation (current)
-- The live page uses a compact tag taxonomy explorer include:
-  - top-level method families
-  - click-to-expand sub-tags
-  - no card filtering and no custom JavaScript
+- The live page uses a compact coverage-first method explorer include:
+  - top-level method families displayed as overview cards with:
+    - paper count per family
+    - used-tags/total-tags count per family
+    - tag coverage percent per family
+  - click-to-expand family details
+  - sub-tags are sorted client-side by linked paper count (descending)
+  - default condensed view shows top tags only, with a `Show all tags` toggle
+  - each sub-tag expands to:
+    - representative linked papers (top 3, newest first)
+    - optional `View all tagged papers` expansion when more than 3 exist
+  - publication links are generated dynamically from `site.publications` via `method_tags`
 
 ## Deferred concept summary
 - A `method x research area` matrix with interactive filtering.

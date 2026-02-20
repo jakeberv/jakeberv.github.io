@@ -12,6 +12,31 @@ citation: '<FONT COLOR="#ff0000">Rivero-Vega, R. A.</FONT>, <b>Berv, J. S.</b>, 
 doi: "10.1101/2024.11.14.623638"
 type: preprint
 tags: [fishes, morphology, macroevolution]
+method_families:
+  - temporal_inference
+  - comparative_trait_modeling
+  - model_selection_uncertainty
+  - simulation_and_validation
+  - phenotypic_quantification
+  - integrative_synthesis
+method_tags:
+  - fossilized_birth_death_dating
+  - tip_dating_inference
+  - divergence_time_estimation
+  - phylogenetic_comparative_methods
+  - ancestral_state_reconstruction
+  - stochastic_character_mapping
+  - trait_evolution_modeling
+  - trait_transition_rate_shift_analysis
+  - model_selection_information_criteria
+  - posterior_uncertainty_quantification
+  - sensitivity_analysis
+  - forward_simulation_studies
+  - morphometric_analysis
+  - geometric_morphometrics
+  - deep_time_hypothesis_testing
+  - total_evidence_synthesis
+method_tag_confidence: high
 featured: false
 authors:
   - "Rivero-Vega, R. A."

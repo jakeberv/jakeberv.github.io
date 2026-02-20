@@ -1,5 +1,6 @@
 {% assign methods = include.methods | default: site.data.research_method_tags %}
-{% assign family_ids = methods.display_groups.landing_page_method_families | default: methods.method_family_order %}
+{% assign family_ids = methods.method_family_order | default: methods.display_groups.landing_page_method_families %}
+{% assign publications = site.publications | sort: "date" | reverse %}
 
 <section class="research-tag-explorer" aria-label="Methods taxonomy explorer">
   <style>
@@ -26,125 +27,373 @@
       line-height: 1.35;
     }
 
-    .research-tag-explorer__grid {
+    .research-method-overview {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 0.34rem;
     }
 
-    .research-tag-family {
+    .research-method-family {
       border: 1px solid rgba(20, 69, 58, 0.18);
       border-radius: 10px;
       background: rgba(255, 255, 255, 0.9);
       overflow: hidden;
     }
 
-    .research-tag-family summary {
+    .research-method-family > summary {
+      list-style: none;
+      cursor: pointer;
+      display: grid;
+      gap: 0.28rem;
+      padding: 0.42rem 0.5rem;
+      user-select: none;
+    }
+
+    .research-method-family > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .research-method-family > summary:focus-visible {
+      outline: 2px solid rgba(22, 104, 88, 0.6);
+      outline-offset: -2px;
+    }
+
+    .research-method-family__label-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.4rem;
+    }
+
+    .research-method-family__label {
+      min-width: 0;
+      font-size: 0.73rem;
+      line-height: 1.25;
+      font-weight: 700;
+      color: #164036;
+      overflow-wrap: anywhere;
+    }
+
+    .research-method-family__toggle {
+      flex: 0 0 auto;
+      width: 0.94rem;
+      height: 0.94rem;
+      border-radius: 999px;
+      border: 1px solid rgba(20, 69, 58, 0.2);
+      background: rgba(240, 249, 244, 0.95);
+      color: rgba(20, 69, 58, 0.9);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .research-method-family[open] .research-method-family__toggle {
+      font-size: 0;
+    }
+
+    .research-method-family[open] .research-method-family__toggle::before {
+      content: "-";
+      font-size: 0.7rem;
+      line-height: 1;
+    }
+
+    .research-method-family__stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.18rem;
+    }
+
+    .research-method-chip {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(20, 69, 58, 0.17);
+      border-radius: 999px;
+      background: rgba(233, 246, 239, 0.88);
+      color: rgba(20, 69, 58, 0.88);
+      padding: 0.08rem 0.36rem;
+      font-size: 0.57rem;
+      line-height: 1.2;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    .research-method-family__body {
+      padding: 0 0.48rem 0.48rem;
+      display: grid;
+      gap: 0.26rem;
+    }
+
+    .research-method-tag-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.22rem;
+    }
+
+    .research-method-tag-item {
+      margin: 0;
+      padding: 0;
+    }
+
+    .research-method-tag {
+      border: 1px solid rgba(20, 69, 58, 0.16);
+      border-radius: 8px;
+      background: rgba(247, 252, 248, 0.9);
+      overflow: hidden;
+    }
+
+    .research-method-tag > summary {
       list-style: none;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 0.45rem;
-      padding: 0.4rem 0.48rem;
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: #164036;
+      gap: 0.34rem;
+      padding: 0.24rem 0.38rem;
       user-select: none;
     }
 
-    .research-tag-family summary::-webkit-details-marker {
+    .research-method-tag > summary::-webkit-details-marker {
       display: none;
     }
 
-    .research-tag-family summary:focus-visible {
-      outline: 2px solid rgba(22, 104, 88, 0.6);
+    .research-method-tag > summary:focus-visible {
+      outline: 2px solid rgba(22, 104, 88, 0.52);
       outline-offset: -2px;
     }
 
-    .research-tag-family summary::after {
-      content: "+";
-      flex: 0 0 auto;
-      width: 0.94rem;
-      height: 0.94rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 999px;
-      font-size: 0.7rem;
-      font-weight: 700;
-      border: 1px solid rgba(20, 69, 58, 0.2);
-      background: rgba(240, 249, 244, 0.95);
-      color: rgba(20, 69, 58, 0.9);
-      line-height: 1;
-    }
-
-    .research-tag-family[open] summary::after {
-      content: "-";
-    }
-
-    .research-tag-family__count {
-      font-size: 0.62rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: rgba(20, 69, 58, 0.78);
-      border: 1px solid rgba(20, 69, 58, 0.16);
-      border-radius: 999px;
-      padding: 0.1rem 0.36rem;
-      background: rgba(233, 246, 239, 0.88);
-      line-height: 1.2;
-    }
-
-    .research-tag-family__tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.24rem;
-      padding: 0 0.48rem 0.48rem;
-    }
-
-    .research-tag-family__tag {
-      font-size: 0.64rem;
-      line-height: 1.1;
+    .research-method-tag__label {
+      min-width: 0;
+      font-size: 0.66rem;
+      line-height: 1.24;
       font-weight: 600;
       color: #1a4a3f;
-      border: 1px solid rgba(20, 69, 58, 0.16);
+      overflow-wrap: anywhere;
+    }
+
+    .research-method-chip--count {
+      min-width: 1.1rem;
+      justify-content: center;
+    }
+
+    .research-method-tag__papers {
+      padding: 0 0.5rem 0.42rem;
+      display: grid;
+      gap: 0.22rem;
+    }
+
+    .research-method-paper-preview,
+    .research-method-paper-all {
+      list-style: disc;
+      margin: 0;
+      padding: 0 0 0 0.92rem;
+      display: grid;
+      gap: 0.16rem;
+    }
+
+    .research-method-paper-preview li,
+    .research-method-paper-all li {
+      margin: 0;
+      padding: 0;
+      font-size: 0.61rem;
+      line-height: 1.25;
+    }
+
+    .research-method-paper-preview a,
+    .research-method-paper-all a {
+      color: #174c40;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .research-method-paper-preview a:hover,
+    .research-method-paper-preview a:focus-visible,
+    .research-method-paper-all a:hover,
+    .research-method-paper-all a:focus-visible {
+      text-decoration: underline;
+    }
+
+    .research-method-paper-year {
+      color: rgba(19, 61, 52, 0.72);
+      font-size: 0.58rem;
+      margin-left: 0.15rem;
+    }
+
+    .research-method-tag__all > summary {
+      list-style: none;
+      cursor: pointer;
+      font-size: 0.6rem;
+      font-weight: 700;
+      color: #165145;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .research-method-tag__all > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .research-method-tag__empty {
+      margin: 0;
+      font-size: 0.6rem;
+      color: rgba(20, 69, 58, 0.72);
+      line-height: 1.25;
+    }
+
+    .research-method-tag-toggle {
+      justify-self: start;
+      border: 1px solid rgba(20, 69, 58, 0.2);
       border-radius: 999px;
-      background: rgba(248, 252, 249, 0.95);
-      padding: 0.2rem 0.42rem;
+      background: rgba(240, 249, 244, 0.95);
+      color: #164036;
+      font-size: 0.58rem;
+      font-weight: 700;
+      line-height: 1.2;
+      padding: 0.12rem 0.5rem;
+      cursor: pointer;
+    }
+
+    .research-method-tag-toggle:hover,
+    .research-method-tag-toggle:focus-visible {
+      background: rgba(226, 244, 236, 0.95);
+      outline: none;
     }
 
     @media (max-width: 720px) {
-      .research-tag-explorer {
-        padding: 0.72rem;
-      }
-
-      .research-tag-explorer__grid {
+      .research-method-overview {
         grid-template-columns: 1fr;
       }
     }
   </style>
 
   <h3 class="research-tag-explorer__title">Methods Used in My Research</h3>
-  <p class="research-tag-explorer__copy">Click a method family to reveal associated tags.</p>
+  <p class="research-tag-explorer__copy">Scan family coverage, then open tags to preview linked papers.</p>
 
-  <div class="research-tag-explorer__grid">
+  <div class="research-method-overview">
     {% for family_id in family_ids %}
       {% assign family = methods.method_families | where: "id", family_id | first %}
       {% assign family_tags = methods.tags | where: "method_family", family_id %}
+      {% assign family_papers = publications | where_exp: "pub", "pub.method_families contains family_id" %}
+      {% assign tags_used = 0 %}
+      {% for tag in family_tags %}
+        {% assign tag_papers = publications | where_exp: "pub", "pub.method_tags contains tag.id" %}
+        {% if tag_papers.size > 0 %}
+          {% assign tags_used = tags_used | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+
       {% if family and family_tags.size > 0 %}
-        <details class="research-tag-family">
+        {% assign coverage_percent = tags_used | times: 100 | divided_by: family_tags.size %}
+        <details class="research-method-family" data-family-id="{{ family_id }}">
           <summary title="{{ family.label }}">
-            <span>{{ family.short_label | default: family.label }}</span>
-            <span class="research-tag-family__count">{{ family_tags.size }}</span>
+            <span class="research-method-family__label-row">
+              <span class="research-method-family__label">{{ family.short_label | default: family.label }}</span>
+              <span class="research-method-family__toggle" aria-hidden="true">+</span>
+            </span>
+            <span class="research-method-family__stats">
+              <span class="research-method-chip">{{ family_papers.size }} papers</span>
+              <span class="research-method-chip">{{ tags_used }}/{{ family_tags.size }} tags</span>
+              <span class="research-method-chip">{{ coverage_percent }}%</span>
+            </span>
           </summary>
-          <div class="research-tag-family__tags">
-            {% for tag in family_tags %}
-              <span class="research-tag-family__tag">{{ tag.label }}</span>
-            {% endfor %}
+
+          <div class="research-method-family__body">
+            <ul class="research-method-tag-list" data-default-visible="8">
+              {% for tag in family_tags %}
+                {% assign tagged_papers = publications | where_exp: "pub", "pub.method_tags contains tag.id" | sort: "date" | reverse %}
+                <li class="research-method-tag-item" data-count="{{ tagged_papers.size }}">
+                  <details class="research-method-tag">
+                    <summary title="{{ tag.label }}">
+                      <span class="research-method-tag__label">{{ tag.label }}</span>
+                      <span class="research-method-chip research-method-chip--count">{{ tagged_papers.size }}</span>
+                    </summary>
+                    <div class="research-method-tag__papers">
+                      {% if tagged_papers.size > 0 %}
+                        <ul class="research-method-paper-preview">
+                          {% for paper in tagged_papers limit: 3 %}
+                            <li>
+                              <a href="{{ paper.url | relative_url }}">{{ paper.title }}</a>
+                              <span class="research-method-paper-year">({{ paper.date | date: "%Y" }})</span>
+                            </li>
+                          {% endfor %}
+                        </ul>
+
+                        {% if tagged_papers.size > 3 %}
+                          <details class="research-method-tag__all">
+                            <summary>View all tagged papers ({{ tagged_papers.size }})</summary>
+                            <ul class="research-method-paper-all">
+                              {% for paper in tagged_papers %}
+                                <li>
+                                  <a href="{{ paper.url | relative_url }}">{{ paper.title }}</a>
+                                  <span class="research-method-paper-year">({{ paper.date | date: "%Y" }})</span>
+                                </li>
+                              {% endfor %}
+                            </ul>
+                          </details>
+                        {% endif %}
+                      {% else %}
+                        <p class="research-method-tag__empty">No tagged papers yet.</p>
+                      {% endif %}
+                    </div>
+                  </details>
+                </li>
+              {% endfor %}
+            </ul>
+
+            <button type="button" class="research-method-tag-toggle" hidden>Show all tags</button>
           </div>
         </details>
       {% endif %}
     {% endfor %}
   </div>
+
+  <script>
+    (() => {
+      const roots = document.querySelectorAll(".research-tag-explorer");
+      roots.forEach((root) => {
+        const familyBodies = root.querySelectorAll(".research-method-family__body");
+        familyBodies.forEach((body) => {
+          const list = body.querySelector(".research-method-tag-list");
+          const toggle = body.querySelector(".research-method-tag-toggle");
+          if (!list || !toggle) return;
+
+          const items = Array.from(list.children);
+          items.sort((a, b) => {
+            const countDelta = (Number(b.dataset.count) || 0) - (Number(a.dataset.count) || 0);
+            if (countDelta !== 0) return countDelta;
+            const aLabel = a.querySelector(".research-method-tag__label")?.textContent?.trim() || "";
+            const bLabel = b.querySelector(".research-method-tag__label")?.textContent?.trim() || "";
+            return aLabel.localeCompare(bLabel);
+          });
+          items.forEach((item) => list.appendChild(item));
+
+          const defaultVisible = Math.max(
+            1,
+            Number.parseInt(list.getAttribute("data-default-visible") || "8", 10) || 8
+          );
+          if (items.length <= defaultVisible) return;
+
+          let expanded = false;
+          const applyVisibility = () => {
+            items.forEach((item, index) => {
+              item.hidden = !expanded && index >= defaultVisible;
+            });
+            toggle.textContent = expanded ? "Show top tags" : "Show all tags";
+          };
+
+          toggle.hidden = false;
+          applyVisibility();
+          toggle.addEventListener("click", () => {
+            expanded = !expanded;
+            applyVisibility();
+          });
+        });
+      });
+    })();
+  </script>
 </section>

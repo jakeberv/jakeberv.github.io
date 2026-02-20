@@ -43,6 +43,9 @@ This directory contains spec templates and process guides for bot-assisted and h
 - [`agents/RESEARCH_SPEC_TEMPLATE.md`](RESEARCH_SPEC_TEMPLATE.md)  
   Use for `_research` entry schema and ordering/card conventions.
 
+- [`agents/RESEARCH_METHOD_TAGS_DATA_SPEC.md`](RESEARCH_METHOD_TAGS_DATA_SPEC.md)  
+  Use for canonical method-family/tag schema in `_data/research_method_tags.yml`, including portfolio paper linkage mappings.
+
 - [`agents/RESEARCH_METHOD_EXPLORER_SPEC.md`](RESEARCH_METHOD_EXPLORER_SPEC.md)  
   Use when revisiting the deferred advanced methods explorer UI for `/research/`.
 
