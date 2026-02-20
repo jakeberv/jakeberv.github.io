@@ -117,15 +117,23 @@ header:
 <section id="phylo-tempo-mode" class="phylo-module">
   <h2>Tempo and Mode of Molecular Evolution</h2>
 
-  <p>As a Life Sciences Fellow at the University of Michigan (2019-2023), I explored how variation in both evolutionary tempo (rate) and mode (process) can confound phylogenetic inference. In work available <a href="https://www.biorxiv.org/content/10.1101/2022.10.21.513146v1">as a bioRxiv preprint</a>, I examined lineage-specific molecular model heterogeneity across crown birds and found multiple model shifts concentrated near lineages originating after the end-Cretaceous extinction.</p>
+  <p>As a Life Sciences Fellow at the University of Michigan (2019-2023), I explored how variation in both evolutionary tempo (rate) and mode (substitution process) can confound phylogenetic inference.</p>
+
+  <p>In <a href="https://doi.org/10.1126/sciadv.adp0114">Berv et al. 2024 (<em>Science Advances</em>)</a>, we tested how these processes shaped early crown-bird history using a phylogenomic dataset of 198 avian lineages and 910 loci across exons, introns, untranslated regions, and mitochondrial genomes.</p>
+
+  <p>These analyses were implemented with <code>janus</code>, our framework for detecting shifts in molecular substitution models and base composition across phylogenies (see <a href="/software/">janus on the Software page</a>).</p>
+
+  <p>We inferred 17 molecular model shifts across 12 phylogenetic edges, with 15 concentrated within ~5 million years of the K-Pg boundary. Shift locations were strongly associated with developmental mode, adult body mass, and metabolic allometry, supporting an integrated post-extinction reorganization of avian genomes and life-history evolution.</p>
 
   <p class="phylo-actions">
-    <a class="btn--research" href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_et_al_2022.pdf">Download preprint</a>
-    <a class="btn--research" href="https://bit.ly/berv_OIST_2022">Seminar recording</a>
+    <a class="btn--research" href="https://doi.org/10.1126/sciadv.adp0114">Read in Science Advances</a>
+    <a class="btn--research" href="https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/Berv_et_al_2024.pdf">Download PDF</a>
+    <a class="btn--research" href="/software/">Janus software card</a>
+    <a class="btn--research" href="https://git.sr.ht/~hms/janus">Janus repository</a>
   </p>
 
   <figure class="phylo-figure phylo-figure--wide">
-    <a href="https://www.biorxiv.org/content/10.1101/2022.10.21.513146v1.full#:~:text=Life%2Dhistory%20traits%20associated,Supplemental%20Figures%205%2C%206).">
+    <a href="https://doi.org/10.1126/sciadv.adp0114">
       <img src="/images/research/F2.large.jpg" alt="Genome-wide molecular model shift summary" />
     </a>
   </figure>
