@@ -89,6 +89,9 @@ Local preview hook:
 Deploy hook:
 
 - `.github/workflows/deploy_site.yml`
+- Runs publication metadata validation before data generation/build:
+  - `node scripts/qa/validate-publication-tags.mjs`
+  - `node scripts/qa/validate-publication-method-tags.mjs`
 - Runs `python3 scripts/build-impact-dashboard-data.py` before Jekyll build.
 - Verifies committed reach datasets exist before Jekyll build.
 

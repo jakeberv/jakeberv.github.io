@@ -13,7 +13,6 @@ User-agent: *
 Allow: /
 
 # Block common Jekyll development paths (not needed for indexing)
-Disallow: /assets/
 Disallow: /data/
 Disallow: /node_modules/
 Disallow: /tmp/

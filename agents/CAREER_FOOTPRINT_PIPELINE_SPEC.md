@@ -66,9 +66,11 @@ Equivalent one-command path:
   1. checkout `master`
   2. setup node
   3. validate geo front matter
-  4. generate `career_footprint.json`
-  5. Jekyll build
-  6. upload + deploy GitHub Pages artifact
+  4. validate publication tags
+  5. validate publication method tags
+  6. generate `career_footprint.json`
+  7. Jekyll build
+  8. upload + deploy GitHub Pages artifact
 
 ## Operational Notes
 

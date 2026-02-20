@@ -33,6 +33,12 @@ jobs:
       - name: Validate _news geo front matter
         run: node scripts/qa/validate-news-geo.mjs
 
+      - name: Validate publication tags
+        run: node scripts/qa/validate-publication-tags.mjs
+
+      - name: Validate publication method tags
+        run: node scripts/qa/validate-publication-method-tags.mjs
+
       - name: Generate career geo map data
         run: node scripts/build-career-geo-data.mjs
 
