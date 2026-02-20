@@ -1,0 +1,950 @@
+{% assign methods = include.methods | default: site.data.research_method_tags %}
+{% assign publication_taxonomy = include.publication_tags | default: site.data.publication_tags %}
+{% assign braid_stats = site.data.publications_interdisciplinarity_stats %}
+{% assign publications = site.publications | where_exp: "pub", "pub.method_tags != nil" | where_exp: "pub", "pub.tags != nil" | sort: "date" | reverse %}
+
+<section id="publications-interdisciplinarity-braid" class="pub-braid-panel" aria-label="Interdisciplinarity braid across publications">
+  <style>
+    .pub-braid-panel {
+      margin: 1.3rem 0 1.45rem;
+      padding: 0.65rem;
+      border: 1px solid rgba(20, 66, 56, 0.13);
+      border-radius: 16px;
+      background: linear-gradient(145deg, #f5f8f4 0%, #edf3ee 100%);
+      box-shadow: 0 10px 26px -22px rgba(19, 49, 43, 0.72);
+    }
+
+    .pub-braid-panel__header {
+      display: grid;
+      gap: 0.22rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .pub-braid-panel__kicker {
+      margin: 0;
+      font-size: 0.61rem;
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: rgba(25, 74, 63, 0.72);
+    }
+
+    .pub-braid-panel__title {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.26;
+      font-weight: 800;
+      color: #163f35;
+    }
+
+    .pub-braid-panel__copy {
+      margin: 0.03rem 0 0;
+      font-size: 0.78rem;
+      line-height: 1.36;
+      color: rgba(22, 61, 52, 0.87);
+      max-width: none;
+    }
+
+    .pub-braid-stats {
+      margin: 0.4rem 0 0.12rem;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 0.28rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scrollbar-width: thin;
+      border-top: 1px solid rgba(31, 81, 70, 0.14);
+      padding-top: 0.28rem;
+    }
+
+    .pub-braid-stats__item {
+      margin: 0;
+      border: 1px solid rgba(23, 68, 58, 0.16);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+      color: rgba(20, 61, 52, 0.91);
+      padding: 0.16rem 0.5rem;
+      font-size: 0.62rem;
+      line-height: 1.25;
+      font-weight: 700;
+      white-space: nowrap;
+      flex: 0 0 auto;
+    }
+
+    .pub-braid-toolbar {
+      margin: 0.28rem 0 0.22rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.24rem 0.34rem;
+    }
+
+    .pub-braid-toggle,
+    .pub-braid-action {
+      border: 1px solid rgba(23, 68, 58, 0.2);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+      color: rgba(20, 61, 52, 0.92);
+      padding: 0.28rem 0.86rem;
+      font-size: 0.74rem;
+      line-height: 1.2;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease;
+    }
+
+    .pub-braid-toggle[aria-pressed="true"] {
+      background: rgba(27, 108, 89, 0.12);
+      border-color: rgba(27, 108, 89, 0.4);
+      color: #184e42;
+    }
+
+    .pub-braid-toggle:hover,
+    .pub-braid-toggle:focus-visible,
+    .pub-braid-action:hover,
+    .pub-braid-action:focus-visible {
+      background: rgba(240, 247, 243, 0.95);
+      outline: none;
+    }
+
+    .pub-braid-toolbar__hint {
+      margin: 0;
+      font-size: 0.54rem;
+      line-height: 1.2;
+      font-weight: 600;
+      color: rgba(32, 76, 66, 0.78);
+      letter-spacing: 0.01em;
+    }
+
+    .pub-braid-layout {
+      display: block;
+    }
+
+    .pub-braid-graph {
+      margin: 0;
+      position: relative;
+      border: 1px solid rgba(19, 63, 54, 0.16);
+      border-radius: 12px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(246, 251, 248, 0.96) 100%);
+    }
+
+    .pub-braid-graph__svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1540 / 920;
+    }
+
+    .pub-braid-panel__note {
+      margin: 0.28rem 0 0;
+      font-size: 0.58rem;
+      line-height: 1.26;
+      color: rgba(20, 64, 54, 0.72);
+    }
+
+    .pub-braid-source {
+      margin: 0.22rem 0 0;
+      padding: 0 0.48rem 0.04rem;
+      font-size: 0.53rem;
+      line-height: 1.2;
+      color: rgba(41, 84, 73, 0.72);
+    }
+
+    .pub-braid-legend {
+      margin: 0.02rem 0 0.08rem;
+      padding: 0 0.48rem;
+      font-size: 0.55rem;
+      line-height: 1.18;
+      color: rgba(33, 80, 69, 0.8);
+    }
+
+    .pub-braid-panel__xref {
+      margin: 0.18rem 0 0;
+      font-size: 0.57rem;
+      line-height: 1.22;
+      color: rgba(18, 58, 50, 0.75);
+    }
+
+    .pub-braid-panel__xref a {
+      color: #1a5649;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    @media (max-width: 1080px) {
+      .pub-braid-panel {
+        padding: 0.58rem 0.72rem;
+      }
+    }
+  </style>
+
+  <div class="pub-braid-panel__header">
+    <p class="pub-braid-panel__kicker">Methods Synthesis</p>
+    <h3 class="pub-braid-panel__title">Interdisciplinarity Braid Across Publications</h3>
+    <p class="pub-braid-panel__copy">This panel shows how Jacob Berv’s publications connect scale of inference to method families and then to major research themes. It summarizes the interdisciplinary structure of the published portfolio in a single view. Wider flows indicate the connections that recur most frequently across studies.</p>
+  </div>
+
+  <div class="pub-braid-toolbar">
+    <button class="pub-braid-toggle" type="button" data-braid-order-toggle aria-pressed="false" title="Toggle method-family ordering in the middle column only.">Order: Default</button>
+    <button class="pub-braid-action" type="button" data-braid-download-svg title="Download the current braid as an SVG for slides and talks.">Download SVG</button>
+    <p class="pub-braid-toolbar__hint">Heuristic order reduces crossings.</p>
+  </div>
+
+  <div class="pub-braid-layout" data-pub-braid-root>
+    <figure class="pub-braid-graph">
+      <svg class="pub-braid-graph__svg" data-pub-braid-svg viewBox="0 0 1540 920" role="img" aria-label="Interdisciplinarity braid from publication themes to methods and inference scale"></svg>
+      <figcaption class="pub-braid-source">Source data: _publications/*.md + _data/publication_tags.yml + _data/research_method_tags.yml</figcaption>
+      <p class="pub-braid-legend">Legend: node height = share of total flow; ribbon width = frequency across papers.</p>
+    </figure>
+  </div>
+
+  <ul class="pub-braid-stats">
+    <li class="pub-braid-stats__item" data-braid-stat="publications">{{ braid_stats.tagged_outputs | default: 0 }} tagged outputs</li>
+    <li class="pub-braid-stats__item" data-braid-stat="families">{{ braid_stats.method_families_represented | default: 0 }} method families represented</li>
+    <li class="pub-braid-stats__item" data-braid-stat="method_tags">Avg method tags/output: {{ braid_stats.avg_method_tags_per_output | default: 0 }}</li>
+    <li class="pub-braid-stats__item" data-braid-stat="groups">Avg theme groups/output: {{ braid_stats.avg_theme_groups_per_output | default: 0 }}</li>
+  </ul>
+
+  <p class="pub-braid-panel__note">Construction rule: each publication contributes total weight 1.0, split evenly across observed theme-group x method-family combinations and method-family x scope combinations.</p>
+  <p class="pub-braid-panel__xref">For pairwise method-family co-use, see the <a href="{{ '/research/#method-co-use-network' | relative_url }}">Method Co-Use Network on the Research page</a>.</p>
+
+  <script>
+    (() => {
+      const script = document.currentScript;
+      const panel = script.closest(".pub-braid-panel");
+      const root = panel ? panel.querySelector("[data-pub-braid-root]") : null;
+      if (!panel || !root) return;
+
+      const svg = root.querySelector("[data-pub-braid-svg]");
+      const orderToggleBtn = panel.querySelector("[data-braid-order-toggle]");
+      const downloadSvgBtn = panel.querySelector("[data-braid-download-svg]");
+
+      const statEls = new Map(
+        [...panel.querySelectorAll("[data-braid-stat]")].map((node) => [node.getAttribute("data-braid-stat"), node])
+      );
+
+      const publications = [
+        {% for paper in publications %}
+          {
+            title: {{ paper.title | jsonify }},
+            url: {{ paper.url | relative_url | jsonify }},
+            year: {{ paper.date | date: "%Y" | jsonify }},
+            publicationTags: {{ paper.tags | jsonify }},
+            methodTags: {{ paper.method_tags | jsonify }}
+          }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ];
+
+      const methodFamilies = {{ methods.method_families | jsonify }};
+      const methodTags = {{ methods.tags | jsonify }};
+      const methodFamilyOrder = {{ methods.method_family_order | jsonify }};
+      const publicationGroups = {{ publication_taxonomy.groups | jsonify }};
+      const publicationTags = {{ publication_taxonomy.tags | jsonify }};
+
+      const scopeOrder = ["population_scale", "clade_scale", "deep_time", "multi_scale", "unknown_scope"];
+      const scopeLabel = new Map([
+        ["population_scale", "Population Scale"],
+        ["clade_scale", "Clade Scale"],
+        ["deep_time", "Deep Time"],
+        ["multi_scale", "Multi-Scale"],
+        ["unknown_scope", "Unspecified Scope"]
+      ]);
+
+      const familyPalette = [
+        "#0f5f4f",
+        "#1c7a66",
+        "#2f5f99",
+        "#4179a0",
+        "#8a6a41",
+        "#8d5840",
+        "#4c7f4f",
+        "#6b5f9f",
+        "#8f4f68",
+        "#4f6f7a",
+        "#b28637",
+        "#3f7498"
+      ];
+
+      const groupBarColor = new Map([
+        ["taxa", "#4d677a"],
+        ["methods", "#5a8157"],
+        ["processes", "#7d6148"],
+        ["contexts", "#6b5f7d"]
+      ]);
+
+      const scopeBarColor = new Map([
+        ["population_scale", "#5b768b"],
+        ["clade_scale", "#537659"],
+        ["deep_time", "#7f6546"],
+        ["multi_scale", "#665c86"],
+        ["unknown_scope", "#7b7b7b"]
+      ]);
+
+      function dedupe(values) {
+        return [...new Set((values || []).filter(Boolean))];
+      }
+
+      function mean(values) {
+        if (!values.length) return 0;
+        return values.reduce((sum, value) => sum + value, 0) / values.length;
+      }
+
+      function flowKey(a, b) {
+        return a + "||" + b;
+      }
+
+      function splitFlowKey(key) {
+        const idx = key.indexOf("||");
+        if (idx === -1) return [key, ""];
+        return [key.slice(0, idx), key.slice(idx + 2)];
+      }
+
+      function wrapLabel(text, maxChars) {
+        const words = String(text || "").split(/\s+/).filter(Boolean);
+        if (!words.length) return [""];
+
+        const lines = [];
+        let current = words[0];
+
+        for (let i = 1; i < words.length; i += 1) {
+          const next = words[i];
+          if ((current + " " + next).length > maxChars) {
+            lines.push(current);
+            current = next;
+          } else {
+            current += " " + next;
+          }
+        }
+        lines.push(current);
+        return lines;
+      }
+
+      function createSvgNode(name, attrs = {}) {
+        const node = document.createElementNS("http://www.w3.org/2000/svg", name);
+        Object.entries(attrs).forEach(([key, value]) => {
+          node.setAttribute(key, String(value));
+        });
+        return node;
+      }
+
+      function pathRibbon(x0, y0, y1, x1, t0, t1) {
+        const curve = (x1 - x0) * 0.38;
+        const c1 = x0 + curve;
+        const c2 = x1 - curve;
+        return [
+          `M ${x0.toFixed(2)} ${y0.toFixed(2)}`,
+          `C ${c1.toFixed(2)} ${y0.toFixed(2)}, ${c2.toFixed(2)} ${t0.toFixed(2)}, ${x1.toFixed(2)} ${t0.toFixed(2)}`,
+          `L ${x1.toFixed(2)} ${t1.toFixed(2)}`,
+          `C ${c2.toFixed(2)} ${t1.toFixed(2)}, ${c1.toFixed(2)} ${y1.toFixed(2)}, ${x0.toFixed(2)} ${y1.toFixed(2)}`,
+          "Z"
+        ].join(" ");
+      }
+
+      function setStat(key, text) {
+        if (statEls.has(key)) statEls.get(key).textContent = text;
+      }
+
+      const tagToGroup = new Map(publicationTags.map((tag) => [tag.slug, tag.group]));
+      const groupLabel = new Map(publicationGroups.map((group) => [group.slug, group.label || group.slug]));
+      const groupOrder = publicationGroups.map((group) => group.slug);
+
+      const tagToFamily = new Map(methodTags.map((tag) => [tag.id, tag.method_family]));
+      const tagToScope = new Map(methodTags.map((tag) => [tag.id, tag.scope || "unknown_scope"]));
+      const familyMeta = new Map(
+        methodFamilies.map((family) => [family.id, {
+          label: family.label || family.id,
+          shortLabel: family.short_label || family.label || family.id
+        }])
+      );
+
+      const normalizedPapers = publications
+        .map((paper, idx) => {
+          const pubGroups = dedupe((paper.publicationTags || []).map((slug) => tagToGroup.get(slug)).filter(Boolean));
+          const validMethodTags = dedupe(paper.methodTags).filter((tagId) => tagToFamily.has(tagId));
+
+          if (!pubGroups.length || !validMethodTags.length) return null;
+
+          const familyToScopes = new Map();
+          validMethodTags.forEach((tagId) => {
+            const familyId = tagToFamily.get(tagId);
+            if (!familyId) return;
+            if (!familyToScopes.has(familyId)) familyToScopes.set(familyId, new Set());
+            familyToScopes.get(familyId).add(tagToScope.get(tagId) || "unknown_scope");
+          });
+
+          const families = [...familyToScopes.keys()];
+          if (!families.length) return null;
+
+          return {
+            idx,
+            title: paper.title,
+            url: paper.url,
+            year: Number(paper.year) || null,
+            pubGroups,
+            families,
+            familyToScopes,
+            methodTagCount: validMethodTags.length
+          };
+        })
+        .filter(Boolean);
+
+      if (!normalizedPapers.length) {
+        setStat("publications", "No tagged outputs available yet");
+        setStat("families", "Method families: 0");
+        setStat("method_tags", "Avg method tags/output: 0.00");
+        setStat("groups", "Avg theme groups/output: 0.00");
+        return;
+      }
+
+      const groupFamilyFlow = new Map();
+      const familyScopeFlow = new Map();
+      const familyPaperCounts = new Map();
+
+      function addFlow(map, key, weight, paperIdx) {
+        if (!map.has(key)) map.set(key, { weight: 0, paperIndexes: new Set() });
+        const entry = map.get(key);
+        entry.weight += weight;
+        entry.paperIndexes.add(paperIdx);
+      }
+
+      normalizedPapers.forEach((paper) => {
+        const groupWeight = 1 / (paper.pubGroups.length * paper.families.length);
+        paper.pubGroups.forEach((groupId) => {
+          paper.families.forEach((familyId) => {
+            addFlow(groupFamilyFlow, flowKey(groupId, familyId), groupWeight, paper.idx);
+          });
+        });
+
+        paper.families.forEach((familyId) => {
+          familyPaperCounts.set(familyId, (familyPaperCounts.get(familyId) || 0) + 1);
+          const scopes = [...(paper.familyToScopes.get(familyId) || new Set(["unknown_scope"]))];
+          const scopeWeight = 1 / (paper.families.length * scopes.length);
+          scopes.forEach((scopeId) => {
+            addFlow(familyScopeFlow, flowKey(familyId, scopeId), scopeWeight, paper.idx);
+          });
+        });
+      });
+
+      const groupWeights = new Map();
+      const familyWeights = new Map();
+      const scopeWeights = new Map();
+
+      groupFamilyFlow.forEach((entry, key) => {
+        const [groupId, familyId] = splitFlowKey(key);
+        groupWeights.set(groupId, (groupWeights.get(groupId) || 0) + entry.weight);
+        familyWeights.set(familyId, (familyWeights.get(familyId) || 0) + entry.weight);
+      });
+
+      familyScopeFlow.forEach((entry, key) => {
+        const [, scopeId] = splitFlowKey(key);
+        scopeWeights.set(scopeId, (scopeWeights.get(scopeId) || 0) + entry.weight);
+      });
+
+      const totalWeight = [...groupWeights.values()].reduce((sum, value) => sum + value, 0);
+      if (totalWeight <= 0) return;
+
+      const usedGroups = groupOrder.filter((groupId) => groupWeights.has(groupId));
+      const remainingGroups = [...groupWeights.keys()].filter((groupId) => !usedGroups.includes(groupId)).sort();
+      usedGroups.push(...remainingGroups);
+
+      const usedScopes = scopeOrder.filter((scopeId) => scopeWeights.has(scopeId));
+      const remainingScopes = [...scopeWeights.keys()].filter((scopeId) => !usedScopes.includes(scopeId)).sort();
+      usedScopes.push(...remainingScopes);
+
+      const groupRank = new Map(usedGroups.map((groupId, idx) => [groupId, idx]));
+      const scopeRank = new Map(usedScopes.map((scopeId, idx) => [scopeId, idx]));
+
+      function computeFamilyBarycenter(familyId) {
+        let weightedSum = 0;
+        let weightTotal = 0;
+
+        groupFamilyFlow.forEach((entry, key) => {
+          const [groupId, currentFamilyId] = splitFlowKey(key);
+          if (currentFamilyId !== familyId) return;
+          if (!groupRank.has(groupId)) return;
+          weightedSum += entry.weight * groupRank.get(groupId);
+          weightTotal += entry.weight;
+        });
+
+        familyScopeFlow.forEach((entry, key) => {
+          const [currentFamilyId, scopeId] = splitFlowKey(key);
+          if (currentFamilyId !== familyId) return;
+          if (!scopeRank.has(scopeId)) return;
+          weightedSum += entry.weight * scopeRank.get(scopeId);
+          weightTotal += entry.weight;
+        });
+
+        return weightTotal > 0 ? (weightedSum / weightTotal) : Number.POSITIVE_INFINITY;
+      }
+
+      const defaultFamilies = [...familyWeights.keys()].sort((a, b) => {
+        const byUsage = (familyPaperCounts.get(b) || 0) - (familyPaperCounts.get(a) || 0);
+        if (byUsage !== 0) return byUsage;
+        const ai = methodFamilyOrder.indexOf(a);
+        const bi = methodFamilyOrder.indexOf(b);
+        if (ai !== -1 && bi !== -1) return ai - bi;
+        if (ai !== -1) return -1;
+        if (bi !== -1) return 1;
+        return a.localeCompare(b);
+      });
+
+      const defaultFamilyRank = new Map(defaultFamilies.map((familyId, idx) => [familyId, idx]));
+      const familyBarycenter = new Map();
+      defaultFamilies.forEach((familyId) => {
+        familyBarycenter.set(familyId, computeFamilyBarycenter(familyId));
+      });
+
+      const heuristicFamilies = [...defaultFamilies].sort((a, b) => {
+        const byBarycenter = (familyBarycenter.get(a) || 0) - (familyBarycenter.get(b) || 0);
+        if (Math.abs(byBarycenter) > 1e-8) return byBarycenter;
+        return (defaultFamilyRank.get(a) || 0) - (defaultFamilyRank.get(b) || 0);
+      });
+
+      const width = 1540;
+      const height = 920;
+      const compactViewport = window.matchMedia("(max-width: 1080px)").matches;
+      const labelScale = compactViewport ? 0.88 : 1;
+      const sideInset = compactViewport ? 32 : 0;
+      const groupWrapChars = compactViewport ? 16 : 18;
+      const chartTop = 64;
+      const chartBottom = 866;
+      const chartHeight = chartBottom - chartTop;
+
+      const xGroup = 1260 - sideInset;
+      const xFamily = 760;
+      const xScope = 250 + sideInset;
+      const barWidth = 30;
+
+      const gapGroup = 18;
+      const gapFamily = 10;
+      const gapScope = 18;
+
+      const scaleGroup = (chartHeight - gapGroup * Math.max(usedGroups.length - 1, 0)) / totalWeight;
+      const scaleFamily = (chartHeight - gapFamily * Math.max(defaultFamilies.length - 1, 0)) / totalWeight;
+      const scaleScope = (chartHeight - gapScope * Math.max(usedScopes.length - 1, 0)) / totalWeight;
+      const scale = Math.min(scaleGroup, scaleFamily, scaleScope);
+
+      if (!Number.isFinite(scale) || scale <= 0) return;
+
+      function scaledFont(px) {
+        return Number((px * labelScale).toFixed(2));
+      }
+
+      function layoutColumn(ids, weights, gap) {
+        const occupied = totalWeight * scale + gap * Math.max(ids.length - 1, 0);
+        let y = chartTop + (chartHeight - occupied) / 2;
+        const out = new Map();
+
+        ids.forEach((id) => {
+          const h = (weights.get(id) || 0) * scale;
+          out.set(id, { y, h });
+          y += h + gap;
+        });
+
+        return out;
+      }
+
+      const familyColor = new Map();
+      defaultFamilies.forEach((familyId, idx) => {
+        familyColor.set(familyId, familyPalette[idx % familyPalette.length]);
+      });
+
+      setStat("publications", `${normalizedPapers.length} tagged outputs`);
+      setStat("families", `${defaultFamilies.length} method families represented`);
+      setStat("method_tags", `Avg method tags/output: ${mean(normalizedPapers.map((paper) => paper.methodTagCount)).toFixed(2)}`);
+      setStat("groups", `Avg theme groups/output: ${mean(normalizedPapers.map((paper) => paper.pubGroups.length)).toFixed(2)}`);
+
+      let useHeuristicOrder = false;
+
+      function syncOrderButton() {
+        if (!orderToggleBtn) return;
+        orderToggleBtn.setAttribute("aria-pressed", String(useHeuristicOrder));
+        orderToggleBtn.textContent = useHeuristicOrder ? "Order: Heuristic" : "Order: Default";
+        const tooltip = useHeuristicOrder
+          ? "Heuristic method-family order active (middle column only). Click for default order."
+          : "Default method-family order active (middle column only). Click for heuristic order.";
+        orderToggleBtn.setAttribute("title", tooltip);
+        orderToggleBtn.setAttribute("aria-label", tooltip);
+      }
+
+      function downloadCurrentSvg() {
+        if (!svg) return;
+        const svgClone = svg.cloneNode(true);
+        svgClone.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+        svgClone.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink");
+
+        const svgSource = `<?xml version="1.0" encoding="UTF-8"?>\n${svgClone.outerHTML}`;
+        const blob = new Blob([svgSource], { type: "image/svg+xml;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        const orderSlug = useHeuristicOrder ? "heuristic" : "default";
+
+        link.href = url;
+        link.download = `jacob-berv-interdisciplinarity-braid-${orderSlug}.svg`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        setTimeout(() => URL.revokeObjectURL(url), 0);
+      }
+
+      function renderBraid(usedFamilies) {
+        const groupNodes = layoutColumn(usedGroups, groupWeights, gapGroup);
+        const familyNodes = layoutColumn(usedFamilies, familyWeights, gapFamily);
+        const scopeNodes = layoutColumn(usedScopes, scopeWeights, gapScope);
+        const familyRank = new Map(usedFamilies.map((familyId, idx) => [familyId, idx]));
+
+        const groupOffsets = new Map(usedGroups.map((id) => [id, 0]));
+        const familyIncomingOffsets = new Map(usedFamilies.map((id) => [id, 0]));
+        const gfLinks = [];
+
+        [...groupFamilyFlow.entries()]
+          .map(([key, entry]) => {
+            const [groupId, familyId] = splitFlowKey(key);
+            return { groupId, familyId, entry };
+          })
+          .sort((a, b) => {
+            const g = usedGroups.indexOf(a.groupId) - usedGroups.indexOf(b.groupId);
+            if (g !== 0) return g;
+            return (familyRank.get(a.familyId) || 0) - (familyRank.get(b.familyId) || 0);
+          })
+          .forEach(({ groupId, familyId, entry }) => {
+            const h = entry.weight * scale;
+            const y0 = groupNodes.get(groupId).y + groupOffsets.get(groupId);
+            const y1 = y0 + h;
+            const t0 = familyNodes.get(familyId).y + familyIncomingOffsets.get(familyId);
+            const t1 = t0 + h;
+
+            groupOffsets.set(groupId, groupOffsets.get(groupId) + h);
+            familyIncomingOffsets.set(familyId, familyIncomingOffsets.get(familyId) + h);
+
+            gfLinks.push({
+              groupId,
+              familyId,
+              weight: entry.weight,
+              path: pathRibbon(xGroup + barWidth, y0, y1, xFamily, t0, t1)
+            });
+          });
+
+        const familyOutgoingOffsets = new Map(usedFamilies.map((id) => [id, 0]));
+        const scopeIncomingOffsets = new Map(usedScopes.map((id) => [id, 0]));
+        const fsLinks = [];
+
+        [...familyScopeFlow.entries()]
+          .map(([key, entry]) => {
+            const [familyId, scopeId] = splitFlowKey(key);
+            return { familyId, scopeId, entry };
+          })
+          .sort((a, b) => {
+            const f = (familyRank.get(a.familyId) || 0) - (familyRank.get(b.familyId) || 0);
+            if (f !== 0) return f;
+            return usedScopes.indexOf(a.scopeId) - usedScopes.indexOf(b.scopeId);
+          })
+          .forEach(({ familyId, scopeId, entry }) => {
+            const h = entry.weight * scale;
+            const y0 = familyNodes.get(familyId).y + familyOutgoingOffsets.get(familyId);
+            const y1 = y0 + h;
+            const t0 = scopeNodes.get(scopeId).y + scopeIncomingOffsets.get(scopeId);
+            const t1 = t0 + h;
+
+            familyOutgoingOffsets.set(familyId, familyOutgoingOffsets.get(familyId) + h);
+            scopeIncomingOffsets.set(scopeId, scopeIncomingOffsets.get(scopeId) + h);
+
+            fsLinks.push({
+              familyId,
+              scopeId,
+              weight: entry.weight,
+              path: pathRibbon(xFamily + barWidth, y0, y1, xScope, t0, t1)
+            });
+          });
+
+        svg.innerHTML = "";
+
+        const edgeLayer = createSvgNode("g", { stroke: "none" });
+        const nodeLayer = createSvgNode("g");
+        const labelLayer = createSvgNode("g");
+        const defaultLinkOpacity = 0.35;
+        const activeLinkOpacity = 0.82;
+        const mutedLinkOpacity = 0.08;
+        const mutedNodeOpacity = 0.26;
+
+        const gfLinkVisuals = [];
+        const fsLinkVisuals = [];
+        const groupVisuals = new Map();
+        const familyVisuals = new Map();
+        const scopeVisuals = new Map();
+
+        function addVisual(map, id, node) {
+          if (!map.has(id)) map.set(id, []);
+          map.get(id).push(node);
+          node.style.transition = "opacity 140ms ease";
+        }
+
+        function setVisualOpacity(map, activeSet) {
+          map.forEach((nodes, id) => {
+            const opacity = activeSet.has(id) ? 1 : mutedNodeOpacity;
+            nodes.forEach((node) => { node.style.opacity = String(opacity); });
+          });
+        }
+
+        function resetFocus() {
+          gfLinkVisuals.forEach((link) => link.el.setAttribute("fill-opacity", String(defaultLinkOpacity)));
+          fsLinkVisuals.forEach((link) => link.el.setAttribute("fill-opacity", String(defaultLinkOpacity)));
+          groupVisuals.forEach((nodes) => nodes.forEach((node) => { node.style.opacity = "1"; }));
+          familyVisuals.forEach((nodes) => nodes.forEach((node) => { node.style.opacity = "1"; }));
+          scopeVisuals.forEach((nodes) => nodes.forEach((node) => { node.style.opacity = "1"; }));
+        }
+
+        function applyFocus(filter) {
+          const activeFamilies = new Set();
+          if (filter.familyId) activeFamilies.add(filter.familyId);
+
+          if (filter.groupId) {
+            gfLinkVisuals.forEach((link) => {
+              if (link.groupId === filter.groupId) activeFamilies.add(link.familyId);
+            });
+          }
+
+          if (filter.scopeId) {
+            fsLinkVisuals.forEach((link) => {
+              if (link.scopeId === filter.scopeId) activeFamilies.add(link.familyId);
+            });
+          }
+
+          const activeGroups = new Set();
+          const activeScopes = new Set();
+          if (filter.groupId) activeGroups.add(filter.groupId);
+          if (filter.scopeId) activeScopes.add(filter.scopeId);
+
+          gfLinkVisuals.forEach((link) => {
+            let active = true;
+            if (filter.groupId && link.groupId !== filter.groupId) active = false;
+            if (filter.familyId && link.familyId !== filter.familyId) active = false;
+            if (filter.scopeId && !activeFamilies.has(link.familyId)) active = false;
+
+            link.el.setAttribute("fill-opacity", active ? String(activeLinkOpacity) : String(mutedLinkOpacity));
+            if (active) {
+              activeGroups.add(link.groupId);
+              activeFamilies.add(link.familyId);
+            }
+          });
+
+          fsLinkVisuals.forEach((link) => {
+            let active = true;
+            if (filter.scopeId && link.scopeId !== filter.scopeId) active = false;
+            if (filter.familyId && link.familyId !== filter.familyId) active = false;
+            if (filter.groupId && !activeFamilies.has(link.familyId)) active = false;
+
+            link.el.setAttribute("fill-opacity", active ? String(activeLinkOpacity) : String(mutedLinkOpacity));
+            if (active) {
+              activeFamilies.add(link.familyId);
+              activeScopes.add(link.scopeId);
+            }
+          });
+
+          setVisualOpacity(groupVisuals, activeGroups);
+          setVisualOpacity(familyVisuals, activeFamilies);
+          setVisualOpacity(scopeVisuals, activeScopes);
+        }
+
+        function bindHover(node, filter) {
+          node.style.cursor = "pointer";
+          node.addEventListener("mouseenter", () => applyFocus(filter));
+          node.addEventListener("mouseleave", resetFocus);
+        }
+
+        const columnLabels = [
+          { x: xGroup + (barWidth / 2), text: "Publication Theme Groups" },
+          { x: xFamily + (barWidth / 2), text: "Method Families" },
+          { x: xScope + (barWidth / 2), text: "Inference Scale" }
+        ];
+
+        columnLabels.forEach((item) => {
+          const node = createSvgNode("text", {
+            x: item.x,
+            y: chartTop - 24,
+            "text-anchor": "middle",
+            "font-size": scaledFont(31.7),
+            "font-family": "'Helvetica Neue', Helvetica, Arial, sans-serif",
+            "font-weight": 700,
+            fill: "#1d4338"
+          });
+          node.textContent = item.text;
+          labelLayer.appendChild(node);
+        });
+
+        [
+          ...gfLinks.map((link) => ({ ...link, linkType: "gf" })),
+          ...fsLinks.map((link) => ({ ...link, linkType: "fs" }))
+        ]
+          .sort((a, b) => a.weight - b.weight)
+          .forEach((link) => {
+            const color = familyColor.get(link.familyId) || "#3f6f62";
+            const path = createSvgNode("path", {
+              d: link.path,
+              fill: color,
+              "fill-opacity": defaultLinkOpacity
+            });
+            path.style.transition = "fill-opacity 140ms ease";
+            edgeLayer.appendChild(path);
+            if (link.linkType === "gf") {
+              gfLinkVisuals.push({ el: path, groupId: link.groupId, familyId: link.familyId });
+            } else {
+              fsLinkVisuals.push({ el: path, familyId: link.familyId, scopeId: link.scopeId });
+            }
+          });
+
+        usedGroups.forEach((groupId) => {
+          const node = groupNodes.get(groupId);
+          if (!node) return;
+          const fill = groupBarColor.get(groupId) || "#5a6d7a";
+
+          const rect = createSvgNode("rect", {
+            x: xGroup,
+            y: node.y,
+            width: barWidth,
+            height: node.h,
+            rx: 4,
+            fill,
+            stroke: "#ffffff",
+            "stroke-width": 1
+          });
+          nodeLayer.appendChild(rect);
+          addVisual(groupVisuals, groupId, rect);
+          bindHover(rect, { groupId });
+
+          const lines = wrapLabel(groupLabel.get(groupId) || groupId, groupWrapChars);
+          const lineStep = scaledFont(18.7);
+          const firstY = node.y + (node.h / 2) - ((lines.length - 1) * lineStep * 0.5) + scaledFont(3);
+          lines.forEach((line, idx) => {
+            const label = createSvgNode("text", {
+              x: xGroup + barWidth + 16,
+              y: firstY + (idx * lineStep),
+              "text-anchor": "start",
+              "font-size": scaledFont(20.9),
+              "font-family": "'Helvetica Neue', Helvetica, Arial, sans-serif",
+              "font-weight": 600,
+              fill: "#203f35"
+            });
+            label.textContent = line;
+            labelLayer.appendChild(label);
+            addVisual(groupVisuals, groupId, label);
+          });
+
+          const pct = createSvgNode("text", {
+            x: xGroup + barWidth + 16,
+            y: firstY + (lines.length * lineStep) + scaledFont(5),
+            "text-anchor": "start",
+            "font-size": scaledFont(17.3),
+            "font-family": "'Helvetica Neue', Helvetica, Arial, sans-serif",
+            fill: "#4a675d"
+          });
+          pct.textContent = `${(((groupWeights.get(groupId) || 0) / totalWeight) * 100).toFixed(1)}%`;
+          labelLayer.appendChild(pct);
+          addVisual(groupVisuals, groupId, pct);
+        });
+
+        usedFamilies.forEach((familyId) => {
+          const node = familyNodes.get(familyId);
+          if (!node) return;
+          const fill = familyColor.get(familyId) || "#3f6f62";
+
+          const rect = createSvgNode("rect", {
+            x: xFamily,
+            y: node.y,
+            width: barWidth,
+            height: node.h,
+            rx: 4,
+            fill,
+            stroke: "#ffffff",
+            "stroke-width": 1
+          });
+          nodeLayer.appendChild(rect);
+          addVisual(familyVisuals, familyId, rect);
+          bindHover(rect, { familyId });
+
+          const label = createSvgNode("text", {
+            x: xFamily - 10,
+            y: node.y + (node.h / 2) + scaledFont(4),
+            "text-anchor": "end",
+            "font-size": scaledFont(18),
+            "font-family": "'Helvetica Neue', Helvetica, Arial, sans-serif",
+            "font-weight": 600,
+            fill: "#1f3c34"
+          });
+          label.textContent = familyMeta.get(familyId)?.shortLabel || familyId;
+          labelLayer.appendChild(label);
+          addVisual(familyVisuals, familyId, label);
+        });
+
+        usedScopes.forEach((scopeId) => {
+          const node = scopeNodes.get(scopeId);
+          if (!node) return;
+          const fill = scopeBarColor.get(scopeId) || "#6f6f7f";
+
+          const rect = createSvgNode("rect", {
+            x: xScope,
+            y: node.y,
+            width: barWidth,
+            height: node.h,
+            rx: 4,
+            fill,
+            stroke: "#ffffff",
+            "stroke-width": 1
+          });
+          nodeLayer.appendChild(rect);
+          addVisual(scopeVisuals, scopeId, rect);
+          bindHover(rect, { scopeId });
+
+          const label = createSvgNode("text", {
+            x: xScope - 16,
+            y: node.y + (node.h / 2) + scaledFont(6),
+            "text-anchor": "end",
+            "font-size": scaledFont(22.3),
+            "font-family": "'Helvetica Neue', Helvetica, Arial, sans-serif",
+            "font-weight": 600,
+            fill: "#203f35"
+          });
+          label.textContent = scopeLabel.get(scopeId) || scopeId;
+          labelLayer.appendChild(label);
+          addVisual(scopeVisuals, scopeId, label);
+
+          const pct = createSvgNode("text", {
+            x: xScope - 16,
+            y: node.y + (node.h / 2) + scaledFont(24),
+            "text-anchor": "end",
+            "font-size": scaledFont(17.3),
+            "font-family": "'Helvetica Neue', Helvetica, Arial, sans-serif",
+            fill: "#4a675d"
+          });
+          pct.textContent = `${(((scopeWeights.get(scopeId) || 0) / totalWeight) * 100).toFixed(1)}%`;
+          labelLayer.appendChild(pct);
+          addVisual(scopeVisuals, scopeId, pct);
+        });
+
+        svg.append(edgeLayer, nodeLayer, labelLayer);
+        svg.onmouseleave = resetFocus;
+      }
+
+      syncOrderButton();
+      renderBraid(defaultFamilies);
+
+      if (orderToggleBtn) {
+        orderToggleBtn.addEventListener("click", () => {
+          useHeuristicOrder = !useHeuristicOrder;
+          syncOrderButton();
+          renderBraid(useHeuristicOrder ? heuristicFamilies : defaultFamilies);
+        });
+      }
+
+      if (downloadSvgBtn) {
+        downloadSvgBtn.addEventListener("click", downloadCurrentSvg);
+      }
+    })();
+  </script>
+</section>

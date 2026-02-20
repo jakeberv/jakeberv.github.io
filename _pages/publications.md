@@ -26,6 +26,8 @@ read_more: "enabled"
   </figure>
 </div>
 
+{% include publications-interdisciplinarity-braid.html methods=site.data.research_method_tags publication_tags=site.data.publication_tags %}
+
 {% capture _pubs_feed %}{{ '/feed/publications.xml' | relative_url }}{% endcapture %}
 <link rel="alternate" type="application/atom+xml" title="Publications — {{ site.title }}" href="{{ _pubs_feed }}">
 

@@ -87,12 +87,15 @@ if [[ "$MODE" == "serve" || "$SKIP_DATA" -eq 0 ]] && ! command -v python3 >/dev/
   exit 1
 fi
 
-if [[ "$SKIP_DATA" -eq 0 ]] && ! command -v node >/dev/null 2>&1; then
-  echo "node is required to generate career geo map data."
+if ! command -v node >/dev/null 2>&1; then
+  echo "node is required to run publication/data validation checks."
   exit 1
 fi
 
 cd "$ROOT_DIR"
+
+echo "Validating publications interdisciplinarity braid stats ..."
+node scripts/qa/validate-publications-interdisciplinarity-stats.mjs
 
 if [[ "$SKIP_DATA" -eq 1 ]]; then
   echo "Skipping geo/impact data validation and generation (default mode). Use --with-data to run them."

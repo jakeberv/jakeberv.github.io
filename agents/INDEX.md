@@ -37,6 +37,9 @@ This directory contains spec templates and process guides for bot-assisted and h
 - [`agents/PUBLICATIONS_TAGS_SPEC.md`](PUBLICATIONS_TAGS_SPEC.md)  
   Use for canonical publication tag taxonomy and `type` vs `tags` usage rules.
 
+- [`agents/PUBLICATIONS_INTERDISCIPLINARITY_BRAID_SPEC.md`](PUBLICATIONS_INTERDISCIPLINARITY_BRAID_SPEC.md)  
+  Use for the `/publications/` interdisciplinarity braid panel (theme-group -> method-family -> scale flow visualization).
+
 - [`agents/NEWS_SPEC_TEMPLATE.md`](NEWS_SPEC_TEMPLATE.md)  
   Use for `_news` item structure and excerpt conventions.
 

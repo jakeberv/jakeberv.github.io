@@ -2,7 +2,7 @@
 {% assign family_ids = methods.method_family_order | default: methods.display_groups.landing_page_method_families %}
 {% assign publications = site.publications | where_exp: "pub", "pub.method_tags" | sort: "date" | reverse %}
 
-<section class="research-method-network-panel" aria-label="Method family network">
+<section class="research-method-network-panel" aria-label="Method co-use network">
   <style>
     .research-method-network-panel {
       margin: 0.62rem 0 0.94rem;
@@ -127,6 +127,12 @@
       font-size: 0.6rem;
       line-height: 1.25;
       color: rgba(18, 58, 50, 0.86);
+    }
+
+    .research-method-network__copy a {
+      color: #175044;
+      text-decoration: underline;
+      text-underline-offset: 2px;
     }
 
     .research-method-network__toolbar {
@@ -344,11 +350,11 @@
     }
   </style>
 
-  <details class="research-method-network" data-method-network-root>
+  <details class="research-method-network" id="method-co-use-network" data-method-network-root>
     <summary>
       <div class="research-method-network__header">
-        <h4 class="research-method-network__title">Methodological Interdisciplinarity Network</h4>
-        <p class="research-method-network__tagline">How often method families are combined within the same papers.</p>
+        <h4 class="research-method-network__title">Method Co-Use Network</h4>
+        <p class="research-method-network__tagline">How often method families appear together within the same papers.</p>
       </div>
       <span class="research-method-network__summary-wrap">
         <span class="research-method-network__summary" data-method-network-summary>loading</span>
@@ -361,7 +367,7 @@
     </summary>
 
     <div class="research-method-network__body">
-      <p class="research-method-network__copy">Node size shows how often each method family appears across your papers, and edge thickness shows methodological interdisciplinarity strength (how often two families are used together in the same papers). Click a node or edge to inspect linked papers.</p>
+      <p class="research-method-network__copy">Node size shows how often each method family appears across papers, and edge thickness shows how often two families are used together in the same papers. Click a node or edge to inspect linked papers. For a publication-level pathway view across scale, methods, and themes, see the <a href="{{ '/publications/#publications-interdisciplinarity-braid' | relative_url }}">Interdisciplinarity Braid on the Publications page</a>.</p>
 
       <div class="research-method-network__toolbar">
         <div class="research-method-network__group">
