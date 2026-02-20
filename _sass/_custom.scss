@@ -1320,10 +1320,10 @@
   white-space: normal;
 }
 
-.author-metrics__title {
+.sidebar .author-metrics__title {
   display: block;
   margin: 0 0 0.3rem 0;
-  font-size: 0.72rem;
+  font-size: 0.734rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   opacity: 0.68;
@@ -1338,12 +1338,16 @@
   gap: 0.18rem;
 }
 
-.author-metrics__item {
+.sidebar .author-metrics__item {
   margin: 0;
-  font-size: 0.88rem;
+  font-size: 0.63rem;
   line-height: 1.3;
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
+}
+
+.sidebar .author-metrics__item strong {
+  font-size: 1em;
 }
 
 /* ==========================================================================
