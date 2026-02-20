@@ -7,7 +7,7 @@ Canonical feature files:
 
 ## Purpose
 - Provide a portfolio-level visual summary of methodological interdisciplinarity on `/publications/`.
-- Show flow from inference scales -> method families -> publication theme groups.
+- Show flow from inference scales -> method families -> research focus areas.
 - Keep outputs fully data-driven from canonical publication and method tag front matter.
 
 ## Data dependencies
@@ -38,6 +38,7 @@ Canonical feature files:
   - `Order` toggle (default vs heuristic family ordering)
   - `Download SVG` action button for presentation export
   - SVG braid visualization
+  - right-column terminology override: publication group slug `methods` is rendered as `Methods-Oriented`
   - cross-link to `/research/#method-co-use-network`
 
 ## Accessibility and responsiveness

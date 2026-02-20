@@ -187,7 +187,7 @@
   <div class="pub-braid-panel__header">
     <p class="pub-braid-panel__kicker">Methods Synthesis</p>
     <h3 class="pub-braid-panel__title">Interdisciplinarity Braid Across Publications</h3>
-    <p class="pub-braid-panel__copy">This panel shows how Jacob Berv’s publications connect scale of inference to method families and then to major research themes. It summarizes the interdisciplinary structure of the published portfolio in a single view. Wider flows indicate the connections that recur most frequently across studies.</p>
+    <p class="pub-braid-panel__copy">This panel shows how Jacob Berv’s publications connect inference scale to method families and then to research focus areas. It summarizes the interdisciplinary structure of the published portfolio in a single view. Wider flows indicate the connections that recur most frequently across studies.</p>
   </div>
 
   <div class="pub-braid-toolbar">
@@ -198,7 +198,7 @@
 
   <div class="pub-braid-layout" data-pub-braid-root>
     <figure class="pub-braid-graph">
-      <svg class="pub-braid-graph__svg" data-pub-braid-svg viewBox="0 0 1540 920" role="img" aria-label="Interdisciplinarity braid from publication themes to methods and inference scale"></svg>
+      <svg class="pub-braid-graph__svg" data-pub-braid-svg viewBox="0 0 1540 920" role="img" aria-label="Interdisciplinarity braid from inference scale to method families and research focus areas"></svg>
       <figcaption class="pub-braid-source">Source data: _publications/*.md + _data/publication_tags.yml + _data/research_method_tags.yml</figcaption>
       <p class="pub-braid-legend">Legend: node height = share of total flow; ribbon width = frequency across papers.</p>
     </figure>
@@ -211,7 +211,7 @@
     <li class="pub-braid-stats__item" data-braid-stat="groups">Avg theme groups/output: {{ braid_stats.avg_theme_groups_per_output | default: 0 }}</li>
   </ul>
 
-  <p class="pub-braid-panel__note">Construction rule: each publication contributes total weight 1.0, split evenly across observed theme-group x method-family combinations and method-family x scope combinations.</p>
+  <p class="pub-braid-panel__note">Construction rule: each publication contributes total weight 1.0, split evenly across observed theme-group x method-family combinations and method-family x scope combinations. &ldquo;Methods-Oriented&rdquo; is a research focus area, while method families are technical workflows from <code>method_tags</code>.</p>
   <p class="pub-braid-panel__xref">For pairwise method-family co-use, see the <a href="{{ '/research/#method-co-use-network' | relative_url }}">Method Co-Use Network on the Research page</a>.</p>
 
   <script>
@@ -352,6 +352,7 @@
 
       const tagToGroup = new Map(publicationTags.map((tag) => [tag.slug, tag.group]));
       const groupLabel = new Map(publicationGroups.map((group) => [group.slug, group.label || group.slug]));
+      groupLabel.set("methods", "Methods-Oriented");
       const groupOrder = publicationGroups.map((group) => group.slug);
 
       const tagToFamily = new Map(methodTags.map((tag) => [tag.id, tag.method_family]));
@@ -759,7 +760,7 @@
         }
 
         const columnLabels = [
-          { x: xGroup + (barWidth / 2), text: "Publication Theme Groups" },
+          { x: xGroup + (barWidth / 2), text: "Research Focus Areas" },
           { x: xFamily + (barWidth / 2), text: "Method Families" },
           { x: xScope + (barWidth / 2), text: "Inference Scale" }
         ];
