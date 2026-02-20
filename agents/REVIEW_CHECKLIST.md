@@ -21,6 +21,7 @@ Use this checklist before handoff, commit, or merge.
 - [ ] New guidance does not conflict with `AGENTS.md`.
 - [ ] New specs/templates follow existing style in `agents/`.
 - [ ] Relevant spec/template files were updated when behavior/schema/policy changed (or marked N/A for content-only edits).
+- [ ] Privacy/policy pages (for example `_pages/terms.md`) were re-verified against current analytics/comments integrations during audits.
 
 ## Git and handoff checks
 
