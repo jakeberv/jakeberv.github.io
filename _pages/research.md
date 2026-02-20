@@ -26,6 +26,8 @@ header:
 </ul>
 </section>
 
+{% include research-method-explorer.html methods=site.data.research_method_tags %}
+
 <section class="research-core-card">
   <p class="research-kicker research-kicker--questions">Core Questions</p>
   <ul class="research-question-list">
@@ -57,8 +59,6 @@ header:
 {% include base_path %}
 
 {% assign ordered_pages = site.research | sort: "order_number" %}
-
-{% include research-method-explorer.html methods=site.data.research_method_tags %}
 
 <div class="research-grid">
 {% for post in ordered_pages %} {% include archive-single-research-grid.html type="grid" %} {% endfor %}

@@ -271,7 +271,7 @@
     }
   </style>
 
-  <h3 class="research-tag-explorer__title">Methods Used in My Research</h3>
+  <h3 class="research-tag-explorer__title">Techniques and Methods Applied in My Research</h3>
   <p class="research-tag-explorer__copy">Scan family coverage, then open tags to preview linked papers.</p>
 
   <div class="research-method-overview">
@@ -279,16 +279,8 @@
       {% assign family = methods.method_families | where: "id", family_id | first %}
       {% assign family_tags = methods.tags | where: "method_family", family_id %}
       {% assign family_papers = publications | where_exp: "pub", "pub.method_families contains family_id" %}
-      {% assign tags_used = 0 %}
-      {% for tag in family_tags %}
-        {% assign tag_papers = publications | where_exp: "pub", "pub.method_tags contains tag.id" %}
-        {% if tag_papers.size > 0 %}
-          {% assign tags_used = tags_used | plus: 1 %}
-        {% endif %}
-      {% endfor %}
 
       {% if family and family_tags.size > 0 %}
-        {% assign coverage_percent = tags_used | times: 100 | divided_by: family_tags.size %}
         <details class="research-method-family" data-family-id="{{ family_id }}">
           <summary title="{{ family.label }}">
             <span class="research-method-family__label-row">
@@ -297,8 +289,7 @@
             </span>
             <span class="research-method-family__stats">
               <span class="research-method-chip">{{ family_papers.size }} papers</span>
-              <span class="research-method-chip">{{ tags_used }}/{{ family_tags.size }} tags</span>
-              <span class="research-method-chip">{{ coverage_percent }}%</span>
+              <span class="research-method-chip">{{ family_tags.size }} tags</span>
             </span>
           </summary>
 
