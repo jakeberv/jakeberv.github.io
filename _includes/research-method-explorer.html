@@ -13,6 +13,26 @@
       box-shadow: 0 8px 24px -20px rgba(19, 49, 43, 0.75);
     }
 
+    .research-tag-explorer__panel > summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.45rem;
+      user-select: none;
+    }
+
+    .research-tag-explorer__panel > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .research-tag-explorer__header {
+      min-width: 0;
+      display: grid;
+      gap: 0.12rem;
+    }
+
     .research-tag-explorer__title {
       margin: 0;
       font-size: 0.94rem;
@@ -25,6 +45,74 @@
       font-size: 0.77rem;
       color: rgba(15, 49, 41, 0.84);
       line-height: 1.35;
+    }
+
+    .research-tag-explorer__summary-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.48rem;
+      flex: 0 0 auto;
+    }
+
+    .research-tag-explorer__summary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.39rem;
+      font-size: 0.84rem;
+      line-height: 1.2;
+      font-weight: 700;
+      border: 1px solid rgba(20, 69, 58, 0.17);
+      border-radius: 999px;
+      background: rgba(234, 246, 239, 0.86);
+      color: rgba(19, 64, 54, 0.86);
+      padding: 0.17rem 0.6rem;
+      white-space: nowrap;
+    }
+
+    .research-tag-explorer__toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.81rem;
+      line-height: 1.2;
+      font-weight: 700;
+      color: rgba(20, 69, 58, 0.78);
+      border: 1px solid rgba(20, 69, 58, 0.16);
+      border-radius: 999px;
+      background: rgba(248, 252, 249, 0.9);
+      padding: 0.14rem 0.53rem;
+      white-space: nowrap;
+    }
+
+    .research-tag-explorer__toggle-icon {
+      display: inline-block;
+      transition: transform 0.15s ease;
+    }
+
+    .research-tag-explorer__panel[open] .research-tag-explorer__toggle-icon {
+      transform: rotate(90deg);
+    }
+
+    .research-tag-explorer__toggle-open {
+      display: inline;
+    }
+
+    .research-tag-explorer__toggle-close {
+      display: none;
+    }
+
+    .research-tag-explorer__panel[open] .research-tag-explorer__toggle-open {
+      display: none;
+    }
+
+    .research-tag-explorer__panel[open] .research-tag-explorer__toggle-close {
+      display: inline;
+    }
+
+    .research-tag-explorer__content {
+      margin-top: 0.5rem;
+      padding-top: 0.52rem;
+      border-top: 1px solid rgba(17, 66, 56, 0.12);
     }
 
     .research-method-overview {
@@ -271,77 +359,93 @@
     }
   </style>
 
-  <h3 class="research-tag-explorer__title">Techniques and Methods Applied in My Research</h3>
-  <p class="research-tag-explorer__copy">Scan family coverage, then open tags to preview linked papers.</p>
+  <details class="research-tag-explorer__panel" data-method-explorer-root>
+    <summary>
+      <span class="research-tag-explorer__header">
+        <h3 class="research-tag-explorer__title">Techniques and Methods Applied in My Research</h3>
+        <p class="research-tag-explorer__copy">Scan family coverage, then open tags to preview linked papers.</p>
+      </span>
+      <span class="research-tag-explorer__summary-wrap">
+        <span class="research-tag-explorer__summary">{{ family_ids.size }} families</span>
+        <span class="research-tag-explorer__toggle" aria-hidden="true">
+          <span class="research-tag-explorer__toggle-icon">▸</span>
+          <span class="research-tag-explorer__toggle-open">Expand</span>
+          <span class="research-tag-explorer__toggle-close">Collapse</span>
+        </span>
+      </span>
+    </summary>
 
-  <div class="research-method-overview">
-    {% for family_id in family_ids %}
-      {% assign family = methods.method_families | where: "id", family_id | first %}
-      {% assign family_tags = methods.tags | where: "method_family", family_id %}
-      {% assign family_papers = publications | where_exp: "pub", "pub.method_families contains family_id" %}
+    <div class="research-tag-explorer__content">
+      <div class="research-method-overview">
+        {% for family_id in family_ids %}
+          {% assign family = methods.method_families | where: "id", family_id | first %}
+          {% assign family_tags = methods.tags | where: "method_family", family_id %}
+          {% assign family_papers = publications | where_exp: "pub", "pub.method_families contains family_id" %}
 
-      {% if family and family_tags.size > 0 %}
-        <details class="research-method-family" data-family-id="{{ family_id }}">
-          <summary title="{{ family.label }}">
-            <span class="research-method-family__label-row">
-              <span class="research-method-family__label">{{ family.short_label | default: family.label }}</span>
-              <span class="research-method-family__toggle" aria-hidden="true">+</span>
-            </span>
-            <span class="research-method-family__stats">
-              <span class="research-method-chip">{{ family_papers.size }} papers</span>
-              <span class="research-method-chip">{{ family_tags.size }} tags</span>
-            </span>
-          </summary>
+          {% if family and family_tags.size > 0 %}
+            <details class="research-method-family" data-family-id="{{ family_id }}">
+              <summary title="{{ family.label }}">
+                <span class="research-method-family__label-row">
+                  <span class="research-method-family__label">{{ family.short_label | default: family.label }}</span>
+                  <span class="research-method-family__toggle" aria-hidden="true">+</span>
+                </span>
+                <span class="research-method-family__stats">
+                  <span class="research-method-chip">{{ family_papers.size }} papers</span>
+                  <span class="research-method-chip">{{ family_tags.size }} tags</span>
+                </span>
+              </summary>
 
-          <div class="research-method-family__body">
-            <ul class="research-method-tag-list" data-default-visible="8">
-              {% for tag in family_tags %}
-                {% assign tagged_papers = publications | where_exp: "pub", "pub.method_tags contains tag.id" | sort: "date" | reverse %}
-                <li class="research-method-tag-item" data-count="{{ tagged_papers.size }}">
-                  <details class="research-method-tag">
-                    <summary title="{{ tag.label }}">
-                      <span class="research-method-tag__label">{{ tag.label }}</span>
-                      <span class="research-method-chip research-method-chip--count">{{ tagged_papers.size }}</span>
-                    </summary>
-                    <div class="research-method-tag__papers">
-                      {% if tagged_papers.size > 0 %}
-                        <ul class="research-method-paper-preview">
-                          {% for paper in tagged_papers limit: 3 %}
-                            <li>
-                              <a href="{{ paper.url | relative_url }}">{{ paper.title }}</a>
-                              <span class="research-method-paper-year">({{ paper.date | date: "%Y" }})</span>
-                            </li>
-                          {% endfor %}
-                        </ul>
-
-                        {% if tagged_papers.size > 3 %}
-                          <details class="research-method-tag__all">
-                            <summary>View all tagged papers ({{ tagged_papers.size }})</summary>
-                            <ul class="research-method-paper-all">
-                              {% for paper in tagged_papers %}
+              <div class="research-method-family__body">
+                <ul class="research-method-tag-list" data-default-visible="8">
+                  {% for tag in family_tags %}
+                    {% assign tagged_papers = publications | where_exp: "pub", "pub.method_tags contains tag.id" | sort: "date" | reverse %}
+                    <li class="research-method-tag-item" data-count="{{ tagged_papers.size }}">
+                      <details class="research-method-tag">
+                        <summary title="{{ tag.label }}">
+                          <span class="research-method-tag__label">{{ tag.label }}</span>
+                          <span class="research-method-chip research-method-chip--count">{{ tagged_papers.size }}</span>
+                        </summary>
+                        <div class="research-method-tag__papers">
+                          {% if tagged_papers.size > 0 %}
+                            <ul class="research-method-paper-preview">
+                              {% for paper in tagged_papers limit: 3 %}
                                 <li>
                                   <a href="{{ paper.url | relative_url }}">{{ paper.title }}</a>
                                   <span class="research-method-paper-year">({{ paper.date | date: "%Y" }})</span>
                                 </li>
                               {% endfor %}
                             </ul>
-                          </details>
-                        {% endif %}
-                      {% else %}
-                        <p class="research-method-tag__empty">No tagged papers yet.</p>
-                      {% endif %}
-                    </div>
-                  </details>
-                </li>
-              {% endfor %}
-            </ul>
 
-            <button type="button" class="research-method-tag-toggle" hidden>Show all tags</button>
-          </div>
-        </details>
-      {% endif %}
-    {% endfor %}
-  </div>
+                            {% if tagged_papers.size > 3 %}
+                              <details class="research-method-tag__all">
+                                <summary>View all tagged papers ({{ tagged_papers.size }})</summary>
+                                <ul class="research-method-paper-all">
+                                  {% for paper in tagged_papers %}
+                                    <li>
+                                      <a href="{{ paper.url | relative_url }}">{{ paper.title }}</a>
+                                      <span class="research-method-paper-year">({{ paper.date | date: "%Y" }})</span>
+                                    </li>
+                                  {% endfor %}
+                                </ul>
+                              </details>
+                            {% endif %}
+                          {% else %}
+                            <p class="research-method-tag__empty">No tagged papers yet.</p>
+                          {% endif %}
+                        </div>
+                      </details>
+                    </li>
+                  {% endfor %}
+                </ul>
+
+                <button type="button" class="research-method-tag-toggle" hidden>Show all tags</button>
+              </div>
+            </details>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </details>
 
   <script>
     (() => {

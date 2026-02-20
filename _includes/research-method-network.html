@@ -1,0 +1,820 @@
+{% assign methods = include.methods | default: site.data.research_method_tags %}
+{% assign family_ids = methods.method_family_order | default: methods.display_groups.landing_page_method_families %}
+{% assign publications = site.publications | where_exp: "pub", "pub.method_tags" | sort: "date" | reverse %}
+
+<section class="research-method-network-panel" aria-label="Method family network">
+  <style>
+    .research-method-network-panel {
+      margin: 0.62rem 0 0.94rem;
+    }
+
+    .research-method-network {
+      border: 1px solid rgba(17, 66, 56, 0.14);
+      border-radius: 12px;
+      background: linear-gradient(135deg, #f7fbf8 0%, #edf4ef 100%);
+      box-shadow: 0 10px 24px -20px rgba(19, 49, 43, 0.7);
+      overflow: hidden;
+    }
+
+    .research-method-network > summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.45rem;
+      padding: 0.5rem 0.62rem;
+      user-select: none;
+    }
+
+    .research-method-network > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .research-method-network__header {
+      min-width: 0;
+      display: grid;
+      gap: 0.12rem;
+    }
+
+    .research-method-network__title {
+      margin: 0;
+      font-size: 0.94rem;
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+      font-weight: 700;
+      color: #17463b;
+    }
+
+    .research-method-network__tagline {
+      margin: 0.24rem 0 0.5rem;
+      font-size: 0.77rem;
+      color: rgba(15, 49, 41, 0.84);
+      line-height: 1.35;
+    }
+
+    .research-method-network__summary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.39rem;
+      font-size: 0.84rem;
+      line-height: 1.2;
+      font-weight: 700;
+      border: 1px solid rgba(20, 69, 58, 0.17);
+      border-radius: 999px;
+      background: rgba(234, 246, 239, 0.86);
+      color: rgba(19, 64, 54, 0.86);
+      padding: 0.17rem 0.6rem;
+      white-space: nowrap;
+    }
+
+    .research-method-network__summary-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.48rem;
+      flex: 0 0 auto;
+    }
+
+    .research-method-network__toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.81rem;
+      line-height: 1.2;
+      font-weight: 700;
+      color: rgba(20, 69, 58, 0.78);
+      border: 1px solid rgba(20, 69, 58, 0.16);
+      border-radius: 999px;
+      background: rgba(248, 252, 249, 0.9);
+      padding: 0.14rem 0.53rem;
+      white-space: nowrap;
+    }
+
+    .research-method-network__toggle-icon {
+      display: inline-block;
+      transition: transform 0.15s ease;
+    }
+
+    .research-method-network[open] .research-method-network__toggle-icon {
+      transform: rotate(90deg);
+    }
+
+    .research-method-network__toggle-open {
+      display: inline;
+    }
+
+    .research-method-network__toggle-close {
+      display: none;
+    }
+
+    .research-method-network[open] .research-method-network__toggle-open {
+      display: none;
+    }
+
+    .research-method-network[open] .research-method-network__toggle-close {
+      display: inline;
+    }
+
+    .research-method-network__body {
+      border-top: 1px solid rgba(17, 66, 56, 0.12);
+      padding: 0.52rem;
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    .research-method-network__copy {
+      margin: 0;
+      font-size: 0.6rem;
+      line-height: 1.25;
+      color: rgba(18, 58, 50, 0.86);
+    }
+
+    .research-method-network__toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.32rem;
+    }
+
+    .research-method-network__group {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.2rem;
+      flex-wrap: wrap;
+    }
+
+    .research-method-network__label {
+      margin: 0;
+      font-size: 0.56rem;
+      line-height: 1.2;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: rgba(20, 69, 58, 0.74);
+      white-space: nowrap;
+    }
+
+    .research-method-network__button {
+      border: 1px solid rgba(20, 69, 58, 0.18);
+      border-radius: 999px;
+      background: rgba(250, 253, 251, 0.9);
+      color: #18483d;
+      font-size: 0.56rem;
+      line-height: 1.2;
+      font-weight: 700;
+      padding: 0.12rem 0.4rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .research-method-network__button[aria-pressed="true"] {
+      background: rgba(35, 109, 93, 0.11);
+      border-color: rgba(35, 109, 93, 0.36);
+      color: #195549;
+    }
+
+    .research-method-network__button:hover,
+    .research-method-network__button:focus-visible {
+      background: rgba(236, 248, 242, 0.95);
+      outline: none;
+    }
+
+    .research-method-network__layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 245px;
+      gap: 0.5rem;
+      align-items: start;
+    }
+
+    .research-method-network__graph {
+      border: 1px solid rgba(20, 69, 58, 0.15);
+      border-radius: 10px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.97) 0%, rgba(247, 252, 248, 0.95) 100%);
+      overflow: hidden;
+      min-width: 0;
+    }
+
+    .research-method-network__svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 980 / 560;
+    }
+
+    .research-method-network__edge {
+      stroke: rgba(40, 82, 73, 0.26);
+      stroke-linecap: round;
+      cursor: pointer;
+      transition: stroke-opacity 0.12s ease, stroke-width 0.12s ease;
+    }
+
+    .research-method-network__edge.is-muted {
+      stroke-opacity: 0.08;
+    }
+
+    .research-method-network__edge.is-active {
+      stroke: rgba(24, 101, 84, 0.94);
+      stroke-opacity: 1;
+    }
+
+    .research-method-network__edge.is-selected {
+      stroke: rgba(15, 72, 60, 0.98);
+      stroke-opacity: 1;
+    }
+
+    .research-method-network__node {
+      stroke: rgba(247, 255, 251, 0.98);
+      stroke-width: 1.45;
+      cursor: pointer;
+      transition: transform 0.12s ease;
+      transform-origin: center;
+      filter: drop-shadow(0 0.7px 0.6px rgba(11, 45, 37, 0.26));
+    }
+
+    .research-method-network__node.is-muted {
+      opacity: 0.4;
+    }
+
+    .research-method-network__node.is-active {
+      stroke: #123d32;
+      stroke-width: 2.15;
+      transform: scale(1.14);
+    }
+
+    .research-method-network__node-label {
+      font-size: 1.08rem;
+      font-weight: 800;
+      fill: rgba(12, 53, 45, 0.98);
+      pointer-events: none;
+      letter-spacing: 0.005em;
+      paint-order: stroke fill;
+      stroke: rgba(255, 255, 255, 0.995);
+      stroke-width: 2.8px;
+    }
+
+    .research-method-network__detail {
+      border: 1px solid rgba(20, 69, 58, 0.15);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 0.42rem;
+      display: grid;
+      gap: 0.34rem;
+      min-width: 0;
+    }
+
+    .research-method-network__detail-title {
+      margin: 0;
+      font-size: 0.67rem;
+      line-height: 1.26;
+      color: #16463b;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .research-method-network__detail-meta {
+      margin: 0;
+      font-size: 0.58rem;
+      line-height: 1.2;
+      color: rgba(18, 58, 50, 0.82);
+    }
+
+    .research-method-network__link-list,
+    .research-method-network__paper-list {
+      margin: 0;
+      padding: 0 0 0 0.88rem;
+      list-style: disc;
+      display: grid;
+      gap: 0.18rem;
+      min-width: 0;
+    }
+
+    .research-method-network__paper-list {
+      max-height: 8.6rem;
+      overflow: auto;
+    }
+
+    .research-method-network__link-list li,
+    .research-method-network__paper-list li {
+      margin: 0;
+      padding: 0;
+      font-size: 0.58rem;
+      line-height: 1.26;
+      overflow-wrap: anywhere;
+    }
+
+    .research-method-network__link-list button {
+      border: 0;
+      background: transparent;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      color: #185144;
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: 700;
+      text-align: left;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .research-method-network__paper-list a {
+      color: #184f42;
+      text-decoration: none;
+    }
+
+    .research-method-network__paper-list a:hover,
+    .research-method-network__paper-list a:focus-visible {
+      text-decoration: underline;
+    }
+
+    .research-method-network__paper-year {
+      color: rgba(18, 58, 50, 0.72);
+      margin-left: 0.14rem;
+    }
+
+    @media (max-width: 980px) {
+      .research-method-network__layout {
+        grid-template-columns: 1fr;
+      }
+
+      .research-method-network__paper-list {
+        max-height: 7.6rem;
+      }
+    }
+  </style>
+
+  <details class="research-method-network" data-method-network-root>
+    <summary>
+      <div class="research-method-network__header">
+        <h4 class="research-method-network__title">Methodological Interdisciplinarity Network</h4>
+        <p class="research-method-network__tagline">How often method families are combined within the same papers.</p>
+      </div>
+      <span class="research-method-network__summary-wrap">
+        <span class="research-method-network__summary" data-method-network-summary>loading</span>
+        <span class="research-method-network__toggle" aria-hidden="true">
+          <span class="research-method-network__toggle-icon">▸</span>
+          <span class="research-method-network__toggle-open">Expand</span>
+          <span class="research-method-network__toggle-close">Collapse</span>
+        </span>
+      </span>
+    </summary>
+
+    <div class="research-method-network__body">
+      <p class="research-method-network__copy">Node size shows how often each method family appears across your papers, and edge thickness shows methodological interdisciplinarity strength (how often two families are used together in the same papers). Click a node or edge to inspect linked papers.</p>
+
+      <div class="research-method-network__toolbar">
+        <div class="research-method-network__group">
+          <p class="research-method-network__label">Min Shared Papers</p>
+          <button class="research-method-network__button" data-threshold="1" aria-pressed="false" type="button">1+</button>
+          <button class="research-method-network__button" data-threshold="2" aria-pressed="true" type="button">2+</button>
+          <button class="research-method-network__button" data-threshold="3" aria-pressed="false" type="button">3+</button>
+        </div>
+        <div class="research-method-network__group">
+          <p class="research-method-network__label">Visibility</p>
+          <button class="research-method-network__button" data-action="toggle-all" aria-pressed="false" type="button">Context edges on</button>
+          <button class="research-method-network__button" data-action="clear" type="button">Clear edge</button>
+        </div>
+      </div>
+
+      <div class="research-method-network__layout">
+        <section class="research-method-network__graph">
+          <svg class="research-method-network__svg" data-method-network-svg viewBox="0 0 980 560" aria-label="Method family co-usage network"></svg>
+        </section>
+
+        <aside class="research-method-network__detail">
+          <p class="research-method-network__detail-title" data-method-network-detail-title></p>
+          <p class="research-method-network__detail-meta" data-method-network-detail-meta></p>
+          <ul class="research-method-network__link-list" data-method-network-link-list></ul>
+          <ul class="research-method-network__paper-list" data-method-network-paper-list></ul>
+        </aside>
+      </div>
+    </div>
+  </details>
+
+  <script>
+    (() => {
+      const script = document.currentScript;
+      const panel = script.closest(".research-method-network-panel");
+      const root = panel ? panel.querySelector("[data-method-network-root]") : null;
+      if (!root) return;
+
+      const familyOrder = {{ family_ids | jsonify }};
+      const familyCatalog = {{ methods.method_families | jsonify }};
+      const tags = {{ methods.tags | jsonify }};
+      const papers = [
+        {% for paper in publications %}
+          {
+            title: {{ paper.title | jsonify }},
+            url: {{ paper.url | relative_url | jsonify }},
+            year: {{ paper.date | date: "%Y" | jsonify }},
+            tags: {{ paper.method_tags | jsonify }}
+          }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ];
+
+      const palette = [
+        "#1e5f59",
+        "#2f7a6c",
+        "#4d8f62",
+        "#3e6f8f",
+        "#8f6a3f",
+        "#7c4a90",
+        "#795d2b",
+        "#3d7d86",
+        "#84545f",
+        "#4c7a42",
+        "#5a6f9a",
+        "#6a6a44"
+      ];
+
+      function dedupe(values) {
+        return [...new Set((values || []).filter(Boolean))];
+      }
+
+      function keyOf(a, b) {
+        return a < b ? a + "||" + b : b + "||" + a;
+      }
+
+      const familyMeta = new Map();
+      familyCatalog.forEach((family) => {
+        familyMeta.set(family.id, {
+          shortLabel: family.short_label || family.label,
+          label: family.label
+        });
+      });
+
+      const tagToFamily = new Map(tags.map((tag) => [tag.id, tag.method_family]));
+
+      const normalizedPapers = papers
+        .map((paper, idx) => {
+          const validTags = dedupe(paper.tags).filter((tagId) => tagToFamily.has(tagId));
+          const families = dedupe(validTags.map((tagId) => tagToFamily.get(tagId)));
+          return { ...paper, idx, families };
+        })
+        .filter((paper) => paper.families.length > 0);
+      const paperByIdx = new Map(normalizedPapers.map((paper) => [paper.idx, paper]));
+
+      const familyPaperSet = new Map();
+      const familyTagSet = new Map();
+      familyOrder.forEach((familyId) => {
+        familyPaperSet.set(familyId, new Set());
+        familyTagSet.set(familyId, new Set());
+      });
+
+      tags.forEach((tag) => {
+        if (!familyTagSet.has(tag.method_family)) familyTagSet.set(tag.method_family, new Set());
+      });
+
+      normalizedPapers.forEach((paper) => {
+        paper.families.forEach((familyId) => {
+          if (!familyPaperSet.has(familyId)) familyPaperSet.set(familyId, new Set());
+          familyPaperSet.get(familyId).add(paper.idx);
+        });
+      });
+
+      tags.forEach((tag) => {
+        const tagPaperUsed = normalizedPapers.some((paper) => paper.families.includes(tag.method_family) && (paper.tags || []).includes(tag.id));
+        if (tagPaperUsed) familyTagSet.get(tag.method_family).add(tag.id);
+      });
+
+      const usedFamilies = [...familyPaperSet.entries()]
+        .filter(([, set]) => set.size > 0)
+        .map(([familyId]) => familyId);
+      usedFamilies.sort((a, b) => {
+        const ai = familyOrder.indexOf(a);
+        const bi = familyOrder.indexOf(b);
+        if (ai === -1 && bi === -1) return a.localeCompare(b);
+        if (ai === -1) return 1;
+        if (bi === -1) return -1;
+        return ai - bi;
+      });
+
+      const familyNodes = usedFamilies.map((familyId) => ({
+        id: familyId,
+        shortLabel: (familyMeta.get(familyId) || { shortLabel: familyId }).shortLabel,
+        fullLabel: (familyMeta.get(familyId) || { label: familyId }).label,
+        paperCount: (familyPaperSet.get(familyId) || new Set()).size,
+        tagCount: (familyTagSet.get(familyId) || new Set()).size,
+        papers: [...(familyPaperSet.get(familyId) || new Set())]
+      }));
+
+      const pairMap = new Map();
+      for (let i = 0; i < usedFamilies.length; i += 1) {
+        for (let j = i + 1; j < usedFamilies.length; j += 1) {
+          const a = usedFamilies[i];
+          const b = usedFamilies[j];
+          const setA = familyPaperSet.get(a) || new Set();
+          const setB = familyPaperSet.get(b) || new Set();
+          const shared = [...setA].filter((idx) => setB.has(idx));
+          pairMap.set(keyOf(a, b), { a, b, shared, sharedCount: shared.length });
+        }
+      }
+      const familyEdges = [...pairMap.values()];
+      const maxEdgeWeight = familyEdges.reduce((m, e) => Math.max(m, e.sharedCount), 1);
+
+      const familyColor = new Map();
+      usedFamilies.forEach((familyId, idx) => {
+        familyColor.set(familyId, palette[idx % palette.length]);
+      });
+
+      const summaryEl = root.querySelector("[data-method-network-summary]");
+      const svg = root.querySelector("[data-method-network-svg]");
+      const detailTitleEl = root.querySelector("[data-method-network-detail-title]");
+      const detailMetaEl = root.querySelector("[data-method-network-detail-meta]");
+      const linkListEl = root.querySelector("[data-method-network-link-list]");
+      const paperListEl = root.querySelector("[data-method-network-paper-list]");
+      const thresholdButtons = [...root.querySelectorAll("[data-threshold]")];
+      const toggleAllBtn = root.querySelector("[data-action='toggle-all']");
+      const clearBtn = root.querySelector("[data-action='clear']");
+
+      const width = 980;
+      const height = 560;
+      const cx = width / 2;
+      const cy = height / 2;
+      const radius = 214;
+
+      const pos = new Map();
+      const step = (Math.PI * 2) / Math.max(usedFamilies.length, 1);
+      usedFamilies.forEach((familyId, idx) => {
+        const angle = -Math.PI / 2 + idx * step;
+        pos.set(familyId, {
+          x: cx + radius * Math.cos(angle),
+          y: cy + radius * Math.sin(angle),
+          angle
+        });
+      });
+
+      let threshold = 2;
+      let showAllEdges = false;
+      let selectedFamily = familyNodes.slice().sort((a, b) => b.paperCount - a.paperCount)[0]?.id || null;
+      let selectedEdgeKey = null;
+
+      function edgeState(edge) {
+        if (edge.sharedCount < threshold) return "hidden";
+        if (showAllEdges || !selectedFamily) return "full";
+        if (edge.a === selectedFamily || edge.b === selectedFamily) return "focus";
+        return "context";
+      }
+
+      function selectedEdge() {
+        return selectedEdgeKey ? pairMap.get(selectedEdgeKey) : null;
+      }
+
+      function familyById(id) {
+        return familyNodes.find((node) => node.id === id);
+      }
+
+      function paperElements(paperIndexes, limit) {
+        const sorted = paperIndexes
+          .map((idx) => paperByIdx.get(idx))
+          .filter(Boolean)
+          .sort((a, b) => Number(b.year) - Number(a.year));
+        const slice = Number.isFinite(limit) ? sorted.slice(0, limit) : sorted;
+        return slice.map((paper) => {
+          const li = document.createElement("li");
+          const link = document.createElement("a");
+          link.href = paper.url;
+          link.textContent = paper.title;
+          const year = document.createElement("span");
+          year.className = "research-method-network__paper-year";
+          year.textContent = "(" + paper.year + ")";
+          li.appendChild(link);
+          li.appendChild(year);
+          return li;
+        });
+      }
+
+      function renderDetail() {
+        linkListEl.innerHTML = "";
+        paperListEl.innerHTML = "";
+
+        const edge = selectedEdge();
+        if (edge) {
+          const a = familyById(edge.a);
+          const b = familyById(edge.b);
+          detailTitleEl.textContent = a.shortLabel + " + " + b.shortLabel;
+          detailMetaEl.textContent = edge.sharedCount + " shared papers at current threshold.";
+          const maxPapers = 10;
+          paperElements(edge.shared, maxPapers).forEach((el) => paperListEl.appendChild(el));
+          if (edge.shared.length > maxPapers) {
+            const li = document.createElement("li");
+            li.textContent = "… " + (edge.shared.length - maxPapers) + " more papers";
+            paperListEl.appendChild(li);
+          }
+          return;
+        }
+
+        const family = familyById(selectedFamily);
+        if (!family) {
+          detailTitleEl.textContent = "Select a family node.";
+          detailMetaEl.textContent = "Click nodes or edges to inspect papers.";
+          return;
+        }
+
+        detailTitleEl.textContent = family.fullLabel;
+        detailMetaEl.textContent = family.paperCount + " papers | " + family.tagCount + " tags";
+
+        const neighbors = familyEdges
+          .filter((edgeInfo) => edgeInfo.sharedCount >= threshold && (edgeInfo.a === family.id || edgeInfo.b === family.id))
+          .sort((a, b) => b.sharedCount - a.sharedCount);
+
+        neighbors.forEach((neighborEdge) => {
+          const otherId = neighborEdge.a === family.id ? neighborEdge.b : neighborEdge.a;
+          const other = familyById(otherId);
+          const li = document.createElement("li");
+          const button = document.createElement("button");
+          button.type = "button";
+          button.textContent = other.shortLabel + " (" + neighborEdge.sharedCount + ")";
+          button.addEventListener("click", () => {
+            selectedEdgeKey = keyOf(family.id, other.id);
+            render();
+          });
+          li.appendChild(button);
+          linkListEl.appendChild(li);
+        });
+
+        const helper = document.createElement("li");
+        helper.textContent = "Select a linked family above to show shared papers.";
+        paperListEl.appendChild(helper);
+
+      }
+
+      function renderGraph() {
+        svg.innerHTML = "";
+
+        const edgeLayer = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        const nodeLayer = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        const labelLayer = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        svg.append(edgeLayer, nodeLayer, labelLayer);
+
+        const guideRing = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        guideRing.setAttribute("cx", cx.toFixed(2));
+        guideRing.setAttribute("cy", cy.toFixed(2));
+        guideRing.setAttribute("r", radius.toFixed(2));
+        guideRing.setAttribute("fill", "none");
+        guideRing.setAttribute("stroke", "rgba(38, 88, 77, 0.2)");
+        guideRing.setAttribute("stroke-width", "1");
+        guideRing.setAttribute("stroke-dasharray", "2.5 4");
+        edgeLayer.appendChild(guideRing);
+
+        const neighbors = new Set();
+        familyEdges.forEach((edge) => {
+          if (edge.sharedCount < threshold) return;
+          if (edge.a === selectedFamily) neighbors.add(edge.b);
+          if (edge.b === selectedFamily) neighbors.add(edge.a);
+        });
+
+        const edgeDraw = familyEdges
+          .map((edge) => ({ edge, state: edgeState(edge), key: keyOf(edge.a, edge.b) }))
+          .filter((entry) => entry.state !== "hidden")
+          .sort((left, right) => {
+            const priority = { context: 0, full: 1, focus: 2 };
+            const leftPriority = (selectedEdgeKey && left.key === selectedEdgeKey) ? 3 : (priority[left.state] ?? 1);
+            const rightPriority = (selectedEdgeKey && right.key === selectedEdgeKey) ? 3 : (priority[right.state] ?? 1);
+            if (leftPriority !== rightPriority) return leftPriority - rightPriority;
+            return left.edge.sharedCount - right.edge.sharedCount;
+          });
+
+        edgeDraw.forEach(({ edge, state, key: edgeKey }) => {
+          const p1 = pos.get(edge.a);
+          const p2 = pos.get(edge.b);
+          if (!p1 || !p2) return;
+
+          const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+          line.setAttribute("x1", p1.x.toFixed(2));
+          line.setAttribute("y1", p1.y.toFixed(2));
+          line.setAttribute("x2", p2.x.toFixed(2));
+          line.setAttribute("y2", p2.y.toFixed(2));
+          line.setAttribute("class", "research-method-network__edge");
+
+          const baseWidth = 0.8 + (edge.sharedCount / maxEdgeWeight) * 4.2;
+          let opacity = 0.18 + (edge.sharedCount / maxEdgeWeight) * 0.3;
+
+          if (state === "context") {
+            line.classList.add("is-muted");
+            line.style.strokeDasharray = "1.4 3.1";
+            opacity = 0.05 + (edge.sharedCount / maxEdgeWeight) * 0.08;
+          } else if (state === "focus") {
+            line.classList.add("is-active");
+            opacity = 0.28 + (edge.sharedCount / maxEdgeWeight) * 0.45;
+          } else {
+            opacity = 0.16 + (edge.sharedCount / maxEdgeWeight) * 0.24;
+          }
+
+          if (selectedEdgeKey && edgeKey === selectedEdgeKey) {
+            line.classList.add("is-selected");
+            line.style.strokeDasharray = "none";
+            line.style.strokeWidth = (baseWidth + 0.8).toFixed(2);
+            line.style.strokeOpacity = "0.98";
+          } else {
+            line.style.strokeWidth = baseWidth.toFixed(2);
+            line.style.strokeOpacity = Math.min(0.96, opacity).toFixed(3);
+          }
+
+          line.addEventListener("click", (event) => {
+            event.stopPropagation();
+            selectedEdgeKey = edgeKey;
+            render();
+          });
+
+          edgeLayer.appendChild(line);
+        });
+
+        familyNodes.forEach((node) => {
+          const p = pos.get(node.id);
+          if (!p) return;
+
+          const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+          circle.setAttribute("cx", p.x.toFixed(2));
+          circle.setAttribute("cy", p.y.toFixed(2));
+          circle.setAttribute("r", (7 + Math.min(14, node.paperCount * 0.72)).toFixed(2));
+          circle.setAttribute("fill", familyColor.get(node.id) || "#377a6c");
+          circle.setAttribute("class", "research-method-network__node");
+
+          if (selectedFamily && node.id === selectedFamily) circle.classList.add("is-active");
+          else if (selectedFamily && !neighbors.has(node.id)) circle.classList.add("is-muted");
+
+          const title = document.createElementNS("http://www.w3.org/2000/svg", "title");
+          title.textContent = node.fullLabel + " | " + node.paperCount + " papers";
+          circle.appendChild(title);
+
+          circle.addEventListener("click", (event) => {
+            event.stopPropagation();
+            selectedFamily = node.id;
+            selectedEdgeKey = null;
+            render();
+          });
+
+          nodeLayer.appendChild(circle);
+
+          const dx = p.x - cx;
+          const dy = p.y - cy;
+          const mag = Math.sqrt(dx * dx + dy * dy) || 1;
+          const lx = p.x + (dx / mag) * 22;
+          const ly = p.y + (dy / mag) * 22;
+          const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+          text.setAttribute("x", lx.toFixed(2));
+          text.setAttribute("y", (ly + 3).toFixed(2));
+          text.setAttribute("text-anchor", dx >= 0 ? "start" : "end");
+          text.setAttribute("class", "research-method-network__node-label");
+          text.textContent = node.shortLabel;
+          labelLayer.appendChild(text);
+        });
+      }
+
+      function renderToolbar() {
+        thresholdButtons.forEach((btn) => {
+          const active = Number(btn.getAttribute("data-threshold")) === threshold;
+          btn.setAttribute("aria-pressed", String(active));
+        });
+        if (toggleAllBtn) {
+          toggleAllBtn.setAttribute("aria-pressed", String(showAllEdges));
+          toggleAllBtn.textContent = showAllEdges ? "Context edges all" : "Context edges on";
+        }
+      }
+
+      function renderSummary() {
+        summaryEl.textContent = usedFamilies.length + " families | " + normalizedPapers.length + " papers";
+      }
+
+      function render() {
+        renderSummary();
+        renderToolbar();
+        renderGraph();
+        renderDetail();
+      }
+
+      thresholdButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          threshold = Number(btn.getAttribute("data-threshold"));
+          selectedEdgeKey = null;
+          render();
+        });
+      });
+
+      if (toggleAllBtn) {
+        toggleAllBtn.addEventListener("click", () => {
+          showAllEdges = !showAllEdges;
+          selectedEdgeKey = null;
+          render();
+        });
+      }
+
+      if (clearBtn) {
+        clearBtn.addEventListener("click", () => {
+          selectedEdgeKey = null;
+          render();
+        });
+      }
+
+      svg.addEventListener("click", () => {
+        if (!selectedEdgeKey) return;
+        selectedEdgeKey = null;
+        render();
+      });
+
+      render();
+    })();
+  </script>
+</section>
