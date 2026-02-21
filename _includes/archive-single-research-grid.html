@@ -9,32 +9,16 @@
 
 <div class="{{ include.type | default: "grid" }}__item">
   <article class="archive__item research-area-card" itemscope itemtype="http://schema.org/CreativeWork">
-    <a class="research-area-card__linkwrap" href="{{ base_path }}{{ post.url }}" rel="permalink" aria-label="Explore {{ title_plain }}">
-      <h2 class="archive__item-title research-area-card__title" itemprop="headline">{{ title }}</h2>
+    <h2 class="archive__item-title research-area-card__title" itemprop="headline">
+      <a class="research-area-card__title-link" href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+    </h2>
 
-      {% if post.excerpt %}
+    {% if post.excerpt %}
+      <a class="research-area-card__tile" href="{{ base_path }}{{ post.url }}" rel="permalink" aria-label="Explore {{ title_plain }}">
         <div class="archive__item-excerpt research-area-card__media" itemprop="description">
-          <div class="research-area-card__image-wrap">
-            {{ post.excerpt }}
-          </div>
+          {{ post.excerpt }}
         </div>
-      {% endif %}
-
-      {% if post.landing_summary %}
-        <p class="research-area-card__summary">{{ post.landing_summary }}</p>
-      {% endif %}
-
-      {% if post.landing_tags and post.landing_tags.size > 0 %}
-        <p class="research-area-card__tags" aria-label="Research area tags">
-        {% for tag in post.landing_tags %}
-          <span class="research-area-card__tag">{{ tag }}</span>
-        {% endfor %}
-        </p>
-      {% endif %}
-
-      <p class="research-area-card__actions">
-        <span class="research-area-card__link">Explore {{ title_plain }}</span>
-      </p>
-    </a>
+      </a>
+    {% endif %}
   </article>
 </div>

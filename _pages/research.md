@@ -37,11 +37,6 @@ header:
 </ul>
 </section>
 
-<p class="research-lead">Many of my research projects employ a wide variety of techniques that come from different disciplines. You can explore some of these techniques and how I apply them in my work here: </p>
-
-{% include research-method-explorer.html methods=site.data.research_method_tags %}
-{% include research-method-network.html methods=site.data.research_method_tags %}
-
 <section class="research-core-card">
   <p class="research-kicker research-kicker--questions">Core Questions</p>
   <ul class="research-question-list">
@@ -66,6 +61,13 @@ header:
 <div class="research-grid">
 {% for post in ordered_pages %} {% include archive-single-research-grid.html type="grid" %} {% endfor %}
 </div>
+
+<h3 class="research-areas-title">Methods &amp; Techniques</h3>
+
+<p class="research-lead">Many of my research projects employ a wide variety of techniques that come from different disciplines. You can explore some of these techniques and how I apply them in my work here: </p>
+
+{% include research-method-explorer.html methods=site.data.research_method_tags %}
+{% include research-method-network.html methods=site.data.research_method_tags %}
 
 </div>
 
