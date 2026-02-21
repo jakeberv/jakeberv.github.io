@@ -185,7 +185,7 @@
 
     @media (max-width: 720px) {
       .pub-braid-panel {
-        padding: 0.52rem 0.48rem;
+        padding: 0.58rem 0.48rem;
       }
 
       .pub-braid-source,
@@ -536,16 +536,17 @@
       const height = 920;
       const compactViewport = window.matchMedia("(max-width: 1080px)").matches;
       const narrowViewport = window.matchMedia("(max-width: 720px)").matches;
-      const labelScale = narrowViewport ? 0.84 : (compactViewport ? 0.9 : 1);
+      const labelScale = narrowViewport ? 1.09 : (compactViewport ? 0.9 : 1);
       const sideInset = narrowViewport ? 0 : (compactViewport ? 12 : 0);
+      const narrowSpread = narrowViewport ? 34 : 0;
       const groupWrapChars = narrowViewport ? 14 : (compactViewport ? 16 : 18);
       const chartTop = 64;
       const chartBottom = 866;
       const chartHeight = chartBottom - chartTop;
 
-      const xGroup = 1260 - sideInset;
+      const xGroup = 1260 - sideInset + narrowSpread;
       const xFamily = 760;
-      const xScope = 250 + sideInset;
+      const xScope = 250 + sideInset - narrowSpread;
       const barWidth = 30;
 
       const gapGroup = 18;
