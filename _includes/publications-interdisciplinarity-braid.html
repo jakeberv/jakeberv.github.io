@@ -179,7 +179,32 @@
 
     @media (max-width: 1080px) {
       .pub-braid-panel {
-        padding: 0.58rem 0.72rem;
+        padding: 0.58rem 0.64rem;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .pub-braid-panel {
+        padding: 0.52rem 0.48rem;
+      }
+
+      .pub-braid-source,
+      .pub-braid-legend {
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+      }
+
+      .pub-braid-stats {
+        flex-wrap: wrap;
+        overflow-x: visible;
+        overflow-y: visible;
+        gap: 0.2rem;
+      }
+
+      .pub-braid-stats__item {
+        flex: 1 1 calc(50% - 0.2rem);
+        white-space: normal;
+        text-align: center;
       }
     }
   </style>
@@ -510,9 +535,10 @@
       const width = 1540;
       const height = 920;
       const compactViewport = window.matchMedia("(max-width: 1080px)").matches;
-      const labelScale = compactViewport ? 0.88 : 1;
-      const sideInset = compactViewport ? 32 : 0;
-      const groupWrapChars = compactViewport ? 16 : 18;
+      const narrowViewport = window.matchMedia("(max-width: 720px)").matches;
+      const labelScale = narrowViewport ? 0.84 : (compactViewport ? 0.9 : 1);
+      const sideInset = narrowViewport ? 0 : (compactViewport ? 12 : 0);
+      const groupWrapChars = narrowViewport ? 14 : (compactViewport ? 16 : 18);
       const chartTop = 64;
       const chartBottom = 866;
       const chartHeight = chartBottom - chartTop;
