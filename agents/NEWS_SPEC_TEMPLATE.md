@@ -77,6 +77,8 @@ This template defines the recommended schema for files in `_news/`.
 1. First paragraph: short full item text.
 2. Insert `<!--news-excerpt-->`.
 3. Second paragraph: concise summary line for list views.
+4. Prefer markdown links with short labels (for example `[DOI](https://doi.org/...)`) over raw bare URLs in excerpt/body text.
+5. For currency mentions, prefer plain text like `USD 1,340` over escaped dollar notation (for example `\\$1,340`) to avoid unintended MathJax inline parsing.
 
 ## Copy/paste template
 
@@ -119,6 +121,7 @@ One-sentence excerpt used in list pages.
 - Excerpt separator exists exactly once.
 - Item appears in `/news/` year group and homepage recent list.
 - If `tags` is present, every tag exists in `_data/news_tags.yml`.
+- Long links in body/excerpt are represented as markdown links (or wrapped text), not long raw URL strings.
 - `geo` exists and includes `version`, `scope`, `countries`, and `localities` keys.
 - `geo.version` is `1`, and `geo.scope` is one of `event`, `virtual`, `global`.
 - Every country row includes ISO alpha-2 `code` and 3-digit `region_m49`.

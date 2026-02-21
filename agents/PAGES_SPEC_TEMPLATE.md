@@ -72,4 +72,5 @@ Page content goes here.
 - If `layout` is set, it matches page intent.
 - If `layout` is omitted, default page layout behavior in `_config.yml` is intended.
 - Any nav-intended page is reflected in `_data/navigation.yml`.
+- Embedded iframes use responsive width behavior (`width:100%`, `max-width:100%`) rather than fixed-width attributes that can cause mobile overflow.
 - Links and media paths resolve.

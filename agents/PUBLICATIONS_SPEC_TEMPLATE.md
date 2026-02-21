@@ -16,7 +16,7 @@ Your publications index page groups and renders items from the `publications` co
   - `doi` (optional but preferred; drives DOI text/link and Altmetric badge)
   - `citation` (optional but widely used; currently rendered as HTML)
   - `link` (optional; used as fallback external link, and DOI fallback source when it is a `doi.org` URL)
-  - `paperurl` (optional; PDF icon)
+  - `paperurl` (optional; PDF icon in list/card contexts, and compact `PDF` text link in single-page citation header contexts)
   - `code` (optional; code icon)
   - `github` (optional; GitHub icon)
   - `authors`, `student_authors`, `equal_contrib` (optional; structured author line + contribution markers/notes)
@@ -136,6 +136,10 @@ For consistency with current entries, prefer:
 
 This avoids brittle publisher/session URLs and keeps download buttons stable.
 
+### 5) Prefer compact link labels over raw long URL text in body citation prose
+- For body-level "Recommended citation" lines, prefer markdown links such as `[DOI](https://doi.org/...)` over bare URL text.
+- This improves mobile rendering stability and avoids horizontal overflow from long unbroken URL strings.
+
 ---
 
 ## File naming convention (recommended)
@@ -208,7 +212,7 @@ Example body:
 ```markdown
 Download paper here: URL_TO_PDF
 
-Recommended citation: AUTHORS (YEAR). TITLE. JOURNAL. https://doi.org/DOI
+Recommended citation: AUTHORS (YEAR). TITLE. JOURNAL. [DOI](https://doi.org/DOI)
 ```
 
 ---
