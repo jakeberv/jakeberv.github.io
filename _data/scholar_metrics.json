@@ -4,20 +4,20 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 13,
-  "citations": 2617,
+  "citations": 2629,
   "cites_per_year": {
     "2015": 13,
-    "2016": 106,
-    "2017": 209,
+    "2016": 108,
+    "2017": 210,
     "2018": 219,
-    "2019": 274,
+    "2019": 273,
     "2020": 306,
-    "2021": 316,
-    "2022": 312,
-    "2023": 259,
+    "2021": 307,
+    "2022": 322,
+    "2023": 260,
     "2024": 270,
-    "2025": 266,
-    "2026": 23
+    "2025": 265,
+    "2026": 33
   },
   "interests": [
     "Speciation",
@@ -58,14 +58,14 @@
       "scholar_id": "wNmwYS4AAAAJ"
     },
     {
-      "name": "Kristof Zyskowski",
-      "affiliation": "Yale University, Peabody Museum of Natural History",
-      "scholar_id": "aEmILscAAAAJ"
-    },
-    {
       "name": "Camila C. Ribas",
       "affiliation": "Instituto Nacional de Pesquisas da Amazônia & American Museum of Natural History",
       "scholar_id": "-X2HGoYAAAAJ"
+    },
+    {
+      "name": "Kristof Zyskowski",
+      "affiliation": "Yale University, Peabody Museum of Natural History",
+      "scholar_id": "aEmILscAAAAJ"
     },
     {
       "name": "Teresa J. Feo",
@@ -358,11 +358,6 @@
       "scholar_id": "dRvjW1sAAAAJ"
     },
     {
-      "name": "Rafael A. Rivero-Vega",
-      "affiliation": "PhD Candidate, University of Michigan",
-      "scholar_id": "Ic3vLT4AAAAJ"
-    },
-    {
       "name": "Brett W. Benz",
       "affiliation": "Bird Division Collection Manager, University of Michigan Museum of Zoology",
       "scholar_id": "kPUMlmgAAAAJ"
@@ -381,6 +376,11 @@
       "name": "Zhizhuo Zhou",
       "affiliation": "Stanford University",
       "scholar_id": "WjZyzbYAAAAJ"
+    },
+    {
+      "name": "Rafael A. Rivero-Vega",
+      "affiliation": "PhD Candidate, University of Michigan",
+      "scholar_id": "Ic3vLT4AAAAJ"
     },
     {
       "name": "Rebecca J. Strauch",
@@ -410,14 +410,14 @@
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 1867,
+      "citations": 1873,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
     },
     {
       "title": "Early evolution of modern birds structured by global forest collapse at the end-Cretaceous mass extinction",
-      "citations": 184,
+      "citations": 185,
       "year": 2018,
       "venue": "N/A",
       "url": "https://www.cell.com/current-biology/fulltext/S0960-9822(18)30534-7"
@@ -431,14 +431,14 @@
     },
     {
       "title": "An inverse latitudinal gradient in infection probability and phylogenetic diversity for Leucocytozoon blood parasites in New World birds",
-      "citations": 98,
+      "citations": 96,
       "year": 2020,
       "venue": "N/A",
       "url": "https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/1365-2656.13117"
     },
     {
       "title": "A comprehensive multilocus phylogeny of the Neotropical cotingas (Cotingidae, Aves) with a comparative evolutionary analysis of breeding system and plumage dimorphism and a revised phylogenetic classification",
-      "citations": 55,
+      "citations": 57,
       "year": 2014,
       "venue": "N/A",
       "url": "https://www.sciencedirect.com/science/article/pii/S1055790314003133"
@@ -459,7 +459,7 @@
     },
     {
       "title": "Genomic phylogeography of the White-crowned Manakin Pseudopipra pipra (Aves: Pipridae) illuminates a continental-scale radiation out of the Andes",
-      "citations": 41,
+      "citations": 42,
       "year": 2021,
       "venue": "N/A",
       "url": "https://www.sciencedirect.com/science/article/pii/S105579032100138X"
@@ -480,28 +480,28 @@
     },
     {
       "title": "Divergence in morphology, calls, song, mechanical sounds, and genetics supports species status for the Inaguan hummingbird (Trochilidae: Calliphlox “evelynae” lyrura)",
-      "citations": 21,
+      "citations": 22,
       "year": 2015,
       "venue": "N/A",
       "url": "https://academic.oup.com/auk/article-abstract/132/1/248/5149205"
     },
     {
       "title": "Genome and life-history evolution link bird diversification to the end-Cretaceous mass extinction",
-      "citations": 20,
+      "citations": 21,
       "year": 2024,
       "venue": "N/A",
       "url": "https://www.science.org/doi/abs/10.1126/sciadv.adp0114"
     },
     {
       "title": "Pennaraptoran theropod dinosaurs: past progress and new frontiers",
-      "citations": 20,
+      "citations": 21,
       "year": 2020,
       "venue": "N/A",
-      "url": "N/A"
+      "url": "http://elearnshc.org:8080/jspui/handle/123456789/31440"
     },
     {
       "title": "The pace of mitochondrial molecular evolution varies with seasonal migration distance",
-      "citations": 9,
+      "citations": 8,
       "year": 2024,
       "venue": "N/A",
       "url": "https://academic.oup.com/evolut/article-abstract/78/1/160/7379636"
@@ -515,17 +515,17 @@
     },
     {
       "title": "The genomic landscape, causes, and consequences of extensive phylogenomic discordance in murine rodents",
-      "citations": 2,
+      "citations": 3,
       "year": 2025,
       "venue": "N/A",
       "url": "https://academic.oup.com/gbe/article-pdf/doi/10.1093/gbe/evaf017/61752364/evaf017.pdf"
     },
     {
-      "title": "The genomic landscape, causes, and consequences of extensive phylogenomic discordance in Old World mice and rats",
+      "title": "Skeletal trait measurements for thousands of bird species",
       "citations": 2,
-      "year": 2023,
+      "year": 2025,
       "venue": "N/A",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10491188/"
+      "url": "https://www.nature.com/articles/s41597-025-05234-y"
     },
     {
       "title": "Habitat-associated evolutionary rates in deep-sea invertebrates",
@@ -540,6 +540,13 @@
       "year": 2024,
       "venue": "N/A",
       "url": "https://www.biorxiv.org/content/10.1101/2024.11.14.623638.abstract"
+    },
+    {
+      "title": "The genomic landscape, causes, and consequences of extensive phylogenomic discordance in Old World mice and rats",
+      "citations": 1,
+      "year": 2023,
+      "venue": "N/A",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10491188/"
     },
     {
       "title": "Pennaraptoran theropod dinosaurs: past progress and new frontiers.(Bulletin of the American Museum of Natural History, no. 440)",
@@ -560,14 +567,7 @@
       "citations": 0,
       "year": 2025,
       "venue": "N/A",
-      "url": "https://www.cambridge.org/core/journals/paleobiology/article/morphological-diversity-of-the-cetacean-mandibular-symphysis-coincides-with-novel-modes-of-aquatic-feeding/E26D07190859FF4B606098AACF19F246"
-    },
-    {
-      "title": "Skeletal trait measurements for thousands of bird species",
-      "citations": 0,
-      "year": 2025,
-      "venue": "N/A",
-      "url": "https://www.nature.com/articles/s41597-025-05234-y"
+      "url": "https://pubs.geoscienceworld.org/paleosoc/paleobiol/article-abstract/52/1/145/726623"
     },
     {
       "title": "Acknowledgment to Reviewers of Birds in 2021",
@@ -598,6 +598,6 @@
       "url": "https://ui.adsabs.harvard.edu/abs/2016GSAA...4887815B/abstract"
     }
   ],
-  "generated_at": 1771186257,
+  "generated_at": 1771723781,
   "proxy_mode": "free"
 }
