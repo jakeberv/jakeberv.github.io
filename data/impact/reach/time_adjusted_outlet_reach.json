@@ -19,7 +19,7 @@
     "last_mention_date": "2021-10-15T18:43:11",
     "latest_tranco_rank": 1,
     "latest_reach_score": 100.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "news.google.com",
@@ -41,7 +41,7 @@
     "last_mention_date": "2022-11-26T17:10:01",
     "latest_tranco_rank": 1,
     "latest_reach_score": 100.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "in.news.yahoo.com",
@@ -61,9 +61,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2015-10-07T17:59:30",
     "last_mention_date": "2018-05-25T09:36:04",
-    "latest_tranco_rank": 49,
-    "latest_reach_score": 71.83,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 50,
+    "latest_reach_score": 71.68,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "ca.news.yahoo.com",
@@ -83,9 +83,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T18:20:22",
     "last_mention_date": "2018-05-24T18:20:22",
-    "latest_tranco_rank": 49,
-    "latest_reach_score": 71.83,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 50,
+    "latest_reach_score": 71.68,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "news.yahoo.com",
@@ -105,9 +105,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2015-10-07T17:10:59",
     "last_mention_date": "2015-10-07T17:10:59",
-    "latest_tranco_rank": 49,
-    "latest_reach_score": 71.83,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 50,
+    "latest_reach_score": 71.68,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "yahoo.com",
@@ -127,21 +127,21 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-25T18:35:17",
     "last_mention_date": "2018-05-25T18:35:17",
-    "latest_tranco_rank": 49,
-    "latest_reach_score": 71.83,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 50,
+    "latest_reach_score": 71.68,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "uk.news.yahoo.com",
     "mentions": 7,
     "ranked_mentions": 7,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 80.36,
-    "median_reach_score_at_date": 80.4,
+    "mean_reach_score_at_date": 80.4229,
+    "median_reach_score_at_date": 81.43,
     "mean_tranco_rank_at_date": 18,
-    "median_tranco_rank_at_date": 15,
+    "median_tranco_rank_at_date": 13,
     "best_tranco_rank_at_date": 8,
-    "worst_tranco_rank_at_date": 42,
+    "worst_tranco_rank_at_date": 40,
     "primary_match_type": "suffix",
     "unique_snapshot_periods": 5,
     "unique_tranco_lists": 5,
@@ -149,21 +149,21 @@
     "top_outlet_mentions": 7,
     "first_mention_date": "2018-05-24T15:00:00",
     "last_mention_date": "2023-12-19T16:53:46",
-    "latest_tranco_rank": 49,
-    "latest_reach_score": 71.83,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 50,
+    "latest_reach_score": 71.68,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "msn.com",
     "mentions": 6,
     "ranked_mentions": 6,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 76.2483,
-    "median_reach_score_at_date": 76.555,
+    "mean_reach_score_at_date": 76.3417,
+    "median_reach_score_at_date": 76.73,
     "mean_tranco_rank_at_date": 40,
-    "median_tranco_rank_at_date": 38,
+    "median_tranco_rank_at_date": 36,
     "best_tranco_rank_at_date": 10,
-    "worst_tranco_rank_at_date": 79,
+    "worst_tranco_rank_at_date": 78,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 4,
     "unique_tranco_lists": 4,
@@ -171,21 +171,21 @@
     "top_outlet_mentions": 6,
     "first_mention_date": "2018-05-25T12:53:52",
     "last_mention_date": "2023-12-20T20:34:55",
-    "latest_tranco_rank": 60,
-    "latest_reach_score": 70.36,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 62,
+    "latest_reach_score": 70.13,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "ca.finance.yahoo.com",
     "mentions": 1,
     "ranked_mentions": 1,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 75.63,
-    "median_reach_score_at_date": 75.63,
-    "mean_tranco_rank_at_date": 29,
-    "median_tranco_rank_at_date": 29,
-    "best_tranco_rank_at_date": 29,
-    "worst_tranco_rank_at_date": 29,
+    "mean_reach_score_at_date": 74.69,
+    "median_reach_score_at_date": 74.69,
+    "mean_tranco_rank_at_date": 33,
+    "median_tranco_rank_at_date": 33,
+    "best_tranco_rank_at_date": 33,
+    "worst_tranco_rank_at_date": 33,
     "primary_match_type": "suffix",
     "unique_snapshot_periods": 1,
     "unique_tranco_lists": 1,
@@ -193,21 +193,21 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2023-07-12T12:53:00",
     "last_mention_date": "2023-07-12T12:53:00",
-    "latest_tranco_rank": 49,
-    "latest_reach_score": 71.83,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 50,
+    "latest_reach_score": 71.68,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "nytimes.com",
     "mentions": 1,
     "ranked_mentions": 1,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 70.49,
-    "median_reach_score_at_date": 70.49,
-    "mean_tranco_rank_at_date": 59,
-    "median_tranco_rank_at_date": 59,
-    "best_tranco_rank_at_date": 59,
-    "worst_tranco_rank_at_date": 59,
+    "mean_reach_score_at_date": 70.36,
+    "median_reach_score_at_date": 70.36,
+    "mean_tranco_rank_at_date": 60,
+    "median_tranco_rank_at_date": 60,
+    "best_tranco_rank_at_date": 60,
+    "worst_tranco_rank_at_date": 60,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 1,
     "unique_tranco_lists": 1,
@@ -215,21 +215,21 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2020-03-18T21:27:31",
     "last_mention_date": "2020-03-18T21:27:31",
-    "latest_tranco_rank": 156,
-    "latest_reach_score": 63.45,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 160,
+    "latest_reach_score": 63.26,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "medium.com",
     "mentions": 1,
     "ranked_mentions": 1,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 69.35,
-    "median_reach_score_at_date": 69.35,
-    "mean_tranco_rank_at_date": 69,
-    "median_tranco_rank_at_date": 69,
-    "best_tranco_rank_at_date": 69,
-    "worst_tranco_rank_at_date": 69,
+    "mean_reach_score_at_date": 70.01,
+    "median_reach_score_at_date": 70.01,
+    "mean_tranco_rank_at_date": 63,
+    "median_tranco_rank_at_date": 63,
+    "best_tranco_rank_at_date": 63,
+    "worst_tranco_rank_at_date": 63,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 1,
     "unique_tranco_lists": 1,
@@ -239,7 +239,7 @@
     "last_mention_date": "2021-06-30T12:36:07",
     "latest_tranco_rank": 183,
     "latest_reach_score": 62.29,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "cnn.com",
@@ -259,21 +259,21 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T15:03:52",
     "last_mention_date": "2018-05-24T15:03:52",
-    "latest_tranco_rank": 181,
-    "latest_reach_score": 62.37,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 182,
+    "latest_reach_score": 62.33,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "businessinsider.com",
     "mentions": 2,
     "ranked_mentions": 2,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 59.655,
-    "median_reach_score_at_date": 59.655,
-    "mean_tranco_rank_at_date": 264,
-    "median_tranco_rank_at_date": 264,
+    "mean_reach_score_at_date": 59.165,
+    "median_reach_score_at_date": 59.165,
+    "mean_tranco_rank_at_date": 284,
+    "median_tranco_rank_at_date": 284,
     "best_tranco_rank_at_date": 246,
-    "worst_tranco_rank_at_date": 282,
+    "worst_tranco_rank_at_date": 323,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 2,
     "unique_tranco_lists": 2,
@@ -281,20 +281,20 @@
     "top_outlet_mentions": 2,
     "first_mention_date": "2015-10-07T17:10:59",
     "last_mention_date": "2023-07-12T12:53:00",
-    "latest_tranco_rank": 374,
-    "latest_reach_score": 57.12,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 356,
+    "latest_reach_score": 57.48,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "news.cornell.edu",
     "mentions": 3,
     "ranked_mentions": 3,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 57.3733,
+    "mean_reach_score_at_date": 57.4267,
     "median_reach_score_at_date": 56.76,
-    "mean_tranco_rank_at_date": 364,
+    "mean_tranco_rank_at_date": 361,
     "median_tranco_rank_at_date": 393,
-    "best_tranco_rank_at_date": 305,
+    "best_tranco_rank_at_date": 298,
     "worst_tranco_rank_at_date": 393,
     "primary_match_type": "suffix",
     "unique_snapshot_periods": 3,
@@ -303,9 +303,9 @@
     "top_outlet_mentions": 3,
     "first_mention_date": "2017-09-21T16:09:02",
     "last_mention_date": "2021-10-11T14:10:00",
-    "latest_tranco_rank": 407,
-    "latest_reach_score": 56.51,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 405,
+    "latest_reach_score": 56.54,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "arstechnica.com",
@@ -325,21 +325,21 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2015-10-08T16:23:15",
     "last_mention_date": "2015-10-08T16:23:15",
-    "latest_tranco_rank": 1885,
-    "latest_reach_score": 45.41,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 1867,
+    "latest_reach_score": 45.48,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "news.umich.edu",
     "mentions": 1,
     "ranked_mentions": 1,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 55.93,
-    "median_reach_score_at_date": 55.93,
-    "mean_tranco_rank_at_date": 441,
-    "median_tranco_rank_at_date": 441,
-    "best_tranco_rank_at_date": 441,
-    "worst_tranco_rank_at_date": 441,
+    "mean_reach_score_at_date": 56.01,
+    "median_reach_score_at_date": 56.01,
+    "mean_tranco_rank_at_date": 436,
+    "median_tranco_rank_at_date": 436,
+    "best_tranco_rank_at_date": 436,
+    "worst_tranco_rank_at_date": 436,
     "primary_match_type": "suffix",
     "unique_snapshot_periods": 1,
     "unique_tranco_lists": 1,
@@ -347,9 +347,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2021-10-11T13:50:02",
     "last_mention_date": "2021-10-11T13:50:02",
-    "latest_tranco_rank": 971,
-    "latest_reach_score": 50.21,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 973,
+    "latest_reach_score": 50.2,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "actualidad.rt.com",
@@ -369,21 +369,21 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-27T13:12:41",
     "last_mention_date": "2018-05-27T13:12:41",
-    "latest_tranco_rank": 2378,
-    "latest_reach_score": 43.73,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 2244,
+    "latest_reach_score": 44.15,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "economictimes.indiatimes.com",
     "mentions": 2,
     "ranked_mentions": 2,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 55.59,
-    "median_reach_score_at_date": 55.59,
-    "mean_tranco_rank_at_date": 502,
-    "median_tranco_rank_at_date": 502,
+    "mean_reach_score_at_date": 55.385,
+    "median_reach_score_at_date": 55.385,
+    "mean_tranco_rank_at_date": 523,
+    "median_tranco_rank_at_date": 523,
     "best_tranco_rank_at_date": 305,
-    "worst_tranco_rank_at_date": 700,
+    "worst_tranco_rank_at_date": 741,
     "primary_match_type": "suffix",
     "unique_snapshot_periods": 2,
     "unique_tranco_lists": 2,
@@ -391,20 +391,20 @@
     "top_outlet_mentions": 2,
     "first_mention_date": "2018-05-25T11:27:16",
     "last_mention_date": "2023-12-29T05:34:53",
-    "latest_tranco_rank": 497,
-    "latest_reach_score": 55.06,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 494,
+    "latest_reach_score": 55.1,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "news.yale.edu",
     "mentions": 2,
     "ranked_mentions": 2,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 54.22,
-    "median_reach_score_at_date": 54.22,
-    "mean_tranco_rank_at_date": 565,
-    "median_tranco_rank_at_date": 565,
-    "best_tranco_rank_at_date": 477,
+    "mean_reach_score_at_date": 54.255,
+    "median_reach_score_at_date": 54.255,
+    "mean_tranco_rank_at_date": 562,
+    "median_tranco_rank_at_date": 562,
+    "best_tranco_rank_at_date": 472,
     "worst_tranco_rank_at_date": 653,
     "primary_match_type": "suffix",
     "unique_snapshot_periods": 2,
@@ -413,9 +413,9 @@
     "top_outlet_mentions": 2,
     "first_mention_date": "2018-05-24T15:45:27",
     "last_mention_date": "2021-10-11T14:00:38",
-    "latest_tranco_rank": 1121,
-    "latest_reach_score": 49.17,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 1117,
+    "latest_reach_score": 49.2,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "theatlantic.com",
@@ -435,21 +435,21 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T11:00:00",
     "last_mention_date": "2018-05-24T11:00:00",
-    "latest_tranco_rank": 913,
-    "latest_reach_score": 50.66,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 922,
+    "latest_reach_score": 50.59,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "cam.ac.uk",
     "mentions": 1,
     "ranked_mentions": 1,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 53.31,
-    "median_reach_score_at_date": 53.31,
-    "mean_tranco_rank_at_date": 633,
-    "median_tranco_rank_at_date": 633,
-    "best_tranco_rank_at_date": 633,
-    "worst_tranco_rank_at_date": 633,
+    "mean_reach_score_at_date": 53.53,
+    "median_reach_score_at_date": 53.53,
+    "mean_tranco_rank_at_date": 614,
+    "median_tranco_rank_at_date": 614,
+    "best_tranco_rank_at_date": 614,
+    "worst_tranco_rank_at_date": 614,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 1,
     "unique_tranco_lists": 1,
@@ -457,9 +457,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2021-10-14T12:10:32",
     "last_mention_date": "2021-10-14T12:10:32",
-    "latest_tranco_rank": 1210,
-    "latest_reach_score": 48.62,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 1201,
+    "latest_reach_score": 48.67,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "animals.howstuffworks.com",
@@ -479,9 +479,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-06-06T18:00:05",
     "last_mention_date": "2018-06-06T18:00:05",
-    "latest_tranco_rank": 2541,
-    "latest_reach_score": 43.25,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 2522,
+    "latest_reach_score": 43.3,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "breitbart.com",
@@ -501,9 +501,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2017-09-21T17:00:22",
     "last_mention_date": "2017-09-21T17:00:22",
-    "latest_tranco_rank": 4498,
-    "latest_reach_score": 39.12,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 4294,
+    "latest_reach_score": 39.45,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "sciencemag.org",
@@ -523,31 +523,31 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T15:05:00",
     "last_mention_date": "2018-05-24T15:05:00",
-    "latest_tranco_rank": 1812,
-    "latest_reach_score": 45.7,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 1810,
+    "latest_reach_score": 45.71,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "sciencedaily.com",
     "mentions": 6,
     "ranked_mentions": 6,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 52.63,
+    "mean_reach_score_at_date": 52.6533,
     "median_reach_score_at_date": 51.27,
-    "mean_tranco_rank_at_date": 718,
+    "mean_tranco_rank_at_date": 717,
     "median_tranco_rank_at_date": 839,
-    "best_tranco_rank_at_date": 474,
+    "best_tranco_rank_at_date": 473,
     "worst_tranco_rank_at_date": 839,
     "primary_match_type": "exact",
-    "unique_snapshot_periods": 6,
-    "unique_tranco_lists": 3,
+    "unique_snapshot_periods": 5,
+    "unique_tranco_lists": 2,
     "top_outlet": "Science Daily",
     "top_outlet_mentions": 6,
     "first_mention_date": "2014-10-14T19:26:37",
     "last_mention_date": "2021-11-17T15:01:31",
-    "latest_tranco_rank": 1776,
-    "latest_reach_score": 45.84,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 1780,
+    "latest_reach_score": 45.83,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "nypost.com",
@@ -569,7 +569,7 @@
     "last_mention_date": "2018-05-28T15:16:52",
     "latest_tranco_rank": 1011,
     "latest_reach_score": 49.92,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "ria.ru",
@@ -589,20 +589,20 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T15:34:05",
     "last_mention_date": "2018-05-24T15:34:05",
-    "latest_tranco_rank": 2183,
-    "latest_reach_score": 44.35,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 2142,
+    "latest_reach_score": 44.49,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "theconversation.com",
     "mentions": 9,
     "ranked_mentions": 9,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 50.5011,
-    "median_reach_score_at_date": 50.36,
-    "mean_tranco_rank_at_date": 957,
-    "median_tranco_rank_at_date": 951,
-    "best_tranco_rank_at_date": 609,
+    "mean_reach_score_at_date": 50.4922,
+    "median_reach_score_at_date": 49.96,
+    "mean_tranco_rank_at_date": 960,
+    "median_tranco_rank_at_date": 1006,
+    "best_tranco_rank_at_date": 588,
     "worst_tranco_rank_at_date": 1212,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 6,
@@ -611,20 +611,20 @@
     "top_outlet_mentions": 9,
     "first_mention_date": "2018-05-24T15:08:08",
     "last_mention_date": "2024-02-15T05:11:12",
-    "latest_tranco_rank": 1038,
-    "latest_reach_score": 49.73,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 1020,
+    "latest_reach_score": 49.86,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "sciencealert.com",
     "mentions": 3,
     "ranked_mentions": 3,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 49.9767,
+    "mean_reach_score_at_date": 50.0,
     "median_reach_score_at_date": 53.21,
-    "mean_tranco_rank_at_date": 1607,
+    "mean_tranco_rank_at_date": 1606,
     "median_tranco_rank_at_date": 642,
-    "best_tranco_rank_at_date": 418,
+    "best_tranco_rank_at_date": 414,
     "worst_tranco_rank_at_date": 3761,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 3,
@@ -633,31 +633,31 @@
     "top_outlet_mentions": 3,
     "first_mention_date": "2018-05-25T03:38:55",
     "last_mention_date": "2022-11-25T06:16:58",
-    "latest_tranco_rank": 3733,
-    "latest_reach_score": 40.47,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 3911,
+    "latest_reach_score": 40.13,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "phys.org",
     "mentions": 11,
     "ranked_mentions": 11,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 49.5955,
+    "mean_reach_score_at_date": 49.5427,
     "median_reach_score_at_date": 50.93,
-    "mean_tranco_rank_at_date": 1137,
+    "mean_tranco_rank_at_date": 1140,
     "median_tranco_rank_at_date": 880,
-    "best_tranco_rank_at_date": 693,
-    "worst_tranco_rank_at_date": 2602,
+    "best_tranco_rank_at_date": 786,
+    "worst_tranco_rank_at_date": 2586,
     "primary_match_type": "exact",
-    "unique_snapshot_periods": 11,
-    "unique_tranco_lists": 7,
+    "unique_snapshot_periods": 10,
+    "unique_tranco_lists": 6,
     "top_outlet": "Phys.org",
     "top_outlet_mentions": 11,
     "first_mention_date": "2014-10-14T19:19:16",
     "last_mention_date": "2023-12-20T18:19:09",
-    "latest_tranco_rank": 2836,
-    "latest_reach_score": 42.45,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 2865,
+    "latest_reach_score": 42.38,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "smithsonianmag.com",
@@ -671,15 +671,15 @@
     "best_tranco_rank_at_date": 1313,
     "worst_tranco_rank_at_date": 1313,
     "primary_match_type": "exact",
-    "unique_snapshot_periods": 2,
+    "unique_snapshot_periods": 1,
     "unique_tranco_lists": 1,
     "top_outlet": "Smithsonian Magazine",
     "top_outlet_mentions": 2,
     "first_mention_date": "2018-04-20T15:05:28",
     "last_mention_date": "2018-05-24T15:13:09",
-    "latest_tranco_rank": 2608,
-    "latest_reach_score": 43.06,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 2603,
+    "latest_reach_score": 43.08,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "philly.com",
@@ -699,9 +699,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2015-10-07T17:00:01",
     "last_mention_date": "2015-10-07T17:00:01",
-    "latest_tranco_rank": 12211,
-    "latest_reach_score": 31.89,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 12015,
+    "latest_reach_score": 32.0,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "welt.de",
@@ -721,9 +721,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-28T07:21:40",
     "last_mention_date": "2018-05-28T07:21:40",
-    "latest_tranco_rank": 782,
-    "latest_reach_score": 51.78,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 776,
+    "latest_reach_score": 51.84,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "gazeta.ru",
@@ -743,9 +743,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-25T16:33:54",
     "last_mention_date": "2018-05-25T16:33:54",
-    "latest_tranco_rank": 5118,
-    "latest_reach_score": 38.18,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 5124,
+    "latest_reach_score": 38.17,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "ibtimes.com",
@@ -765,9 +765,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T15:00:02",
     "last_mention_date": "2018-05-24T15:00:02",
-    "latest_tranco_rank": 5450,
-    "latest_reach_score": 37.73,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 5430,
+    "latest_reach_score": 37.75,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "home.bt.com",
@@ -787,9 +787,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T17:51:25",
     "last_mention_date": "2018-05-24T17:51:25",
-    "latest_tranco_rank": 2506,
-    "latest_reach_score": 43.35,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 2446,
+    "latest_reach_score": 43.53,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "upi.com",
@@ -809,9 +809,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2017-09-21T16:47:35",
     "last_mention_date": "2017-09-21T16:47:35",
-    "latest_tranco_rank": 5173,
-    "latest_reach_score": 38.1,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 5181,
+    "latest_reach_score": 38.09,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "voanews.com",
@@ -831,20 +831,20 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2015-10-07T22:22:09",
     "last_mention_date": "2015-10-07T22:22:09",
-    "latest_tranco_rank": 3478,
-    "latest_reach_score": 40.98,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 3542,
+    "latest_reach_score": 40.85,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "eurekalert.org",
     "mentions": 7,
     "ranked_mentions": 7,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 44.7557,
+    "mean_reach_score_at_date": 44.76,
     "median_reach_score_at_date": 44.18,
-    "mean_tranco_rank_at_date": 2098,
+    "mean_tranco_rank_at_date": 2097,
     "median_tranco_rank_at_date": 2234,
-    "best_tranco_rank_at_date": 1281,
+    "best_tranco_rank_at_date": 1276,
     "worst_tranco_rank_at_date": 2234,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 6,
@@ -853,21 +853,21 @@
     "top_outlet_mentions": 7,
     "first_mention_date": "2014-10-14T04:00:00",
     "last_mention_date": "2021-11-17T14:09:24",
-    "latest_tranco_rank": 3870,
-    "latest_reach_score": 40.2,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 3864,
+    "latest_reach_score": 40.22,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "popsci.com",
     "mentions": 2,
     "ranked_mentions": 2,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 44.67,
-    "median_reach_score_at_date": 44.67,
-    "mean_tranco_rank_at_date": 2154,
-    "median_tranco_rank_at_date": 2154,
-    "best_tranco_rank_at_date": 1623,
-    "worst_tranco_rank_at_date": 2684,
+    "mean_reach_score_at_date": 44.485,
+    "median_reach_score_at_date": 44.485,
+    "mean_tranco_rank_at_date": 2206,
+    "median_tranco_rank_at_date": 2206,
+    "best_tranco_rank_at_date": 1676,
+    "worst_tranco_rank_at_date": 2737,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 2,
     "unique_tranco_lists": 2,
@@ -875,9 +875,9 @@
     "top_outlet_mentions": 2,
     "first_mention_date": "2019-09-17T12:57:24",
     "last_mention_date": "2022-10-26T15:30:00",
-    "latest_tranco_rank": 4124,
-    "latest_reach_score": 39.74,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 4201,
+    "latest_reach_score": 39.61,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "inquisitr.com",
@@ -897,9 +897,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-27T11:38:48",
     "last_mention_date": "2018-05-27T11:38:48",
-    "latest_tranco_rank": 16628,
-    "latest_reach_score": 29.65,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 16520,
+    "latest_reach_score": 29.7,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "en.farsnews.com",
@@ -919,9 +919,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-27T08:42:48",
     "last_mention_date": "2018-05-27T08:42:48",
-    "latest_tranco_rank": 65210,
-    "latest_reach_score": 19.76,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 64997,
+    "latest_reach_score": 19.79,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "elconfidencial.com",
@@ -941,9 +941,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T15:00:00",
     "last_mention_date": "2018-05-24T15:00:00",
-    "latest_tranco_rank": 1831,
-    "latest_reach_score": 45.62,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 2055,
+    "latest_reach_score": 44.79,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "business-standard.com",
@@ -963,9 +963,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-25T00:00:00",
     "last_mention_date": "2018-05-25T00:00:00",
-    "latest_tranco_rank": 4520,
-    "latest_reach_score": 39.08,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 4499,
+    "latest_reach_score": 39.11,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "techtimes.com",
@@ -985,9 +985,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2015-10-09T10:06:28",
     "last_mention_date": "2015-10-09T10:06:28",
-    "latest_tranco_rank": 15179,
-    "latest_reach_score": 30.31,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 15205,
+    "latest_reach_score": 30.3,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "businessinsider.com.au",
@@ -1007,9 +1007,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2019-02-27T16:08:39",
     "last_mention_date": "2019-02-27T16:08:39",
-    "latest_tranco_rank": 22774,
-    "latest_reach_score": 27.38,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 22825,
+    "latest_reach_score": 27.36,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "yle.fi",
@@ -1029,9 +1029,31 @@
     "top_outlet_mentions": 2,
     "first_mention_date": "2018-05-26T13:29:20",
     "last_mention_date": "2018-10-02T18:34:02",
-    "latest_tranco_rank": 2526,
-    "latest_reach_score": 43.29,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 2083,
+    "latest_reach_score": 44.69,
+    "latest_tranco_list_id": "JLK5Y"
+  },
+  {
+    "domain": "firstpost.com",
+    "mentions": 3,
+    "ranked_mentions": 3,
+    "rank_coverage_rate": 1.0,
+    "mean_reach_score_at_date": 39.78,
+    "median_reach_score_at_date": 39.22,
+    "mean_tranco_rank_at_date": 4188,
+    "median_tranco_rank_at_date": 4436,
+    "best_tranco_rank_at_date": 3090,
+    "worst_tranco_rank_at_date": 5039,
+    "primary_match_type": "exact",
+    "unique_snapshot_periods": 3,
+    "unique_tranco_lists": 3,
+    "top_outlet": "Firstpost",
+    "top_outlet_mentions": 3,
+    "first_mention_date": "2015-10-07T19:15:56",
+    "last_mention_date": "2022-11-25T07:59:21",
+    "latest_tranco_rank": 8008,
+    "latest_reach_score": 34.94,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "arcamax.com",
@@ -1051,31 +1073,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-25T00:24:48",
     "last_mention_date": "2018-05-25T00:24:48",
-    "latest_tranco_rank": 39330,
-    "latest_reach_score": 23.42,
-    "latest_tranco_list_id": "9WJY2"
-  },
-  {
-    "domain": "firstpost.com",
-    "mentions": 3,
-    "ranked_mentions": 3,
-    "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 39.6367,
-    "median_reach_score_at_date": 39.22,
-    "mean_tranco_rank_at_date": 4252,
-    "median_tranco_rank_at_date": 4436,
-    "best_tranco_rank_at_date": 3280,
-    "worst_tranco_rank_at_date": 5039,
-    "primary_match_type": "exact",
-    "unique_snapshot_periods": 3,
-    "unique_tranco_lists": 3,
-    "top_outlet": "Firstpost",
-    "top_outlet_mentions": 3,
-    "first_mention_date": "2015-10-07T19:15:56",
-    "last_mention_date": "2022-11-25T07:59:21",
-    "latest_tranco_rank": 7970,
-    "latest_reach_score": 34.98,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 39839,
+    "latest_reach_score": 23.33,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "azfamily.com",
@@ -1095,9 +1095,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T15:02:00",
     "last_mention_date": "2018-05-24T15:02:00",
-    "latest_tranco_rank": 20930,
-    "latest_reach_score": 27.99,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 20785,
+    "latest_reach_score": 28.04,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "rte.ie",
@@ -1117,9 +1117,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2022-11-25T06:54:50",
     "last_mention_date": "2022-11-25T06:54:50",
-    "latest_tranco_rank": 3993,
-    "latest_reach_score": 39.98,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 4014,
+    "latest_reach_score": 39.94,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "sciencenews.org",
@@ -1139,9 +1139,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T21:44:51",
     "last_mention_date": "2018-05-24T21:44:51",
-    "latest_tranco_rank": 8313,
-    "latest_reach_score": 34.67,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 8434,
+    "latest_reach_score": 34.57,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "blogs.discovermagazine.com",
@@ -1161,31 +1161,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T15:00:15",
     "last_mention_date": "2018-05-24T15:00:15",
-    "latest_tranco_rank": 6637,
-    "latest_reach_score": 36.3,
-    "latest_tranco_list_id": "9WJY2"
-  },
-  {
-    "domain": "inverse.com",
-    "mentions": 3,
-    "ranked_mentions": 3,
-    "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 38.3967,
-    "median_reach_score_at_date": 39.37,
-    "mean_tranco_rank_at_date": 5079,
-    "median_tranco_rank_at_date": 4344,
-    "best_tranco_rank_at_date": 4246,
-    "worst_tranco_rank_at_date": 6647,
-    "primary_match_type": "exact",
-    "unique_snapshot_periods": 3,
-    "unique_tranco_lists": 3,
-    "top_outlet": "Inverse",
-    "top_outlet_mentions": 3,
-    "first_mention_date": "2018-05-24T15:00:00",
-    "last_mention_date": "2022-12-04T20:00:25",
-    "latest_tranco_rank": 7421,
-    "latest_reach_score": 35.49,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 6662,
+    "latest_reach_score": 36.27,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "derstandard.at",
@@ -1205,9 +1183,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T16:06:37",
     "last_mention_date": "2018-05-24T16:06:37",
-    "latest_tranco_rank": 4363,
-    "latest_reach_score": 39.34,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 4366,
+    "latest_reach_score": 39.33,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "tagesspiegel.de",
@@ -1227,9 +1205,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T15:47:07",
     "last_mention_date": "2018-05-24T15:47:07",
-    "latest_tranco_rank": 2511,
-    "latest_reach_score": 43.34,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 2062,
+    "latest_reach_score": 44.76,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "trust.org",
@@ -1249,21 +1227,43 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2015-10-07T17:00:00",
     "last_mention_date": "2015-10-07T17:00:00",
-    "latest_tranco_rank": 21961,
-    "latest_reach_score": 27.64,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 21769,
+    "latest_reach_score": 27.7,
+    "latest_tranco_list_id": "JLK5Y"
+  },
+  {
+    "domain": "inverse.com",
+    "mentions": 3,
+    "ranked_mentions": 3,
+    "rank_coverage_rate": 1.0,
+    "mean_reach_score_at_date": 38.0767,
+    "median_reach_score_at_date": 38.18,
+    "mean_tranco_rank_at_date": 5294,
+    "median_tranco_rank_at_date": 5117,
+    "best_tranco_rank_at_date": 4117,
+    "worst_tranco_rank_at_date": 6647,
+    "primary_match_type": "exact",
+    "unique_snapshot_periods": 3,
+    "unique_tranco_lists": 3,
+    "top_outlet": "Inverse",
+    "top_outlet_mentions": 3,
+    "first_mention_date": "2018-05-24T15:00:00",
+    "last_mention_date": "2022-12-04T20:00:25",
+    "latest_tranco_rank": 7504,
+    "latest_reach_score": 35.41,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "businessinsider.in",
     "mentions": 1,
     "ranked_mentions": 1,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 38.08,
-    "median_reach_score_at_date": 38.08,
-    "mean_tranco_rank_at_date": 5189,
-    "median_tranco_rank_at_date": 5189,
-    "best_tranco_rank_at_date": 5189,
-    "worst_tranco_rank_at_date": 5189,
+    "mean_reach_score_at_date": 36.88,
+    "median_reach_score_at_date": 36.88,
+    "mean_tranco_rank_at_date": 6125,
+    "median_tranco_rank_at_date": 6125,
+    "best_tranco_rank_at_date": 6125,
+    "worst_tranco_rank_at_date": 6125,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 1,
     "unique_tranco_lists": 1,
@@ -1271,31 +1271,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2023-07-12T12:54:00",
     "last_mention_date": "2023-07-12T12:54:00",
-    "latest_tranco_rank": 15113,
+    "latest_tranco_rank": 15130,
     "latest_reach_score": 30.34,
-    "latest_tranco_list_id": "9WJY2"
-  },
-  {
-    "domain": "newsbreak.com",
-    "mentions": 1,
-    "ranked_mentions": 1,
-    "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 36.91,
-    "median_reach_score_at_date": 36.91,
-    "mean_tranco_rank_at_date": 6097,
-    "median_tranco_rank_at_date": 6097,
-    "best_tranco_rank_at_date": 6097,
-    "worst_tranco_rank_at_date": 6097,
-    "primary_match_type": "exact",
-    "unique_snapshot_periods": 1,
-    "unique_tranco_lists": 1,
-    "top_outlet": "Newsbreak",
-    "top_outlet_mentions": 1,
-    "first_mention_date": "2022-10-26T15:30:00",
-    "last_mention_date": "2022-10-26T15:30:00",
-    "latest_tranco_rank": 2639,
-    "latest_reach_score": 42.98,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "svt.se",
@@ -1315,9 +1293,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T18:52:10",
     "last_mention_date": "2018-05-24T18:52:10",
-    "latest_tranco_rank": 4663,
-    "latest_reach_score": 38.86,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 4672,
+    "latest_reach_score": 38.84,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "europapress.es",
@@ -1337,9 +1315,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T15:40:46",
     "last_mention_date": "2018-05-24T15:40:46",
-    "latest_tranco_rank": 4565,
-    "latest_reach_score": 39.01,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 4582,
+    "latest_reach_score": 38.98,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "minnpost.com",
@@ -1359,21 +1337,43 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-31T13:38:25",
     "last_mention_date": "2018-05-31T13:38:25",
-    "latest_tranco_rank": 31380,
-    "latest_reach_score": 25.06,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 30907,
+    "latest_reach_score": 25.17,
+    "latest_tranco_list_id": "JLK5Y"
+  },
+  {
+    "domain": "newsbreak.com",
+    "mentions": 1,
+    "ranked_mentions": 1,
+    "rank_coverage_rate": 1.0,
+    "mean_reach_score_at_date": 36.54,
+    "median_reach_score_at_date": 36.54,
+    "mean_tranco_rank_at_date": 6421,
+    "median_tranco_rank_at_date": 6421,
+    "best_tranco_rank_at_date": 6421,
+    "worst_tranco_rank_at_date": 6421,
+    "primary_match_type": "exact",
+    "unique_snapshot_periods": 1,
+    "unique_tranco_lists": 1,
+    "top_outlet": "Newsbreak",
+    "top_outlet_mentions": 1,
+    "first_mention_date": "2022-10-26T15:30:00",
+    "last_mention_date": "2022-10-26T15:30:00",
+    "latest_tranco_rank": 2645,
+    "latest_reach_score": 42.96,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "rawstory.com",
     "mentions": 8,
     "ranked_mentions": 8,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 36.4175,
+    "mean_reach_score_at_date": 36.425,
     "median_reach_score_at_date": 36.53,
-    "mean_tranco_rank_at_date": 6531,
+    "mean_tranco_rank_at_date": 6523,
     "median_tranco_rank_at_date": 6427,
     "best_tranco_rank_at_date": 6427,
-    "worst_tranco_rank_at_date": 6843,
+    "worst_tranco_rank_at_date": 6812,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 2,
     "unique_tranco_lists": 2,
@@ -1381,21 +1381,21 @@
     "top_outlet_mentions": 8,
     "first_mention_date": "2022-11-25T03:37:42",
     "last_mention_date": "2023-12-27T12:52:43",
-    "latest_tranco_rank": 8799,
-    "latest_reach_score": 34.26,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 8789,
+    "latest_reach_score": 34.27,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "iflscience.com",
     "mentions": 1,
     "ranked_mentions": 1,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 36.39,
-    "median_reach_score_at_date": 36.39,
-    "mean_tranco_rank_at_date": 6559,
-    "median_tranco_rank_at_date": 6559,
-    "best_tranco_rank_at_date": 6559,
-    "worst_tranco_rank_at_date": 6559,
+    "mean_reach_score_at_date": 36.37,
+    "median_reach_score_at_date": 36.37,
+    "mean_tranco_rank_at_date": 6575,
+    "median_tranco_rank_at_date": 6575,
+    "best_tranco_rank_at_date": 6575,
+    "worst_tranco_rank_at_date": 6575,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 1,
     "unique_tranco_lists": 1,
@@ -1403,9 +1403,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2023-12-22T11:53:09",
     "last_mention_date": "2023-12-22T11:53:09",
-    "latest_tranco_rank": 10765,
+    "latest_tranco_rank": 10761,
     "latest_reach_score": 32.8,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "irishexaminer.com",
@@ -1425,31 +1425,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T15:00:00",
     "last_mention_date": "2018-05-24T15:00:00",
-    "latest_tranco_rank": 13134,
-    "latest_reach_score": 31.36,
-    "latest_tranco_list_id": "9WJY2"
-  },
-  {
-    "domain": "interestingengineering.com",
-    "mentions": 2,
-    "ranked_mentions": 2,
-    "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 35.685,
-    "median_reach_score_at_date": 35.685,
-    "mean_tranco_rank_at_date": 7264,
-    "median_tranco_rank_at_date": 7264,
-    "best_tranco_rank_at_date": 6518,
-    "worst_tranco_rank_at_date": 8009,
-    "primary_match_type": "exact",
-    "unique_snapshot_periods": 2,
-    "unique_tranco_lists": 2,
-    "top_outlet": "Interesting Engineering",
-    "top_outlet_mentions": 2,
-    "first_mention_date": "2020-03-21T01:40:34",
-    "last_mention_date": "2022-11-27T08:47:32",
-    "latest_tranco_rank": 8898,
-    "latest_reach_score": 34.18,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 12874,
+    "latest_reach_score": 31.5,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "deccanherald.com",
@@ -1469,21 +1447,43 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2022-11-25T06:58:47",
     "last_mention_date": "2022-11-25T06:58:47",
-    "latest_tranco_rank": 7767,
-    "latest_reach_score": 35.16,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 7792,
+    "latest_reach_score": 35.14,
+    "latest_tranco_list_id": "JLK5Y"
+  },
+  {
+    "domain": "interestingengineering.com",
+    "mentions": 2,
+    "ranked_mentions": 2,
+    "rank_coverage_rate": 1.0,
+    "mean_reach_score_at_date": 35.54,
+    "median_reach_score_at_date": 35.54,
+    "mean_tranco_rank_at_date": 7396,
+    "median_tranco_rank_at_date": 7396,
+    "best_tranco_rank_at_date": 6782,
+    "worst_tranco_rank_at_date": 8009,
+    "primary_match_type": "exact",
+    "unique_snapshot_periods": 2,
+    "unique_tranco_lists": 2,
+    "top_outlet": "Interesting Engineering",
+    "top_outlet_mentions": 2,
+    "first_mention_date": "2020-03-21T01:40:34",
+    "last_mention_date": "2022-11-27T08:47:32",
+    "latest_tranco_rank": 8977,
+    "latest_reach_score": 34.11,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "guokr.com",
     "mentions": 1,
     "ranked_mentions": 1,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 35.47,
-    "median_reach_score_at_date": 35.47,
-    "mean_tranco_rank_at_date": 7446,
-    "median_tranco_rank_at_date": 7446,
-    "best_tranco_rank_at_date": 7446,
-    "worst_tranco_rank_at_date": 7446,
+    "mean_reach_score_at_date": 35.12,
+    "median_reach_score_at_date": 35.12,
+    "mean_tranco_rank_at_date": 7808,
+    "median_tranco_rank_at_date": 7808,
+    "best_tranco_rank_at_date": 7808,
+    "worst_tranco_rank_at_date": 7808,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 1,
     "unique_tranco_lists": 1,
@@ -1491,9 +1491,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2019-09-14T03:47:09",
     "last_mention_date": "2019-09-14T03:47:09",
-    "latest_tranco_rank": 80754,
-    "latest_reach_score": 18.21,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 81166,
+    "latest_reach_score": 18.18,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "timesofmalta.com",
@@ -1513,9 +1513,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-07-01T11:41:14",
     "last_mention_date": "2018-07-01T11:41:14",
-    "latest_tranco_rank": 17591,
-    "latest_reach_score": 29.25,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 17677,
+    "latest_reach_score": 29.21,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "futura-sciences.com",
@@ -1535,31 +1535,31 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-25T14:53:00",
     "last_mention_date": "2018-05-25T14:53:00",
-    "latest_tranco_rank": 5184,
-    "latest_reach_score": 38.09,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 5178,
+    "latest_reach_score": 38.1,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "newswise.com",
     "mentions": 4,
     "ranked_mentions": 4,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 34.25,
-    "median_reach_score_at_date": 34.225,
-    "mean_tranco_rank_at_date": 9251,
-    "median_tranco_rank_at_date": 9273,
-    "best_tranco_rank_at_date": 6376,
+    "mean_reach_score_at_date": 34.28,
+    "median_reach_score_at_date": 34.28,
+    "mean_tranco_rank_at_date": 9224,
+    "median_tranco_rank_at_date": 9224,
+    "best_tranco_rank_at_date": 6368,
     "worst_tranco_rank_at_date": 12081,
     "primary_match_type": "exact",
-    "unique_snapshot_periods": 4,
-    "unique_tranco_lists": 3,
+    "unique_snapshot_periods": 3,
+    "unique_tranco_lists": 2,
     "top_outlet": "Newswise",
     "top_outlet_mentions": 4,
     "first_mention_date": "2015-10-12T20:05:00",
     "last_mention_date": "2021-11-17T00:00:00",
-    "latest_tranco_rank": 20335,
-    "latest_reach_score": 28.2,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 19933,
+    "latest_reach_score": 28.34,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "the-scientist.com",
@@ -1579,9 +1579,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T20:35:50",
     "last_mention_date": "2018-05-24T20:35:50",
-    "latest_tranco_rank": 17002,
+    "latest_tranco_rank": 17016,
     "latest_reach_score": 29.49,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "theprint.in",
@@ -1601,9 +1601,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2022-11-25T04:30:35",
     "last_mention_date": "2022-11-25T04:30:35",
-    "latest_tranco_rank": 14060,
-    "latest_reach_score": 30.87,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 14227,
+    "latest_reach_score": 30.78,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "meteored.com.ar",
@@ -1623,9 +1623,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2024-08-14T18:29:55",
     "last_mention_date": "2024-08-14T18:29:55",
-    "latest_tranco_rank": 9275,
+    "latest_tranco_rank": 9269,
     "latest_reach_score": 33.88,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "radionz.co.nz",
@@ -1645,9 +1645,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-25T07:37:39",
     "last_mention_date": "2018-05-25T07:37:39",
-    "latest_tranco_rank": 51069,
-    "latest_reach_score": 21.53,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 50882,
+    "latest_reach_score": 21.56,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "thefreelibrary.com",
@@ -1667,9 +1667,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2022-11-29T00:00:00",
     "last_mention_date": "2022-11-29T00:00:00",
-    "latest_tranco_rank": 17571,
-    "latest_reach_score": 29.25,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 17818,
+    "latest_reach_score": 29.15,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "taipeitimes.com",
@@ -1689,9 +1689,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-06-02T18:44:33",
     "last_mention_date": "2018-06-02T18:44:33",
-    "latest_tranco_rank": 17374,
-    "latest_reach_score": 29.34,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 17313,
+    "latest_reach_score": 29.36,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "sott.net",
@@ -1711,21 +1711,21 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-28T18:25:00",
     "last_mention_date": "2018-05-28T18:25:00",
-    "latest_tranco_rank": 38098,
-    "latest_reach_score": 23.65,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 38280,
+    "latest_reach_score": 23.62,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "canaltech.com.br",
     "mentions": 1,
     "ranked_mentions": 1,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 30.89,
-    "median_reach_score_at_date": 30.89,
-    "mean_tranco_rank_at_date": 14010,
-    "median_tranco_rank_at_date": 14010,
-    "best_tranco_rank_at_date": 14010,
-    "worst_tranco_rank_at_date": 14010,
+    "mean_reach_score_at_date": 31.49,
+    "median_reach_score_at_date": 31.49,
+    "mean_tranco_rank_at_date": 12895,
+    "median_tranco_rank_at_date": 12895,
+    "best_tranco_rank_at_date": 12895,
+    "worst_tranco_rank_at_date": 12895,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 1,
     "unique_tranco_lists": 1,
@@ -1733,9 +1733,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2021-10-13T12:10:58",
     "last_mention_date": "2021-10-13T12:10:58",
-    "latest_tranco_rank": 33584,
+    "latest_tranco_rank": 33592,
     "latest_reach_score": 24.56,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "timescolonist.com",
@@ -1755,21 +1755,21 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-27T12:40:00",
     "last_mention_date": "2018-05-27T12:40:00",
-    "latest_tranco_rank": 36285,
-    "latest_reach_score": 24.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 36361,
+    "latest_reach_score": 23.99,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "muyinteresante.es",
     "mentions": 1,
     "ranked_mentions": 1,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 30.2,
-    "median_reach_score_at_date": 30.2,
-    "mean_tranco_rank_at_date": 15413,
-    "median_tranco_rank_at_date": 15413,
-    "best_tranco_rank_at_date": 15413,
-    "worst_tranco_rank_at_date": 15413,
+    "mean_reach_score_at_date": 30.07,
+    "median_reach_score_at_date": 30.07,
+    "mean_tranco_rank_at_date": 15698,
+    "median_tranco_rank_at_date": 15698,
+    "best_tranco_rank_at_date": 15698,
+    "worst_tranco_rank_at_date": 15698,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 1,
     "unique_tranco_lists": 1,
@@ -1777,9 +1777,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2021-10-14T19:53:03",
     "last_mention_date": "2021-10-14T19:53:03",
-    "latest_tranco_rank": 84303,
-    "latest_reach_score": 17.9,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 83660,
+    "latest_reach_score": 17.96,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "latestly.com",
@@ -1799,20 +1799,20 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2022-11-25T04:20:14",
     "last_mention_date": "2022-11-25T04:20:14",
-    "latest_tranco_rank": 30587,
-    "latest_reach_score": 25.24,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 30116,
+    "latest_reach_score": 25.35,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "futurity.org",
     "mentions": 3,
     "ranked_mentions": 3,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 29.11,
+    "mean_reach_score_at_date": 29.1167,
     "median_reach_score_at_date": 27.57,
-    "mean_tranco_rank_at_date": 18676,
+    "mean_tranco_rank_at_date": 18665,
     "median_tranco_rank_at_date": 22159,
-    "best_tranco_rank_at_date": 11710,
+    "best_tranco_rank_at_date": 11677,
     "worst_tranco_rank_at_date": 22159,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 3,
@@ -1821,9 +1821,9 @@
     "top_outlet_mentions": 3,
     "first_mention_date": "2015-10-08T15:42:52",
     "last_mention_date": "2021-11-03T17:55:49",
-    "latest_tranco_rank": 37410,
-    "latest_reach_score": 23.78,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 37585,
+    "latest_reach_score": 23.75,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "es.paperblog.com",
@@ -1843,20 +1843,20 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-28T04:59:00",
     "last_mention_date": "2018-05-28T04:59:00",
-    "latest_tranco_rank": 42891,
-    "latest_reach_score": 22.79,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 42568,
+    "latest_reach_score": 22.85,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "scitechdaily.com",
     "mentions": 2,
     "ranked_mentions": 2,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 28.4,
-    "median_reach_score_at_date": 28.4,
-    "mean_tranco_rank_at_date": 25821,
-    "median_tranco_rank_at_date": 25821,
-    "best_tranco_rank_at_date": 9204,
+    "mean_reach_score_at_date": 28.49,
+    "median_reach_score_at_date": 28.49,
+    "mean_tranco_rank_at_date": 25712,
+    "median_tranco_rank_at_date": 25712,
+    "best_tranco_rank_at_date": 8985,
     "worst_tranco_rank_at_date": 42438,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 2,
@@ -1865,9 +1865,9 @@
     "top_outlet_mentions": 2,
     "first_mention_date": "2018-05-25T17:57:33",
     "last_mention_date": "2021-10-17T14:57:59",
-    "latest_tranco_rank": 8665,
-    "latest_reach_score": 34.37,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 8651,
+    "latest_reach_score": 34.38,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "heraldmailmedia.com",
@@ -1887,9 +1887,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T23:09:00",
     "last_mention_date": "2018-05-24T23:09:00",
-    "latest_tranco_rank": 84465,
-    "latest_reach_score": 17.89,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 80703,
+    "latest_reach_score": 18.22,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "demorgen.be",
@@ -1909,21 +1909,21 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-29T09:08:25",
     "last_mention_date": "2018-05-29T09:08:25",
-    "latest_tranco_rank": 6615,
-    "latest_reach_score": 36.32,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 6352,
+    "latest_reach_score": 36.62,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "devdiscourse.com",
     "mentions": 2,
     "ranked_mentions": 2,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 27.72,
-    "median_reach_score_at_date": 27.72,
-    "mean_tranco_rank_at_date": 22521,
-    "median_tranco_rank_at_date": 22521,
+    "mean_reach_score_at_date": 27.865,
+    "median_reach_score_at_date": 27.865,
+    "mean_tranco_rank_at_date": 21951,
+    "median_tranco_rank_at_date": 21951,
     "best_tranco_rank_at_date": 16555,
-    "worst_tranco_rank_at_date": 28487,
+    "worst_tranco_rank_at_date": 27347,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 2,
     "unique_tranco_lists": 2,
@@ -1931,9 +1931,9 @@
     "top_outlet_mentions": 2,
     "first_mention_date": "2022-11-25T04:19:11",
     "last_mention_date": "2023-12-20T06:46:15",
-    "latest_tranco_rank": 35341,
-    "latest_reach_score": 24.2,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 35186,
+    "latest_reach_score": 24.23,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "laboratoryequipment.com",
@@ -1953,9 +1953,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2017-09-22T13:37:02",
     "last_mention_date": "2017-09-22T13:37:02",
-    "latest_tranco_rank": 331013,
-    "latest_reach_score": 8.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 344159,
+    "latest_reach_score": 7.72,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "sci-news.com",
@@ -1975,31 +1975,9 @@
     "top_outlet_mentions": 3,
     "first_mention_date": "2014-10-21T10:01:02",
     "last_mention_date": "2017-09-22T10:46:25",
-    "latest_tranco_rank": 100549,
-    "latest_reach_score": 16.63,
-    "latest_tranco_list_id": "9WJY2"
-  },
-  {
-    "domain": "miragenews.com",
-    "mentions": 4,
-    "ranked_mentions": 4,
-    "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 27.1625,
-    "median_reach_score_at_date": 27.23,
-    "mean_tranco_rank_at_date": 23454,
-    "median_tranco_rank_at_date": 23235,
-    "best_tranco_rank_at_date": 23235,
-    "worst_tranco_rank_at_date": 24110,
-    "primary_match_type": "exact",
-    "unique_snapshot_periods": 2,
-    "unique_tranco_lists": 2,
-    "top_outlet": "Mirage News",
-    "top_outlet_mentions": 4,
-    "first_mention_date": "2021-10-11T14:09:36",
-    "last_mention_date": "2021-11-17T14:08:13",
-    "latest_tranco_rank": 35997,
-    "latest_reach_score": 24.06,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 99710,
+    "latest_reach_score": 16.69,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "spacedaily.com",
@@ -2019,9 +1997,53 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-30T14:45:39",
     "last_mention_date": "2018-05-30T14:45:39",
-    "latest_tranco_rank": 49077,
-    "latest_reach_score": 21.82,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 48900,
+    "latest_reach_score": 21.84,
+    "latest_tranco_list_id": "JLK5Y"
+  },
+  {
+    "domain": "miragenews.com",
+    "mentions": 4,
+    "ranked_mentions": 4,
+    "rank_coverage_rate": 1.0,
+    "mean_reach_score_at_date": 26.99,
+    "median_reach_score_at_date": 26.99,
+    "mean_tranco_rank_at_date": 24036,
+    "median_tranco_rank_at_date": 24036,
+    "best_tranco_rank_at_date": 24036,
+    "worst_tranco_rank_at_date": 24036,
+    "primary_match_type": "exact",
+    "unique_snapshot_periods": 1,
+    "unique_tranco_lists": 1,
+    "top_outlet": "Mirage News",
+    "top_outlet_mentions": 4,
+    "first_mention_date": "2021-10-11T14:09:36",
+    "last_mention_date": "2021-11-17T14:08:13",
+    "latest_tranco_rank": 35099,
+    "latest_reach_score": 24.25,
+    "latest_tranco_list_id": "JLK5Y"
+  },
+  {
+    "domain": "businessinsider.nl",
+    "mentions": 1,
+    "ranked_mentions": 1,
+    "rank_coverage_rate": 1.0,
+    "mean_reach_score_at_date": 25.81,
+    "median_reach_score_at_date": 25.81,
+    "mean_tranco_rank_at_date": 28266,
+    "median_tranco_rank_at_date": 28266,
+    "best_tranco_rank_at_date": 28266,
+    "worst_tranco_rank_at_date": 28266,
+    "primary_match_type": "exact",
+    "unique_snapshot_periods": 1,
+    "unique_tranco_lists": 1,
+    "top_outlet": "Business Insider Nederland",
+    "top_outlet_mentions": 1,
+    "first_mention_date": "2023-07-12T12:53:00",
+    "last_mention_date": "2023-07-12T12:53:00",
+    "latest_tranco_rank": 50613,
+    "latest_reach_score": 21.6,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "theeagle.com",
@@ -2041,9 +2063,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T23:09:00",
     "last_mention_date": "2018-05-24T23:09:00",
-    "latest_tranco_rank": 113117,
-    "latest_reach_score": 15.77,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 109144,
+    "latest_reach_score": 16.03,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "newkerala.com",
@@ -2063,9 +2085,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-25T11:44:53",
     "last_mention_date": "2018-05-25T11:44:53",
-    "latest_tranco_rank": 102007,
-    "latest_reach_score": 16.52,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 102818,
+    "latest_reach_score": 16.47,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "businessinsider.sg",
@@ -2085,43 +2107,21 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2019-02-27T16:08:39",
     "last_mention_date": "2019-02-27T16:08:39",
-    "latest_tranco_rank": 170086,
-    "latest_reach_score": 12.82,
-    "latest_tranco_list_id": "9WJY2"
-  },
-  {
-    "domain": "businessinsider.nl",
-    "mentions": 1,
-    "ranked_mentions": 1,
-    "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 25.35,
-    "median_reach_score_at_date": 25.35,
-    "mean_tranco_rank_at_date": 30140,
-    "median_tranco_rank_at_date": 30140,
-    "best_tranco_rank_at_date": 30140,
-    "worst_tranco_rank_at_date": 30140,
-    "primary_match_type": "exact",
-    "unique_snapshot_periods": 1,
-    "unique_tranco_lists": 1,
-    "top_outlet": "Business Insider Nederland",
-    "top_outlet_mentions": 1,
-    "first_mention_date": "2023-07-12T12:53:00",
-    "last_mention_date": "2023-07-12T12:53:00",
-    "latest_tranco_rank": 49788,
-    "latest_reach_score": 21.71,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 170619,
+    "latest_reach_score": 12.8,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "enn.com",
     "mentions": 1,
     "ranked_mentions": 1,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 25.07,
-    "median_reach_score_at_date": 25.07,
-    "mean_tranco_rank_at_date": 31337,
-    "median_tranco_rank_at_date": 31337,
-    "best_tranco_rank_at_date": 31337,
-    "worst_tranco_rank_at_date": 31337,
+    "mean_reach_score_at_date": 25.08,
+    "median_reach_score_at_date": 25.08,
+    "mean_tranco_rank_at_date": 31260,
+    "median_tranco_rank_at_date": 31260,
+    "best_tranco_rank_at_date": 31260,
+    "worst_tranco_rank_at_date": 31260,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 1,
     "unique_tranco_lists": 1,
@@ -2129,9 +2129,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2021-11-17T19:48:28",
     "last_mention_date": "2021-11-17T19:48:28",
-    "latest_tranco_rank": 101077,
-    "latest_reach_score": 16.59,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 100781,
+    "latest_reach_score": 16.61,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "siasat.com",
@@ -2151,9 +2151,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-26T06:52:08",
     "last_mention_date": "2018-05-26T06:52:08",
-    "latest_tranco_rank": 33855,
-    "latest_reach_score": 24.51,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 34396,
+    "latest_reach_score": 24.39,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "sciencetimes.com",
@@ -2173,9 +2173,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2022-11-26T04:01:20",
     "last_mention_date": "2022-11-26T04:01:20",
-    "latest_tranco_rank": 63513,
-    "latest_reach_score": 19.95,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 63383,
+    "latest_reach_score": 19.97,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "nkj.ru",
@@ -2195,9 +2195,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-29T05:04:00",
     "last_mention_date": "2018-05-29T05:04:00",
-    "latest_tranco_rank": 54821,
-    "latest_reach_score": 21.02,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 54882,
+    "latest_reach_score": 21.01,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "insidescience.org",
@@ -2217,21 +2217,21 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T14:56:05",
     "last_mention_date": "2018-05-24T14:56:05",
-    "latest_tranco_rank": 145802,
-    "latest_reach_score": 13.94,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 144483,
+    "latest_reach_score": 14.0,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "naked-science.ru",
     "mentions": 3,
     "ranked_mentions": 3,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 23.0067,
+    "mean_reach_score_at_date": 23.19,
     "median_reach_score_at_date": 23.32,
-    "mean_tranco_rank_at_date": 41743,
+    "mean_tranco_rank_at_date": 40639,
     "median_tranco_rank_at_date": 39898,
     "best_tranco_rank_at_date": 39898,
-    "worst_tranco_rank_at_date": 45432,
+    "worst_tranco_rank_at_date": 42120,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 3,
     "unique_tranco_lists": 2,
@@ -2239,9 +2239,9 @@
     "top_outlet_mentions": 3,
     "first_mention_date": "2018-05-25T06:27:30",
     "last_mention_date": "2021-10-14T09:55:49",
-    "latest_tranco_rank": 16985,
-    "latest_reach_score": 29.5,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 17002,
+    "latest_reach_score": 29.49,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "actionnewsnow.com",
@@ -2261,31 +2261,31 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T00:00:00",
     "last_mention_date": "2018-05-24T00:00:00",
-    "latest_tranco_rank": 173971,
-    "latest_reach_score": 12.66,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 175093,
+    "latest_reach_score": 12.61,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "ct.moreover.com",
     "mentions": 44,
     "ranked_mentions": 44,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 22.2932,
+    "mean_reach_score_at_date": 22.4023,
     "median_reach_score_at_date": 22.29,
-    "mean_tranco_rank_at_date": 46027,
+    "mean_tranco_rank_at_date": 45313,
     "median_tranco_rank_at_date": 45993,
     "best_tranco_rank_at_date": 41239,
-    "worst_tranco_rank_at_date": 49823,
+    "worst_tranco_rank_at_date": 45993,
     "primary_match_type": "suffix",
-    "unique_snapshot_periods": 5,
-    "unique_tranco_lists": 5,
+    "unique_snapshot_periods": 3,
+    "unique_tranco_lists": 3,
     "top_outlet": "Yahoo!",
     "top_outlet_mentions": 3,
     "first_mention_date": "2024-02-23T14:45:00",
     "last_mention_date": "2025-05-25T01:32:00",
-    "latest_tranco_rank": 35342,
-    "latest_reach_score": 24.2,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 35728,
+    "latest_reach_score": 24.12,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "zap.aeiou.pt",
@@ -2305,9 +2305,9 @@
     "top_outlet_mentions": 2,
     "first_mention_date": "2018-05-26T09:00:15",
     "last_mention_date": "2024-08-03T20:30:00",
-    "latest_tranco_rank": 52224,
-    "latest_reach_score": 21.37,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 52370,
+    "latest_reach_score": 21.35,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "astrobio.net",
@@ -2327,9 +2327,9 @@
     "top_outlet_mentions": 2,
     "first_mention_date": "2017-09-24T13:05:46",
     "last_mention_date": "2018-05-29T11:57:06",
-    "latest_tranco_rank": 212588,
-    "latest_reach_score": 11.21,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 213482,
+    "latest_reach_score": 11.18,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "agenciasinc.es",
@@ -2349,9 +2349,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2015-10-07T17:00:02",
     "last_mention_date": "2015-10-07T17:00:02",
-    "latest_tranco_rank": 70141,
-    "latest_reach_score": 19.23,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 70521,
+    "latest_reach_score": 19.19,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "daijiworld.com",
@@ -2371,21 +2371,21 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-25T09:42:34",
     "last_mention_date": "2018-05-25T09:42:34",
-    "latest_tranco_rank": 44105,
-    "latest_reach_score": 22.59,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 44148,
+    "latest_reach_score": 22.58,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "theobjective.com",
     "mentions": 1,
     "ranked_mentions": 1,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 20.22,
-    "median_reach_score_at_date": 20.22,
-    "mean_tranco_rank_at_date": 61205,
-    "median_tranco_rank_at_date": 61205,
-    "best_tranco_rank_at_date": 61205,
-    "worst_tranco_rank_at_date": 61205,
+    "mean_reach_score_at_date": 20.28,
+    "median_reach_score_at_date": 20.28,
+    "mean_tranco_rank_at_date": 60677,
+    "median_tranco_rank_at_date": 60677,
+    "best_tranco_rank_at_date": 60677,
+    "worst_tranco_rank_at_date": 60677,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 1,
     "unique_tranco_lists": 1,
@@ -2393,9 +2393,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2022-12-04T02:30:00",
     "last_mention_date": "2022-12-04T02:30:00",
-    "latest_tranco_rank": 13891,
-    "latest_reach_score": 30.95,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 12164,
+    "latest_reach_score": 31.92,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "wissenschaft.de",
@@ -2415,9 +2415,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T15:00:37",
     "last_mention_date": "2018-05-24T15:00:37",
-    "latest_tranco_rank": 61385,
-    "latest_reach_score": 20.2,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 60830,
+    "latest_reach_score": 20.26,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "hirado.hu",
@@ -2437,9 +2437,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2015-10-13T10:33:00",
     "last_mention_date": "2015-10-13T10:33:00",
-    "latest_tranco_rank": 45247,
-    "latest_reach_score": 22.41,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 45367,
+    "latest_reach_score": 22.39,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "scienceworldreport.com",
@@ -2459,9 +2459,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2015-10-13T19:40:08",
     "last_mention_date": "2015-10-13T19:40:08",
-    "latest_tranco_rank": 310947,
-    "latest_reach_score": 8.46,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 307728,
+    "latest_reach_score": 8.53,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "nationalgeographic.it",
@@ -2481,9 +2481,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-25T10:46:25",
     "last_mention_date": "2018-05-25T10:46:25",
-    "latest_tranco_rank": 124040,
-    "latest_reach_score": 15.11,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 125751,
+    "latest_reach_score": 15.01,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "1tv.ge",
@@ -2503,20 +2503,20 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2022-11-25T10:28:30",
     "last_mention_date": "2022-11-25T10:28:30",
-    "latest_tranco_rank": 56405,
-    "latest_reach_score": 20.81,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 56351,
+    "latest_reach_score": 20.82,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "labmanager.com",
     "mentions": 2,
     "ranked_mentions": 2,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 17.945,
-    "median_reach_score_at_date": 17.945,
-    "mean_tranco_rank_at_date": 84288,
-    "median_tranco_rank_at_date": 84288,
-    "best_tranco_rank_at_date": 75303,
+    "mean_reach_score_at_date": 17.94,
+    "median_reach_score_at_date": 17.94,
+    "mean_tranco_rank_at_date": 84336,
+    "median_tranco_rank_at_date": 84336,
+    "best_tranco_rank_at_date": 75399,
     "worst_tranco_rank_at_date": 93273,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 2,
@@ -2525,9 +2525,9 @@
     "top_outlet_mentions": 2,
     "first_mention_date": "2018-05-25T04:00:00",
     "last_mention_date": "2021-11-17T17:10:43",
-    "latest_tranco_rank": 109450,
-    "latest_reach_score": 16.01,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 109874,
+    "latest_reach_score": 15.99,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "longroom.com",
@@ -2549,19 +2549,19 @@
     "last_mention_date": "2018-05-24T19:15:53",
     "latest_tranco_rank": 0,
     "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "evolutionnews.org",
     "mentions": 1,
     "ranked_mentions": 1,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 17.27,
-    "median_reach_score_at_date": 17.27,
-    "mean_tranco_rank_at_date": 91990,
-    "median_tranco_rank_at_date": 91990,
-    "best_tranco_rank_at_date": 91990,
-    "worst_tranco_rank_at_date": 91990,
+    "mean_reach_score_at_date": 17.29,
+    "median_reach_score_at_date": 17.29,
+    "mean_tranco_rank_at_date": 91764,
+    "median_tranco_rank_at_date": 91764,
+    "best_tranco_rank_at_date": 91764,
+    "worst_tranco_rank_at_date": 91764,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 1,
     "unique_tranco_lists": 1,
@@ -2569,9 +2569,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2022-08-19T13:47:00",
     "last_mention_date": "2022-08-19T13:47:00",
-    "latest_tranco_rank": 182455,
-    "latest_reach_score": 12.31,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 183957,
+    "latest_reach_score": 12.25,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "sg.hu",
@@ -2591,9 +2591,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-29T16:07:28",
     "last_mention_date": "2018-05-29T16:07:28",
-    "latest_tranco_rank": 255586,
-    "latest_reach_score": 9.87,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 256405,
+    "latest_reach_score": 9.85,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "pnn.de",
@@ -2613,9 +2613,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T15:47:07",
     "last_mention_date": "2018-05-24T15:47:07",
-    "latest_tranco_rank": 201533,
-    "latest_reach_score": 11.59,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 198413,
+    "latest_reach_score": 11.71,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "todayuknews.com",
@@ -2635,9 +2635,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2022-11-26T22:24:01",
     "last_mention_date": "2022-11-26T22:24:01",
-    "latest_tranco_rank": 996172,
-    "latest_reach_score": 0.03,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 980460,
+    "latest_reach_score": 0.14,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "technology.org",
@@ -2657,9 +2657,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2015-02-13T13:24:39",
     "last_mention_date": "2015-02-13T13:24:39",
-    "latest_tranco_rank": 79977,
-    "latest_reach_score": 18.28,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 80745,
+    "latest_reach_score": 18.21,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "vervetimes.com",
@@ -2679,9 +2679,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2022-11-25T05:33:41",
     "last_mention_date": "2022-11-25T05:33:41",
-    "latest_tranco_rank": 912237,
-    "latest_reach_score": 0.66,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 919361,
+    "latest_reach_score": 0.61,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "sci.news",
@@ -2701,43 +2701,21 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2024-08-02T20:24:47",
     "last_mention_date": "2024-08-02T20:24:47",
-    "latest_tranco_rank": 102076,
-    "latest_reach_score": 16.52,
-    "latest_tranco_list_id": "9WJY2"
-  },
-  {
-    "domain": "ebiotrade.com",
-    "mentions": 1,
-    "ranked_mentions": 1,
-    "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 13.78,
-    "median_reach_score_at_date": 13.78,
-    "mean_tranco_rank_at_date": 148924,
-    "median_tranco_rank_at_date": 148924,
-    "best_tranco_rank_at_date": 148924,
-    "worst_tranco_rank_at_date": 148924,
-    "primary_match_type": "exact",
-    "unique_snapshot_periods": 1,
-    "unique_tranco_lists": 1,
-    "top_outlet": "Ebiotrade",
-    "top_outlet_mentions": 1,
-    "first_mention_date": "2021-10-15T04:24:12",
-    "last_mention_date": "2021-10-15T04:24:12",
-    "latest_tranco_rank": 126250,
-    "latest_reach_score": 14.98,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 103319,
+    "latest_reach_score": 16.43,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "technologytimes.pk",
     "mentions": 1,
     "ranked_mentions": 1,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 13.42,
-    "median_reach_score_at_date": 13.42,
-    "mean_tranco_rank_at_date": 156555,
-    "median_tranco_rank_at_date": 156555,
-    "best_tranco_rank_at_date": 156555,
-    "worst_tranco_rank_at_date": 156555,
+    "mean_reach_score_at_date": 13.61,
+    "median_reach_score_at_date": 13.61,
+    "mean_tranco_rank_at_date": 152528,
+    "median_tranco_rank_at_date": 152528,
+    "best_tranco_rank_at_date": 152528,
+    "worst_tranco_rank_at_date": 152528,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 1,
     "unique_tranco_lists": 1,
@@ -2747,7 +2725,29 @@
     "last_mention_date": "2021-10-12T19:06:21",
     "latest_tranco_rank": 0,
     "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
+  },
+  {
+    "domain": "ebiotrade.com",
+    "mentions": 1,
+    "ranked_mentions": 1,
+    "rank_coverage_rate": 1.0,
+    "mean_reach_score_at_date": 13.58,
+    "median_reach_score_at_date": 13.58,
+    "mean_tranco_rank_at_date": 153079,
+    "median_tranco_rank_at_date": 153079,
+    "best_tranco_rank_at_date": 153079,
+    "worst_tranco_rank_at_date": 153079,
+    "primary_match_type": "exact",
+    "unique_snapshot_periods": 1,
+    "unique_tranco_lists": 1,
+    "top_outlet": "Ebiotrade",
+    "top_outlet_mentions": 1,
+    "first_mention_date": "2021-10-15T04:24:12",
+    "last_mention_date": "2021-10-15T04:24:12",
+    "latest_tranco_rank": 127869,
+    "latest_reach_score": 14.89,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "sciencenewsline.com",
@@ -2767,9 +2767,9 @@
     "top_outlet_mentions": 3,
     "first_mention_date": "2015-02-12T17:11:00",
     "last_mention_date": "2017-09-22T15:40:00",
-    "latest_tranco_rank": 689437,
-    "latest_reach_score": 2.69,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 704909,
+    "latest_reach_score": 2.53,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "scientias.nl",
@@ -2789,21 +2789,21 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-24T16:54:46",
     "last_mention_date": "2018-05-24T16:54:46",
-    "latest_tranco_rank": 93026,
-    "latest_reach_score": 17.19,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 80857,
+    "latest_reach_score": 18.2,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "scienmag.com",
     "mentions": 2,
     "ranked_mentions": 2,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 10.54,
-    "median_reach_score_at_date": 10.54,
-    "mean_tranco_rank_at_date": 275851,
-    "median_tranco_rank_at_date": 275851,
-    "best_tranco_rank_at_date": 128294,
-    "worst_tranco_rank_at_date": 423408,
+    "mean_reach_score_at_date": 11.085,
+    "median_reach_score_at_date": 11.085,
+    "mean_tranco_rank_at_date": 246726,
+    "median_tranco_rank_at_date": 246726,
+    "best_tranco_rank_at_date": 128057,
+    "worst_tranco_rank_at_date": 365396,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 2,
     "unique_tranco_lists": 2,
@@ -2811,9 +2811,9 @@
     "top_outlet_mentions": 2,
     "first_mention_date": "2021-11-17T14:10:29",
     "last_mention_date": "2024-07-31T18:20:19",
-    "latest_tranco_rank": 192805,
+    "latest_tranco_rank": 192810,
     "latest_reach_score": 11.91,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "greenreport.it",
@@ -2833,21 +2833,21 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-25T09:00:05",
     "last_mention_date": "2018-05-25T09:00:05",
-    "latest_tranco_rank": 176367,
-    "latest_reach_score": 12.56,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 175973,
+    "latest_reach_score": 12.58,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "kopalniawiedzy.pl",
     "mentions": 1,
     "ranked_mentions": 1,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 9.95,
-    "median_reach_score_at_date": 9.95,
-    "mean_tranco_rank_at_date": 252799,
-    "median_tranco_rank_at_date": 252799,
-    "best_tranco_rank_at_date": 252799,
-    "worst_tranco_rank_at_date": 252799,
+    "mean_reach_score_at_date": 9.3,
+    "median_reach_score_at_date": 9.3,
+    "mean_tranco_rank_at_date": 276594,
+    "median_tranco_rank_at_date": 276594,
+    "best_tranco_rank_at_date": 276594,
+    "worst_tranco_rank_at_date": 276594,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 1,
     "unique_tranco_lists": 1,
@@ -2855,9 +2855,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2021-10-12T11:34:19",
     "last_mention_date": "2021-10-12T11:34:19",
-    "latest_tranco_rank": 389678,
-    "latest_reach_score": 6.82,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 414590,
+    "latest_reach_score": 6.37,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "southafricatoday.net",
@@ -2877,9 +2877,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2022-11-30T18:38:20",
     "last_mention_date": "2022-11-30T18:38:20",
-    "latest_tranco_rank": 410148,
-    "latest_reach_score": 6.45,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 420579,
+    "latest_reach_score": 6.27,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "healthmedicinet.com",
@@ -2899,9 +2899,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2014-10-15T06:23:58",
     "last_mention_date": "2014-10-15T06:23:58",
-    "latest_tranco_rank": 722444,
-    "latest_reach_score": 2.35,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 688837,
+    "latest_reach_score": 2.7,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "canindia.com",
@@ -2921,9 +2921,31 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2018-05-25T09:36:00",
     "last_mention_date": "2018-05-25T09:36:00",
-    "latest_tranco_rank": 435017,
-    "latest_reach_score": 6.02,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 428586,
+    "latest_reach_score": 6.13,
+    "latest_tranco_list_id": "JLK5Y"
+  },
+  {
+    "domain": "bioengineer.org",
+    "mentions": 1,
+    "ranked_mentions": 1,
+    "rank_coverage_rate": 1.0,
+    "mean_reach_score_at_date": 6.26,
+    "median_reach_score_at_date": 6.26,
+    "mean_tranco_rank_at_date": 421354,
+    "median_tranco_rank_at_date": 421354,
+    "best_tranco_rank_at_date": 421354,
+    "worst_tranco_rank_at_date": 421354,
+    "primary_match_type": "exact",
+    "unique_snapshot_periods": 1,
+    "unique_tranco_lists": 1,
+    "top_outlet": "Bioengineer.org",
+    "top_outlet_mentions": 1,
+    "first_mention_date": "2021-11-17T14:12:37",
+    "last_mention_date": "2021-11-17T14:12:37",
+    "latest_tranco_rank": 196124,
+    "latest_reach_score": 11.79,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "illvet.se",
@@ -2943,31 +2965,31 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2024-08-05T15:14:43",
     "last_mention_date": "2024-08-05T15:14:43",
-    "latest_tranco_rank": 159784,
-    "latest_reach_score": 13.27,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 158975,
+    "latest_reach_score": 13.31,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
-    "domain": "bioengineer.org",
+    "domain": "trueviralnews.com",
     "mentions": 1,
     "ranked_mentions": 1,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 6.16,
-    "median_reach_score_at_date": 6.16,
-    "mean_tranco_rank_at_date": 426704,
-    "median_tranco_rank_at_date": 426704,
-    "best_tranco_rank_at_date": 426704,
-    "worst_tranco_rank_at_date": 426704,
+    "mean_reach_score_at_date": 5.7,
+    "median_reach_score_at_date": 5.7,
+    "mean_tranco_rank_at_date": 455300,
+    "median_tranco_rank_at_date": 455300,
+    "best_tranco_rank_at_date": 455300,
+    "worst_tranco_rank_at_date": 455300,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 1,
     "unique_tranco_lists": 1,
-    "top_outlet": "Bioengineer.org",
+    "top_outlet": "True Viral News",
     "top_outlet_mentions": 1,
-    "first_mention_date": "2021-11-17T14:12:37",
-    "last_mention_date": "2021-11-17T14:12:37",
-    "latest_tranco_rank": 193379,
-    "latest_reach_score": 11.89,
-    "latest_tranco_list_id": "9WJY2"
+    "first_mention_date": "2021-10-11T18:38:02",
+    "last_mention_date": "2021-10-11T18:38:02",
+    "latest_tranco_rank": 0,
+    "latest_reach_score": 0.0,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "uktimenews.com",
@@ -2989,7 +3011,7 @@
     "last_mention_date": "2022-11-25T05:02:03",
     "latest_tranco_rank": 0,
     "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "nouvelles-du-monde.com",
@@ -3009,43 +3031,21 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2024-02-15T05:51:07",
     "last_mention_date": "2024-02-15T05:51:07",
-    "latest_tranco_rank": 411172,
-    "latest_reach_score": 6.43,
-    "latest_tranco_list_id": "9WJY2"
-  },
-  {
-    "domain": "trueviralnews.com",
-    "mentions": 1,
-    "ranked_mentions": 1,
-    "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 5.04,
-    "median_reach_score_at_date": 5.04,
-    "mean_tranco_rank_at_date": 498694,
-    "median_tranco_rank_at_date": 498694,
-    "best_tranco_rank_at_date": 498694,
-    "worst_tranco_rank_at_date": 498694,
-    "primary_match_type": "exact",
-    "unique_snapshot_periods": 1,
-    "unique_tranco_lists": 1,
-    "top_outlet": "True Viral News",
-    "top_outlet_mentions": 1,
-    "first_mention_date": "2021-10-11T18:38:02",
-    "last_mention_date": "2021-10-11T18:38:02",
-    "latest_tranco_rank": 0,
-    "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 409028,
+    "latest_reach_score": 6.47,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "foreignaffairs.co.nz",
     "mentions": 2,
     "ranked_mentions": 2,
     "rank_coverage_rate": 1.0,
-    "mean_reach_score_at_date": 3.01,
-    "median_reach_score_at_date": 3.01,
-    "mean_tranco_rank_at_date": 678322,
-    "median_tranco_rank_at_date": 678322,
-    "best_tranco_rank_at_date": 521924,
-    "worst_tranco_rank_at_date": 834719,
+    "mean_reach_score_at_date": 3.035,
+    "median_reach_score_at_date": 3.035,
+    "mean_tranco_rank_at_date": 670673,
+    "median_tranco_rank_at_date": 670673,
+    "best_tranco_rank_at_date": 539592,
+    "worst_tranco_rank_at_date": 801754,
     "primary_match_type": "exact",
     "unique_snapshot_periods": 2,
     "unique_tranco_lists": 2,
@@ -3053,9 +3053,9 @@
     "top_outlet_mentions": 2,
     "first_mention_date": "2019-09-13T12:29:43",
     "last_mention_date": "2020-07-20T13:52:52",
-    "latest_tranco_rank": 669377,
-    "latest_reach_score": 2.91,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 637817,
+    "latest_reach_score": 3.26,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "cikavosti.com",
@@ -3075,9 +3075,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2024-08-15T16:34:27",
     "last_mention_date": "2024-08-15T16:34:27",
-    "latest_tranco_rank": 893549,
-    "latest_reach_score": 0.81,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 871705,
+    "latest_reach_score": 0.99,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "nach-welt.com",
@@ -3099,7 +3099,7 @@
     "last_mention_date": "2022-11-27T04:02:21",
     "latest_tranco_rank": 0,
     "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "w2.technobahn.com",
@@ -3121,7 +3121,29 @@
     "last_mention_date": "2015-02-12T17:11:00",
     "latest_tranco_rank": 0,
     "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
+  },
+  {
+    "domain": "dclm.es",
+    "mentions": 1,
+    "ranked_mentions": 1,
+    "rank_coverage_rate": 1.0,
+    "mean_reach_score_at_date": 0.57,
+    "median_reach_score_at_date": 0.57,
+    "mean_tranco_rank_at_date": 924614,
+    "median_tranco_rank_at_date": 924614,
+    "best_tranco_rank_at_date": 924614,
+    "worst_tranco_rank_at_date": 924614,
+    "primary_match_type": "exact",
+    "unique_snapshot_periods": 1,
+    "unique_tranco_lists": 1,
+    "top_outlet": "dclm",
+    "top_outlet_mentions": 1,
+    "first_mention_date": "2022-12-04T12:11:46",
+    "last_mention_date": "2022-12-04T12:11:46",
+    "latest_tranco_rank": 0,
+    "latest_reach_score": 0.0,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "myscience.org",
@@ -3141,9 +3163,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2017-09-21T07:00:06",
     "last_mention_date": "2017-09-21T07:00:06",
-    "latest_tranco_rank": 531144,
-    "latest_reach_score": 4.58,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 539647,
+    "latest_reach_score": 4.46,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "journalbreak.com",
@@ -3165,7 +3187,7 @@
     "last_mention_date": "2022-11-27T01:08:20",
     "latest_tranco_rank": 0,
     "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "torontotelegraph.com",
@@ -3187,7 +3209,7 @@
     "last_mention_date": "2023-12-19T18:39:17",
     "latest_tranco_rank": 0,
     "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "us.alertbreakingnews.com",
@@ -3209,7 +3231,7 @@
     "last_mention_date": "2022-10-27T18:44:19",
     "latest_tranco_rank": 0,
     "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "bilbao24horas.com",
@@ -3231,7 +3253,7 @@
     "last_mention_date": "2022-12-04T08:03:51",
     "latest_tranco_rank": 0,
     "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "cambiopolitico.com",
@@ -3247,13 +3269,13 @@
     "primary_match_type": "unmatched",
     "unique_snapshot_periods": 1,
     "unique_tranco_lists": 1,
-    "top_outlet": "Cambio Poltico",
+    "top_outlet": "Cambio Político",
     "top_outlet_mentions": 1,
     "first_mention_date": "2022-12-01T22:11:33",
     "last_mention_date": "2022-12-01T22:11:33",
-    "latest_tranco_rank": 0,
-    "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 989991,
+    "latest_reach_score": 0.07,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "chitchatpost.com",
@@ -3275,29 +3297,7 @@
     "last_mention_date": "2024-08-14T01:05:52",
     "latest_tranco_rank": 0,
     "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
-  },
-  {
-    "domain": "dclm.es",
-    "mentions": 1,
-    "ranked_mentions": 0,
-    "rank_coverage_rate": 0.0,
-    "mean_reach_score_at_date": 0.0,
-    "median_reach_score_at_date": 0.0,
-    "mean_tranco_rank_at_date": 0,
-    "median_tranco_rank_at_date": 0,
-    "best_tranco_rank_at_date": 0,
-    "worst_tranco_rank_at_date": 0,
-    "primary_match_type": "unmatched",
-    "unique_snapshot_periods": 1,
-    "unique_tranco_lists": 1,
-    "top_outlet": "dclm",
-    "top_outlet_mentions": 1,
-    "first_mention_date": "2022-12-04T12:11:46",
-    "last_mention_date": "2022-12-04T12:11:46",
-    "latest_tranco_rank": 0,
-    "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "elportaluco.com",
@@ -3319,7 +3319,7 @@
     "last_mention_date": "2022-12-04T05:41:01",
     "latest_tranco_rank": 0,
     "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "free-mail.co.za",
@@ -3341,7 +3341,7 @@
     "last_mention_date": "2023-12-20T01:00:19",
     "latest_tranco_rank": 0,
     "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "madriddigital24horas.com",
@@ -3363,7 +3363,7 @@
     "last_mention_date": "2022-12-04T11:09:48",
     "latest_tranco_rank": 0,
     "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "mandarinian.news",
@@ -3383,9 +3383,9 @@
     "top_outlet_mentions": 1,
     "first_mention_date": "2025-05-10T22:13:28",
     "last_mention_date": "2025-05-10T22:13:28",
-    "latest_tranco_rank": 965303,
-    "latest_reach_score": 0.26,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_rank": 943391,
+    "latest_reach_score": 0.42,
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "newslanes.com",
@@ -3407,7 +3407,7 @@
     "last_mention_date": "2022-11-25T06:24:20",
     "latest_tranco_rank": 0,
     "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "nipponese.news",
@@ -3429,7 +3429,7 @@
     "last_mention_date": "2024-08-18T10:03:01",
     "latest_tranco_rank": 0,
     "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "noticiasdelatierra.com",
@@ -3451,7 +3451,7 @@
     "last_mention_date": "2024-04-08T15:39:30",
     "latest_tranco_rank": 0,
     "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "presseraum.at",
@@ -3473,7 +3473,7 @@
     "last_mention_date": "2022-11-25T13:18:01",
     "latest_tranco_rank": 0,
     "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   },
   {
     "domain": "swifttelecast.com",
@@ -3495,6 +3495,6 @@
     "last_mention_date": "2022-11-26T17:13:24",
     "latest_tranco_rank": 0,
     "latest_reach_score": 0.0,
-    "latest_tranco_list_id": "9WJY2"
+    "latest_tranco_list_id": "JLK5Y"
   }
 ]
