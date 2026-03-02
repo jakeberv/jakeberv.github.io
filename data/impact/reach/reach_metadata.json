@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-02-23T07:36:09.363641+00:00",
+  "generated_at_utc": "2026-03-02T07:20:26.521583+00:00",
   "input": {
     "source_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/exports/news_mentions_clean.json",
     "news_mentions_rows_input": 345,
@@ -14,21 +14,21 @@
   },
   "source": {
     "source": "tranco_api",
-    "list_id": "JLK5Y",
-    "download_url": "https://tranco-list.eu/download/JLK5Y/1000000",
-    "created_on": "2026-02-22T22:00:02.303212",
-    "retrieved_at_utc": "2026-02-23T07:33:13.870096+00:00",
+    "list_id": "VQPQN",
+    "download_url": "https://tranco-list.eu/download/VQPQN/1000000",
+    "created_on": "2026-03-01T22:00:01.996949",
+    "retrieved_at_utc": "2026-03-02T07:17:23.424803+00:00",
     "cache_hit": false,
-    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_JLK5Y.csv.zip",
-    "ranked_domains": 133
+    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_VQPQN.csv.zip",
+    "ranked_domains": 132
   },
   "coverage": {
-    "domains_matched": 139,
-    "domains_unmatched": 20,
-    "domain_match_rate": 0.8742,
-    "mentions_ranked": 276,
+    "domains_matched": 138,
+    "domains_unmatched": 21,
+    "domain_match_rate": 0.8679,
+    "mentions_ranked": 275,
     "mentions_total": 302,
-    "mention_coverage_rate": 0.9139
+    "mention_coverage_rate": 0.9106
   },
   "time_adjusted": {
     "enabled": true,
@@ -153,6 +153,12 @@
       "mentions": 1,
       "top_outlet": "Technology Times",
       "last_mention_date": "2021-10-12T19:06:21"
+    },
+    {
+      "domain": "todayuknews.com",
+      "mentions": 1,
+      "top_outlet": "Today UK News",
+      "last_mention_date": "2022-11-26T22:24:01"
     },
     {
       "domain": "trueviralnews.com",
