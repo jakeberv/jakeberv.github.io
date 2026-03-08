@@ -4,20 +4,20 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 13,
-  "citations": 2637,
+  "citations": 2650,
   "cites_per_year": {
     "2015": 13,
     "2016": 108,
     "2017": 210,
     "2018": 220,
-    "2019": 273,
+    "2019": 276,
     "2020": 307,
     "2021": 307,
     "2022": 322,
-    "2023": 259,
+    "2023": 260,
     "2024": 270,
     "2025": 261,
-    "2026": 44
+    "2026": 53
   },
   "interests": [
     "Speciation",
@@ -113,6 +113,11 @@
       "scholar_id": "C61BipSii0wC"
     },
     {
+      "name": "Irby Lovette",
+      "affiliation": "Fuller Professor of Ornithology, Cornell University",
+      "scholar_id": "Vi0LoiAAAAAJ"
+    },
+    {
       "name": "Alan Fecchio",
       "affiliation": "Universidade Estadual Paulista (UNESP Jaboticabal)",
       "scholar_id": "FgGcYjEAAAAJ"
@@ -166,11 +171,6 @@
       "name": "Victor R. Cueto",
       "affiliation": "CIEMEP (CONICET & UNPSJB)",
       "scholar_id": "qfvfHd0AAAAJ"
-    },
-    {
-      "name": "Irby Lovette",
-      "affiliation": "Fuller Professor of Ornithology, Cornell University",
-      "scholar_id": "Vi0LoiAAAAAJ"
     },
     {
       "name": "Matt Friedman",
@@ -410,21 +410,21 @@
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 1880,
+      "citations": 1882,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
     },
     {
       "title": "Early evolution of modern birds structured by global forest collapse at the end-Cretaceous mass extinction",
-      "citations": 186,
+      "citations": 187,
       "year": 2018,
       "venue": "N/A",
       "url": "https://www.cell.com/current-biology/fulltext/S0960-9822(18)30534-7"
     },
     {
       "title": "Genomic signature of an avian Lilliput effect across the K-Pg extinction",
-      "citations": 129,
+      "citations": 131,
       "year": 2018,
       "venue": "N/A",
       "url": "https://academic.oup.com/sysbio/article-abstract/67/1/1/3960267"
@@ -438,42 +438,42 @@
     },
     {
       "title": "A comprehensive multilocus phylogeny of the Neotropical cotingas (Cotingidae, Aves) with a comparative evolutionary analysis of breeding system and plumage dimorphism and a revised phylogenetic classification",
-      "citations": 57,
+      "citations": 58,
       "year": 2014,
       "venue": "N/A",
       "url": "https://www.sciencedirect.com/science/article/pii/S1055790314003133"
     },
     {
       "title": "Complex coevolution of wing, tail, and vocal sounds of courting male bee hummingbirds",
-      "citations": 53,
+      "citations": 54,
       "year": 2018,
       "venue": "N/A",
       "url": "https://academic.oup.com/evolut/article-abstract/72/3/630/6726732"
     },
     {
       "title": "Timing the extant avian radiation: the rise of modern birds, and the importance of modeling molecular rate variation",
-      "citations": 45,
+      "citations": 46,
       "year": 2019,
       "venue": "N/A",
       "url": "https://peerj.com/preprints/27521/"
     },
     {
       "title": "Genomic phylogeography of the White-crowned Manakin Pseudopipra pipra (Aves: Pipridae) illuminates a continental-scale radiation out of the Andes",
-      "citations": 42,
+      "citations": 43,
       "year": 2021,
       "venue": "N/A",
       "url": "https://www.sciencedirect.com/science/article/pii/S105579032100138X"
     },
     {
       "title": "Ecological selectivity and the evolution of mammalian substrate preference across the K–Pg boundary",
-      "citations": 33,
+      "citations": 34,
       "year": 2021,
       "venue": "N/A",
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ece3.8114"
     },
     {
       "title": "Recent divergence and lack of shared phylogeographic history characterize the diversification of neotropical savanna birds",
-      "citations": 29,
+      "citations": 30,
       "year": 2021,
       "venue": "N/A",
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/jbi.14065"
@@ -501,7 +501,7 @@
     },
     {
       "title": "The pace of mitochondrial molecular evolution varies with seasonal migration distance",
-      "citations": 8,
+      "citations": 9,
       "year": 2024,
       "venue": "N/A",
       "url": "https://academic.oup.com/evolut/article-abstract/78/1/160/7379636"
@@ -521,18 +521,18 @@
       "url": "https://academic.oup.com/gbe/article-pdf/doi/10.1093/gbe/evaf017/61752364/evaf017.pdf"
     },
     {
+      "title": "Habitat-associated evolutionary rates in deep-sea invertebrates",
+      "citations": 2,
+      "year": 2025,
+      "venue": "N/A",
+      "url": "https://academic.oup.com/evolut/article-abstract/79/7/1334/8121435"
+    },
+    {
       "title": "Skeletal trait measurements for thousands of bird species",
       "citations": 2,
       "year": 2025,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/s41597-025-05234-y"
-    },
-    {
-      "title": "Habitat-associated evolutionary rates in deep-sea invertebrates",
-      "citations": 1,
-      "year": 2025,
-      "venue": "N/A",
-      "url": "https://academic.oup.com/evolut/article-abstract/79/7/1334/8121435"
     },
     {
       "title": "Variable patterns of phenotypic evolution among canonical ‘living fossil’lineages",
@@ -598,6 +598,6 @@
       "url": "https://ui.adsabs.harvard.edu/abs/2016GSAA...4887815B/abstract"
     }
   ],
-  "generated_at": 1772330281,
+  "generated_at": 1772933286,
   "proxy_mode": "free"
 }
