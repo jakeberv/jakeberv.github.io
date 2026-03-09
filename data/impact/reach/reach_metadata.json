@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-02T07:20:26.521583+00:00",
+  "generated_at_utc": "2026-03-09T07:33:20.405483+00:00",
   "input": {
     "source_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/exports/news_mentions_clean.json",
     "news_mentions_rows_input": 345,
@@ -14,21 +14,21 @@
   },
   "source": {
     "source": "tranco_api",
-    "list_id": "VQPQN",
-    "download_url": "https://tranco-list.eu/download/VQPQN/1000000",
-    "created_on": "2026-03-01T22:00:01.996949",
-    "retrieved_at_utc": "2026-03-02T07:17:23.424803+00:00",
+    "list_id": "3QZNL",
+    "download_url": "https://tranco-list.eu/download/3QZNL/1000000",
+    "created_on": "2026-03-08T22:00:02.435598",
+    "retrieved_at_utc": "2026-03-09T07:30:13.740537+00:00",
     "cache_hit": false,
-    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_VQPQN.csv.zip",
-    "ranked_domains": 132
+    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_3QZNL.csv.zip",
+    "ranked_domains": 131
   },
   "coverage": {
-    "domains_matched": 138,
-    "domains_unmatched": 21,
-    "domain_match_rate": 0.8679,
-    "mentions_ranked": 275,
+    "domains_matched": 137,
+    "domains_unmatched": 22,
+    "domain_match_rate": 0.8616,
+    "mentions_ranked": 274,
     "mentions_total": 302,
-    "mention_coverage_rate": 0.9106
+    "mention_coverage_rate": 0.9073
   },
   "time_adjusted": {
     "enabled": true,
@@ -117,6 +117,12 @@
       "mentions": 1,
       "top_outlet": "Madriddigital24horas",
       "last_mention_date": "2022-12-04T11:09:48"
+    },
+    {
+      "domain": "mandarinian.news",
+      "mentions": 1,
+      "top_outlet": "Mandarinian",
+      "last_mention_date": "2025-05-10T22:13:28"
     },
     {
       "domain": "newslanes.com",
