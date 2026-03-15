@@ -4,20 +4,20 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 13,
-  "citations": 2650,
+  "citations": 2654,
   "cites_per_year": {
     "2015": 13,
     "2016": 108,
-    "2017": 210,
+    "2017": 209,
     "2018": 220,
     "2019": 276,
     "2020": 307,
     "2021": 307,
     "2022": 322,
     "2023": 260,
-    "2024": 270,
-    "2025": 261,
-    "2026": 53
+    "2024": 271,
+    "2025": 262,
+    "2026": 56
   },
   "interests": [
     "Speciation",
@@ -410,7 +410,7 @@
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 1882,
+      "citations": 1885,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
@@ -466,7 +466,7 @@
     },
     {
       "title": "Ecological selectivity and the evolution of mammalian substrate preference across the K–Pg boundary",
-      "citations": 34,
+      "citations": 35,
       "year": 2021,
       "venue": "N/A",
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ece3.8114"
@@ -598,6 +598,6 @@
       "url": "https://ui.adsabs.harvard.edu/abs/2016GSAA...4887815B/abstract"
     }
   ],
-  "generated_at": 1772933286,
+  "generated_at": 1773539984,
   "proxy_mode": "free"
 }
