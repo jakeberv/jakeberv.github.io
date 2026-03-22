@@ -4,7 +4,7 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 13,
-  "citations": 2654,
+  "citations": 2657,
   "cites_per_year": {
     "2015": 13,
     "2016": 108,
@@ -15,9 +15,9 @@
     "2021": 307,
     "2022": 322,
     "2023": 260,
-    "2024": 271,
+    "2024": 270,
     "2025": 262,
-    "2026": 56
+    "2026": 60
   },
   "interests": [
     "Speciation",
@@ -323,6 +323,16 @@
       "scholar_id": "j7OsXOwAAAAJ"
     },
     {
+      "name": "Brian C. Weeks",
+      "affiliation": "School for Environment and Sustainability, University of Michigan",
+      "scholar_id": "7isF9EEAAAAJ"
+    },
+    {
+      "name": "Charlotte M Probst",
+      "affiliation": "PhD student, University of Michigan",
+      "scholar_id": "dRvjW1sAAAAJ"
+    },
+    {
       "name": "William Gearty",
       "affiliation": "Postdoctoral Researcher, Syracuse University",
       "scholar_id": "HWV1c2UAAAAJ"
@@ -346,16 +356,6 @@
       "name": "Hilmar Lapp",
       "affiliation": "Neuromatch, Open Research Faculty",
       "scholar_id": "CK6Qg7gAAAAJ"
-    },
-    {
-      "name": "Brian C. Weeks",
-      "affiliation": "School for Environment and Sustainability, University of Michigan",
-      "scholar_id": "7isF9EEAAAAJ"
-    },
-    {
-      "name": "Charlotte M Probst",
-      "affiliation": "PhD student, University of Michigan",
-      "scholar_id": "dRvjW1sAAAAJ"
     },
     {
       "name": "Brett W. Benz",
@@ -406,28 +406,14 @@
     "not_available": 0
   },
   "total_publications": 27,
-  "publications_fetched": 27,
+  "publications_fetched": 25,
   "publications": [
-    {
-      "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 1885,
-      "year": 2015,
-      "venue": "N/A",
-      "url": "https://www.nature.com/articles/nature15697"
-    },
     {
       "title": "Early evolution of modern birds structured by global forest collapse at the end-Cretaceous mass extinction",
       "citations": 187,
       "year": 2018,
       "venue": "N/A",
       "url": "https://www.cell.com/current-biology/fulltext/S0960-9822(18)30534-7"
-    },
-    {
-      "title": "Genomic signature of an avian Lilliput effect across the K-Pg extinction",
-      "citations": 131,
-      "year": 2018,
-      "venue": "N/A",
-      "url": "https://academic.oup.com/sysbio/article-abstract/67/1/1/3960267"
     },
     {
       "title": "An inverse latitudinal gradient in infection probability and phylogenetic diversity for Leucocytozoon blood parasites in New World birds",
@@ -459,7 +445,7 @@
     },
     {
       "title": "Genomic phylogeography of the White-crowned Manakin Pseudopipra pipra (Aves: Pipridae) illuminates a continental-scale radiation out of the Andes",
-      "citations": 43,
+      "citations": 44,
       "year": 2021,
       "venue": "N/A",
       "url": "https://www.sciencedirect.com/science/article/pii/S105579032100138X"
@@ -514,6 +500,13 @@
       "url": "https://mirror.truenetwork.ru/CRAN/web/views/Phylogenetics.html"
     },
     {
+      "title": "Skeletal trait measurements for thousands of bird species",
+      "citations": 3,
+      "year": 2025,
+      "venue": "N/A",
+      "url": "https://www.nature.com/articles/s41597-025-05234-y"
+    },
+    {
       "title": "The genomic landscape, causes, and consequences of extensive phylogenomic discordance in murine rodents",
       "citations": 3,
       "year": 2025,
@@ -526,13 +519,6 @@
       "year": 2025,
       "venue": "N/A",
       "url": "https://academic.oup.com/evolut/article-abstract/79/7/1334/8121435"
-    },
-    {
-      "title": "Skeletal trait measurements for thousands of bird species",
-      "citations": 2,
-      "year": 2025,
-      "venue": "N/A",
-      "url": "https://www.nature.com/articles/s41597-025-05234-y"
     },
     {
       "title": "Variable patterns of phenotypic evolution among canonical ‘living fossil’lineages",
@@ -598,6 +584,6 @@
       "url": "https://ui.adsabs.harvard.edu/abs/2016GSAA...4887815B/abstract"
     }
   ],
-  "generated_at": 1773539984,
+  "generated_at": 1774148322,
   "proxy_mode": "free"
 }
