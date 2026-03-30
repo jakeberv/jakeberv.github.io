@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-23T07:43:15.448154+00:00",
+  "generated_at_utc": "2026-03-30T08:06:23.372903+00:00",
   "input": {
     "source_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/exports/news_mentions_clean.json",
     "news_mentions_rows_input": 345,
@@ -14,12 +14,12 @@
   },
   "source": {
     "source": "tranco_api",
-    "list_id": "NN99W",
-    "download_url": "https://tranco-list.eu/download/NN99W/1000000",
-    "created_on": "2026-03-22T22:00:01.537944",
-    "retrieved_at_utc": "2026-03-23T07:40:53.727935+00:00",
+    "list_id": "8LQJV",
+    "download_url": "https://tranco-list.eu/download/8LQJV/1000000",
+    "created_on": "2026-03-29T22:00:01.800460",
+    "retrieved_at_utc": "2026-03-30T08:02:45.440723+00:00",
     "cache_hit": false,
-    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_NN99W.csv.zip",
+    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_8LQJV.csv.zip",
     "ranked_domains": 130
   },
   "coverage": {
