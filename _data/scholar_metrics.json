@@ -4,7 +4,7 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 13,
-  "citations": 2680,
+  "citations": 2683,
   "cites_per_year": {
     "2015": 13,
     "2016": 108,
@@ -17,7 +17,7 @@
     "2023": 261,
     "2024": 272,
     "2025": 266,
-    "2026": 66
+    "2026": 69
   },
   "interests": [
     "Speciation",
@@ -26,108 +26,7 @@
     "Population Genomics",
     "Phylogenetics"
   ],
-  "coauthors": [
-    {
-      "name": "Daniel J. Field",
-      "affiliation": "Professor of Vertebrate Palaeontology & Strickland Curator of Ornithology, University of Cambridge",
-      "scholar_id": "oxSZWaEAAAAJ"
-    },
-    {
-      "name": "Richard O. Prum",
-      "affiliation": "Yale University",
-      "scholar_id": "PrtHleIAAAAJ"
-    },
-    {
-      "name": "alex dornburg",
-      "affiliation": "University of North Carolina, Charlotte",
-      "scholar_id": "VgPd6sMAAAAJ"
-    },
-    {
-      "name": "Alan Lemmon",
-      "affiliation": "Associate Professor",
-      "scholar_id": "2xR_OmsAAAAJ"
-    },
-    {
-      "name": "Jeffrey Townsend",
-      "affiliation": "Elihu Professor of Biostatistics and Ecology & Evolutionary Biology",
-      "scholar_id": "J8J7NvkAAAAJ"
-    },
-    {
-      "name": "Emily Moriarty Lemmon",
-      "affiliation": "Florida State University",
-      "scholar_id": "wNmwYS4AAAAJ"
-    },
-    {
-      "name": "Camila C. Ribas",
-      "affiliation": "Instituto Nacional de Pesquisas da Amazônia & American Museum of Natural History",
-      "scholar_id": "-X2HGoYAAAAJ"
-    },
-    {
-      "name": "Kristof Zyskowski",
-      "affiliation": "Yale University, Peabody Museum of Natural History",
-      "scholar_id": "aEmILscAAAAJ"
-    },
-    {
-      "name": "Teresa J. Feo",
-      "affiliation": "Smithsonian National Museum of Natural History",
-      "scholar_id": "KC_7qOMAAAAJ"
-    },
-    {
-      "name": "Jacques A. Gauthier",
-      "affiliation": "Professor of Earth & Planetary Sciences, Yale University",
-      "scholar_id": "x6GEbUEAAAAJ"
-    },
-    {
-      "name": "Vivi Vajda",
-      "affiliation": "Professor, Dept of Palaeobiology, Swedish Museum of Natural History, Stockholm, Sweden",
-      "scholar_id": "LTMeTU4AAAAJ"
-    },
-    {
-      "name": "Tyler Lyson",
-      "affiliation": "Senior Curator of Vert. Paleo., Dept. of Earth Sciences, Denver Museum of Nature & Science",
-      "scholar_id": "vSG9jpgAAAAJ"
-    },
-    {
-      "name": "Antoine Bercovici",
-      "affiliation": "Denver Museum of Nature and Science",
-      "scholar_id": "WMU6uOgAAAAJ"
-    },
-    {
-      "name": "Regan E. Dunn",
-      "affiliation": "Natural History Museums of Los Angeles County, La Brea Tar Pits & Museum",
-      "scholar_id": "cAyGBSoAAAAJ"
-    },
-    {
-      "name": "Christopher J Clark",
-      "affiliation": "EEOB, UC Riverside",
-      "scholar_id": "9Bpr4-4AAAAJ"
-    },
-    {
-      "name": "Jonathan Hughes",
-      "affiliation": "Research Consultant, Arizona State University",
-      "scholar_id": "awBFtXsAAAAJ"
-    },
-    {
-      "name": "Benjamin M. Winger",
-      "affiliation": "Associate Professor of Ecology and Evolutionary Biology, University of Michigan",
-      "scholar_id": "C61BipSii0wC"
-    },
-    {
-      "name": "Irby Lovette",
-      "affiliation": "Fuller Professor of Ornithology, Cornell University",
-      "scholar_id": "Vi0LoiAAAAAJ"
-    },
-    {
-      "name": "Alan Fecchio",
-      "affiliation": "Universidade Estadual Paulista (UNESP Jaboticabal)",
-      "scholar_id": "FgGcYjEAAAAJ"
-    },
-    {
-      "name": "Holly L. Lutz",
-      "affiliation": "Denver Museum of Nature & Science",
-      "scholar_id": "ZymJFLoAAAAJ"
-    }
-  ],
+  "coauthors": [],
   "profile_picture": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=cQQaGZQAAAAJ&citpid=4",
   "homepage": "http://jakeberv.com/",
   "organization": 4770128543809686866,
@@ -272,6 +171,6 @@
       "url": "https://www.biorxiv.org/content/10.1101/2024.11.14.623638.abstract"
     }
   ],
-  "generated_at": 1775367537,
+  "generated_at": 1775959754,
   "proxy_mode": "free"
 }
