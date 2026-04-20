@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-13T08:27:37.782718+00:00",
+  "generated_at_utc": "2026-04-20T08:32:50.500294+00:00",
   "input": {
     "source_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/exports/news_mentions_clean.json",
     "news_mentions_rows_input": 345,
@@ -14,21 +14,21 @@
   },
   "source": {
     "source": "tranco_api",
-    "list_id": "9WXQ2",
-    "download_url": "https://tranco-list.eu/download/9WXQ2/1000000",
-    "created_on": "2026-04-12T22:00:01.585696",
-    "retrieved_at_utc": "2026-04-13T08:24:29.060893+00:00",
+    "list_id": "W4YJ9",
+    "download_url": "https://tranco-list.eu/download/W4YJ9/1000000",
+    "created_on": "2026-04-19T22:00:02.320715",
+    "retrieved_at_utc": "2026-04-20T08:29:50.319051+00:00",
     "cache_hit": false,
-    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_9WXQ2.csv.zip",
-    "ranked_domains": 130
+    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_W4YJ9.csv.zip",
+    "ranked_domains": 129
   },
   "coverage": {
-    "domains_matched": 136,
-    "domains_unmatched": 23,
-    "domain_match_rate": 0.8553,
-    "mentions_ranked": 273,
+    "domains_matched": 135,
+    "domains_unmatched": 24,
+    "domain_match_rate": 0.8491,
+    "mentions_ranked": 272,
     "mentions_total": 302,
-    "mention_coverage_rate": 0.904
+    "mention_coverage_rate": 0.9007
   },
   "time_adjusted": {
     "enabled": true,
@@ -93,6 +93,12 @@
       "mentions": 1,
       "top_outlet": "ChitChat Post Espana",
       "last_mention_date": "2024-08-14T01:05:52"
+    },
+    {
+      "domain": "cikavosti.com",
+      "mentions": 1,
+      "top_outlet": "CIKAVOSTI",
+      "last_mention_date": "2024-08-15T16:34:27"
     },
     {
       "domain": "dclm.es",
