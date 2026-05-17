@@ -4,20 +4,20 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 13,
-  "citations": 2713,
+  "citations": 2736,
   "cites_per_year": {
     "2015": 13,
-    "2016": 108,
-    "2017": 208,
-    "2018": 221,
+    "2016": 109,
+    "2017": 209,
+    "2018": 220,
     "2019": 281,
     "2020": 313,
     "2021": 308,
     "2022": 322,
     "2023": 263,
-    "2024": 273,
-    "2025": 268,
-    "2026": 90
+    "2024": 271,
+    "2025": 261,
+    "2026": 121
   },
   "interests": [
     "Speciation",
@@ -288,14 +288,14 @@
       "scholar_id": "QCVlwlsAAAAJ"
     },
     {
-      "name": "Jacob M. Musser",
-      "affiliation": "Yale University",
-      "scholar_id": "T90NSF0AAAAJ"
-    },
-    {
       "name": "Brian C. Weeks",
       "affiliation": "School for Environment and Sustainability, University of Michigan",
       "scholar_id": "7isF9EEAAAAJ"
+    },
+    {
+      "name": "Jacob M. Musser",
+      "affiliation": "Yale University",
+      "scholar_id": "T90NSF0AAAAJ"
     },
     {
       "name": "Charlotte M Probst",
@@ -306,21 +306,6 @@
       "name": "David Fouhey",
       "affiliation": "New York University",
       "scholar_id": "FLcpd34AAAAJ"
-    },
-    {
-      "name": "Eric R. Gulson-Castillo",
-      "affiliation": "Postdoctoral Associate, Yale University",
-      "scholar_id": "lWPHsioAAAAJ"
-    },
-    {
-      "name": "Teresa Pegan",
-      "affiliation": "University of Michigan",
-      "scholar_id": "7XYBoHEAAAAJ"
-    },
-    {
-      "name": "Abigail A. Kimmitt",
-      "affiliation": "Hofstra University",
-      "scholar_id": "j7OsXOwAAAAJ"
     },
     {
       "name": "Mia Levine",
@@ -336,6 +321,21 @@
       "name": "Jeffrey M. Good",
       "affiliation": "Professor, University of Montana",
       "scholar_id": "penpid8AAAAJ"
+    },
+    {
+      "name": "Eric R. Gulson-Castillo",
+      "affiliation": "Postdoctoral Associate, Yale University",
+      "scholar_id": "lWPHsioAAAAJ"
+    },
+    {
+      "name": "Teresa Pegan",
+      "affiliation": "University of Michigan",
+      "scholar_id": "7XYBoHEAAAAJ"
+    },
+    {
+      "name": "Abigail A. Kimmitt",
+      "affiliation": "Hofstra University",
+      "scholar_id": "j7OsXOwAAAAJ"
     },
     {
       "name": "William Gearty",
@@ -415,14 +415,14 @@
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 1917,
+      "citations": 1929,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
     },
     {
       "title": "Early evolution of modern birds structured by global forest collapse at the end-Cretaceous mass extinction",
-      "citations": 195,
+      "citations": 196,
       "year": 2018,
       "venue": "N/A",
       "url": "https://www.cell.com/current-biology/fulltext/S0960-9822(18)30534-7"
@@ -436,21 +436,21 @@
     },
     {
       "title": "An inverse latitudinal gradient in infection probability and phylogenetic diversity for Leucocytozoon blood parasites in New World birds",
-      "citations": 98,
+      "citations": 99,
       "year": 2020,
       "venue": "N/A",
       "url": "https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/1365-2656.13117"
     },
     {
       "title": "A comprehensive multilocus phylogeny of the Neotropical cotingas (Cotingidae, Aves) with a comparative evolutionary analysis of breeding system and plumage dimorphism and a revised phylogenetic classification",
-      "citations": 58,
+      "citations": 60,
       "year": 2014,
       "venue": "N/A",
       "url": "https://www.sciencedirect.com/science/article/pii/S1055790314003133"
     },
     {
       "title": "Complex coevolution of wing, tail, and vocal sounds of courting male bee hummingbirds",
-      "citations": 55,
+      "citations": 56,
       "year": 2018,
       "venue": "N/A",
       "url": "https://academic.oup.com/evolut/article-abstract/72/3/630/6726732"
@@ -464,28 +464,28 @@
     },
     {
       "title": "Genomic phylogeography of the White-crowned Manakin Pseudopipra pipra (Aves: Pipridae) illuminates a continental-scale radiation out of the Andes",
-      "citations": 43,
+      "citations": 44,
       "year": 2021,
       "venue": "N/A",
       "url": "https://www.sciencedirect.com/science/article/pii/S105579032100138X"
     },
     {
       "title": "Ecological selectivity and the evolution of mammalian substrate preference across the K–Pg boundary",
-      "citations": 37,
+      "citations": 38,
       "year": 2021,
       "venue": "N/A",
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ece3.8114"
     },
     {
       "title": "Recent divergence and lack of shared phylogeographic history characterize the diversification of neotropical savanna birds",
-      "citations": 30,
+      "citations": 31,
       "year": 2021,
       "venue": "N/A",
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/jbi.14065"
     },
     {
       "title": "Genome and life-history evolution link bird diversification to the end-Cretaceous mass extinction",
-      "citations": 24,
+      "citations": 25,
       "year": 2024,
       "venue": "N/A",
       "url": "https://www.science.org/doi/abs/10.1126/sciadv.adp0114"
@@ -495,7 +495,7 @@
       "citations": 23,
       "year": 2020,
       "venue": "N/A",
-      "url": "https://scholar.google.com/scholar?cluster=8836641454636511456&hl=en&oi=scholarr"
+      "url": "http://elearnshc.org:8080/jspui/handle/123456789/31440"
     },
     {
       "title": "Divergence in morphology, calls, song, mechanical sounds, and genetics supports species status for the Inaguan hummingbird (Trochilidae: Calliphlox “evelynae” lyrura)",
@@ -520,10 +520,17 @@
     },
     {
       "title": "Skeletal trait measurements for thousands of bird species",
-      "citations": 4,
+      "citations": 5,
       "year": 2025,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/s41597-025-05234-y"
+    },
+    {
+      "title": "The genomic landscape, causes, and consequences of extensive phylogenomic discordance in murine rodents",
+      "citations": 3,
+      "year": 2025,
+      "venue": "N/A",
+      "url": "https://academic.oup.com/gbe/article-pdf/doi/10.1093/gbe/evaf017/61752364/evaf017.pdf"
     },
     {
       "title": "Habitat-associated evolutionary rates in deep-sea invertebrates",
@@ -531,13 +538,6 @@
       "year": 2025,
       "venue": "N/A",
       "url": "https://academic.oup.com/evolut/article-abstract/79/7/1334/8121435"
-    },
-    {
-      "title": "The genomic landscape, causes, and consequences of extensive phylogenomic discordance in murine rodents",
-      "citations": 2,
-      "year": 2025,
-      "venue": "N/A",
-      "url": "https://academic.oup.com/gbe/article-pdf/doi/10.1093/gbe/evaf017/61752364/evaf017.pdf"
     },
     {
       "title": "Variable patterns of phenotypic evolution among canonical ‘living fossil’lineages",
@@ -572,7 +572,7 @@
       "citations": 0,
       "year": 2026,
       "venue": "N/A",
-      "url": "https://www.cambridge.org/core/journals/paleobiology/article/morphological-diversity-of-the-cetacean-mandibular-symphysis-coincides-with-novel-modes-of-aquatic-feeding/E26D07190859FF4B606098AACF19F246"
+      "url": "https://pubs.geoscienceworld.org/paleosoc/paleobiol/article-abstract/52/1/145/726623"
     },
     {
       "title": "bifrost: an R package for scalable inference of phylogenetic shifts in multivariate evolutionary dynamics",
@@ -610,6 +610,6 @@
       "url": "https://ui.adsabs.harvard.edu/abs/2016GSAA...4887815B/abstract"
     }
   ],
-  "generated_at": 1778380414,
+  "generated_at": 1778986216,
   "proxy_mode": "free"
 }
