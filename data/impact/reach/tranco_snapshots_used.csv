@@ -17,7 +17,7 @@ period_key,mentions,status,resolution,target_date,resolved_date,offset_days,prob
 2022-Q4,49,ok,exact_date,2022-11-15,2022-11-15,0,2022-11-15,N7PLW,2022-11-15T22:00:10.406732,https://tranco-list.eu/download/N7PLW/1000000,True,136
 2023-Q3,6,ok,exact_date,2023-08-15,2023-08-15,0,2023-08-15,5YZ7N,2023-08-15T22:00:02.544452,https://tranco-list.eu/download/5YZ7N/1000000,True,133
 2023-Q4,11,ok,exact_date,2023-11-15,2023-11-15,0,2023-11-15,Y52LG,2023-11-15T22:00:02.777920,https://tranco-list.eu/download/Y52LG/1000000,True,130
-2024-Q1,8,ok,exact_date,2024-02-15,2024-02-15,0,2024-02-15,Z32ZG,2024-02-15T22:00:02.011717,https://tranco-list.eu/download/Z32ZG/1000000,True,130
+2024-Q1,8,ok,nearest_date_window,2024-02-15,2024-02-16,1,2024-02-16,PNZ5J,2024-02-16T22:00:01.554985,https://tranco-list.eu/download/PNZ5J/1000000,True,130
 2024-Q2,1,ok,exact_date,2024-05-15,2024-05-15,0,2024-05-15,QGWX4,2024-05-15T22:00:02.070620,https://tranco-list.eu/download/QGWX4/1000000,True,128
 2024-Q3,41,ok,exact_date,2024-08-15,2024-08-15,0,2024-08-15,KJ3KW,2024-08-15T22:00:01.542928,https://tranco-list.eu/download/KJ3KW/1000000,True,130
 2025-Q2,6,ok,exact_date,2025-05-15,2025-05-15,0,2025-05-15,V9WWN,2025-05-15T22:00:03.254792,https://tranco-list.eu/download/V9WWN/1000000,True,134
