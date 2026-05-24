@@ -4,10 +4,10 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 13,
-  "citations": 2736,
+  "citations": 2741,
   "cites_per_year": {
     "2015": 13,
-    "2016": 109,
+    "2016": 110,
     "2017": 209,
     "2018": 220,
     "2019": 281,
@@ -16,8 +16,8 @@
     "2022": 322,
     "2023": 263,
     "2024": 271,
-    "2025": 261,
-    "2026": 121
+    "2025": 258,
+    "2026": 129
   },
   "interests": [
     "Speciation",
@@ -103,14 +103,14 @@
       "scholar_id": "9Bpr4-4AAAAJ"
     },
     {
-      "name": "Jonathan Hughes",
-      "affiliation": "Research Consultant, Arizona State University",
-      "scholar_id": "awBFtXsAAAAJ"
-    },
-    {
       "name": "Matt Friedman",
       "affiliation": "Museum of Paleontology, Department of Earth and Environmental Sciences, University of …",
       "scholar_id": "4d4zhI8AAAAJ"
+    },
+    {
+      "name": "Jonathan Hughes",
+      "affiliation": "Research Consultant, Arizona State University",
+      "scholar_id": "awBFtXsAAAAJ"
     },
     {
       "name": "Benjamin M. Winger",
@@ -383,6 +383,11 @@
       "scholar_id": "Ic3vLT4AAAAJ"
     },
     {
+      "name": "Scott Yanco",
+      "affiliation": "Smithsonian's National Zoo & Conservation Biology Institute, Migratory Bird Center",
+      "scholar_id": "NeeYWD0AAAAJ"
+    },
+    {
       "name": "John T Clarke",
       "affiliation": "iDiv, Leipzig & Ludwig Maximilian University of Munich & University of Tartu",
       "scholar_id": "nm06iU8AAAAJ"
@@ -396,11 +401,6 @@
       "name": "Nicholas D. Pyenson",
       "affiliation": "Curator, National Museum of Natural History, Smithsonian Institution",
       "scholar_id": "TPY3-ccAAAAJ"
-    },
-    {
-      "name": "Scott Yanco",
-      "affiliation": "Smithsonian's National Zoo & Conservation Biology Institute, Migratory Bird Center",
-      "scholar_id": "NeeYWD0AAAAJ"
     }
   ],
   "profile_picture": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=cQQaGZQAAAAJ&citpid=4",
@@ -411,18 +411,18 @@
     "not_available": 0
   },
   "total_publications": 28,
-  "publications_fetched": 28,
+  "publications_fetched": 18,
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 1929,
+      "citations": 1933,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
     },
     {
       "title": "Early evolution of modern birds structured by global forest collapse at the end-Cretaceous mass extinction",
-      "citations": 196,
+      "citations": 198,
       "year": 2018,
       "venue": "N/A",
       "url": "https://www.cell.com/current-biology/fulltext/S0960-9822(18)30534-7"
@@ -436,7 +436,7 @@
     },
     {
       "title": "An inverse latitudinal gradient in infection probability and phylogenetic diversity for Leucocytozoon blood parasites in New World birds",
-      "citations": 99,
+      "citations": 98,
       "year": 2020,
       "venue": "N/A",
       "url": "https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/1365-2656.13117"
@@ -471,7 +471,7 @@
     },
     {
       "title": "Ecological selectivity and the evolution of mammalian substrate preference across the K–Pg boundary",
-      "citations": 38,
+      "citations": 37,
       "year": 2021,
       "venue": "N/A",
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ece3.8114"
@@ -538,78 +538,8 @@
       "year": 2025,
       "venue": "N/A",
       "url": "https://academic.oup.com/evolut/article-abstract/79/7/1334/8121435"
-    },
-    {
-      "title": "Variable patterns of phenotypic evolution among canonical ‘living fossil’lineages",
-      "citations": 1,
-      "year": 2024,
-      "venue": "N/A",
-      "url": "https://www.biorxiv.org/content/10.1101/2024.11.14.623638.abstract"
-    },
-    {
-      "title": "The genomic landscape, causes, and consequences of extensive phylogenomic discordance in Old World mice and rats",
-      "citations": 1,
-      "year": 2023,
-      "venue": "N/A",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10491188/"
-    },
-    {
-      "title": "Pennaraptoran theropod dinosaurs: past progress and new frontiers.(Bulletin of the American Museum of Natural History, no. 440)",
-      "citations": 1,
-      "year": 2020,
-      "venue": "N/A",
-      "url": "https://digitallibrary.amnh.org/items/2a4a03b6-dd75-4d96-bdb3-6d214b993353"
-    },
-    {
-      "title": "Exploring the data demands and global opportunities for reconstructing morphological responses to climate change",
-      "citations": 0,
-      "year": 2026,
-      "venue": "N/A",
-      "url": "https://link.springer.com/article/10.1007/s10682-025-10368-x"
-    },
-    {
-      "title": "Morphological diversity of the cetacean mandibular symphysis coincides with novel modes of aquatic feeding",
-      "citations": 0,
-      "year": 2026,
-      "venue": "N/A",
-      "url": "https://pubs.geoscienceworld.org/paleosoc/paleobiol/article-abstract/52/1/145/726623"
-    },
-    {
-      "title": "bifrost: an R package for scalable inference of phylogenetic shifts in multivariate evolutionary dynamics",
-      "citations": 0,
-      "year": 2026,
-      "venue": "N/A",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.04.12.718036.abstract"
-    },
-    {
-      "title": "Acknowledgment to Reviewers of Birds in 2021",
-      "citations": 0,
-      "year": 2022,
-      "venue": "N/A",
-      "url": "https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=26736004&asa=N&AN=155981554&h=6ShoPHa1VNW3eJA5GgTybJaBTlAf67eP1XlLt9BpgsMd3u%2BBlqn61nXbJK%2FplO%2FEaocOXnmiohLr%2Fujoy6JjRA%3D%3D&crl=c"
-    },
-    {
-      "title": "Peer Review Report For: The deep(er) roots of Eukaryotes and Akaryotes [version 1; peer review: 1 approved, 1 approved with reservations, 1 not approved]",
-      "citations": 0,
-      "year": 2020,
-      "venue": "N/A",
-      "url": "N/A"
-    },
-    {
-      "title": "Tempo and Mode: Using Genomic, Anatomical, and Life-History Data to Integrate the Micro-and Macroevolution of Birds",
-      "citations": 0,
-      "year": 2019,
-      "venue": "N/A",
-      "url": "https://search.proquest.com/openview/0944ba11c7dc9bdbfd11748cb2de4cfa/1?pq-origsite=gscholar&cbl=18750&diss=y"
-    },
-    {
-      "title": "Genomic Signature of the Lilliput Effect across the K/pg Extinction",
-      "citations": 0,
-      "year": 2016,
-      "venue": "N/A",
-      "url": "https://ui.adsabs.harvard.edu/abs/2016GSAA...4887815B/abstract"
     }
   ],
-  "generated_at": 1778986216,
+  "generated_at": 1779591241,
   "proxy_mode": "free"
 }
