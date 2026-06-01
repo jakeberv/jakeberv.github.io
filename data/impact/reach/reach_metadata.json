@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-25T10:54:18.652036+00:00",
+  "generated_at_utc": "2026-06-01T12:13:48.339124+00:00",
   "input": {
     "source_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/exports/news_mentions_clean.json",
     "news_mentions_rows_input": 345,
@@ -14,21 +14,21 @@
   },
   "source": {
     "source": "tranco_api",
-    "list_id": "7ZJGX",
-    "download_url": "https://tranco-list.eu/download/7ZJGX/1000000",
-    "created_on": "2026-05-24T22:00:02.068998",
-    "retrieved_at_utc": "2026-05-25T10:51:14.157640+00:00",
+    "list_id": "5JZVN",
+    "download_url": "https://tranco-list.eu/download/5JZVN/1000000",
+    "created_on": "2026-05-31T22:00:02.594790",
+    "retrieved_at_utc": "2026-06-01T12:10:35.005835+00:00",
     "cache_hit": false,
-    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_7ZJGX.csv.zip",
-    "ranked_domains": 131
+    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_5JZVN.csv.zip",
+    "ranked_domains": 130
   },
   "coverage": {
-    "domains_matched": 137,
-    "domains_unmatched": 22,
-    "domain_match_rate": 0.8616,
-    "mentions_ranked": 274,
+    "domains_matched": 136,
+    "domains_unmatched": 23,
+    "domain_match_rate": 0.8553,
+    "mentions_ranked": 273,
     "mentions_total": 302,
-    "mention_coverage_rate": 0.9073
+    "mention_coverage_rate": 0.904
   },
   "time_adjusted": {
     "enabled": true,
@@ -81,6 +81,12 @@
       "mentions": 1,
       "top_outlet": "Bilbao24horas",
       "last_mention_date": "2022-12-04T08:03:51"
+    },
+    {
+      "domain": "cambiopolitico.com",
+      "mentions": 1,
+      "top_outlet": "Cambio Político",
+      "last_mention_date": "2022-12-01T22:11:33"
     },
     {
       "domain": "chitchatpost.com",
