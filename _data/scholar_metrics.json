@@ -9,15 +9,15 @@
     "2015": 13,
     "2016": 110,
     "2017": 209,
-    "2018": 220,
+    "2018": 219,
     "2019": 281,
-    "2020": 313,
+    "2020": 311,
     "2021": 308,
     "2022": 322,
-    "2023": 262,
+    "2023": 261,
     "2024": 271,
-    "2025": 260,
-    "2026": 134
+    "2025": 257,
+    "2026": 140
   },
   "interests": [
     "Speciation",
@@ -263,6 +263,11 @@
       "scholar_id": "To56C4YAAAAJ"
     },
     {
+      "name": "Brian C. Weeks",
+      "affiliation": "School for Environment and Sustainability, University of Michigan",
+      "scholar_id": "7isF9EEAAAAJ"
+    },
+    {
       "name": "Alexandre Aleixo",
       "affiliation": "Instituto Tecnológico Vale",
       "scholar_id": "XpyI2wYAAAAJ"
@@ -286,11 +291,6 @@
       "name": "Valentina Gómez-Bahamón",
       "affiliation": "Virginia Tech",
       "scholar_id": "QCVlwlsAAAAJ"
-    },
-    {
-      "name": "Brian C. Weeks",
-      "affiliation": "School for Environment and Sustainability, University of Michigan",
-      "scholar_id": "7isF9EEAAAAJ"
     },
     {
       "name": "Jacob M. Musser",
@@ -415,7 +415,7 @@
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 1935,
+      "citations": 1936,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
@@ -478,7 +478,7 @@
     },
     {
       "title": "Recent divergence and lack of shared phylogeographic history characterize the diversification of neotropical savanna birds",
-      "citations": 31,
+      "citations": 30,
       "year": 2021,
       "venue": "N/A",
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/jbi.14065"
@@ -577,9 +577,9 @@
     {
       "title": "Morphological diversity of the cetacean mandibular symphysis coincides with novel modes of aquatic feeding",
       "citations": 0,
-      "year": 2025,
+      "year": 2026,
       "venue": "N/A",
-      "url": "https://www.cambridge.org/core/journals/paleobiology/article/morphological-diversity-of-the-cetacean-mandibular-symphysis-coincides-with-novel-modes-of-aquatic-feeding/E26D07190859FF4B606098AACF19F246"
+      "url": "https://pubs.geoscienceworld.org/paleosoc/paleobiol/article-abstract/52/1/145/726623"
     },
     {
       "title": "Acknowledgment to Reviewers of Birds in 2021",
@@ -610,6 +610,6 @@
       "url": "https://ui.adsabs.harvard.edu/abs/2016GSAA...4887815B/abstract"
     }
   ],
-  "generated_at": 1780801112,
+  "generated_at": 1781406327,
   "proxy_mode": "free"
 }
