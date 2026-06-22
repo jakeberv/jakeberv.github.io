@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-15T12:47:10.723274+00:00",
+  "generated_at_utc": "2026-06-22T12:30:15.536028+00:00",
   "input": {
     "source_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/exports/news_mentions_clean.json",
     "news_mentions_rows_input": 345,
@@ -14,12 +14,12 @@
   },
   "source": {
     "source": "tranco_api",
-    "list_id": "W32W9",
-    "download_url": "https://tranco-list.eu/download/W32W9/1000000",
-    "created_on": "2026-06-14T22:00:01.697989",
-    "retrieved_at_utc": "2026-06-15T12:44:18.393254+00:00",
+    "list_id": "8PL9V",
+    "download_url": "https://tranco-list.eu/download/8PL9V/1000000",
+    "created_on": "2026-06-21T22:00:01.521652",
+    "retrieved_at_utc": "2026-06-22T12:27:11.825011+00:00",
     "cache_hit": false,
-    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_W32W9.csv.zip",
+    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_8PL9V.csv.zip",
     "ranked_domains": 130
   },
   "coverage": {
@@ -46,7 +46,7 @@
     "earliest_snapshot_date": "2019-02-18",
     "latest_snapshot_date": "2025-05-15",
     "unresolved_period_keys": [],
-    "date_api_lookups_attempted": 168,
+    "date_api_lookups_attempted": 167,
     "date_api_lookup_cap": 250,
     "date_api_lookup_cap_hit": false,
     "date_api_delay_ms": 250
