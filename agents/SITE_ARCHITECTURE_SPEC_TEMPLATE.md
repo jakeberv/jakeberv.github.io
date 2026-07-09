@@ -12,8 +12,8 @@ Use this template to document the current architecture of this Jekyll site befor
 ## 2) Runtime and build stack
 - Static site generator: `Jekyll`
 - Theme/base: `academicpages` (Minimal Mistakes derived)
-- Ruby requirements:
-- Node requirements (if JS assets are rebuilt):
+- Ruby requirements: Ruby `3.3.4` with Bundler `2.5.18` preferred
+- Node requirements: Node.js `20` for preview validation and JS tooling
 - Local run command:
 - Production deployment target:
 
@@ -36,7 +36,9 @@ Optional:
 - Always run full data + full build path: `./scripts/local_preview_fullbuild.command`
 
 Notes:
-- `scripts/local_preview.command` prefers Homebrew Ruby 3.3 at `/opt/homebrew/opt/ruby@3.3/bin/bundle`.
+- `scripts/local_preview.command` reads the preferred Bundler version from `Gemfile.lock` and tries Homebrew Ruby 3.3 before a PATH-provided Bundler.
+- If the pinned Bundler executable is unavailable or broken, the launcher may use that candidate's default Bundler only when `bundle check` succeeds; it prints a warning and never installs or repairs global gems.
+- Stale-data timestamp checks support both BSD/macOS and GNU/Linux `stat` syntax.
 - `_config.dev.yml` sets `github: false` for local runs to avoid GitHub metadata API hangs.
 - `--safe` mirrors GitHub Pages-safe behavior and is preferred for local preview checks.
 - Local output is written to `_site/` (build artifact folder).
