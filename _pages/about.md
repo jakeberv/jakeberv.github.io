@@ -39,6 +39,31 @@ header:
   </figure>
 </div>
 
+<section class="unc-lab-announcement" aria-labelledby="unc-lab-announcement-title">
+  <div class="unc-lab-announcement__copy">
+    <p class="unc-lab-announcement__eyebrow">New lab &middot; January 2027</p>
+    <h2 id="unc-lab-announcement-title" class="unc-lab-announcement__title">Berv Lab launching at UNC Charlotte</h2>
+    <p class="unc-lab-announcement__text">Jake Berv will start a new Biodiversity Informatics lab in the Department of Bioinformatics and Genomics at UNC Charlotte in January 2027.</p>
+    <p class="unc-lab-announcement__recruiting">Prospective students, postdocs, and collaborators are welcome to get in touch.</p>
+  </div>
+  <svg class="unc-lab-announcement__art" viewBox="0 0 300 220" aria-hidden="true" focusable="false">
+    <path class="unc-lab-announcement__arc" d="M24 168 C86 118 164 91 274 88" />
+    <g class="unc-lab-announcement__network">
+      <path d="M54 142 L116 92 L188 120 L252 42" />
+      <path d="M116 92 L98 28" />
+      <path d="M188 120 L212 184" />
+      <path d="M252 42 L276 12" />
+      <circle cx="54" cy="142" r="8" />
+      <circle cx="116" cy="92" r="13" />
+      <circle cx="188" cy="120" r="11" />
+      <circle cx="252" cy="42" r="10" />
+      <circle cx="98" cy="28" r="8" />
+      <circle cx="212" cy="184" r="8" />
+      <circle cx="276" cy="12" r="6" />
+    </g>
+  </svg>
+</section>
+
 <link rel="stylesheet" href="{{ '/assets/css/news-filters.css' | relative_url }}">
 
 {% assign news_items = site.news
