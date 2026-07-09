@@ -29,6 +29,15 @@ No special branching workflow is required unless explicitly chosen for a task.
 
 ## Local Development (Optional)
 
+Runtime contract:
+
+- Ruby `3.3.4`, matching the published GitHub Pages runtime (`.ruby-version`)
+- Bundler `2.5.18`, matching `Gemfile.lock`
+- Node.js `20`, matching the deployment workflow (`.node-version`)
+- Python 3 when serving locally or regenerating data
+
+The preview launcher prefers Homebrew Ruby 3.3 with Bundler `2.5.18`, then a PATH-provided Bundler at that version. If the pinned executable is unavailable or broken, it may use the same candidate's default Bundler only after `bundle check` confirms that the locked dependencies are satisfied; the launcher prints a warning when it does so and never installs or repairs global gems.
+
 If you want to run the site locally:
 
 1. Run local preview (build + serve):

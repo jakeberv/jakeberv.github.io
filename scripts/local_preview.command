@@ -71,16 +71,90 @@ if [[ "$SAW_SKIP_DATA" -eq 1 && "$SAW_WITH_DATA" -eq 1 ]]; then
   exit 2
 fi
 
-RUBY33_BUNDLE="/opt/homebrew/opt/ruby@3.3/bin/bundle"
-if [[ -x "$RUBY33_BUNDLE" ]]; then
-  BUNDLE_CMD=("$RUBY33_BUNDLE" "_2.5.18_")
-elif command -v bundle >/dev/null 2>&1; then
-  BUNDLE_CMD=("bundle" "_2.5.18_")
-else
-  echo "Bundler was not found."
-  echo "Install Homebrew Ruby 3.3 and Bundler 2.5.18, then retry."
+cd "$ROOT_DIR"
+
+BUNDLER_VERSION="$(
+  awk '
+    found { print $1; exit }
+    /^BUNDLED WITH$/ { found = 1 }
+  ' Gemfile.lock
+)"
+
+if [[ -z "$BUNDLER_VERSION" ]]; then
+  echo "Could not determine the required Bundler version from Gemfile.lock."
   exit 1
 fi
+
+select_bundle() {
+  local bundle_bin="$1"
+  local fallback_version
+  local interpreter
+  local ruby_bin
+  local shebang
+
+  if "$bundle_bin" "_${BUNDLER_VERSION}_" --version >/dev/null 2>&1; then
+    BUNDLE_CMD=("$bundle_bin" "_${BUNDLER_VERSION}_")
+    return 0
+  fi
+
+  ruby_bin="$(dirname "$bundle_bin")/ruby"
+  if [[ ! -x "$ruby_bin" ]]; then
+    shebang="$(head -n 1 "$bundle_bin" 2>/dev/null || true)"
+    interpreter="${shebang#\#!}"
+    if [[ "$interpreter" == "/usr/bin/env ruby"* ]]; then
+      ruby_bin="$(command -v ruby 2>/dev/null || true)"
+    else
+      interpreter="${interpreter%% *}"
+      if [[ "$(basename "$interpreter")" == ruby* && -x "$interpreter" ]]; then
+        ruby_bin="$interpreter"
+      else
+        ruby_bin=""
+      fi
+    fi
+  fi
+  fallback_version=""
+  if [[ -x "$ruby_bin" ]]; then
+    fallback_version="$("$ruby_bin" -rbundler -e 'print Bundler::VERSION' 2>/dev/null || true)"
+  fi
+
+  if [[ -n "$fallback_version" ]] && \
+     "$bundle_bin" "_${fallback_version}_" --version >/dev/null 2>&1 && \
+     "$bundle_bin" "_${fallback_version}_" check >/dev/null 2>&1; then
+    echo "Warning: Bundler $BUNDLER_VERSION is unavailable via $bundle_bin; using compatible Bundler $fallback_version after bundle check succeeded."
+    BUNDLE_CMD=("$bundle_bin" "_${fallback_version}_")
+    return 0
+  fi
+
+  return 1
+}
+
+RUBY33_BUNDLE=""
+if command -v brew >/dev/null 2>&1; then
+  RUBY33_PREFIX="$(brew --prefix ruby@3.3 2>/dev/null || true)"
+  if [[ -n "$RUBY33_PREFIX" ]]; then
+    RUBY33_BUNDLE="$RUBY33_PREFIX/bin/bundle"
+  fi
+fi
+PATH_BUNDLE="$(command -v bundle 2>/dev/null || true)"
+
+if [[ -x "$RUBY33_BUNDLE" ]] && select_bundle "$RUBY33_BUNDLE"; then
+  :
+elif [[ -n "$PATH_BUNDLE" && "$PATH_BUNDLE" != "$RUBY33_BUNDLE" ]] && select_bundle "$PATH_BUNDLE"; then
+  :
+else
+  echo "Bundler $BUNDLER_VERSION was not usable with Homebrew Ruby 3.3 or from PATH."
+  echo "Install Homebrew Ruby 3.3 and run:"
+  echo "  \"\$(brew --prefix ruby@3.3)\"/bin/gem install bundler -v $BUNDLER_VERSION"
+  exit 1
+fi
+
+file_mtime() {
+  if [[ "$(uname -s)" == "Darwin" ]]; then
+    stat -f "%m" "$1" 2>/dev/null || echo 0
+  else
+    stat -c "%Y" "$1" 2>/dev/null || echo 0
+  fi
+}
 
 if [[ "$MODE" == "serve" || "$SKIP_DATA" -eq 0 ]] && ! command -v python3 >/dev/null 2>&1; then
   echo "python3 is required to serve _site locally."
@@ -92,8 +166,6 @@ if ! command -v node >/dev/null 2>&1; then
   exit 1
 fi
 
-cd "$ROOT_DIR"
-
 echo "Validating publications interdisciplinarity braid stats ..."
 node scripts/qa/validate-publications-interdisciplinarity-stats.mjs
 
@@ -103,7 +175,7 @@ if [[ "$SKIP_DATA" -eq 1 ]]; then
   for source_dir in "$ROOT_DIR/_news" "$ROOT_DIR/data/altmetric/raw"; do
     if [[ -d "$source_dir" ]]; then
       while IFS= read -r source_file; do
-        source_mtime=$(stat -f "%m" "$source_file" 2>/dev/null || echo 0)
+        source_mtime="$(file_mtime "$source_file")"
         if (( source_mtime > newest_input_mtime )); then
           newest_input_mtime=$source_mtime
         fi
@@ -120,7 +192,7 @@ if [[ "$SKIP_DATA" -eq 1 ]]; then
       stale_outputs+=("${generated_file#$ROOT_DIR/} (missing)")
       continue
     fi
-    generated_mtime=$(stat -f "%m" "$generated_file" 2>/dev/null || echo 0)
+    generated_mtime="$(file_mtime "$generated_file")"
     if (( newest_input_mtime > 0 && generated_mtime < newest_input_mtime )); then
       stale_outputs+=("${generated_file#$ROOT_DIR/}")
     fi
