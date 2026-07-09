@@ -2292,7 +2292,6 @@
   --unc-green: #005035;
   --unc-green-dark: #061d16;
   --unc-gold: #a49665;
-  --unc-cream: #eeece2;
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(10rem, 14.5rem);
@@ -2430,7 +2429,7 @@
     padding: 0.86rem 0.92rem 0.92rem 1.05rem;
   }
 
-  .unc-lab-announcement__title {
+  .unc-lab-announcement .unc-lab-announcement__title {
     font-size: 1.06rem;
   }
 
