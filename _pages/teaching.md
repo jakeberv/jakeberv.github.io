@@ -128,6 +128,7 @@ title: "Teaching"
   </p>
 </section>
 
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   var canvas = document.getElementById("teaching-aggregated-rankings");
