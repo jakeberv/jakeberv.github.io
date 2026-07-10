@@ -1,0 +1,29 @@
+/* Dirt dark palette, adopted from AcademicPages v0.9. */
+$dirt-dark-theme: (
+  base: #c5a77f,
+  background: #231e18,
+  footer: #302b25,
+  border: #48413a,
+  border-strong: #6f6558,
+  code-background: #181410,
+  code-text: #f0dfd1,
+  caption: #cabcb1,
+  link: #e0d2c6,
+  link-hover: #fff2e7,
+  link-visited: #c3b5aa,
+  masthead-link: #e4d4c8,
+  masthead-link-hover: #e0d2c6,
+  text: #e4d4c8,
+  text-light: #cabcb1,
+  thead: #48413a,
+  selection-background: #66533d,
+  selection-text: #fff,
+  danger: #ee8a84,
+  warning: #efc664,
+  success: #c2cf78,
+  info: #a9c5ef
+);
+
+html[data-theme="dark"] {
+  @include emit-theme-properties($dirt-dark-theme, dark);
+}

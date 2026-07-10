@@ -1,19 +1,26 @@
 .impact-dashboard {
-  --idb-bg: #f3f6fb;
-  --idb-panel: #ffffff;
-  --idb-ink: #122436;
-  --idb-muted: #60758f;
-  --idb-line: #d8e2ef;
-  --idb-soft: #eff5ff;
-  --idb-blue: #2b77b5;
-  --idb-red: #ce5047;
-  --idb-amber: #dd9933;
+  --idb-bg: var(--site-surface-muted);
+  --idb-panel: var(--site-surface-raised);
+  --idb-ink: var(--site-text-strong);
+  --idb-muted: var(--site-text-muted);
+  --idb-line: var(--site-border-subtle);
+  --idb-soft: var(--site-surface-accent);
+  --idb-blue: var(--global-link-color);
+  --idb-red: var(--site-danger-color);
+  --idb-amber: var(--site-warning-color);
   --idb-row-card-height: 585px;
 
   margin: 1rem 0 1.4rem;
   width: 100%;
   max-width: 100%;
   color: var(--idb-ink);
+}
+
+.impact-dashboard__error {
+  margin: 0;
+  padding: 1rem;
+  color: var(--site-danger-color);
+  background: var(--site-surface-muted);
 }
 
 @media (min-width: 768px) {
@@ -91,7 +98,7 @@
 
 .impact-dashboard .idb-filters summary {
   cursor: pointer;
-  color: #274766;
+  color: var(--site-text-strong);
   font-size: 0.92rem;
   font-weight: 600;
 }
@@ -127,15 +134,15 @@
 }
 
 .impact-dashboard .idb-advanced {
-  border: 1px solid #d6e1ef;
+  border: 1px solid var(--site-border-subtle);
   border-radius: 10px;
-  background: #fbfdff;
+  background: var(--site-surface-raised);
   padding: 0.28rem 0.45rem;
 }
 
 .impact-dashboard .idb-advanced summary {
   cursor: pointer;
-  color: #274766;
+  color: var(--site-text-strong);
   font-size: 0.85rem;
   font-weight: 600;
 }
@@ -156,12 +163,12 @@
 .impact-dashboard input[type="range"],
 .impact-dashboard input[type="text"] {
   width: 100%;
-  border: 1px solid #c7d5e7;
+  border: 1px solid var(--site-border-subtle);
   border-radius: 8px;
   padding: 0.34rem 0.5rem;
   font-size: 0.88rem;
   color: var(--idb-ink);
-  background: #fff;
+  background: var(--site-control-bg);
 }
 
 .impact-dashboard .idb-chips {
@@ -171,12 +178,12 @@
 }
 
 .impact-dashboard .idb-chip {
-  border: 1px solid #c9d9ec;
+  border: 1px solid var(--site-border-subtle);
   border-radius: 999px;
   background: var(--idb-soft);
   padding: 0.24rem 0.6rem;
   font-size: 0.82rem;
-  color: #274766;
+  color: var(--site-text-strong);
 }
 
 .impact-dashboard .idb-kpis {
@@ -186,9 +193,9 @@
 }
 
 .impact-dashboard .idb-kpi {
-  border: 1px solid #d6e1ef;
+  border: 1px solid var(--site-border-subtle);
   border-radius: 12px;
-  background: #fbfdff;
+  background: var(--site-surface-raised);
   padding: 0.48rem 0.56rem;
   display: flex;
   flex-direction: column;
@@ -372,7 +379,7 @@
 .impact-dashboard .idb-donut-trends {
   margin-top: 0.92rem;
   padding-top: 1.36rem;
-  border-top: 1px solid #e4ebf6;
+  border-top: 1px solid var(--site-border-subtle);
   min-height: 0;
   display: grid;
   grid-template-rows: repeat(4, minmax(0, 1fr));
@@ -401,7 +408,7 @@
 }
 
 .impact-dashboard .idb-donut-trend-track {
-  stroke: #e1e8f3;
+  stroke: var(--viz-grid);
   stroke-width: 1;
   fill: none;
 }
@@ -427,11 +434,11 @@
 }
 
 .impact-dashboard .idb-donut-trend-delta.up {
-  color: #23613d;
+  color: var(--site-success-color);
 }
 
 .impact-dashboard .idb-donut-trend-delta.down {
-  color: #9b3734;
+  color: var(--site-danger-color);
 }
 
 .impact-dashboard .idb-donut-trend-delta.flat {
@@ -457,10 +464,10 @@
 }
 
 .impact-dashboard .idb-tab {
-  border: 1px solid #b8cbe2;
+  border: 1px solid var(--site-border-subtle);
   border-radius: 999px;
-  background: #fff;
-  color: #224b70;
+  background: var(--site-control-bg);
+  color: var(--site-text-strong);
   padding: 0.25rem 0.67rem;
   font-size: 0.84rem;
   cursor: pointer;
@@ -468,9 +475,9 @@
 
 .impact-dashboard .idb-tab[aria-selected="true"],
 .impact-dashboard .idb-tab.active {
-  background: #eaf2ff;
-  border-color: #6c91c0;
-  color: #153f6f;
+  background: var(--site-surface-accent);
+  border-color: var(--site-focus-ring);
+  color: var(--site-text-strong);
   font-weight: 600;
 }
 
@@ -501,7 +508,7 @@
 }
 
 .impact-dashboard .idb-row {
-  border-bottom: 1px solid #ebf0f8;
+  border-bottom: 1px solid var(--site-border-subtle);
   padding: 0.24rem 0.08rem;
   display: grid;
   grid-template-columns: 1fr auto;
@@ -555,7 +562,7 @@
 }
 
 .impact-dashboard .idb-export-links a {
-  color: #1c53b4;
+  color: var(--site-text-strong);
   text-decoration: none;
 }
 
@@ -577,7 +584,7 @@
 
 .impact-dashboard th,
 .impact-dashboard td {
-  border-bottom: 1px solid #e9eef7;
+  border-bottom: 1px solid var(--site-border-subtle);
   text-align: left;
   padding: 0.32rem 0.42rem;
   vertical-align: top;
@@ -586,7 +593,7 @@
 .impact-dashboard thead th {
   position: sticky;
   top: 0;
-  background: #f3f7fd;
+  background: var(--site-surface-raised);
 }
 
 .impact-dashboard .idb-diag-grid {

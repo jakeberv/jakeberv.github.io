@@ -1,0 +1,36 @@
+/* High-contrast light palette, adopted from AcademicPages v0.9. */
+$active-light-theme: (
+  base: #b60000,
+  background: #fff,
+  footer: #fff,
+  border: #c0c0c0,
+  border-strong: #707070,
+  code-background: #fafafa,
+  code-text: #000,
+  caption: #404040,
+  link: #0000ee,
+  link-contrast: #fff,
+  link-hover: #0000a8,
+  link-visited: #7a1f7a,
+  masthead-link: #000,
+  masthead-link-hover: #b60000,
+  text: #000,
+  text-light: #404040,
+  thead: #d8d8d8,
+  selection-background: #b3d4fc,
+  selection-text: #000,
+  danger: #c40000,
+  warning: #985000,
+  success: #006b00,
+  info: #0000c8
+);
+
+:root {
+  @include emit-theme-properties($active-light-theme);
+}
+
+.page__content .notice,
+.page__content [class^="notice--"] {
+  color: var(--global-text-color);
+  border-color: var(--global-text-color);
+}

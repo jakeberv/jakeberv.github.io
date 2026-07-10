@@ -11,7 +11,7 @@
   display: inline-block;
   margin-bottom: 0.25em;
   padding: 0.5em 1em;
-  color: #fff !important;
+  color: var(--site-base-contrast) !important;
   font-family: $sans-serif;
   font-size: $type-size-6;
   font-weight: bold;
@@ -23,7 +23,7 @@
   cursor: pointer;
 
   &:hover {
-    background-color: mix(white, #000, 20%);
+    box-shadow: inset 0 0 0 2px var(--site-base-contrast);
   }
 
   .icon {
@@ -48,13 +48,14 @@
   /* for dark backgrounds */
 
   &--inverse {
-    color: var(--global-base-color) !important;
+    color: var(--global-link-color) !important;
     border: 1px solid var(--global-dark-border-color) !important; /* override*/
-    background-color: #fff;
+    background-color: var(--site-surface-raised);
 
     &:hover {
-      color: #fff !important;
+      color: var(--site-base-contrast) !important;
       border-color: var(--global-base-color);
+      background-color: var(--global-base-color);
     }
   }
 
@@ -68,40 +69,44 @@
   /* information */
 
   &--info {
-    background-color: $info-color;
+    color: var(--site-info-contrast) !important;
+    background-color: var(--site-info-color);
 
     &:hover {
-      background-color: mix(#000, $info-color, 20%);
+      background-color: var(--site-info-color);
     }
   }
 
   /* warning */
 
   &--warning {
-    background-color: $warning-color;
+    color: var(--site-warning-contrast) !important;
+    background-color: var(--site-warning-color);
 
     &:hover {
-      background-color: mix(#000, $warning-color, 20%);
+      background-color: var(--site-warning-color);
     }
   }
 
   /* success */
 
   &--success {
-    background-color: $success-color;
+    color: var(--site-success-contrast) !important;
+    background-color: var(--site-success-color);
 
     &:hover {
-      background-color: mix(#000, $success-color, 20%);
+      background-color: var(--site-success-color);
     }
   }
 
   /* danger */
 
   &--danger {
-    background-color: $danger-color;
+    color: var(--site-danger-contrast) !important;
+    background-color: var(--site-danger-color);
 
     &:hover {
-      background-color: mix(#000, $danger-color, 20%);
+      background-color: var(--site-danger-color);
     }
   }
 
@@ -170,7 +175,7 @@
     cursor: pointer;
 
     &:hover {
-      color: #fff;
+      color: var(--site-link-contrast);
       background-color: var(--global-link-color) !important;
     }
   }

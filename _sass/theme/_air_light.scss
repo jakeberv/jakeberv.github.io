@@ -1,0 +1,29 @@
+/* Air light palette, adopted from AcademicPages v0.9. */
+$active-light-theme: (
+  base: #007fae,
+  background: #eeeeee,
+  footer: #007fae,
+  border: #cad4da,
+  border-strong: #8797a0,
+  code-background: #fafafa,
+  code-text: #222831,
+  caption: #4f5a63,
+  link: #393e46,
+  link-hover: #22262b,
+  link-visited: #555d68,
+  masthead-link: #222831,
+  masthead-link-hover: #006c95,
+  text: #222831,
+  text-light: #58636c,
+  thead: #e1e5e7,
+  selection-background: #b8dfea,
+  selection-text: #222831,
+  danger: #cc4743,
+  warning: #a75c00,
+  success: #277f35,
+  info: #006f88
+);
+
+:root {
+  @include emit-theme-properties($active-light-theme);
+}

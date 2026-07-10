@@ -4,11 +4,13 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
+        <button class="greedy-nav__toggle hidden" type="button" aria-label="Show navigation menu" aria-expanded="false">
+          <span class="navicon"></span>
+        </button>
 
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist">
-            <a href="{{ base_path }}/">
+          <li class="masthead__menu-item masthead__menu-item--lg persist{% if page.url == '/' or page.url == '/index.html' %} selected{% endif %}">
+            <a href="{{ base_path }}/"{% if page.url == '/' or page.url == '/index.html' %} aria-current="page"{% endif %}>
               <img src="{{ base_path }}/images/research/Darwin's_I_think_small.png" alt="Home">
             </a>
           </li>
@@ -19,10 +21,16 @@
             {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item">
-              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+            <li class="masthead__menu-item{% if page.url contains link.url and link.url != '/' %} selected{% endif %}">
+              <a href="{{ domain }}{{ link.url }}"{% if page.url contains link.url and link.url != '/' %} aria-current="page"{% endif %}>{{ link.title }}</a>
             </li>
           {% endfor %}
+
+          <li class="masthead__menu-item persist tail">
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" title="Switch to dark theme">
+              <i id="theme-icon" class="fas fa-sun" aria-hidden="true"></i>
+            </button>
+          </li>
         </ul>
 
         <ul class="hidden-links hidden"></ul>

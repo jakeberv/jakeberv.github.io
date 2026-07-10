@@ -114,15 +114,17 @@ Notes:
   - Manual scripts:
 
 ## 7) Styling and UX notes
-- Theme baseline: AcademicPages v0.9 Sass topology with the `default` light theme and 16 core `--global-*` color properties
-- Theme selection: `_config.yml` supports only `site_theme: "default"` until dark-mode activation is implemented
-- Import behavior: `assets/css/main.scss` loads shared settings, the selected light theme, helpers, layout partials, retained Font Awesome 5 styles, then `_sass/_custom.scss`
-- Local overrides: `_sass/_custom.scss` and page-specific styles remain light-only and must load after the core theme
+- Theme baseline: AcademicPages v0.9 Sass topology with paired light/dark palettes for `default`, `air`, `sunrise`, `mint`, `dirt`, and `contrast`
+- Theme selection: `_config.yml` selects the build-time palette; deployment remains `default`, and the visitor toggle stores only `light` or `dark`
+- Theme runtime: first visits are light; dark mode uses `html[data-theme="dark"]` and emits `site:themechange` with `detail.theme`
+- Theme properties: 19 core `--global-*` properties plus stable `--site-*`, `--viz-*`, syntax, and status roles
+- Import behavior: `assets/css/main.scss` loads shared settings, the selected light palette, compile aliases, the selected dark palette, helpers, layouts, Font Awesome 5, then `_sass/_custom.scss`
+- Local overrides: custom and page-specific presentation colors consume semantic roles; scientific categorical and institutional brand palettes remain literal
 - JavaScript contract: Node 20/npm 10 installs from `package-lock.json`; `scripts/build-js.mjs` combines jQuery 3.7.1, greedy navigation, and shared interactions into the committed module `assets/js/main.min.js`
-- JavaScript checks: use `npm run build:js` to regenerate, `npm run check:js` for a non-writing parity check, and `npm test` for asset-contract plus executable responsive-state verification
+- JavaScript checks: use `npm run build:js`, `npm run check:js`, `npm run check:themes`, `npm run test:themes`, and `npm test`
 - Browser compatibility: native sticky positioning, smooth scrolling with reduced-motion handling, and explicit responsive-video CSS replace Stickyfill, jQuery Smooth Scroll, FitVids, and Magnific Popup
 - Pages artifact boundary: `_config.yml` excludes `package-lock.json`, `scripts/`, and root `*_artifacts` directories because they are build inputs or ignored local analysis output
-- Deferred theme work: tokenize custom/page CSS before adding dark mode, alternate palettes, Font Awesome 6, upstream `theme.js`, Plotly, Mermaid, or JSON CV support
+- Deferred theme work: Font Awesome 6, runtime palette selection, Plotly, Mermaid, and JSON CV support
 - Page-specific inline styles to keep/avoid:
 - Accessibility notes:
 - Asset delivery notes (for example optimized web-sized assets in `images/` with high-res originals excluded from build via `_config.yml`):

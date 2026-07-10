@@ -53,6 +53,7 @@ Optional:
 - Force clean full rebuild (skip incremental): `./scripts/local_preview.command --full-build`
 - Run geo/impact data regeneration + validation: `./scripts/local_preview.command --with-data`
 - Skip geo/impact data regeneration explicitly: `./scripts/local_preview.command --skip-data`
+- Preview a supported palette without editing `_config.yml`: `./scripts/local_preview.command --theme air`
 - Custom port: `./scripts/local_preview.command --port 4010`
 - Always run full data + full build path: `./scripts/local_preview_fullbuild.command`
 
@@ -66,29 +67,34 @@ The shared browser bundle follows the AcademicPages v0.9 asset model with local 
 - `npm run build:js` builds the committed `assets/js/main.min.js` module.
 - `npm run check:js` verifies the committed bundle without rewriting it.
 - `npm run watch:js` rebuilds when the two shared JavaScript sources change.
-- `npm test` runs the asset-contract tests, executable responsive-state regressions, and bundle verification.
+- `npm run check:themes` verifies the palette, token, markup, and runtime contract.
+- `npm run test:themes` builds all six palettes and requires the same 241 routes.
+- `npm test` runs the asset, theme, and executable browser-state tests plus bundle verification.
 
-The deterministic builder reads jQuery `3.7.1`, greedy navigation, and the shared site interactions in a fixed order. GitHub Actions runs `npm ci` and `npm run check:js` before the Jekyll build, so source and generated bundle cannot drift.
+The deterministic builder reads jQuery `3.7.1`, greedy navigation, and the shared site interactions in a fixed order. GitHub Actions runs `npm ci`, `npm test`, and the six-theme build matrix before the final Jekyll build, so source, generated assets, and palette support cannot drift.
 
 Jekyll excludes `package-lock.json`, `scripts/`, and root `*_artifacts` directories from `_site`. They are development inputs or ignored local analysis output, not deployable website assets.
 
 ## Styling Architecture
 
-The site uses the AcademicPages v0.9 Sass layering model while retaining its established light appearance:
+The site uses the AcademicPages v0.9 Sass layering model while retaining its established default-light appearance:
 
 - `_sass/_themes.scss` contains typography, breakpoints, grid settings, and shared brand colors.
-- `_sass/theme/_default_light.scss` defines the supported light palette and the 16 `--global-*` theme properties.
+- `_sass/theme/` contains paired light/dark partials for `default`, `air`, `sunrise`, `mint`, `dirt`, and `contrast`.
+- `_sass/_themes.scss` emits 19 core properties plus semantic `--site-*`, `--viz-*`, and syntax roles.
 - `_sass/include/` contains reusable Sass mixins and utilities.
 - `_sass/layout/` contains the reset, base, navigation, page, sidebar, and other structural partials.
 - `_sass/_syntax.scss` remains the syntax-highlighting layer.
 - `_sass/_custom.scss` loads last so existing page-specific overrides retain precedence.
 - `assets/css/main.scss` is the Jekyll-rendered stylesheet entry point and retains Font Awesome 5 inside the compiled stylesheet.
 
-`_config.yml` sets `site_theme: "default"`. The default light theme is the only supported value in this phase. Dark-mode activation, alternate palettes, Font Awesome 6, upstream `theme.js`, Plotly, Mermaid, and JSON CV support remain deferred until the custom and page-specific styles have theme-aware color tokens.
+`_config.yml` keeps `site_theme: "default"` for deployment. Alternate palettes are build-time choices rather than a visitor-facing selector. Visitors start in light mode and can explicitly toggle dark mode; `localStorage.theme` persists `light` or `dark`, and `site:themechange` notifies custom visualizations. Font Awesome 6, Plotly, Mermaid, JSON CV support, and runtime palette selection remain deferred.
 
 Validate the complete styling path with:
 
 - `./scripts/local_preview.command --build-only --full-build --skip-data`
+- `npm run check:themes`
+- `npm run test:themes`
 
 ## UI Experiment Note (Sidebar Rail)
 

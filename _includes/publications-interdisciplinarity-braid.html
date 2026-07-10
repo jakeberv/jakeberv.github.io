@@ -8,10 +8,10 @@
     .pub-braid-panel {
       margin: 1.3rem 0 1.45rem;
       padding: 0.65rem;
-      border: 1px solid rgba(20, 66, 56, 0.13);
+      border: 1px solid var(--site-border-subtle);
       border-radius: 16px;
-      background: linear-gradient(145deg, #f5f8f4 0%, #edf3ee 100%);
-      box-shadow: 0 10px 26px -22px rgba(19, 49, 43, 0.72);
+      background: var(--site-surface-muted);
+      box-shadow: 0 10px 26px -22px var(--site-shadow-color);
     }
 
     .pub-braid-panel__header {
@@ -27,7 +27,7 @@
       font-weight: 800;
       letter-spacing: 0.09em;
       text-transform: uppercase;
-      color: rgba(25, 74, 63, 0.72);
+      color: var(--site-text-muted);
     }
 
     .pub-braid-panel__title {
@@ -35,14 +35,14 @@
       font-size: 1.05rem;
       line-height: 1.26;
       font-weight: 800;
-      color: #163f35;
+      color: var(--site-text-strong);
     }
 
     .pub-braid-panel__copy {
       margin: 0.03rem 0 0;
       font-size: 0.78rem;
       line-height: 1.36;
-      color: rgba(22, 61, 52, 0.87);
+      color: var(--site-text-strong);
       max-width: none;
     }
 
@@ -56,16 +56,16 @@
       overflow-x: auto;
       overflow-y: hidden;
       scrollbar-width: thin;
-      border-top: 1px solid rgba(31, 81, 70, 0.14);
+      border-top: 1px solid var(--site-border-subtle);
       padding-top: 0.28rem;
     }
 
     .pub-braid-stats__item {
       margin: 0;
-      border: 1px solid rgba(23, 68, 58, 0.16);
+      border: 1px solid var(--site-border-subtle);
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.92);
-      color: rgba(20, 61, 52, 0.91);
+      background: var(--site-control-bg);
+      color: var(--site-text-strong);
       padding: 0.16rem 0.5rem;
       font-size: 0.62rem;
       line-height: 1.25;
@@ -85,10 +85,10 @@
 
     .pub-braid-toggle,
     .pub-braid-action {
-      border: 1px solid rgba(23, 68, 58, 0.2);
+      border: 1px solid var(--site-border-subtle);
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.92);
-      color: rgba(20, 61, 52, 0.92);
+      background: var(--site-control-bg);
+      color: var(--site-text-strong);
       padding: 0.28rem 0.86rem;
       font-size: 0.74rem;
       line-height: 1.2;
@@ -99,16 +99,16 @@
     }
 
     .pub-braid-toggle[aria-pressed="true"] {
-      background: rgba(27, 108, 89, 0.12);
-      border-color: rgba(27, 108, 89, 0.4);
-      color: #184e42;
+      background: var(--site-control-bg-active);
+      border-color: var(--site-focus-ring);
+      color: var(--site-text-strong);
     }
 
     .pub-braid-toggle:hover,
     .pub-braid-toggle:focus-visible,
     .pub-braid-action:hover,
     .pub-braid-action:focus-visible {
-      background: rgba(240, 247, 243, 0.95);
+      background: var(--site-control-bg-hover);
       outline: none;
     }
 
@@ -117,7 +117,7 @@
       font-size: 0.54rem;
       line-height: 1.2;
       font-weight: 600;
-      color: rgba(32, 76, 66, 0.78);
+      color: var(--site-text-muted);
       letter-spacing: 0.01em;
     }
 
@@ -128,10 +128,10 @@
     .pub-braid-graph {
       margin: 0;
       position: relative;
-      border: 1px solid rgba(19, 63, 54, 0.16);
+      border: 1px solid var(--site-border-subtle);
       border-radius: 12px;
       overflow: hidden;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(246, 251, 248, 0.96) 100%);
+      background: var(--viz-surface);
     }
 
     .pub-braid-graph__svg {
@@ -145,7 +145,7 @@
       margin: 0.28rem 0 0;
       font-size: 0.58rem;
       line-height: 1.26;
-      color: rgba(20, 64, 54, 0.72);
+      color: var(--site-text-muted);
     }
 
     .pub-braid-source {
@@ -153,7 +153,7 @@
       padding: 0 0.48rem 0.04rem;
       font-size: 0.53rem;
       line-height: 1.2;
-      color: rgba(41, 84, 73, 0.72);
+      color: var(--site-text-muted);
     }
 
     .pub-braid-legend {
@@ -161,18 +161,18 @@
       padding: 0 0.48rem;
       font-size: 0.55rem;
       line-height: 1.18;
-      color: rgba(33, 80, 69, 0.8);
+      color: var(--site-text-muted);
     }
 
     .pub-braid-panel__xref {
       margin: 0.18rem 0 0;
       font-size: 0.57rem;
       line-height: 1.22;
-      color: rgba(18, 58, 50, 0.75);
+      color: var(--site-text-muted);
     }
 
     .pub-braid-panel__xref a {
-      color: #1a5649;
+      color: var(--site-text-strong);
       text-decoration: underline;
       text-underline-offset: 2px;
     }
@@ -249,6 +249,11 @@
       const svg = root.querySelector("[data-pub-braid-svg]");
       const orderToggleBtn = panel.querySelector("[data-braid-order-toggle]");
       const downloadSvgBtn = panel.querySelector("[data-braid-download-svg]");
+
+      function themeValue(name, fallback) {
+        const value = window.getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+        return value || fallback;
+      }
 
       const statEls = new Map(
         [...panel.querySelectorAll("[data-braid-stat]")].map((node) => [node.getAttribute("data-braid-stat"), node])
@@ -622,6 +627,11 @@
       }
 
       function renderBraid(usedFamilies) {
+        const theme = {
+          surface: themeValue("--viz-surface", "#ffffff"),
+          text: themeValue("--viz-text", "#203f35"),
+          muted: themeValue("--viz-text-muted", "#4a675d")
+        };
         const groupNodes = layoutColumn(usedGroups, groupWeights, gapGroup);
         const familyNodes = layoutColumn(usedFamilies, familyWeights, gapFamily);
         const scopeNodes = layoutColumn(usedScopes, scopeWeights, gapScope);
@@ -800,7 +810,7 @@
             "font-size": scaledFont(31.7),
             "font-family": "'Helvetica Neue', Helvetica, Arial, sans-serif",
             "font-weight": 700,
-            fill: "#1d4338"
+            fill: theme.text
           });
           node.textContent = item.text;
           labelLayer.appendChild(node);
@@ -839,7 +849,7 @@
             height: node.h,
             rx: 4,
             fill,
-            stroke: "#ffffff",
+            stroke: theme.surface,
             "stroke-width": 1
           });
           nodeLayer.appendChild(rect);
@@ -857,7 +867,7 @@
               "font-size": scaledFont(20.9),
               "font-family": "'Helvetica Neue', Helvetica, Arial, sans-serif",
               "font-weight": 600,
-              fill: "#203f35"
+              fill: theme.text
             });
             label.textContent = line;
             labelLayer.appendChild(label);
@@ -870,7 +880,7 @@
             "text-anchor": "start",
             "font-size": scaledFont(17.3),
             "font-family": "'Helvetica Neue', Helvetica, Arial, sans-serif",
-            fill: "#4a675d"
+            fill: theme.muted
           });
           pct.textContent = `${(((groupWeights.get(groupId) || 0) / totalWeight) * 100).toFixed(1)}%`;
           labelLayer.appendChild(pct);
@@ -889,7 +899,7 @@
             height: node.h,
             rx: 4,
             fill,
-            stroke: "#ffffff",
+            stroke: theme.surface,
             "stroke-width": 1
           });
           nodeLayer.appendChild(rect);
@@ -903,7 +913,7 @@
             "font-size": scaledFont(18),
             "font-family": "'Helvetica Neue', Helvetica, Arial, sans-serif",
             "font-weight": 600,
-            fill: "#1f3c34"
+            fill: theme.text
           });
           label.textContent = familyMeta.get(familyId)?.shortLabel || familyId;
           labelLayer.appendChild(label);
@@ -922,7 +932,7 @@
             height: node.h,
             rx: 4,
             fill,
-            stroke: "#ffffff",
+            stroke: theme.surface,
             "stroke-width": 1
           });
           nodeLayer.appendChild(rect);
@@ -936,7 +946,7 @@
             "font-size": scaledFont(22.3),
             "font-family": "'Helvetica Neue', Helvetica, Arial, sans-serif",
             "font-weight": 600,
-            fill: "#203f35"
+            fill: theme.text
           });
           label.textContent = scopeLabel.get(scopeId) || scopeId;
           labelLayer.appendChild(label);
@@ -948,7 +958,7 @@
             "text-anchor": "end",
             "font-size": scaledFont(17.3),
             "font-family": "'Helvetica Neue', Helvetica, Arial, sans-serif",
-            fill: "#4a675d"
+            fill: theme.muted
           });
           pct.textContent = `${(((scopeWeights.get(scopeId) || 0) / totalWeight) * 100).toFixed(1)}%`;
           labelLayer.appendChild(pct);
@@ -973,6 +983,10 @@
       if (downloadSvgBtn) {
         downloadSvgBtn.addEventListener("click", downloadCurrentSvg);
       }
+
+      window.addEventListener("site:themechange", () => {
+        renderBraid(useHeuristicOrder ? heuristicFamilies : defaultFamilies);
+      });
     })();
   </script>
 </section>

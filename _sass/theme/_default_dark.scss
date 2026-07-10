@@ -1,0 +1,29 @@
+/* Default dark palette, adapted from AcademicPages v0.9 for AA contrast. */
+$default-dark-theme: (
+  base: #4fc1df,
+  background: #2f3337,
+  footer: #25282b,
+  border: #464b50,
+  border-strong: #727a82,
+  code-background: #202428,
+  code-text: #eef4f7,
+  caption: #c8d0d6,
+  link: #79d0e7,
+  link-hover: #b4e8f4,
+  link-visited: #b9d6df,
+  masthead-link: #f3f5f7,
+  masthead-link-hover: #79d0e7,
+  text: #f3f5f7,
+  text-light: #c8d0d6,
+  thead: #3a3f44,
+  selection-background: #245f70,
+  selection-text: #fff,
+  danger: #ff8a86,
+  warning: #ffc26b,
+  success: #83d889,
+  info: #79d0e7
+);
+
+html[data-theme="dark"] {
+  @include emit-theme-properties($default-dark-theme, dark);
+}

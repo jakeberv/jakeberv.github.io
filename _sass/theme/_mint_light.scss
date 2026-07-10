@@ -1,0 +1,33 @@
+/* Mint light palette, adopted from AcademicPages v0.9. */
+$active-light-theme: (
+  base: #0b7478,
+  background: #f3f6f6,
+  footer: #1bb7a5,
+  border: #bfc9c7,
+  border-strong: #879794,
+  code-background: #fff,
+  code-text: #27413d,
+  caption: #526764,
+  link: #086d71,
+  link-hover: #064f52,
+  link-visited: #3c7375,
+  masthead-link: #40514e,
+  masthead-link-hover: #086d71,
+  text: #40514e,
+  text-light: #5c6d6a,
+  thead: #e0ebea,
+  selection-background: #b8ece4,
+  selection-text: #233b37,
+  danger: #b83225,
+  warning: #9b5700,
+  success: #187b45,
+  info: #086d71
+);
+
+:root {
+  @include emit-theme-properties($active-light-theme);
+}
+
+footer {
+  color: var(--global-text-color);
+}

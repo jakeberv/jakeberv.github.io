@@ -55,3 +55,40 @@
     font-weight: 700;
   }
 }
+
+.masthead__menu-item.selected:not(.masthead__menu-item--lg) > a {
+  color: var(--global-text-color);
+  font-weight: 700;
+
+  &::before {
+    background: var(--global-masthead-link-color-hover);
+    transform: scaleX(1);
+  }
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 0.45rem;
+  padding: 0;
+  border: 0;
+  color: var(--global-masthead-link-color);
+  background: transparent;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--global-masthead-link-color-hover);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--site-focus-ring);
+    outline-offset: 2px;
+  }
+}
+
+html[data-theme="dark"] .masthead__menu-item--lg img {
+  filter: invert(1);
+}
