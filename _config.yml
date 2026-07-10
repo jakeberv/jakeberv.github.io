@@ -7,6 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
+site_theme               : "default" # Phase 2 supports the default light theme only
 title                    : "Jacob S. Berv, PhD"
 title_separator          : "-"
 name                     : &name "Jacob S. Berv"
