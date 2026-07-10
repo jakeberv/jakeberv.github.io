@@ -14,7 +14,7 @@ The comparison baseline is AcademicPages master commit `482bc2b22db0500a12c2297d
 
 ## Constraints
 
-- Work only on `codex/infra-sync-pass-3`; do not modify `master`.
+- Work only on `codex/infra-sync-pass-3`; do not commit directly to `master`; merge through a PR.
 - Preserve `.RData` and `todo` without editing or staging them.
 - Keep Jekyll 3.10, `github-pages` 232, Ruby 3.3.4, Bundler 2.5.18, Node 20, the 85px masthead, and the current light-only theme.
 - Do not modify content, URLs, collection schemas, data, generated datasets, data-generation scripts, Gem files, fonts, images, or binary assets.

@@ -75,6 +75,17 @@ test("dynamic footer spacing replaces the static Sass fallback", async () => {
   );
 });
 
+test("the author menu follows its CSS breakpoint", async () => {
+  const mainScript = await source("assets/js/_main.js");
+
+  assert.doesNotMatch(mainScript, /\bscssLarge\b|\b925\b|\$\(window\)\.width\(\)/);
+  assert.match(
+    mainScript,
+    /const authorMenuButton = \$\("\.author__urls-wrapper button"\)/,
+  );
+  assert.match(mainScript, /authorMenuButton\.css\("display"\) === "none"/);
+});
+
 test("the Pages workflow installs and verifies the locked JavaScript bundle", async () => {
   const workflow = await source(".github/workflows/deploy_site.yml");
 

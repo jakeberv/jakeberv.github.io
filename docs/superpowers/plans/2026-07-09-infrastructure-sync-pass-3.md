@@ -14,7 +14,7 @@ published: false
 
 ## Global Constraints
 
-- Work only on `codex/infra-sync-pass-3`; do not modify `master`.
+- Work only on `codex/infra-sync-pass-3`; do not commit directly to `master`; merge through a PR.
 - Preserve `.RData` and `todo` without editing or staging them.
 - Do not commit or push without explicit user approval.
 - Preserve content, URLs, navigation, collection schemas, visual identity, custom dashboards, and GitHub Pages compatibility.

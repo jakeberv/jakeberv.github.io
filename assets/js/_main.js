@@ -6,7 +6,7 @@
 "use strict";
 
 $(function () {
-  const scssLarge = 925;
+  const authorMenuButton = $(".author__urls-wrapper button");
   let didResize = false;
 
   const updateFooterSpacing = function () {
@@ -16,8 +16,8 @@ $(function () {
 
   const restoreAuthorLinks = function () {
     if (
-      $(".author__urls.social-icons").css("display") === "none" &&
-      $(window).width() >= scssLarge
+      authorMenuButton.css("display") === "none" &&
+      $(".author__urls.social-icons").css("display") === "none"
     ) {
       $(".author__urls").css("display", "block");
     }
@@ -37,7 +37,7 @@ $(function () {
     }
   }, 250);
 
-  $(".author__urls-wrapper button").on("click", function () {
+  authorMenuButton.on("click", function () {
     $(".author__urls").stop(true, true).fadeToggle("fast");
     $(this).toggleClass("open");
   });
