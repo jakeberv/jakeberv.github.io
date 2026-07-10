@@ -119,14 +119,16 @@ Notes:
 - Theme selection: `_config.yml` selects the build-time palette; deployment remains `default`, and the visitor toggle stores only `light` or `dark`
 - Theme runtime: first visits are light; dark mode uses `html[data-theme="dark"]` and emits `site:themechange` with `detail.theme`
 - Theme properties: 19 core `--global-*` properties plus stable `--site-*`, `--viz-*`, syntax, and status roles
-- Import behavior: `assets/css/main.scss` loads shared settings, the selected light palette, compile aliases, the selected dark palette, helpers, layouts, then `_sass/_custom.scss`; Font Awesome 6.7.2 compiles separately from `assets/css/fontawesome.scss`
+- Import behavior: `assets/css/main.scss` loads shared settings, the selected light palette, compile aliases, the selected dark palette, helpers, layouts including scientific-content styling, then `_sass/_custom.scss`; Font Awesome 6.7.2 compiles separately from `assets/css/fontawesome.scss`
 - Icon contract: site markup uses `fa-solid` and `fa-brands`; only solid and brands TTF/WOFF2 assets ship from `assets/webfonts/`, while Academicons remains local and independent
 - Local overrides: custom and page-specific presentation colors consume semantic roles; scientific categorical and institutional brand palettes remain literal
-- JavaScript contract: Node 20/npm 10 installs from `package-lock.json`; `scripts/build-js.mjs` combines jQuery 3.7.1, greedy navigation, and shared interactions into the committed module `assets/js/main.min.js`
-- Asset checks: use `npm run build:js`, `npm run check:js`, `npm run check:icons`, `npm run check:themes`, `npm run test:themes`, and `npm test`
+- JavaScript contract: Node 20/npm 10 installs from `package-lock.json`; `scripts/build-js.mjs` combines jQuery 3.7.1, greedy navigation, optional scientific-content renderers, and shared interactions into the committed module `assets/js/main.min.js`
+- Scientific content contract: `mathjax: true` loads MathJax 4.0.0 for a page; fenced `mermaid` blocks load Mermaid 11.15.0; fenced `plotly` blocks load Plotly 3.6.0 from JSON with required `data` and optional `layout`/`config`
+- Scientific fallback behavior: failed Mermaid/Plotly loads or parses keep the source block visible and add an accessible status message; successful renderers consume `--site-*` and `--viz-*` tokens and re-render after `site:themechange`
+- Asset checks: use `npm run build:js`, `npm run check:js`, `npm run check:icons`, `npm run check:scientific`, `npm run check:themes`, `npm run test:themes`, and `npm test`
 - Browser compatibility: native sticky positioning, smooth scrolling with reduced-motion handling, and explicit responsive-video CSS replace Stickyfill, jQuery Smooth Scroll, FitVids, and Magnific Popup
-- Pages artifact boundary: `_config.yml` excludes `package-lock.json`, `scripts/`, and root `*_artifacts` directories because they are build inputs or ignored local analysis output
-- Deferred theme work: runtime palette selection, Plotly, Mermaid, and JSON CV support
+- Pages artifact boundary: `_config.yml` excludes `package-lock.json`, `scripts/`, source-only shared JavaScript files, and root `*_artifacts` directories because they are build inputs or ignored local analysis output
+- Deferred theme work: runtime palette selection and JSON CV support
 - Page-specific inline styles to keep/avoid:
 - Accessibility notes:
 - Asset delivery notes: `main.css` and `fontawesome.css` are separate cacheable outputs; the local solid and brands WOFF2 files are preloaded before the blocking icon stylesheet to avoid missing-icon flashes

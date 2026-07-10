@@ -67,12 +67,13 @@ The shared browser bundle follows the AcademicPages v0.9 asset model with local 
 - `npm run build:js` builds the committed `assets/js/main.min.js` module.
 - `npm run check:icons` verifies the Font Awesome version, assets, delivery, markup, and icon-name contract.
 - `npm run check:js` verifies the committed bundle without rewriting it.
-- `npm run watch:js` rebuilds when the two shared JavaScript sources change.
+- `npm run check:scientific` verifies the opt-in MathJax, Mermaid, and Plotly runtime contract.
+- `npm run watch:js` rebuilds when the three shared JavaScript sources change.
 - `npm run check:themes` verifies the palette, token, markup, and runtime contract.
 - `npm run test:themes` builds all six palettes and requires the same 241 routes.
 - `npm test` runs the asset, theme, and executable browser-state tests plus bundle verification.
 
-The deterministic builder reads jQuery `3.7.1`, greedy navigation, and the shared site interactions in a fixed order. GitHub Actions runs `npm ci`, `npm test`, and the six-theme build matrix before the final Jekyll build, so source, generated assets, and palette support cannot drift.
+The deterministic builder reads jQuery `3.7.1`, greedy navigation, optional scientific-content renderers, and the shared site interactions in a fixed order. GitHub Actions runs `npm ci`, `npm test`, and the six-theme build matrix before the final Jekyll build, so source, generated assets, and palette support cannot drift.
 
 Jekyll excludes `package-lock.json`, `scripts/`, and root `*_artifacts` directories from `_site`. They are development inputs or ignored local analysis output, not deployable website assets.
 
@@ -84,21 +85,34 @@ The site uses the AcademicPages v0.9 Sass layering model while retaining its est
 - `_sass/theme/` contains paired light/dark partials for `default`, `air`, `sunrise`, `mint`, `dirt`, and `contrast`.
 - `_sass/_themes.scss` emits 19 core properties plus semantic `--site-*`, `--viz-*`, and syntax roles.
 - `_sass/include/` contains reusable Sass mixins and utilities.
-- `_sass/layout/` contains the reset, base, navigation, page, sidebar, and other structural partials.
+- `_sass/layout/` contains the reset, base, navigation, scientific-content, page, sidebar, and other structural partials.
 - `_sass/_syntax.scss` remains the syntax-highlighting layer.
 - `_sass/_custom.scss` loads last so existing page-specific overrides retain precedence.
 - `assets/css/main.scss` is the Jekyll-rendered theme and customization entry point.
 - `assets/css/fontawesome.scss` compiles the vendored AcademicPages v0.9 Font Awesome 6.7.2 core, solid, and brands layers into a separately cached stylesheet.
 - `assets/webfonts/` contains only the solid and brands TTF/WOFF2 files consumed by that stylesheet; Academicons remains local under its existing asset paths.
 
-`_config.yml` keeps `site_theme: "default"` for deployment. Alternate palettes are build-time choices rather than a visitor-facing selector. Visitors start in light mode and can explicitly toggle dark mode; `localStorage.theme` persists `light` or `dark`, and `site:themechange` notifies custom visualizations. Site markup uses `fa-solid` and `fa-brands`; regular icons and v4 compatibility fonts are intentionally not shipped. Plotly, Mermaid, JSON CV support, and runtime palette selection remain deferred.
+`_config.yml` keeps `site_theme: "default"` for deployment. Alternate palettes are build-time choices rather than a visitor-facing selector. Visitors start in light mode and can explicitly toggle dark mode; `localStorage.theme` persists `light` or `dark`, and `site:themechange` notifies custom visualizations. Site markup uses `fa-solid` and `fa-brands`; regular icons and v4 compatibility fonts are intentionally not shipped. JSON CV support and runtime palette selection remain deferred.
 
 Validate the complete styling path with:
 
 - `./scripts/local_preview.command --build-only --full-build --skip-data`
 - `npm run check:icons`
+- `npm run check:scientific`
 - `npm run check:themes`
 - `npm run test:themes`
+
+## Scientific Content
+
+Scientific rendering is opt-in so ordinary pages do not request large scientific libraries.
+
+- Add `mathjax: true` to a page's front matter to load MathJax `4.0.0`.
+- Use fenced `mermaid` blocks for Mermaid `11.15.0` diagrams.
+- Use fenced `plotly` blocks containing JSON with a required `data` array and optional `layout` and `config` objects for Plotly `3.6.0`.
+- Mermaid and Plotly renderers use the active `--site-*` and `--viz-*` theme tokens and re-render after `site:themechange`.
+- CDN failures preserve the readable source block and add an accessible status message instead of leaving a blank figure.
+
+No Mermaid or Plotly npm package is installed; the pinned runtimes load from CDN only when matching fenced blocks exist.
 
 ## UI Experiment Note (Sidebar Rail)
 
