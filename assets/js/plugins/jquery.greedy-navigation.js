@@ -1,72 +1,65 @@
 /*
-* Greedy Navigation
-*
-* http://codepen.io/lukejacksonn/pen/PwmwWV
-*
-*/
+ * Greedy Navigation
+ *
+ * http://codepen.io/lukejacksonn/pen/PwmwWV
+ */
 
-var $nav = $('#site-nav');
-var $btn = $('#site-nav button');
-var $vlinks = $('#site-nav .visible-links');
-var $hlinks = $('#site-nav .hidden-links');
-
+var $nav = $("#site-nav");
+var $btn = $("#site-nav button");
+var $vlinks = $("#site-nav .visible-links");
+var $vlinksPersistTail = $vlinks.children(".persist.tail");
+var $hlinks = $("#site-nav .hidden-links");
 var breaks = [];
 
 function updateNav() {
+  var availableSpace = $btn.hasClass("hidden")
+    ? $nav.width()
+    : $nav.width() - $btn.width() - 30;
 
-  var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
-
-  // The visible list is overflowing the nav
-  if($vlinks.width() > availableSpace) {
-
-    // Record the width of the list
-    breaks.push($vlinks.width());
-
-    // Move item to the hidden list
-    $vlinks.children().last().prependTo($hlinks);
-
-    // Show the dropdown btn
-    if($btn.hasClass('hidden')) {
-      $btn.removeClass('hidden');
+  if ($vlinks.width() > availableSpace) {
+    while (
+      $vlinks.width() > availableSpace &&
+      $vlinks.children(":not(.persist)").length > 0
+    ) {
+      breaks.push($vlinks.width());
+      $vlinks.children(":not(.persist)").last().prependTo($hlinks);
+      availableSpace = $btn.hasClass("hidden")
+        ? $nav.width()
+        : $nav.width() - $btn.width() - 30;
+      $btn.removeClass("hidden");
     }
-
-  // The visible list is not overflowing
   } else {
-
-    // There is space for another item in the nav
-    if(availableSpace > breaks[breaks.length-1]) {
-
-      // Move the item to the visible list
-      $hlinks.children().first().appendTo($vlinks);
+    while (
+      breaks.length > 0 &&
+      availableSpace > breaks[breaks.length - 1]
+    ) {
+      if ($vlinksPersistTail.length > 0) {
+        $hlinks.children().first().insertBefore($vlinksPersistTail);
+      } else {
+        $hlinks.children().first().appendTo($vlinks);
+      }
       breaks.pop();
     }
 
-    // Hide the dropdown btn if hidden list is empty
-    if(breaks.length < 1) {
-      $btn.addClass('hidden');
-      $hlinks.addClass('hidden');
+    if (breaks.length < 1) {
+      $btn.addClass("hidden");
+      $btn.removeClass("close");
+      $hlinks.addClass("hidden");
     }
   }
 
-  // Keep counter updated
   $btn.attr("count", breaks.length);
-
-  // Recur if the visible list is still overflowing the nav
-  if($vlinks.width() > availableSpace) {
-    updateNav();
-  }
-
 }
 
-// Window listeners
+$(window).on("resize", updateNav);
 
-$(window).resize(function() {
-  updateNav();
-});
+if (screen.orientation && screen.orientation.addEventListener) {
+  screen.orientation.addEventListener("change", updateNav);
+}
 
-$btn.on('click', function() {
-  $hlinks.toggleClass('hidden');
-  $(this).toggleClass('close');
+$btn.on("click", function () {
+  $hlinks.toggleClass("hidden");
+  $(this).toggleClass("close");
 });
 
 updateNav();

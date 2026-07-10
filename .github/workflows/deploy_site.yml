@@ -29,6 +29,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: "npm"
+
+      - name: Install JavaScript dependencies
+        run: npm ci
+
+      - name: Verify committed JavaScript bundle
+        run: npm run check:js
 
       - name: Validate _news geo front matter
         run: node scripts/qa/validate-news-geo.mjs
