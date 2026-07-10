@@ -52,6 +52,7 @@ Notes:
 - Layouts: `_layouts/`
 - Includes: `_includes/`
 - Styles entry point: `assets/css/main.scss`
+- Icon styles entry point: `assets/css/fontawesome.scss`
 - Shared Sass settings: `_sass/_themes.scss`
 - Supported theme: `_sass/theme/_default_light.scss` selected by `site_theme: "default"`
 - Sass helpers: `_sass/include/`
@@ -118,16 +119,17 @@ Notes:
 - Theme selection: `_config.yml` selects the build-time palette; deployment remains `default`, and the visitor toggle stores only `light` or `dark`
 - Theme runtime: first visits are light; dark mode uses `html[data-theme="dark"]` and emits `site:themechange` with `detail.theme`
 - Theme properties: 19 core `--global-*` properties plus stable `--site-*`, `--viz-*`, syntax, and status roles
-- Import behavior: `assets/css/main.scss` loads shared settings, the selected light palette, compile aliases, the selected dark palette, helpers, layouts, Font Awesome 5, then `_sass/_custom.scss`
+- Import behavior: `assets/css/main.scss` loads shared settings, the selected light palette, compile aliases, the selected dark palette, helpers, layouts, then `_sass/_custom.scss`; Font Awesome 6.7.2 compiles separately from `assets/css/fontawesome.scss`
+- Icon contract: site markup uses `fa-solid` and `fa-brands`; only solid and brands TTF/WOFF2 assets ship from `assets/webfonts/`, while Academicons remains local and independent
 - Local overrides: custom and page-specific presentation colors consume semantic roles; scientific categorical and institutional brand palettes remain literal
 - JavaScript contract: Node 20/npm 10 installs from `package-lock.json`; `scripts/build-js.mjs` combines jQuery 3.7.1, greedy navigation, and shared interactions into the committed module `assets/js/main.min.js`
-- JavaScript checks: use `npm run build:js`, `npm run check:js`, `npm run check:themes`, `npm run test:themes`, and `npm test`
+- Asset checks: use `npm run build:js`, `npm run check:js`, `npm run check:icons`, `npm run check:themes`, `npm run test:themes`, and `npm test`
 - Browser compatibility: native sticky positioning, smooth scrolling with reduced-motion handling, and explicit responsive-video CSS replace Stickyfill, jQuery Smooth Scroll, FitVids, and Magnific Popup
 - Pages artifact boundary: `_config.yml` excludes `package-lock.json`, `scripts/`, and root `*_artifacts` directories because they are build inputs or ignored local analysis output
-- Deferred theme work: Font Awesome 6, runtime palette selection, Plotly, Mermaid, and JSON CV support
+- Deferred theme work: runtime palette selection, Plotly, Mermaid, and JSON CV support
 - Page-specific inline styles to keep/avoid:
 - Accessibility notes:
-- Asset delivery notes (for example optimized web-sized assets in `images/` with high-res originals excluded from build via `_config.yml`):
+- Asset delivery notes: `main.css` and `fontawesome.css` are separate cacheable outputs; the local solid and brands WOFF2 files are preloaded before the blocking icon stylesheet to avoid missing-icon flashes
 
 ## 8) SEO and metadata
 - Global metadata source:

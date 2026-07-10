@@ -1,0 +1,12 @@
+---
+---
+
+/*
+ * Font Awesome is compiled separately so browser caches do not invalidate
+ * when the site's theme and custom styles change.
+ */
+
+@import
+  "vendor/font-awesome/fontawesome",
+  "vendor/font-awesome/solid",
+  "vendor/font-awesome/brands";

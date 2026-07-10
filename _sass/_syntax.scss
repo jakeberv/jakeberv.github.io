@@ -21,7 +21,8 @@ figure.highlight {
     color: var(--global-code-text-color);
     background-color: var(--global-thead-color);
     content: "\f121";
-    font-family: "Font Awesome 5 Free" !important;
+    font-family: var(--fa-style-family-classic) !important;
+    font-weight: 900;
     font-size: $type-size-6;
     line-height: 1;
     text-transform: none;

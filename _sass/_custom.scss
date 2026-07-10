@@ -1103,18 +1103,16 @@
     text-decoration: none;
   }
 
-  .pub-action .fa,
-  .pub-action .fas,
-  .pub-action .fab {
+  .pub-action .fa-solid,
+  .pub-action .fa-brands {
     opacity: .88;
     transform: translateY(0);
     transition: opacity .12s ease, transform .12s ease;
     font-size: .66rem;
   }
 
-  .pub-action:hover .fa,
-  .pub-action:hover .fas,
-  .pub-action:hover .fab {
+  .pub-action:hover .fa-solid,
+  .pub-action:hover .fa-brands {
     opacity: 1;
     transform: translateY(-.5px);
   }

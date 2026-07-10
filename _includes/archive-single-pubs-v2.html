@@ -113,33 +113,33 @@
 
       <p class="pub-entry__actions">
         {% if doi_url != "" %}
-          <a href="{{ doi_url }}" class="pub-action" target="_blank" rel="noopener" title="DOI"><i class="fas fa-fw fa-link zoom" aria-hidden="true"></i><span class="sr-only">DOI</span></a>
+          <a href="{{ doi_url }}" class="pub-action" target="_blank" rel="noopener" title="DOI"><i class="fa-solid fa-fw fa-link zoom" aria-hidden="true"></i><span class="sr-only">DOI</span></a>
         {% elsif link_url != "" %}
-          <a href="{{ link_url }}" class="pub-action" target="_blank" rel="noopener" title="External link"><i class="fas fa-fw fa-link zoom" aria-hidden="true"></i><span class="sr-only">External link</span></a>
+          <a href="{{ link_url }}" class="pub-action" target="_blank" rel="noopener" title="External link"><i class="fa-solid fa-fw fa-link zoom" aria-hidden="true"></i><span class="sr-only">External link</span></a>
         {% endif %}
         {% if post.paperurl %}
-          <a href="{{ post.paperurl }}" class="pub-action" target="_blank" rel="noopener" title="PDF"><i class="fas fa-fw fa-file-pdf zoom" aria-hidden="true"></i><span class="sr-only">PDF</span></a>
+          <a href="{{ post.paperurl }}" class="pub-action" target="_blank" rel="noopener" title="PDF"><i class="fa-solid fa-fw fa-file-pdf zoom" aria-hidden="true"></i><span class="sr-only">PDF</span></a>
         {% endif %}
         {% if post.code %}
-          <a href="{{ post.code }}" class="pub-action" target="_blank" rel="noopener" title="Code"><i class="fas fa-fw fa-code zoom" aria-hidden="true"></i><span class="sr-only">Code</span></a>
+          <a href="{{ post.code }}" class="pub-action" target="_blank" rel="noopener" title="Code"><i class="fa-solid fa-fw fa-code zoom" aria-hidden="true"></i><span class="sr-only">Code</span></a>
         {% endif %}
         {% if post.github %}
-          <a href="{{ post.github }}" class="pub-action" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-fw fa-github zoom" aria-hidden="true"></i><span class="sr-only">GitHub</span></a>
+          <a href="{{ post.github }}" class="pub-action" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-fw fa-github zoom" aria-hidden="true"></i><span class="sr-only">GitHub</span></a>
         {% endif %}
         {% if post.data_url %}
-          <a href="{{ post.data_url }}" class="pub-action" target="_blank" rel="noopener" title="Data"><i class="fas fa-fw fa-database zoom" aria-hidden="true"></i><span class="sr-only">Data</span></a>
+          <a href="{{ post.data_url }}" class="pub-action" target="_blank" rel="noopener" title="Data"><i class="fa-solid fa-fw fa-database zoom" aria-hidden="true"></i><span class="sr-only">Data</span></a>
         {% endif %}
         {% if post.supplement_url %}
-          <a href="{{ post.supplement_url }}" class="pub-action" target="_blank" rel="noopener" title="Supplement"><i class="fas fa-fw fa-file-alt zoom" aria-hidden="true"></i><span class="sr-only">Supplement</span></a>
+          <a href="{{ post.supplement_url }}" class="pub-action" target="_blank" rel="noopener" title="Supplement"><i class="fa-solid fa-fw fa-file-alt zoom" aria-hidden="true"></i><span class="sr-only">Supplement</span></a>
         {% endif %}
         {% if post.slides_url %}
-          <a href="{{ post.slides_url }}" class="pub-action" target="_blank" rel="noopener" title="Slides"><i class="fas fa-fw fa-images zoom" aria-hidden="true"></i><span class="sr-only">Slides</span></a>
+          <a href="{{ post.slides_url }}" class="pub-action" target="_blank" rel="noopener" title="Slides"><i class="fa-solid fa-fw fa-images zoom" aria-hidden="true"></i><span class="sr-only">Slides</span></a>
         {% endif %}
         {% if post.video_url %}
-          <a href="{{ post.video_url }}" class="pub-action" target="_blank" rel="noopener" title="Video"><i class="fas fa-fw fa-play-circle zoom" aria-hidden="true"></i><span class="sr-only">Video</span></a>
+          <a href="{{ post.video_url }}" class="pub-action" target="_blank" rel="noopener" title="Video"><i class="fa-solid fa-fw fa-play-circle zoom" aria-hidden="true"></i><span class="sr-only">Video</span></a>
         {% endif %}
         {% if post.project_url %}
-          <a href="{{ post.project_url }}" class="pub-action" target="_blank" rel="noopener" title="Project"><i class="fas fa-fw fa-globe zoom" aria-hidden="true"></i><span class="sr-only">Project</span></a>
+          <a href="{{ post.project_url }}" class="pub-action" target="_blank" rel="noopener" title="Project"><i class="fa-solid fa-fw fa-globe zoom" aria-hidden="true"></i><span class="sr-only">Project</span></a>
         {% endif %}
         {% if site.read_more == "enabled" or page.read_more == "enabled" %}
           <a href="{{ base_path }}{{ post.url }}" class="pub-action pub-action--readmore" rel="permalink"><span>Read more</span></a>
