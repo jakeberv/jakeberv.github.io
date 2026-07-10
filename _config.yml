@@ -137,6 +137,7 @@ include:
   - _pages
   - files
 exclude:
+  - "*_artifacts"
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -158,7 +159,9 @@ exclude:
   - gulpfile.js
   - log
   - node_modules
+  - package-lock.json
   - package.json
+  - scripts
   - images/originals/profile-full.png
   - tmp
   - vendor

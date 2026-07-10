@@ -1529,6 +1529,12 @@
   overflow: auto;
 }
 
+.phylo-history-page .phylo-history-embed {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
 .phylo-history-page .phylo-embed-note {
   margin: 0.45rem 0 0;
   font-size: 0.82rem;

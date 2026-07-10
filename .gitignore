@@ -2,6 +2,12 @@
 _site/
 .jekyll-metadata
 
+# Node.js dependencies
+node_modules/
+
+# Browser QA sessions
+.playwright-cli/
+
 # R and RStudio files
 .Rproj.user
 *.Rproj

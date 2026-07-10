@@ -34,6 +34,7 @@ Runtime contract:
 - Ruby `3.3.4`, matching the published GitHub Pages runtime (`.ruby-version`)
 - Bundler `2.5.18`, matching `Gemfile.lock`
 - Node.js `20`, matching the deployment workflow (`.node-version`)
+- npm `10`, used with the committed `package-lock.json`
 - Python 3 when serving locally or regenerating data
 
 The preview launcher prefers Homebrew Ruby 3.3 with Bundler `2.5.18`, then a PATH-provided Bundler at that version. If the pinned executable is unavailable or broken, it may use the same candidate's default Bundler only after `bundle check` confirms that the locked dependencies are satisfied; the launcher prints a warning when it does so and never installs or repairs global gems.
@@ -57,9 +58,23 @@ Optional:
 
 By default, local preview skips geo/impact data regeneration and uses Jekyll incremental builds for faster iteration. If incremental fails, the script automatically retries once with a full rebuild.
 
+## JavaScript Assets
+
+The shared browser bundle follows the AcademicPages v0.9 asset model with local reproducibility hardening:
+
+- `npm ci` installs the exact Node 20/npm 10 dependency graph.
+- `npm run build:js` builds the committed `assets/js/main.min.js` module.
+- `npm run check:js` verifies the committed bundle without rewriting it.
+- `npm run watch:js` rebuilds when the two shared JavaScript sources change.
+- `npm test` runs the asset-contract tests, executable responsive-state regressions, and bundle verification.
+
+The deterministic builder reads jQuery `3.7.1`, greedy navigation, and the shared site interactions in a fixed order. GitHub Actions runs `npm ci` and `npm run check:js` before the Jekyll build, so source and generated bundle cannot drift.
+
+Jekyll excludes `package-lock.json`, `scripts/`, and root `*_artifacts` directories from `_site`. They are development inputs or ignored local analysis output, not deployable website assets.
+
 ## Styling Architecture
 
-The site uses the AcademicPages v0.9 Sass layering model while retaining its established light appearance and legacy browser bundle:
+The site uses the AcademicPages v0.9 Sass layering model while retaining its established light appearance:
 
 - `_sass/_themes.scss` contains typography, breakpoints, grid settings, and shared brand colors.
 - `_sass/theme/_default_light.scss` defines the supported light palette and the 16 `--global-*` theme properties.
@@ -67,9 +82,9 @@ The site uses the AcademicPages v0.9 Sass layering model while retaining its est
 - `_sass/layout/` contains the reset, base, navigation, page, sidebar, and other structural partials.
 - `_sass/_syntax.scss` remains the syntax-highlighting layer.
 - `_sass/_custom.scss` loads last so existing page-specific overrides retain precedence.
-- `assets/css/main.scss` is the Jekyll-rendered stylesheet entry point and retains Font Awesome 5 and Magnific Popup compatibility styles.
+- `assets/css/main.scss` is the Jekyll-rendered stylesheet entry point and retains Font Awesome 5 inside the compiled stylesheet.
 
-`_config.yml` sets `site_theme: "default"`. The default light theme is the only supported value in this phase. Dark-mode activation, alternate palettes, Font Awesome 6, JavaScript modules, and npm modernization are deferred until the custom and page-specific styles have theme-aware color tokens.
+`_config.yml` sets `site_theme: "default"`. The default light theme is the only supported value in this phase. Dark-mode activation, alternate palettes, Font Awesome 6, upstream `theme.js`, Plotly, Mermaid, and JSON CV support remain deferred until the custom and page-specific styles have theme-aware color tokens.
 
 Validate the complete styling path with:
 
