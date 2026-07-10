@@ -35,9 +35,11 @@ Remove the vendored jQuery 1.12.4 file and the FitVids, Stickyfill, jQuery Smoot
 
 The Pages workflow installs with `npm ci` and runs the non-writing bundle check before existing data validation and Jekyll build steps. Deployment still serves the committed bundle.
 
+Jekyll excludes `package-lock.json`, `scripts/`, and root directories matching `*_artifacts` from the generated site. These paths support development or contain locally ignored analysis output; they are not public website assets.
+
 ### Browser behavior parity (local compatibility hardening)
 
-Keep the local masthead logo, 85px geometry, sticky footer spacing, mobile author menu, and native sticky sidebars. Mark the logo as persistent in greedy navigation and guard the Screen Orientation API for browsers that do not expose it.
+Keep the local masthead logo, 85px geometry, sticky footer spacing, mobile author menu, and native sticky sidebars. Mark the logo as persistent in greedy navigation and guard the Screen Orientation API for browsers that do not expose it. CSS remains the source of truth for author-link visibility at responsive breakpoints, so resize handling clears animation state rather than retaining an inline display value. Greedy navigation exposes and reserves the overflow button before moving links, then uses the full navigation width when restoring the final hidden item because the button disappears with it.
 
 The persistent logo and multi-item overflow logic may improve which navigation entries remain visible at a given width. Rebuilding the previously stale shared bundle may also activate the source-controlled footer calculation; this is acceptable when it removes overlap and preserves the established footer gap.
 
@@ -58,7 +60,7 @@ Dark-mode tokenization and activation, alternate palettes, upstream `theme.js`, 
 
 1. Require deterministic Node 20/npm 10 installation and bundle generation.
 2. Require the generated bundle to contain jQuery 3.7.1 and none of the removed plugin symbols.
-3. Compare the 243-route manifest with the Phase 2 baseline.
+3. Compare the clean 241-route manifest with the Phase 2 baseline. The earlier 243-route local count included two pages from a git-ignored root `*_artifacts` directory and was not a reproducible checkout baseline.
 4. Build with the existing GitHub Pages-safe local preview path.
 5. Exercise navigation, author links, sidebars, responsive video, charts, filters, maps, and research visualizations at desktop and mobile sizes.
 6. Review screenshot and metric differences, requiring each visible change to be either expected upgrade behavior or a corrected regression.
@@ -66,10 +68,11 @@ Dark-mode tokenization and activation, alternate palettes, upstream `theme.js`, 
 
 ## Verification Results
 
-- Node `20.20.2` and npm `10.9.8` completed `npm ci`, all seven asset-contract tests, deterministic rebuild verification, and a production audit with zero reported vulnerabilities.
-- The final bundle is 87,824 bytes with SHA-256 `392362e79a95223a4139e70e2d525c12b557b63c3f887577d855cfad2c1557b6`.
-- The GitHub Pages-safe full build completed and retained all 243 baseline HTML routes.
-- Eleven representative routes passed at 1440x1000 and 390x844 with jQuery 3.7.1, one module bundle, no console errors, no failed local assets, and no horizontal overflow.
+- Node `20.20.2` and npm `10.9.8` completed `npm ci`, all 14 asset-contract and executable browser-behavior tests, deterministic rebuild verification, and a production audit with zero reported vulnerabilities.
+- The final bundle is 87,818 bytes with SHA-256 `59be071e0317287290248cc0ee048a327ebbf7a431dd7b5691c8ff15360dc694`.
+- Clean Phase 2 and Phase 3 builds contain the same 241 HTML routes. The generated site excludes package metadata, build scripts, and ignored root artifact directories.
+- All 237 themed pages load one module bundle. The remaining routes are three intentional redirect documents and the inherited standalone Leaflet map.
+- Eleven representative routes passed at 1440x1000 and 390x844 with jQuery 3.7.1, one module bundle, no console errors, no failed local assets, and no horizontal overflow. Explicit mobile-desktop-mobile author-menu and navigation shrink-expand transitions also passed.
 - Charts, maps, news filters, the publication braid, research explorers, mobile menus, sticky desktop sidebars, downloads, and responsive video behavior were exercised successfully.
 - Core typography, colors, masthead geometry, content grid, sidebar geometry, and link colors match the baseline. Visible differences are limited to the intentional persistent/multi-item navigation improvement and corrected footer spacing that removes short-page overlap.
 - `.RData` and `todo` retained their exact pre-existing diff hash and remain unstaged.

@@ -17,21 +17,22 @@ function updateNav() {
     : $nav.width() - $btn.width() - 30;
 
   if ($vlinks.width() > availableSpace) {
+    $btn.removeClass("hidden");
+    availableSpace = $nav.width() - $btn.width() - 30;
+
     while (
       $vlinks.width() > availableSpace &&
       $vlinks.children(":not(.persist)").length > 0
     ) {
       breaks.push($vlinks.width());
       $vlinks.children(":not(.persist)").last().prependTo($hlinks);
-      availableSpace = $btn.hasClass("hidden")
-        ? $nav.width()
-        : $nav.width() - $btn.width() - 30;
-      $btn.removeClass("hidden");
+      availableSpace = $nav.width() - $btn.width() - 30;
     }
   } else {
     while (
       breaks.length > 0 &&
-      availableSpace > breaks[breaks.length - 1]
+      (breaks.length === 1 ? $nav.width() : availableSpace) >
+        breaks[breaks.length - 1]
     ) {
       if ($vlinksPersistTail.length > 0) {
         $hlinks.children().first().insertBefore($vlinksPersistTail);

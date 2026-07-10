@@ -7,6 +7,7 @@
 
 $(function () {
   const authorMenuButton = $(".author__urls-wrapper button");
+  const authorLinks = $(".author__urls");
   let didResize = false;
 
   const updateFooterSpacing = function () {
@@ -14,12 +15,10 @@ $(function () {
     $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
   };
 
-  const restoreAuthorLinks = function () {
-    if (
-      authorMenuButton.css("display") === "none" &&
-      $(".author__urls.social-icons").css("display") === "none"
-    ) {
-      $(".author__urls").css("display", "block");
+  const syncAuthorLinks = function () {
+    authorLinks.stop(true, true).removeAttr("style");
+    if (authorMenuButton.css("display") !== "none") {
+      authorMenuButton.removeClass("open");
     }
   };
 
@@ -27,7 +26,7 @@ $(function () {
 
   $(window).on("resize", function () {
     didResize = true;
-    restoreAuthorLinks();
+    syncAuthorLinks();
   });
 
   window.setInterval(function () {
@@ -38,7 +37,7 @@ $(function () {
   }, 250);
 
   authorMenuButton.on("click", function () {
-    $(".author__urls").stop(true, true).fadeToggle("fast");
+    authorLinks.stop(true, true).fadeToggle("fast");
     $(this).toggleClass("open");
   });
 });

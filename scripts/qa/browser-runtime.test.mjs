@@ -85,7 +85,7 @@ test("dynamic footer spacing replaces the static Sass fallback", async () => {
   );
 });
 
-test("the author menu follows its CSS breakpoint", async () => {
+test("the author menu defers breakpoint state to CSS", async () => {
   const mainScript = await source("assets/js/_main.js");
 
   assert.doesNotMatch(mainScript, /\bscssLarge\b|\b925\b|\$\(window\)\.width\(\)/);
@@ -93,7 +93,7 @@ test("the author menu follows its CSS breakpoint", async () => {
     mainScript,
     /const authorMenuButton = \$\("\.author__urls-wrapper button"\)/,
   );
-  assert.match(mainScript, /authorMenuButton\.css\("display"\) === "none"/);
+  assert.match(mainScript, /authorLinks\.stop\(true, true\)\.removeAttr\("style"\)/);
 });
 
 test("the npm test command does not depend on shell glob expansion", async () => {
@@ -101,8 +101,16 @@ test("the npm test command does not depend on shell glob expansion", async () =>
 
   assert.equal(
     packageDefinition.scripts.test,
-    "node --test scripts/qa/build-js.test.mjs scripts/qa/browser-runtime.test.mjs && npm run check:js",
+    "node --test scripts/qa/browser-behavior.test.mjs scripts/qa/browser-runtime.test.mjs scripts/qa/build-js.test.mjs && npm run check:js",
   );
+});
+
+test("the Pages artifact excludes build-only infrastructure", async () => {
+  const config = await source("_config.yml");
+
+  assert.match(config, /^\s+- "\*_artifacts"$/m);
+  assert.match(config, /^\s+- package-lock\.json$/m);
+  assert.match(config, /^\s+- scripts$/m);
 });
 
 test("the Pages workflow installs and verifies the locked JavaScript bundle", async () => {

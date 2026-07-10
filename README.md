@@ -66,9 +66,11 @@ The shared browser bundle follows the AcademicPages v0.9 asset model with local 
 - `npm run build:js` builds the committed `assets/js/main.min.js` module.
 - `npm run check:js` verifies the committed bundle without rewriting it.
 - `npm run watch:js` rebuilds when the two shared JavaScript sources change.
-- `npm test` runs the asset-contract tests and bundle verification.
+- `npm test` runs the asset-contract tests, executable responsive-state regressions, and bundle verification.
 
 The deterministic builder reads jQuery `3.7.1`, greedy navigation, and the shared site interactions in a fixed order. GitHub Actions runs `npm ci` and `npm run check:js` before the Jekyll build, so source and generated bundle cannot drift.
+
+Jekyll excludes `package-lock.json`, `scripts/`, and root `*_artifacts` directories from `_site`. They are development inputs or ignored local analysis output, not deployable website assets.
 
 ## Styling Architecture
 

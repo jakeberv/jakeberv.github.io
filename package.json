@@ -23,6 +23,6 @@
     "build:js": "node scripts/build-js.mjs",
     "check:js": "node scripts/build-js.mjs --check",
     "watch:js": "onchange \"assets/js/_main.js\" \"assets/js/plugins/jquery.greedy-navigation.js\" -- npm run build:js",
-    "test": "node --test scripts/qa/build-js.test.mjs scripts/qa/browser-runtime.test.mjs && npm run check:js"
+    "test": "node --test scripts/qa/browser-behavior.test.mjs scripts/qa/browser-runtime.test.mjs scripts/qa/build-js.test.mjs && npm run check:js"
   }
 }

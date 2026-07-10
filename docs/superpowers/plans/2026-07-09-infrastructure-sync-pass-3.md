@@ -27,7 +27,8 @@ published: false
 
 ### Task 1: Capture the Phase 2 baseline
 
-- [x] Build the site and save the 243-route manifest, generated stylesheet, legacy bundle, screenshots, and layout metrics under `/tmp/academicpages-phase3-baseline`.
+- [x] Build the site and save the route manifest, generated stylesheet, legacy bundle, screenshots, and layout metrics under `/tmp/academicpages-phase3-baseline`.
+- [x] Establish 241 HTML routes as the clean-checkout baseline; identify the two extra local routes as output from a git-ignored root `*_artifacts` directory.
 - [x] Confirm the generated site has zero direct image-file links.
 - [x] Confirm `.RData` and `todo` are the only pre-existing working-tree changes.
 
@@ -41,6 +42,7 @@ published: false
 ### Task 3: Migrate the shared browser runtime
 
 - [x] Add red tests for module delivery, persistent navigation, plugin removal, and native CSS parity.
+- [x] Add executable regression tests for mobile-desktop-mobile author-menu state and greedy-navigation shrink-expand transitions.
 - [x] Update shared interactions and greedy navigation for jQuery 3.7.1 without adopting upstream theme or 70px layout assumptions.
 - [x] Remove vendored jQuery and the four obsolete plugin layers.
 - [x] Add native scrolling, reduced-motion, sticky positioning, and responsive-video parity.
@@ -48,13 +50,14 @@ published: false
 ### Task 4: Enforce and document the contract
 
 - [x] Add a red workflow test, then make the Pages build run `npm ci` and `npm run check:js` under Node 20.
+- [x] Exclude package metadata, build scripts, and ignored root `*_artifacts` directories from the generated Pages artifact.
 - [x] Update repository and agent architecture documentation.
 - [x] Record adopted upstream behavior, local hardening, exclusions, and deferred phases.
 
 ### Task 5: Complete regression verification and handoff
 
 - [x] Run npm tests, bundle checks, dependency audit, workflow parsing, and the full safe Jekyll build.
-- [x] Compare routes, screenshots, and computed layout metrics with the saved baseline; classify every visible delta as an intentional improvement or a regression to fix.
+- [x] Compare the 241 clean routes, screenshots, and computed layout metrics with the saved baseline; classify every visible delta as an intentional improvement or a regression to fix.
 - [x] Exercise representative pages and interactions at desktop and mobile viewports.
 - [x] Run `git diff --check`, audit changed paths, and confirm `.RData` and `todo` remain untouched and unstaged.
 - [x] Prepare the required `Commit locally? (yes/no)` and `Push to remote? (yes/no)` handoff prompts.
