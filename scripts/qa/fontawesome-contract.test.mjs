@@ -11,11 +11,22 @@ function read(relativePath) {
   return readFileSync(path.join(repoRoot, relativePath), "utf8");
 }
 
-function trackedSiteMarkup() {
-  return execFileSync("git", ["ls-files", "-z", "--", "*.html", "*.md"], {
-    cwd: repoRoot,
-    encoding: "utf8",
-  })
+function trackedSiteMarkup(runGit = execFileSync) {
+  let trackedFiles;
+
+  try {
+    trackedFiles = runGit("git", ["ls-files", "-z", "--", "*.html", "*.md"], {
+      cwd: repoRoot,
+      encoding: "utf8",
+    });
+  } catch (error) {
+    const detail = error instanceof Error ? error.message : String(error);
+    assert.fail(
+      `Font Awesome contract requires the git executable and a Git working tree; git ls-files failed: ${detail}`,
+    );
+  }
+
+  return trackedFiles
     .split("\0")
     .filter(Boolean)
     .filter((file) => /^(?:_includes|_layouts|_pages|_publications|_news|_research|_collaborators)\//.test(file));
@@ -24,6 +35,17 @@ function trackedSiteMarkup() {
 function classAttributes(source) {
   return Array.from(source.matchAll(/class\s*=\s*(["'])([\s\S]*?)\1/g), (match) => match[2]);
 }
+
+test("site markup discovery explains its Git working-tree requirement", () => {
+  assert.throws(
+    () => trackedSiteMarkup(() => {
+      const error = new Error("spawn git ENOENT");
+      error.code = "ENOENT";
+      throw error;
+    }),
+    /Font Awesome contract requires the git executable and a Git working tree/,
+  );
+});
 
 test("Font Awesome 6 is compiled as a standalone solid-and-brands stylesheet", () => {
   const entryPath = "assets/css/fontawesome.scss";
