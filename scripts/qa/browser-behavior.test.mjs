@@ -14,6 +14,160 @@ async function source(filePath) {
   return readFile(path.join(repositoryRoot, filePath), "utf8");
 }
 
+async function runThemeRuntime(localStorage) {
+  const rootAttributes = new Map();
+  const toggleAttributes = new Map();
+  const iconClasses = new Set(["fas", "fa-sun"]);
+  const toggleHandlers = {};
+  const events = [];
+  const authorButton = {};
+  const authorLinks = {};
+  const body = {};
+  const footer = {};
+
+  const documentElement = {
+    getAttribute(name) {
+      return rootAttributes.get(name) || null;
+    },
+    removeAttribute(name) {
+      rootAttributes.delete(name);
+    },
+    setAttribute(name, value) {
+      rootAttributes.set(name, value);
+    },
+  };
+  const toggle = {
+    addEventListener(name, handler) {
+      toggleHandlers[name] = handler;
+    },
+    setAttribute(name, value) {
+      toggleAttributes.set(name, value);
+    },
+  };
+  const icon = {
+    classList: {
+      toggle(name, force) {
+        if (force) iconClasses.add(name);
+        else iconClasses.delete(name);
+      },
+    },
+  };
+  const meta = {
+    setAttribute(name, value) {
+      this[name] = value;
+    },
+  };
+  const document = {
+    documentElement,
+    getElementById(id) {
+      if (id === "theme-toggle") return toggle;
+      if (id === "theme-icon") return icon;
+      return null;
+    },
+    querySelector(selector) {
+      return selector === 'meta[name="theme-color"]' ? meta : null;
+    },
+  };
+  const windowObject = {
+    dispatchEvent(event) {
+      events.push(event);
+    },
+    getComputedStyle() {
+      return {
+        getPropertyValue() {
+          return rootAttributes.get("data-theme") === "dark" ? "#2f3337" : "#ffffff";
+        },
+      };
+    },
+    localStorage,
+    setInterval() {},
+  };
+
+  function collection(element) {
+    return {
+      css() { return this; },
+      on() { return this; },
+      outerHeight() { return 100; },
+      removeAttr() { return this; },
+      removeClass() { return this; },
+      stop() { return this; },
+      toggleClass() { return this; },
+    };
+  }
+
+  function $(target) {
+    if (typeof target === "function") {
+      target();
+      return undefined;
+    }
+    if (target === windowObject) return collection(windowObject);
+    if (target === ".author__urls-wrapper button") return collection(authorButton);
+    if (target === ".author__urls") return collection(authorLinks);
+    if (target === "body") return collection(body);
+    if (target === ".page__footer") return collection(footer);
+    throw new Error(`Unexpected selector: ${String(target)}`);
+  }
+
+  class CustomEvent {
+    constructor(type, options) {
+      this.type = type;
+      this.detail = options.detail;
+    }
+  }
+
+  vm.runInNewContext(await source("assets/js/_main.js"), {
+    $,
+    CustomEvent,
+    document,
+    window: windowObject,
+  });
+
+  return {
+    documentElement,
+    events,
+    iconClasses,
+    meta,
+    rootAttributes,
+    toggleAttributes,
+    toggleHandlers,
+  };
+}
+
+test("the theme runtime starts light, persists explicit changes, and announces them", async () => {
+  const saved = new Map();
+  const runtime = await runThemeRuntime({
+    getItem(key) { return saved.get(key) || null; },
+    setItem(key, value) { saved.set(key, value); },
+  });
+
+  assert.equal(runtime.rootAttributes.has("data-theme"), false);
+  assert.equal(runtime.toggleAttributes.get("aria-pressed"), "false");
+  assert.equal(runtime.meta.content, "#ffffff");
+
+  runtime.toggleHandlers.click();
+  assert.equal(runtime.rootAttributes.get("data-theme"), "dark");
+  assert.equal(saved.get("theme"), "dark");
+  assert.equal(runtime.toggleAttributes.get("aria-pressed"), "true");
+  assert.equal(runtime.iconClasses.has("fa-moon"), true);
+  assert.equal(runtime.events.at(-1).detail.theme, "dark");
+
+  runtime.toggleHandlers.click();
+  assert.equal(runtime.rootAttributes.has("data-theme"), false);
+  assert.equal(saved.get("theme"), "light");
+  assert.equal(runtime.events.at(-1).detail.theme, "light");
+});
+
+test("the theme toggle remains usable when local storage is unavailable", async () => {
+  const runtime = await runThemeRuntime({
+    getItem() { throw new Error("blocked"); },
+    setItem() { throw new Error("blocked"); },
+  });
+
+  assert.equal(runtime.rootAttributes.has("data-theme"), false);
+  runtime.toggleHandlers.click();
+  assert.equal(runtime.rootAttributes.get("data-theme"), "dark");
+});
+
 test("the author menu returns to its closed mobile state after a breakpoint round trip", async () => {
   const handlers = { button: {}, window: {} };
   const state = {
@@ -25,7 +179,21 @@ test("the author menu returns to its closed mobile state after a breakpoint roun
   const linksElement = {};
   const bodyElement = {};
   const footerElement = {};
-  const windowObject = { setInterval() {} };
+  const documentElement = {
+    getAttribute() { return null; },
+    removeAttribute() {},
+    setAttribute() {},
+  };
+  const documentObject = {
+    documentElement,
+    getElementById() { return null; },
+    querySelector() { return null; },
+  };
+  const windowObject = {
+    dispatchEvent() {},
+    localStorage: { getItem() { return null; }, setItem() {} },
+    setInterval() {},
+  };
 
   function display(element) {
     if (element === buttonElement) {
@@ -106,6 +274,8 @@ test("the author menu returns to its closed mobile state after a breakpoint roun
 
   vm.runInNewContext(await source("assets/js/_main.js"), {
     $,
+    CustomEvent: class CustomEvent {},
+    document: documentObject,
     window: windowObject,
   });
 
@@ -238,7 +408,7 @@ test("greedy navigation reserves button space and restores the final hidden item
     if (target === windowObject) return windowApi;
     if (target === button) return buttonApi;
     if (target === "#site-nav") return navApi;
-    if (target === "#site-nav button") return buttonApi;
+    if (target === "#site-nav > .greedy-nav__toggle") return buttonApi;
     if (target === "#site-nav .visible-links") return visibleApi;
     if (target === "#site-nav .hidden-links") return hiddenApi;
     throw new Error(`Unexpected selector: ${String(target)}`);

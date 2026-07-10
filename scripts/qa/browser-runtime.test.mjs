@@ -101,7 +101,7 @@ test("the npm test command does not depend on shell glob expansion", async () =>
 
   assert.equal(
     packageDefinition.scripts.test,
-    "node --test scripts/qa/browser-behavior.test.mjs scripts/qa/browser-runtime.test.mjs scripts/qa/build-js.test.mjs && npm run check:js",
+    "node --test scripts/qa/browser-behavior.test.mjs scripts/qa/browser-runtime.test.mjs scripts/qa/build-js.test.mjs scripts/qa/theme-contract.test.mjs && npm run check:js",
   );
 });
 
@@ -113,11 +113,12 @@ test("the Pages artifact excludes build-only infrastructure", async () => {
   assert.match(config, /^\s+- scripts$/m);
 });
 
-test("the Pages workflow installs and verifies the locked JavaScript bundle", async () => {
+test("the Pages workflow installs and verifies browser and theme contracts", async () => {
   const workflow = await source(".github/workflows/deploy_site.yml");
 
   assert.match(workflow, /node-version:\s*"20"/);
   assert.match(workflow, /cache:\s*"npm"/);
   assert.match(workflow, /run:\s*npm ci/);
-  assert.match(workflow, /run:\s*npm run check:js/);
+  assert.match(workflow, /run:\s*npm test/);
+  assert.match(workflow, /run:\s*npm run test:themes/);
 });

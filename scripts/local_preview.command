@@ -8,11 +8,12 @@ FORCE_FULL_BUILD=0
 SKIP_DATA=1
 SAW_SKIP_DATA=0
 SAW_WITH_DATA=0
+THEME=""
 
 usage() {
   cat <<'EOF'
 Usage:
-  ./scripts/local_preview.command [--build-only] [--full-build] [--skip-data|--with-data] [--port PORT]
+  ./scripts/local_preview.command [--build-only] [--full-build] [--skip-data|--with-data] [--theme NAME] [--port PORT]
 
 Examples:
   ./scripts/local_preview.command
@@ -20,6 +21,7 @@ Examples:
   ./scripts/local_preview.command --full-build
   ./scripts/local_preview.command --skip-data
   ./scripts/local_preview.command --with-data
+  ./scripts/local_preview.command --theme air
   ./scripts/local_preview.command --port 4010
 EOF
 }
@@ -53,6 +55,15 @@ while [[ $# -gt 0 ]]; do
       fi
       shift 2
       ;;
+    --theme)
+      THEME="${2:-}"
+      if [[ -z "$THEME" ]]; then
+        echo "Missing value for --theme"
+        usage
+        exit 2
+      fi
+      shift 2
+      ;;
     -h|--help)
       usage
       exit 0
@@ -64,6 +75,16 @@ while [[ $# -gt 0 ]]; do
       ;;
   esac
 done
+
+case "$THEME" in
+  ""|default|air|sunrise|mint|dirt|contrast)
+    ;;
+  *)
+    echo "Unsupported theme: $THEME"
+    echo "Choose one of: default, air, sunrise, mint, dirt, contrast"
+    exit 2
+    ;;
+esac
 
 if [[ "$SAW_SKIP_DATA" -eq 1 && "$SAW_WITH_DATA" -eq 1 ]]; then
   echo "Cannot combine --skip-data and --with-data."
@@ -229,7 +250,19 @@ else
   done
 fi
 
-BUILD_ARGS=(--safe --config _config.yml,_config.dev.yml)
+CONFIG_FILES="_config.yml,_config.dev.yml"
+THEME_CONFIG=""
+if [[ -n "$THEME" ]]; then
+  THEME_CONFIG_BASE="$(mktemp "${TMPDIR:-/tmp}/academicpages-theme.XXXXXX")"
+  THEME_CONFIG="${THEME_CONFIG_BASE}.yml"
+  mv "$THEME_CONFIG_BASE" "$THEME_CONFIG"
+  printf 'site_theme: "%s"\n' "$THEME" > "$THEME_CONFIG"
+  CONFIG_FILES="$CONFIG_FILES,$THEME_CONFIG"
+  trap 'rm -f "$THEME_CONFIG"' EXIT
+  echo "Using build-time theme: $THEME"
+fi
+
+BUILD_ARGS=(--safe --config "$CONFIG_FILES")
 BUILD_CMD=("${BUNDLE_CMD[@]}" exec jekyll build "${BUILD_ARGS[@]}")
 INCREMENTAL_BUILD_CMD=("${BUILD_CMD[@]}" --incremental)
 

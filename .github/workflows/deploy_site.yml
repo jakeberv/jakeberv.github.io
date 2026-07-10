@@ -34,8 +34,8 @@ jobs:
       - name: Install JavaScript dependencies
         run: npm ci
 
-      - name: Verify committed JavaScript bundle
-        run: npm run check:js
+      - name: Run browser asset and theme contract tests
+        run: npm test
 
       - name: Validate _news geo front matter
         run: node scripts/qa/validate-news-geo.mjs
@@ -65,6 +65,9 @@ jobs:
         with:
           ruby-version: "3.3"
           bundler-cache: true
+
+      - name: Verify all supported theme builds
+        run: npm run test:themes
 
       - name: Build site
         run: bundle exec jekyll build --safe --config _config.yml
