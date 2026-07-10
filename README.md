@@ -57,6 +57,24 @@ Optional:
 
 By default, local preview skips geo/impact data regeneration and uses Jekyll incremental builds for faster iteration. If incremental fails, the script automatically retries once with a full rebuild.
 
+## Styling Architecture
+
+The site uses the AcademicPages v0.9 Sass layering model while retaining its established light appearance and legacy browser bundle:
+
+- `_sass/_themes.scss` contains typography, breakpoints, grid settings, and shared brand colors.
+- `_sass/theme/_default_light.scss` defines the supported light palette and the 16 `--global-*` theme properties.
+- `_sass/include/` contains reusable Sass mixins and utilities.
+- `_sass/layout/` contains the reset, base, navigation, page, sidebar, and other structural partials.
+- `_sass/_syntax.scss` remains the syntax-highlighting layer.
+- `_sass/_custom.scss` loads last so existing page-specific overrides retain precedence.
+- `assets/css/main.scss` is the Jekyll-rendered stylesheet entry point and retains Font Awesome 5 and Magnific Popup compatibility styles.
+
+`_config.yml` sets `site_theme: "default"`. The default light theme is the only supported value in this phase. Dark-mode activation, alternate palettes, Font Awesome 6, JavaScript modules, and npm modernization are deferred until the custom and page-specific styles have theme-aware color tokens.
+
+Validate the complete styling path with:
+
+- `./scripts/local_preview.command --build-only --full-build --skip-data`
+
 ## UI Experiment Note (Sidebar Rail)
 
 Documented for future iteration; not enabled in current site CSS.

@@ -51,7 +51,12 @@ Notes:
 - Dev overrides: `_config.dev.yml`
 - Layouts: `_layouts/`
 - Includes: `_includes/`
-- Styles: `_sass/` and `assets/css/main.scss`
+- Styles entry point: `assets/css/main.scss`
+- Shared Sass settings: `_sass/_themes.scss`
+- Supported theme: `_sass/theme/_default_light.scss` selected by `site_theme: "default"`
+- Sass helpers: `_sass/include/`
+- Structural Sass: `_sass/layout/`
+- Local style overrides: `_sass/_syntax.scss` and `_sass/_custom.scss`
 - Scripts: `assets/js/`
 - Collections:
   - `_pages/`
@@ -107,8 +112,12 @@ Notes:
   - Manual scripts:
 
 ## 7) Styling and UX notes
-- Theme baseline:
-- Local overrides:
+- Theme baseline: AcademicPages v0.9 Sass topology with the `default` light theme and 16 core `--global-*` color properties
+- Theme selection: `_config.yml` supports only `site_theme: "default"` until dark-mode activation is implemented
+- Import behavior: `assets/css/main.scss` loads shared settings, the selected light theme, helpers, layout partials, retained Font Awesome 5 and Magnific Popup styles, then `_sass/_custom.scss`
+- Local overrides: `_sass/_custom.scss` and page-specific styles remain light-only and must load after the core theme
+- Compatibility boundary: keep the classic `main.min.js`, current masthead/sidebar behavior, Font Awesome 5 fonts, and Magnific Popup styles until the JavaScript/npm phase
+- Deferred theme work: tokenize custom/page CSS before adding dark mode, alternate palettes, Font Awesome 6, or the upstream theme toggle
 - Page-specific inline styles to keep/avoid:
 - Accessibility notes:
 - Asset delivery notes (for example optimized web-sized assets in `images/` with high-res originals excluded from build via `_config.yml`):
