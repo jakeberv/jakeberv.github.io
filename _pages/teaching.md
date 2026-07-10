@@ -136,6 +136,21 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
+  function themeValue(name, fallback) {
+    var value = window.getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    return value || fallback;
+  }
+
+  function teachingTheme() {
+    return {
+      text: themeValue("--viz-text", "#2e3f51"),
+      grid: themeValue("--viz-grid", "rgba(18, 36, 54, 0.10)"),
+      outline: themeValue("--viz-outline", "rgba(136, 163, 186, 0.48)"),
+      tooltipBackground: themeValue("--viz-tooltip-bg", "rgba(16, 33, 49, 0.95)"),
+      tooltipText: themeValue("--viz-tooltip-text", "#ffffff")
+    };
+  }
+
   var topItems = {{ top_items | jsonify }};
   var questionRows = {{ question_aggregates | jsonify }};
   var overallTeachingMean = Number({{ eval_data.overall.teaching_questions.weighted_mean | jsonify }});
@@ -197,7 +212,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var rightEdge = chart.chartArea ? chart.chartArea.right : 0;
       ctx.save();
       ctx.font = "600 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
-      ctx.fillStyle = "#2f4f6e";
+      ctx.fillStyle = teachingTheme().text;
       ctx.textAlign = "left";
       ctx.textBaseline = "middle";
 
@@ -211,7 +226,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  new Chart(canvas.getContext("2d"), {
+  var chartTheme = teachingTheme();
+  var teachingChart = new Chart(canvas.getContext("2d"), {
     type: "bar",
     data: {
       labels: rows.map(function (r) { return r.label; }),
@@ -240,6 +256,7 @@ document.addEventListener("DOMContentLoaded", function () {
           max: 5,
           ticks: {
             stepSize: 0.5,
+            color: chartTheme.text,
             font: {
               size: 11
             },
@@ -250,13 +267,17 @@ document.addEventListener("DOMContentLoaded", function () {
           },
           title: {
             display: true,
-            text: "Weighted mean score (1-5)"
+            text: "Weighted mean score (1-5)",
+            color: chartTheme.text
+          },
+          grid: {
+            color: chartTheme.grid
           }
         },
         y: {
           ticks: {
             autoSkip: false,
-            color: "#2e3f51",
+            color: chartTheme.text,
             padding: 4,
             font: {
               size: 15,
@@ -264,7 +285,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
           },
           grid: {
-            color: "rgba(18, 36, 54, 0.10)",
+            color: chartTheme.grid,
             drawTicks: false
           }
         }
@@ -274,11 +295,13 @@ document.addEventListener("DOMContentLoaded", function () {
           display: false
         },
         tooltip: {
-          backgroundColor: "rgba(16, 33, 49, 0.95)",
-          borderColor: "rgba(136, 163, 186, 0.48)",
+          backgroundColor: chartTheme.tooltipBackground,
+          borderColor: chartTheme.outline,
           borderWidth: 1,
           cornerRadius: 7,
           bodySpacing: 2,
+          bodyColor: chartTheme.tooltipText,
+          titleColor: chartTheme.tooltipText,
           callbacks: {
             title: function (items) {
               if (!items || items.length === 0) return "";
@@ -298,6 +321,20 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     },
     plugins: [valueLabelPlugin]
+  });
+
+  window.addEventListener("site:themechange", function () {
+    var nextTheme = teachingTheme();
+    teachingChart.options.scales.x.ticks.color = nextTheme.text;
+    teachingChart.options.scales.x.title.color = nextTheme.text;
+    teachingChart.options.scales.x.grid.color = nextTheme.grid;
+    teachingChart.options.scales.y.ticks.color = nextTheme.text;
+    teachingChart.options.scales.y.grid.color = nextTheme.grid;
+    teachingChart.options.plugins.tooltip.backgroundColor = nextTheme.tooltipBackground;
+    teachingChart.options.plugins.tooltip.borderColor = nextTheme.outline;
+    teachingChart.options.plugins.tooltip.bodyColor = nextTheme.tooltipText;
+    teachingChart.options.plugins.tooltip.titleColor = nextTheme.tooltipText;
+    teachingChart.update("none");
   });
 });
 </script>

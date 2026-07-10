@@ -5,7 +5,7 @@
  */
 
 var $nav = $("#site-nav");
-var $btn = $("#site-nav button");
+var $btn = $("#site-nav > .greedy-nav__toggle");
 var $vlinks = $("#site-nav .visible-links");
 var $vlinksPersistTail = $vlinks.children(".persist.tail");
 var $hlinks = $("#site-nav .hidden-links");
@@ -45,6 +45,7 @@ function updateNav() {
     if (breaks.length < 1) {
       $btn.addClass("hidden");
       $btn.removeClass("close");
+      $btn.attr("aria-expanded", "false");
       $hlinks.addClass("hidden");
     }
   }
@@ -61,6 +62,7 @@ if (screen.orientation && screen.orientation.addEventListener) {
 $btn.on("click", function () {
   $hlinks.toggleClass("hidden");
   $(this).toggleClass("close");
+  $(this).attr("aria-expanded", $(this).hasClass("close") ? "true" : "false");
 });
 
 updateNav();

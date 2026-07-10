@@ -4,7 +4,7 @@
 
   if (!window.d3 || !window.topojson) {
     root.innerHTML =
-      '<p style="margin:0.5rem 0 0;color:#7d2a2a;">Map dependencies failed to load. Please refresh.</p>';
+      '<p class="cfp-error">Map dependencies failed to load. Please refresh.</p>';
     return;
   }
 
@@ -209,6 +209,10 @@
 
     window.addEventListener("resize", () => {
       window.requestAnimationFrame(syncPanelHeight);
+    });
+
+    window.addEventListener("site:themechange", () => {
+      render();
     });
 
     svg.node().addEventListener("mouseleave", hideTooltip);

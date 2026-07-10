@@ -82,6 +82,43 @@ const COLORS = {
   geoBar: "#167f76",
 };
 
+function cssThemeValue(name, fallback) {
+  const value = window
+    .getComputedStyle(document.documentElement)
+    .getPropertyValue(name)
+    .trim();
+  return value || fallback;
+}
+
+function currentVisualizationTheme() {
+  return {
+    surface: cssThemeValue("--viz-surface", "#ffffff"),
+    text: cssThemeValue("--viz-text", "#494e52"),
+    muted: cssThemeValue("--viz-text-muted", "#777a7d"),
+    grid: cssThemeValue("--viz-grid", "#e1e7ed"),
+    outline: cssThemeValue("--viz-outline", "#9ba8b4"),
+    tooltipBackground: cssThemeValue("--viz-tooltip-bg", "#17212b"),
+    tooltipText: cssThemeValue("--viz-tooltip-text", "#ffffff"),
+  };
+}
+
+function applyChartThemeDefaults() {
+  if (!window.Chart) return;
+  const theme = currentVisualizationTheme();
+
+  Chart.defaults.color = theme.text;
+  Chart.defaults.borderColor = theme.grid;
+  Chart.defaults.scale.grid.color = theme.grid;
+  Chart.defaults.scale.ticks.color = theme.text;
+  Chart.defaults.scale.title.color = theme.text;
+  Chart.defaults.plugins.legend.labels.color = theme.text;
+  Chart.defaults.plugins.tooltip.backgroundColor = theme.tooltipBackground;
+  Chart.defaults.plugins.tooltip.bodyColor = theme.tooltipText;
+  Chart.defaults.plugins.tooltip.titleColor = theme.tooltipText;
+  Chart.defaults.plugins.tooltip.borderColor = theme.outline;
+  Chart.defaults.plugins.tooltip.borderWidth = 1;
+}
+
 const MIX_BUCKETS = [
   { key: "social", label: "Social", color: COLORS.social, donut: COLORS.donut[0] },
   { key: "news", label: "News", color: COLORS.news, donut: COLORS.donut[1] },
@@ -1845,7 +1882,7 @@ function renderDonut(vm) {
   // Keep chart renderable in edge cases where all segment totals are zero.
   const safeSegments = segments.length
     ? segments
-    : [{ key: "none", label: "No data", value: 1, color: "#c9d5e6" }];
+    : [{ key: "none", label: "No data", value: 1, color: currentVisualizationTheme().outline }];
 
   charts.donut?.destroy();
   charts.donut = new Chart(el.donutChart.getContext("2d"), {
@@ -2075,6 +2112,8 @@ function renderMapFallbackBar(countries, options = {}) {
 }
 
 async function renderMap(vm, token) {
+  const theme = currentVisualizationTheme();
+
   if (token !== renderToken) return;
 
   if (state.mapMode === "citations") {
@@ -2098,7 +2137,7 @@ async function renderMap(vm, token) {
               label: "Citing authors (binned)",
               outline: countries,
               showOutline: true,
-              outlineBackgroundColor: "#f5f7fa",
+              outlineBackgroundColor: theme.surface,
               backgroundColor: COLORS.bubble,
               hoverBackgroundColor: COLORS.bubbleHover,
               data: bubbles,
@@ -2179,7 +2218,7 @@ async function renderMap(vm, token) {
             data: choroplethData,
             backgroundColor: (ctx) => mentionChoroplethColor(toNumber(ctx.raw?.value || 0), minPositive, maxPositive),
             borderColor: (ctx) =>
-              toNumber(ctx.raw?.value || 0) > 0 ? "rgba(52, 90, 130, 0.55)" : "rgba(203, 215, 228, 0.58)",
+              toNumber(ctx.raw?.value || 0) > 0 ? theme.outline : theme.grid,
             borderWidth: 0.6,
           },
         ],
@@ -2816,6 +2855,7 @@ async function boot() {
   reachMetadataRaw = reachMetadataData && typeof reachMetadataData === "object" ? reachMetadataData : {};
   dataModel = normalizeData(rawDashboard, reachMentionsRaw, reachMetadataRaw);
 
+  applyChartThemeDefaults();
   initControls();
   renderDownloadLinks();
   renderMethod();
@@ -2826,8 +2866,13 @@ async function boot() {
   });
 }
 
+window.addEventListener("site:themechange", () => {
+  applyChartThemeDefaults();
+  if (dataModel) void renderAll();
+});
+
 boot().catch((err) => {
   console.error(err);
-  root.innerHTML = `<pre style="padding:1rem;color:#900">${safeText(err.message || String(err))}</pre>`;
+  root.innerHTML = `<pre class="impact-dashboard__error">${safeText(err.message || String(err))}</pre>`;
 });
 })();
