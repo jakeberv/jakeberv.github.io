@@ -29,6 +29,16 @@ test("the shared bundle is delivered as a module and the logo stays visible", as
   );
 });
 
+test("Staticman waits for the module bundle before using jQuery", async () => {
+  const staticman = await source("_includes/comments-providers/staticman.html");
+
+  assert.match(
+    staticman,
+    /document\.addEventListener\("DOMContentLoaded", function \(\) \{/,
+  );
+  assert.match(staticman, /\}\)\(window\.jQuery\);/);
+});
+
 test("legacy plugin sources and Sass integration are removed", async () => {
   const removedPaths = [
     "assets/js/vendor/jquery/jquery-1.12.4.min.js",
@@ -84,6 +94,15 @@ test("the author menu follows its CSS breakpoint", async () => {
     /const authorMenuButton = \$\("\.author__urls-wrapper button"\)/,
   );
   assert.match(mainScript, /authorMenuButton\.css\("display"\) === "none"/);
+});
+
+test("the npm test command does not depend on shell glob expansion", async () => {
+  const packageDefinition = JSON.parse(await source("package.json"));
+
+  assert.equal(
+    packageDefinition.scripts.test,
+    "node --test scripts/qa/build-js.test.mjs scripts/qa/browser-runtime.test.mjs && npm run check:js",
+  );
 });
 
 test("the Pages workflow installs and verifies the locked JavaScript bundle", async () => {

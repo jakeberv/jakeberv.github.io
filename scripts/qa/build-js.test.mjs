@@ -31,3 +31,13 @@ test("verifyBundle rejects stale output without rewriting it", async () => {
     await rm(directory, { recursive: true, force: true });
   }
 });
+
+test("verifyBundle preserves non-missing output read errors", async () => {
+  const directory = await mkdtemp(path.join(tmpdir(), "phase3-js-bundle-"));
+
+  try {
+    await assert.rejects(verifyBundle(directory), { code: "EISDIR" });
+  } finally {
+    await rm(directory, { recursive: true, force: true });
+  }
+});

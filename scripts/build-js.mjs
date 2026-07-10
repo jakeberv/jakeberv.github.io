@@ -39,10 +39,22 @@ export async function generateBundle() {
   return `${result.code}\n`;
 }
 
+async function readCommittedBundle(candidatePath) {
+  try {
+    return await readFile(candidatePath, "utf8");
+  } catch (error) {
+    if (error.code === "ENOENT") {
+      return "";
+    }
+
+    throw error;
+  }
+}
+
 export async function verifyBundle(candidatePath = outputPath) {
   const [generated, committed] = await Promise.all([
     generateBundle(),
-    readFile(candidatePath, "utf8").catch(() => ""),
+    readCommittedBundle(candidatePath),
   ]);
 
   if (generated !== committed) {
