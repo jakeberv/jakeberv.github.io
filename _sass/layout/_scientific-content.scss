@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Scientific content
+   ========================================================================== */
+
+.scientific-content {
+  clear: both;
+  margin: 1.5em 0;
+  color: var(--site-text-strong);
+}
+
+.scientific-content--mermaid {
+  overflow-x: auto;
+  text-align: center;
+}
+
+.scientific-content--mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.scientific-content--plotly {
+  width: 100%;
+  min-height: 320px;
+}
+
+.scientific-content--error {
+  padding: 0.75em 1em;
+  border: 1px solid var(--site-border-subtle);
+  border-radius: $border-radius;
+  background-color: var(--site-surface-muted);
+  color: var(--site-text-strong);
+  font-size: $type-size-6;
+}
+
+mjx-container {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  color: inherit;
+}
+
+@media print {
+  .scientific-content,
+  .scientific-content--error,
+  mjx-container {
+    background: #fff !important;
+    color: #000 !important;
+  }
+}

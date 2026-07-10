@@ -152,6 +152,7 @@ exclude:
   - LICENSE
   - README
   - Rakefile
+  - assets/js/_scientific-content.js
   - assets/js/_main.js
   - assets/js/plugins
   - assets/js/vendor

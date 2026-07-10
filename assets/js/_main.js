@@ -99,6 +99,9 @@ $(function () {
   let didResize = false;
 
   initializeTheme();
+  if (typeof initializeScientificContent === "function") {
+    initializeScientificContent();
+  }
 
   const updateFooterSpacing = function () {
     $("body").css("padding-bottom", "0");

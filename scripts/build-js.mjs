@@ -11,6 +11,7 @@ const outputPath = path.join(repositoryRoot, "assets/js/main.min.js");
 const sourcePaths = [
   "node_modules/jquery/dist/jquery.min.js",
   "assets/js/plugins/jquery.greedy-navigation.js",
+  "assets/js/_scientific-content.js",
   "assets/js/_main.js",
 ];
 
