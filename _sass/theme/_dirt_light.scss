@@ -1,0 +1,34 @@
+/* Dirt light palette, adopted from AcademicPages v0.9. */
+$active-light-theme: (
+  base: #343434,
+  background: #f3f3f3,
+  footer: #e9dcbe,
+  border: #d7c8aa,
+  border-strong: #8e8b82,
+  code-background: #fff,
+  code-text: #202020,
+  caption: #64615b,
+  link: #343434,
+  link-hover: #181818,
+  link-visited: #5d5a54,
+  masthead-link: #343434,
+  masthead-link-hover: #64615b,
+  text: #343434,
+  text-light: #64615b,
+  thead: #eee7d7,
+  selection-background: #ddceb0,
+  selection-text: #202020,
+  danger: #a83d3d,
+  warning: #8b6200,
+  success: #3f7730,
+  info: #41658e
+);
+
+:root {
+  @include emit-theme-properties($active-light-theme);
+}
+
+.page__footer-follow .social-icons i:not(.fa-rss-square),
+.page__footer-follow .social-icons .svg-inline--fa:not(.fa-rss-square) {
+  color: inherit;
+}

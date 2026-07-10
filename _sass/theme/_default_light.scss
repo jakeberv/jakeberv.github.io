@@ -2,53 +2,31 @@
    DEFAULT LIGHT THEME
    ========================================================================== */
 
-/* Sass variables retained for notices, mixins, and local custom styles. */
-$gray                       : #7a8288;
-$dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : mix(#fff, $gray, 50%);
-$lighter-gray               : mix(#fff, $gray, 90%);
-
-$body-color                 : #fff;
-$background-color           : #fff;
-$code-background-color      : #fafafa;
-$code-background-color-dark : $light-gray;
-$text-color                 : $dark-gray;
-$border-color               : $lighter-gray;
-
-$primary-color              : #7a8288;
-$success-color              : #62c462;
-$warning-color              : #f89406;
-$danger-color               : #ee5f5b;
-$info-color                 : #2979ab;
-
-$link-color                 : $info-color;
-$link-color-hover           : mix(#000, $link-color, 25%);
-$link-color-visited         : mix(#fff, $link-color, 25%);
-$masthead-link-color        : $primary-color;
-$masthead-link-color-hover  : mix(#fff, $link-color, 25%);
-
-$border-radius              : 4px;
-$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
-$navicon-width              : 28px;
-$navicon-height             : 4px;
-$global-transition          : all 0.2s ease-in-out;
+$active-light-theme: (
+    base: #7a8288,
+    background: #fff,
+    footer: #f2f3f3,
+    border: #f2f3f3,
+    border-strong: #bdc1c4,
+    code-background: #fafafa,
+    code-text: #494e52,
+    caption: #6f7478,
+    link: #2979ab,
+    link-hover: #1f5b80,
+    link-visited: #457c9e,
+    masthead-link: #5d646a,
+    masthead-link-hover: #2979ab,
+    text: #494e52,
+    text-light: #6f7478,
+    thead: #f2f3f3,
+    selection-background: #b3d4fc,
+    selection-text: #494e52,
+    danger: #ee5f5b,
+    warning: #f89406,
+    success: #62c462,
+    info: #2979ab
+);
 
 :root {
-  --global-base-color: #7a8288;
-  --global-bg-color: #fff;
-  --global-footer-bg-color: #f2f3f3;
-  --global-border-color: #f2f3f3;
-  --global-dark-border-color: #bdc1c4;
-  --global-code-background-color: #fafafa;
-  --global-code-text-color: #494e52;
-  --global-fig-caption-color: #777a7d;
-  --global-link-color: #2979ab;
-  --global-link-color-hover: #1f5b80;
-  --global-link-color-visited: #5f9bc0;
-  --global-masthead-link-color: #7a8288;
-  --global-masthead-link-color-hover: #2979ab;
-  --global-text-color: #494e52;
-  --global-text-color-light: #9ba1a6;
-  --global-thead-color: #f2f3f3;
+  @include emit-theme-properties($active-light-theme);
 }

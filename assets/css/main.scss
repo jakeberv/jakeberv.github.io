@@ -10,6 +10,8 @@
   "vendor/breakpoint/breakpoint",
   "themes",
   "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
+  "theme/compile_aliases",
+  "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
   "include/mixins",
   "vendor/susy/susy",
   "layout/reset",

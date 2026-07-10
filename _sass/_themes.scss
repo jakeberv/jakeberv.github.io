@@ -45,6 +45,128 @@ $type-size-syntax           : 0.875em;  // ~14px
 
 
 /*
+   Shared structural settings
+   ========================================================================== */
+
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$global-transition          : all 0.2s ease-in-out;
+
+
+/*
+   Runtime theme property emitter
+   ========================================================================== */
+
+@function readable-on($color) {
+  @if lightness($color) > 45% {
+    @return #000;
+  }
+
+  @return #fff;
+}
+
+@mixin emit-theme-properties($theme, $mode: light) {
+  $base: map-get($theme, base);
+  $background: map-get($theme, background);
+  $footer: map-get($theme, footer);
+  $border: map-get($theme, border);
+  $border-strong: map-get($theme, border-strong);
+  $code-background: map-get($theme, code-background);
+  $code-text: map-get($theme, code-text);
+  $caption: map-get($theme, caption);
+  $link: map-get($theme, link);
+  $link-contrast: if(map-has-key($theme, link-contrast), map-get($theme, link-contrast), readable-on($link));
+  $link-hover: map-get($theme, link-hover);
+  $link-visited: map-get($theme, link-visited);
+  $masthead-link: map-get($theme, masthead-link);
+  $masthead-link-hover: map-get($theme, masthead-link-hover);
+  $text: map-get($theme, text);
+  $text-light: map-get($theme, text-light);
+  $thead: map-get($theme, thead);
+  $selection-background: map-get($theme, selection-background);
+  $selection-text: map-get($theme, selection-text);
+  $danger: map-get($theme, danger);
+  $warning: map-get($theme, warning);
+  $success: map-get($theme, success);
+  $info: map-get($theme, info);
+  $raised-weight: if($mode == dark, 8%, 3%);
+  $muted-weight: if($mode == dark, 12%, 6%);
+  $accent-weight: if($mode == dark, 22%, 12%);
+  $shadow-alpha: if($mode == dark, 0.48, 0.16);
+  $tooltip-background: if($mode == dark, mix(#fff, $background, 12%), mix(#000, $background, 88%));
+  $tooltip-text: if($mode == dark, $text, #fff);
+
+  --global-base-color: #{$base};
+  --global-bg-color: #{$background};
+  --global-footer-bg-color: #{$footer};
+  --global-border-color: #{$border};
+  --global-dark-border-color: #{$border-strong};
+  --global-code-background-color: #{$code-background};
+  --global-code-text-color: #{$code-text};
+  --global-fig-caption-color: #{$caption};
+  --global-link-color: #{$link};
+  --global-link-color-hover: #{$link-hover};
+  --global-link-color-visited: #{$link-visited};
+  --global-masthead-link-color: #{$masthead-link};
+  --global-masthead-link-color-hover: #{$masthead-link-hover};
+  --global-text-color: #{$text};
+  --global-text-color-light: #{$text-light};
+  --global-thead-color: #{$thead};
+  --global-toc-bg-color: #{$code-background};
+  --global-selection-bg-color: #{$selection-background};
+  --global-selection-text-color: #{$selection-text};
+
+  --site-surface-raised: #{mix($text, $background, $raised-weight)};
+  --site-surface-muted: #{mix($text, $background, $muted-weight)};
+  --site-surface-accent: #{mix($base, $background, $accent-weight)};
+  --site-surface-overlay: #{rgba($background, 0.96)};
+  --site-text-strong: #{$text};
+  --site-text-muted: #{$caption};
+  --site-text-subtle: #{mix($background, $text, 30%)};
+  --site-border-subtle: #{$border};
+  --site-border-strong: #{$border-strong};
+  --site-focus-ring: #{$link};
+  --site-link-contrast: #{$link-contrast};
+  --site-shadow-color: #{rgba(#000, $shadow-alpha)};
+  --site-control-bg: #{mix($text, $background, $raised-weight)};
+  --site-control-bg-hover: #{mix($base, $background, $accent-weight)};
+  --site-control-bg-active: #{mix($base, $background, 24%)};
+  --site-control-text: #{$text};
+  --site-control-border: #{mix($text, $background, 64%)};
+  --site-danger-color: #{$danger};
+  --site-danger-contrast: #{readable-on($danger)};
+  --site-warning-color: #{$warning};
+  --site-warning-contrast: #{readable-on($warning)};
+  --site-success-color: #{$success};
+  --site-success-contrast: #{readable-on($success)};
+  --site-info-color: #{$info};
+  --site-info-contrast: #{readable-on($info)};
+  --site-base-contrast: #{readable-on($base)};
+
+  --viz-surface: #{mix($text, $background, $raised-weight)};
+  --viz-text: #{$text};
+  --viz-text-muted: #{$caption};
+  --viz-grid: #{$border};
+  --viz-outline: #{$border-strong};
+  --viz-tooltip-bg: #{$tooltip-background};
+  --viz-tooltip-text: #{$tooltip-text};
+  --viz-selection-stroke: #{$link};
+
+  --syntax-comment: #{$caption};
+  --syntax-error: #{$danger};
+  --syntax-keyword: #{$link};
+  --syntax-literal: #{$code-text};
+  --syntax-operator: #{$warning};
+  --syntax-number: #{$info};
+  --syntax-string: #{$success};
+  --syntax-attribute: #{$warning};
+  --syntax-decorator: #{$link-visited};
+}
+
+
+/*
    Brand colors
    ========================================================================== */
 

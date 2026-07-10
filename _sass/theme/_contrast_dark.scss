@@ -1,0 +1,35 @@
+/* High-contrast dark palette, adopted from AcademicPages v0.9. */
+$contrast-dark-theme: (
+  base: #ff776d,
+  background: #000,
+  footer: #000,
+  border: #4d4d4d,
+  border-strong: #808080,
+  code-background: #1a1a1a,
+  code-text: #f2f2f2,
+  caption: #d9d9d9,
+  link: #96cbfe,
+  link-hover: #d0d0ff,
+  link-visited: #ff91fd,
+  masthead-link: #fff,
+  masthead-link-hover: #ff776d,
+  text: #fff,
+  text-light: #d9d9d9,
+  thead: #2a2a2a,
+  selection-background: #264f78,
+  selection-text: #fff,
+  danger: #ff776d,
+  warning: #e9c062,
+  success: #a8ff60,
+  info: #96cbfe
+);
+
+html[data-theme="dark"] {
+  @include emit-theme-properties($contrast-dark-theme, dark);
+
+  .page__content .notice,
+  .page__content [class^="notice--"] {
+    color: var(--global-text-color);
+    border-color: var(--global-text-color);
+  }
+}

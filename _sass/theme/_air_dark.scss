@@ -1,0 +1,29 @@
+/* Air dark palette, adopted from AcademicPages v0.9. */
+$air-dark-theme: (
+  base: #31cbd2,
+  background: #252a34,
+  footer: #191d24,
+  border: #424b5a,
+  border-strong: #6f7a8c,
+  code-background: #191d24,
+  code-text: #edf4f5,
+  caption: #bfc9d0,
+  link: #72dce1,
+  link-hover: #a9f0f2,
+  link-visited: #a7cdd0,
+  masthead-link: #eaeaea,
+  masthead-link-hover: #72dce1,
+  text: #eaeaea,
+  text-light: #c3cbd1,
+  thead: #343b48,
+  selection-background: #235f67,
+  selection-text: #fff,
+  danger: #ff8a86,
+  warning: #ffc26b,
+  success: #83d889,
+  info: #72dce1
+);
+
+html[data-theme="dark"] {
+  @include emit-theme-properties($air-dark-theme, dark);
+}

@@ -1,0 +1,34 @@
+/* Sunrise light palette, adopted from AcademicPages v0.9. */
+$active-light-theme: (
+  base: #b62339,
+  background: #e8d5b7,
+  footer: #d88c1b,
+  border: #baa98d,
+  border-strong: #8f7f66,
+  code-background: #f3e5cf,
+  code-text: #0e2431,
+  caption: #38454c,
+  link: #9f1830,
+  link-hover: #6f1022,
+  link-visited: #70404a,
+  masthead-link: #000,
+  masthead-link-hover: #751326,
+  text: #000,
+  text-light: #38454c,
+  thead: #d9c3a1,
+  selection-background: #f2ae9c,
+  selection-text: #000,
+  danger: #a32525,
+  warning: #7b5400,
+  success: #4d6500,
+  info: #305f7b
+);
+
+:root {
+  @include emit-theme-properties($active-light-theme);
+}
+
+.page__footer-follow .social-icons i,
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
+}

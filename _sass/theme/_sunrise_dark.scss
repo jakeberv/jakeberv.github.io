@@ -1,0 +1,29 @@
+/* Sunrise dark palette, adopted from AcademicPages v0.9. */
+$sunrise-dark-theme: (
+  base: #ff8793,
+  background: #1a0f0a,
+  footer: #2d1912,
+  border: #3d2a1a,
+  border-strong: #6f5138,
+  code-background: #0d0806,
+  code-text: #f4e3ca,
+  caption: #cbb7a1,
+  link: #ff96a0,
+  link-hover: #ffc1c7,
+  link-visited: #e9a8ad,
+  masthead-link: #f2dfc2,
+  masthead-link-hover: #ff96a0,
+  text: #f2dfc2,
+  text-light: #cbb7a1,
+  thead: #3d2a1a,
+  selection-background: #743844,
+  selection-text: #fff,
+  danger: #ff7d8d,
+  warning: #f9c15f,
+  success: #86d68a,
+  info: #78cce0
+);
+
+html[data-theme="dark"] {
+  @include emit-theme-properties($sunrise-dark-theme, dark);
+}

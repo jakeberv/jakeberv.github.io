@@ -1,0 +1,26 @@
+/* Compile-time aliases retained for legacy Sass helpers and notices. */
+$gray                       : map-get($active-light-theme, base);
+$dark-gray                  : map-get($active-light-theme, text);
+$darker-gray                : map-get($active-light-theme, code-text);
+$light-gray                 : map-get($active-light-theme, text-light);
+$lighter-gray               : map-get($active-light-theme, border);
+
+$body-color                 : map-get($active-light-theme, background);
+$background-color           : map-get($active-light-theme, background);
+$code-background-color      : map-get($active-light-theme, code-background);
+$code-background-color-dark : map-get($active-light-theme, border-strong);
+$text-color                 : map-get($active-light-theme, text);
+$border-color               : map-get($active-light-theme, border);
+
+$primary-color              : map-get($active-light-theme, base);
+$success-color              : map-get($active-light-theme, success);
+$warning-color              : map-get($active-light-theme, warning);
+$danger-color               : map-get($active-light-theme, danger);
+$info-color                 : map-get($active-light-theme, info);
+
+$notice-color               : $gray;
+$link-color                 : map-get($active-light-theme, link);
+$link-color-hover           : map-get($active-light-theme, link-hover);
+$link-color-visited         : map-get($active-light-theme, link-visited);
+$masthead-link-color        : map-get($active-light-theme, masthead-link);
+$masthead-link-color-hover  : map-get($active-light-theme, masthead-link-hover);

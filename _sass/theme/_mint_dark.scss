@@ -1,0 +1,29 @@
+/* Mint dark palette, adopted from AcademicPages v0.9. */
+$mint-dark-theme: (
+  base: #30e3ca,
+  background: #1a2421,
+  footer: #0f1614,
+  border: #2e443f,
+  border-strong: #55766e,
+  code-background: #111916,
+  code-text: #e8f5f3,
+  caption: #b8d5d1,
+  link: #4effd9,
+  link-hover: #9dffe9,
+  link-visited: #8fd9cc,
+  masthead-link: #e8f5f3,
+  masthead-link-hover: #4effd9,
+  text: #e8f5f3,
+  text-light: #b8d5d1,
+  thead: #2e443f,
+  selection-background: #176354,
+  selection-text: #fff,
+  danger: #ff8a80,
+  warning: #ffc266,
+  success: #6ee79a,
+  info: #4effd9
+);
+
+html[data-theme="dark"] {
+  @include emit-theme-properties($mint-dark-theme, dark);
+}
