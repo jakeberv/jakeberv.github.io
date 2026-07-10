@@ -182,7 +182,8 @@ body:hover .visually-hidden button {
 /* social icons*/
 
 .social-icons {
-  .fa {
+  .fa-solid,
+  .fa-brands {
     color: var(--global-text-color);
   }
 

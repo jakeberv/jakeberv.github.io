@@ -29,10 +29,10 @@ layout: default
           {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
           {% if post.read_time %}
           {% elsif post.read_time and post.collection == 'posts' %}
-            <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+            <p class="page__meta"><i class="fa-solid fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
           {% if page.modified %}
-            <p class="page__date"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
+            <p class="page__date"><i class="fa-solid fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
           {% endif %}
           
           {% if page.collection == 'teaching' %}
@@ -41,11 +41,11 @@ layout: default
             <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% elsif page.date and page.read_time %}
             <p class="page__date">
-              <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time>
-              <span style="float:right;"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</span>
+              <i class="fa-solid fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time>
+              <span style="float:right;"><i class="fa-solid fa-clock" aria-hidden="true"></i> {% include read-time.html %}</span>
             </p>
           {% elsif page.date %}
-            <p class="page__date"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+            <p class="page__date"><i class="fa-solid fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
           {% endif %}
           
           {% if page.citation and page.paperurl %}
