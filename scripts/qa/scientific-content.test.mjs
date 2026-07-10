@@ -71,6 +71,10 @@ class FakeElement {
     return this.attributes.get(name) || null;
   }
 
+  removeAttribute(name) {
+    this.attributes.delete(name);
+  }
+
   insertAdjacentElement(position, element) {
     assert.equal(position, "afterend");
     this.afterElement = element;
@@ -350,6 +354,40 @@ test("failed scientific rendering keeps source visible and adds an accessible st
   assert.equal(badMermaid.pre.afterElement.getAttribute("role"), "status");
   assert.match(badPlotly.pre.afterElement.textContent, /Plotly/);
   assert.match(badMermaid.pre.afterElement.textContent, /Mermaid/);
+});
+
+test("successful rerenders clear prior scientific error state", async () => {
+  const block = createCodeBlock("mermaid", "graph TD; A-->B;");
+  const { context, handlers } = await loadScientificRuntime({ mermaid: [block.code] });
+  let renderCount = 0;
+
+  const mermaid = {
+    initialize() {},
+    async render(id, definition) {
+      renderCount += 1;
+      if (renderCount === 1) throw new Error("temporary render failure");
+      return { svg: `<svg data-id="${id}">${definition}</svg>` };
+    },
+  };
+
+  await context.initializeScientificContent({
+    async loadMermaid() {
+      return mermaid;
+    },
+  });
+
+  assert.equal(block.pre.hidden, false);
+  assert.equal(block.pre.afterElement.className, "scientific-content scientific-content--mermaid scientific-content--error");
+  assert.equal(block.pre.afterElement.getAttribute("role"), "status");
+  assert.equal(block.pre.afterElement.getAttribute("aria-live"), "polite");
+
+  await handlers["site:themechange"]({ detail: { theme: "dark" } });
+
+  assert.equal(block.pre.hidden, true);
+  assert.equal(block.pre.afterElement.className, "scientific-content scientific-content--mermaid");
+  assert.equal(block.pre.afterElement.getAttribute("role"), null);
+  assert.equal(block.pre.afterElement.getAttribute("aria-live"), null);
+  assert.match(block.pre.afterElement.innerHTML, /graph TD/);
 });
 
 test("the uncompiled scientific source remains outside the Pages artifact", async () => {

@@ -93,7 +93,9 @@ function createRenderState(codeBlock, type) {
 
 function markRendered(state) {
   state.pre.hidden = true;
-  state.output.setAttribute("aria-live", "off");
+  state.output.className = `scientific-content scientific-content--${state.type}`;
+  state.output.removeAttribute("role");
+  state.output.removeAttribute("aria-live");
 }
 
 function markFailed(state, label, error) {
