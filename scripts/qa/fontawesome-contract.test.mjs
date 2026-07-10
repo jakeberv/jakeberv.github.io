@@ -6,6 +6,15 @@ import test from "node:test";
 import { fileURLToPath } from "node:url";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
+const siteMarkupRoots = [
+  "_includes",
+  "_layouts",
+  "_pages",
+  "_publications",
+  "_news",
+  "_research",
+  "_collaborators",
+];
 
 function read(relativePath) {
   return readFileSync(path.join(repoRoot, relativePath), "utf8");
@@ -15,7 +24,7 @@ function trackedSiteMarkup(runGit = execFileSync) {
   let trackedFiles;
 
   try {
-    trackedFiles = runGit("git", ["ls-files", "-z", "--", "*.html", "*.md"], {
+    trackedFiles = runGit("git", ["ls-files", "-z", "--", ...siteMarkupRoots], {
       cwd: repoRoot,
       encoding: "utf8",
     });
@@ -29,11 +38,25 @@ function trackedSiteMarkup(runGit = execFileSync) {
   return trackedFiles
     .split("\0")
     .filter(Boolean)
-    .filter((file) => /^(?:_includes|_layouts|_pages|_publications|_news|_research|_collaborators)\//.test(file));
+    .filter((file) => /\.(?:html?|liquid|markdown|md)$/i.test(file) || path.extname(file) === "");
 }
 
 function classAttributes(source) {
   return Array.from(source.matchAll(/class\s*=\s*(["'])([\s\S]*?)\1/g), (match) => match[2]);
+}
+
+function fontAwesomeUtilityClasses() {
+  return new Set([
+    "fa-2xs", "fa-xs", "fa-sm", "fa-lg", "fa-xl", "fa-2xl",
+    "fa-1x", "fa-2x", "fa-3x", "fa-4x", "fa-5x", "fa-6x", "fa-7x", "fa-8x", "fa-9x", "fa-10x",
+    "fa-fw", "fa-ul", "fa-li", "fa-border", "fa-pull-left", "fa-pull-right",
+    "fa-beat", "fa-bounce", "fa-fade", "fa-beat-fade", "fa-flip", "fa-shake",
+    "fa-spin", "fa-pulse", "fa-spin-pulse", "fa-spin-reverse",
+    "fa-rotate-90", "fa-rotate-180", "fa-rotate-270", "fa-rotate-by",
+    "fa-flip-horizontal", "fa-flip-vertical", "fa-flip-both",
+    "fa-stack", "fa-stack-1x", "fa-stack-2x", "fa-inverse",
+    "fa-classic", "fa-solid", "fa-brands", "fa-sr-only", "fa-sr-only-focusable",
+  ]);
 }
 
 test("site markup discovery explains its Git working-tree requirement", () => {
@@ -45,6 +68,32 @@ test("site markup discovery explains its Git working-tree requirement", () => {
     }),
     /Font Awesome contract requires the git executable and a Git working tree/,
   );
+});
+
+test("site markup discovery includes extensionless Jekyll templates", () => {
+  assert.ok(trackedSiteMarkup().includes("_includes/toc"));
+});
+
+test("utility allowlist covers static classes from compiled Font Awesome layers", () => {
+  const utilityClasses = fontAwesomeUtilityClasses();
+  const intentionallyUnsupported = new Set(["fa-regular"]);
+  const missing = [];
+
+  for (const file of [
+    "_sass/vendor/font-awesome/_core.scss",
+    "_sass/vendor/font-awesome/_animated.scss",
+    "_sass/vendor/font-awesome/_rotated-flipped.scss",
+    "_sass/vendor/font-awesome/_screen-reader.scss",
+  ]) {
+    for (const match of read(file).matchAll(/\.#\{\$fa-css-prefix\}-([a-z0-9-]+)/g)) {
+      const utilityClass = `fa-${match[1]}`;
+      if (!utilityClasses.has(utilityClass) && !intentionallyUnsupported.has(utilityClass)) {
+        missing.push(`${file}: ${utilityClass}`);
+      }
+    }
+  }
+
+  assert.deepEqual(missing, [], `Font Awesome utility classes are missing from the allowlist:\n${missing.join("\n")}`);
 });
 
 test("Font Awesome 6 is compiled as a standalone solid-and-brands stylesheet", () => {
@@ -112,14 +161,7 @@ test("site markup uses FA6 prefixes and every referenced icon exists", () => {
   const availableIcons = new Set(
     Array.from(variableSource.matchAll(/^\s*"([a-z0-9-]+)":\s*\$fa-var-/gm), (match) => match[1]),
   );
-  const utilityClasses = new Set([
-    "fa-2xs", "fa-xs", "fa-sm", "fa-lg", "fa-xl", "fa-2xl",
-    "fa-1x", "fa-2x", "fa-3x", "fa-4x", "fa-5x", "fa-6x", "fa-7x", "fa-8x", "fa-9x", "fa-10x",
-    "fa-fw", "fa-ul", "fa-li", "fa-border", "fa-pull-left", "fa-pull-right",
-    "fa-spin", "fa-pulse", "fa-spin-pulse", "fa-spin-reverse",
-    "fa-rotate-90", "fa-rotate-180", "fa-rotate-270", "fa-flip-horizontal", "fa-flip-vertical", "fa-flip-both",
-    "fa-stack", "fa-stack-1x", "fa-stack-2x", "fa-inverse", "fa-solid", "fa-brands",
-  ]);
+  const utilityClasses = fontAwesomeUtilityClasses();
   const legacyPrefixes = new Set(["fa", "fas", "fab", "far", "fal"]);
   const missing = [];
   const legacy = [];
