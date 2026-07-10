@@ -65,6 +65,7 @@ The shared browser bundle follows the AcademicPages v0.9 asset model with local 
 
 - `npm ci` installs the exact Node 20/npm 10 dependency graph.
 - `npm run build:js` builds the committed `assets/js/main.min.js` module.
+- `npm run check:icons` verifies the Font Awesome version, assets, delivery, markup, and icon-name contract.
 - `npm run check:js` verifies the committed bundle without rewriting it.
 - `npm run watch:js` rebuilds when the two shared JavaScript sources change.
 - `npm run check:themes` verifies the palette, token, markup, and runtime contract.
@@ -86,13 +87,16 @@ The site uses the AcademicPages v0.9 Sass layering model while retaining its est
 - `_sass/layout/` contains the reset, base, navigation, page, sidebar, and other structural partials.
 - `_sass/_syntax.scss` remains the syntax-highlighting layer.
 - `_sass/_custom.scss` loads last so existing page-specific overrides retain precedence.
-- `assets/css/main.scss` is the Jekyll-rendered stylesheet entry point and retains Font Awesome 5 inside the compiled stylesheet.
+- `assets/css/main.scss` is the Jekyll-rendered theme and customization entry point.
+- `assets/css/fontawesome.scss` compiles the vendored AcademicPages v0.9 Font Awesome 6.7.2 core, solid, and brands layers into a separately cached stylesheet.
+- `assets/webfonts/` contains only the solid and brands TTF/WOFF2 files consumed by that stylesheet; Academicons remains local under its existing asset paths.
 
-`_config.yml` keeps `site_theme: "default"` for deployment. Alternate palettes are build-time choices rather than a visitor-facing selector. Visitors start in light mode and can explicitly toggle dark mode; `localStorage.theme` persists `light` or `dark`, and `site:themechange` notifies custom visualizations. Font Awesome 6, Plotly, Mermaid, JSON CV support, and runtime palette selection remain deferred.
+`_config.yml` keeps `site_theme: "default"` for deployment. Alternate palettes are build-time choices rather than a visitor-facing selector. Visitors start in light mode and can explicitly toggle dark mode; `localStorage.theme` persists `light` or `dark`, and `site:themechange` notifies custom visualizations. Site markup uses `fa-solid` and `fa-brands`; regular icons and v4 compatibility fonts are intentionally not shipped. Plotly, Mermaid, JSON CV support, and runtime palette selection remain deferred.
 
 Validate the complete styling path with:
 
 - `./scripts/local_preview.command --build-only --full-build --skip-data`
+- `npm run check:icons`
 - `npm run check:themes`
 - `npm run test:themes`
 
