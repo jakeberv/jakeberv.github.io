@@ -1,0 +1,181 @@
+.talkmap-shell {
+  position: relative;
+  margin: 1rem 0 2rem;
+  color: var(--site-text-strong);
+}
+
+.talkmap-controls,
+.talkmap-control-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.talkmap-controls {
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.talkmap-chip {
+  min-height: 2.25rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--site-control-border);
+  border-radius: 4px;
+  color: var(--site-control-text);
+  background: var(--site-control-bg);
+  cursor: pointer;
+}
+
+.talkmap-chip:hover,
+.talkmap-chip:focus-visible {
+  background: var(--site-control-bg-hover);
+}
+
+.talkmap-chip:focus-visible {
+  outline: 3px solid var(--site-focus-ring);
+  outline-offset: 2px;
+}
+
+.talkmap-chip.is-active {
+  background: var(--site-control-bg-active);
+}
+
+.talkmap-status {
+  margin: 0 0 0.75rem;
+  color: var(--site-text-muted);
+  font-size: 0.9rem;
+}
+
+.talkmap-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(16rem, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.talkmap-figure,
+.talkmap-events {
+  border: 1px solid var(--site-border-subtle);
+  border-radius: 6px;
+  background: var(--viz-surface);
+}
+
+.talkmap-figure {
+  position: relative;
+  min-width: 0;
+  padding: 0.75rem;
+}
+
+.talkmap-title,
+.talkmap-events h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.talkmap-map {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.talkmap-land {
+  vector-effect: non-scaling-stroke;
+}
+
+.talkmap-marker {
+  opacity: 0.86;
+  vector-effect: non-scaling-stroke;
+  cursor: pointer;
+}
+
+.talkmap-marker:hover,
+.talkmap-marker:focus {
+  opacity: 1;
+  outline: none;
+  stroke-width: 3px;
+}
+
+.talkmap-tooltip {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  gap: 0.15rem;
+  width: 11rem;
+  padding: 0.5rem;
+  border: 1px solid var(--viz-outline);
+  border-radius: 4px;
+  color: var(--viz-tooltip-text);
+  background: var(--viz-tooltip-bg);
+  box-shadow: var(--site-shadow-raised);
+  pointer-events: none;
+  font-size: 0.8rem;
+}
+
+.talkmap-tooltip[hidden] {
+  display: none;
+}
+
+.talkmap-events {
+  max-height: 34rem;
+  overflow: auto;
+}
+
+.talkmap-events__header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--site-border-subtle);
+  background: var(--viz-surface);
+}
+
+.talkmap-event-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.talkmap-event {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--site-border-subtle);
+}
+
+.talkmap-event:last-child {
+  border-bottom: 0;
+}
+
+.talkmap-event a {
+  font-weight: 600;
+}
+
+.talkmap-event__meta {
+  color: var(--site-text-muted);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 64em) {
+  .talkmap-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .talkmap-events {
+    max-height: 24rem;
+  }
+}
+@media print {
+  .talkmap-controls,
+  .talkmap-tooltip {
+    display: none;
+  }
+
+  .talkmap-events {
+    max-height: none;
+    overflow: visible;
+  }
+}

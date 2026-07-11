@@ -5,5 +5,10 @@ permalink: /talkmap.html
 author_profile: true
 ---
 
-<p>This map is generated from a Jupyter Notebook file in <a href="https://github.com/academicpages/academicpages.github.io/blob/master/_talks/talkmap.ipynb">/_talks/talkmap.ipynb</a>, which mines the location fields in the .md files in _talks/.</p>
-<iframe src="/talkmap/map.html" height="700" style="border:none; width:100%; max-width:100%;"></iframe>
+<p>Speaking locations are generated from the validated geographic metadata attached to this site's news records.</p>
+
+{% include talkmap.html %}
+
+<script defer src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+<script defer src="{{ '/assets/js/talkmap.js' | relative_url }}"></script>

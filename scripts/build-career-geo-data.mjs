@@ -7,8 +7,17 @@ const ROOT = process.cwd();
 const NEWS_DIR = path.join(ROOT, "_news");
 const OUT_DIR = path.join(ROOT, "data", "career_geo");
 const OUT_FILE = path.join(OUT_DIR, "career_footprint.json");
+const TALKMAP_OUT_FILE = path.join(ROOT, "data", "talkmap", "talk_events.json");
 const EXCERPT_MARKER = "<!--news-excerpt-->";
 const ALLOWED_SCOPES = new Set(["event", "virtual", "global"]);
+const TALK_TAGS = new Set([
+  "conference_talk",
+  "invited_talk",
+  "guest_lecture",
+  "keynote",
+  "workshop_led",
+  "outreach",
+]);
 
 let regionDisplayNames = null;
 if (typeof Intl !== "undefined" && Intl.DisplayNames) {
@@ -26,6 +35,20 @@ function parseScalar(frontMatter, key) {
   const match = frontMatter.match(re);
   if (!match) return null;
   return stripQuotes(match[1].trim());
+}
+
+function parseList(frontMatter, key) {
+  const lines = frontMatter.split("\n");
+  const start = lines.findIndex((line) => line.trim() === `${key}:`);
+  if (start === -1) return [];
+  const values = [];
+  for (let index = start + 1; index < lines.length; index += 1) {
+    const line = lines[index];
+    if (/^[A-Za-z0-9_-]+:\s*/.test(line)) break;
+    const match = line.match(/^\s+-\s+(.+?)\s*$/);
+    if (match) values.push(stripQuotes(match[1].trim()));
+  }
+  return values;
 }
 
 function stripQuotes(value) {
@@ -226,12 +249,47 @@ function buildExcerpt(body) {
   return clean.length > 240 ? `${clean.slice(0, 237)}...` : clean;
 }
 
+function parseArguments(argv) {
+  const options = {
+    asOf: new Date().toISOString().slice(0, 10),
+    fixedAsOf: false,
+    careerOutput: OUT_FILE,
+    talkmapOutput: TALKMAP_OUT_FILE,
+  };
+  for (let index = 0; index < argv.length; index += 1) {
+    const argument = argv[index];
+    const value = argv[index + 1];
+    if (!["--as-of", "--career-output", "--talkmap-output"].includes(argument)) {
+      throw new Error(`Unknown argument: ${argument}`);
+    }
+    if (!value) throw new Error(`Missing value for ${argument}`);
+    if (argument === "--as-of") {
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(value) || Number.isNaN(Date.parse(`${value}T00:00:00Z`))) {
+        throw new Error(`Invalid --as-of date: ${value}`);
+      }
+      options.asOf = value;
+      options.fixedAsOf = true;
+    } else if (argument === "--career-output") {
+      options.careerOutput = path.resolve(value);
+    } else {
+      options.talkmapOutput = path.resolve(value);
+    }
+    index += 1;
+  }
+  return options;
+}
+
+function writeJson(target, payload) {
+  fs.mkdirSync(path.dirname(target), { recursive: true });
+  fs.writeFileSync(target, `${JSON.stringify(payload, null, 2)}\n`);
+}
+
 function main() {
   if (!fs.existsSync(NEWS_DIR)) {
     throw new Error(`Missing news directory: ${NEWS_DIR}`);
   }
 
-  const today = new Date().toISOString().slice(0, 10);
+  const options = parseArguments(process.argv.slice(2));
   const files = fs
     .readdirSync(NEWS_DIR)
     .filter((file) => file.endsWith(".md"))
@@ -251,7 +309,7 @@ function main() {
     const id = file.replace(/\.md$/, "");
     const title = parseScalar(parsed.frontMatter, "title") || id;
     const date = normalizeDate(parseScalar(parsed.frontMatter, "date"), file);
-    if (date > today) continue;
+    if (date > options.asOf) continue;
     const year = Number(date.slice(0, 4));
 
     entries.push({
@@ -264,23 +322,50 @@ function main() {
       countries: geo.countries,
       localities: geo.localities,
       excerpt: buildExcerpt(parsed.body),
+      tags: parseList(parsed.frontMatter, "tags"),
     });
   }
 
   entries.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : a.id.localeCompare(b.id)));
 
-  const payload = {
-    generated_at: new Date().toISOString(),
+  const careerEntries = entries.map(({ tags, ...entry }) => entry);
+  const careerPayload = {
+    generated_at: options.fixedAsOf ? `${options.asOf}T00:00:00.000Z` : new Date().toISOString(),
     source: "_news geo front matter",
-    entry_count: entries.length,
-    entries,
+    entry_count: careerEntries.length,
+    entries: careerEntries,
   };
 
-  fs.mkdirSync(OUT_DIR, { recursive: true });
-  fs.writeFileSync(OUT_FILE, `${JSON.stringify(payload, null, 2)}\n`);
+  const talkEntries = entries
+    .filter((entry) => entry.localities.length > 0)
+    .filter((entry) => !entry.title.startsWith("Award:"))
+    .map((entry) => ({
+      id: entry.id,
+      title: entry.title,
+      url: entry.url,
+      date: entry.date,
+      year: entry.year,
+      scope: entry.scope,
+      speaking_tags: entry.tags.filter((tag) => TALK_TAGS.has(tag)),
+      localities: entry.localities,
+      excerpt: entry.excerpt,
+    }))
+    .filter((entry) => entry.speaking_tags.length > 0);
 
-  console.log(`wrote=${path.relative(ROOT, OUT_FILE)}`);
-  console.log(`entries=${entries.length}`);
+  const talkmapPayload = {
+    as_of: options.asOf,
+    source: "_news geo front matter",
+    event_count: talkEntries.length,
+    entries: talkEntries,
+  };
+
+  writeJson(options.careerOutput, careerPayload);
+  writeJson(options.talkmapOutput, talkmapPayload);
+
+  console.log(`wrote=${path.relative(ROOT, options.careerOutput)}`);
+  console.log(`career_entries=${careerEntries.length}`);
+  console.log(`wrote=${path.relative(ROOT, options.talkmapOutput)}`);
+  console.log(`talk_events=${talkEntries.length}`);
 }
 
 main();

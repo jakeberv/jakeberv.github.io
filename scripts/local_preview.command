@@ -207,6 +207,7 @@ if [[ "$SKIP_DATA" -eq 1 ]]; then
   stale_outputs=()
   for generated_file in \
     "$ROOT_DIR/data/career_geo/career_footprint.json" \
+    "$ROOT_DIR/data/talkmap/talk_events.json" \
     "$ROOT_DIR/data/impact/impact_dashboard.json" \
     "$ROOT_DIR/data/impact/impact_reconciliation.json"; do
     if [[ ! -f "$generated_file" ]]; then
@@ -220,7 +221,7 @@ if [[ "$SKIP_DATA" -eq 1 ]]; then
   done
 
   if (( ${#stale_outputs[@]} > 0 )); then
-    echo "Warning: generated geo/impact data may be stale. Run with --with-data to refresh:"
+    echo "Warning: generated geo/talk-map/impact data may be stale. Run with --with-data to refresh:"
     for stale_file in "${stale_outputs[@]}"; do
       echo "  - $stale_file"
     done
@@ -229,7 +230,7 @@ else
   echo "Validating _news geo front matter ..."
   node scripts/qa/validate-news-geo.mjs
 
-  echo "Generating career geo map data ..."
+  echo "Generating career and talk map data ..."
   node scripts/build-career-geo-data.mjs
 
   echo "Generating impact dashboard data ..."
