@@ -148,6 +148,12 @@ test("publication check validates without leaving output and works outside the r
   assert.deepEqual(fs.readdirSync(temp).sort(), ["publications.csv"]);
 });
 
+test("publication breadcrumbs align their collection URL and label", () => {
+  const breadcrumbs = fs.readFileSync(path.join(repoRoot, "_includes/breadcrumbs.html"), "utf8");
+  assert.match(breadcrumbs, /assign breadcrumb_label = 'Publications'/);
+  assert.match(breadcrumbs, /itemprop="name">\{\{ breadcrumb_label \}\}/);
+});
+
 test("publication defaults are explicit when optional columns are omitted", (t) => {
   const temp = temporaryDirectory(t);
   const input = path.join(temp, "publications.tsv");

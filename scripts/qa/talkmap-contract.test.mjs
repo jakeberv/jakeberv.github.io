@@ -42,6 +42,18 @@ test("talk-map generation is deterministic for a fixed as-of date", () => {
     assert.ok(payload.entries.every((entry) => entry.date <= payload.as_of));
     assert.ok(payload.entries.every((entry) => !entry.title.startsWith("Award:")));
     assert.ok(payload.entries.every((entry) => entry.localities.length > 0));
+    assert.ok(payload.entries.every((entry) => !/[<>]/.test(entry.excerpt)));
+    const congressExcerpt = payload.entries.find(
+      (entry) => entry.id === "2024-07-30-3rd-Joint-Congress-on-Evolutionary-Biology",
+    ).excerpt;
+    assert.match(congressExcerpt, /^Title slide from the Montreal presentation/);
+    assert.match(congressExcerpt, /YouTube here\.$/);
+    const keynoteExcerpt = payload.entries.find(
+      (entry) => entry.id === "2025-10-10-gsa-pardee-symposium-keynote",
+    ).excerpt;
+    assert.match(keynoteExcerpt, /^Jacob Berv delivered a keynote talk/);
+    assert.doesNotMatch(keynoteExcerpt, /\bon$/);
+    assert.match(keynoteExcerpt, /with his\.\.\.$/);
   } finally {
     rmSync(first, { recursive: true, force: true });
     rmSync(second, { recursive: true, force: true });
@@ -59,6 +71,8 @@ test("the talk map uses pinned, theme-aware, page-scoped assets", () => {
   assert.match(page, /topojson-client@3\.1\.0/);
   assert.match(markup, /world-atlas@2\.0\.2/);
   assert.match(markup, /data\/talkmap\/talk_events\.json/);
+  assert.match(markup, /class="talkmap-controls" role="group" aria-label="Talk map filters"/);
+  assert.equal((markup.match(/class="talkmap-control-group" role="group"/g) || []).length, 2);
   assert.match(markup, /<svg[^>]+role="group"/);
   assert.doesNotMatch(markup, /<svg[^>]+role="img"/);
   assert.doesNotMatch(page, /<iframe|Leaflet|talkmap\.ipynb/i);

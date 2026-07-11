@@ -231,22 +231,44 @@ function normalizeDate(rawDate, fallbackFromFilename) {
 function cleanText(value) {
   return String(value)
     .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/&quot;/gi, '"')
+    .replace(/(?:&#39;|&apos;)/gi, "'")
     .replace(/[_*`#>]/g, "")
     .replace(/\s+/g, " ")
+    .replace(/\s+([,.;:!?])/g, "$1")
     .trim();
+}
+
+function stripHtml(value) {
+  return String(value)
+    .replace(/<!--([\s\S]*?)-->/g, " ")
+    .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, " ")
+    .replace(/<[^>]*>/g, " ");
 }
 
 function buildExcerpt(body) {
   if (!body) return "";
   const markerIndex = body.indexOf(EXCERPT_MARKER);
   const source = markerIndex >= 0 ? body.slice(markerIndex + EXCERPT_MARKER.length) : body;
-  const paragraph = source
+  const lines = stripHtml(source)
     .split("\n")
-    .map((line) => line.trim())
-    .find((line) => line.length > 0);
-  if (!paragraph) return "";
-  const clean = cleanText(paragraph);
-  return clean.length > 240 ? `${clean.slice(0, 237)}...` : clean;
+    .map((line) => cleanText(line));
+  const paragraphLines = [];
+  for (const line of lines) {
+    if (line.length > 0) {
+      paragraphLines.push(line);
+    } else if (paragraphLines.length > 0) {
+      break;
+    }
+  }
+  const paragraph = cleanText(paragraphLines.join(" "));
+  if (paragraph.length === 0) return "";
+  if (paragraph.length <= 240) return paragraph;
+  const prefix = paragraph.slice(0, 237);
+  const wordBoundary = prefix.lastIndexOf(" ");
+  return `${prefix.slice(0, wordBoundary > 0 ? wordBoundary : prefix.length)}...`;
 }
 
 function parseArguments(argv) {

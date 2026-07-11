@@ -5,8 +5,8 @@
   data-data-url="{{ '/data/talkmap/talk_events.json' | relative_url }}"
   data-world-url="https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json"
   data-world-url-fallback="https://unpkg.com/world-atlas@2.0.2/countries-110m.json">
-  <div class="talkmap-controls" aria-label="Talk map filters">
-    <div class="talkmap-control-group" aria-label="Speaking type">
+  <div class="talkmap-controls" role="group" aria-label="Talk map filters">
+    <div class="talkmap-control-group" role="group" aria-label="Speaking type">
       <button type="button" class="talkmap-chip is-active" data-talk-tag="conference_talk" aria-pressed="true">Conference</button>
       <button type="button" class="talkmap-chip is-active" data-talk-tag="invited_talk" aria-pressed="true">Invited</button>
       <button type="button" class="talkmap-chip is-active" data-talk-tag="guest_lecture" aria-pressed="true">Guest lecture</button>
@@ -14,7 +14,7 @@
       <button type="button" class="talkmap-chip is-active" data-talk-tag="workshop_led" aria-pressed="true">Workshop</button>
       <button type="button" class="talkmap-chip is-active" data-talk-tag="outreach" aria-pressed="true">Outreach</button>
     </div>
-    <div class="talkmap-control-group" aria-label="Time window">
+    <div class="talkmap-control-group" role="group" aria-label="Time window">
       <button type="button" class="talkmap-chip is-active" data-talk-window="all" aria-pressed="true">All time</button>
       <button type="button" class="talkmap-chip" data-talk-window="10" aria-pressed="false">10 years</button>
       <button type="button" class="talkmap-chip" data-talk-window="5" aria-pressed="false">5 years</button>
