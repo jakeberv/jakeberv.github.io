@@ -92,7 +92,14 @@ test("the Docker image builds Node 20 into Ruby 3.3.4 and runs as vscode", async
     dockerfile.slice(rubyStageIndex),
     new RegExp(`COPY\\s+--from=${nodeStage[1]}\\s+`, "i"),
   );
-  assert.match(dockerfile, /gem\s+install\s+bundler[^\n]*(?:--version|-v)(?:=|\s+)2\.5\.18\b/i);
+  const bundlerInstall = dockerfile.match(/gem\s+install\s+bundler[^\n]*/i)?.[0];
+  assert.ok(bundlerInstall, "Dockerfile must install the pinned Bundler runtime");
+  assert.match(bundlerInstall, /(?:--version|-v)(?:=|\s+)2\.5\.18\b/i);
+  assert.match(
+    bundlerInstall,
+    /--no-document\b/,
+    "Bundler installation must omit generated documentation",
+  );
   assert.match(
     dockerfile,
     /(?:test|\[)\s+["']?\$\(npm\s+--version\s*\|\s*(?:cut|awk|sed)[^)]*\)["']?\s*(?:=|==|-eq)\s*["']?10["']?/i,

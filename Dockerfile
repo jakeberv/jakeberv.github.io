@@ -22,7 +22,7 @@ RUN ln -s ../lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm \
     && ln -s ../lib/node_modules/npm/bin/npx-cli.js /usr/local/bin/npx \
     && ln -s ../lib/node_modules/corepack/dist/corepack.js /usr/local/bin/corepack \
     && test "$(npm --version | cut -d. -f1)" = "10" \
-    && gem install bundler --version 2.5.18 \
+    && gem install bundler --version 2.5.18 --no-document \
     && if getent group vscode >/dev/null 2>&1; then \
          groupmod --non-unique --gid "${USER_GID}" vscode; \
        else \
