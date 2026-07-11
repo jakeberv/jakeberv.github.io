@@ -29,16 +29,6 @@ test("the shared bundle is delivered as a module and the logo stays visible", as
   );
 });
 
-test("Staticman waits for the module bundle before using jQuery", async () => {
-  const staticman = await source("_includes/comments-providers/staticman.html");
-
-  assert.match(
-    staticman,
-    /document\.addEventListener\("DOMContentLoaded", function \(\) \{/,
-  );
-  assert.match(staticman, /\}\)\(window\.jQuery\);/);
-});
-
 test("legacy plugin sources and Sass integration are removed", async () => {
   const removedPaths = [
     "assets/js/vendor/jquery/jquery-1.12.4.min.js",
@@ -101,7 +91,7 @@ test("the npm test command does not depend on shell glob expansion", async () =>
 
   assert.equal(
     packageDefinition.scripts.test,
-    "node --test scripts/qa/academicons-contract.test.mjs scripts/qa/browser-behavior.test.mjs scripts/qa/browser-runtime.test.mjs scripts/qa/build-js.test.mjs scripts/qa/content-generators.test.mjs scripts/qa/fontawesome-contract.test.mjs scripts/qa/integrations-built-contract.test.mjs scripts/qa/integrations-contract.test.mjs scripts/qa/rendered-asset-contract.test.mjs scripts/qa/scientific-content.test.mjs scripts/qa/site-artifact-contract.test.mjs scripts/qa/talkmap-contract.test.mjs scripts/qa/theme-contract.test.mjs && npm run check:js && npm run check:container",
+    "node --test scripts/qa/academicons-contract.test.mjs scripts/qa/browser-behavior.test.mjs scripts/qa/browser-runtime.test.mjs scripts/qa/build-js.test.mjs scripts/qa/comments-contract.test.mjs scripts/qa/content-generators.test.mjs scripts/qa/fontawesome-contract.test.mjs scripts/qa/integrations-built-contract.test.mjs scripts/qa/integrations-contract.test.mjs scripts/qa/rendered-asset-contract.test.mjs scripts/qa/scientific-content.test.mjs scripts/qa/site-artifact-contract.test.mjs scripts/qa/talkmap-contract.test.mjs scripts/qa/theme-contract.test.mjs && npm run check:js && npm run check:container",
   );
 });
 

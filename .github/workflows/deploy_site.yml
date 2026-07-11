@@ -76,6 +76,9 @@ jobs:
       - name: Validate rendered integrations
         run: npm run check:integrations:built
 
+      - name: Validate rendered comments
+        run: npm run check:comments:built
+
       - name: Validate rendered local resources
         run: npm run check:assets
 
