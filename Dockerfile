@@ -1,4 +1,4 @@
-FROM node:20-bookworm-slim AS node-runtime
+FROM node:24-bookworm-slim AS node-runtime
 
 FROM ruby:3.3.4-bookworm
 
@@ -21,7 +21,7 @@ ARG USER_GID=1000
 RUN ln -s ../lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm \
     && ln -s ../lib/node_modules/npm/bin/npx-cli.js /usr/local/bin/npx \
     && ln -s ../lib/node_modules/corepack/dist/corepack.js /usr/local/bin/corepack \
-    && test "$(npm --version | cut -d. -f1)" = "10" \
+    && test "$(npm --version | cut -d. -f1)" = "11" \
     && if ! printf '%s\n' "${USER_UID}:${USER_GID}" | grep -Eq '^[1-9][0-9]*:[1-9][0-9]*$'; then \
          echo "USER_UID and USER_GID must be positive integers." >&2; \
          exit 1; \

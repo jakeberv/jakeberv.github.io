@@ -55,8 +55,8 @@ else
   printf '2.5.18'
 fi
 `,
-    node: "printf 'v20.20.2\\n'\n",
-    npm: "printf '10.8.2\\n'\n",
+    node: "printf 'v24.2.0\\n'\n",
+    npm: "printf '11.4.2\\n'\n",
     bundle: `
 if [[ "\${1:-}" == "_2.5.18_" && "\${2:-}" == "--version" ]]; then
   printf 'Bundler version 2.5.18\\n'
@@ -137,17 +137,17 @@ function localDevContainerComposeOverride(devcontainer) {
   return overridePath;
 }
 
-test("the Docker image builds Node 20 into Ruby 3.3.4 and runs as vscode", async () => {
+test("the Docker image builds Node 24 into Ruby 3.3.4 and runs as vscode", async () => {
   const dockerfile = await source("Dockerfile");
-  const nodeStage = dockerfile.match(/^FROM\s+node:20[^\s]*\s+AS\s+([a-z0-9_-]+)\s*$/im);
+  const nodeStage = dockerfile.match(/^FROM\s+node:24[^\s]*\s+AS\s+([a-z0-9_-]+)\s*$/im);
   const rubyStageIndex = matchIndex(
     dockerfile,
     /^FROM\s+ruby:3\.3\.4(?:[^\s]*)?(?:\s+AS\s+[a-z0-9_-]+)?\s*$/im,
     "Dockerfile must start its runtime stage from Ruby 3.3.4",
   );
 
-  assert.ok(nodeStage, "Dockerfile must define a named Node 20 build stage");
-  assert.ok(nodeStage.index < rubyStageIndex, "the Node 20 stage must precede the Ruby 3.3.4 runtime stage");
+  assert.ok(nodeStage, "Dockerfile must define a named Node 24 build stage");
+  assert.ok(nodeStage.index < rubyStageIndex, "the Node 24 stage must precede the Ruby 3.3.4 runtime stage");
   assert.match(
     dockerfile.slice(rubyStageIndex),
     new RegExp(`COPY\\s+--from=${nodeStage[1]}\\s+`, "i"),
@@ -162,7 +162,7 @@ test("the Docker image builds Node 20 into Ruby 3.3.4 and runs as vscode", async
   );
   assert.match(
     dockerfile,
-    /(?:test|\[)\s+["']?\$\(npm\s+--version\s*\|\s*(?:cut|awk|sed)[^)]*\)["']?\s*(?:=|==|-eq)\s*["']?10["']?/i,
+    /(?:test|\[)\s+["']?\$\(npm\s+--version\s*\|\s*(?:cut|awk|sed)[^)]*\)["']?\s*(?:=|==|-eq)\s*["']?11["']?/i,
   );
   assert.match(dockerfile, /\bpython3\b/);
   assert.match(dockerfile, /\bgit\b/);
@@ -317,12 +317,12 @@ test("container bootstrap validates the pinned runtime before installing local d
   ];
 
   assert.equal(rubyVersion.trim(), "3.3.4");
-  assert.equal(nodeVersion.trim(), "20");
+  assert.equal(nodeVersion.trim(), "24");
   assert.match(gemfileLock, /^BUNDLED WITH\s*\n\s*2\.5\.18\s*$/m);
   assert.match(bootstrap, /ruby\s+-e\s+['"][^'"]*RUBY_VERSION/);
   assert.match(bootstrap, /node\s+--version/);
   assert.match(bootstrap, /npm\s+--version/);
-  assert.match(bootstrap, /(?:expected|required)_npm_major\s*=\s*10/i);
+  assert.match(bootstrap, /(?:expected|required)_npm_major\s*=\s*11/i);
   assert.match(bootstrap, /bundle\s+_[^\s]+_\s+--version/);
   assert.match(bootstrap, /bundle\s+_[^\s]+_\s+check/);
   assert.match(bootstrap, /^export BUNDLE_FROZEN=true$/m);
@@ -398,8 +398,8 @@ test("container bootstrap explains missing runtime executables", {
 }, async (t) => {
   const cases = [
     ["ruby", "Ruby 3.3.4 is required, but ruby is not callable."],
-    ["node", "Node 20 is required, but node is not callable."],
-    ["npm", "npm 10 is required, but npm is not callable."],
+    ["node", "Node 24 is required, but node is not callable."],
+    ["npm", "npm 11 is required, but npm is not callable."],
   ];
 
   for (const [runtime, message] of cases) {
@@ -442,7 +442,7 @@ test("container bootstrap replaces an empty npm cache stamp", {
   );
   await Promise.all([
     writeFile(path.join(fixtureRoot, ".ruby-version"), "3.3.4\n"),
-    writeFile(path.join(fixtureRoot, ".node-version"), "20\n"),
+    writeFile(path.join(fixtureRoot, ".node-version"), "24\n"),
     writeFile(path.join(fixtureRoot, "Gemfile.lock"), "BUNDLED WITH\n   2.5.18\n"),
     writeFile(path.join(fixtureRoot, "package.json"), "{}\n"),
     writeFile(path.join(fixtureRoot, "package-lock.json"), "{}\n"),
@@ -453,7 +453,7 @@ test("container bootstrap replaces an empty npm cache stamp", {
     ...validRuntimeCommands(),
     npm: `
 case "\${1:-}" in
-  --version) printf '10.8.2\\n' ;;
+  --version) printf '11.4.2\\n' ;;
   ls) exit 1 ;;
   ci) printf 'npm-ci-ran\\n' ;;
   *) exit 99 ;;

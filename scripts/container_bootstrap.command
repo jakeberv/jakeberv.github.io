@@ -6,7 +6,7 @@ cd "$ROOT_DIR"
 
 expected_ruby="$(tr -d '[:space:]' < .ruby-version)"
 expected_node_major="$(tr -d '[:space:]' < .node-version)"
-expected_npm_major=10
+expected_npm_major=11
 expected_bundler="$(awk '/^BUNDLED WITH$/ { getline; gsub(/[[:space:]]/, ""); print; exit }' Gemfile.lock)"
 
 if [[ -z "$expected_ruby" || -z "$expected_node_major" || -z "$expected_bundler" ]]; then
