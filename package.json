@@ -23,6 +23,8 @@
     "build:js": "node scripts/build-js.mjs",
     "check:academicons": "node --test scripts/qa/academicons-contract.test.mjs",
     "check:assets": "node scripts/qa/rendered-asset-contract.mjs",
+    "check:comments": "node --test scripts/qa/comments-contract.test.mjs",
+    "check:comments:built": "node --test scripts/qa/comments-built-contract.test.mjs",
     "check:container": "node --test scripts/qa/container-contract.test.mjs",
     "check:generators": "node --test scripts/qa/content-generators.test.mjs",
     "check:icons": "node --test scripts/qa/fontawesome-contract.test.mjs",
@@ -35,7 +37,7 @@
     "check:talkmap": "node --test scripts/qa/talkmap-contract.test.mjs",
     "test:themes": "node scripts/qa/theme-build-matrix.mjs",
     "watch:js": "onchange \"assets/js/_main.js\" \"assets/js/_scientific-content.js\" \"assets/js/plugins/jquery.greedy-navigation.js\" -- npm run build:js",
-    "test": "node --test scripts/qa/academicons-contract.test.mjs scripts/qa/browser-behavior.test.mjs scripts/qa/browser-runtime.test.mjs scripts/qa/build-js.test.mjs scripts/qa/content-generators.test.mjs scripts/qa/fontawesome-contract.test.mjs scripts/qa/integrations-built-contract.test.mjs scripts/qa/integrations-contract.test.mjs scripts/qa/rendered-asset-contract.test.mjs scripts/qa/scientific-content.test.mjs scripts/qa/site-artifact-contract.test.mjs scripts/qa/talkmap-contract.test.mjs scripts/qa/theme-contract.test.mjs && npm run check:js && npm run check:container",
+    "test": "node --test scripts/qa/academicons-contract.test.mjs scripts/qa/browser-behavior.test.mjs scripts/qa/browser-runtime.test.mjs scripts/qa/build-js.test.mjs scripts/qa/comments-contract.test.mjs scripts/qa/content-generators.test.mjs scripts/qa/fontawesome-contract.test.mjs scripts/qa/integrations-built-contract.test.mjs scripts/qa/integrations-contract.test.mjs scripts/qa/rendered-asset-contract.test.mjs scripts/qa/scientific-content.test.mjs scripts/qa/site-artifact-contract.test.mjs scripts/qa/talkmap-contract.test.mjs scripts/qa/theme-contract.test.mjs && npm run check:js && npm run check:container",
     "test:container": "npm run check:container && docker compose build && docker compose run --rm site ./scripts/container_test.command"
   }
 }

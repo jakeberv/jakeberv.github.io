@@ -107,6 +107,8 @@ The shared browser bundle follows the AcademicPages v0.9 asset model with local 
 - `npm run check:generators` verifies the safe content-authoring CLI contract.
 - `npm run check:academicons` verifies the Academicons version, font inventory, delivery order, and academic glyph contract.
 - `npm run check:assets` verifies rendered local links, active resources, CSS URLs, manifest icons, and exact path casing.
+- `npm run check:comments` verifies the supported provider allowlist, activation guards, HTTPS loaders, canonical URLs, and centralized dispatch.
+- `npm run check:comments:built` verifies that the default production site emits no comment UI or provider requests.
 - `npm run check:icons` verifies the Font Awesome version, assets, delivery, markup, and icon-name contract.
 - `npm run check:integrations` verifies analytics dispatch, author-profile hooks, X presentation, and modern sharing.
 - `npm run check:integrations:built` verifies analytics and sharing in the rendered production site.
@@ -119,9 +121,17 @@ The shared browser bundle follows the AcademicPages v0.9 asset model with local 
 - `npm run test:themes` builds all six palettes and requires the same 220 intended routes and artifact boundary.
 - `npm test` runs the asset, content-generator, theme, executable browser-state, and Docker-independent container-contract tests plus bundle verification.
 
-The deterministic builder reads jQuery `3.7.1`, greedy navigation, optional scientific-content renderers, and the shared site interactions in a fixed order. The Talk map uses an independent page-scoped script and does not enlarge that bundle. GitHub Actions runs `npm ci`, `npm test`, the six-theme build matrix, the final Jekyll build, rendered-integration and local-resource validation, and artifact validation for pull requests and production, so source, generated assets, integrations, palette support, and the tracked intended-route manifest cannot drift. Pull requests are read-only and never upload or deploy Pages.
+The deterministic builder reads jQuery `3.7.1`, greedy navigation, optional scientific-content renderers, and the shared site interactions in a fixed order. The Talk map uses an independent page-scoped script and does not enlarge that bundle. GitHub Actions runs `npm ci`, `npm test`, the six-theme build matrix, the final Jekyll build, rendered-integration, disabled-comments, local-resource, and artifact validation for pull requests and production, so source, generated assets, integrations, palette support, and the tracked intended-route manifest cannot drift. Pull requests are read-only and never upload or deploy Pages.
 
 Jekyll excludes internal agent/spec documents, lockfiles, notebooks, R/RDS/RStudio state, Python and command sources, `scripts/`, `markdown_generator/`, and root `*_artifacts` directories from `_site`. They are repository inputs, not deployable website assets. `fetch_scholar_metrics.py` remains tracked because the scheduled Scholar workflow runs it under Python 3.12, but it is explicitly excluded and the artifact contract verifies that it is absent from `_site`.
+
+## Comment Integrations
+
+Comments are disabled by default because `comments.provider` is blank. Supported providers are `disqus`, `discourse`, `facebook`, and `custom`; Google+ and Staticman are not supported. Disqus requires a nonblank `comments.disqus.shortname`, Discourse requires a full HTTPS `comments.discourse.server`, and Facebook requires both `comments.facebook.appid` and an explicit `comments.facebook.sdk_version`. Provider scripts load only on comment-enabled pages with complete configuration, and the custom provider retains `_includes/comments-providers/custom.html` as its extension boundary.
+
+Run `npm run check:comments` after changing provider configuration or includes. After a production build, run `npm run check:comments:built` to confirm the default artifact remains free of comment markup and third-party requests. Enabling comments later requires a separate privacy and moderation decision.
+
+Local Bundler caches under `.bundle/`, root `vendor/bundle/` and `vendor/cache/`, root `local/`, and VS Code state under `.vscode/` are ignored. `Gemfile.lock`, `package-lock.json`, and tracked source such as `_sass/vendor/` remain part of the repository contract.
 
 ## Styling Architecture
 

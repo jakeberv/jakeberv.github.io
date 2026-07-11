@@ -5,6 +5,13 @@ _site/
 # Node.js dependencies
 node_modules/
 
+# Local dependency and editor state
+/.bundle/
+/vendor/bundle/
+/vendor/cache/
+/local/
+/.vscode/
+
 # Browser QA sessions
 .playwright-cli/
 
