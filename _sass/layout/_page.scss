@@ -214,6 +214,17 @@
   }
 }
 
+.page__share-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25em;
+
+  .btn {
+    margin-bottom: 0;
+  }
+}
+
 .page__share-title {
   margin-bottom: 10px;
   font-size: $type-size-6;

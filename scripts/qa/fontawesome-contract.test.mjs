@@ -24,10 +24,14 @@ function trackedSiteMarkup(runGit = execFileSync) {
   let trackedFiles;
 
   try {
-    trackedFiles = runGit("git", ["ls-files", "-z", "--", ...siteMarkupRoots], {
-      cwd: repoRoot,
-      encoding: "utf8",
-    });
+    trackedFiles = runGit(
+      "git",
+      ["ls-files", "-z", "--cached", "--others", "--exclude-standard", "--", ...siteMarkupRoots],
+      {
+        cwd: repoRoot,
+        encoding: "utf8",
+      },
+    );
   } catch (error) {
     const detail = error instanceof Error ? error.message : String(error);
     assert.fail(
@@ -38,6 +42,7 @@ function trackedSiteMarkup(runGit = execFileSync) {
   return trackedFiles
     .split("\0")
     .filter(Boolean)
+    .filter((file) => existsSync(path.join(repoRoot, file)))
     .filter((file) => /\.(?:html?|liquid|markdown|md)$/i.test(file) || path.extname(file) === "");
 }
 
@@ -72,6 +77,10 @@ test("site markup discovery explains its Git working-tree requirement", () => {
 
 test("site markup discovery includes extensionless Jekyll templates", () => {
   assert.ok(trackedSiteMarkup().includes("_includes/toc"));
+});
+
+test("site markup discovery includes new untracked templates before commit", () => {
+  assert.ok(trackedSiteMarkup().includes("_includes/analytics-providers/google-analytics-4.html"));
 });
 
 test("utility allowlist covers static classes from compiled Font Awesome layers", () => {

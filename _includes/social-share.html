@@ -1,13 +1,23 @@
-{% include base_path %}
+{% assign share_url = page.url | absolute_url %}
+{% assign encoded_share_url = share_url | url_encode %}
+{% assign share_title = page.title | default: site.title | strip_html | strip_newlines %}
+{% assign encoded_share_title = share_title | url_encode %}
+{% assign share_label = site.data.ui-text[site.locale].share_on_label | default: "Share on" %}
 
 <section class="page__share">
   {% if site.data.ui-text[site.locale].share_on_label %}
-    <h4 class="page__share-title">{{ site.data.ui-text[site.locale].share_on_label | default: "Share on" }}</h4>
+    <h4 class="page__share-title">{{ share_label }}</h4>
   {% endif %}
 
-  <a href="https://twitter.com/intent/tweet?text={{ base_path }}{{ page.url }}" class="btn btn--twitter" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Twitter"><i class="fa-brands fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <div class="page__share-links">
+    <a href="https://bsky.app/intent/compose?text={{ encoded_share_title }}%20{{ encoded_share_url }}" class="btn btn--bluesky" title="{{ share_label }} Bluesky" aria-label="{{ share_label }} Bluesky"><i class="fa-brands fa-bluesky" aria-hidden="true"></i><span> Bluesky</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u={{ base_path }}{{ page.url }}" class="btn btn--facebook" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ encoded_share_url }}" class="btn btn--facebook" title="{{ share_label }} Facebook" aria-label="{{ share_label }} Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ base_path }}{{ page.url }}" class="btn btn--linkedin" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ encoded_share_url }}" class="btn btn--linkedin" title="{{ share_label }} LinkedIn" aria-label="{{ share_label }} LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+
+    <a href="https://www.addtoany.com/add_to/mastodon?linkurl={{ encoded_share_url }}&amp;linkname={{ encoded_share_title }}" class="btn btn--mastodon" title="{{ share_label }} Mastodon" aria-label="{{ share_label }} Mastodon"><i class="fa-brands fa-mastodon" aria-hidden="true"></i><span> Mastodon</span></a>
+
+    <a href="https://x.com/intent/post?text={{ encoded_share_title }}&amp;url={{ encoded_share_url }}" class="btn btn--x" title="{{ share_label }} X" aria-label="{{ share_label }} X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i><span> X</span></a>
+  </div>
 </section>

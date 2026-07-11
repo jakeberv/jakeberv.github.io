@@ -1,14 +1,22 @@
-{% if site.analytics.provider and page.analytics != false %}
+{% if page.analytics != false and site.analytics.provider != false %}
+  {% if site.analytics.providers %}
+    {% assign analytics_providers = site.analytics.providers | uniq %}
+  {% elsif site.analytics.provider %}
+    {% assign analytics_providers = site.analytics.provider | split: "|" %}
+  {% endif %}
 
-{% case site.analytics.provider %}
-{% when "google" %}
-  {% include /analytics-providers/google.html %}
-{% when "google-universal" %}
-  {% include /analytics-providers/google-universal.html %}
-{% when "goatcounter" %}
-  {% include /analytics-providers/goatcounter.html %}
-{% when "custom" %}
-  {% include /analytics-providers/custom.html %}
-{% endcase %}
-
+  {% for analytics_provider in analytics_providers %}
+    {% case analytics_provider %}
+    {% when "google" %}
+      {% include /analytics-providers/google.html %}
+    {% when "google-universal" %}
+      {% include /analytics-providers/google-universal.html %}
+    {% when "google-analytics-4" %}
+      {% include /analytics-providers/google-analytics-4.html %}
+    {% when "goatcounter" %}
+      {% include /analytics-providers/goatcounter.html %}
+    {% when "custom" %}
+      {% include /analytics-providers/custom.html %}
+    {% endcase %}
+  {% endfor %}
 {% endif %}

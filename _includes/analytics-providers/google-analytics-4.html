@@ -1,0 +1,10 @@
+{% assign ga4_tracking_id = site.analytics.google.tracking_id | default: "" | strip %}
+{% if ga4_tracking_id contains "G-" %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ ga4_tracking_id | url_encode }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ ga4_tracking_id | escape }}');
+</script>
+{% endif %}

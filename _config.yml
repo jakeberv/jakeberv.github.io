@@ -79,49 +79,68 @@ social:
     - https://scholar.google.com/citations?user=cQQaGZQAAAAJ&hl=en
     - https://github.com/jakeberv
     - https://orcid.org/0000-0002-5962-0621
-    - https://twitter.com/jakeberv
-    - https://www.linkedin.com/in/jake-berv/
+    - https://x.com/jakeberv
+    - https://bsky.app/profile/jakeberv.bsky.social
+    - https://www.linkedin.com/in/jakeberv/
 
 
 # Analytics
 analytics:
-  provider               : "goatcounter" # false (default), "google", "google-universal", "custom", "goatcounter"
+  providers:
+    - goatcounter
+    - google-analytics-4
   google:
-    tracking_id          : 
+    tracking_id          :
   goatcounter:
-    code		 : jakeberv
+    code                 : jakeberv
 
 
 # Site Author
 author:
   name             : "Jake Berv"
   avatar           : "profile.png"
+  pronouns         :
   bio              : "Evolutionary Biologist and barbeque enthusiast"
   location         : "Ann Arbor, Michigan"
   employer         : "University of Michigan"
+  academia         :
+  arxiv            :
+  inspire-hep      :
   pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=cQQaGZQAAAAJ&hl=en"
+  scopus           :
+  semantic         :
+  ssrn             :
+  zotero           :
   email            : "jberv@umich.edu"
   researchgate     : 
   uri              :
+  artstation       :
   bitbucket        :
+  bluesky          : "jakeberv.bsky.social"
   codepen          :
   dribbble         :
   flickr           :
   facebook         :
   foursquare       :
   github           : "jakeberv"
+  gitlab           :
+  goodreads        :
   google_plus      :
+  kaggle           :
   keybase          :
   instagram        :
   impactstory      :
   lastfm           :
-  linkedin         :
+  linkedin         : "jakeberv"
+  mastodon         :
+  medium           :
   orcid            : "https://orcid.org/0000-0002-5962-0621"
   pinterest        :
   soundcloud       :
   stackoverflow    : 
   steam            :
+  telegram         :
   tumblr           :
   twitter          : "jakeberv"
   vine             :
@@ -129,6 +148,7 @@ author:
   xing             :
   youtube          : 
   wikipedia        :
+  zhihu            :
 
 
 # Reading Files
