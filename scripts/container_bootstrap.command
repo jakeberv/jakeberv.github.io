@@ -17,7 +17,14 @@ fi
 actual_ruby="$(ruby -e 'print RUBY_VERSION')"
 actual_node_major="$(node --version | sed 's/^v//' | cut -d. -f1)"
 actual_npm_major="$(npm --version | cut -d. -f1)"
-actual_bundler="$(bundle _"${expected_bundler}"_ --version | awk '{ print $3 }')"
+available_bundler="$(ruby -rrubygems -e 'versions = Gem::Specification.find_all_by_name("bundler").map(&:version); print(versions.max || "none")' 2>/dev/null || true)"
+
+if ! pinned_bundler_output="$(bundle _"${expected_bundler}"_ --version 2>/dev/null)"; then
+  echo "Bundler $expected_bundler is required; found ${available_bundler:-none}, but the pinned version is not callable."
+  exit 1
+fi
+
+actual_bundler="$(printf '%s\n' "$pinned_bundler_output" | awk '{ print $3 }')"
 
 if [[ "$actual_ruby" != "$expected_ruby" ]]; then
   echo "Ruby $expected_ruby is required; found $actual_ruby."

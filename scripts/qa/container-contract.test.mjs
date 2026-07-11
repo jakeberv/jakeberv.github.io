@@ -1,9 +1,14 @@
 import assert from "node:assert/strict";
+import { execFile } from "node:child_process";
 import { constants } from "node:fs";
-import { access, readFile } from "node:fs/promises";
+import { access, chmod, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import os from "node:os";
 import path from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
+import { promisify } from "node:util";
+
+const execFileAsync = promisify(execFile);
 
 const repositoryRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -205,6 +210,53 @@ test("container bootstrap validates the pinned runtime before installing local d
   assert.doesNotMatch(bootstrap, /\bgem\s+install\b/);
   assert.doesNotMatch(bootstrap, /\bnpm\s+(?:install|i)\s+(?:--global|-g)\b/);
   assert.doesNotMatch(bootstrap, /\bnpm\s+(?:install|i)\s+\S+\s+(?:--global|-g)\b/);
+});
+
+test("container bootstrap explains when the pinned Bundler is unavailable", async (t) => {
+  const binDirectory = await mkdtemp(path.join(os.tmpdir(), "container-bootstrap-bin-"));
+  t.after(() => rm(binDirectory, { force: true, recursive: true }));
+
+  const commands = {
+    ruby: `
+if [[ "$*" == *RUBY_VERSION* ]]; then
+  printf '3.3.4'
+else
+  printf '4.0.9'
+fi
+`,
+    node: "printf 'v20.20.2\\n'\n",
+    npm: "printf '10.8.2\\n'\n",
+    bundle: `
+if [[ "\${1:-}" == "_2.5.18_" ]]; then
+  exit 1
+fi
+exit 99
+`,
+  };
+
+  await Promise.all(Object.entries(commands).map(async ([name, body]) => {
+    const commandPath = path.join(binDirectory, name);
+    await writeFile(commandPath, `#!/usr/bin/env bash\nset -euo pipefail\n${body}`, "utf8");
+    await chmod(commandPath, 0o755);
+  }));
+
+  await assert.rejects(
+    execFileAsync("bash", ["scripts/container_bootstrap.command"], {
+      cwd: repositoryRoot,
+      env: {
+        ...process.env,
+        PATH: `${binDirectory}:${process.env.PATH}`,
+      },
+    }),
+    (error) => {
+      assert.equal(error.code, 1);
+      assert.match(
+        error.stdout,
+        /Bundler 2\.5\.18 is required; found 4\.0\.9, but the pinned version is not callable\./,
+      );
+      return true;
+    },
+  );
 });
 
 test("container bootstrap reuses complete npm dependencies until inputs change", async () => {
