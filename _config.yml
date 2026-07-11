@@ -80,7 +80,8 @@ social:
     - https://github.com/jakeberv
     - https://orcid.org/0000-0002-5962-0621
     - https://x.com/jakeberv
-    - https://www.linkedin.com/in/jake-berv/
+    - https://bsky.app/profile/jakeberv.bsky.social
+    - https://www.linkedin.com/in/jakeberv/
 
 
 # Analytics
@@ -116,7 +117,7 @@ author:
   uri              :
   artstation       :
   bitbucket        :
-  bluesky          :
+  bluesky          : "jakeberv.bsky.social"
   codepen          :
   dribbble         :
   flickr           :
@@ -131,7 +132,7 @@ author:
   instagram        :
   impactstory      :
   lastfm           :
-  linkedin         :
+  linkedin         : "jakeberv"
   mastodon         :
   medium           :
   orcid            : "https://orcid.org/0000-0002-5962-0621"

@@ -51,12 +51,20 @@ test("author profiles expose the v0.9 identity hooks without activating accounts
     "semantic", "ssrn", "telegram", "zotero", "artstation", "bluesky",
     "goodreads", "kaggle", "zhihu",
   ];
+  const activeHooks = new Set(["bluesky"]);
 
   for (const hook of hooks) {
     assert.match(profile, new RegExp(`author\\.${hook.replace("-", "\\-")}`), `missing author.${hook}`);
-    assert.match(config, new RegExp(`^  ${hook.replace("-", "\\-")}\\s*:\\s*$`, "m"), `${hook} must be dormant`);
+    if (!activeHooks.has(hook)) {
+      assert.match(config, new RegExp(`^  ${hook.replace("-", "\\-")}\\s*:\\s*$`, "m"), `${hook} must be dormant`);
+    }
   }
 
+  assert.match(config, /^  bluesky\s*:\s*"jakeberv\.bsky\.social"\s*$/m);
+  assert.match(config, /^\s+- https:\/\/bsky\.app\/profile\/jakeberv\.bsky\.social\s*$/m);
+  assert.match(config, /^  linkedin\s*:\s*"jakeberv"\s*$/m);
+  assert.match(config, /^\s+- https:\/\/www\.linkedin\.com\/in\/jakeberv\/?\s*$/m);
+  assert.doesNotMatch(config, /linkedin\.com\/in\/jake-berv/);
   assert.match(profile, /author\.pronouns/);
   assert.match(profile, /fetchpriority="high"/);
   assert.match(profile, /fa-building-columns/);
