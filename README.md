@@ -70,7 +70,7 @@ To start the portable preview:
 3. Stop the foreground Compose process with `Ctrl+C`.
 4. Remove the stopped service and network with `docker compose down`.
 
-Compose defaults the container user to UID/GID `1000`. On a Linux host using different IDs, preserve bind-mount ownership with `USER_UID="$(id -u)" USER_GID="$(id -g)" docker compose up --build`.
+Compose defaults the container user to UID/GID `1000`. On a Linux host using different IDs, preserve bind-mount ownership with `USER_UID="$(id -u)" USER_GID="$(id -g)" docker compose up --build`. The image retains the `vscode` account and tolerates numeric UID/GID values already occupied in the Debian base image.
 
 To explicitly reset the dependency volumes, run `docker compose down --volumes`. This removes the isolated Bundler and `node_modules` caches, so the next startup must bootstrap those dependencies again.
 

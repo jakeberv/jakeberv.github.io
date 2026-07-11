@@ -23,10 +23,18 @@ RUN ln -s ../lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm \
     && ln -s ../lib/node_modules/corepack/dist/corepack.js /usr/local/bin/corepack \
     && test "$(npm --version | cut -d. -f1)" = "10" \
     && gem install bundler --version 2.5.18 \
-    && groupadd --gid "${USER_GID}" vscode \
-    && useradd --uid "${USER_UID}" --gid "${USER_GID}" --create-home --shell /bin/bash vscode \
-    && mkdir -p /workspace/node_modules "${BUNDLE_PATH}" \
-    && chown -R vscode:vscode /workspace "${BUNDLE_PATH}" \
+    && if getent group vscode >/dev/null 2>&1; then \
+         groupmod --non-unique --gid "${USER_GID}" vscode; \
+       else \
+         groupadd --non-unique --gid "${USER_GID}" vscode; \
+       fi \
+    && if id -u vscode >/dev/null 2>&1; then \
+         usermod --non-unique --uid "${USER_UID}" --gid "${USER_GID}" --home /home/vscode --shell /bin/bash vscode; \
+       else \
+         useradd --non-unique --uid "${USER_UID}" --gid "${USER_GID}" --create-home --shell /bin/bash vscode; \
+       fi \
+    && mkdir -p /home/vscode /workspace/node_modules "${BUNDLE_PATH}" \
+    && chown -R vscode:vscode /home/vscode /workspace "${BUNDLE_PATH}" \
     && chmod 0777 "${BUNDLE_PATH}" /workspace/node_modules
 
 USER vscode

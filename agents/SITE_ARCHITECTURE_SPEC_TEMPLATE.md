@@ -46,7 +46,7 @@ Docker is optional developer tooling; the native preview workflow and GitHub Pag
 3. Stop the foreground process with `Ctrl+C`, then clean up with `docker compose down`.
 4. Use `docker compose down --volumes` only for an explicit dependency-volume reset; it removes the isolated `bundle` and `node_modules` volumes, so the next startup re-installs dependencies.
 
-Compose defaults to UID/GID `1000`. On Linux hosts with different IDs, run `USER_UID="$(id -u)" USER_GID="$(id -g)" docker compose up --build` so the bind-mounted workspace remains writable.
+Compose defaults to UID/GID `1000`. On Linux hosts with different IDs, run `USER_UID="$(id -u)" USER_GID="$(id -g)" docker compose up --build` so the bind-mounted workspace remains writable. User/group setup retains the `vscode` identity and accepts numeric IDs already present in the base image.
 
 The VS Code Dev Container uses the same Compose service. `overrideCommand: true` prevents the Compose preview command from racing the `postCreateCommand` bootstrap, while `.devcontainer/docker-compose.devcontainer.yaml` disables the inherited preview-only health check. After the container is created, start preview manually with the normal wrapper: `./scripts/local_preview.command --full-build --skip-data --port 4001`.
 

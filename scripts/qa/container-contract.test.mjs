@@ -24,7 +24,7 @@ function yamlBlock(sourceText, key, indent = 0) {
   const lines = sourceText.split(/\r?\n/);
   const indentation = " ".repeat(indent);
   const start = lines.findIndex((line) => line === `${indentation}${key}:`);
-  assert.notEqual(start, -1, `docker-compose.yaml must define ${key}`);
+  assert.notEqual(start, -1, `YAML source must define ${key}`);
 
   const block = [];
   for (let index = start + 1; index < lines.length; index += 1) {
@@ -34,6 +34,17 @@ function yamlBlock(sourceText, key, indent = 0) {
   }
   return block.join("\n");
 }
+
+test("the YAML block helper reports source-neutral missing keys", () => {
+  assert.throws(
+    () => yamlBlock("site_theme: default\n", "exclude"),
+    (error) => {
+      assert.match(error.message, /YAML source must define exclude/);
+      assert.doesNotMatch(error.message, /docker-compose\.yaml/);
+      return true;
+    },
+  );
+});
 
 function commandSegments(command) {
   return command
@@ -94,6 +105,35 @@ test("the Docker image builds Node 20 into Ruby 3.3.4 and runs as vscode", async
   assert.match(dockerfile, /^\s*USER\s+vscode\s*$/m);
   assert.match(dockerfile, /^\s*WORKDIR\s+\/workspace\s*$/m);
   assert.match(dockerfile, /BUNDLE_PATH\s*(?:=|\s+)\/?usr\/local\/bundle/);
+});
+
+test("the Docker user tolerates occupied host UID and GID values", async () => {
+  const dockerfile = await source("Dockerfile");
+  const groupCreation = dockerfile.match(/groupadd[^\n]*\bvscode\b/i)?.[0];
+  const userCreation = dockerfile.match(/useradd[^\n]*\bvscode\b/i)?.[0];
+
+  assert.ok(groupCreation, "Dockerfile must create the vscode group");
+  assert.ok(userCreation, "Dockerfile must create the vscode user");
+  assert.match(
+    groupCreation,
+    /(?:--non-unique|-o)(?:\s|$)/,
+    "vscode group creation must allow an existing numeric GID",
+  );
+  assert.match(
+    userCreation,
+    /(?:--non-unique|-o)(?:\s|$)/,
+    "vscode user creation must allow an existing numeric UID",
+  );
+  assert.match(
+    dockerfile,
+    /if\s+getent\s+group\s+vscode[\s\S]*?groupmod[\s\S]*?else[\s\S]*?groupadd[\s\S]*?fi/,
+    "Dockerfile must update an existing vscode group instead of recreating it",
+  );
+  assert.match(
+    dockerfile,
+    /if\s+id\s+-u\s+vscode[\s\S]*?usermod[\s\S]*?else[\s\S]*?useradd[\s\S]*?fi/,
+    "Dockerfile must update an existing vscode user instead of recreating it",
+  );
 });
 
 test("the Docker build context excludes generated, cached, and local artifacts", async () => {

@@ -35,7 +35,7 @@ published: false
 ## Acceptance Criteria
 
 - `npm test` enforces the static container contract without requiring Docker.
-- Docker reports Ruby 3.3.4, Bundler 2.5.18, Node 20.x, npm 10.x, and a non-root UID.
+- Docker reports Ruby 3.3.4, Bundler 2.5.18, Node 20.x, npm 10.x, and a non-root UID; occupied host UID/GID values do not prevent image creation.
 - Container dependencies are isolated from host gems and `node_modules`.
 - `docker compose up --build` serves the existing site on port 4001 through `scripts/local_preview.command`.
 - Native and container builds both produce the unchanged 241-route manifest.
