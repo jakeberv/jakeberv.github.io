@@ -14,6 +14,8 @@ Use this template to document the current architecture of this Jekyll site befor
 - Theme/base: `academicpages` (Minimal Mistakes derived)
 - Ruby requirements: Ruby `3.3.4` with Bundler `2.5.18` preferred
 - Node requirements: Node.js `20` with npm `10` for preview validation and deterministic JS tooling
+- Container runtime: Docker runs the service as the non-root `vscode` user with Ruby `3.3.4`, Bundler `2.5.18`, Node `20`, npm `10`, and Python 3
+- Dependency isolation: Compose named volumes `bundle` and `node_modules`; only those cache paths remain recursively writable across Dev Container UID/GID remapping, while the repository remains a bind mount. Bundler runs frozen so bootstrap cannot rewrite the host lockfile. Bootstrap reuses `node_modules` only when `package.json`, `package-lock.json`, and the installed npm file/symlink tree fingerprints match and `npm ls` validates the tree; otherwise it runs `npm ci`. Git enforces LF endings for executable `.command` files.
 - Local run command:
 - Production deployment target:
 
@@ -34,6 +36,21 @@ Optional:
 - Skip geo/impact data regeneration explicitly: `./scripts/local_preview.command --skip-data`
 - Custom port: `./scripts/local_preview.command --port 4010`
 - Always run full data + full build path: `./scripts/local_preview_fullbuild.command`
+
+### Container preview (optional)
+
+Docker is optional developer tooling; the native preview workflow and GitHub Pages deployment remain unchanged.
+
+1. Start the Compose preview with `docker compose up --build`.
+2. Open `http://127.0.0.1:4001/`.
+3. Stop the foreground process with `Ctrl+C`, then clean up with `docker compose down`.
+4. Use `docker compose down --volumes` only for an explicit dependency-volume reset; it removes the isolated `bundle` and `node_modules` volumes, so the next startup re-installs dependencies.
+
+Compose defaults to UID/GID `1000`. On Linux hosts with different positive IDs, run `USER_UID="$(id -u)" USER_GID="$(id -g)" docker compose up --build` so the bind-mounted workspace remains writable. Root or nonnumeric IDs are rejected; occupied positive IDs retain the `vscode` identity. The host preview port binds only to `127.0.0.1`.
+
+The VS Code Dev Container uses the same Compose service. `overrideCommand: true` prevents the Compose preview command from racing the `postCreateCommand` bootstrap, while `.devcontainer/docker-compose.devcontainer.yaml` disables the inherited preview-only health check. After the container is created, start preview manually with the normal wrapper: `./scripts/local_preview.command --full-build --skip-data --port 4001`.
+
+The wrapper reuses `_config.dev.yml`. `npm run check:container` is Docker-independent static contract validation; `npm run test:container` is Docker-required end-to-end validation.
 
 Notes:
 - `scripts/local_preview.command` reads the preferred Bundler version from `Gemfile.lock` and tries Homebrew Ruby 3.3 before a PATH-provided Bundler.
@@ -129,6 +146,9 @@ Notes:
 - Browser compatibility: native sticky positioning, smooth scrolling with reduced-motion handling, and explicit responsive-video CSS replace Stickyfill, jQuery Smooth Scroll, FitVids, and Magnific Popup
 - Pages artifact boundary: `_config.yml` excludes `package-lock.json`, `scripts/`, source-only shared JavaScript files, and root `*_artifacts` directories because they are build inputs or ignored local analysis output
 - Deferred theme work: runtime palette selection and JSON CV support
+- Infrastructure policy: Phase 7 is infrastructure-only; optional AcademicPages v0.9 capabilities remain inactive
+- Protected surfaces: content, navigation, data, routes, rendered `/cv/` and its PDF behavior, images, fonts, generated assets, JavaScript bundles, Gem files and lockfiles, and GitHub Actions workflows
+- Future JSON CV constraint: any JSON CV infrastructure must coexist with the unchanged PDF-based `/cv/` and cannot activate or replace it without approval
 - Page-specific inline styles to keep/avoid:
 - Accessibility notes:
 - Asset delivery notes: `main.css` and `fontawesome.css` are separate cacheable outputs; the local solid and brands WOFF2 files are preloaded before the blocking icon stylesheet to avoid missing-icon flashes

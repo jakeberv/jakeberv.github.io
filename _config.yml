@@ -147,6 +147,7 @@ exclude:
   - .sass-cache
   - CHANGELOG
   - Capfile
+  - Dockerfile
   - Gemfile
   - Gruntfile.js
   - LICENSE
@@ -157,6 +158,8 @@ exclude:
   - assets/js/plugins
   - assets/js/vendor
   - config
+  - docker-compose.yaml
+  - .devcontainer
   - gulpfile.js
   - log
   - node_modules

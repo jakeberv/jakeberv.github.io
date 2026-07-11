@@ -101,7 +101,7 @@ test("the npm test command does not depend on shell glob expansion", async () =>
 
   assert.equal(
     packageDefinition.scripts.test,
-    "node --test scripts/qa/browser-behavior.test.mjs scripts/qa/browser-runtime.test.mjs scripts/qa/build-js.test.mjs scripts/qa/fontawesome-contract.test.mjs scripts/qa/scientific-content.test.mjs scripts/qa/theme-contract.test.mjs && npm run check:js",
+    "node --test scripts/qa/browser-behavior.test.mjs scripts/qa/browser-runtime.test.mjs scripts/qa/build-js.test.mjs scripts/qa/fontawesome-contract.test.mjs scripts/qa/scientific-content.test.mjs scripts/qa/theme-contract.test.mjs && npm run check:js && npm run check:container",
   );
 });
 
