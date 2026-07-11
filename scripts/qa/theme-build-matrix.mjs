@@ -21,7 +21,7 @@ const expectedRouteManifest = (
   await readFile(path.join(repositoryRoot, "scripts/qa/expected-html-routes.txt"), "utf8")
 )
   .trim()
-  .split("\n");
+  .split(/\r?\n/);
 const contrastFailures = [];
 
 async function run(command, args) {

@@ -121,3 +121,9 @@ test("the light-first runtime does not consult system color preference", async (
   assert.match(masthead, /<span class="navicon"><\/span>/);
   assert.match(main, /new CustomEvent\("site:themechange"/);
 });
+
+test("the tracked route manifest parser tolerates CRLF checkouts", async () => {
+  const themeMatrix = await source("scripts/qa/theme-build-matrix.mjs");
+
+  assert.match(themeMatrix, /\.split\(\/\\r\?\\n\/\)/);
+});
