@@ -133,11 +133,14 @@ NODE
 }
 
 current_npm_tree=""
-if ! current_npm_tree="$(npm_tree_hash 2>/dev/null)"; then
-  current_npm_tree=""
+if [[ "$installed_npm_inputs" == "$npm_inputs_hash" && -n "$installed_npm_tree" ]]; then
+  if ! current_npm_tree="$(npm_tree_hash 2>/dev/null)"; then
+    current_npm_tree=""
+  fi
 fi
 
 if [[ "$installed_npm_inputs" != "$npm_inputs_hash" ]] \
+  || [[ -z "$installed_npm_tree" ]] \
   || [[ "$installed_npm_tree" != "$current_npm_tree" ]] \
   || ! npm ls --all --ignore-scripts >/dev/null 2>&1; then
   npm ci

@@ -536,6 +536,16 @@ test("container bootstrap verifies cached npm package payloads and command links
     /installed_npm_tree[^\n]*!=[^\n]*current_npm_tree|current_npm_tree[^\n]*!=[^\n]*installed_npm_tree/,
     "bootstrap must reinstall when cached package contents differ from the recorded tree",
   );
+  assert.match(
+    bootstrap,
+    /if \[\[ "\$installed_npm_inputs" == "\$npm_inputs_hash" && -n "\$installed_npm_tree" \]\]; then[\s\S]{0,240}npm_tree_hash/,
+    "bootstrap must hash the installed tree only when package inputs and a stored tree stamp are reusable",
+  );
+  assert.match(
+    bootstrap,
+    /\[\[ -z "\$installed_npm_tree" \]\]/,
+    "bootstrap must reinstall when the stored tree stamp is missing or empty",
+  );
   assert.ok(
     treeStampIndex < treeHashIndex
       && treeHashIndex < npmCiIndex
