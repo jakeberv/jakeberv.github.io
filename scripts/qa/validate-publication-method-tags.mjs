@@ -19,7 +19,11 @@ function parseArguments(argv) {
       failOnUntagged = true;
     } else if (argument === "--allow-untagged") {
       allowUntagged = true;
-    } else if (argument === "--publications-dir" && argv[index + 1]) {
+    } else if (
+      argument === "--publications-dir" &&
+      argv[index + 1] &&
+      !argv[index + 1].startsWith("-")
+    ) {
       publicationsDir = path.resolve(argv[index + 1]);
       index += 1;
     } else {

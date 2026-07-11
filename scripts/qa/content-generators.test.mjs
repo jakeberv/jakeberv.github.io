@@ -351,6 +351,20 @@ test("custom publication directories are accepted by both taxonomy validators", 
   assert.match(methods.stdout, /files_checked=1/);
 });
 
+test("taxonomy validators reject option tokens as publication directory values", () => {
+  const tags = run("node", [publicationValidator, "--publications-dir", "--unexpected"]);
+  const methods = run("node", [
+    methodValidator,
+    "--publications-dir",
+    "--allow-untagged",
+  ]);
+
+  assert.equal(tags.status, 2);
+  assert.match(tags.stderr, /Unknown or incomplete argument: --publications-dir/);
+  assert.equal(methods.status, 2);
+  assert.match(methods.stderr, /Unknown or incomplete argument: --publications-dir/);
+});
+
 test("publication checks reject unknown topic and method taxonomy values", (t) => {
   const temp = temporaryDirectory(t);
   const input = path.join(temp, "publications.tsv");

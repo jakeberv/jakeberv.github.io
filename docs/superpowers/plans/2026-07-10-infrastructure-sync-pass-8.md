@@ -54,8 +54,8 @@ git status --short
 
 ## Verification Summary
 
-- `npm test` passes 54/54 primary tests, the deterministic JavaScript check, and 26/26 static container-contract tests.
-- `npm run check:generators` passes 16/16 CLI tests, including taxonomy failures, malformed/invalid encoding, CRLF normalization, case-insensitive duplicate targets, atomic no-clobber behavior, permissions, and overwrite preservation.
+- `npm test` passes 55/55 primary tests, the deterministic JavaScript check, and 26/26 static container-contract tests.
+- `npm run check:generators` passes 17/17 CLI tests, including taxonomy failures, malformed/invalid encoding, CRLF normalization, case-insensitive duplicate targets, atomic no-clobber behavior, permissions, overwrite preservation, and strict validator option parsing.
 - Native and container six-palette matrices match the tracked 240-route manifest and never publish `markdown_generator/`.
 - The full Docker test path and final native Jekyll build pass with only the known Faraday and stale-data warnings.
 - The only route removed from the 241-route baseline is the unintended `/markdown_generator/index.html` development page.
