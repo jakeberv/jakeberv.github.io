@@ -138,12 +138,15 @@ Notes:
 - Theme runtime: first visits are light; dark mode uses `html[data-theme="dark"]` and emits `site:themechange` with `detail.theme`
 - Theme properties: 19 core `--global-*` properties plus stable `--site-*`, `--viz-*`, syntax, and status roles
 - Import behavior: `assets/css/main.scss` loads shared settings, the selected light palette, compile aliases, the selected dark palette, helpers, layouts including scientific-content styling, then `_sass/_custom.scss`; Font Awesome 6.7.2 compiles separately from `assets/css/fontawesome.scss`
-- Icon contract: site markup uses `fa-solid` and `fa-brands`; only solid and brands TTF/WOFF2 assets ship from `assets/webfonts/`, while Academicons remains local and independent
+- Icon contract: site markup uses `fa-solid` and `fa-brands`; only solid and brands TTF/WOFF2 assets ship from `assets/webfonts/`. Academicons 1.9.4 is an independent stylesheet backed only by preloaded WOFF and TTF files under `assets/fonts/`.
 - Local overrides: custom and page-specific presentation colors consume semantic roles; scientific categorical and institutional brand palettes remain literal
 - JavaScript contract: Node 24/npm 11 installs from `package-lock.json`; `scripts/build-js.mjs` combines jQuery 3.7.1, greedy navigation, optional scientific-content renderers, and shared interactions into the committed module `assets/js/main.min.js`
 - Scientific content contract: `mathjax: true` loads MathJax 4.0.0 for a page; fenced `mermaid` blocks load Mermaid 11.15.0; fenced `plotly` blocks load Plotly 3.6.0 from JSON with required `data` and optional `layout`/`config`
 - Scientific fallback behavior: failed Mermaid/Plotly loads or parses keep the source block visible and add an accessible status message; successful renderers consume `--site-*` and `--viz-*` tokens and re-render after `site:themechange`
-- Asset checks: use `npm run build:js`, `npm run check:js`, `npm run check:icons`, `npm run check:scientific`, `npm run check:site-artifact`, `npm run check:themes`, `npm run test:themes`, and `npm test`
+- Identity contract: full-URL profile fields are `academia`, `arxiv`, `inspire-hep`, `mastodon`, `medium`, `scopus`, `semantic`, `ssrn`, `telegram`, and `zotero`; handle fields include `artstation`, `bluesky`, `goodreads`, `kaggle`, `twitter`, and `zhihu`. Blank values render no link.
+- Sharing contract: sharing-enabled pages render Bluesky, Facebook, LinkedIn, Mastodon, and X in that order using independently encoded canonical URLs and titles. The legacy `twitter` configuration key remains for Twitter Card compatibility, while visible links use X.
+- Analytics contract: `analytics.providers` is the preferred ordered, de-duplicated list; scalar `analytics.provider` is a fallback when the list is absent, and explicit scalar `false` is the global kill switch used by local preview. GoatCounter remains active in production. GA4 renders only when `analytics.google.tracking_id` contains a nonblank `G-...` value, and `page.analytics: false` disables all providers for one page.
+- Asset checks: use `npm run build:js`, `npm run check:js`, `npm run check:academicons`, `npm run check:icons`, `npm run check:integrations`, `npm run check:integrations:built` after production builds, `npm run check:scientific`, `npm run check:site-artifact`, `npm run check:themes`, `npm run test:themes`, and `npm test`
 - Browser compatibility: native sticky positioning, smooth scrolling with reduced-motion handling, and explicit responsive-video CSS replace Stickyfill, jQuery Smooth Scroll, FitVids, and Magnific Popup
 - Content-authoring contract: the standard-library publication and talk CLIs expose read-only `check` and explicit-output `generate`; generation requires `--output-dir`, collisions require `--overwrite`, and publication output must pass the canonical topic and method validators
 - Talks authoring boundary: the optional generator targets `_talks` collection documents and never reads or modifies `_data/talks.yml`, which remains the source for `/talks/`
@@ -151,14 +154,14 @@ Notes:
 - Route contract: `scripts/qa/expected-html-routes.txt` lists the exact 220 intended public HTML outputs. `scripts/qa/site-artifact-contract.mjs` checks those routes case-sensitively after every palette and production build; no path canonicalization is permitted.
 - Pages artifact boundary: `_config.yml` excludes internal agent/spec documents, lockfiles, notebooks, R/RDS/RStudio state, Python and command sources, `scripts/`, `markdown_generator/`, source-only shared JavaScript files, and root `*_artifacts` directories. The validator rejects protected prefixes, filenames, and development extensions in `_site`.
 - Scholar source boundary: `fetch_scholar_metrics.py` remains tracked and workflow-executable but is never a public Pages asset.
-- Pull-request lifecycle: the Pages workflow runs npm contracts, data validation/generation, all six themes, the default build, and artifact validation for PRs with read-only contents permission. Artifact upload and Pages/OIDC permissions are deployment-only.
+- Pull-request lifecycle: the Pages workflow runs npm contracts, data validation/generation, all six themes, the default build, rendered-integration validation, and artifact validation for PRs with read-only contents permission. Artifact upload and Pages/OIDC permissions are deployment-only.
 - Deferred theme work: runtime palette selection and JSON CV support
 - Infrastructure policy: Phase 7 is infrastructure-only; optional AcademicPages v0.9 capabilities remain inactive
 - Protected surfaces: content, navigation, data, the 220 intended public routes, rendered `/cv/` and its PDF behavior, images, fonts, generated assets, JavaScript bundles, Gem files and lockfiles; internal repository-document routes and raw development sources are intentionally excluded
 - Future JSON CV constraint: any JSON CV infrastructure must coexist with the unchanged PDF-based `/cv/` and cannot activate or replace it without approval
 - Page-specific inline styles to keep/avoid:
 - Accessibility notes:
-- Asset delivery notes: `main.css` and `fontawesome.css` are separate cacheable outputs; the local solid and brands WOFF2 files are preloaded before the blocking icon stylesheet to avoid missing-icon flashes
+- Asset delivery notes: `main.css`, `fontawesome.css`, and `academicons.css` are separate cacheable outputs; Academicons WOFF and the local solid/brands WOFF2 files are preloaded before their blocking icon stylesheets to avoid missing-icon flashes
 
 ## 8) SEO and metadata
 - Global metadata source:

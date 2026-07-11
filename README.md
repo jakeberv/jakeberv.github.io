@@ -102,7 +102,10 @@ The shared browser bundle follows the AcademicPages v0.9 asset model with local 
 - `npm ci` installs the exact Node 24/npm 11 dependency graph.
 - `npm run build:js` builds the committed `assets/js/main.min.js` module.
 - `npm run check:generators` verifies the safe content-authoring CLI contract.
+- `npm run check:academicons` verifies the Academicons version, font inventory, delivery order, and academic glyph contract.
 - `npm run check:icons` verifies the Font Awesome version, assets, delivery, markup, and icon-name contract.
+- `npm run check:integrations` verifies analytics dispatch, author-profile hooks, X presentation, and modern sharing.
+- `npm run check:integrations:built` verifies analytics and sharing in the rendered production site.
 - `npm run check:js` verifies the committed bundle without rewriting it.
 - `npm run check:scientific` verifies the opt-in MathJax, Mermaid, and Plotly runtime contract.
 - `npm run check:site-artifact` verifies the exact route manifest and rejects repository-only sources from `_site`.
@@ -111,7 +114,7 @@ The shared browser bundle follows the AcademicPages v0.9 asset model with local 
 - `npm run test:themes` builds all six palettes and requires the same 220 intended routes and artifact boundary.
 - `npm test` runs the asset, content-generator, theme, executable browser-state, and Docker-independent container-contract tests plus bundle verification.
 
-The deterministic builder reads jQuery `3.7.1`, greedy navigation, optional scientific-content renderers, and the shared site interactions in a fixed order. GitHub Actions runs `npm ci`, `npm test`, the six-theme build matrix, the final Jekyll build, and artifact validation for pull requests and production, so source, generated assets, palette support, and the tracked intended-route manifest cannot drift. Pull requests are read-only and never upload or deploy Pages.
+The deterministic builder reads jQuery `3.7.1`, greedy navigation, optional scientific-content renderers, and the shared site interactions in a fixed order. GitHub Actions runs `npm ci`, `npm test`, the six-theme build matrix, the final Jekyll build, rendered-integration validation, and artifact validation for pull requests and production, so source, generated assets, integrations, palette support, and the tracked intended-route manifest cannot drift. Pull requests are read-only and never upload or deploy Pages.
 
 Jekyll excludes internal agent/spec documents, lockfiles, notebooks, R/RDS/RStudio state, Python and command sources, `scripts/`, `markdown_generator/`, and root `*_artifacts` directories from `_site`. They are repository inputs, not deployable website assets. `fetch_scholar_metrics.py` remains tracked because the scheduled Scholar workflow runs it under Python 3.12, but it is explicitly excluded and the artifact contract verifies that it is absent from `_site`.
 
@@ -128,17 +131,29 @@ The site uses the AcademicPages v0.9 Sass layering model while retaining its est
 - `_sass/_custom.scss` loads last so existing page-specific overrides retain precedence.
 - `assets/css/main.scss` is the Jekyll-rendered theme and customization entry point.
 - `assets/css/fontawesome.scss` compiles the vendored AcademicPages v0.9 Font Awesome 6.7.2 core, solid, and brands layers into a separately cached stylesheet.
-- `assets/webfonts/` contains only the solid and brands TTF/WOFF2 files consumed by that stylesheet; Academicons remains local under its existing asset paths.
+- `assets/webfonts/` contains only the solid and brands TTF/WOFF2 files consumed by that stylesheet.
+- `assets/css/academicons.css` provides Academicons `1.9.4` separately, backed only by local WOFF and TTF files under `assets/fonts/`; the WOFF file is preloaded before the blocking stylesheet.
 
 `_config.yml` keeps `site_theme: "default"` for deployment. Alternate palettes are build-time choices rather than a visitor-facing selector. Visitors start in light mode and can explicitly toggle dark mode; `localStorage.theme` persists `light` or `dark`, and `site:themechange` notifies custom visualizations. Site markup uses `fa-solid` and `fa-brands`; regular icons and v4 compatibility fonts are intentionally not shipped. JSON CV support and runtime palette selection remain deferred.
 
 Validate the complete styling path with:
 
 - `./scripts/local_preview.command --build-only --full-build --skip-data`
+- `npm run check:academicons`
 - `npm run check:icons`
 - `npm run check:scientific`
 - `npm run check:themes`
 - `npm run test:themes`
+
+## Identity, Sharing, and Analytics
+
+The author profile supports the AcademicPages v0.9 academic identity fields without activating accounts by default. `academia`, `arxiv`, `inspire-hep`, `mastodon`, `medium`, `scopus`, `semantic`, `ssrn`, `telegram`, and `zotero` are complete profile URLs. `artstation`, `bluesky`, `goodreads`, `kaggle`, `twitter`, and `zhihu` are service handles. The existing `twitter` key remains for Twitter Card compatibility, while visible profile/footer links use X.
+
+Pages with sharing enabled expose Bluesky, Facebook, LinkedIn, Mastodon, and X actions. Each action receives an independently encoded canonical page URL and title. Brand colors remain literal while button layout and contrast continue to use the shared light/dark theme architecture.
+
+Analytics uses an ordered `analytics.providers` list. The deployed list contains `goatcounter` and `google-analytics-4`, but the GA4 include emits nothing while `analytics.google.tracking_id` is blank. GoatCounter therefore remains the only active production provider. A legacy scalar `analytics.provider` remains supported when the list is absent; setting it to `false` disables analytics globally for local preview, while `page.analytics: false` disables all providers for one page. Activating GA4 later requires a `G-...` measurement ID plus a separate privacy review.
+
+Validate these contracts with `npm run check:integrations`; after a production build, run `npm run check:integrations:built`.
 
 ## Scientific Content
 
