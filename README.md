@@ -59,6 +59,27 @@ Optional:
 
 By default, local preview skips geo/impact data regeneration and uses Jekyll incremental builds for faster iteration. If incremental fails, the script automatically retries once with a full rebuild.
 
+### Containerized development (optional)
+
+Docker is optional developer tooling. Native preview and GitHub Pages deployment are unchanged. The Compose service runs as the non-root `vscode` user with Ruby `3.3.4`, Bundler `2.5.18`, Node `20`, and npm `10`; the repository is bind-mounted while the named `bundle` and `node_modules` volumes isolate container dependencies from the host. Those two cache paths are writable after Dev Container UID/GID remapping, without making the repository world-writable. The existing preview wrapper reuses `_config.dev.yml`.
+
+To start the portable preview:
+
+1. Run `docker compose up --build`.
+2. Open `http://127.0.0.1:4001/`.
+3. Stop the foreground Compose process with `Ctrl+C`.
+4. Remove the stopped service and network with `docker compose down`.
+
+Compose defaults the container user to UID/GID `1000`. On a Linux host using different IDs, preserve bind-mount ownership with `USER_UID="$(id -u)" USER_GID="$(id -g)" docker compose up --build`.
+
+To explicitly reset the dependency volumes, run `docker compose down --volumes`. This removes the isolated Bundler and `node_modules` caches, so the next startup must bootstrap those dependencies again.
+
+For VS Code, use **Dev Containers: Reopen in Container**. The Dev Container attaches to the Compose service and runs `./scripts/container_bootstrap.command` as its post-create step. Its `overrideCommand: true` setting prevents the Compose preview command from racing that bootstrap, and its local Compose override disables the preview-only health check until the preview is started manually. Start it with the normal wrapper, for example `./scripts/local_preview.command --full-build --skip-data --port 4001`.
+
+The Docker-independent contract check is `npm run check:container`. The Docker-required end-to-end validation is `npm run test:container`, which builds and exercises the container.
+
+Phase 7 is infrastructure-only. Protected surfaces remain unchanged: content, navigation, data, routes, rendered `/cv/` and its PDF behavior, images, fonts, generated assets, JavaScript bundles, Gem files and lockfiles, and GitHub Actions workflows. Optional AcademicPages v0.9 capabilities remain inactive. Any future JSON CV infrastructure must coexist with the unchanged PDF-based `/cv/` and cannot activate or replace it without approval.
+
 ## JavaScript Assets
 
 The shared browser bundle follows the AcademicPages v0.9 asset model with local reproducibility hardening:
