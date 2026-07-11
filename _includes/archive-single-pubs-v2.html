@@ -7,6 +7,8 @@
 {% endif %}
 
 {% assign link_url = post.link | default: "" | strip %}
+{% assign slides_url = post.slidesurl | default: post.slides_url | default: "" | strip %}
+{% assign bibtex_url = post.bibtexurl | default: "" | strip %}
 {% assign doi_value = post.doi | default: "" | strip %}
 {% assign link_lc = link_url | downcase %}
 {% if doi_value == "" and link_lc contains "doi.org/" %}
@@ -132,8 +134,11 @@
         {% if post.supplement_url %}
           <a href="{{ post.supplement_url }}" class="pub-action" target="_blank" rel="noopener" title="Supplement"><i class="fa-solid fa-fw fa-file-alt zoom" aria-hidden="true"></i><span class="sr-only">Supplement</span></a>
         {% endif %}
-        {% if post.slides_url %}
-          <a href="{{ post.slides_url }}" class="pub-action" target="_blank" rel="noopener" title="Slides"><i class="fa-solid fa-fw fa-images zoom" aria-hidden="true"></i><span class="sr-only">Slides</span></a>
+        {% if slides_url != "" %}
+          <a href="{{ slides_url }}" class="pub-action" target="_blank" rel="noopener" title="Slides"><i class="fa-solid fa-fw fa-images zoom" aria-hidden="true"></i><span class="sr-only">Slides</span></a>
+        {% endif %}
+        {% if bibtex_url != "" %}
+          <a href="{{ bibtex_url }}" class="pub-action" target="_blank" rel="noopener" title="BibTeX"><i class="fa-solid fa-fw fa-file-lines zoom" aria-hidden="true"></i><span class="sr-only">BibTeX</span></a>
         {% endif %}
         {% if post.video_url %}
           <a href="{{ post.video_url }}" class="pub-action" target="_blank" rel="noopener" title="Video"><i class="fa-solid fa-fw fa-play-circle zoom" aria-hidden="true"></i><span class="sr-only">Video</span></a>

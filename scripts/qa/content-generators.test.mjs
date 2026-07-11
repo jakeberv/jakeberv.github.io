@@ -31,6 +31,7 @@ const publicationHeaders = [
   "paper_url",
   "link",
   "slides_url",
+  "bibtex_url",
   "doi",
   "github",
   "featured",
@@ -55,6 +56,7 @@ const validPublication = {
   paper_url: "https://example.test/paper.pdf",
   link: "https://doi.org/10.1000/example",
   slides_url: "https://example.test/slides.pdf",
+  bibtex_url: "https://example.test/citation.bib",
   doi: "10.1000/example",
   github: "https://github.com/example/repository",
   featured: "true",
@@ -124,7 +126,8 @@ test("publication CSV and TSV inputs generate identical site-compatible Markdown
   assert.match(csvMarkdown, /^collection: publications$/m);
   assert.match(csvMarkdown, /^permalink: \/publication\/2026-07-10-Doe_Berv_2026$/m);
   assert.match(csvMarkdown, /^paperurl: "https:\/\/example\.test\/paper\.pdf"$/m);
-  assert.match(csvMarkdown, /^slides_url: "https:\/\/example\.test\/slides\.pdf"$/m);
+  assert.match(csvMarkdown, /^slidesurl: "https:\/\/example\.test\/slides\.pdf"$/m);
+  assert.match(csvMarkdown, /^bibtexurl: "https:\/\/example\.test\/citation\.bib"$/m);
   assert.match(csvMarkdown, /^category: "peer-reviewed"$/m);
   assert.match(csvMarkdown, /^featured: true$/m);
   assert.match(csvMarkdown, /^tags:\n  - "birds"\n  - "phylogenomics"\n  - "macroevolution"$/m);
