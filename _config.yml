@@ -138,8 +138,18 @@ include:
   - files
 exclude:
   - "*_artifacts"
+  - "*.R"
+  - "*.RDS"
+  - "*.Rproj"
+  - "*.command"
+  - "*.ipynb"
+  - "*.lock"
+  - "*.mjs"
+  - "*.py"
   - "*.sublime-project"
   - "*.sublime-workspace"
+  - .RData
+  - .Rhistory
   - .asset-cache
   - .bundle
   - .Rproj.user
@@ -147,11 +157,17 @@ exclude:
   - .sass-cache
   - CHANGELOG
   - Capfile
+  - CONTRIBUTING.md
   - Dockerfile
   - Gemfile
+  - Gemfile.lock
   - Gruntfile.js
   - LICENSE
   - README
+  - AGENTS.md
+  - agents
+  - docs/superpowers
+  - fetch_scholar_metrics.py
   - Rakefile
   - assets/js/_scientific-content.js
   - assets/js/_main.js
@@ -167,6 +183,7 @@ exclude:
   - package-lock.json
   - package.json
   - scripts
+  - todo
   - images/originals/profile-full.png
   - tmp
   - vendor

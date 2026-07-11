@@ -101,25 +101,96 @@ test("the npm test command does not depend on shell glob expansion", async () =>
 
   assert.equal(
     packageDefinition.scripts.test,
-    "node --test scripts/qa/browser-behavior.test.mjs scripts/qa/browser-runtime.test.mjs scripts/qa/build-js.test.mjs scripts/qa/content-generators.test.mjs scripts/qa/fontawesome-contract.test.mjs scripts/qa/scientific-content.test.mjs scripts/qa/theme-contract.test.mjs && npm run check:js && npm run check:container",
+    "node --test scripts/qa/browser-behavior.test.mjs scripts/qa/browser-runtime.test.mjs scripts/qa/build-js.test.mjs scripts/qa/content-generators.test.mjs scripts/qa/fontawesome-contract.test.mjs scripts/qa/scientific-content.test.mjs scripts/qa/site-artifact-contract.test.mjs scripts/qa/theme-contract.test.mjs && npm run check:js && npm run check:container",
   );
+});
+
+test("the JavaScript toolchain is pinned to Node 24 and npm 11", async () => {
+  const [nodeVersion, packageDefinition] = await Promise.all([
+    source(".node-version"),
+    source("package.json").then(JSON.parse),
+  ]);
+
+  assert.equal(nodeVersion.trim(), "24");
+  assert.equal(packageDefinition.engines.node, "24.x");
+  assert.equal(packageDefinition.engines.npm, ">=11 <12");
+  assert.equal(packageDefinition.scripts["check:site-artifact"], "node scripts/qa/site-artifact-contract.mjs");
 });
 
 test("the Pages artifact excludes build-only infrastructure", async () => {
   const config = await source("_config.yml");
+  const exclusionBlock = config.match(/^exclude:\n([\s\S]*?)^keep_files:/m)?.[1];
+  assert.ok(exclusionBlock, "_config.yml must define an exclude block");
+  const exclusions = new Set(
+    exclusionBlock
+      .split(/\r?\n/)
+      .map((line) => line.trim().replace(/^-\s*/, "").replace(/^"|"$/g, ""))
+      .filter(Boolean),
+  );
 
-  assert.match(config, /^\s+- "\*_artifacts"$/m);
-  assert.match(config, /^\s+- package-lock\.json$/m);
-  assert.match(config, /^\s+- scripts$/m);
-  assert.match(config, /^\s+- markdown_generator$/m);
+  for (const protectedPath of [
+    "*_artifacts",
+    "package-lock.json",
+    "scripts",
+    "markdown_generator",
+    "AGENTS.md",
+    "agents",
+    "docs/superpowers",
+    "CONTRIBUTING.md",
+    "todo",
+    "fetch_scholar_metrics.py",
+  ]) {
+    assert.ok(exclusions.has(protectedPath), `_config.yml must exclude ${protectedPath}`);
+  }
+  for (const extension of [
+    "*.R",
+    "*.RDS",
+    "*.Rproj",
+    "*.command",
+    "*.ipynb",
+    "*.lock",
+    "*.mjs",
+    "*.py",
+  ]) {
+    assert.ok(exclusions.has(extension), `_config.yml must exclude ${extension}`);
+  }
 });
 
-test("the Pages workflow installs and verifies browser and theme contracts", async () => {
+test("the Pages workflow validates pull requests and deploys only trusted events", async () => {
   const workflow = await source(".github/workflows/deploy_site.yml");
 
-  assert.match(workflow, /node-version:\s*"20"/);
+  assert.match(workflow, /^\s+pull_request:\s*$/m);
+  assert.match(workflow, /actions\/checkout@v7/);
+  assert.match(workflow, /actions\/setup-node@v6/);
+  assert.match(workflow, /node-version:\s*"24"/);
   assert.match(workflow, /cache:\s*"npm"/);
   assert.match(workflow, /run:\s*npm ci/);
   assert.match(workflow, /run:\s*npm test/);
   assert.match(workflow, /run:\s*npm run test:themes/);
+  assert.match(workflow, /run:\s*npm run check:site-artifact/);
+  assert.match(workflow, /actions\/upload-pages-artifact@v5/);
+  assert.match(workflow, /actions\/deploy-pages@v5/);
+  assert.doesNotMatch(workflow, /^\s+ref:\s*master\s*$/m);
+  assert.match(workflow, /github\.event_name != 'pull_request'/);
+});
+
+test("scheduled data workflows modernize actions without changing their jobs", async () => {
+  const [scholarWorkflow, impactWorkflow] = await Promise.all([
+    source(".github/workflows/fetch_scholar_data.yml"),
+    source(".github/workflows/refresh_impact_reach_data.yml"),
+  ]);
+
+  for (const workflow of [scholarWorkflow, impactWorkflow]) {
+    assert.match(workflow, /actions\/checkout@v7/);
+    assert.match(workflow, /actions\/setup-python@v6/);
+    assert.match(workflow, /python-version:\s*["']3\.12["']/);
+    assert.match(workflow, /git push origin master/);
+  }
+
+  assert.match(scholarWorkflow, /cron:\s*['"]0 0 \* \* 0['"]/);
+  assert.match(scholarWorkflow, /python fetch_scholar_metrics\.py/);
+  assert.match(scholarWorkflow, /git add _data\/scholar_metrics\.json/);
+  assert.match(impactWorkflow, /cron:\s*['"]17 6 \* \* 1['"]/);
+  assert.match(impactWorkflow, /python3 scripts\/build-impact-reach-data\.py/);
+  assert.match(impactWorkflow, /git add[\s\S]*data\/impact\/reach\/outlet_reach\.json/);
 });

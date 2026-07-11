@@ -22,7 +22,7 @@ This repository is primarily maintained with the following workflow:
 
 1. Edit site files locally (commonly from RStudio).
 2. Push changes to `master`.
-3. GitHub Actions build/deploy runs on `master` and deploys GitHub Pages.
+3. GitHub Actions validates pull requests; pushes to `master` and manual dispatches also deploy GitHub Pages.
 4. Career footprint map data is regenerated from `_news` geo front matter during build.
 
 No special branching workflow is required unless explicitly chosen for a task.
@@ -33,8 +33,8 @@ Runtime contract:
 
 - Ruby `3.3.4`, matching the published GitHub Pages runtime (`.ruby-version`)
 - Bundler `2.5.18`, matching `Gemfile.lock`
-- Node.js `20`, matching the deployment workflow (`.node-version`)
-- npm `10`, used with the committed `package-lock.json`
+- Node.js `24`, matching the deployment workflow (`.node-version`)
+- npm `11`, used with the committed `package-lock.json`
 - Python `3.10` or newer when serving locally or running the content generators; no exact Python patch version is pinned
 
 The preview launcher prefers Homebrew Ruby 3.3 with Bundler `2.5.18`, then a PATH-provided Bundler at that version. If the pinned executable is unavailable or broken, it may use the same candidate's default Bundler only after `bundle check` confirms that the locked dependencies are satisfied; the launcher prints a warning when it does so and never installs or repairs global gems.
@@ -61,7 +61,7 @@ By default, local preview skips geo/impact data regeneration and uses Jekyll inc
 
 ### Containerized development (optional)
 
-Docker is optional developer tooling. Native preview and GitHub Pages deployment are unchanged. The Compose service runs as the non-root `vscode` user with Ruby `3.3.4`, Bundler `2.5.18`, Node `20`, and npm `10`; the repository is bind-mounted while the named `bundle` and `node_modules` volumes isolate container dependencies from the host. Those two cache paths remain recursively writable after Dev Container UID/GID remapping, without making the repository world-writable. Bootstrap runs Bundler in frozen mode so it cannot rewrite the host lockfile, then fingerprints `package.json`, `package-lock.json`, and the installed npm file/symlink tree; a mismatch or failed dependency check runs `npm ci`. Git enforces LF endings for executable `.command` files so Windows checkouts remain Linux-container compatible. The existing preview wrapper reuses `_config.dev.yml`.
+Docker is optional developer tooling. Native preview and GitHub Pages deployment are unchanged. The Compose service runs as the non-root `vscode` user with Ruby `3.3.4`, Bundler `2.5.18`, Node `24`, and npm `11`; the repository is bind-mounted while the named `bundle` and `node_modules` volumes isolate container dependencies from the host. Those two cache paths remain recursively writable after Dev Container UID/GID remapping, without making the repository world-writable. Bootstrap runs Bundler in frozen mode so it cannot rewrite the host lockfile, then fingerprints `package.json`, `package-lock.json`, and the installed npm file/symlink tree; a mismatch or failed dependency check runs `npm ci`. Git enforces LF endings for executable `.command` files so Windows checkouts remain Linux-container compatible. The existing preview wrapper reuses `_config.dev.yml`.
 
 To start the portable preview:
 
@@ -78,7 +78,7 @@ For VS Code, use **Dev Containers: Reopen in Container**. The Dev Container atta
 
 The Docker-independent contract check is `npm run check:container`. The Docker-required end-to-end validation is `npm run test:container`, which builds and exercises the container.
 
-Phase 7 is infrastructure-only. Protected surfaces remain unchanged: content, navigation, data, routes, rendered `/cv/` and its PDF behavior, images, fonts, generated assets, JavaScript bundles, Gem files and lockfiles, and GitHub Actions workflows. Optional AcademicPages v0.9 capabilities remain inactive. Any future JSON CV infrastructure must coexist with the unchanged PDF-based `/cv/` and cannot activate or replace it without approval.
+The portable environment remains infrastructure-only. Protected surfaces include content, navigation, public data and routes, rendered `/cv/` and its PDF behavior, images, fonts, generated assets, JavaScript bundles, and Gem files. Phase 9 modernizes action versions and pull-request validation without changing scheduled data commands or outputs. Optional AcademicPages v0.9 capabilities remain inactive. Any future JSON CV infrastructure must coexist with the unchanged PDF-based `/cv/` and cannot activate or replace it without approval.
 
 ## Content Authoring Tools
 
@@ -93,26 +93,27 @@ Phase 8 provides dependency-free, validation-first Python generators for future 
 
 Inputs may be UTF-8 CSV or TSV with headers in any order. Pipe-delimited fields represent publication tags, authors, student authors, method families, and method tags. Full schemas and exit-code behavior are documented in `markdown_generator/readme.md`.
 
-The generator directory is development-only and excluded from `_site`, including its historical notebooks, spreadsheet, sample inputs, and BibTeX script. Removing its accidentally rendered index changes the supported build manifest from 241 total HTML files to 240 intended site routes; no intended page URL changes.
+The generator directory is development-only and excluded from `_site`, including its historical notebooks, spreadsheet, sample inputs, and BibTeX script. Phase 8 removed its accidentally rendered index; Phase 9's complete repository boundary leaves 220 intended public HTML routes by also removing 20 unlinked internal documentation routes.
 
 ## JavaScript Assets
 
 The shared browser bundle follows the AcademicPages v0.9 asset model with local reproducibility hardening:
 
-- `npm ci` installs the exact Node 20/npm 10 dependency graph.
+- `npm ci` installs the exact Node 24/npm 11 dependency graph.
 - `npm run build:js` builds the committed `assets/js/main.min.js` module.
 - `npm run check:generators` verifies the safe content-authoring CLI contract.
 - `npm run check:icons` verifies the Font Awesome version, assets, delivery, markup, and icon-name contract.
 - `npm run check:js` verifies the committed bundle without rewriting it.
 - `npm run check:scientific` verifies the opt-in MathJax, Mermaid, and Plotly runtime contract.
+- `npm run check:site-artifact` verifies the exact route manifest and rejects repository-only sources from `_site`.
 - `npm run watch:js` rebuilds when the three shared JavaScript sources change.
 - `npm run check:themes` verifies the palette, token, markup, and runtime contract.
-- `npm run test:themes` builds all six palettes and requires the same 240 intended routes.
+- `npm run test:themes` builds all six palettes and requires the same 220 intended routes and artifact boundary.
 - `npm test` runs the asset, content-generator, theme, executable browser-state, and Docker-independent container-contract tests plus bundle verification.
 
-The deterministic builder reads jQuery `3.7.1`, greedy navigation, optional scientific-content renderers, and the shared site interactions in a fixed order. GitHub Actions runs `npm ci`, `npm test`, and the six-theme build matrix before the final Jekyll build, so source, generated assets, palette support, and the tracked intended-route manifest cannot drift.
+The deterministic builder reads jQuery `3.7.1`, greedy navigation, optional scientific-content renderers, and the shared site interactions in a fixed order. GitHub Actions runs `npm ci`, `npm test`, the six-theme build matrix, the final Jekyll build, and artifact validation for pull requests and production, so source, generated assets, palette support, and the tracked intended-route manifest cannot drift. Pull requests are read-only and never upload or deploy Pages.
 
-Jekyll excludes `package-lock.json`, `scripts/`, `markdown_generator/`, and root `*_artifacts` directories from `_site`. They are development inputs or ignored local analysis output, not deployable website assets.
+Jekyll excludes internal agent/spec documents, lockfiles, notebooks, R/RDS/RStudio state, Python and command sources, `scripts/`, `markdown_generator/`, and root `*_artifacts` directories from `_site`. They are repository inputs, not deployable website assets. `fetch_scholar_metrics.py` remains tracked because the scheduled Scholar workflow runs it under Python 3.12, but it is explicitly excluded and the artifact contract verifies that it is absent from `_site`.
 
 ## Styling Architecture
 

@@ -122,21 +122,21 @@ test("the light-first runtime does not consult system color preference", async (
   assert.match(main, /new CustomEvent\("site:themechange"/);
 });
 
-test("the tracked route manifest parser tolerates CRLF checkouts", async () => {
-  const themeMatrix = await source("scripts/qa/theme-build-matrix.mjs");
+test("the reusable artifact validator tolerates CRLF route manifests", async () => {
+  const artifactContract = await source("scripts/qa/site-artifact-contract.mjs");
 
-  assert.match(themeMatrix, /\.split\(\/\\r\?\\n\/\)/);
+  assert.match(artifactContract, /\.split\(\/\\r\?\\n\/\)/);
 });
 
-test("the route contract preserves case-sensitive AGENTS and agents URLs", async () => {
+test("the route contract contains only the 220 intended public HTML routes", async () => {
   const [themeMatrix, manifestSource] = await Promise.all([
     source("scripts/qa/theme-build-matrix.mjs"),
     source("scripts/qa/expected-html-routes.txt"),
   ]);
   const routes = manifestSource.trim().split(/\r?\n/);
 
-  assert.ok(routes.includes("AGENTS/index.html"));
-  assert.ok(routes.includes("agents/SITE_ARCHITECTURE_SPEC_TEMPLATE/index.html"));
-  assert.equal(routes.some((route) => /^AGENTS\/(?!index\.html$)/.test(route)), false);
-  assert.match(themeMatrix, /canonicalizeRoute/);
+  assert.equal(routes.length, 220);
+  assert.equal(routes.some((route) => /^(?:AGENTS|agents|docs\/superpowers)\//.test(route)), false);
+  assert.doesNotMatch(themeMatrix, /canonicalizeRoute/);
+  assert.match(themeMatrix, /validateSiteArtifact/);
 });

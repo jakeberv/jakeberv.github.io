@@ -9,8 +9,8 @@
   },
   "license": "MIT",
   "engines": {
-    "node": "20.x",
-    "npm": ">=10 <11"
+    "node": "24.x",
+    "npm": ">=11 <12"
   },
   "dependencies": {
     "jquery": "3.7.1"
@@ -26,10 +26,11 @@
     "check:icons": "node --test scripts/qa/fontawesome-contract.test.mjs",
     "check:js": "node scripts/build-js.mjs --check",
     "check:scientific": "node --test scripts/qa/scientific-content.test.mjs",
+    "check:site-artifact": "node scripts/qa/site-artifact-contract.mjs",
     "check:themes": "node --test scripts/qa/theme-contract.test.mjs",
     "test:themes": "node scripts/qa/theme-build-matrix.mjs",
     "watch:js": "onchange \"assets/js/_main.js\" \"assets/js/_scientific-content.js\" \"assets/js/plugins/jquery.greedy-navigation.js\" -- npm run build:js",
-    "test": "node --test scripts/qa/browser-behavior.test.mjs scripts/qa/browser-runtime.test.mjs scripts/qa/build-js.test.mjs scripts/qa/content-generators.test.mjs scripts/qa/fontawesome-contract.test.mjs scripts/qa/scientific-content.test.mjs scripts/qa/theme-contract.test.mjs && npm run check:js && npm run check:container",
+    "test": "node --test scripts/qa/browser-behavior.test.mjs scripts/qa/browser-runtime.test.mjs scripts/qa/build-js.test.mjs scripts/qa/content-generators.test.mjs scripts/qa/fontawesome-contract.test.mjs scripts/qa/scientific-content.test.mjs scripts/qa/site-artifact-contract.test.mjs scripts/qa/theme-contract.test.mjs && npm run check:js && npm run check:container",
     "test:container": "npm run check:container && docker compose build && docker compose run --rm site ./scripts/container_test.command"
   }
 }
