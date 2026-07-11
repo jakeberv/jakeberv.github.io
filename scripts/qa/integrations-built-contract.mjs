@@ -83,7 +83,7 @@ export async function validateBuiltIntegrations({
       if (goatLoaders !== 1) {
         violations.push(`${file.relativePath}: expected exactly one GoatCounter loader, found ${goatLoaders}`);
       }
-      if (!/href=["']https:\/\/x\.com\/jakeberv["']/.test(source)) {
+      if (!/href=["']https:\/\/x\.com\/(?!intent(?:\/|["']))[^"'/?#]+\/?["']/.test(source)) {
         violations.push(`${file.relativePath}: shared footer/profile X link is missing`);
       }
     }

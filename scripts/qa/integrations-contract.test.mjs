@@ -14,6 +14,10 @@ test("analytics configuration prefers an ordered provider list with inactive GA4
   const config = read("_config.yml");
   const analyticsStart = config.indexOf("analytics:\n");
   const analyticsEnd = config.indexOf("\n\n# Site Author", analyticsStart);
+
+  assert.ok(analyticsStart >= 0, "analytics configuration block must exist");
+  assert.ok(analyticsEnd > analyticsStart, "Site Author marker must follow analytics configuration");
+
   const analyticsBlock = config.slice(analyticsStart, analyticsEnd);
   const providers = Array.from(analyticsBlock.matchAll(/^\s{4}-\s+([^\s#]+)/gm), (match) => match[1]);
 

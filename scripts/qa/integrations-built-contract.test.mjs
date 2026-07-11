@@ -76,6 +76,24 @@ test("default production output requires GoatCounter and forbids GA4", async () 
   });
 });
 
+test("X profile validation accepts configured handles but not share intents", async () => {
+  assert.equal(typeof validateBuiltIntegrations, "function");
+  if (!validateBuiltIntegrations) return;
+
+  const renamedProfile = sharedPage().replace("https://x.com/jakeberv", "https://x.com/renamed-profile");
+  await withSite({ "index.html": renamedProfile }, async (siteDirectory) => {
+    await validateBuiltIntegrations({ siteDirectory });
+  });
+
+  const shareIntentOnly = sharedPage().replace('<a href="https://x.com/jakeberv">X</a>', "");
+  await withSite({ "index.html": shareIntentOnly }, async (siteDirectory) => {
+    await assert.rejects(
+      validateBuiltIntegrations({ siteDirectory }),
+      /index\.html: shared footer\/profile X link is missing/,
+    );
+  });
+});
+
 test("a GA4 fixture requires one matching loader and configuration", async () => {
   assert.equal(typeof validateBuiltIntegrations, "function");
   if (!validateBuiltIntegrations) return;
