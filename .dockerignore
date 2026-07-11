@@ -1,0 +1,8 @@
+.git
+_site
+node_modules
+.bundle
+vendor/bundle
+vendor/cache
+.RData
+*_artifacts

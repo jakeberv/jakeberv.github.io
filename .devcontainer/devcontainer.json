@@ -1,0 +1,13 @@
+{
+  "name": "jakeberv-site",
+  "dockerComposeFile": [
+    "../docker-compose.yaml",
+    "docker-compose.devcontainer.yaml"
+  ],
+  "service": "site",
+  "overrideCommand": true,
+  "workspaceFolder": "/workspace",
+  "remoteUser": "vscode",
+  "forwardPorts": [4001],
+  "postCreateCommand": "./scripts/container_bootstrap.command"
+}
