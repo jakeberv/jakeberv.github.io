@@ -1,111 +1,97 @@
+#!/usr/bin/env python3
+"""Validate or generate optional talk collection documents."""
 
-# coding: utf-8
+from __future__ import annotations
 
-# # Talks markdown generator for academicpages
-# 
-# Takes a TSV of talks with metadata and converts them for use with [academicpages.github.io](academicpages.github.io). This is an interactive Jupyter notebook ([see more info here](http://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html)). The core python code is also in `talks.py`. Run either from the `markdown_generator` folder after replacing `talks.tsv` with one containing your data.
-# 
-# TODO: Make this work with BibTex and other databases, rather than Stuart's non-standard TSV format and citation style.
+import argparse
+import sys
+from pathlib import Path
+from typing import Dict, List
 
-# In[1]:
-
-import pandas as pd
-import os
-
-
-# ## Data format
-# 
-# The TSV needs to have the following columns: title, type, url_slug, venue, date, location, talk_url, description, with a header at the top. Many of these fields can be blank, but the columns must be in the TSV.
-# 
-# - Fields that cannot be blank: `title`, `url_slug`, `date`. All else can be blank. `type` defaults to "Talk" 
-# - `date` must be formatted as YYYY-MM-DD.
-# - `url_slug` will be the descriptive part of the .md file and the permalink URL for the page about the paper. 
-#     - The .md file will be `YYYY-MM-DD-[url_slug].md` and the permalink will be `https://[yourdomain]/talks/YYYY-MM-DD-[url_slug]`
-#     - The combination of `url_slug` and `date` must be unique, as it will be the basis for your filenames
-# 
+from generator_core import (
+    Document,
+    InputValidationError,
+    TableSchema,
+    print_manifest,
+    print_validation_errors,
+    read_table,
+    render_documents,
+    write_documents,
+    yaml_scalar,
+)
 
 
-# ## Import TSV
-# 
-# Pandas makes this easy with the read_csv function. We are using a TSV, so we specify the separator as a tab, or `\t`.
-# 
-# I found it important to put this data in a tab-separated values format, because there are a lot of commas in this kind of data and comma-separated values can get messed up. However, you can modify the import statement, as pandas also has read_excel(), read_json(), and others.
-
-# In[3]:
-
-talks = pd.read_csv("talks.tsv", sep="\t", header=0)
-talks
-
-
-# ## Escape special characters
-# 
-# YAML is very picky about how it takes a valid string, so we are replacing single and double quotes (and ampersands) with their HTML encoded equivilents. This makes them look not so readable in raw format, but they are parsed and rendered nicely.
-
-# In[4]:
-
-html_escape_table = {
-    "&": "&amp;",
-    '"': "&quot;",
-    "'": "&apos;"
-    }
-
-def html_escape(text):
-    if type(text) is str:
-        return "".join(html_escape_table.get(c,c) for c in text)
-    else:
-        return "False"
+SCHEMA = TableSchema(
+    required_fields={"title", "url_slug", "date"},
+    optional_fields={"type", "venue", "location", "talk_url", "description"},
+    list_fields=set(),
+    boolean_fields=set(),
+    choices={},
+    date_field="date",
+    slug_field="url_slug",
+)
 
 
-# ## Creating the markdown files
-# 
-# This is where the heavy lifting is done. This loops through all the rows in the TSV dataframe, then starts to concatentate a big string (```md```) that contains the markdown for each type. It does the YAML metadata first, then does the description for the individual page.
+def render_talk(row: Dict[str, object]) -> Document:
+    talk_date = str(row["date"])
+    slug = str(row["url_slug"])
+    talk_type = str(row.get("type", "") or "Talk")
+    filename = f"{talk_date}-{slug}.md"
+    lines: List[str] = [
+        "---",
+        f"title: {yaml_scalar(row['title'])}",
+        "collection: talks",
+        f"type: {yaml_scalar(talk_type)}",
+        f"talk_type: {yaml_scalar(talk_type)}",
+        f"permalink: /talks/{talk_date}-{slug}",
+        f"date: {talk_date}",
+    ]
+    for key in ("venue", "location"):
+        if row.get(key):
+            lines.append(f"{key}: {yaml_scalar(row[key])}")
+    lines.extend(["---", ""])
 
-# In[5]:
-
-loc_dict = {}
-
-for row, item in talks.iterrows():
-    
-    md_filename = str(item.date) + "-" + item.url_slug + ".md"
-    html_filename = str(item.date) + "-" + item.url_slug 
-    year = item.date[:4]
-    
-    md = "---\ntitle: \""   + item.title + '"\n'
-    md += "collection: talks" + "\n"
-    
-    if len(str(item.type)) > 3:
-        md += 'type: "' + item.type + '"\n'
-    else:
-        md += 'type: "Talk"\n'
-    
-    md += "permalink: /talks/" + html_filename + "\n"
-    
-    if len(str(item.venue)) > 3:
-        md += 'venue: "' + item.venue + '"\n'
-        
-    if len(str(item.location)) > 3:
-        md += "date: " + str(item.date) + "\n"
-    
-    if len(str(item.location)) > 3:
-        md += 'location: "' + str(item.location) + '"\n'
-           
-    md += "---\n"
-    
-    
-    if len(str(item.talk_url)) > 3:
-        md += "\n[More information here](" + item.talk_url + ")\n" 
-        
-    
-    if len(str(item.description)) > 3:
-        md += "\n" + html_escape(item.description) + "\n"
-        
-        
-    md_filename = os.path.basename(md_filename)
-    #print(md)
-    
-    with open("../_talks/" + md_filename, 'w') as f:
-        f.write(md)
+    body = []
+    if row.get("talk_url"):
+        body.append(f"[More information here]({row['talk_url']})")
+    if row.get("description"):
+        if body:
+            body.append("")
+        body.append(str(row["description"]))
+    content = "\n".join(lines + body).rstrip() + "\n"
+    return Document(filename, content, int(row["_row_number"]))
 
 
-# These files are in the talks directory, one directory below where we're working from.
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description=__doc__)
+    subcommands = parser.add_subparsers(dest="command", required=True)
+    check = subcommands.add_parser("check", help="validate input without persistent writes")
+    check.add_argument("input", type=Path)
+    generate = subcommands.add_parser("generate", help="validate and write generated Markdown")
+    generate.add_argument("input", type=Path)
+    generate.add_argument("--output-dir", type=Path, required=True)
+    generate.add_argument("--overwrite", action="store_true")
+    return parser
 
+
+def main() -> int:
+    args = build_parser().parse_args()
+    try:
+        rows = read_table(args.input, SCHEMA)
+        documents = render_documents(rows, render_talk)
+        if args.command == "check":
+            print_manifest("talk", documents)
+        else:
+            write_documents(documents, args.output_dir, args.overwrite)
+            print(f"Generated {len(documents)} talk(s) in {args.output_dir}")
+        return 0
+    except InputValidationError as error:
+        print_validation_errors(error)
+        return 2
+    except (OSError, UnicodeError) as error:
+        print(f"error: {error}", file=sys.stderr)
+        return 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

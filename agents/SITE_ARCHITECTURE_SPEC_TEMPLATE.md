@@ -144,10 +144,14 @@ Notes:
 - Scientific fallback behavior: failed Mermaid/Plotly loads or parses keep the source block visible and add an accessible status message; successful renderers consume `--site-*` and `--viz-*` tokens and re-render after `site:themechange`
 - Asset checks: use `npm run build:js`, `npm run check:js`, `npm run check:icons`, `npm run check:scientific`, `npm run check:themes`, `npm run test:themes`, and `npm test`
 - Browser compatibility: native sticky positioning, smooth scrolling with reduced-motion handling, and explicit responsive-video CSS replace Stickyfill, jQuery Smooth Scroll, FitVids, and Magnific Popup
-- Pages artifact boundary: `_config.yml` excludes `package-lock.json`, `scripts/`, source-only shared JavaScript files, and root `*_artifacts` directories because they are build inputs or ignored local analysis output
+- Content-authoring contract: the standard-library publication and talk CLIs expose read-only `check` and explicit-output `generate`; generation requires `--output-dir`, collisions require `--overwrite`, and publication output must pass the canonical topic and method validators
+- Talks authoring boundary: the optional generator targets `_talks` collection documents and never reads or modifies `_data/talks.yml`, which remains the source for `/talks/`
+- Content-authoring check: use `npm run check:generators`; the generated-content schemas and exit codes are documented in `markdown_generator/readme.md`
+- Route contract: `scripts/qa/expected-html-routes.txt` lists the exact 240 intended HTML outputs checked for every palette; the matrix also requires `_site/markdown_generator` to be absent
+- Pages artifact boundary: `_config.yml` excludes `package-lock.json`, `scripts/`, `markdown_generator/`, source-only shared JavaScript files, and root `*_artifacts` directories because they are build inputs or ignored local analysis output
 - Deferred theme work: runtime palette selection and JSON CV support
 - Infrastructure policy: Phase 7 is infrastructure-only; optional AcademicPages v0.9 capabilities remain inactive
-- Protected surfaces: content, navigation, data, routes, rendered `/cv/` and its PDF behavior, images, fonts, generated assets, JavaScript bundles, Gem files and lockfiles, and GitHub Actions workflows
+- Protected surfaces: content, navigation, data, the 240 intended routes, rendered `/cv/` and its PDF behavior, images, fonts, generated assets, JavaScript bundles, Gem files and lockfiles, and GitHub Actions workflows; the former unlinked `/markdown_generator/` development route is intentionally excluded
 - Future JSON CV constraint: any JSON CV infrastructure must coexist with the unchanged PDF-based `/cv/` and cannot activate or replace it without approval
 - Page-specific inline styles to keep/avoid:
 - Accessibility notes:

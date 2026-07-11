@@ -101,7 +101,7 @@ test("the npm test command does not depend on shell glob expansion", async () =>
 
   assert.equal(
     packageDefinition.scripts.test,
-    "node --test scripts/qa/browser-behavior.test.mjs scripts/qa/browser-runtime.test.mjs scripts/qa/build-js.test.mjs scripts/qa/fontawesome-contract.test.mjs scripts/qa/scientific-content.test.mjs scripts/qa/theme-contract.test.mjs && npm run check:js && npm run check:container",
+    "node --test scripts/qa/browser-behavior.test.mjs scripts/qa/browser-runtime.test.mjs scripts/qa/build-js.test.mjs scripts/qa/content-generators.test.mjs scripts/qa/fontawesome-contract.test.mjs scripts/qa/scientific-content.test.mjs scripts/qa/theme-contract.test.mjs && npm run check:js && npm run check:container",
   );
 });
 
@@ -111,6 +111,7 @@ test("the Pages artifact excludes build-only infrastructure", async () => {
   assert.match(config, /^\s+- "\*_artifacts"$/m);
   assert.match(config, /^\s+- package-lock\.json$/m);
   assert.match(config, /^\s+- scripts$/m);
+  assert.match(config, /^\s+- markdown_generator$/m);
 });
 
 test("the Pages workflow installs and verifies browser and theme contracts", async () => {

@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readdir, readFile } from "node:fs/promises";
+import { access, readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { spawn } from "node:child_process";
 import { fileURLToPath } from "node:url";
@@ -17,7 +17,11 @@ const expectedBaseColors = {
   dirt: "#343434",
   contrast: "#b60000",
 };
-const expectedRoutes = 241;
+const expectedRouteManifest = (
+  await readFile(path.join(repositoryRoot, "scripts/qa/expected-html-routes.txt"), "utf8")
+)
+  .trim()
+  .split("\n");
 const contrastFailures = [];
 
 async function run(command, args) {
@@ -34,14 +38,16 @@ async function run(command, args) {
   });
 }
 
-async function htmlRouteCount(directory) {
-  let count = 0;
+async function htmlRoutes(directory, root = directory) {
+  const routes = [];
   for (const entry of await readdir(directory, { withFileTypes: true })) {
     const entryPath = path.join(directory, entry.name);
-    if (entry.isDirectory()) count += await htmlRouteCount(entryPath);
-    else if (entry.name.endsWith(".html")) count += 1;
+    if (entry.isDirectory()) routes.push(...(await htmlRoutes(entryPath, root)));
+    else if (entry.name.endsWith(".html")) {
+      routes.push(path.relative(root, entryPath).split(path.sep).join("/"));
+    }
   }
-  return count;
+  return routes.sort();
 }
 
 function parseDeclarations(block) {
@@ -171,7 +177,13 @@ for (const palette of palettes) {
     palette,
   ]);
 
-  assert.equal(await htmlRouteCount(path.join(repositoryRoot, "_site")), expectedRoutes);
+  const siteDirectory = path.join(repositoryRoot, "_site");
+  assert.deepEqual(await htmlRoutes(siteDirectory), expectedRouteManifest, `${palette} route manifest drifted`);
+  await assert.rejects(
+    access(path.join(siteDirectory, "markdown_generator")),
+    (error) => error.code === "ENOENT",
+    `${palette} published markdown_generator tooling`,
+  );
   const css = await readFile(path.join(repositoryRoot, "_site/assets/css/main.css"), "utf8");
   assert.match(css, /html\[data-theme="?dark"?\]/);
   assert.match(css, new RegExp(`--global-base-color: ${expectedBaseColors[palette]}`));
@@ -185,4 +197,4 @@ assert.equal(
   `Theme contrast failures:\n${contrastFailures.map((failure) => `- ${failure}`).join("\n")}`,
 );
 
-console.log(`\nAll ${palettes.length} themes built with ${expectedRoutes} routes.`);
+console.log(`\nAll ${palettes.length} themes built with ${expectedRouteManifest.length} routes.`);

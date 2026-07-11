@@ -80,23 +80,39 @@ The Docker-independent contract check is `npm run check:container`. The Docker-r
 
 Phase 7 is infrastructure-only. Protected surfaces remain unchanged: content, navigation, data, routes, rendered `/cv/` and its PDF behavior, images, fonts, generated assets, JavaScript bundles, Gem files and lockfiles, and GitHub Actions workflows. Optional AcademicPages v0.9 capabilities remain inactive. Any future JSON CV infrastructure must coexist with the unchanged PDF-based `/cv/` and cannot activate or replace it without approval.
 
+## Content Authoring Tools
+
+Phase 8 provides dependency-free, validation-first Python generators for future publication and optional talk collection records. Existing publications and the visible YAML-backed talks page are not generated or changed.
+
+- `python3 markdown_generator/publications.py check INPUT.csv` validates publication metadata and both canonical taxonomies without persistent output.
+- `python3 markdown_generator/publications.py generate INPUT.csv --output-dir DIR` writes reviewed publication Markdown to an explicit staging directory.
+- `python3 markdown_generator/talks.py check INPUT.tsv` validates optional `_talks` collection metadata.
+- `python3 markdown_generator/talks.py generate INPUT.tsv --output-dir DIR` writes optional talk collection documents without touching `_data/talks.yml`.
+- Add `--overwrite` only to replace colliding target filenames; unrelated files are never removed.
+- Run `npm run check:generators` for the complete CLI and safety contract.
+
+Inputs may be UTF-8 CSV or TSV with headers in any order. Pipe-delimited fields represent publication tags, authors, student authors, method families, and method tags. Full schemas and exit-code behavior are documented in `markdown_generator/readme.md`.
+
+The generator directory is development-only and excluded from `_site`, including its historical notebooks, spreadsheet, sample inputs, and BibTeX script. Removing its accidentally rendered index changes the supported build manifest from 241 total HTML files to 240 intended site routes; no intended page URL changes.
+
 ## JavaScript Assets
 
 The shared browser bundle follows the AcademicPages v0.9 asset model with local reproducibility hardening:
 
 - `npm ci` installs the exact Node 20/npm 10 dependency graph.
 - `npm run build:js` builds the committed `assets/js/main.min.js` module.
+- `npm run check:generators` verifies the safe content-authoring CLI contract.
 - `npm run check:icons` verifies the Font Awesome version, assets, delivery, markup, and icon-name contract.
 - `npm run check:js` verifies the committed bundle without rewriting it.
 - `npm run check:scientific` verifies the opt-in MathJax, Mermaid, and Plotly runtime contract.
 - `npm run watch:js` rebuilds when the three shared JavaScript sources change.
 - `npm run check:themes` verifies the palette, token, markup, and runtime contract.
-- `npm run test:themes` builds all six palettes and requires the same 241 routes.
-- `npm test` runs the asset, theme, executable browser-state, and Docker-independent container-contract tests plus bundle verification.
+- `npm run test:themes` builds all six palettes and requires the same 240 intended routes.
+- `npm test` runs the asset, content-generator, theme, executable browser-state, and Docker-independent container-contract tests plus bundle verification.
 
-The deterministic builder reads jQuery `3.7.1`, greedy navigation, optional scientific-content renderers, and the shared site interactions in a fixed order. GitHub Actions runs `npm ci`, `npm test`, and the six-theme build matrix before the final Jekyll build, so source, generated assets, and palette support cannot drift.
+The deterministic builder reads jQuery `3.7.1`, greedy navigation, optional scientific-content renderers, and the shared site interactions in a fixed order. GitHub Actions runs `npm ci`, `npm test`, and the six-theme build matrix before the final Jekyll build, so source, generated assets, palette support, and the tracked intended-route manifest cannot drift.
 
-Jekyll excludes `package-lock.json`, `scripts/`, and root `*_artifacts` directories from `_site`. They are development inputs or ignored local analysis output, not deployable website assets.
+Jekyll excludes `package-lock.json`, `scripts/`, `markdown_generator/`, and root `*_artifacts` directories from `_site`. They are development inputs or ignored local analysis output, not deployable website assets.
 
 ## Styling Architecture
 
