@@ -516,8 +516,8 @@ test("container bootstrap reuses complete npm dependencies until inputs change",
   assert.match(bootstrap, /npm_stamp=[^\n]*node_modules/);
   assert.match(
     bootstrap,
-    /installed_npm_inputs[^\n]*!=[^\n]*npm_inputs_hash|npm_inputs_hash[^\n]*!=[^\n]*installed_npm_inputs/,
-    "bootstrap must reinstall when package.json or package-lock.json changes",
+    /installed_npm_inputs[^\n]*==[^\n]*npm_inputs_hash|npm_inputs_hash[^\n]*==[^\n]*installed_npm_inputs/,
+    "bootstrap may reuse dependencies only when package.json and package-lock.json are unchanged",
   );
   assert.match(
     bootstrap,
@@ -558,18 +558,23 @@ test("container bootstrap verifies cached npm package payloads and command links
   );
   assert.match(
     bootstrap,
-    /installed_npm_tree[^\n]*!=[^\n]*current_npm_tree|current_npm_tree[^\n]*!=[^\n]*installed_npm_tree/,
-    "bootstrap must reinstall when cached package contents differ from the recorded tree",
+    /installed_npm_tree[^\n]*==[^\n]*current_npm_tree|current_npm_tree[^\n]*==[^\n]*installed_npm_tree/,
+    "bootstrap may reuse dependencies only when cached package contents match the recorded tree",
   );
   assert.match(
     bootstrap,
-    /if \[\[ "\$installed_npm_inputs" == "\$npm_inputs_hash" && -n "\$installed_npm_tree" \]\]; then[\s\S]{0,240}npm_tree_hash/,
-    "bootstrap must hash the installed tree only when package inputs and a stored tree stamp are reusable",
+    /if \[\[ "\$installed_npm_inputs" == "\$npm_inputs_hash" && -n "\$installed_npm_tree" \]\][\s\S]{0,160}npm ls --all --ignore-scripts[\s\S]{0,240}npm_tree_hash/,
+    "bootstrap must validate package metadata before hashing a potentially reusable tree",
   );
   assert.match(
     bootstrap,
-    /\[\[ -z "\$installed_npm_tree" \]\]/,
-    "bootstrap must reinstall when the stored tree stamp is missing or empty",
+    /^npm_cache_reusable=false[\s\S]{0,480}npm_cache_reusable=true$/m,
+    "bootstrap must opt into cache reuse only after every integrity check passes",
+  );
+  assert.match(
+    bootstrap,
+    /if \[\[ "\$npm_cache_reusable" != true \]\]; then/,
+    "bootstrap must reinstall unless the cache is explicitly reusable",
   );
   assert.ok(
     treeStampIndex < treeHashIndex

@@ -133,17 +133,17 @@ process.stdout.write(hash.digest("hex"));
 NODE
 }
 
+npm_cache_reusable=false
 current_npm_tree=""
-if [[ "$installed_npm_inputs" == "$npm_inputs_hash" && -n "$installed_npm_tree" ]]; then
-  if ! current_npm_tree="$(npm_tree_hash 2>/dev/null)"; then
-    current_npm_tree=""
+if [[ "$installed_npm_inputs" == "$npm_inputs_hash" && -n "$installed_npm_tree" ]] \
+  && npm ls --all --ignore-scripts >/dev/null 2>&1; then
+  if current_npm_tree="$(npm_tree_hash 2>/dev/null)" \
+    && [[ "$installed_npm_tree" == "$current_npm_tree" ]]; then
+    npm_cache_reusable=true
   fi
 fi
 
-if [[ "$installed_npm_inputs" != "$npm_inputs_hash" ]] \
-  || [[ -z "$installed_npm_tree" ]] \
-  || [[ "$installed_npm_tree" != "$current_npm_tree" ]] \
-  || ! npm ls --all --ignore-scripts >/dev/null 2>&1; then
+if [[ "$npm_cache_reusable" != true ]]; then
   npm ci
   current_npm_tree="$(npm_tree_hash)"
   printf '%s\n' "$npm_inputs_hash" > "$npm_stamp"
