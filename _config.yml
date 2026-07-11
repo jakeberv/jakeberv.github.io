@@ -162,6 +162,7 @@ exclude:
   - .devcontainer
   - gulpfile.js
   - log
+  - markdown_generator
   - node_modules
   - package-lock.json
   - package.json

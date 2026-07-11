@@ -2,12 +2,30 @@
 
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 
-const PUBLICATIONS_DIR = "_publications";
-const TAXONOMY_PATH = "_data/publication_tags.yml";
+const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
+const TAXONOMY_PATH = path.join(REPO_ROOT, "_data/publication_tags.yml");
+
+function parseArguments(argv) {
+  let publicationsDir = path.join(REPO_ROOT, "_publications");
+  for (let index = 0; index < argv.length; index += 1) {
+    if (
+      argv[index] !== "--publications-dir" ||
+      !argv[index + 1] ||
+      argv[index + 1].startsWith("-")
+    ) {
+      console.error(`Unknown or incomplete argument: ${argv[index]}`);
+      process.exit(2);
+    }
+    publicationsDir = path.resolve(argv[index + 1]);
+    index += 1;
+  }
+  return { publicationsDir };
+}
 
 function parseFrontMatter(raw) {
-  const match = raw.match(/^---\n([\s\S]*?)\n---\n?/);
+  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
   return match ? match[1] : null;
 }
 
@@ -81,12 +99,13 @@ function extractTags(frontMatter) {
 }
 
 function main() {
+  const { publicationsDir } = parseArguments(process.argv.slice(2));
   if (!fs.existsSync(TAXONOMY_PATH)) {
     console.error(`Missing taxonomy file: ${TAXONOMY_PATH}`);
     process.exit(2);
   }
-  if (!fs.existsSync(PUBLICATIONS_DIR)) {
-    console.error(`Missing publications directory: ${PUBLICATIONS_DIR}`);
+  if (!fs.existsSync(publicationsDir)) {
+    console.error(`Missing publications directory: ${publicationsDir}`);
     process.exit(2);
   }
 
@@ -98,7 +117,7 @@ function main() {
   }
 
   const files = fs
-    .readdirSync(PUBLICATIONS_DIR)
+    .readdirSync(publicationsDir)
     .filter((f) => f.endsWith(".md"))
     .sort();
 
@@ -106,7 +125,7 @@ function main() {
   const usedTags = new Set();
 
   for (const file of files) {
-    const fullPath = path.join(PUBLICATIONS_DIR, file);
+    const fullPath = path.join(publicationsDir, file);
     const raw = fs.readFileSync(fullPath, "utf8");
     const fm = parseFrontMatter(raw);
 
