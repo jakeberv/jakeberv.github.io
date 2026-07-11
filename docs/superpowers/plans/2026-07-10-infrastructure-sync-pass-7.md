@@ -8,7 +8,7 @@ published: false
 
 **Goal:** Add a reproducible Docker and Dev Container development environment without changing the public website.
 
-**Architecture:** A non-root, multi-runtime image supplies the repository's pinned Ruby and Node toolchains. Compose and Dev Containers share that image and delegate all Jekyll behavior to the existing preview wrapper, while static Node tests enforce the environment contract without adding Docker to deployment.
+**Architecture:** A non-root, multi-runtime image supplies exact Ruby/Bundler versions and the repository's supported Node/npm major lines. Compose and Dev Containers share that image and delegate all Jekyll behavior to the existing preview wrapper, while static Node tests enforce the environment contract without adding Docker to deployment.
 
 **Tech Stack:** Docker, Docker Compose, VS Code Dev Containers, Ruby 3.3.4, Bundler 2.5.18, Node 20, npm 10, Jekyll 3.10, Node's built-in test runner.
 
@@ -60,7 +60,7 @@ git status --short
 
 ## Verification Summary
 
-- `npm test` passes 38/38 tests, with a current deterministic JavaScript bundle and 24/24 container-contract tests.
+- `npm test` passes 38/38 tests, with a current deterministic JavaScript bundle and 26/26 container-contract tests.
 - `npm run test:container` succeeds from fresh dependency volumes; all six palettes and the final default build produce exactly 241 routes.
 - The native full build succeeds with only the known Bundler fallback, Faraday, and stale-data warnings.
 - Docker reports Ruby 3.3.4, Bundler 2.5.18, Node 20.x, npm 10.x, non-root execution, and writable isolated dependency caches; a UID/GID 1001 image probe also succeeds.

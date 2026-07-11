@@ -25,7 +25,7 @@ The comparison baseline is AcademicPages v0.9 `11dbf0d0f5c1437143b40a3c86b8a1b41
 
 ### Portable runtime (adopted from AcademicPages)
 
-A multi-stage Docker image provides Ruby 3.3.4, Bundler 2.5.18, Node 20, npm 10, Python 3, Git, and build tools. Docker Compose bind-mounts the repository, publishes the existing preview on loopback port 4001, accepts positive host UID/GID build arguments with `1000` defaults, rejects root or invalid IDs, tolerates positive IDs already occupied in the base image, and keeps gems and `node_modules` in named volumes. Only those dependency-cache paths remain writable across Dev Container UID/GID remapping. A VS Code Dev Container attaches to the same service and workspace through a local Compose override that disables the preview-only health check while its command is replaced.
+A multi-stage Docker image provides Ruby 3.3.4, Bundler 2.5.18, Node 20, npm 10, Python 3, Git, and build tools. Ruby and Bundler are exact pins; Node `20.x` and npm `10.x` intentionally follow the supported major lines already used by `.node-version` and deployment rather than introducing a Phase 7-only image-digest policy. Docker Compose bind-mounts the repository, publishes the existing preview on loopback port 4001, accepts positive host UID/GID build arguments with `1000` defaults, rejects root or invalid IDs, tolerates positive IDs already occupied in the base image, and keeps gems and `node_modules` in named volumes. Only those dependency-cache paths remain writable across Dev Container UID/GID remapping. A VS Code Dev Container attaches to the same service and workspace through a local Compose override that disables the preview-only health check while its command is replaced.
 
 ### Runtime validation (local compatibility hardening)
 
