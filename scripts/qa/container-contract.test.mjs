@@ -1,7 +1,16 @@
 import assert from "node:assert/strict";
 import { execFile } from "node:child_process";
 import { constants } from "node:fs";
-import { access, chmod, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import {
+  access,
+  chmod,
+  copyFile,
+  mkdir,
+  mkdtemp,
+  readFile,
+  rm,
+  writeFile,
+} from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import test from "node:test";
@@ -9,6 +18,7 @@ import { fileURLToPath } from "node:url";
 import { promisify } from "node:util";
 
 const execFileAsync = promisify(execFile);
+const canExecuteBash = process.platform !== "win32";
 
 const repositoryRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -17,6 +27,47 @@ const repositoryRoot = path.resolve(
 
 async function source(filePath) {
   return readFile(path.join(repositoryRoot, filePath), "utf8");
+}
+
+async function createCommandStubs(t, commands) {
+  const binDirectory = await mkdtemp(path.join(os.tmpdir(), "container-bootstrap-bin-"));
+  t.after(() => rm(binDirectory, { force: true, recursive: true }));
+
+  await Promise.all(Object.entries(commands).map(async ([name, body]) => {
+    const commandPath = path.join(binDirectory, name);
+    await writeFile(commandPath, `#!/usr/bin/env bash\nset -euo pipefail\n${body}`, "utf8");
+    await chmod(commandPath, 0o755);
+  }));
+
+  return binDirectory;
+}
+
+function stubPath(binDirectory) {
+  return `${binDirectory}${path.delimiter}${process.env.PATH ?? ""}`;
+}
+
+function validRuntimeCommands() {
+  return {
+    ruby: `
+if [[ "$*" == *RUBY_VERSION* ]]; then
+  printf '3.3.4'
+else
+  printf '2.5.18'
+fi
+`,
+    node: "printf 'v20.20.2\\n'\n",
+    npm: "printf '10.8.2\\n'\n",
+    bundle: `
+if [[ "\${1:-}" == "_2.5.18_" && "\${2:-}" == "--version" ]]; then
+  printf 'Bundler version 2.5.18\\n'
+  exit 0
+fi
+if [[ "\${1:-}" == "_2.5.18_" && "\${2:-}" == "check" ]]; then
+  exit 0
+fi
+exit 99
+`,
+  };
 }
 
 function matchIndex(text, pattern, description) {
@@ -148,6 +199,45 @@ test("the Docker user tolerates occupied host UID and GID values", async () => {
   );
 });
 
+test("the Docker user rejects root and invalid numeric identities", async () => {
+  const dockerfile = await source("Dockerfile");
+  const validationIndex = matchIndex(
+    dockerfile,
+    /USER_UID and USER_GID must be positive integers/,
+    "Dockerfile must explain invalid UID/GID build arguments",
+  );
+  const userCreationIndex = matchIndex(
+    dockerfile,
+    /useradd[^\n]*\bvscode\b/i,
+    "Dockerfile must create the vscode user",
+  );
+
+  assert.match(
+    dockerfile,
+    /\^\[1-9\]\[0-9\]\*:\[1-9\]\[0-9\]\*\$/,
+    "Dockerfile must accept only positive integer UID:GID pairs",
+  );
+  assert.ok(validationIndex < userCreationIndex, "UID/GID validation must precede user creation");
+});
+
+test("the Docker image keeps all dependency-cache contents remap writable", async () => {
+  const [dockerfile, bootstrap] = await Promise.all([
+    source("Dockerfile"),
+    source("scripts/container_bootstrap.command"),
+  ]);
+
+  assert.match(
+    dockerfile,
+    /chmod\s+-R\s+a\+rwX\s+["']?(?:\$\{BUNDLE_PATH\}|\$BUNDLE_PATH)["']?\s+\/workspace\/node_modules/,
+    "Dockerfile must recursively preserve remap-safe write access only in dependency caches",
+  );
+  assert.match(
+    bootstrap,
+    /find\s+["']?(?:\$\{BUNDLE_PATH\}|\$BUNDLE_PATH)["']?\s+node_modules\s+-user\s+["']?\$\(id\s+-u\)["']?\s+-exec\s+chmod\s+a\+rwX/,
+    "bootstrap must repair only cache entries created by the active user",
+  );
+});
+
 test("the Docker build context excludes generated, cached, and local artifacts", async () => {
   const dockerignore = await source(".dockerignore");
   const entries = new Set(
@@ -165,6 +255,14 @@ test("the Docker build context excludes generated, cached, and local artifacts",
     "vendor/bundle",
     "vendor/cache",
     ".RData",
+    ".Rhistory",
+    ".Rproj.user",
+    ".jekyll-metadata",
+    ".playwright-cli",
+    ".DS_Store",
+    "**/.DS_Store",
+    ".env",
+    ".env.*",
     "*_artifacts",
   ]) {
     assert.ok(entries.has(expected), `.dockerignore must exclude ${expected}`);
@@ -212,20 +310,12 @@ test("container bootstrap validates the pinned runtime before installing local d
   assert.doesNotMatch(bootstrap, /\bnpm\s+(?:install|i)\s+\S+\s+(?:--global|-g)\b/);
 });
 
-test("container bootstrap explains when the pinned Bundler is unavailable", async (t) => {
-  const binDirectory = await mkdtemp(path.join(os.tmpdir(), "container-bootstrap-bin-"));
-  t.after(() => rm(binDirectory, { force: true, recursive: true }));
-
+test("container bootstrap explains when the pinned Bundler is unavailable", {
+  skip: !canExecuteBash && "container bootstrap is Bash-only and executes inside Docker on Windows",
+}, async (t) => {
   const commands = {
-    ruby: `
-if [[ "$*" == *RUBY_VERSION* ]]; then
-  printf '3.3.4'
-else
-  printf '4.0.9'
-fi
-`,
-    node: "printf 'v20.20.2\\n'\n",
-    npm: "printf '10.8.2\\n'\n",
+    ...validRuntimeCommands(),
+    ruby: validRuntimeCommands().ruby.replace("2.5.18", "4.0.9"),
     bundle: `
 if [[ "\${1:-}" == "_2.5.18_" ]]; then
   exit 1
@@ -233,19 +323,14 @@ fi
 exit 99
 `,
   };
-
-  await Promise.all(Object.entries(commands).map(async ([name, body]) => {
-    const commandPath = path.join(binDirectory, name);
-    await writeFile(commandPath, `#!/usr/bin/env bash\nset -euo pipefail\n${body}`, "utf8");
-    await chmod(commandPath, 0o755);
-  }));
+  const binDirectory = await createCommandStubs(t, commands);
 
   await assert.rejects(
     execFileAsync("bash", ["scripts/container_bootstrap.command"], {
       cwd: repositoryRoot,
       env: {
         ...process.env,
-        PATH: `${binDirectory}:${process.env.PATH}`,
+        PATH: stubPath(binDirectory),
       },
     }),
     (error) => {
@@ -256,6 +341,103 @@ exit 99
       );
       return true;
     },
+  );
+});
+
+test("container bootstrap explains missing runtime executables", {
+  skip: !canExecuteBash && "container bootstrap is Bash-only and executes inside Docker on Windows",
+}, async (t) => {
+  const cases = [
+    ["ruby", "Ruby 3.3.4 is required, but ruby is not callable."],
+    ["node", "Node 20 is required, but node is not callable."],
+    ["npm", "npm 10 is required, but npm is not callable."],
+  ];
+
+  for (const [runtime, message] of cases) {
+    await t.test(runtime, async (subtest) => {
+      const commands = {
+        ...validRuntimeCommands(),
+        [runtime]: "exit 127\n",
+      };
+      const binDirectory = await createCommandStubs(subtest, commands);
+
+      await assert.rejects(
+        execFileAsync("bash", ["scripts/container_bootstrap.command"], {
+          cwd: repositoryRoot,
+          env: {
+            ...process.env,
+            PATH: stubPath(binDirectory),
+          },
+        }),
+        (error) => {
+          assert.equal(error.code, 1);
+          assert.match(error.stdout, new RegExp(message.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+          return true;
+        },
+      );
+    });
+  }
+});
+
+test("container bootstrap replaces an empty npm cache stamp", {
+  skip: !canExecuteBash && "container bootstrap is Bash-only and executes inside Docker on Windows",
+}, async (t) => {
+  const fixtureRoot = await mkdtemp(path.join(os.tmpdir(), "container-bootstrap-fixture-"));
+  t.after(() => rm(fixtureRoot, { force: true, recursive: true }));
+  await mkdir(path.join(fixtureRoot, "scripts"), { recursive: true });
+  await mkdir(path.join(fixtureRoot, "node_modules"));
+  await mkdir(path.join(fixtureRoot, "bundle"));
+  await copyFile(
+    path.join(repositoryRoot, "scripts/container_bootstrap.command"),
+    path.join(fixtureRoot, "scripts/container_bootstrap.command"),
+  );
+  await Promise.all([
+    writeFile(path.join(fixtureRoot, ".ruby-version"), "3.3.4\n"),
+    writeFile(path.join(fixtureRoot, ".node-version"), "20\n"),
+    writeFile(path.join(fixtureRoot, "Gemfile.lock"), "BUNDLED WITH\n   2.5.18\n"),
+    writeFile(path.join(fixtureRoot, "package.json"), "{}\n"),
+    writeFile(path.join(fixtureRoot, "package-lock.json"), "{}\n"),
+    writeFile(path.join(fixtureRoot, "node_modules/.jakeberv-npm-inputs.sha256"), ""),
+  ]);
+
+  const commands = {
+    ...validRuntimeCommands(),
+    npm: `
+case "\${1:-}" in
+  --version) printf '10.8.2\\n' ;;
+  ls) exit 1 ;;
+  ci) printf 'npm-ci-ran\\n' ;;
+  *) exit 99 ;;
+esac
+`,
+    sha256sum: `
+if [[ "$#" -eq 0 ]]; then
+  cat >/dev/null
+  printf 'fingerprint  -\\n'
+else
+  for file in "$@"; do
+    printf 'input  %s\\n' "$file"
+  done
+fi
+`,
+  };
+  const binDirectory = await createCommandStubs(t, commands);
+  const { stdout } = await execFileAsync(
+    "bash",
+    [path.join(fixtureRoot, "scripts/container_bootstrap.command")],
+    {
+      env: {
+        ...process.env,
+        BUNDLE_PATH: path.join(fixtureRoot, "bundle"),
+        PATH: stubPath(binDirectory),
+      },
+    },
+  );
+
+  assert.match(stdout, /npm-ci-ran/);
+  assert.equal(
+    await readFile(path.join(fixtureRoot, "node_modules/.jakeberv-npm-inputs.sha256"), "utf8"),
+    "fingerprint\n",
   );
 });
 
@@ -301,6 +483,43 @@ test("container bootstrap reuses complete npm dependencies until inputs change",
   );
 });
 
+test("container bootstrap verifies cached npm package payloads and command links", async () => {
+  const bootstrap = await source("scripts/container_bootstrap.command");
+  const treeStampIndex = matchIndex(
+    bootstrap,
+    /npm_tree_stamp=[^\n]*node_modules/,
+    "bootstrap must persist an npm package-tree fingerprint",
+  );
+  const treeHashIndex = matchIndex(
+    bootstrap,
+    /npm_tree_hash\(\)/,
+    "bootstrap must calculate an npm package-tree fingerprint",
+  );
+  const npmCiIndex = matchIndex(bootstrap, /^\s*npm\s+ci\s*$/m, "bootstrap must run npm ci when cache checks fail");
+  const treeStampWriteIndex = matchIndex(
+    bootstrap,
+    /printf[^\n]*current_npm_tree[^\n]*npm_tree_stamp/,
+    "bootstrap must update the package-tree fingerprint after npm ci",
+  );
+
+  assert.match(
+    bootstrap,
+    /fs\.lstatSync[\s\S]*?stats\.isSymbolicLink[\s\S]*?fs\.readlinkSync/,
+    "the package-tree fingerprint must include regular files and executable symlinks",
+  );
+  assert.match(
+    bootstrap,
+    /installed_npm_tree[^\n]*!=[^\n]*current_npm_tree|current_npm_tree[^\n]*!=[^\n]*installed_npm_tree/,
+    "bootstrap must reinstall when cached package contents differ from the recorded tree",
+  );
+  assert.ok(
+    treeStampIndex < treeHashIndex
+      && treeHashIndex < npmCiIndex
+      && npmCiIndex < treeStampWriteIndex,
+    "bootstrap must fingerprint the cache before deciding whether to repair it",
+  );
+});
+
 test("Compose isolates dependencies and delegates the portable preview", async () => {
   const compose = await source("docker-compose.yaml");
   const services = yamlBlock(compose, "services");
@@ -313,7 +532,11 @@ test("Compose isolates dependencies and delegates the portable preview", async (
     site,
     /(?:^|\n)\s{4}build:\s*\.(?:\s*(?:#.*)?)?$|(?:^|\n)\s{4}build:\s*\n(?:\s{6}[^\n]*\n)*?\s{6}context:\s*\.(?:\s*(?:#.*)?)?$/m,
   );
-  assert.match(site, /-\s*["']?4001:4001(?:\/[a-z]+)?["']?/);
+  assert.match(
+    site,
+    /-\s*["']?127\.0\.0\.1:4001:4001(?:\/[a-z]+)?["']?/,
+    "the host preview port must bind to loopback only",
+  );
   assert.match(site, /-\s*\.\s*:\s*\/workspace/);
   assert.doesNotMatch(site, /^\s{4}user:\s*["']?(?:root|0)(?::[^"'\s#]+)?["']?\s*(?:#.*)?$/mi);
   assert.ok(bundleVolume, "services.site must mount a named Bundler volume");

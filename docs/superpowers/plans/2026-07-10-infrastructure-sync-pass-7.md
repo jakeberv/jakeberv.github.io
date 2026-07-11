@@ -35,7 +35,7 @@ published: false
 ## Acceptance Criteria
 
 - `npm test` enforces the static container contract without requiring Docker.
-- Docker reports Ruby 3.3.4, Bundler 2.5.18, Node 20.x, npm 10.x, and a non-root UID; occupied host UID/GID values do not prevent image creation.
+- Docker reports Ruby 3.3.4, Bundler 2.5.18, Node 20.x, npm 10.x, and a non-root UID; invalid/root IDs are rejected and occupied positive host UID/GID values do not prevent image creation.
 - Container dependencies are isolated from host gems and `node_modules`.
 - `docker compose up --build` serves the existing site on port 4001 through `scripts/local_preview.command`.
 - Native and container builds both produce the unchanged 241-route manifest.
@@ -60,7 +60,7 @@ git status --short
 
 ## Verification Summary
 
-- `npm test` passes 38/38 tests, with a current deterministic JavaScript bundle and 12/12 container-contract tests.
+- `npm test` passes 38/38 tests, with a current deterministic JavaScript bundle and 24/24 container-contract tests.
 - `npm run test:container` succeeds from fresh dependency volumes; all six palettes and the final default build produce exactly 241 routes.
 - The native full build succeeds with only the known Bundler fallback, Faraday, and stale-data warnings.
 - Docker reports Ruby 3.3.4, Bundler 2.5.18, Node 20.x, npm 10.x, non-root execution, and writable isolated dependency caches; a UID/GID 1001 image probe also succeeds.

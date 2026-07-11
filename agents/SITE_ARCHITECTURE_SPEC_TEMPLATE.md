@@ -15,7 +15,7 @@ Use this template to document the current architecture of this Jekyll site befor
 - Ruby requirements: Ruby `3.3.4` with Bundler `2.5.18` preferred
 - Node requirements: Node.js `20` with npm `10` for preview validation and deterministic JS tooling
 - Container runtime: Docker runs the service as the non-root `vscode` user with Ruby `3.3.4`, Bundler `2.5.18`, Node `20`, npm `10`, and Python 3
-- Dependency isolation: Compose named volumes `bundle` and `node_modules`; only those cache paths remain writable across Dev Container UID/GID remapping, while the repository remains a bind mount. Bootstrap reuses `node_modules` only when the `package.json`/`package-lock.json` fingerprint matches and `npm ls` validates the installed tree; otherwise it runs `npm ci`.
+- Dependency isolation: Compose named volumes `bundle` and `node_modules`; only those cache paths remain recursively writable across Dev Container UID/GID remapping, while the repository remains a bind mount. Bootstrap reuses `node_modules` only when `package.json`, `package-lock.json`, and the installed npm file/symlink tree fingerprints match and `npm ls` validates the tree; otherwise it runs `npm ci`.
 - Local run command:
 - Production deployment target:
 
@@ -46,7 +46,7 @@ Docker is optional developer tooling; the native preview workflow and GitHub Pag
 3. Stop the foreground process with `Ctrl+C`, then clean up with `docker compose down`.
 4. Use `docker compose down --volumes` only for an explicit dependency-volume reset; it removes the isolated `bundle` and `node_modules` volumes, so the next startup re-installs dependencies.
 
-Compose defaults to UID/GID `1000`. On Linux hosts with different IDs, run `USER_UID="$(id -u)" USER_GID="$(id -g)" docker compose up --build` so the bind-mounted workspace remains writable. User/group setup retains the `vscode` identity and accepts numeric IDs already present in the base image.
+Compose defaults to UID/GID `1000`. On Linux hosts with different positive IDs, run `USER_UID="$(id -u)" USER_GID="$(id -g)" docker compose up --build` so the bind-mounted workspace remains writable. Root or nonnumeric IDs are rejected; occupied positive IDs retain the `vscode` identity. The host preview port binds only to `127.0.0.1`.
 
 The VS Code Dev Container uses the same Compose service. `overrideCommand: true` prevents the Compose preview command from racing the `postCreateCommand` bootstrap, while `.devcontainer/docker-compose.devcontainer.yaml` disables the inherited preview-only health check. After the container is created, start preview manually with the normal wrapper: `./scripts/local_preview.command --full-build --skip-data --port 4001`.
 

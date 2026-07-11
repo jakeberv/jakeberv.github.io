@@ -61,7 +61,7 @@ By default, local preview skips geo/impact data regeneration and uses Jekyll inc
 
 ### Containerized development (optional)
 
-Docker is optional developer tooling. Native preview and GitHub Pages deployment are unchanged. The Compose service runs as the non-root `vscode` user with Ruby `3.3.4`, Bundler `2.5.18`, Node `20`, and npm `10`; the repository is bind-mounted while the named `bundle` and `node_modules` volumes isolate container dependencies from the host. Those two cache paths are writable after Dev Container UID/GID remapping, without making the repository world-writable. Bootstrap fingerprints `package.json` and `package-lock.json`, reusing the npm volume only when that fingerprint matches and `npm ls` confirms a complete dependency tree; otherwise it runs `npm ci`. The existing preview wrapper reuses `_config.dev.yml`.
+Docker is optional developer tooling. Native preview and GitHub Pages deployment are unchanged. The Compose service runs as the non-root `vscode` user with Ruby `3.3.4`, Bundler `2.5.18`, Node `20`, and npm `10`; the repository is bind-mounted while the named `bundle` and `node_modules` volumes isolate container dependencies from the host. Those two cache paths remain recursively writable after Dev Container UID/GID remapping, without making the repository world-writable. Bootstrap fingerprints `package.json`, `package-lock.json`, and the installed npm file/symlink tree; a mismatch or failed dependency check runs `npm ci`. The existing preview wrapper reuses `_config.dev.yml`.
 
 To start the portable preview:
 
@@ -70,7 +70,7 @@ To start the portable preview:
 3. Stop the foreground Compose process with `Ctrl+C`.
 4. Remove the stopped service and network with `docker compose down`.
 
-Compose defaults the container user to UID/GID `1000`. On a Linux host using different IDs, preserve bind-mount ownership with `USER_UID="$(id -u)" USER_GID="$(id -g)" docker compose up --build`. The image retains the `vscode` account and tolerates numeric UID/GID values already occupied in the Debian base image.
+Compose defaults the container user to UID/GID `1000`. On a Linux host using different positive IDs, preserve bind-mount ownership with `USER_UID="$(id -u)" USER_GID="$(id -g)" docker compose up --build`. Root or nonnumeric IDs are rejected; occupied positive IDs retain the `vscode` account. The published preview port is bound to `127.0.0.1` rather than exposed to the local network.
 
 To explicitly reset the dependency volumes, run `docker compose down --volumes`. This removes the isolated Bundler and `node_modules` caches, so the next startup must bootstrap those dependencies again.
 
@@ -92,7 +92,7 @@ The shared browser bundle follows the AcademicPages v0.9 asset model with local 
 - `npm run watch:js` rebuilds when the three shared JavaScript sources change.
 - `npm run check:themes` verifies the palette, token, markup, and runtime contract.
 - `npm run test:themes` builds all six palettes and requires the same 241 routes.
-- `npm test` runs the asset, theme, and executable browser-state tests plus bundle verification.
+- `npm test` runs the asset, theme, executable browser-state, and Docker-independent container-contract tests plus bundle verification.
 
 The deterministic builder reads jQuery `3.7.1`, greedy navigation, optional scientific-content renderers, and the shared site interactions in a fixed order. GitHub Actions runs `npm ci`, `npm test`, and the six-theme build matrix before the final Jekyll build, so source, generated assets, and palette support cannot drift.
 

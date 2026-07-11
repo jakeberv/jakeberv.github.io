@@ -25,11 +25,11 @@ The comparison baseline is AcademicPages v0.9 `11dbf0d0f5c1437143b40a3c86b8a1b41
 
 ### Portable runtime (adopted from AcademicPages)
 
-A multi-stage Docker image provides Ruby 3.3.4, Bundler 2.5.18, Node 20, npm 10, Python 3, Git, and build tools. Docker Compose bind-mounts the repository, exposes the existing preview at port 4001, accepts host UID/GID build arguments with `1000` defaults, tolerates numeric IDs already occupied in the base image, and keeps gems and `node_modules` in named volumes. Only those dependency-cache paths remain writable across Dev Container UID/GID remapping. A VS Code Dev Container attaches to the same service and workspace through a local Compose override that disables the preview-only health check while its command is replaced.
+A multi-stage Docker image provides Ruby 3.3.4, Bundler 2.5.18, Node 20, npm 10, Python 3, Git, and build tools. Docker Compose bind-mounts the repository, publishes the existing preview on loopback port 4001, accepts positive host UID/GID build arguments with `1000` defaults, rejects root or invalid IDs, tolerates positive IDs already occupied in the base image, and keeps gems and `node_modules` in named volumes. Only those dependency-cache paths remain writable across Dev Container UID/GID remapping. A VS Code Dev Container attaches to the same service and workspace through a local Compose override that disables the preview-only health check while its command is replaced.
 
 ### Runtime validation (local compatibility hardening)
 
-`scripts/container_bootstrap.command` reads `.ruby-version`, `.node-version`, and `Gemfile.lock`, rejects runtime drift, and installs dependencies only inside container volumes before site behavior delegates to `scripts/local_preview.command`. It fingerprints `package.json` and `package-lock.json`; a matching fingerprint is reused only when `npm ls` validates the installed tree, while missing, changed, or incomplete dependencies trigger deterministic `npm ci`. The container runs as an unprivileged user and never changes host-global Ruby or Node state.
+`scripts/container_bootstrap.command` reads `.ruby-version`, `.node-version`, and `Gemfile.lock`, rejects runtime drift, and installs dependencies only inside container volumes before site behavior delegates to `scripts/local_preview.command`. It fingerprints `package.json`, `package-lock.json`, and the installed npm file/symlink tree; matching fingerprints are reused only when `npm ls` validates the installed tree, while missing, changed, or incomplete dependencies trigger deterministic `npm ci`. The container runs as an unprivileged user and never changes host-global Ruby or Node state.
 
 ### Contract verification (local compatibility hardening)
 
