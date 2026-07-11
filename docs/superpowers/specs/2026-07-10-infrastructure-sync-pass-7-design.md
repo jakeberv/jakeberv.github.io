@@ -29,7 +29,7 @@ A multi-stage Docker image provides Ruby 3.3.4, Bundler 2.5.18, Node 20, npm 10,
 
 ### Runtime validation (local compatibility hardening)
 
-`scripts/container_bootstrap.command` reads `.ruby-version`, `.node-version`, and `Gemfile.lock`, rejects runtime drift, and installs dependencies only inside container volumes before site behavior delegates to `scripts/local_preview.command`. It fingerprints `package.json`, `package-lock.json`, and the installed npm file/symlink tree; matching fingerprints are reused only when `npm ls` validates the installed tree, while missing, changed, or incomplete dependencies trigger deterministic `npm ci`. The container runs as an unprivileged user and never changes host-global Ruby or Node state.
+`scripts/container_bootstrap.command` reads `.ruby-version`, `.node-version`, and `Gemfile.lock`, rejects runtime drift, and installs dependencies only inside container volumes before site behavior delegates to `scripts/local_preview.command`. Bundler runs frozen so the bind-mounted `Gemfile.lock` cannot be rewritten. It fingerprints `package.json`, `package-lock.json`, and the installed npm file/symlink tree; matching fingerprints are reused only when `npm ls` validates the installed tree, while missing, changed, or incomplete dependencies trigger deterministic `npm ci`. Git enforces LF endings for executable `.command` files so Windows checkouts remain compatible with the Linux container. The container runs as an unprivileged user and never changes host-global Ruby or Node state.
 
 ### Contract verification (local compatibility hardening)
 

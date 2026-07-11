@@ -59,6 +59,7 @@ if [[ "$actual_bundler" != "$expected_bundler" ]]; then
 fi
 
 export BUNDLE_PATH="${BUNDLE_PATH:-/usr/local/bundle}"
+export BUNDLE_FROZEN=true
 mkdir -p "$BUNDLE_PATH" node_modules
 
 make_cache_writable() {

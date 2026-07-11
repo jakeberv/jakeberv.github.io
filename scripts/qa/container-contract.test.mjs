@@ -63,6 +63,10 @@ if [[ "\${1:-}" == "_2.5.18_" && "\${2:-}" == "--version" ]]; then
   exit 0
 fi
 if [[ "\${1:-}" == "_2.5.18_" && "\${2:-}" == "check" ]]; then
+  if [[ "\${BUNDLE_FROZEN:-}" != "true" ]]; then
+    printf 'BUNDLE_FROZEN must be true\\n' >&2
+    exit 98
+  fi
   exit 0
 fi
 exit 99
@@ -269,6 +273,26 @@ test("the Docker build context excludes generated, cached, and local artifacts",
   }
 });
 
+test("container command scripts retain Linux-compatible line endings", async () => {
+  const { stdout: trackedOutput } = await execFileAsync("git", ["ls-files", "*.command"], {
+    cwd: repositoryRoot,
+  });
+  const commandFiles = trackedOutput.trim().split(/\r?\n/).filter(Boolean);
+  assert.ok(commandFiles.length > 0, "repository must track container command scripts");
+
+  const { stdout: attributesOutput } = await execFileAsync(
+    "git",
+    ["check-attr", "eol", "--", ...commandFiles],
+    { cwd: repositoryRoot },
+  );
+  for (const filePath of commandFiles) {
+    assert.match(attributesOutput, new RegExp(`^${filePath}: eol: lf$`, "m"));
+    const script = await source(filePath);
+    assert.match(script, /^#!\/usr\/bin\/env bash$/m);
+    assert.doesNotMatch(script, /\r\n/, `${filePath} must use LF line endings`);
+  }
+});
+
 test("container bootstrap validates the pinned runtime before installing local dependencies", async () => {
   const [bootstrap, rubyVersion, nodeVersion, gemfileLock] = await Promise.all([
     source("scripts/container_bootstrap.command"),
@@ -301,6 +325,7 @@ test("container bootstrap validates the pinned runtime before installing local d
   assert.match(bootstrap, /(?:expected|required)_npm_major\s*=\s*10/i);
   assert.match(bootstrap, /bundle\s+_[^\s]+_\s+--version/);
   assert.match(bootstrap, /bundle\s+_[^\s]+_\s+check/);
+  assert.match(bootstrap, /^export BUNDLE_FROZEN=true$/m);
   for (const index of [...versionSourceIndexes, ...comparisonIndexes]) {
     assert.ok(index < dependencySetupIndex, "runtime sources and comparisons must precede dependency installation");
   }
