@@ -1,8 +1,9 @@
 import assert from "node:assert/strict";
-import { access, readdir, readFile } from "node:fs/promises";
+import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { spawn } from "node:child_process";
 import { fileURLToPath } from "node:url";
+import { validateSiteArtifact } from "./site-artifact-contract.mjs";
 
 const repositoryRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -17,19 +18,8 @@ const expectedBaseColors = {
   dirt: "#343434",
   contrast: "#b60000",
 };
-const expectedRouteManifest = (
-  await readFile(path.join(repositoryRoot, "scripts/qa/expected-html-routes.txt"), "utf8")
-)
-  .trim()
-  .split(/\r?\n/);
 const contrastFailures = [];
-
-function canonicalizeRoute(route) {
-  if (route.startsWith("AGENTS/") && route !== "AGENTS/index.html") {
-    return `agents/${route.slice("AGENTS/".length)}`;
-  }
-  return route;
-}
+let validatedRouteCount = 0;
 
 async function run(command, args) {
   await new Promise((resolve, reject) => {
@@ -43,19 +33,6 @@ async function run(command, args) {
       else reject(new Error(`${command} exited with ${code}`));
     });
   });
-}
-
-async function htmlRoutes(directory, root = directory) {
-  const routes = [];
-  for (const entry of await readdir(directory, { withFileTypes: true })) {
-    const entryPath = path.join(directory, entry.name);
-    if (entry.isDirectory()) routes.push(...(await htmlRoutes(entryPath, root)));
-    else if (entry.name.endsWith(".html")) {
-      const route = path.relative(root, entryPath).split(path.sep).join("/");
-      routes.push(canonicalizeRoute(route));
-    }
-  }
-  return routes.sort();
 }
 
 function parseDeclarations(block) {
@@ -186,12 +163,8 @@ for (const palette of palettes) {
   ]);
 
   const siteDirectory = path.join(repositoryRoot, "_site");
-  assert.deepEqual(await htmlRoutes(siteDirectory), expectedRouteManifest, `${palette} route manifest drifted`);
-  await assert.rejects(
-    access(path.join(siteDirectory, "markdown_generator")),
-    (error) => error.code === "ENOENT",
-    `${palette} published markdown_generator tooling`,
-  );
+  const artifact = await validateSiteArtifact({ repositoryRoot, siteDirectory });
+  validatedRouteCount = artifact.routes.length;
   const css = await readFile(path.join(repositoryRoot, "_site/assets/css/main.css"), "utf8");
   assert.match(css, /html\[data-theme="?dark"?\]/);
   assert.match(css, new RegExp(`--global-base-color: ${expectedBaseColors[palette]}`));
@@ -205,4 +178,4 @@ assert.equal(
   `Theme contrast failures:\n${contrastFailures.map((failure) => `- ${failure}`).join("\n")}`,
 );
 
-console.log(`\nAll ${palettes.length} themes built with ${expectedRouteManifest.length} routes.`);
+console.log(`\nAll ${palettes.length} themes built with ${validatedRouteCount} routes.`);
