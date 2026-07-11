@@ -44,8 +44,11 @@ jobs:
       - name: Validate publication method tags
         run: node scripts/qa/validate-publication-method-tags.mjs
 
-      - name: Generate career geo map data
+      - name: Generate career and talk map data
         run: node scripts/build-career-geo-data.mjs
+
+      - name: Validate talk map data and runtime
+        run: npm run check:talkmap
 
       - name: Generate impact dashboard data
         run: python3 scripts/build-impact-dashboard-data.py --repo-root "$GITHUB_WORKSPACE" --out-dir "$GITHUB_WORKSPACE/data/impact"
@@ -72,6 +75,9 @@ jobs:
 
       - name: Validate rendered integrations
         run: npm run check:integrations:built
+
+      - name: Validate rendered local resources
+        run: npm run check:assets
 
       - name: Validate Pages artifact
         run: npm run check:site-artifact
