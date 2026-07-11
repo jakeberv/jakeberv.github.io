@@ -365,6 +365,34 @@ test("taxonomy validators reject option tokens as publication directory values",
   assert.match(methods.stderr, /Unknown or incomplete argument: --publications-dir/);
 });
 
+test("the method validator rejects conflicting untagged policies", () => {
+  const result = run("node", [
+    methodValidator,
+    "--allow-untagged",
+    "--fail-on-untagged",
+  ]);
+
+  assert.equal(result.status, 2);
+  assert.match(result.stderr, /cannot be used together/i);
+});
+
+test("publication validators accept CRLF front matter", (t) => {
+  const temp = temporaryDirectory(t);
+  const input = path.join(temp, "publications.tsv");
+  const output = path.join(temp, "output");
+  writeTable(input, publicationHeaders, [validPublication]);
+  const generated = runGenerator(publicationsScript, ["generate", input, "--output-dir", output]);
+  assert.equal(generated.status, 0, generated.stderr || generated.stdout);
+
+  const target = path.join(output, "2026-07-10-Doe_Berv_2026.md");
+  fs.writeFileSync(target, fs.readFileSync(target, "utf8").replaceAll("\n", "\r\n"), "utf8");
+
+  const tags = run("node", [publicationValidator, "--publications-dir", output]);
+  const methods = run("node", [methodValidator, "--publications-dir", output]);
+  assert.equal(tags.status, 0, tags.stderr || tags.stdout);
+  assert.equal(methods.status, 0, methods.stderr || methods.stdout);
+});
+
 test("publication checks reject unknown topic and method taxonomy values", (t) => {
   const temp = temporaryDirectory(t);
   const input = path.join(temp, "publications.tsv");

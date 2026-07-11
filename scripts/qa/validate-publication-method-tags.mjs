@@ -31,11 +31,15 @@ function parseArguments(argv) {
       process.exit(2);
     }
   }
+  if (allowUntagged && failOnUntagged) {
+    console.error("--allow-untagged and --fail-on-untagged cannot be used together.");
+    process.exit(2);
+  }
   return { allowUntagged, failOnUntagged, publicationsDir };
 }
 
 function parseFrontMatter(raw) {
-  const match = raw.match(/^---\n([\s\S]*?)\n---\n?/);
+  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
   return match ? match[1] : null;
 }
 
