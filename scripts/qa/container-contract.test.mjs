@@ -684,8 +684,13 @@ test("the Dev Container override disables only the inherited site healthcheck", 
 
 test("the container smoke wrapper rejects root before bootstrapping and validation", async () => {
   const wrapperPath = path.join(repositoryRoot, "scripts/container_test.command");
-  await access(wrapperPath, constants.X_OK);
   const wrapper = await source("scripts/container_test.command");
+
+  assert.match(wrapper, /^#!\/usr\/bin\/env bash$/m, "container smoke wrapper must declare Bash");
+  if (canExecuteBash) {
+    await access(wrapperPath, constants.X_OK);
+  }
+
   const bootstrapIndex = matchIndex(
     wrapper,
     /^\s*\.\/scripts\/container_bootstrap\.command\s*$/m,
