@@ -14,6 +14,7 @@ Use this template to document the current architecture of this Jekyll site befor
 - Theme/base: `academicpages` (Minimal Mistakes derived)
 - Ruby requirements: Ruby `3.3.4` with Bundler `2.5.18` preferred
 - Node requirements: Node.js `20` with npm `10` for preview validation and deterministic JS tooling
+- Content-generator requirements: Python `3.10` or newer, standard library only, with no exact patch-version pin
 - Container runtime: Docker runs the service as the non-root `vscode` user with Ruby `3.3.4`, Bundler `2.5.18`, Node `20`, npm `10`, and Python 3
 - Dependency isolation: Compose named volumes `bundle` and `node_modules`; only those cache paths remain recursively writable across Dev Container UID/GID remapping, while the repository remains a bind mount. Bundler runs frozen so bootstrap cannot rewrite the host lockfile. Bootstrap reuses `node_modules` only when `package.json`, `package-lock.json`, and the installed npm file/symlink tree fingerprints match and `npm ls` validates the tree; otherwise it runs `npm ci`. Git enforces LF endings for executable `.command` files.
 - Local run command:

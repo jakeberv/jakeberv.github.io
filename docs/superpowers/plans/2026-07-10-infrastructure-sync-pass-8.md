@@ -10,7 +10,7 @@ published: false
 
 **Architecture:** A shared standard-library Python core parses and renders CSV/TSV records. Publication output is staged through the site's existing Node taxonomy validators, while explicit output directories and collision preflight keep all generation opt-in.
 
-**Tech Stack:** Python standard library, Node 20 built-in test runner, Jekyll 3.10, existing publication taxonomy validators.
+**Tech Stack:** Python 3.10+ standard library, Node 20 built-in test runner, Jekyll 3.10, existing publication taxonomy validators. Python's exact patch version remains unpinned.
 
 ## Global Constraints
 
@@ -56,6 +56,7 @@ git status --short
 
 - `npm test` passes 59/59 primary tests, the deterministic JavaScript check, and 26/26 static container-contract tests.
 - `npm run check:generators` passes 20/20 CLI tests, including taxonomy failures, consistently prefixed multi-line diagnostics, malformed/invalid encoding, CRLF normalization, CRLF front matter, case-insensitive duplicate targets, atomic no-clobber behavior, unsupported hard-link diagnostics, permissions, overwrite preservation, strict validator option parsing, and conflicting-policy rejection.
+- The 20/20 generator suite also passes under Python 3.10.20, including strict malformed-delimited-input handling.
 - Native and container six-palette matrices match the tracked 240-route manifest and never publish `markdown_generator/`.
 - The full Docker test path and final native Jekyll build pass with only the known Faraday and stale-data warnings.
 - The only route removed from the 241-route baseline is the unintended `/markdown_generator/index.html` development page.

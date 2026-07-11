@@ -19,6 +19,7 @@ Adopt AcademicPages v0.9's command-line CSV/TSV publication-generation direction
 - Publication input includes the site's canonical type, topic-tag, author, abstract, and research-method metadata.
 - Existing Node taxonomy validators remain the single policy authority and can validate a staged publication directory.
 - Both generators expose read-only `check` and explicit-output `generate` commands, reject unsafe slugs and duplicate targets, and refuse collisions without `--overwrite`.
+- Python 3.10 is the tested minimum generator runtime; the standard-library toolchain does not pin an exact Python patch version or add a package manager.
 - Generated talk records emit both `type` and `talk_type`, while the visible `_data/talks.yml` workflow remains separate and unchanged.
 - `markdown_generator/` becomes build-only. Removing its accidentally rendered index leaves 240 intended HTML routes and prevents notebooks, spreadsheet data, and source scripts from being deployed.
 

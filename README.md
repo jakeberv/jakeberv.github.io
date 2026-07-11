@@ -35,7 +35,7 @@ Runtime contract:
 - Bundler `2.5.18`, matching `Gemfile.lock`
 - Node.js `20`, matching the deployment workflow (`.node-version`)
 - npm `10`, used with the committed `package-lock.json`
-- Python 3 when serving locally or regenerating data
+- Python `3.10` or newer when serving locally or running the content generators; no exact Python patch version is pinned
 
 The preview launcher prefers Homebrew Ruby 3.3 with Bundler `2.5.18`, then a PATH-provided Bundler at that version. If the pinned executable is unavailable or broken, it may use the same candidate's default Bundler only after `bundle check` confirms that the locked dependencies are satisfied; the launcher prints a warning when it does so and never installs or repairs global gems.
 

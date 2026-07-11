@@ -1,6 +1,6 @@
 # Content authoring generators
 
-The supported generators turn validated CSV or TSV metadata into reviewable Jekyll collection documents. They use only the Python standard library, work from any current directory, and never write into a collection implicitly. Publication checks also use the repository's supported Node 20 runtime to invoke the canonical taxonomy validators; no Python packages are required.
+The supported generators turn validated CSV or TSV metadata into reviewable Jekyll collection documents. They support Python 3.10 or newer using only the standard library; no exact Python patch version or Python packages are required. They work from any current directory and never write into a collection implicitly. Publication checks also use the repository's supported Node 20 runtime to invoke the canonical taxonomy validators.
 
 ## Safe workflow
 
