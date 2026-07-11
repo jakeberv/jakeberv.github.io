@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readdir, readFile } from "node:fs/promises";
+import { readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
@@ -17,7 +17,27 @@ async function htmlFiles(directory) {
   return files;
 }
 
+async function requireSiteDirectory(directory) {
+  try {
+    const details = await stat(directory);
+    assert.ok(details.isDirectory(), `${directory} must be a directory`);
+  } catch (error) {
+    if (error?.code === "ENOENT") {
+      assert.fail(`Missing ${directory}; build the production site before running this check`);
+    }
+    throw error;
+  }
+}
+
+test("missing production output reports the required build step", async () => {
+  await assert.rejects(
+    requireSiteDirectory(path.join(repositoryRoot, "_site-does-not-exist")),
+    /build the production site before running this check/,
+  );
+});
+
 test("default production output contains no comment provider surface", async () => {
+  await requireSiteDirectory(siteDirectory);
   const files = await htmlFiles(siteDirectory);
   assert.equal(files.length, 220);
   const forbidden = [

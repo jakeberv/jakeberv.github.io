@@ -1,5 +1,6 @@
 {% assign discourse_server = site.comments.discourse.server | default: "" | strip %}
-{% if discourse_server contains "https://" %}
+{% assign discourse_scheme = discourse_server | slice: 0, 8 %}
+{% if discourse_scheme == "https://" %}
 <script>
   (function () {
     var discourseUrl = {{ discourse_server | jsonify }}.replace(/\/+$/, "") + "/";

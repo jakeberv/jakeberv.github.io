@@ -50,6 +50,32 @@ function validateConfiguration(sourceText) {
   return provider;
 }
 
+function isIgnored(candidate, run = spawnSync) {
+  const result = run("git", ["check-ignore", "--quiet", candidate], {
+    cwd: repositoryRoot,
+    encoding: "utf8",
+  });
+  if (result.error) {
+    assert.fail(`Unable to run git check-ignore for ${candidate}: ${result.error.message}`);
+  }
+  if (result.status !== 0 && result.status !== 1) {
+    const detail = result.stderr?.trim() || `exit status ${result.status}`;
+    assert.fail(`git check-ignore failed for ${candidate}: ${detail}`);
+  }
+  return result.status === 0;
+}
+
+test("git ignore diagnostics expose command startup and repository failures", () => {
+  assert.throws(
+    () => isIgnored("local/example", () => ({ error: new Error("git is unavailable") })),
+    /Unable to run git check-ignore for local\/example: git is unavailable/,
+  );
+  assert.throws(
+    () => isIgnored("local/example", () => ({ status: 128, stderr: "fatal: not a git repository" })),
+    /git check-ignore failed for local\/example: fatal: not a git repository/,
+  );
+});
+
 test("comments configuration accepts only complete supported providers", async () => {
   assert.equal(validateConfiguration(await source("_config.yml")), "");
 
@@ -92,7 +118,8 @@ test("retained comment providers use centralized guarded HTTPS loaders", async (
   assert.doesNotMatch(disqus, /count\.js|http:\/\//);
 
   assert.match(comments, /id="discourse-comments"/);
-  assert.match(discourse, /contains ["']https:\/\//);
+  assert.match(discourse, /discourse_server \| slice: 0, 8/);
+  assert.match(discourse, /if discourse_scheme == ["']https:\/\//);
   assert.match(discourse, /page\.url \| absolute_url/);
   assert.doesNotMatch(discourse, /["']\/\//);
 
@@ -156,12 +183,10 @@ test("local dependency caches are ignored without hiding reproducibility inputs"
     ".vscode/settings.json",
   ];
   ignored.forEach((candidate) => {
-    const result = spawnSync("git", ["check-ignore", "--quiet", candidate], { cwd: repositoryRoot });
-    assert.equal(result.status, 0, `${candidate} should be ignored`);
+    assert.equal(isIgnored(candidate), true, `${candidate} should be ignored`);
   });
 
   for (const candidate of ["Gemfile.lock", "package-lock.json", "_sass/vendor/susy/_susy.scss"]) {
-    const result = spawnSync("git", ["check-ignore", "--quiet", candidate], { cwd: repositoryRoot });
-    assert.equal(result.status, 1, `${candidate} must remain trackable`);
+    assert.equal(isIgnored(candidate), false, `${candidate} must remain trackable`);
   }
 });
