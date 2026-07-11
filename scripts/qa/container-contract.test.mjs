@@ -310,6 +310,30 @@ test("container bootstrap validates the pinned runtime before installing local d
   assert.doesNotMatch(bootstrap, /\bnpm\s+(?:install|i)\s+\S+\s+(?:--global|-g)\b/);
 });
 
+test("container bootstrap defaults and prepares its isolated cache paths", async () => {
+  const bootstrap = await source("scripts/container_bootstrap.command");
+  const cacheDefaultIndex = matchIndex(
+    bootstrap,
+    /^export BUNDLE_PATH="\$\{BUNDLE_PATH:-\/usr\/local\/bundle\}"$/m,
+    "bootstrap must default BUNDLE_PATH to the container-only gem cache",
+  );
+  const cacheDirectoriesIndex = matchIndex(
+    bootstrap,
+    /^mkdir -p "\$BUNDLE_PATH" node_modules$/m,
+    "bootstrap must ensure its isolated dependency cache directories exist",
+  );
+  const bundleCheckIndex = matchIndex(
+    bootstrap,
+    /^if bundle _"\$\{expected_bundler\}"_ check; then$/m,
+    "bootstrap must check the pinned Ruby dependencies after preparing cache paths",
+  );
+
+  assert.ok(
+    cacheDefaultIndex < cacheDirectoriesIndex && cacheDirectoriesIndex < bundleCheckIndex,
+    "bootstrap must default and prepare cache paths before checking dependencies",
+  );
+});
+
 test("container bootstrap explains when the pinned Bundler is unavailable", {
   skip: !canExecuteBash && "container bootstrap is Bash-only and executes inside Docker on Windows",
 }, async (t) => {

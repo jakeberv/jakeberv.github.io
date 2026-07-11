@@ -58,6 +58,9 @@ if [[ "$actual_bundler" != "$expected_bundler" ]]; then
   exit 1
 fi
 
+export BUNDLE_PATH="${BUNDLE_PATH:-/usr/local/bundle}"
+mkdir -p "$BUNDLE_PATH" node_modules
+
 make_cache_writable() {
   find "$BUNDLE_PATH" node_modules -user "$(id -u)" -exec chmod a+rwX {} +
 }
