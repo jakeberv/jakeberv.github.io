@@ -25,7 +25,7 @@ published: false
 - [x] Capture protected-file hashes, the 241-route manifest, and rendered CV baseline.
 - [x] Add failing static tests for runtime pins, non-root execution, volume isolation, Dev Container wiring, and preview delegation.
 - [x] Add the multi-stage Dockerfile and `.dockerignore` boundary.
-- [x] Add deterministic container bootstrap behavior.
+- [x] Add deterministic container bootstrap behavior with validated npm-volume reuse keyed to `package.json` and `package-lock.json`.
 - [x] Add Docker Compose and Dev Container entry points.
 - [x] Add `check:container` and `test:container` commands without changing dependencies or the lockfile.
 - [x] Synchronize README and site architecture documentation.

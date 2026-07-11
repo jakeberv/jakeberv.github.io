@@ -61,7 +61,7 @@ By default, local preview skips geo/impact data regeneration and uses Jekyll inc
 
 ### Containerized development (optional)
 
-Docker is optional developer tooling. Native preview and GitHub Pages deployment are unchanged. The Compose service runs as the non-root `vscode` user with Ruby `3.3.4`, Bundler `2.5.18`, Node `20`, and npm `10`; the repository is bind-mounted while the named `bundle` and `node_modules` volumes isolate container dependencies from the host. Those two cache paths are writable after Dev Container UID/GID remapping, without making the repository world-writable. The existing preview wrapper reuses `_config.dev.yml`.
+Docker is optional developer tooling. Native preview and GitHub Pages deployment are unchanged. The Compose service runs as the non-root `vscode` user with Ruby `3.3.4`, Bundler `2.5.18`, Node `20`, and npm `10`; the repository is bind-mounted while the named `bundle` and `node_modules` volumes isolate container dependencies from the host. Those two cache paths are writable after Dev Container UID/GID remapping, without making the repository world-writable. Bootstrap fingerprints `package.json` and `package-lock.json`, reusing the npm volume only when that fingerprint matches and `npm ls` confirms a complete dependency tree; otherwise it runs `npm ci`. The existing preview wrapper reuses `_config.dev.yml`.
 
 To start the portable preview:
 

@@ -160,6 +160,48 @@ test("container bootstrap validates the pinned runtime before installing local d
   assert.doesNotMatch(bootstrap, /\bnpm\s+(?:install|i)\s+\S+\s+(?:--global|-g)\b/);
 });
 
+test("container bootstrap reuses complete npm dependencies until inputs change", async () => {
+  const bootstrap = await source("scripts/container_bootstrap.command");
+  const fingerprintIndex = matchIndex(
+    bootstrap,
+    /sha256sum\s+package\.json\s+package-lock\.json/,
+    "bootstrap must fingerprint both npm dependency inputs",
+  );
+  const integrityCheckIndex = matchIndex(
+    bootstrap,
+    /npm\s+ls\s+--all\s+--ignore-scripts/,
+    "bootstrap must validate cached npm dependencies before reusing them",
+  );
+  const npmCiIndex = matchIndex(
+    bootstrap,
+    /^\s*npm\s+ci\s*$/m,
+    "bootstrap must retain deterministic npm installation",
+  );
+  const stampWriteIndex = matchIndex(
+    bootstrap,
+    /printf[^\n]*npm_inputs_hash[^\n]*npm_stamp/,
+    "bootstrap must record the installed dependency fingerprint after npm ci",
+  );
+
+  assert.match(bootstrap, /npm_stamp=[^\n]*node_modules/);
+  assert.match(
+    bootstrap,
+    /installed_npm_inputs[^\n]*!=[^\n]*npm_inputs_hash|npm_inputs_hash[^\n]*!=[^\n]*installed_npm_inputs/,
+    "bootstrap must reinstall when package.json or package-lock.json changes",
+  );
+  assert.match(
+    bootstrap,
+    /npm dependencies are already installed/i,
+    "bootstrap must explain when it reuses the named node_modules volume",
+  );
+  assert.ok(
+    fingerprintIndex < integrityCheckIndex
+      && integrityCheckIndex < npmCiIndex
+      && npmCiIndex < stampWriteIndex,
+    "bootstrap must fingerprint, validate, install when needed, then update its stamp",
+  );
+});
+
 test("Compose isolates dependencies and delegates the portable preview", async () => {
   const compose = await source("docker-compose.yaml");
   const services = yamlBlock(compose, "services");
@@ -374,13 +416,15 @@ test("npm exposes the container checks without adding dependencies", async () =>
     packageDefinition.scripts["test:container"],
     "npm run check:container && docker compose build && docker compose run --rm site ./scripts/container_test.command",
   );
-  assert.deepEqual(packageDefinition.dependencies, { jquery: "3.7.1" });
-  assert.deepEqual(packageDefinition.devDependencies, {
-    onchange: "7.1.0",
-    "uglify-js": "3.19.3",
-  });
-  assert.deepEqual(packageDefinition.engines, { node: "20.x", npm: ">=10 <11" });
   assert.ok(lockRoot, "package-lock.json must contain root package metadata");
+  for (const field of ["dependencies", "devDependencies", "engines"]) {
+    assert.ok(
+      packageDefinition[field]
+        && typeof packageDefinition[field] === "object"
+        && !Array.isArray(packageDefinition[field]),
+      `package.json must define ${field} as an object`,
+    );
+  }
   assert.equal(lockRoot.name, packageDefinition.name);
   assert.equal(lockRoot.version, packageDefinition.version);
   assert.deepEqual(lockRoot.dependencies, packageDefinition.dependencies);

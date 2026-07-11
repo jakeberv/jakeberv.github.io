@@ -15,7 +15,7 @@ Use this template to document the current architecture of this Jekyll site befor
 - Ruby requirements: Ruby `3.3.4` with Bundler `2.5.18` preferred
 - Node requirements: Node.js `20` with npm `10` for preview validation and deterministic JS tooling
 - Container runtime: Docker runs the service as the non-root `vscode` user with Ruby `3.3.4`, Bundler `2.5.18`, Node `20`, npm `10`, and Python 3
-- Dependency isolation: Compose named volumes `bundle` and `node_modules`; only those cache paths remain writable across Dev Container UID/GID remapping, while the repository remains a bind mount
+- Dependency isolation: Compose named volumes `bundle` and `node_modules`; only those cache paths remain writable across Dev Container UID/GID remapping, while the repository remains a bind mount. Bootstrap reuses `node_modules` only when the `package.json`/`package-lock.json` fingerprint matches and `npm ls` validates the installed tree; otherwise it runs `npm ci`.
 - Local run command:
 - Production deployment target:
 

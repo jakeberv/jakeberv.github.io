@@ -45,4 +45,18 @@ else
   bundle _"${expected_bundler}"_ install
 fi
 
-npm ci
+npm_stamp="node_modules/.jakeberv-npm-inputs.sha256"
+npm_inputs_hash="$(sha256sum package.json package-lock.json | sha256sum | awk '{ print $1 }')"
+installed_npm_inputs=""
+
+if [[ -f "$npm_stamp" ]]; then
+  read -r installed_npm_inputs < "$npm_stamp"
+fi
+
+if [[ "$installed_npm_inputs" != "$npm_inputs_hash" ]] \
+  || ! npm ls --all --ignore-scripts >/dev/null 2>&1; then
+  npm ci
+  printf '%s\n' "$npm_inputs_hash" > "$npm_stamp"
+else
+  echo "npm dependencies are already installed."
+fi
