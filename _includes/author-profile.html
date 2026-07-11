@@ -119,8 +119,8 @@
         {% if author.arxiv %}
           <li><a href="{{ author.arxiv }}"><i class="ai ai-arxiv ai-fw" aria-hidden="true"></i>arXiv</a></li>
         {% endif %}
-        {% if author.inspire-hep %}
-          <li><a href="{{ author.inspire-hep }}"><i class="ai ai-inspire ai-fw" aria-hidden="true"></i>INSPIRE-HEP</a></li>
+        {% if author["inspire-hep"] %}
+          <li><a href="{{ author["inspire-hep"] }}"><i class="ai ai-inspire ai-fw" aria-hidden="true"></i>INSPIRE-HEP</a></li>
         {% endif %}
         {% if author.scopus %}
           <li><a href="{{ author.scopus }}"><i class="ai ai-scopus ai-fw" aria-hidden="true"></i>Scopus</a></li>

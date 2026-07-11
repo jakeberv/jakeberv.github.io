@@ -54,7 +54,8 @@ test("author profiles expose the v0.9 identity hooks without activating accounts
   const activeHooks = new Set(["bluesky"]);
 
   for (const hook of hooks) {
-    assert.match(profile, new RegExp(`author\\.${hook.replace("-", "\\-")}`), `missing author.${hook}`);
+    if (hook === "inspire-hep") assert.match(profile, /author\["inspire-hep"\]/);
+    else assert.match(profile, new RegExp(`author\\.${hook}`), `missing author.${hook}`);
     if (!activeHooks.has(hook)) {
       assert.match(config, new RegExp(`^  ${hook.replace("-", "\\-")}\\s*:\\s*$`, "m"), `${hook} must be dormant`);
     }

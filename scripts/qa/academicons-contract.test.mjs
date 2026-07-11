@@ -65,6 +65,14 @@ test("the v0.9 academic-profile glyph contract is complete", () => {
   }
 });
 
+test("right-pulled Academicons separate from preceding content", () => {
+  const css = read("assets/css/academicons.css");
+  const rule = css.match(/\.ai\.ai-pull-right\s*\{([^}]*)\}/)?.[1] ?? "";
+
+  assert.match(rule, /margin-left:\s*\.3em/);
+  assert.doesNotMatch(rule, /margin-right/);
+});
+
 test("npm exposes and runs the Academicons contract", () => {
   const packageJson = JSON.parse(read("package.json"));
 
