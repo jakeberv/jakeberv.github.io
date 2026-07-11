@@ -105,6 +105,27 @@ test("rendered assets reject insecure active resources but allow ordinary HTTP l
   );
 });
 
+test("rendered assets aggregate malformed absolute URLs with other violations", async (t) => {
+  const siteDirectory = await fixture(t);
+  await writeFile(
+    path.join(siteDirectory, "index.html"),
+    `<!doctype html>
+<script src="https://[invalid.example/script.js"></script>
+<script src="/missing.js"></script>
+`,
+    "utf8",
+  );
+
+  await assert.rejects(
+    contract.validateRenderedAssets({ siteDirectory, siteUrl: "https://example.test" }),
+    (error) => {
+      assert.match(error.message, /malformed absolute URL.*invalid\.example/i);
+      assert.match(error.message, /missing local resource.*missing\.js/i);
+      return true;
+    },
+  );
+});
+
 test("rendered assets validate Microsoft tile metadata and browser configuration", async (t) => {
   const siteDirectory = await fixture(t);
   await writeFile(

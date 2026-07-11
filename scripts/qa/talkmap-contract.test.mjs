@@ -59,6 +59,8 @@ test("the talk map uses pinned, theme-aware, page-scoped assets", () => {
   assert.match(page, /topojson-client@3\.1\.0/);
   assert.match(markup, /world-atlas@2\.0\.2/);
   assert.match(markup, /data\/talkmap\/talk_events\.json/);
+  assert.match(markup, /<svg[^>]+role="group"/);
+  assert.doesNotMatch(markup, /<svg[^>]+role="img"/);
   assert.doesNotMatch(page, /<iframe|Leaflet|talkmap\.ipynb/i);
   assert.match(runtime, /site:themechange/);
   assert.match(runtime, /--viz-/);

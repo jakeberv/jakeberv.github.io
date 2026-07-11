@@ -33,7 +33,7 @@ function decodePathname(value) {
   }
 }
 
-function localReference(value, { source, siteUrl, allowedExternalPaths }) {
+function localReference(value, { source, siteOrigin, allowedExternalPaths }) {
   const trimmed = value.trim();
   if (!trimmed || trimmed.startsWith("#")) return null;
   if (/^(?:data|blob|mailto|tel|javascript):/i.test(trimmed)) return null;
@@ -41,8 +41,13 @@ function localReference(value, { source, siteUrl, allowedExternalPaths }) {
 
   let pathname = trimmed.split("#", 1)[0].split("?", 1)[0];
   if (/^https?:/i.test(trimmed)) {
-    const target = new URL(trimmed);
-    if (target.origin !== new URL(siteUrl).origin) return null;
+    let target;
+    try {
+      target = new URL(trimmed);
+    } catch {
+      return { malformed: true };
+    }
+    if (target.origin !== siteOrigin) return null;
     if (allowedExternalPaths.some((prefix) => target.pathname === prefix || target.pathname.startsWith(`${prefix}/`))) {
       return null;
     }
@@ -135,6 +140,7 @@ export async function validateRenderedAssets({
   const violations = [];
   const manifests = new Set();
   let references = 0;
+  const siteOrigin = new URL(siteUrl).origin;
 
   async function validateReferences(sourceFile, extracted) {
     for (const reference of extracted) {
@@ -145,10 +151,14 @@ export async function validateRenderedAssets({
       }
       const local = localReference(reference.value, {
         source: sourceFile,
-        siteUrl,
+        siteOrigin,
         allowedExternalPaths,
       });
       if (!local) continue;
+      if (local.malformed) {
+        violations.push(`${sourceFile}: malformed absolute URL: ${reference.value}`);
+        continue;
+      }
       if (local.escaped) {
         violations.push(`${sourceFile}: local reference escapes site root: ${reference.value}`);
         continue;
