@@ -138,7 +138,8 @@ def validate_taxonomies(documents: List[Document]) -> None:
                 raise OSError(f"unable to run Node taxonomy validator: {error}") from error
             if result.returncode != 0:
                 diagnostic = (result.stderr or result.stdout).strip()
-                errors.append(f"{validator.name}: {diagnostic or 'validation failed'}")
+                diagnostic_lines = diagnostic.splitlines() if diagnostic else ["validation failed"]
+                errors.extend(f"{validator.name}: {line}" for line in diagnostic_lines)
         if errors:
             raise InputValidationError(errors)
 

@@ -274,6 +274,10 @@ def write_documents(documents: Sequence[Document], output_dir: Path, overwrite: 
                             + document.filename
                         ]
                     ) from error
+                except OSError as error:
+                    raise OSError(
+                        f"unable to publish {document.filename} using an atomic hard link: {error}"
+                    ) from error
                 os.unlink(temporary_name)
             temporary_name = None
         finally:

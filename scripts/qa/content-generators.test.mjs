@@ -257,6 +257,32 @@ raise SystemExit(3)
   assert.deepEqual(fs.readdirSync(path.join(temp, "output")), ["race.md"]);
 });
 
+test("non-overwrite publication explains unsupported atomic hard links", (t) => {
+  const temp = temporaryDirectory(t);
+  const moduleDirectory = path.join(repoRoot, "markdown_generator");
+  const program = `
+import errno
+import pathlib
+import sys
+sys.path.insert(0, ${JSON.stringify(moduleDirectory)})
+import generator_core
+from generator_core import Document, write_documents
+
+output = pathlib.Path(sys.argv[1])
+generator_core.os.link = lambda source, destination: (_ for _ in ()).throw(
+    OSError(errno.EOPNOTSUPP, "Operation not supported")
+)
+write_documents([Document("unsupported.md", "generated\\n", 2)], output, overwrite=False)
+`;
+
+  const result = run("python3", ["-c", program, path.join(temp, "output")]);
+  assert.equal(result.status, 1);
+  assert.match(result.stderr, /unsupported\.md/);
+  assert.match(result.stderr, /atomic hard link/i);
+  assert.match(result.stderr, /operation not supported/i);
+  assert.deepEqual(fs.readdirSync(path.join(temp, "output")), []);
+});
+
 test("publication validation reports all row errors and writes nothing", (t) => {
   const temp = temporaryDirectory(t);
   const input = path.join(temp, "invalid.csv");
@@ -410,6 +436,10 @@ test("publication checks reject unknown topic and method taxonomy values", (t) =
   assert.match(result.stderr, /unknown tag=not-a-canonical-tag/);
   assert.match(result.stderr, /validate-publication-method-tags\.mjs/);
   assert.match(result.stderr, /unknown method_tag=not_a_canonical_method/);
+  assert.ok(
+    result.stderr.trim().split(/\r?\n/).every((line) => line.startsWith("error: ")),
+    result.stderr,
+  );
 });
 
 test("talk generator always emits dates and compatible type fields", (t) => {
