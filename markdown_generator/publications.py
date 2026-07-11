@@ -45,6 +45,7 @@ OPTIONAL_FIELDS = {
     "paper_url",
     "link",
     "slides_url",
+    "bibtex_url",
     "doi",
     "github",
     "featured",
@@ -93,7 +94,8 @@ def render_publication(row: Dict[str, object]) -> Document:
         ("excerpt", "excerpt"),
         ("paper_url", "paperurl"),
         ("link", "link"),
-        ("slides_url", "slides_url"),
+        ("slides_url", "slidesurl"),
+        ("bibtex_url", "bibtexurl"),
         ("doi", "doi"),
         ("github", "github"),
     )
@@ -109,6 +111,8 @@ def render_publication(row: Dict[str, object]) -> Document:
         body.append(f"[View publication]({row['link']}){{: .btn--research}}")
     if row.get("slides_url"):
         body.append(f"[View slides]({row['slides_url']}){{: .btn--research}}")
+    if row.get("bibtex_url"):
+        body.append(f"[Download BibTeX]({row['bibtex_url']}){{: .btn--research}}")
     if row.get("excerpt"):
         body.extend(["", str(row["excerpt"])])
     body.extend(["", f"Recommended citation: {row['citation']}"])

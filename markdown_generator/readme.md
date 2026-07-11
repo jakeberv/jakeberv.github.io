@@ -33,10 +33,12 @@ pub_date,title,venue,citation,url_slug,type,tags,authors,abstract,method_familie
 Optional columns are:
 
 ```text
-excerpt,paper_url,link,slides_url,doi,github,featured,student_authors,category
+excerpt,paper_url,link,slides_url,bibtex_url,doi,github,featured,student_authors,category
 ```
 
 Use exact `YYYY-MM-DD` dates and slugs containing only letters, digits, `_`, and `-`. Separate `tags`, `authors`, `student_authors`, `method_families`, and `method_tags` with `|`. `featured` accepts only `true` or `false`; it defaults to `false`. `category` defaults to `manuscripts`.
+
+The snake-case input fields `slides_url` and `bibtex_url` render as `slidesurl` and `bibtexurl` in generated front matter, matching the supported AcademicPages publication action contract.
 
 Publication checks stage the rendered Markdown temporarily and run the repository's canonical publication and research-method validators. A successful check therefore means the generated records satisfy the same taxonomy policies enforced during deployment.
 

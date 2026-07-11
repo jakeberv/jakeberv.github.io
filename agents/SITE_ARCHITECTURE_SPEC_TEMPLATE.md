@@ -120,7 +120,7 @@ Notes:
   - Index page:
   - Sorting/filter logic:
 - Talks rendering path:
-  - Data source:
+  - Data source: `_data/talks.yml` for `/talks/`; generated `data/talkmap/talk_events.json` from speaking-tagged `_news` geo records for `/talkmap.html`
   - Sorting/filter logic:
 
 ## 6) Data dependencies
@@ -128,6 +128,7 @@ Notes:
   - `_data/talks.yml` -> `/talks/`
   - `_data/scholar_metrics.json` -> `/impact/`
   - `_data/map_data.json` -> `/impact/`
+  - `data/talkmap/talk_events.json` -> `/talkmap.html`
 - External scripts or workflows:
   - Scheduled workflow(s): `fetch_scholar_data.yml` runs the tracked repository source `fetch_scholar_metrics.py` with Python 3.12; the source is excluded from `_site`. `refresh_impact_reach_data.yml` refreshes reach datasets. Both retain direct pushes to `master`.
   - Manual scripts:
@@ -137,7 +138,7 @@ Notes:
 - Theme selection: `_config.yml` selects the build-time palette; deployment remains `default`, and the visitor toggle stores only `light` or `dark`
 - Theme runtime: first visits are light; dark mode uses `html[data-theme="dark"]` and emits `site:themechange` with `detail.theme`
 - Theme properties: 19 core `--global-*` properties plus stable `--site-*`, `--viz-*`, syntax, and status roles
-- Import behavior: `assets/css/main.scss` loads shared settings, the selected light palette, compile aliases, the selected dark palette, helpers, layouts including scientific-content styling, then `_sass/_custom.scss`; Font Awesome 6.7.2 compiles separately from `assets/css/fontawesome.scss`
+- Import behavior: `assets/css/main.scss` loads shared settings, the selected light palette, compile aliases, the selected dark palette, helpers, layouts including scientific-content and talk-map styling, then `_sass/_custom.scss`; Font Awesome 6.7.2 compiles separately from `assets/css/fontawesome.scss`
 - Icon contract: site markup uses `fa-solid` and `fa-brands`; only solid and brands TTF/WOFF2 assets ship from `assets/webfonts/`. Academicons 1.9.4 is an independent stylesheet backed only by preloaded WOFF and TTF files under `assets/fonts/`.
 - Local overrides: custom and page-specific presentation colors consume semantic roles; scientific categorical and institutional brand palettes remain literal
 - JavaScript contract: Node 24/npm 11 installs from `package-lock.json`; `scripts/build-js.mjs` combines jQuery 3.7.1, greedy navigation, optional scientific-content renderers, and shared interactions into the committed module `assets/js/main.min.js`
@@ -146,12 +147,15 @@ Notes:
 - Identity contract: full-URL profile fields are `academia`, `arxiv`, `inspire-hep`, `mastodon`, `medium`, `scopus`, `semantic`, `ssrn`, `telegram`, and `zotero`; handle fields include `artstation`, `bluesky`, `goodreads`, `kaggle`, `twitter`, and `zhihu`. Blank values render no link.
 - Sharing contract: sharing-enabled pages render Bluesky, Facebook, LinkedIn, Mastodon, and X in that order using independently encoded canonical URLs and titles. The legacy `twitter` configuration key remains for Twitter Card compatibility, while visible links use X.
 - Analytics contract: `analytics.providers` is the preferred ordered, de-duplicated list; scalar `analytics.provider` is a fallback when the list is absent, and explicit scalar `false` is the global kill switch used by local preview. GoatCounter remains active in production. GA4 renders only when `analytics.google.tracking_id` contains a nonblank `G-...` value, and `page.analytics: false` disables all providers for one page.
-- Asset checks: use `npm run build:js`, `npm run check:js`, `npm run check:academicons`, `npm run check:icons`, `npm run check:integrations`, `npm run check:integrations:built` after production builds, `npm run check:scientific`, `npm run check:site-artifact`, `npm run check:themes`, `npm run test:themes`, and `npm test`
+- Asset checks: use `npm run build:js`, `npm run check:js`, `npm run check:academicons`, `npm run check:assets` after builds, `npm run check:icons`, `npm run check:integrations`, `npm run check:integrations:built` after production builds, `npm run check:scientific`, `npm run check:site-artifact`, `npm run check:talkmap`, `npm run check:themes`, `npm run test:themes`, and `npm test`
 - Browser compatibility: native sticky positioning, smooth scrolling with reduced-motion handling, and explicit responsive-video CSS replace Stickyfill, jQuery Smooth Scroll, FitVids, and Magnific Popup
 - Content-authoring contract: the standard-library publication and talk CLIs expose read-only `check` and explicit-output `generate`; generation requires `--output-dir`, collisions require `--overwrite`, and publication output must pass the canonical topic and method validators
+- Publication action contract: generator inputs `slides_url` and `bibtex_url` emit canonical `slidesurl` and `bibtexurl`; list and detail actions remain dormant when those fields are blank
 - Talks authoring boundary: the optional generator targets `_talks` collection documents and never reads or modifies `_data/talks.yml`, which remains the source for `/talks/`
 - Content-authoring check: use `npm run check:generators`; the generated-content schemas and exit codes are documented in `markdown_generator/readme.md`
 - Route contract: `scripts/qa/expected-html-routes.txt` lists the exact 220 intended public HTML outputs. `scripts/qa/site-artifact-contract.mjs` checks those routes case-sensitively after every palette and production build; no path canonicalization is permitted.
+- Rendered-resource contract: `scripts/qa/rendered-asset-contract.mjs` validates local HTML references, CSS URLs, manifest icons, pretty routes, exact path casing, and insecure active resources after every palette and production build; `/bifrost` is an explicit same-origin external deployment.
+- Talk-map contract: `/talkmap.html` uses pinned D3 7.9.0, TopoJSON Client 3.1.0, World Atlas 2.0.2, `--site-*`/`--viz-*` tokens, and `site:themechange`; `/talkmap/map.html` remains a compatibility redirect and no geocoder is used.
 - Pages artifact boundary: `_config.yml` excludes internal agent/spec documents, lockfiles, notebooks, R/RDS/RStudio state, Python and command sources, `scripts/`, `markdown_generator/`, source-only shared JavaScript files, and root `*_artifacts` directories. The validator rejects protected prefixes, filenames, and development extensions in `_site`.
 - Scholar source boundary: `fetch_scholar_metrics.py` remains tracked and workflow-executable but is never a public Pages asset.
 - Pull-request lifecycle: the Pages workflow runs npm contracts, data validation/generation, all six themes, the default build, rendered-integration validation, and artifact validation for PRs with read-only contents permission. Artifact upload and Pages/OIDC permissions are deployment-only.

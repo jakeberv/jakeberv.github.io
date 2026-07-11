@@ -31,7 +31,6 @@ test("the inventory accepts intended routes and public website assets", () => {
       "index.html",
       "talkmap/index.html",
       "talkmap/map.html",
-      "talkmap/org-locations.js",
       "assets/css/main.css",
       "assets/js/main.min.js",
       "data/impact/dashboard.json",
@@ -44,7 +43,7 @@ test("the inventory accepts intended routes and public website assets", () => {
   });
 
   assert.deepEqual(result.routes, ["404.html", "index.html", "talkmap/index.html", "talkmap/map.html"]);
-  assert.equal(result.files, 12);
+  assert.equal(result.files, 11);
 });
 
 test("the inventory rejects protected prefixes, filenames, and development extensions", async (t) => {

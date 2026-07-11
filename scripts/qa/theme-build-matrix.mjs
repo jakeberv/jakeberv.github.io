@@ -4,6 +4,7 @@ import path from "node:path";
 import { spawn } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { validateSiteArtifact } from "./site-artifact-contract.mjs";
+import { validateRenderedAssets } from "./rendered-asset-contract.mjs";
 
 const repositoryRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -164,6 +165,7 @@ for (const palette of palettes) {
 
   const siteDirectory = path.join(repositoryRoot, "_site");
   const artifact = await validateSiteArtifact({ repositoryRoot, siteDirectory });
+  await validateRenderedAssets({ siteDirectory });
   validatedRouteCount = artifact.routes.length;
   const css = await readFile(path.join(repositoryRoot, "_site/assets/css/main.css"), "utf8");
   assert.match(css, /html\[data-theme="?dark"?\]/);

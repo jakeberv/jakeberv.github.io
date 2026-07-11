@@ -12,6 +12,7 @@ Core site content and configuration:
 - `_research/` research section entries (collection items)
 - `_data/` structured data sources used by pages
 - `data/career_geo/` generated JSON consumed by the Background page career footprint map
+- `data/talkmap/` generated speaking-location JSON consumed by the Talk map page
 - `files/` downloadable PDFs and other hosted files
 - `images/` site images and media assets
 - `agents/` bot-oriented specs, templates, and checklists
@@ -23,7 +24,7 @@ This repository is primarily maintained with the following workflow:
 1. Edit site files locally (commonly from RStudio).
 2. Push changes to `master`.
 3. GitHub Actions validates pull requests; pushes to `master` and manual dispatches also deploy GitHub Pages.
-4. Career footprint map data is regenerated from `_news` geo front matter during build.
+4. Career footprint and talk-map data are regenerated from `_news` geo front matter during build.
 
 No special branching workflow is required unless explicitly chosen for a task.
 
@@ -51,8 +52,8 @@ If you want to run the site locally:
 Optional:
 - Build only (no server): `./scripts/local_preview.command --build-only`
 - Force clean full rebuild (skip incremental): `./scripts/local_preview.command --full-build`
-- Run geo/impact data regeneration + validation: `./scripts/local_preview.command --with-data`
-- Skip geo/impact data regeneration explicitly: `./scripts/local_preview.command --skip-data`
+- Run geo/talk-map/impact data regeneration + validation: `./scripts/local_preview.command --with-data`
+- Skip geo/talk-map/impact data regeneration explicitly: `./scripts/local_preview.command --skip-data`
 - Preview a supported palette without editing `_config.yml`: `./scripts/local_preview.command --theme air`
 - Custom port: `./scripts/local_preview.command --port 4010`
 - Always run full data + full build path: `./scripts/local_preview_fullbuild.command`
@@ -93,6 +94,8 @@ Phase 8 provides dependency-free, validation-first Python generators for future 
 
 Inputs may be UTF-8 CSV or TSV with headers in any order. Pipe-delimited fields represent publication tags, authors, student authors, method families, and method tags. Full schemas and exit-code behavior are documented in `markdown_generator/readme.md`.
 
+Publication inputs may include `slides_url` and `bibtex_url`; generated front matter uses the AcademicPages-compatible `slidesurl` and `bibtexurl` keys. Existing publication records remain unchanged, and the actions render only when those fields are populated.
+
 The generator directory is development-only and excluded from `_site`, including its historical notebooks, spreadsheet, sample inputs, and BibTeX script. Phase 8 removed its accidentally rendered index; Phase 9's complete repository boundary leaves 220 intended public HTML routes by also removing 20 unlinked internal documentation routes.
 
 ## JavaScript Assets
@@ -103,6 +106,7 @@ The shared browser bundle follows the AcademicPages v0.9 asset model with local 
 - `npm run build:js` builds the committed `assets/js/main.min.js` module.
 - `npm run check:generators` verifies the safe content-authoring CLI contract.
 - `npm run check:academicons` verifies the Academicons version, font inventory, delivery order, and academic glyph contract.
+- `npm run check:assets` verifies rendered local links, active resources, CSS URLs, manifest icons, and exact path casing.
 - `npm run check:icons` verifies the Font Awesome version, assets, delivery, markup, and icon-name contract.
 - `npm run check:integrations` verifies analytics dispatch, author-profile hooks, X presentation, and modern sharing.
 - `npm run check:integrations:built` verifies analytics and sharing in the rendered production site.
@@ -111,10 +115,11 @@ The shared browser bundle follows the AcademicPages v0.9 asset model with local 
 - `npm run check:site-artifact` verifies the exact route manifest and rejects repository-only sources from `_site`.
 - `npm run watch:js` rebuilds when the three shared JavaScript sources change.
 - `npm run check:themes` verifies the palette, token, markup, and runtime contract.
+- `npm run check:talkmap` verifies deterministic talk-map generation and its page-scoped runtime.
 - `npm run test:themes` builds all six palettes and requires the same 220 intended routes and artifact boundary.
 - `npm test` runs the asset, content-generator, theme, executable browser-state, and Docker-independent container-contract tests plus bundle verification.
 
-The deterministic builder reads jQuery `3.7.1`, greedy navigation, optional scientific-content renderers, and the shared site interactions in a fixed order. GitHub Actions runs `npm ci`, `npm test`, the six-theme build matrix, the final Jekyll build, rendered-integration validation, and artifact validation for pull requests and production, so source, generated assets, integrations, palette support, and the tracked intended-route manifest cannot drift. Pull requests are read-only and never upload or deploy Pages.
+The deterministic builder reads jQuery `3.7.1`, greedy navigation, optional scientific-content renderers, and the shared site interactions in a fixed order. The Talk map uses an independent page-scoped script and does not enlarge that bundle. GitHub Actions runs `npm ci`, `npm test`, the six-theme build matrix, the final Jekyll build, rendered-integration and local-resource validation, and artifact validation for pull requests and production, so source, generated assets, integrations, palette support, and the tracked intended-route manifest cannot drift. Pull requests are read-only and never upload or deploy Pages.
 
 Jekyll excludes internal agent/spec documents, lockfiles, notebooks, R/RDS/RStudio state, Python and command sources, `scripts/`, `markdown_generator/`, and root `*_artifacts` directories from `_site`. They are repository inputs, not deployable website assets. `fetch_scholar_metrics.py` remains tracked because the scheduled Scholar workflow runs it under Python 3.12, but it is explicitly excluded and the artifact contract verifies that it is absent from `_site`.
 
@@ -126,7 +131,7 @@ The site uses the AcademicPages v0.9 Sass layering model while retaining its est
 - `_sass/theme/` contains paired light/dark partials for `default`, `air`, `sunrise`, `mint`, `dirt`, and `contrast`.
 - `_sass/_themes.scss` emits 19 core properties plus semantic `--site-*`, `--viz-*`, and syntax roles.
 - `_sass/include/` contains reusable Sass mixins and utilities.
-- `_sass/layout/` contains the reset, base, navigation, scientific-content, page, sidebar, and other structural partials.
+- `_sass/layout/` contains the reset, base, navigation, scientific-content, talk-map, page, sidebar, and other structural partials.
 - `_sass/_syntax.scss` remains the syntax-highlighting layer.
 - `_sass/_custom.scss` loads last so existing page-specific overrides retain precedence.
 - `assets/css/main.scss` is the Jekyll-rendered theme and customization entry point.
@@ -222,6 +227,12 @@ Runtime map dependencies:
 
 - D3 + TopoJSON from pinned CDN URLs
 - World basemap topology from CDN (with fallback URL)
+
+## Talk Map Data Pipeline
+
+The Talk map at `/talkmap.html` reads generated data at `data/talkmap/talk_events.json`. The existing news-geo builder selects nonfuture records tagged `conference_talk`, `invited_talk`, `guest_lecture`, `keynote`, `workshop_led`, or `outreach`, excludes the duplicate award-only entry, and uses committed coordinates without network geocoding.
+
+The page loads D3 `7.9.0`, TopoJSON Client `3.1.0`, and World Atlas `2.0.2` from pinned CDN URLs. Its page-scoped runtime groups coincident locations, preserves filters across `site:themechange`, and leaves an accessible event list available if map rendering fails. `/talkmap/map.html` remains a compatibility redirect. Validate this path with `npm run check:talkmap` and, after building, `npm run check:assets`.
 
 ## Impact Reach Data Pipeline
 
