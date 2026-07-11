@@ -1,16 +1,33 @@
-<div class="page__comments">
-  {% capture comments_label %}{{ site.data.ui-text[site.locale].comments_label | default: "Comments" }}{% endcapture %}
+{% assign disqus_shortname = site.comments.disqus.shortname | default: "" | strip %}
+{% assign discourse_server = site.comments.discourse.server | default: "" | strip %}
+{% assign discourse_scheme = discourse_server | slice: 0, 8 %}
+{% assign facebook_appid = site.comments.facebook.appid | default: "" | strip %}
+{% assign facebook_sdk_version = site.comments.facebook.sdk_version | default: "" | strip %}
+{% capture comments_label %}{{ site.data.ui-text[site.locale].comments_label | default: "Comments" }}{% endcapture %}
+{% capture comments_markup %}
   {% case site.comments.provider %}
   {% when "disqus" %}
-    <h4 class="page__comments-title">{{ comments_label }}</h4>
-    <section id="disqus_thread" aria-label="{{ comments_label }}"></section>
+    {% if disqus_shortname != "" %}
+      <h4 class="page__comments-title">{{ comments_label }}</h4>
+      <section id="disqus_thread" aria-label="{{ comments_label }}"></section>
+    {% endif %}
   {% when "discourse" %}
-    <h4 class="page__comments-title">{{ comments_label }}</h4>
-    <section id="discourse-comments" aria-label="{{ comments_label }}"></section>
+    {% if discourse_scheme == "https://" %}
+      <h4 class="page__comments-title">{{ comments_label }}</h4>
+      <section id="discourse-comments" aria-label="{{ comments_label }}"></section>
+    {% endif %}
   {% when "facebook" %}
-    <h4 class="page__comments-title">{{ comments_label }}</h4>
-    <section class="fb-comments" aria-label="{{ comments_label }}" data-href="{{ page.url | absolute_url }}" data-mobile="true" data-num-posts="{{ site.comments.facebook.num_posts | default: 5 }}" data-width="100%" data-colorscheme="{{ site.comments.facebook.colorscheme | default: 'light' }}"></section>
+    {% if facebook_appid != "" and facebook_sdk_version != "" %}
+      <h4 class="page__comments-title">{{ comments_label }}</h4>
+      <section class="fb-comments" aria-label="{{ comments_label }}" data-href="{{ page.url | absolute_url }}" data-mobile="true" data-num-posts="{{ site.comments.facebook.num_posts | default: 5 }}" data-width="100%" data-colorscheme="{{ site.comments.facebook.colorscheme | default: 'light' }}"></section>
+    {% endif %}
   {% when "custom" %}
     <section id="comments" aria-label="{{ comments_label }}"></section>
   {% endcase %}
+{% endcapture %}
+{% assign comments_markup = comments_markup | strip %}
+{% if comments_markup != "" %}
+<div class="page__comments">
+  {{ comments_markup }}
 </div>
+{% endif %}

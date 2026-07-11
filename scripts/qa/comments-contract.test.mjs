@@ -114,9 +114,18 @@ test("retained comment providers use centralized guarded HTTPS loaders", async (
   );
 
   assert.match(disqus, /site\.comments\.disqus\.shortname/);
-  assert.match(disqus, /https:\/\/.*\.disqus\.com\/embed\.js/);
+  assert.match(disqus, /disqus_shortname \| jsonify/);
+  assert.match(disqus, /["']https:\/\/["'] \+ shortname \+ ["']\.disqus\.com\/embed\.js["']/);
+  assert.doesNotMatch(disqus, /https:\/\/\{\{/);
   assert.doesNotMatch(disqus, /count\.js|http:\/\//);
 
+  assert.match(comments, /capture comments_markup/);
+  assert.match(comments, /site\.comments\.disqus\.shortname \| default: ["']["'] \| strip/);
+  assert.match(comments, /site\.comments\.discourse\.server \| default: ["']["'] \| strip/);
+  assert.match(comments, /site\.comments\.facebook\.appid \| default: ["']["'] \| strip/);
+  assert.match(comments, /site\.comments\.facebook\.sdk_version \| default: ["']["'] \| strip/);
+  assert.match(comments, /assign comments_markup = comments_markup \| strip/);
+  assert.match(comments, /if comments_markup != ["']["']/);
   assert.match(comments, /id="discourse-comments"/);
   assert.match(discourse, /discourse_server \| slice: 0, 8/);
   assert.match(discourse, /if discourse_scheme == ["']https:\/\//);
