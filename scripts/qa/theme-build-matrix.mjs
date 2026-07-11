@@ -24,6 +24,13 @@ const expectedRouteManifest = (
   .split(/\r?\n/);
 const contrastFailures = [];
 
+function canonicalizeRoute(route) {
+  if (route.startsWith("AGENTS/") && route !== "AGENTS/index.html") {
+    return `agents/${route.slice("AGENTS/".length)}`;
+  }
+  return route;
+}
+
 async function run(command, args) {
   await new Promise((resolve, reject) => {
     const child = spawn(command, args, {
@@ -44,7 +51,8 @@ async function htmlRoutes(directory, root = directory) {
     const entryPath = path.join(directory, entry.name);
     if (entry.isDirectory()) routes.push(...(await htmlRoutes(entryPath, root)));
     else if (entry.name.endsWith(".html")) {
-      routes.push(path.relative(root, entryPath).split(path.sep).join("/"));
+      const route = path.relative(root, entryPath).split(path.sep).join("/");
+      routes.push(canonicalizeRoute(route));
     }
   }
   return routes.sort();

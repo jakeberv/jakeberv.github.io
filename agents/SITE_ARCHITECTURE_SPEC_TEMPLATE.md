@@ -148,7 +148,7 @@ Notes:
 - Content-authoring contract: the standard-library publication and talk CLIs expose read-only `check` and explicit-output `generate`; generation requires `--output-dir`, collisions require `--overwrite`, and publication output must pass the canonical topic and method validators
 - Talks authoring boundary: the optional generator targets `_talks` collection documents and never reads or modifies `_data/talks.yml`, which remains the source for `/talks/`
 - Content-authoring check: use `npm run check:generators`; the generated-content schemas and exit codes are documented in `markdown_generator/readme.md`
-- Route contract: `scripts/qa/expected-html-routes.txt` lists the exact 240 intended HTML outputs checked for every palette; the matrix also requires `_site/markdown_generator` to be absent
+- Route contract: `scripts/qa/expected-html-routes.txt` lists the exact 240 intended HTML outputs checked for every palette; the matrix canonicalizes macOS's case-insensitive `AGENTS/` and `agents/` output collision to the case-sensitive production URLs and also requires `_site/markdown_generator` to be absent
 - Pages artifact boundary: `_config.yml` excludes `package-lock.json`, `scripts/`, `markdown_generator/`, source-only shared JavaScript files, and root `*_artifacts` directories because they are build inputs or ignored local analysis output
 - Deferred theme work: runtime palette selection and JSON CV support
 - Infrastructure policy: Phase 7 is infrastructure-only; optional AcademicPages v0.9 capabilities remain inactive

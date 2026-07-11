@@ -127,3 +127,16 @@ test("the tracked route manifest parser tolerates CRLF checkouts", async () => {
 
   assert.match(themeMatrix, /\.split\(\/\\r\?\\n\/\)/);
 });
+
+test("the route contract preserves case-sensitive AGENTS and agents URLs", async () => {
+  const [themeMatrix, manifestSource] = await Promise.all([
+    source("scripts/qa/theme-build-matrix.mjs"),
+    source("scripts/qa/expected-html-routes.txt"),
+  ]);
+  const routes = manifestSource.trim().split(/\r?\n/);
+
+  assert.ok(routes.includes("AGENTS/index.html"));
+  assert.ok(routes.includes("agents/SITE_ARCHITECTURE_SPEC_TEMPLATE/index.html"));
+  assert.equal(routes.some((route) => /^AGENTS\/(?!index\.html$)/.test(route)), false);
+  assert.match(themeMatrix, /canonicalizeRoute/);
+});
