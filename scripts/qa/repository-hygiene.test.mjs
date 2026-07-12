@@ -38,8 +38,8 @@ test("local and generated root state is ignored but not tracked", async () => {
   }
 
   const dockerignore = await readFile(path.join(repositoryRoot, ".dockerignore"), "utf8");
-  assert.match(dockerignore, /^\*\.RDS$/m);
-  assert.match(dockerignore, /^todo$/m);
+  assert.match(dockerignore, /^\/\*\.RDS$/m);
+  assert.match(dockerignore, /^\/todo$/m);
 });
 
 test("R analysis source is sanitized, documented, and lives outside the repository root", async () => {
