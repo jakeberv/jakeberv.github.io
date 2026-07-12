@@ -1,7 +1,7 @@
 ---
 permalink: /terms/
 title: "Terms and Privacy Policy"
-modified: 2026-02-20
+modified: 2026-07-11
 ---
 
 {% include base_path %}
@@ -30,9 +30,9 @@ This information is used in aggregate to understand site usage and improve conte
 
 ### Analytics used on this site
 
-This site currently uses GoatCounter for web analytics.
+This site uses GoatCounter and Google Analytics 4 for web analytics. GoatCounter provides aggregate traffic statistics. Google Analytics 4 may collect page views, session statistics, approximate geographic location, browser and device information, referrer information, and requested pages. It may use first-party analytics cookies such as `_ga`.
 
-Google Analytics is not currently enabled.
+This site does not currently use Google Analytics for advertising or remarketing.
 Disqus-based commenting is not currently enabled.
 
 ### Log Files
@@ -41,7 +41,7 @@ Like many websites, log files may be used to monitor traffic patterns and basic 
 
 ### Cookies and third-party services
 
-This site does not require cookies for basic page access.
+This site does not require cookies for basic page access. Google Analytics 4 may set first-party analytics cookies when analytics is enabled for a page.
 If you follow links to third-party services (for example publishers, social media, or video hosts), those services may set cookies or collect data under their own policies.
 
 You can manage cookies and tracking behavior through your browser settings.
