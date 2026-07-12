@@ -21,7 +21,7 @@ title: "Software"
     </div>
 
     <div class="software-card__body">
-      <p><code>bifrost</code> is an R package for branch-level inference of multi-regime, multivariate trait evolution on phylogenies. It uses penalized-likelihood multivariate GLS to detect where, when, and how evolutionary rate regimes shift across a tree, operating directly in trait space (no PCA required) and scaling to high-dimensional datasets and large phylogenies. A pre-print describing this package is forthcoming (Berv et al.).</p>
+      <p><code>bifrost</code> is an R package for branch-level inference of multi-regime, multivariate trait evolution on phylogenies. It uses penalized-likelihood multivariate GLS to detect where, when, and how evolutionary rate regimes shift across a tree, operating directly in trait space (no PCA required) and scaling to high-dimensional datasets and large phylogenies. A preprint describing this package is available in <a href="https://doi.org/10.64898/2026.04.12.718036">Berv et al. (2026)</a>.</p>
 
       <hr class="soft-sep" />
 
@@ -32,7 +32,8 @@ title: "Software"
       <div class="software-actions">
         📦 <a href="https://github.com/jakeberv/bifrost">Repository</a> &nbsp;•&nbsp;
         📖 <a href="https://jakeberv.com/bifrost">Documentation (pkgdown)</a> &nbsp;•&nbsp;
-        📄 <a href="https://jakeberv.com/bifrost/articles/jaw-shape-vignette.html">Getting Started vignette</a>
+        📄 <a href="https://jakeberv.com/bifrost/articles/jaw-shape-vignette.html">Getting Started vignette</a> &nbsp;•&nbsp;
+        📄 <a href="https://doi.org/10.64898/2026.04.12.718036">Berv et al. (2026), <em>bioRxiv</em></a>
       </div>
     </div>
   </div>
