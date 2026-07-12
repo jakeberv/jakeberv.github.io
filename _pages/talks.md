@@ -5,6 +5,7 @@ title: "Talks"
 header:
   og_image: "teaching/pdp.png"
 author_profile: true
+search_type: Talks
 ---
 
 # Selected recorded talks

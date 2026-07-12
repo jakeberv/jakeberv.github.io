@@ -36,6 +36,7 @@ Optional:
 - Run geo/impact data regeneration + validation: `./scripts/local_preview.command --with-data`
 - Skip geo/impact data regeneration explicitly: `./scripts/local_preview.command --skip-data`
 - Custom port: `./scripts/local_preview.command --port 4010`
+- One-time production search build: `./scripts/local_preview.command --with-search` (requires prior `npm ci`)
 - Always run full data + full build path: `./scripts/local_preview_fullbuild.command`
 
 ### Container preview (optional)
@@ -78,6 +79,7 @@ Notes:
 - Local style overrides: `_sass/_syntax.scss` and `_sass/_custom.scss`
 - Scripts: `assets/js/`
 - Shared JS builder: `scripts/build-js.mjs`
+- Search builder: `scripts/build-search.mjs` writes untracked Pagefind output only under `_site/pagefind/`
 - JS dependency lock: `package-lock.json`
 - Collections:
   - `_pages/`
@@ -142,25 +144,29 @@ Notes:
 - Icon contract: site markup uses `fa-solid` and `fa-brands`; only solid and brands TTF/WOFF2 assets ship from `assets/webfonts/`. Academicons 1.9.4 is an independent stylesheet backed only by preloaded WOFF and TTF files under `assets/fonts/`.
 - Local overrides: custom and page-specific presentation colors consume semantic roles; scientific categorical and institutional brand palettes remain literal
 - JavaScript contract: Node 24/npm 11 installs from `package-lock.json`; `scripts/build-js.mjs` combines jQuery 3.7.1, greedy navigation, optional scientific-content renderers, and shared interactions into the committed module `assets/js/main.min.js`
+- Search contract: Pagefind 1.5.2 runs after the production Jekyll build, indexes the explicit 209-route manifest, and writes deployment-only assets to `_site/pagefind/`; production keeps `search.index_enabled: true`, while normal local, container, and palette builds keep both search flags false through `_config.dev.yml`
+- Search authoring contract: meaningful layout regions carry `data-pagefind-body`; `search: false` opts out, while `search_title`, `search_description`, and `search_type` override metadata. Allowed types are News, Publications, Research, Software, Talks, Teaching, and Pages.
+- Search UI contract: `search.ui_enabled` is false in production, so no search control or Pagefind browser assets are exposed. When explicitly enabled, a persistent compact masthead trigger opens Pagefind's accessible modal, supports `Cmd/Ctrl+K`, exposes a single-select content filter, and consumes the existing `--site-*`/`--global-*` light/dark palette roles. Search queries are not sent to GoatCounter, GA4, or another service.
 - Scientific content contract: `mathjax: true` loads MathJax 4.0.0 for a page; fenced `mermaid` blocks load Mermaid 11.15.0; fenced `plotly` blocks load Plotly 3.6.0 from JSON with required `data` and optional `layout`/`config`
 - Scientific fallback behavior: failed Mermaid/Plotly loads or parses keep the source block visible and add an accessible status message; successful renderers consume `--site-*` and `--viz-*` tokens and re-render after `site:themechange`
 - Identity contract: full-URL profile fields are `academia`, `arxiv`, `inspire-hep`, `mastodon`, `medium`, `scopus`, `semantic`, `ssrn`, `telegram`, and `zotero`; handle fields include `artstation`, `bluesky`, `goodreads`, `kaggle`, `twitter`, and `zhihu`. Blank values render no link.
 - Sharing contract: sharing-enabled pages render Bluesky, Facebook, LinkedIn, Mastodon, and X in that order using independently encoded canonical URLs and titles. The legacy `twitter` configuration key remains for Twitter Card compatibility, while visible links use X.
 - Analytics contract: `analytics.providers` is the preferred ordered, de-duplicated list; scalar `analytics.provider` is a fallback when the list is absent, and explicit scalar `false` is the global kill switch used by local preview. GoatCounter and GA4 are active in production because `analytics.google.tracking_id` contains a configured `G-...` value. GA4 renders only when that value is nonblank and `page.analytics: false` disables all providers for one page. Analytics changes require a privacy-policy review.
 - Comments contract: comments are disabled when `comments.provider` is blank. Supported values are `disqus`, `discourse`, `facebook`, and `custom`; Disqus requires a shortname, Discourse an HTTPS server URL, and Facebook an app ID plus explicit SDK version. Provider scripts are centralized under `comments-providers/scripts.html`. Google+ and Staticman are unsupported, and activation requires a separate privacy and moderation decision.
-- Asset checks: use `npm run build:js`, `npm run check:js`, `npm run check:academicons`, `npm run check:assets` after builds, `npm run check:comments`, `npm run check:comments:built` after production builds, `npm run check:icons`, `npm run check:integrations`, `npm run check:integrations:built` after production builds, `npm run check:scientific`, `npm run check:site-artifact`, `npm run check:talkmap`, `npm run check:themes`, `npm run test:themes`, and `npm test`
+- Asset checks: use `npm run build:js`, `npm run check:js`, `npm run check:academicons`, `npm run check:assets` after builds, `npm run check:comments`, `npm run check:comments:built` after production builds, `npm run check:icons`, `npm run check:integrations`, `npm run check:integrations:built` after production builds, `npm run check:scientific`, `npm run check:search`, `npm run check:search:built` after search generation, `npm run check:site-artifact`, `npm run check:talkmap`, `npm run check:themes`, `npm run test:themes`, and `npm test`
 - Browser compatibility: native sticky positioning, smooth scrolling with reduced-motion handling, and explicit responsive-video CSS replace Stickyfill, jQuery Smooth Scroll, FitVids, and Magnific Popup
 - Content-authoring contract: the standard-library publication and talk CLIs expose read-only `check` and explicit-output `generate`; generation requires `--output-dir`, collisions require `--overwrite`, and publication output must pass the canonical topic and method validators
 - Publication action contract: generator inputs `slides_url` and `bibtex_url` emit canonical `slidesurl` and `bibtexurl`; list and detail actions remain dormant when those fields are blank
 - Talks authoring boundary: the optional generator targets `_talks` collection documents and never reads or modifies `_data/talks.yml`, which remains the source for `/talks/`
 - Content-authoring check: use `npm run check:generators`; the generated-content schemas and exit codes are documented in `markdown_generator/readme.md`
 - Route contract: `scripts/qa/expected-html-routes.txt` lists the exact 220 intended public HTML outputs. `scripts/qa/site-artifact-contract.mjs` checks those routes case-sensitively after every palette and production build; no path canonicalization is permitted.
+- Search-route contract: `scripts/qa/expected-search-routes.txt` lists the exact 209 searchable HTML documents. The built contract requires News 170, Publications 26, Research 5, Software 1, Talks 2, Teaching 1, and Pages 4.
 - Rendered-resource contract: `scripts/qa/rendered-asset-contract.mjs` validates local HTML references, CSS URLs, manifest icons, pretty routes, exact path casing, and insecure active resources after every palette and production build; `/bifrost` is an explicit same-origin external deployment.
 - Talk-map contract: `/talkmap.html` uses pinned D3 7.9.0, TopoJSON Client 3.1.0, World Atlas 2.0.2, `--site-*`/`--viz-*` tokens, and `site:themechange`; `/talkmap/map.html` remains a compatibility redirect and no geocoder is used.
 - Pages artifact boundary: `_config.yml` excludes internal agent/spec documents, lockfiles, notebooks, R/RDS/RStudio state, Python and command sources, `scripts/`, `markdown_generator/`, source-only shared JavaScript files, and root `*_artifacts` directories. The validator rejects protected prefixes, filenames, and development extensions in `_site`.
 - Repository ignore boundary: local `.bundle/`, root `vendor/bundle/`, root `vendor/cache/`, root `local/`, `.vscode/`, `.RData`, root RDS outputs, and `todo` are ignored; `Gemfile.lock`, `package-lock.json`, R source under `scripts/analysis/`, and `_sass/vendor/` remain trackable.
 - Scholar source boundary: `fetch_scholar_metrics.py` remains tracked and workflow-executable but is never a public Pages asset.
-- Pull-request lifecycle: the Pages workflow runs npm contracts, data validation/generation, all six themes, the default build, rendered-integration validation, and artifact validation for PRs with read-only contents permission. Artifact upload and Pages/OIDC permissions are deployment-only.
+- Pull-request lifecycle: the Pages workflow runs npm contracts, data validation/generation, all six themes, the default build, Pagefind generation and search validation, rendered-integration validation, and artifact validation for PRs with read-only contents permission. Artifact upload and Pages/OIDC permissions are deployment-only.
 - Deferred theme work: runtime palette selection and JSON CV support
 - Infrastructure policy: Phase 7 is infrastructure-only; optional AcademicPages v0.9 capabilities remain inactive
 - Protected surfaces: content, navigation, data, the 220 intended public routes, rendered `/cv/` and its PDF behavior, images, fonts, generated assets, JavaScript bundles, Gem files and lockfiles; internal repository-document routes and raw development sources are intentionally excluded

@@ -3,6 +3,9 @@ permalink: /news/
 title: "Archive"
 layout: archive
 author_profile: true
+search_title: "News Archive"
+search_description: "News, awards, publications, talks, teaching, workshops, and fieldwork updates."
+search_type: News
 ---
 
 <div class="news-page" data-news-page data-news-scroll-on-click="false">
@@ -19,6 +22,9 @@ author_profile: true
 {% assign tag_defs = site.data.news_tags.tags %}
 {% assign umbrella_groups = site.data.news_tags.umbrella_groups %}
 
+<p class="visually-hidden">{{ page.search_description }}</p>
+
+<div data-pagefind-ignore>
 {% if news_items.size > 0 %}
 {% assign year_groups = news_items | group_by_exp: "i", "i.date | date: '%Y'" %}
 
@@ -114,6 +120,7 @@ author_profile: true
 {% else %}
 <p>No news items yet.</p>
 {% endif %}
+</div>
 
 </div>
 

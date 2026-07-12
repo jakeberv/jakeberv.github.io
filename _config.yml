@@ -21,6 +21,9 @@ words_per_minute         : 160
 future                   : false
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false #change to true to add link to talkmap on talks page
+search:
+  index_enabled          : true
+  ui_enabled             : false
 comments:
   provider               : # blank (default), "disqus", "discourse", "facebook", "custom"
   disqus:
@@ -257,6 +260,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      search_type: Pages
   # _teaching
   - scope:
       path: ""
@@ -275,6 +279,7 @@ defaults:
       author_profile: true
       share: true
       comments: true
+      search_type: Publications
   # _research
   - scope:
       path: ""
@@ -284,6 +289,7 @@ defaults:
       author_profile: true
       share: true
       comments: true
+      search_type: Research
   # _talks
   - scope:
       path: ""
@@ -292,6 +298,13 @@ defaults:
       layout: talk
       author_profile: true
       share: true
+      search_type: Talks
+  # _news
+  - scope:
+      path: ""
+      type: news
+    values:
+      search_type: News
 
 
 # Sass/SCSS

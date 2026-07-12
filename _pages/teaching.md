@@ -2,6 +2,7 @@
 layout: archive
 permalink: /teaching/
 title: "Teaching"
+search_type: Teaching
 ---
 
 {% assign eval_data = site.data.teaching_evaluations_aggregated %}

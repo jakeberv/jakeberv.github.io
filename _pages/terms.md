@@ -2,6 +2,7 @@
 permalink: /terms/
 title: "Terms and Privacy Policy"
 modified: 2026-07-11
+search: false
 ---
 
 {% include base_path %}

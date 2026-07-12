@@ -73,6 +73,12 @@ jobs:
       - name: Build site
         run: bundle exec jekyll build --safe --config _config.yml
 
+      - name: Build Pagefind search index
+        run: npm run build:search
+
+      - name: Validate built search
+        run: npm run check:search:built
+
       - name: Validate rendered integrations
         run: npm run check:integrations:built
 

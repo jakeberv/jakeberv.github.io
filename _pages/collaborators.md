@@ -3,6 +3,7 @@ layout: archive
 title: "Collaborators"
 permalink: /collaborators/
 author_profile: true
+search: false
 header:
   image: #"research/the-persistence-of-memory-painting-by-salvador-dali-uhd-4k-wallpaper.jpg"
   og_image: "research/the-persistence-of-memory-painting-by-salvador-dali-uhd-4k-wallpaper.jpg"

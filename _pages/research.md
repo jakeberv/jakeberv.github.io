@@ -3,6 +3,7 @@ layout: archive
 title: "Research"
 permalink: /research/
 author_profile: true
+search_type: Research
 header:
   image: #"research/the-persistence-of-memory-painting-by-salvador-dali-uhd-4k-wallpaper.jpg"
   og_image: "research/the-persistence-of-memory-painting-by-salvador-dali-uhd-4k-wallpaper.jpg"
@@ -58,7 +59,7 @@ header:
 
 {% assign ordered_pages = site.research | sort: "order_number" %}
 
-<div class="research-grid">
+<div class="research-grid" data-pagefind-ignore>
 {% for post in ordered_pages %} {% include archive-single-research-grid.html type="grid" %} {% endfor %}
 </div>
 

@@ -91,7 +91,7 @@ test("the npm test command does not depend on shell glob expansion", async () =>
 
   assert.equal(
     packageDefinition.scripts.test,
-    "node --test scripts/qa/academicons-contract.test.mjs scripts/qa/browser-behavior.test.mjs scripts/qa/browser-runtime.test.mjs scripts/qa/build-js.test.mjs scripts/qa/comments-contract.test.mjs scripts/qa/content-generators.test.mjs scripts/qa/fontawesome-contract.test.mjs scripts/qa/integrations-built-contract.test.mjs scripts/qa/integrations-contract.test.mjs scripts/qa/rendered-asset-contract.test.mjs scripts/qa/repository-hygiene.test.mjs scripts/qa/scientific-content.test.mjs scripts/qa/site-artifact-contract.test.mjs scripts/qa/talkmap-contract.test.mjs scripts/qa/theme-contract.test.mjs && npm run check:js && npm run check:container",
+    "node --test scripts/qa/academicons-contract.test.mjs scripts/qa/browser-behavior.test.mjs scripts/qa/browser-runtime.test.mjs scripts/qa/build-js.test.mjs scripts/qa/comments-contract.test.mjs scripts/qa/content-generators.test.mjs scripts/qa/fontawesome-contract.test.mjs scripts/qa/integrations-built-contract.test.mjs scripts/qa/integrations-contract.test.mjs scripts/qa/rendered-asset-contract.test.mjs scripts/qa/repository-hygiene.test.mjs scripts/qa/scientific-content.test.mjs scripts/qa/search-built-contract.test.mjs scripts/qa/search-contract.test.mjs scripts/qa/site-artifact-contract.test.mjs scripts/qa/talkmap-contract.test.mjs scripts/qa/theme-contract.test.mjs && npm run check:js && npm run check:container",
   );
 });
 

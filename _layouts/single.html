@@ -25,7 +25,7 @@ layout: default
 
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
-        <header>
+        <header{% if page.search != false %} data-pagefind-body{% endif %}>
           {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
           {% if post.read_time %}
           {% elsif post.read_time and post.collection == 'posts' %}
@@ -57,7 +57,7 @@ layout: default
         </header>
       {% endunless %}
 
-      <section class="page__content" itemprop="text">
+      <section class="page__content" itemprop="text"{% if page.search != false %} data-pagefind-body{% endif %}>
         {% if page.toc %}
           <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
             <nav class="toc">

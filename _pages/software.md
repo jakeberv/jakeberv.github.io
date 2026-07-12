@@ -2,6 +2,7 @@
 layout: archive
 permalink: /software/
 title: "Software"
+search_type: Software
 ---
 
 <div class="software-page">
