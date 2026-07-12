@@ -10,7 +10,7 @@ vendor/cache
 .jekyll-metadata
 .playwright-cli
 .sass-cache
-.RData
+/.RData
 .Rhistory
 /*.RDS
 /todo
