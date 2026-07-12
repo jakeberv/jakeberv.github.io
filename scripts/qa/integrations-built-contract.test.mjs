@@ -9,11 +9,13 @@ const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../
 const modulePath = path.join(repoRoot, "scripts/qa/integrations-built-contract.mjs");
 let validateBuiltIntegrations;
 let parseArguments;
+let readConfiguredGa4Id;
 
 try {
-  ({ parseArguments, validateBuiltIntegrations } = await import(pathToFileURL(modulePath)));
+  ({ parseArguments, readConfiguredGa4Id, validateBuiltIntegrations } = await import(pathToFileURL(modulePath)));
 } catch {
   parseArguments = undefined;
+  readConfiguredGa4Id = undefined;
   validateBuiltIntegrations = undefined;
 }
 
@@ -51,6 +53,14 @@ async function withSite(files, callback) {
 test("the rendered integration validator is importable", () => {
   assert.equal(typeof validateBuiltIntegrations, "function");
   assert.equal(typeof parseArguments, "function");
+  assert.equal(typeof readConfiguredGa4Id, "function");
+});
+
+test("the production validator reads the configured GA4 ID by default", async () => {
+  assert.equal(typeof readConfiguredGa4Id, "function");
+  if (!readConfiguredGa4Id) return;
+
+  assert.equal(await readConfiguredGa4Id(), "G-ST9SHH1H5R");
 });
 
 test("CLI arguments require explicit paths and valid-looking GA4 IDs", () => {

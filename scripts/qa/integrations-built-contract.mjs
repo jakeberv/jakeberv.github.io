@@ -120,6 +120,12 @@ export async function validateBuiltIntegrations({
   return { htmlFiles: htmlFiles.length, sharedPages, sharePages, ga4Pages };
 }
 
+export async function readConfiguredGa4Id() {
+  const config = await readFile(path.join(repoRoot, "_config.yml"), "utf8");
+  const match = config.match(/^\s*tracking_id\s*:\s*["']?(G-[A-Z0-9]+)["']?\s*$/m);
+  return match?.[1] ?? "";
+}
+
 export function parseArguments(argv) {
   const options = {};
   for (let index = 0; index < argv.length; index += 1) {
@@ -142,7 +148,9 @@ export function parseArguments(argv) {
 }
 
 async function main() {
-  const result = await validateBuiltIntegrations(parseArguments(process.argv.slice(2)));
+  const options = parseArguments(process.argv.slice(2));
+  if (!Object.hasOwn(options, "expectedGa4Id")) options.expectedGa4Id = await readConfiguredGa4Id();
+  const result = await validateBuiltIntegrations(options);
   console.log(
     `Rendered integration contract passed: ${result.sharedPages}/${result.htmlFiles} shared pages, `
       + `${result.sharePages} share pages, ${result.ga4Pages} GA4 pages.`,

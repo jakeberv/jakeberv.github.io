@@ -10,7 +10,7 @@ function read(relativePath) {
   return readFileSync(path.join(repoRoot, relativePath), "utf8");
 }
 
-test("analytics configuration prefers an ordered provider list with inactive GA4", () => {
+test("analytics configuration prefers an ordered provider list with active GA4", () => {
   const config = read("_config.yml");
   const analyticsStart = config.indexOf("analytics:\n");
   const analyticsEnd = config.indexOf("\n\n# Site Author", analyticsStart);
@@ -23,7 +23,7 @@ test("analytics configuration prefers an ordered provider list with inactive GA4
 
   assert.match(config, /analytics:\s*\n\s+providers:\s*\n\s+- goatcounter\s*\n\s+- google-analytics-4/);
   assert.deepEqual(providers, ["goatcounter", "google-analytics-4"]);
-  assert.match(config, /google:\s*\n\s+tracking_id\s*:\s*(?:#.*)?\n/);
+  assert.match(config, /google:\s*\n\s+tracking_id\s*:\s*"G-ST9SHH1H5R"\s*$/m);
   assert.match(config, /goatcounter:\s*\n\s+code\s*:\s*jakeberv/);
 });
 
@@ -45,6 +45,14 @@ test("analytics dispatch preserves compatibility and guards GA4 output", () => {
   assert.match(ga4, /contains ['"]G-['"]/);
   assert.match(ga4, /https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=/);
   assert.match(ga4, /gtag\(['"]config['"]/);
+});
+
+test("the privacy policy describes the active analytics providers", () => {
+  const privacy = read("_pages/terms.md");
+
+  assert.match(privacy, /GoatCounter and Google Analytics 4/);
+  assert.doesNotMatch(privacy, /Google Analytics is not currently enabled/);
+  assert.match(privacy, /first-party analytics cookies/);
 });
 
 test("author profiles expose the v0.9 identity hooks without activating accounts", () => {

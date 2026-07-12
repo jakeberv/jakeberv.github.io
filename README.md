@@ -170,7 +170,7 @@ The author profile supports the AcademicPages v0.9 academic identity fields with
 
 Pages with sharing enabled expose Bluesky, Facebook, LinkedIn, Mastodon, and X actions. Each action receives an independently encoded canonical page URL and title. Brand colors remain literal while button layout and contrast continue to use the shared light/dark theme architecture.
 
-Analytics uses an ordered `analytics.providers` list. The deployed list contains `goatcounter` and `google-analytics-4`, but the GA4 include emits nothing while `analytics.google.tracking_id` is blank. GoatCounter therefore remains the only active production provider. A legacy scalar `analytics.provider` remains supported when the list is absent; setting it to `false` disables analytics globally for local preview, while `page.analytics: false` disables all providers for one page. Activating GA4 later requires a `G-...` measurement ID plus a separate privacy review.
+Analytics uses an ordered `analytics.providers` list. The deployed list contains `goatcounter` followed by `google-analytics-4`, and the configured `G-...` measurement ID activates both providers in production. GoatCounter remains enabled, while this site does not use Google Analytics for advertising or remarketing. A legacy scalar `analytics.provider` remains supported when the list is absent; setting it to `false` disables analytics globally for local preview, while `page.analytics: false` disables all providers for one page. Review the [privacy policy](/terms/) when changing analytics configuration.
 
 Validate these contracts with `npm run check:integrations`; after a production build, run `npm run check:integrations:built`.
 

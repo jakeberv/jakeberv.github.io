@@ -75,7 +75,7 @@ analytics:
     - goatcounter
     - google-analytics-4
   google:
-    tracking_id          :
+    tracking_id          : "G-ST9SHH1H5R"
   goatcounter:
     code                 : jakeberv
 
