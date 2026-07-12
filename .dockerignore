@@ -12,6 +12,8 @@ vendor/cache
 .sass-cache
 .RData
 .Rhistory
+*.RDS
+todo
 .Rproj.user
 *.Rproj
 _source/*_cache

@@ -125,6 +125,10 @@ The deterministic builder reads jQuery `3.7.1`, greedy navigation, optional scie
 
 Jekyll excludes internal agent/spec documents, lockfiles, notebooks, R/RDS/RStudio state, Python and command sources, `scripts/`, `markdown_generator/`, and root `*_artifacts` directories from `_site`. They are repository inputs, not deployable website assets. `fetch_scholar_metrics.py` remains tracked because the scheduled Scholar workflow runs it under Python 3.12, but it is explicitly excluded and the artifact contract verifies that it is absent from `_site`.
 
+## Repository Hygiene
+
+Local R session state, root RDS outputs, and the root `todo` file are ignored and must not be tracked. The manual Web of Science citation-map converter lives at `scripts/analysis/citation_map_parser.R`; historical citation-network prototypes are retained under `scripts/analysis/legacy/` rather than at repository root. The legacy Semantic Scholar analysis reads `SEMANTIC_SCHOLAR_API_KEY` from the environment and must never contain a committed credential. Run `npm run check:hygiene` to validate these boundaries.
+
 ## Comment Integrations
 
 Comments are disabled by default because `comments.provider` is blank. Supported providers are `disqus`, `discourse`, `facebook`, and `custom`; Google+ and Staticman are not supported. Disqus requires a nonblank `comments.disqus.shortname`, Discourse requires a full HTTPS `comments.discourse.server`, and Facebook requires both `comments.facebook.appid` and an explicit `comments.facebook.sdk_version`. Provider scripts load only on comment-enabled pages with complete configuration, and the custom provider retains `_includes/comments-providers/custom.html` as its extension boundary.

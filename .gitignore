@@ -18,8 +18,12 @@ node_modules/
 # R and RStudio files
 .Rproj.user
 *.Rproj
-.RData
+/.RData
 .Rhistory
+/*.RDS
+
+# Local planning notes
+/todo
 
 # Temporary / generated R scripts
 Untitled.R
