@@ -55,6 +55,7 @@ Optional:
 - Run geo/talk-map/impact data regeneration + validation: `./scripts/local_preview.command --with-data`
 - Skip geo/talk-map/impact data regeneration explicitly: `./scripts/local_preview.command --skip-data`
 - Preview a supported palette without editing `_config.yml`: `./scripts/local_preview.command --theme air`
+- Build and preview the production search interface once: `./scripts/local_preview.command --with-search`
 - Custom port: `./scripts/local_preview.command --port 4010`
 - Always run full data + full build path: `./scripts/local_preview_fullbuild.command`
 
@@ -114,6 +115,8 @@ The shared browser bundle follows the AcademicPages v0.9 asset model with local 
 - `npm run check:integrations:built` verifies analytics and sharing in the rendered production site.
 - `npm run check:js` verifies the committed bundle without rewriting it.
 - `npm run check:scientific` verifies the opt-in MathJax, Mermaid, and Plotly runtime contract.
+- `npm run check:search` verifies the Pagefind dependency, indexing markers, metadata, exclusions, modal, theme, preview, and workflow contracts.
+- `npm run check:search:built` verifies the generated 209-document index and its seven content-type totals without changing the 220-route site manifest.
 - `npm run check:site-artifact` verifies the exact route manifest and rejects repository-only sources from `_site`.
 - `npm run watch:js` rebuilds when the three shared JavaScript sources change.
 - `npm run check:themes` verifies the palette, token, markup, and runtime contract.
@@ -121,9 +124,17 @@ The shared browser bundle follows the AcademicPages v0.9 asset model with local 
 - `npm run test:themes` builds all six palettes and requires the same 220 intended routes and artifact boundary.
 - `npm test` runs the asset, content-generator, theme, executable browser-state, and Docker-independent container-contract tests plus bundle verification.
 
-The deterministic builder reads jQuery `3.7.1`, greedy navigation, optional scientific-content renderers, and the shared site interactions in a fixed order. The Talk map uses an independent page-scoped script and does not enlarge that bundle. GitHub Actions runs `npm ci`, `npm test`, the six-theme build matrix, the final Jekyll build, rendered-integration, disabled-comments, local-resource, and artifact validation for pull requests and production, so source, generated assets, integrations, palette support, and the tracked intended-route manifest cannot drift. Pull requests are read-only and never upload or deploy Pages.
+The deterministic builder reads jQuery `3.7.1`, greedy navigation, optional scientific-content renderers, and the shared site interactions in a fixed order. The Talk map uses an independent page-scoped script and does not enlarge that bundle. GitHub Actions runs `npm ci`, `npm test`, the six-theme build matrix, the final Jekyll build, Pagefind generation, rendered-integration, disabled-comments, local-resource, and artifact validation for pull requests and production, so source, generated assets, integrations, palette support, and the tracked intended-route manifest cannot drift. Pull requests are read-only and never upload or deploy Pages.
 
 Jekyll excludes internal agent/spec documents, lockfiles, notebooks, R/RDS/RStudio state, Python and command sources, `scripts/`, `markdown_generator/`, and root `*_artifacts` directories from `_site`. They are repository inputs, not deployable website assets. `fetch_scholar_metrics.py` remains tracked because the scheduled Scholar workflow runs it under Python 3.12, but it is explicitly excluded and the artifact contract verifies that it is absent from `_site`.
+
+## Site Search
+
+Production search uses Pagefind `1.5.2`. After Jekyll creates `_site`, GitHub Actions builds a static browser-side index under `_site/pagefind/`; those generated files are deployed but never committed. Search has no server, API key, hosted crawler, or query analytics. A visitor's query remains in the browser and is matched against static index chunks.
+
+The masthead search control opens an accessible modal and supports `Cmd+K` on macOS or `Ctrl+K` elsewhere. Results can be filtered as `News`, `Publications`, `Research`, `Software`, `Talks`, `Teaching`, or `Pages`. The exact contract contains 209 searchable documents while the public site remains at 220 HTML routes. Layouts mark meaningful content with `data-pagefind-body`; navigation, profiles, sharing controls, duplicate archive lists, and visualization controls are not indexed.
+
+Search is disabled in `_config.dev.yml`, so ordinary native, Docker, Dev Container, and theme-matrix previews do no indexing and emit no search UI. For a one-time local QA build, run `npm ci` and then `./scripts/local_preview.command --with-search`. The wrapper enables search through a temporary config file and runs `npm run build:search` after Jekyll without changing tracked configuration. Use `search: false` to opt out a page, or `search_title`, `search_description`, and `search_type` to customize its index metadata.
 
 ## Repository Hygiene
 
