@@ -67,6 +67,10 @@ test("R analysis source is sanitized, documented, and lives outside the reposito
   }
   assert.match(analysisReadme, /SEMANTIC_SCHOLAR_API_KEY/);
   assert.match(analysisReadme, /install\.packages\(c\(/);
+  assert.match(analysisReadme, /`scripts\/analysis\/citation_map_parser\.R`/);
+  assert.match(analysisReadme, /`scripts\/analysis\/legacy\/citation_analysis\.R`/);
+  assert.match(analysisReadme, /`scripts\/analysis\/legacy\/citation_network\.R`/);
+  assert.match(analysisReadme, /Rscript scripts\/analysis\/citation_map_parser\.R/);
   assert.match(analysisReadme, /not part of the website build/);
 });
 
