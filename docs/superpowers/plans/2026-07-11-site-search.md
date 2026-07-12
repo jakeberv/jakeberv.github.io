@@ -8,7 +8,7 @@
 4. Add production/dev search configuration and optional page-level search metadata controls.
 5. Mark meaningful content in archive, page, research, talk, splash, news, and homepage rendering paths.
 6. Suppress duplicate homepage/news/publication/research archive material and explicitly opt utility pages out.
-7. Add the persistent compact modal trigger, content filter, custom result template, and keyboard hints.
+7. Add the persistent compact modal trigger, content filter, custom result template, and keyboard hints behind `search.ui_enabled`.
 8. Map Pagefind's theme properties onto the six-palette semantic token system.
 9. Add the explicit 209-route manifest and enforce the required content-type totals.
 10. Extend local preview with `--with-search` using a temporary config and no automatic dependency installation.
@@ -31,4 +31,4 @@ The excluded routes are the 404 page, `/about/` aliases, `/resume.html`, unfinis
 
 ## Completion Boundary
 
-Generated `_site/pagefind/` files remain untracked. No hosted search provider, crawler account, API key, query analytics, semantic search, or autocomplete service is introduced. No commit or push occurs without explicit approval.
+Generated `_site/pagefind/` files remain untracked. Production builds the index with `search.index_enabled: true` but keeps `search.ui_enabled: false`, leaving the masthead control dormant until a later configuration decision. No hosted search provider, crawler account, API key, query analytics, semantic search, or autocomplete service is introduced. No commit or push occurs without explicit approval.

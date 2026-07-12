@@ -10,7 +10,7 @@ Approved for implementation on `codex/site-search` on 2026-07-11. This is a requ
 - Generate the production index after Jekyll in GitHub Actions.
 - Keep ordinary local, Docker, Dev Container, and palette previews free of indexing work.
 - Preserve the 220-route public contract and the committed shared JavaScript bundle.
-- Provide an accessible, palette-aware masthead modal with content-type filtering.
+- Keep an accessible, palette-aware masthead modal with content-type filtering available but dormant until explicitly enabled.
 
 ## Pagefind Adoption
 
@@ -32,13 +32,13 @@ Approved for implementation on `codex/site-search` on 2026-07-11. This is a requ
 
 ## Runtime Flow
 
-1. Jekyll renders the production site with the search trigger, modal, metadata, and body markers.
+1. Jekyll renders production metadata and body markers while `search.ui_enabled: false` omits the trigger, modal, and Pagefind browser assets.
 2. `scripts/build-search.mjs` removes stale output and reads `expected-search-routes.txt`.
 3. Each expected HTML document is passed to Pagefind with a stable public URL.
 4. Pagefind writes to a temporary sibling directory; validation succeeds before the directory is retained as `_site/pagefind/`.
 5. The built search, rendered resources, and complete Pages artifact are validated before upload.
 
-Local preview follows the same path only when `--with-search` is supplied. That flag writes a temporary config override, requires an existing `npm ci` installation, and never changes `_config.yml`.
+Production keeps `search.index_enabled: true`, so Actions still generates and validates the deployment index. Local preview follows the complete UI path only when `--with-search` is supplied. That flag writes a temporary override enabling both search flags, requires an existing `npm ci` installation, and never changes `_config.yml`.
 
 ## Protected Surfaces
 
