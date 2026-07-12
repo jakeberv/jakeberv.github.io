@@ -7,7 +7,8 @@ analytics:
   provider: false
 
 search:
-  enabled: false
+  index_enabled: false
+  ui_enabled: false
 
 comments:
   disqus:

@@ -71,14 +71,20 @@ test("Pagefind is exactly pinned and npm exposes every search contract", async (
   assert.match(packageDefinition.scripts.test, /search-contract\.test\.mjs/);
 });
 
-test("production enables search while ordinary development disables it", async () => {
+test("production builds the index while the visitor UI remains dormant", async () => {
   const [production, development] = await Promise.all([
     source("_config.yml"),
     source("_config.dev.yml"),
   ]);
 
-  assert.match(production, /^search:\s*\n\s+enabled\s*:\s*true\s*$/m);
-  assert.match(development, /^search:\s*\n\s+enabled\s*:\s*false\s*$/m);
+  assert.match(
+    production,
+    /^search:\s*\n\s+index_enabled\s*:\s*true\s*\n\s+ui_enabled\s*:\s*false\s*$/m,
+  );
+  assert.match(
+    development,
+    /^search:\s*\n\s+index_enabled\s*:\s*false\s*\n\s+ui_enabled\s*:\s*false\s*$/m,
+  );
   assert.match(production, /type: publications[\s\S]+search_type:\s*Publications/);
   assert.match(production, /type: research[\s\S]+search_type:\s*Research/);
   assert.match(production, /type: talks[\s\S]+search_type:\s*Talks/);
@@ -181,13 +187,16 @@ test("the masthead composes the accessible Pagefind modal before the theme toggl
   const pagefindCss = head.indexOf("pagefind-component-ui.css");
   const mainCss = head.indexOf("assets/css/main.css");
   assert.ok(pagefindCss >= 0 && pagefindCss < mainCss, "Pagefind CSS must load before main.css");
-  assert.match(head, /site\.search\.enabled/);
+  assert.match(head, /site\.search\.ui_enabled/);
+  assert.doesNotMatch(head, /site\.search\.enabled/);
   assert.match(head, /pagefind-component-ui\.js/);
   assert.match(head, /type="module"/);
 
   const searchTrigger = masthead.indexOf("<pagefind-modal-trigger");
   const themeToggle = masthead.indexOf('id="theme-toggle"');
   assert.ok(searchTrigger >= 0 && searchTrigger < themeToggle);
+  assert.match(masthead, /site\.search\.ui_enabled/);
+  assert.doesNotMatch(masthead, /site\.search\.enabled/);
   assert.match(masthead, /pagefind-modal-trigger[^>]+compact[^>]+hide-shortcut[^>]+shortcut="mod\+k"/);
   assert.match(masthead, /placeholder="Search site"/);
   assert.match(masthead, /<pagefind-filter-dropdown[^>]+filter="type"[^>]+single-select/);
@@ -215,7 +224,7 @@ test("local search is explicit and deployment builds it in production order", as
   ]);
 
   assert.match(preview, /--with-search/);
-  assert.match(preview, /search:\\n  enabled: true/);
+  assert.match(preview, /search:\\n  index_enabled: true\\n  ui_enabled: true/);
   assert.match(preview, /npm ci/);
   assert.match(preview, /npm run build:search/);
   assert.match(

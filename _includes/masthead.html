@@ -3,7 +3,7 @@
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      {% if site.search.enabled %}
+      {% if site.search.ui_enabled %}
         <pagefind-config bundle-path="{{ base_path }}/pagefind/" base-url="{{ base_path | default: '/' }}" excerpt-length="24"></pagefind-config>
       {% endif %}
       <nav id="site-nav" class="greedy-nav">
@@ -29,7 +29,7 @@
             </li>
           {% endfor %}
 
-          {% if site.search.enabled %}
+          {% if site.search.ui_enabled %}
           <li class="masthead__menu-item masthead__menu-item--search persist">
             <pagefind-modal-trigger compact hide-shortcut shortcut="mod+k" placeholder="Search site"></pagefind-modal-trigger>
           </li>
@@ -45,7 +45,7 @@
         <ul class="hidden-links hidden"></ul>
       </nav>
 
-      {% if site.search.enabled %}
+      {% if site.search.ui_enabled %}
       <pagefind-modal>
         <pagefind-modal-header>
           <pagefind-input placeholder="Search site"></pagefind-input>

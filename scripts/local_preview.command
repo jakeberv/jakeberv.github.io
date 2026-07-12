@@ -289,7 +289,7 @@ if [[ "$WITH_SEARCH" -eq 1 ]]; then
   SEARCH_CONFIG_BASE="$(mktemp "${TMPDIR:-/tmp}/academicpages-search.XXXXXX")"
   SEARCH_CONFIG="${SEARCH_CONFIG_BASE}.yml"
   mv "$SEARCH_CONFIG_BASE" "$SEARCH_CONFIG"
-  printf 'search:\n  enabled: true\n' > "$SEARCH_CONFIG"
+  printf 'search:\n  index_enabled: true\n  ui_enabled: true\n' > "$SEARCH_CONFIG"
   CONFIG_FILES="$CONFIG_FILES,$SEARCH_CONFIG"
   TEMP_CONFIGS+=("$SEARCH_CONFIG")
   echo "Enabling the opt-in local search interface."
