@@ -3,6 +3,7 @@ layout: about
 permalink: /
 title: "Jacob S. Berv"
 excerpt: "Evolutionary and Systematic Biologist"
+search_type: Pages
 #title: "Jacob S. Berv, PhD"
 author_profile: true
 redirect_from: 
@@ -75,6 +76,7 @@ header:
 {% assign umbrella_groups = site.data.news_tags.umbrella_groups %}
 {% assign pinned_items = news_items | where: "pinned", true %}
 
+<div data-pagefind-ignore>
 {% if pinned_items.size > 0 %}
 <h2>Pinned News</h2>
 <div class="home-news home-news--pinned tex2jax_ignore mathjax_ignore">
@@ -227,6 +229,7 @@ header:
     View all news →
   </a>
 </p>
+</div>
 
 <script src="{{ '/assets/js/news-filters.js' | relative_url }}" defer></script>
 

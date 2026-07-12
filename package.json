@@ -17,10 +17,12 @@
   },
   "devDependencies": {
     "onchange": "7.1.0",
+    "pagefind": "1.5.2",
     "uglify-js": "3.19.3"
   },
   "scripts": {
     "build:js": "node scripts/build-js.mjs",
+    "build:search": "node scripts/build-search.mjs",
     "check:academicons": "node --test scripts/qa/academicons-contract.test.mjs",
     "check:assets": "node scripts/qa/rendered-asset-contract.mjs",
     "check:comments": "node --test scripts/qa/comments-contract.test.mjs",
@@ -33,12 +35,14 @@
     "check:integrations:built": "node scripts/qa/integrations-built-contract.mjs",
     "check:js": "node scripts/build-js.mjs --check",
     "check:scientific": "node --test scripts/qa/scientific-content.test.mjs",
+    "check:search": "node --test scripts/qa/search-contract.test.mjs",
+    "check:search:built": "node scripts/qa/search-built-contract.mjs",
     "check:site-artifact": "node scripts/qa/site-artifact-contract.mjs",
     "check:themes": "node --test scripts/qa/theme-contract.test.mjs",
     "check:talkmap": "node --test scripts/qa/talkmap-contract.test.mjs",
     "test:themes": "node scripts/qa/theme-build-matrix.mjs",
     "watch:js": "onchange \"assets/js/_main.js\" \"assets/js/_scientific-content.js\" \"assets/js/plugins/jquery.greedy-navigation.js\" -- npm run build:js",
-    "test": "node --test scripts/qa/academicons-contract.test.mjs scripts/qa/browser-behavior.test.mjs scripts/qa/browser-runtime.test.mjs scripts/qa/build-js.test.mjs scripts/qa/comments-contract.test.mjs scripts/qa/content-generators.test.mjs scripts/qa/fontawesome-contract.test.mjs scripts/qa/integrations-built-contract.test.mjs scripts/qa/integrations-contract.test.mjs scripts/qa/rendered-asset-contract.test.mjs scripts/qa/repository-hygiene.test.mjs scripts/qa/scientific-content.test.mjs scripts/qa/site-artifact-contract.test.mjs scripts/qa/talkmap-contract.test.mjs scripts/qa/theme-contract.test.mjs && npm run check:js && npm run check:container",
+    "test": "node --test scripts/qa/academicons-contract.test.mjs scripts/qa/browser-behavior.test.mjs scripts/qa/browser-runtime.test.mjs scripts/qa/build-js.test.mjs scripts/qa/comments-contract.test.mjs scripts/qa/content-generators.test.mjs scripts/qa/fontawesome-contract.test.mjs scripts/qa/integrations-built-contract.test.mjs scripts/qa/integrations-contract.test.mjs scripts/qa/rendered-asset-contract.test.mjs scripts/qa/repository-hygiene.test.mjs scripts/qa/scientific-content.test.mjs scripts/qa/search-built-contract.test.mjs scripts/qa/search-contract.test.mjs scripts/qa/site-artifact-contract.test.mjs scripts/qa/talkmap-contract.test.mjs scripts/qa/theme-contract.test.mjs && npm run check:js && npm run check:container",
     "test:container": "npm run check:container && docker compose build && docker compose run --rm site ./scripts/container_test.command"
   }
 }

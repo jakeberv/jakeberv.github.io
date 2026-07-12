@@ -4,6 +4,8 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 read_more: "enabled"
+search_type: Publications
+search_description: "Publications, preprints, and interdisciplinary research outputs by Jacob S. Berv."
 ---
 
 <div class="pubs-page">
@@ -37,6 +39,7 @@ read_more: "enabled"
 
 {% include base_path %}
 
+<div data-pagefind-ignore>
 {% assign pubs = site.publications | where_exp: "p","p.date" | sort: "date" | reverse %}
 {% assign groups = pubs | group_by_exp: "p", "p.date | date: '%Y'" %}
 
@@ -54,6 +57,7 @@ read_more: "enabled"
 {% endfor %}
 </ul>
 {% endfor %}
+</div>
 
 <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
 

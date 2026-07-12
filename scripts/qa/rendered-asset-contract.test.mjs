@@ -53,6 +53,7 @@ test("rendered assets resolve relative, pretty, encoded, and same-origin referen
 <img src="/images/research/Darwin's%20tree.png" alt="">
 <a href="/about/#team">About</a>
 <a href="https://example.test/about/">Canonical about</a>
+<script type="text/pagefind-template"><a href="{{ result.url | safeUrl }}">Result</a></script>
 `,
     "utf8",
   );

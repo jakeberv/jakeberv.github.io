@@ -2,6 +2,7 @@
 layout: archive
 permalink: /background/
 title: "Background"
+search_type: Pages
 ---
 
 {::options parse_block_html="true" /}

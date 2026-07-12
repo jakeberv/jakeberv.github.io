@@ -6,6 +6,9 @@ url: ""
 analytics:
   provider: false
 
+search:
+  enabled: false
+
 comments:
   disqus:
     shortname            : "mmistakes-dev"

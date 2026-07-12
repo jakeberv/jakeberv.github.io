@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<article>
+<article{% if page.search != false %} data-pagefind-body{% endif %}>
   <header>
     <h1>{{ page.title }}</h1>
     <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>

@@ -9,11 +9,12 @@ SKIP_DATA=1
 SAW_SKIP_DATA=0
 SAW_WITH_DATA=0
 THEME=""
+WITH_SEARCH=0
 
 usage() {
   cat <<'EOF'
 Usage:
-  ./scripts/local_preview.command [--build-only] [--full-build] [--skip-data|--with-data] [--theme NAME] [--port PORT]
+  ./scripts/local_preview.command [--build-only] [--full-build] [--skip-data|--with-data] [--with-search] [--theme NAME] [--port PORT]
 
 Examples:
   ./scripts/local_preview.command
@@ -21,6 +22,7 @@ Examples:
   ./scripts/local_preview.command --full-build
   ./scripts/local_preview.command --skip-data
   ./scripts/local_preview.command --with-data
+  ./scripts/local_preview.command --with-search
   ./scripts/local_preview.command --theme air
   ./scripts/local_preview.command --port 4010
 EOF
@@ -44,6 +46,10 @@ while [[ $# -gt 0 ]]; do
     --with-data)
       SKIP_DATA=0
       SAW_WITH_DATA=1
+      shift
+      ;;
+    --with-search)
+      WITH_SEARCH=1
       shift
       ;;
     --port)
@@ -253,14 +259,40 @@ fi
 
 CONFIG_FILES="_config.yml,_config.dev.yml"
 THEME_CONFIG=""
+SEARCH_CONFIG=""
+TEMP_CONFIGS=()
+
+cleanup_temp_configs() {
+  if (( ${#TEMP_CONFIGS[@]} > 0 )); then
+    rm -f "${TEMP_CONFIGS[@]}"
+  fi
+}
+trap cleanup_temp_configs EXIT
+
 if [[ -n "$THEME" ]]; then
   THEME_CONFIG_BASE="$(mktemp "${TMPDIR:-/tmp}/academicpages-theme.XXXXXX")"
   THEME_CONFIG="${THEME_CONFIG_BASE}.yml"
   mv "$THEME_CONFIG_BASE" "$THEME_CONFIG"
   printf 'site_theme: "%s"\n' "$THEME" > "$THEME_CONFIG"
   CONFIG_FILES="$CONFIG_FILES,$THEME_CONFIG"
-  trap 'rm -f "$THEME_CONFIG"' EXIT
+  TEMP_CONFIGS+=("$THEME_CONFIG")
   echo "Using build-time theme: $THEME"
+fi
+
+if [[ "$WITH_SEARCH" -eq 1 ]]; then
+  if [[ ! -f "$ROOT_DIR/node_modules/pagefind/package.json" ]] || \
+     ! node -e 'const p = require("./node_modules/pagefind/package.json"); process.exit(p.version === "1.5.2" ? 0 : 1)' >/dev/null 2>&1; then
+    echo "Pagefind 1.5.2 is required for --with-search. Run:"
+    echo "  npm ci"
+    exit 1
+  fi
+  SEARCH_CONFIG_BASE="$(mktemp "${TMPDIR:-/tmp}/academicpages-search.XXXXXX")"
+  SEARCH_CONFIG="${SEARCH_CONFIG_BASE}.yml"
+  mv "$SEARCH_CONFIG_BASE" "$SEARCH_CONFIG"
+  printf 'search:\n  enabled: true\n' > "$SEARCH_CONFIG"
+  CONFIG_FILES="$CONFIG_FILES,$SEARCH_CONFIG"
+  TEMP_CONFIGS+=("$SEARCH_CONFIG")
+  echo "Enabling the opt-in local search interface."
 fi
 
 BUILD_ARGS=(--safe --config "$CONFIG_FILES")
@@ -276,6 +308,15 @@ else
     echo "Incremental build failed. Retrying full rebuild ..."
     "${BUILD_CMD[@]}"
   fi
+fi
+
+if [[ "$WITH_SEARCH" -eq 0 ]]; then
+  rm -rf "$ROOT_DIR/_site/pagefind"
+fi
+
+if [[ "$WITH_SEARCH" -eq 1 ]]; then
+  echo "Generating the local Pagefind index ..."
+  npm run build:search
 fi
 
 if [[ "$MODE" == "build" ]]; then

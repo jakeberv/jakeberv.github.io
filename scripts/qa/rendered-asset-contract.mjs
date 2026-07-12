@@ -67,8 +67,12 @@ function localReference(value, { source, siteOrigin, allowedExternalPaths }) {
 
 function extractHtmlReferences(source) {
   const references = [];
+  const renderedSource = source.replace(
+    /<script\b[^>]*\btype\s*=\s*(?:"text\/pagefind-template"|'text\/pagefind-template')[^>]*>[\s\S]*?<\/script\s*>/gi,
+    "",
+  );
   const tagPattern = /<([a-z][\w:-]*)\b([^>]*)>/gi;
-  for (const tagMatch of source.matchAll(tagPattern)) {
+  for (const tagMatch of renderedSource.matchAll(tagPattern)) {
     const tag = tagMatch[1].toLowerCase();
     const attributes = tagMatch[2];
     const attributePattern = /\b(href|src|srcset|poster)\s*=\s*(?:"([^"]*)"|'([^']*)')/gi;

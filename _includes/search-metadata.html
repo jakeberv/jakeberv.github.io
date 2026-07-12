@@ -1,0 +1,14 @@
+{% if page.search != false %}
+  {% assign search_title = page.search_title | default: page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once %}
+  {% assign search_description_source = page.search_description | default: page.excerpt %}
+  {% assign search_description = search_description_source | markdownify | strip_html | strip_newlines | strip | escape_once %}
+  {% if search_description == "" %}
+    {% assign search_description = site.description | escape_once %}
+  {% endif %}
+  {% assign search_type = page.search_type | default: "Pages" %}
+  <meta data-pagefind-meta="title[content]" content="{{ search_title }}">
+  <meta data-pagefind-meta="description[content]" content="{{ search_description }}">
+  <meta data-pagefind-meta="canonical_url[content]" content="{{ page.url | absolute_url }}">
+  <meta data-pagefind-meta="type[content]" data-pagefind-filter="type[content]" content="{{ search_type | escape_once }}">
+  {% if page.date %}<meta data-pagefind-meta="date[content]" content="{{ page.date | date: '%Y-%m-%d' }}">{% endif %}
+{% endif %}

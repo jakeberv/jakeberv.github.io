@@ -3,6 +3,9 @@
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
+      {% if site.search.enabled %}
+        <pagefind-config bundle-path="{{ base_path }}/pagefind/" base-url="{{ base_path | default: '/' }}" excerpt-length="24"></pagefind-config>
+      {% endif %}
       <nav id="site-nav" class="greedy-nav">
         <button class="greedy-nav__toggle hidden" type="button" aria-label="Show navigation menu" aria-expanded="false">
           <span class="navicon"></span>
@@ -26,6 +29,12 @@
             </li>
           {% endfor %}
 
+          {% if site.search.enabled %}
+          <li class="masthead__menu-item masthead__menu-item--search persist">
+            <pagefind-modal-trigger compact hide-shortcut shortcut="mod+k" placeholder="Search site"></pagefind-modal-trigger>
+          </li>
+          {% endif %}
+
           <li class="masthead__menu-item persist tail">
             <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" title="Switch to dark theme">
               <i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true"></i>
@@ -35,6 +44,48 @@
 
         <ul class="hidden-links hidden"></ul>
       </nav>
+
+      {% if site.search.enabled %}
+      <pagefind-modal>
+        <pagefind-modal-header>
+          <pagefind-input placeholder="Search site"></pagefind-input>
+          <pagefind-filter-dropdown filter="type" label="Content" single-select sort="alphabetical"></pagefind-filter-dropdown>
+        </pagefind-modal-header>
+        <pagefind-modal-body>
+          <pagefind-summary></pagefind-summary>
+          <pagefind-results show-images="false" max-sub-results="2">
+            {% raw %}
+            <script type="text/pagefind-template">
+              <li class="pf-result site-search-result">
+                <div class="pf-result-card">
+                  <div class="pf-result-content">
+                    <div class="site-search-result__meta">
+                      {{#if meta.type}}<span>{{ meta.type }}</span>{{/if}}
+                      {{#if meta.date}}<time datetime="{{ meta.date }}">{{ meta.date }}</time>{{/if}}
+                    </div>
+                    <p class="pf-result-title site-search-result__title">
+                      <a class="pf-result-link" href="{{ meta.url | default(url) | safeUrl }}">{{ meta.title }}</a>
+                    </p>
+                    {{#if excerpt}}<p class="pf-result-excerpt">{{+ excerpt +}}</p>{{/if}}
+                  </div>
+                </div>
+                {{#if sub_results}}
+                <ul class="pf-heading-chips site-search-result__sections">
+                  {{#each sub_results as sub}}
+                  <li class="pf-heading-chip"><a class="pf-heading-link" href="{{ sub.url | safeUrl }}">{{ sub.title }}</a></li>
+                  {{/each}}
+                </ul>
+                {{/if}}
+              </li>
+            </script>
+            {% endraw %}
+          </pagefind-results>
+        </pagefind-modal-body>
+        <pagefind-modal-footer>
+          <pagefind-keyboard-hints></pagefind-keyboard-hints>
+        </pagefind-modal-footer>
+      </pagefind-modal>
+      {% endif %}
     </div>
   </div>
 </div>

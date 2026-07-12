@@ -30,4 +30,10 @@
 </script>
 
 <!-- For all browsers -->
+{% if site.search.enabled %}
+<link rel="stylesheet" href="{{ base_path }}/pagefind/pagefind-component-ui.css">
+{% endif %}
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
+{% if site.search.enabled %}
+<script type="module" src="{{ base_path }}/pagefind/pagefind-component-ui.js"></script>
+{% endif %}
