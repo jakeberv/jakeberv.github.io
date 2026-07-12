@@ -134,7 +134,7 @@ Dataset links in `impact_dashboard.json` should remain site-absolute (`/data/imp
 
 ### Upstream source refreshes
 - Scholar refresh workflow: `.github/workflows/fetch_scholar_data.yml` updates `_data/scholar_metrics.json`.
-- Citation geography refresh: `citation_map_parser.R` parses `_data/map.txt` to `_data/map_data.json`.
+- Citation geography refresh: `scripts/analysis/citation_map_parser.R` parses `_data/map.txt` to `_data/map_data.json` when run from the repository root.
 - Altmetric refresh: add/update CSV exports under `data/altmetric/raw/`.
 
 ## Operational checklist
