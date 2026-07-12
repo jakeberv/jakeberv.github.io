@@ -61,7 +61,12 @@ test("R analysis source is sanitized, documented, and lives outside the reposito
   ]);
   assert.match(citationAnalysis, /Sys\.getenv\("SEMANTIC_SCHOLAR_API_KEY"/);
   assert.doesNotMatch(citationAnalysis, /api_key\s*<-\s*["'][^"']+["']/);
+  for (const sourcePath of Object.keys(relocated)) {
+    const rSource = await readFile(path.join(repositoryRoot, sourcePath), "utf8");
+    assert.doesNotMatch(rSource, /install\.packages\s*\(/, `${sourcePath} must not install packages`);
+  }
   assert.match(analysisReadme, /SEMANTIC_SCHOLAR_API_KEY/);
+  assert.match(analysisReadme, /install\.packages\(c\(/);
   assert.match(analysisReadme, /not part of the website build/);
 });
 

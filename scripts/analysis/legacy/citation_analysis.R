@@ -5,13 +5,6 @@ if (!nzchar(api_key)) {
   stop("SEMANTIC_SCHOLAR_API_KEY must be set before running this legacy analysis.")
 }
 
-install.packages("httr")
-install.packages("jsonlite")
-install.packages("igraph")
-install.packages("reticulate")
-install.packages("rvest")
-install.packages("dplyr")
-
 library(httr)
 library(jsonlite)
 library(igraph)
@@ -1798,4 +1791,3 @@ plot(tmp, layout=layout_with_lgl)
   
   
 }
-

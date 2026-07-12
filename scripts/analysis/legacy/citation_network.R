@@ -64,11 +64,6 @@ print_response(response_content)
 
 ## creating a citation network graph using R
 
-install.packages("httr")
-install.packages("jsonlite")
-install.packages("igraph")
-install.packages("reticulate")
-
 library(httr)
 library(jsonlite)
 library(igraph)
@@ -122,4 +117,3 @@ citation_network <- graph_from_data_frame(edges, directed = TRUE)
 
 # Plot the network
 plot(citation_network, vertex.size=5, vertex.label=NA, edge.arrow.size=0.5, main="Citation Network")
-
