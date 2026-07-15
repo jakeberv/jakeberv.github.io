@@ -297,15 +297,23 @@ test("the author menu returns to its closed mobile state after a breakpoint roun
 test("greedy navigation reserves button space and restores the final hidden item", async () => {
   const handlers = { button: {}, window: {} };
   const nav = { width: 1200 };
-  const button = { attrs: {}, classes: new Set(["hidden"]), width: 46 };
+  const button = { attrs: {}, classes: new Set(["hidden"]), styles: {}, width: 46 };
+  const themeControl = { styles: {} };
+  const themeTail = {
+    children: { ".theme-toggle": [themeControl] },
+    persist: true,
+    tail: true,
+    width: 46,
+  };
   const visible = {
     items: [
       { persist: true, width: 180 },
       ...Array.from({ length: 9 }, () => ({ persist: false, width: 100 })),
+      themeTail,
     ],
   };
-  const hidden = { items: [], classes: new Set(["hidden"]) };
-  const persistTail = { items: [] };
+  const hidden = { items: [], classes: new Set(["hidden"]), styles: {} };
+  const persistTail = { items: [themeTail] };
   const windowObject = {};
   const screen = { orientation: { addEventListener() {} } };
 
@@ -316,9 +324,15 @@ test("greedy navigation reserves button space and restores the final hidden item
         target.items.push(item);
         return this;
       },
-      insertBefore() {
+      insertBefore(target) {
         source.items.splice(source.items.indexOf(item), 1);
-        visible.items.push(item);
+        const targetItem = target.items[0];
+        const targetIndex = visible.items.indexOf(targetItem);
+        visible.items.splice(
+          targetIndex >= 0 ? targetIndex : visible.items.length,
+          0,
+          item,
+        );
         return this;
       },
       prependTo(target) {
@@ -331,8 +345,23 @@ test("greedy navigation reserves button space and restores the final hidden item
 
   function childrenCollection(source, filter = () => true) {
     return {
+      get items() {
+        return source.items.filter(filter);
+      },
       get length() {
         return source.items.filter(filter).length;
+      },
+      children(selector) {
+        const childItems = source.items
+          .filter(filter)
+          .flatMap((item) => item.children?.[selector] ?? []);
+        return childrenCollection({ items: childItems });
+      },
+      css(name, value) {
+        source.items.filter(filter).forEach((item) => {
+          item.styles[name] = value;
+        });
+        return this;
       },
       first() {
         return itemCollection(source.items.filter(filter)[0], source);
@@ -340,6 +369,11 @@ test("greedy navigation reserves button space and restores the final hidden item
       last() {
         const items = source.items.filter(filter);
         return itemCollection(items[items.length - 1], source);
+      },
+      outerWidth() {
+        return source.items
+          .filter(filter)
+          .reduce((sum, item) => sum + item.width, 0);
       },
     };
   }
@@ -356,6 +390,10 @@ test("greedy navigation reserves button space and restores the final hidden item
     },
     hasClass(className) {
       return button.classes.has(className);
+    },
+    css(name, value) {
+      button.styles[name] = value;
+      return this;
     },
     on(event, handler) {
       handlers.button[event] = handler;
@@ -390,6 +428,10 @@ test("greedy navigation reserves button space and restores the final hidden item
       return this;
     },
     children: () => childrenCollection(hidden),
+    css(name, value) {
+      hidden.styles[name] = value;
+      return this;
+    },
     hasClass(className) {
       return hidden.classes.has(className);
     },
@@ -423,16 +465,19 @@ test("greedy navigation reserves button space and restores the final hidden item
     { $, screen, window: windowObject },
   );
 
-  nav.width = 1045;
+  nav.width = 1020;
   handlers.window.resize();
 
-  const reservedSpace = nav.width - button.width - 30;
+  const reservedSpace = nav.width - button.width - 8;
   assert.equal(button.classes.has("hidden"), false);
   assert.ok(
     visibleApi.width() <= reservedSpace,
     `visible links use ${visibleApi.width()}px but only ${reservedSpace}px remain`,
   );
   assert.equal(hidden.items.length, 2);
+  assert.equal(button.styles.right, "86px");
+  assert.equal(hidden.styles.right, "86px");
+  assert.equal(themeControl.styles.transform, "translateX(54px)");
   assert.equal(typeof handlers.button.click, "function");
 
   handlers.button.click.call(button);
@@ -445,14 +490,19 @@ test("greedy navigation reserves button space and restores the final hidden item
   assert.equal(button.classes.has("close"), false);
   assert.equal(button.attrs["aria-expanded"], "false");
 
-  nav.width = 1060;
+  nav.width = 1081;
   handlers.window.resize();
   assert.equal(hidden.items.length, 1);
   assert.equal(button.classes.has("hidden"), false);
+  assert.equal(button.styles.right, "47px");
+  assert.equal(hidden.styles.right, "47px");
+  assert.equal(themeControl.styles.transform, "translateX(54px)");
 
-  nav.width = 1090;
+  nav.width = 1127;
   handlers.window.resize();
   assert.equal(hidden.items.length, 0);
   assert.equal(button.classes.has("hidden"), true);
+  assert.equal(button.styles.right, "");
+  assert.equal(hidden.styles.right, "");
   assert.ok(visibleApi.width() <= nav.width);
 });

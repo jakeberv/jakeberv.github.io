@@ -10,15 +10,46 @@ var $vlinks = $("#site-nav .visible-links");
 var $vlinksPersistTail = $vlinks.children(".persist.tail");
 var $hlinks = $("#site-nav .hidden-links");
 var breaks = [];
+var overflowButtonGutter = 8;
+
+function syncOverflowPosition() {
+  if ($btn.hasClass("hidden")) {
+    $btn.css("right", "");
+    $hlinks.css("right", "");
+    $vlinksPersistTail.children(".theme-toggle").css("transform", "");
+    return;
+  }
+
+  var tailWidth = $vlinksPersistTail.length
+    ? $vlinksPersistTail.outerWidth(true)
+    : 0;
+  var buttonLeft = Math.max(
+    $vlinks.width() - tailWidth + overflowButtonGutter,
+    0,
+  );
+  var offset = Math.max(
+    $nav.width() - buttonLeft - $btn.width(),
+    0,
+  );
+
+  $btn.css("right", offset + "px");
+  $hlinks.css("right", offset + "px");
+  $vlinksPersistTail
+    .children(".theme-toggle")
+    .css(
+      "transform",
+      "translateX(" + ($btn.width() + overflowButtonGutter) + "px)",
+    );
+}
 
 function updateNav() {
   var availableSpace = $btn.hasClass("hidden")
     ? $nav.width()
-    : $nav.width() - $btn.width() - 30;
+    : $nav.width() - $btn.width() - overflowButtonGutter;
 
   if ($vlinks.width() > availableSpace) {
     $btn.removeClass("hidden");
-    availableSpace = $nav.width() - $btn.width() - 30;
+    availableSpace = $nav.width() - $btn.width() - overflowButtonGutter;
 
     while (
       $vlinks.width() > availableSpace &&
@@ -26,7 +57,7 @@ function updateNav() {
     ) {
       breaks.push($vlinks.width());
       $vlinks.children(":not(.persist)").last().prependTo($hlinks);
-      availableSpace = $nav.width() - $btn.width() - 30;
+      availableSpace = $nav.width() - $btn.width() - overflowButtonGutter;
     }
   } else {
     while (
@@ -51,6 +82,7 @@ function updateNav() {
   }
 
   $btn.attr("count", breaks.length);
+  syncOverflowPosition();
 }
 
 $(window).on("resize", updateNav);
