@@ -194,6 +194,9 @@ $breadcrumb-font-size: 1.75em;
 
   > .greedy-nav__toggle {
     position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     right: 0;
     width: 3rem;
