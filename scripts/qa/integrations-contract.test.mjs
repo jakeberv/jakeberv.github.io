@@ -10,6 +10,10 @@ function read(relativePath) {
   return readFileSync(path.join(repoRoot, relativePath), "utf8");
 }
 
+function xIconLabelPattern(labelPattern) {
+  return new RegExp(`<i\\b(?=[^>]*\\bclass=["'][^"']*\\bfa-x-twitter\\b)[^>]*></i>\\s*${labelPattern}</a>`);
+}
+
 test("analytics configuration prefers an ordered provider list with active GA4", () => {
   const config = read("_config.yml");
   const analyticsStart = config.indexOf("analytics:\n");
@@ -84,17 +88,19 @@ test("author profiles expose the v0.9 identity hooks without activating accounts
   assert.match(profile, /gitlab\.com\/\{\{ author\.gitlab \}\}/);
   assert.match(profile, /https:\/\/x\.com\/\{\{ author\.twitter \}\}/);
   assert.match(profile, /fa-x-twitter/);
-  assert.match(profile, />X<\/a>/);
+  assert.match(profile, xIconLabelPattern("@\\{\\{\\s*author\\.twitter\\s*\\}\\}"));
+  assert.doesNotMatch(profile, xIconLabelPattern("X"));
 });
 
-test("active social presentation uses X while preserving Twitter Card metadata", () => {
+test("active social presentation uses X handles while preserving Twitter Card metadata", () => {
   const footer = read("_includes/footer.html");
   const seo = read("_includes/seo.html");
   const config = read("_config.yml");
 
   assert.match(footer, /https:\/\/x\.com\/\{\{ site\.twitter\.username \}\}/);
   assert.match(footer, /fa-x-twitter/);
-  assert.match(footer, /> X<\/a>/);
+  assert.match(footer, xIconLabelPattern("@\\{\\{\\s*site\\.twitter\\.username\\s*\\}\\}"));
+  assert.doesNotMatch(footer, xIconLabelPattern("X"));
   assert.match(config, /https:\/\/x\.com\/jakeberv/);
   assert.doesNotMatch(config, /https:\/\/twitter\.com\/jakeberv/);
   assert.match(seo, /name="twitter:card"/);

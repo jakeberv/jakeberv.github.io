@@ -44,7 +44,7 @@
           <li><a href="{{ author.researchgate }}"><i class="fa-brands fa-fw fa-researchgate" aria-hidden="true"></i>ResearchGate</a></li>
         {% endif %}
         {% if author.twitter %}
-          <li><a href="https://x.com/{{ author.twitter }}"><i class="fa-brands fa-fw fa-x-twitter" aria-hidden="true"></i>X</a></li>
+          <li><a href="https://x.com/{{ author.twitter }}" aria-label="X profile for @{{ author.twitter }}"><i class="fa-brands fa-fw fa-x-twitter" aria-hidden="true"></i>@{{ author.twitter }}</a></li>
         {% endif %}
         {% if author.mastodon %}
           <li><a rel="me" href="{{ author.mastodon }}"><i class="fa-brands fa-fw fa-mastodon" aria-hidden="true"></i>Mastodon</a></li>
