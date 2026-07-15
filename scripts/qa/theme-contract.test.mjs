@@ -118,7 +118,8 @@ test("the light-first runtime does not consult system color preference", async (
   assert.match(head, /localStorage\.getItem\("theme"\)/);
   assert.match(masthead, /id="theme-toggle"[^>]+aria-pressed="false"/);
   assert.match(masthead, /greedy-nav__toggle/);
-  assert.match(masthead, /<span class="navicon"><\/span>/);
+  assert.match(masthead, /aria-label="Show more navigation links"/);
+  assert.match(masthead, /class="greedy-nav__icon fa-solid fa-ellipsis"/);
   assert.match(main, /new CustomEvent\("site:themechange"/);
 });
 

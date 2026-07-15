@@ -194,18 +194,30 @@ $breadcrumb-font-size: 1.75em;
 
   > .greedy-nav__toggle {
     position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     right: 0;
-    padding: 0 0.5rem;
+    width: 3rem;
+    padding: 0;
     border: 0;
     outline: none;
-    background-color: var(--global-base-color);
-    color: var(--site-base-contrast);
+    background-color: transparent;
+    color: var(--global-masthead-link-color);
     cursor: pointer;
+
+    &:hover {
+      color: var(--global-masthead-link-color-hover);
+    }
 
     &:focus-visible {
       outline: 2px solid var(--site-focus-ring);
       outline-offset: -3px;
+    }
+
+    &.close .greedy-nav__icon {
+      --fa: "\f00d";
     }
   }
 
