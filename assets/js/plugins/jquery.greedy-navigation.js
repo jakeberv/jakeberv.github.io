@@ -60,9 +60,17 @@ if (screen.orientation && screen.orientation.addEventListener) {
 }
 
 $btn.on("click", function () {
+  var isOpening = $hlinks.hasClass("hidden");
+
   $hlinks.toggleClass("hidden");
-  $(this).toggleClass("close");
-  $(this).attr("aria-expanded", $(this).hasClass("close") ? "true" : "false");
+
+  if (isOpening) {
+    $(this).addClass("close");
+  } else {
+    $(this).removeClass("close");
+  }
+
+  $(this).attr("aria-expanded", isOpening ? "true" : "false");
 });
 
 updateNav();

@@ -295,7 +295,7 @@ test("the author menu returns to its closed mobile state after a breakpoint roun
 });
 
 test("greedy navigation reserves button space and restores the final hidden item", async () => {
-  const handlers = { window: {} };
+  const handlers = { button: {}, window: {} };
   const nav = { width: 1200 };
   const button = { attrs: {}, classes: new Set(["hidden"]), width: 46 };
   const visible = {
@@ -357,7 +357,8 @@ test("greedy navigation reserves button space and restores the final hidden item
     hasClass(className) {
       return button.classes.has(className);
     },
-    on() {
+    on(event, handler) {
+      handlers.button[event] = handler;
       return this;
     },
     removeClass(className) {
@@ -389,6 +390,9 @@ test("greedy navigation reserves button space and restores the final hidden item
       return this;
     },
     children: () => childrenCollection(hidden),
+    hasClass(className) {
+      return hidden.classes.has(className);
+    },
     toggleClass(className) {
       hidden.classes.has(className)
         ? hidden.classes.delete(className)
@@ -429,6 +433,17 @@ test("greedy navigation reserves button space and restores the final hidden item
     `visible links use ${visibleApi.width()}px but only ${reservedSpace}px remain`,
   );
   assert.equal(hidden.items.length, 2);
+  assert.equal(typeof handlers.button.click, "function");
+
+  handlers.button.click.call(button);
+  assert.equal(hidden.classes.has("hidden"), false);
+  assert.equal(button.classes.has("close"), true);
+  assert.equal(button.attrs["aria-expanded"], "true");
+
+  handlers.button.click.call(button);
+  assert.equal(hidden.classes.has("hidden"), true);
+  assert.equal(button.classes.has("close"), false);
+  assert.equal(button.attrs["aria-expanded"], "false");
 
   nav.width = 1060;
   handlers.window.resize();
