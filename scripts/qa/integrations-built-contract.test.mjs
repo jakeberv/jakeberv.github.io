@@ -33,7 +33,7 @@ function sharedPage({ ga4Id = "", share = true } = {}) {
       <a href="https://x.com/intent/post?text=Example&amp;url=https%3A%2F%2Fexample.test%2Fpage%2F">X</a>
     </div></section>` : "";
 
-  return `<!doctype html><html><body><a href="https://x.com/jakeberv">X</a>${sharing}${analytics}</body></html>`;
+  return `<!doctype html><html><body><a href="https://x.com/jakeberv">@jakeberv</a>${sharing}${analytics}</body></html>`;
 }
 
 async function withSite(files, callback) {
@@ -95,7 +95,7 @@ test("X profile validation accepts configured handles but not share intents", as
     await validateBuiltIntegrations({ siteDirectory });
   });
 
-  const shareIntentOnly = sharedPage().replace('<a href="https://x.com/jakeberv">X</a>', "");
+  const shareIntentOnly = sharedPage().replace('<a href="https://x.com/jakeberv">@jakeberv</a>', "");
   await withSite({ "index.html": shareIntentOnly }, async (siteDirectory) => {
     await assert.rejects(
       validateBuiltIntegrations({ siteDirectory }),

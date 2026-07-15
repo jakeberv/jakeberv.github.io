@@ -84,17 +84,19 @@ test("author profiles expose the v0.9 identity hooks without activating accounts
   assert.match(profile, /gitlab\.com\/\{\{ author\.gitlab \}\}/);
   assert.match(profile, /https:\/\/x\.com\/\{\{ author\.twitter \}\}/);
   assert.match(profile, /fa-x-twitter/);
-  assert.match(profile, />X<\/a>/);
+  assert.match(profile, />@\{\{ author\.twitter \}\}<\/a>/);
+  assert.doesNotMatch(profile, />X<\/a>/);
 });
 
-test("active social presentation uses X while preserving Twitter Card metadata", () => {
+test("active social presentation uses X handles while preserving Twitter Card metadata", () => {
   const footer = read("_includes/footer.html");
   const seo = read("_includes/seo.html");
   const config = read("_config.yml");
 
   assert.match(footer, /https:\/\/x\.com\/\{\{ site\.twitter\.username \}\}/);
   assert.match(footer, /fa-x-twitter/);
-  assert.match(footer, /> X<\/a>/);
+  assert.match(footer, /> @\{\{ site\.twitter\.username \}\}<\/a>/);
+  assert.doesNotMatch(footer, /> X<\/a>/);
   assert.match(config, /https:\/\/x\.com\/jakeberv/);
   assert.doesNotMatch(config, /https:\/\/twitter\.com\/jakeberv/);
   assert.match(seo, /name="twitter:card"/);
