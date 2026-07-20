@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-13T09:52:31.695143+00:00",
+  "generated_at_utc": "2026-07-20T09:38:00.474007+00:00",
   "input": {
     "source_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/exports/news_mentions_clean.json",
     "news_mentions_rows_input": 345,
@@ -14,21 +14,21 @@
   },
   "source": {
     "source": "tranco_api",
-    "list_id": "26QN9",
-    "download_url": "https://tranco-list.eu/download/26QN9/1000000",
-    "created_on": "2026-07-12T22:00:01.653992",
-    "retrieved_at_utc": "2026-07-13T09:48:51.834384+00:00",
+    "list_id": "64YYX",
+    "download_url": "https://tranco-list.eu/download/64YYX/1000000",
+    "created_on": "2026-07-19T22:00:01.567913",
+    "retrieved_at_utc": "2026-07-20T09:36:20.396253+00:00",
     "cache_hit": false,
-    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_26QN9.csv.zip",
-    "ranked_domains": 130
+    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_64YYX.csv.zip",
+    "ranked_domains": 131
   },
   "coverage": {
-    "domains_matched": 136,
-    "domains_unmatched": 23,
-    "domain_match_rate": 0.8553,
-    "mentions_ranked": 273,
+    "domains_matched": 137,
+    "domains_unmatched": 22,
+    "domain_match_rate": 0.8616,
+    "mentions_ranked": 274,
     "mentions_total": 302,
-    "mention_coverage_rate": 0.904
+    "mention_coverage_rate": 0.9073
   },
   "time_adjusted": {
     "enabled": true,
@@ -39,8 +39,8 @@
     "unique_tranco_lists": 15,
     "mentions_total": 302,
     "mentions_assigned_snapshot": 302,
-    "mentions_ranked_at_date": 244,
-    "ranked_coverage_rate": 0.8079,
+    "mentions_ranked_at_date": 283,
+    "ranked_coverage_rate": 0.9371,
     "median_abs_snapshot_offset_days": 34,
     "max_abs_snapshot_offset_days": 1588,
     "earliest_snapshot_date": "2019-02-18",
@@ -173,12 +173,6 @@
       "last_mention_date": "2022-11-26T22:24:01"
     },
     {
-      "domain": "trueviralnews.com",
-      "mentions": 1,
-      "top_outlet": "True Viral News",
-      "last_mention_date": "2021-10-11T18:38:02"
-    },
-    {
       "domain": "uktimenews.com",
       "mentions": 1,
       "top_outlet": "UK Time News",
@@ -191,7 +185,5 @@
       "last_mention_date": "2015-02-12T17:11:00"
     }
   ],
-  "warnings": [
-    "Historical Tranco fetch failed for KJ3KW: TimeoutError: The read operation timed out"
-  ]
+  "warnings": []
 }
