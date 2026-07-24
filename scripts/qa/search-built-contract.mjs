@@ -9,7 +9,7 @@ const repositoryRoot = path.resolve(path.dirname(modulePath), "../..");
 
 export const EXPECTED_SEARCH_TYPE_COUNTS = Object.freeze({
   News: 170,
-  Publications: 26,
+  Publications: 27,
   Research: 5,
   Software: 1,
   Talks: 2,
@@ -136,8 +136,8 @@ export function validatePagefindInventory(files, { entrySource } = {}) {
     if (entry.version !== "1.5.2") violations.push(`Pagefind bundle version: expected 1.5.2, found ${entry.version}`);
     const indexedPages = Object.values(entry.languages || {})
       .reduce((total, language) => total + Number(language?.page_count || 0), 0);
-    if (indexedPages !== 209) {
-      violations.push(`Pagefind indexed-page count: expected 209, found ${indexedPages}`);
+    if (indexedPages !== 210) {
+      violations.push(`Pagefind indexed-page count: expected 210, found ${indexedPages}`);
     }
   }
 

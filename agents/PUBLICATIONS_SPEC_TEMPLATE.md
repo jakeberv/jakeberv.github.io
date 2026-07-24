@@ -17,6 +17,7 @@ Your publications index page groups and renders items from the `publications` co
   - `citation` (optional but widely used; currently rendered as HTML)
   - `link` (optional; used as fallback external link, and DOI fallback source when it is a `doi.org` URL)
   - `paperurl` (optional; PDF icon in list/card contexts, and compact `PDF` text link in single-page citation header contexts)
+  - `free_access_url` (optional; free-to-read publisher or SharedIt link rendered separately from the PDF action)
   - `code` (optional; code icon)
   - `github` (optional; GitHub icon)
   - `authors`, `student_authors`, `equal_contrib` (optional; structured author line + contribution markers/notes)
@@ -101,6 +102,7 @@ Rendering note:
 - `abstract` *(YAML block scalar; preferred so the publications list can show it)*
 
 ### Additional links (optional)
+- `free_access_url`
 - `data_url`
 - `supplement_url`
 - `slides_url`
@@ -136,7 +138,11 @@ For consistency with current entries, prefer:
 
 This avoids brittle publisher/session URLs and keeps download buttons stable.
 
-### 5) Prefer compact link labels over raw long URL text in body citation prose
+### 5) Keep free-access links distinct from the PDF action
+- Use `free_access_url` for a publisher-provided free-to-read or SharedIt link.
+- `paperurl` remains the PDF-labelled action; when both fields are present, the renderer shows separate `PDF` and `Free access` links.
+
+### 6) Prefer compact link labels over raw long URL text in body citation prose
 - For body-level "Recommended citation" lines, prefer markdown links such as `[DOI](https://doi.org/...)` over bare URL text.
 - This improves mobile rendering stability and avoids horizontal overflow from long unbroken URL strings.
 
@@ -165,6 +171,7 @@ venue: "JOURNAL / OUTLET"
 # Backwards-compatible links (keep these)
 link: "https://doi.org/DOI_GOES_HERE"            # external link; used by icons + altmetric
 paperurl: "https://github.com/jakeberv/jakeberv.github.io/raw/master/files/pdf/papers/FILE.pdf"  # preferred PDF mirror
+free_access_url: ""                              # optional publisher/SharedIt free-access link
 
 # Optional legacy icons (keep if used)
 code: "URL_TO_CODE_OR_REPO"

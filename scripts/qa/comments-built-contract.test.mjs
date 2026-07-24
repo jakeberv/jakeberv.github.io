@@ -39,7 +39,7 @@ test("missing production output reports the required build step", async () => {
 test("default production output contains no comment provider surface", async () => {
   await requireSiteDirectory(siteDirectory);
   const files = await htmlFiles(siteDirectory);
-  assert.equal(files.length, 220);
+  assert.equal(files.length, 221);
   const forbidden = [
     /id=["']disqus_thread["']/i,
     /id=["']discourse-comments["']/i,

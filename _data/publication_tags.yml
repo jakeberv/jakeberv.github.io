@@ -5,8 +5,8 @@
 # type: article
 # tags: [birds, phylogenomics, macroevolution]
 
-version: 2
-updated: 2026-02-20
+version: 3
+updated: 2026-07-23
 
 usage_rules:
   tags_per_item: "3-5 recommended"
@@ -95,6 +95,11 @@ tags:
     label: Macroevolution
     group: processes
     description: Deep-time diversification and trait evolution.
+
+  - slug: macroecology
+    label: Macroecology
+    group: processes
+    description: Broad-scale relationships among biodiversity, traits, geography, and environmental gradients.
 
   - slug: mass-extinction
     label: Mass Extinction
