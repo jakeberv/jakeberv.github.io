@@ -193,8 +193,8 @@ if ! command -v node >/dev/null 2>&1; then
   exit 1
 fi
 
-echo "Validating publications interdisciplinarity braid stats ..."
-node scripts/qa/validate-publications-interdisciplinarity-stats.mjs
+echo "Generating publications interdisciplinarity braid stats ..."
+npm run build:publication-stats
 
 if [[ "$SKIP_DATA" -eq 1 ]]; then
   echo "Skipping geo/impact data validation and generation (default mode). Use --with-data to run them."
