@@ -5,7 +5,7 @@ const contract = await import("./search-built-contract.mjs");
 
 const expectedTypeCounts = {
   News: 170,
-  Publications: 26,
+  Publications: 27,
   Research: 5,
   Software: 1,
   Talks: 2,
@@ -34,7 +34,7 @@ test("the built-search validator accepts exact routes and content types", () => 
   }
 
   const result = contract.validateSearchPages({ pages, expectedRoutes, expectedTypeCounts });
-  assert.equal(result.pages, 209);
+  assert.equal(result.pages, 210);
   assert.deepEqual(result.typeCounts, expectedTypeCounts);
 });
 
@@ -78,7 +78,7 @@ test("the Pagefind bundle inventory requires component assets and forbids playgr
   ];
   const entrySource = JSON.stringify({
     version: "1.5.2",
-    languages: { en: { page_count: 209 } },
+    languages: { en: { page_count: 210 } },
   });
   assert.equal(contract.validatePagefindInventory(valid, { entrySource }).files, valid.length);
   assert.throws(
@@ -102,6 +102,6 @@ test("the Pagefind bundle inventory requires component assets and forbids playgr
         languages: { en: { page_count: 208 } },
       }),
     }),
-    /Pagefind indexed-page count: expected 209, found 208/,
+    /Pagefind indexed-page count: expected 210, found 208/,
   );
 });

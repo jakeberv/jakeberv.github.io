@@ -197,6 +197,7 @@ publication/2026-04-14-Berv_et_al_2026.html
 publication/2026-06-22-Balakrishnan_et_al_2026.html
 publication/2026-06-23-Probst_et_al_2026.html
 publication/2026-06-26-Formenti_et_al_2026.html
+publication/2026-07-20-Berv_et_al_2026.html
 publications/index.html
 research/index.html
 research/neotropical_biogeo/index.html
