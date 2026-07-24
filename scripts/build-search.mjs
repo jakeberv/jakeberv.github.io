@@ -57,8 +57,8 @@ export async function buildSearch() {
       if (!added.file) throw new Error(`Pagefind did not return an indexed file for ${route}.`);
       indexedPages += 1;
     }
-    if (indexedPages !== 210) {
-      throw new Error(`Pagefind indexed ${indexedPages} documents; expected 210.`);
+    if (indexedPages !== 211) {
+      throw new Error(`Pagefind indexed ${indexedPages} documents; expected 211.`);
     }
 
     const written = await index.writeFiles({ outputPath: temporaryDirectory });

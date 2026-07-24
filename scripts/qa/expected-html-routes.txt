@@ -176,6 +176,7 @@ news/2026-04-14-bifrost-preprint/index.html
 news/2026-06-22-manakin-genomics-current-biology/index.html
 news/2026-06-23-temperature-relative-mass-passerines/index.html
 news/2026-06-26-vertebrate-genomes-project-phase-i-preprint/index.html
+news/2026-07-20-passerine-body-plan-evolution/index.html
 news/index.html
 posts/index.html
 publication/2014-09-16-Berv_Prum_2014.html

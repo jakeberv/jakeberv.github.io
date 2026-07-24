@@ -129,14 +129,14 @@ test("the reusable artifact validator tolerates CRLF route manifests", async () 
   assert.match(artifactContract, /\.split\(\/\\r\?\\n\/\)/);
 });
 
-test("the route contract contains only the 221 intended public HTML routes", async () => {
+test("the route contract contains only the 222 intended public HTML routes", async () => {
   const [themeMatrix, manifestSource] = await Promise.all([
     source("scripts/qa/theme-build-matrix.mjs"),
     source("scripts/qa/expected-html-routes.txt"),
   ]);
   const routes = manifestSource.trim().split(/\r?\n/);
 
-  assert.equal(routes.length, 221);
+  assert.equal(routes.length, 222);
   assert.equal(routes.some((route) => /^(?:AGENTS|agents|docs\/superpowers)\//.test(route)), false);
   assert.doesNotMatch(themeMatrix, /canonicalizeRoute/);
   assert.match(themeMatrix, /validateSiteArtifact/);
