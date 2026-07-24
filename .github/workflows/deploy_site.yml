@@ -44,6 +44,9 @@ jobs:
       - name: Validate publication method tags
         run: node scripts/qa/validate-publication-method-tags.mjs
 
+      - name: Generate publication interdisciplinarity stats
+        run: npm run build:publication-stats
+
       - name: Generate career and talk map data
         run: node scripts/build-career-geo-data.mjs
 

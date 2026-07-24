@@ -2,6 +2,9 @@
 _site/
 .jekyll-metadata
 
+# Generated Jekyll data
+/_data/publications_interdisciplinarity_stats.json
+
 # Node.js dependencies
 node_modules/
 

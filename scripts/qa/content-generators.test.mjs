@@ -183,6 +183,34 @@ test("publication taxonomies expose the new reusable topic and method tags", () 
   assert.match(methods, /^  - id: spatial_ecological_modeling$/m);
 });
 
+test("supported builds generate publication interdisciplinarity stats", () => {
+  const packageJson = JSON.parse(fs.readFileSync(path.join(repoRoot, "package.json"), "utf8"));
+  const workflow = fs.readFileSync(
+    path.join(repoRoot, ".github/workflows/deploy_site.yml"),
+    "utf8",
+  );
+  const preview = fs.readFileSync(path.join(repoRoot, "scripts/local_preview.command"), "utf8");
+  const ignore = fs.readFileSync(path.join(repoRoot, ".gitignore"), "utf8");
+  const generation = workflow.indexOf("npm run build:publication-stats");
+  const themeBuilds = workflow.indexOf("npm run test:themes");
+  const siteBuild = workflow.indexOf("bundle exec jekyll build --safe --config _config.yml");
+
+  assert.equal(
+    packageJson.scripts["build:publication-stats"],
+    "node scripts/qa/validate-publications-interdisciplinarity-stats.mjs --write",
+  );
+  assert.ok(generation >= 0, "CI must generate the publication statistics");
+  assert.ok(themeBuilds >= 0, "CI theme builds command must exist");
+  assert.ok(siteBuild >= 0, "CI production Jekyll build command must exist");
+  assert.ok(generation < themeBuilds, "statistics generation must precede theme builds");
+  assert.ok(generation < siteBuild, "statistics generation must precede the production build");
+  assert.match(preview, /if ! command -v npm >\/dev\/null 2>&1; then/);
+  assert.match(preview, /npm is required to generate publication interdisciplinarity stats\./);
+  assert.match(preview, /Generating publications interdisciplinarity braid stats/);
+  assert.match(preview, /npm run build:publication-stats/);
+  assert.match(ignore, /^\/_data\/publications_interdisciplinarity_stats\.json$/m);
+});
+
 test("publication defaults are explicit when optional columns are omitted", (t) => {
   const temp = temporaryDirectory(t);
   const input = path.join(temp, "publications.tsv");

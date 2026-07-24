@@ -22,6 +22,7 @@
   },
   "scripts": {
     "build:js": "node scripts/build-js.mjs",
+    "build:publication-stats": "node scripts/qa/validate-publications-interdisciplinarity-stats.mjs --write",
     "build:search": "node scripts/build-search.mjs",
     "check:academicons": "node --test scripts/qa/academicons-contract.test.mjs",
     "check:assets": "node scripts/qa/rendered-asset-contract.mjs",
