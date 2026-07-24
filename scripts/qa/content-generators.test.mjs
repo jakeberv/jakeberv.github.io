@@ -154,6 +154,35 @@ test("publication breadcrumbs align their collection URL and label", () => {
   assert.match(breadcrumbs, /itemprop="name">\{\{ breadcrumb_label \}\}/);
 });
 
+test("publication free-access links remain distinct from PDF links", () => {
+  const archive = fs.readFileSync(
+    path.join(repoRoot, "_includes/archive-single-pubs-v2.html"),
+    "utf8",
+  );
+  const single = fs.readFileSync(path.join(repoRoot, "_layouts/single.html"), "utf8");
+
+  assert.ok(archive.includes("{% if post.free_access_url %}"));
+  assert.ok(archive.includes('href="{{ post.free_access_url }}"'));
+  assert.ok(archive.includes('title="Free access"'));
+  assert.ok(archive.includes('<span class="sr-only">Free access</span>'));
+  assert.ok(single.includes("page.free_access_url"));
+  assert.ok(single.includes('href="{{ page.free_access_url }}"'));
+  assert.ok(single.includes("<u>Free access</u>"));
+});
+
+test("publication taxonomies expose the new reusable topic and method tags", () => {
+  const topics = fs.readFileSync(path.join(repoRoot, "_data/publication_tags.yml"), "utf8");
+  const methods = fs.readFileSync(
+    path.join(repoRoot, "_data/research_method_tags.yml"),
+    "utf8",
+  );
+
+  assert.match(topics, /^  - slug: macroecology$/m);
+  assert.match(methods, /^  - id: multivariate_trait_analysis$/m);
+  assert.match(methods, /^  - id: model_shift_analysis$/m);
+  assert.match(methods, /^  - id: spatial_ecological_modeling$/m);
+});
+
 test("publication defaults are explicit when optional columns are omitted", (t) => {
   const temp = temporaryDirectory(t);
   const input = path.join(temp, "publications.tsv");

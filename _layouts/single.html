@@ -50,8 +50,8 @@ layout: default
         
              
         {% assign publication_slides_url = page.slidesurl | default: page.slides_url %}
-        {% if page.citation or page.paperurl or publication_slides_url or page.bibtexurl %}
-          <p>{% if page.citation %}Recommended citation: {{ page.citation }} {% endif %}{% if page.paperurl %}<a href="{{ page.paperurl }}"><u>PDF</u></a>{% endif %}{% if publication_slides_url %}{% if page.paperurl %} · {% endif %}<a href="{{ publication_slides_url }}"><u>Slides</u></a>{% endif %}{% if page.bibtexurl %}{% if page.paperurl or publication_slides_url %} · {% endif %}<a href="{{ page.bibtexurl }}"><u>BibTeX</u></a>{% endif %}</p>
+        {% if page.citation or page.paperurl or page.free_access_url or publication_slides_url or page.bibtexurl %}
+          <p>{% if page.citation %}Recommended citation: {{ page.citation }} {% endif %}{% if page.paperurl %}<a href="{{ page.paperurl }}"><u>PDF</u></a>{% endif %}{% if page.free_access_url %}{% if page.paperurl %} · {% endif %}<a href="{{ page.free_access_url }}" target="_blank" rel="noopener"><u>Free access</u></a>{% endif %}{% if publication_slides_url %}{% if page.paperurl or page.free_access_url %} · {% endif %}<a href="{{ publication_slides_url }}"><u>Slides</u></a>{% endif %}{% if page.bibtexurl %}{% if page.paperurl or page.free_access_url or publication_slides_url %} · {% endif %}<a href="{{ page.bibtexurl }}"><u>BibTeX</u></a>{% endif %}</p>
         {% endif %}
     
         </header>

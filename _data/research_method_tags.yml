@@ -1,7 +1,7 @@
-version: 6
+version: 7
 canonical_name: research_method_tags
 description: Canonical, method-first tag registry for landing-page summaries, publication tagging, faceted filtering, and method crosswalks.
-last_updated: 2026-02-20
+last_updated: 2026-07-23
 
 registry_rules:
   source_of_truth: true
@@ -307,6 +307,25 @@ tags:
     aliases: [trait process models]
     keywords: [trait evolution, model comparison]
     priority: core
+  - id: multivariate_trait_analysis
+    label: Multivariate Trait Analysis
+    method_family: comparative_trait_modeling
+    scope: multi_scale
+    analysis_type: inference
+    data_modalities: [phenotypic_data, morphological_data, behavioral_data]
+    aliases: [multivariate phenotype analysis, high-dimensional trait analysis]
+    keywords: [multivariate traits, trait covariance, high-dimensional phenotype]
+    priority: core
+  - id: model_shift_analysis
+    label: Model-Shift Analysis
+    method_family: comparative_trait_modeling
+    scope: multi_scale
+    analysis_type: inference
+    data_modalities: [phenotypic_data, morphological_data, behavioral_data]
+    aliases: [evolutionary regime-shift analysis, model-regime detection]
+    keywords: [model shifts, regime shifts, heterogeneous evolution]
+    usage_notes: Use for shifts among evolutionary trait models or regimes; use diversification tags for speciation-extinction rate shifts.
+    priority: supporting
   - id: life_history_rate_association
     label: Life-History and Evolutionary-Rate Association Models
     method_family: comparative_trait_modeling
@@ -471,6 +490,15 @@ tags:
     data_modalities: [ecological_data, fossil_data, sequence_data]
     aliases: [ecological filtering in deep time]
     keywords: [macroecology, macroevolution, ecological filtering]
+    priority: core
+  - id: spatial_ecological_modeling
+    label: Spatial Ecological Modeling
+    method_family: biogeographic_inference
+    scope: multi_scale
+    analysis_type: inference
+    data_modalities: [geographic_data, ecological_data, phenotypic_data]
+    aliases: [spatial ecological analysis, spatial regression]
+    keywords: [spatial autocorrelation, environmental gradients, assemblage modeling]
     priority: core
   - id: geographic_range_transition_modeling
     label: Geographic Range Transition Modeling

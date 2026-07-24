@@ -122,6 +122,9 @@
         {% if post.paperurl %}
           <a href="{{ post.paperurl }}" class="pub-action" target="_blank" rel="noopener" title="PDF"><i class="fa-solid fa-fw fa-file-pdf zoom" aria-hidden="true"></i><span class="sr-only">PDF</span></a>
         {% endif %}
+        {% if post.free_access_url %}
+          <a href="{{ post.free_access_url }}" class="pub-action" target="_blank" rel="noopener" title="Free access"><i class="fa-solid fa-fw fa-unlock zoom" aria-hidden="true"></i><span class="sr-only">Free access</span></a>
+        {% endif %}
         {% if post.code %}
           <a href="{{ post.code }}" class="pub-action" target="_blank" rel="noopener" title="Code"><i class="fa-solid fa-fw fa-code zoom" aria-hidden="true"></i><span class="sr-only">Code</span></a>
         {% endif %}
