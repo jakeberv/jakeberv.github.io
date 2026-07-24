@@ -22,7 +22,7 @@ search_type: Software
     </div>
 
     <div class="software-card__body">
-      <p><code>bifrost</code> is an R package for branch-level inference of multi-regime, multivariate trait evolution on phylogenies. It uses penalized-likelihood multivariate GLS to detect where, when, and how evolutionary rate regimes shift across a tree, operating directly in trait space (no PCA required) and scaling to high-dimensional datasets and large phylogenies. A preprint describing this package is available in <a href="https://doi.org/10.64898/2026.04.12.718036">Berv et al. (2026)</a>.</p>
+      <p><code>bifrost</code> is an R package for branch-level inference of multi-regime, multivariate trait evolution on phylogenies. It uses penalized-likelihood multivariate GLS to detect where, when, and how evolutionary rate regimes shift across a tree, operating directly in trait space (no PCA required) and scaling to high-dimensional datasets and large phylogenies. The package is described in a <a href="https://doi.org/10.64898/2026.04.12.718036">bioRxiv preprint</a>. The rate-shift workflow generalized in <code>bifrost</code> also underpins <a href="https://doi.org/10.1038/s41559-026-03110-5">Berv et al. (2026)</a> in <em>Nature Ecology &amp; Evolution</em>, a large-scale analysis of body-plan evolution across 2,057 passerine species.</p>
 
       <hr class="soft-sep" />
 
@@ -34,7 +34,8 @@ search_type: Software
         📦 <a href="https://github.com/jakeberv/bifrost">Repository</a> &nbsp;•&nbsp;
         📖 <a href="https://jakeberv.com/bifrost">Documentation (pkgdown)</a> &nbsp;•&nbsp;
         📄 <a href="https://jakeberv.com/bifrost/articles/jaw-shape-vignette.html">Getting Started vignette</a> &nbsp;•&nbsp;
-        📄 <a href="https://doi.org/10.64898/2026.04.12.718036">Berv et al. (2026), <em>bioRxiv</em></a>
+        📄 <a href="https://doi.org/10.64898/2026.04.12.718036">Software paper: Berv et al. (2026), <em>bioRxiv</em></a> &nbsp;•&nbsp;
+        📄 <a href="https://doi.org/10.1038/s41559-026-03110-5">Empirical application: Berv et al. (2026), <em>Nature Ecology &amp; Evolution</em></a> (<a href="https://rdcu.be/fuxB1">free access</a>)
       </div>
     </div>
   </div>
