@@ -36,7 +36,7 @@ function routes(sourceText) {
   return sourceText.trim().split(/\r?\n/).filter(Boolean);
 }
 
-test("the search manifest contains the intended 210-document subset", async () => {
+test("the search manifest contains the intended 211-document subset", async () => {
   const [siteManifestSource, searchManifestSource] = await Promise.all([
     source("scripts/qa/expected-html-routes.txt"),
     source("scripts/qa/expected-search-routes.txt"),
@@ -44,9 +44,9 @@ test("the search manifest contains the intended 210-document subset", async () =
   const siteRoutes = routes(siteManifestSource);
   const searchRoutes = routes(searchManifestSource);
 
-  assert.equal(siteRoutes.length, 221);
-  assert.equal(searchRoutes.length, 210);
-  assert.equal(new Set(searchRoutes).size, 210, "search routes must be unique");
+  assert.equal(siteRoutes.length, 222);
+  assert.equal(searchRoutes.length, 211);
+  assert.equal(new Set(searchRoutes).size, 211, "search routes must be unique");
   assert.deepEqual(
     siteRoutes.filter((route) => !searchRoutes.includes(route)),
     [...excludedRoutes],

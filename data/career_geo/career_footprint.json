@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-02-21T02:42:27.297Z",
+  "generated_at": "2026-07-24T04:06:03.398Z",
   "source": "_news geo front matter",
-  "entry_count": 165,
+  "entry_count": 170,
   "entries": [
     {
       "id": "2005-06-15-yale-school-of-medicine-molecular-neuroscience-internship",
@@ -2607,7 +2607,7 @@
           "weight": 1
         }
       ],
-      "excerpt": "Additional details: van Els, P., Zarza, E., Rocha Moreira, L., Gómez-Bahamón, V., Santana, A., Aleixo, A., Ribas, C. C., do Rêgo, P. S., Santos, M. P. D., Zyskowski, K., Prum, R. O., & Berv, J. S. (2021). Journal of Biogeography. https:/..."
+      "excerpt": "Additional details: van Els, P., Zarza, E., Rocha Moreira, L., Gómez-Bahamón, V., Santana, A., Aleixo, A., Ribas, C. C., do Rêgo, P. S., Santos, M. P. D., Zyskowski, K., Prum, R. O., & Berv, J. S. (2021). Journal of Biogeography...."
     },
     {
       "id": "2021-02-05-white-crowned-manakin-phylogeography",
@@ -3699,7 +3699,7 @@
           "weight": 1
         }
       ],
-      "excerpt": "<div class=\"flex-container\" style=\"display: flex; align-items: flex-start;\""
+      "excerpt": "Title slide from the Montreal presentation, \"15,000 Skeletons, or How I Learned to Stop Worrying and Love the Phenotype.\" The recording is available on YouTube here."
     },
     {
       "id": "2024-08-01-science-advances",
@@ -3725,7 +3725,7 @@
           "weight": 1
         }
       ],
-      "excerpt": "<div class=\"flex-container\" style=\"display: flex; align-items: flex-start;\""
+      "excerpt": "Published as a cover article in Science Advances, this study examines how avian genomes and life-history traits shifted after the end-Cretaceous (K–Pg) mass extinction. Analyses across exons, introns, untranslated regions, and..."
     },
     {
       "id": "2024-11-14-living-fossil-lineages-phenotypic-evolution-preprint",
@@ -4102,7 +4102,7 @@
           "weight": 1
         }
       ],
-      "excerpt": "<span class=\"news-inline\" style=\"display: inline-flex; align-items: flex-start;\""
+      "excerpt": "Jacob Berv delivered a keynote talk for the Geological Society of America Pardee Symposium on \"Impact Cratering and the Evolution of Life.\" The keynote highlighted how impact events and macroevolutionary recovery intersect with his..."
     },
     {
       "id": "2025-10-15-banbury-scientific-entrepreneurship-workshop-completed",
@@ -4233,6 +4233,136 @@
         }
       ],
       "excerpt": "The package enables branch-level evolutionary inference workflows in R and is available on CRAN. Package page"
+    },
+    {
+      "id": "2026-04-14-bifrost-preprint",
+      "title": "Publication: bifrost Preprint on Multivariate Evolutionary Dynamics",
+      "url": "/news/2026-04-14-bifrost-preprint/",
+      "date": "2026-04-14",
+      "year": 2026,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The preprint introduces bifrost, an R package for scalable inference of phylogenetic shifts in multivariate trait evolution."
+    },
+    {
+      "id": "2026-06-22-manakin-genomics-current-biology",
+      "title": "Publication: Genomic and Physiological Changes in Manakins",
+      "url": "/news/2026-06-22-manakin-genomics-current-biology/",
+      "date": "2026-06-22",
+      "year": 2026,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The paper examines genomic and physiological changes associated with frugivory, mating systems, and sexual selection in manakins."
+    },
+    {
+      "id": "2026-06-23-temperature-relative-mass-passerines",
+      "title": "Publication: Temperature Predicts Relative Mass in Passerines",
+      "url": "/news/2026-06-23-temperature-relative-mass-passerines/",
+      "date": "2026-06-23",
+      "year": 2026,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The paper tests global relationships among temperature, relative mass, and skeletal size across passerine birds."
+    },
+    {
+      "id": "2026-06-26-vertebrate-genomes-project-phase-i-preprint",
+      "title": "Publication: Vertebrate Genomes Project Phase I Reference Resource",
+      "url": "/news/2026-06-26-vertebrate-genomes-project-phase-i-preprint/",
+      "date": "2026-06-26",
+      "year": 2026,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "The preprint presents a global reference genome resource for vertebrate genomics, comparative biology, conservation, and medicine."
+    },
+    {
+      "id": "2026-07-20-passerine-body-plan-evolution",
+      "title": "Publication: Passerine Body Plan Evolution in Time and Space",
+      "url": "/news/2026-07-20-passerine-body-plan-evolution/",
+      "date": "2026-07-20",
+      "year": 2026,
+      "scope": "event",
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "region_m49": "021",
+          "weight": 1
+        }
+      ],
+      "localities": [
+        {
+          "name": "Ann Arbor, Michigan",
+          "country_code": "US",
+          "lat": 42.2808,
+          "lon": -83.743,
+          "weight": 1
+        }
+      ],
+      "excerpt": "Using more than 170,000 skeletal measurements across 2,057 passerine species, the study links rare bursts of body-plan innovation with climatic instability and present-day latitudinal patterns."
     }
   ]
 }

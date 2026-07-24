@@ -97,7 +97,7 @@ Inputs may be UTF-8 CSV or TSV with headers in any order. Pipe-delimited fields 
 
 Publication inputs may include `slides_url` and `bibtex_url`; generated front matter uses the AcademicPages-compatible `slidesurl` and `bibtexurl` keys. Existing publication records remain unchanged, and the actions render only when those fields are populated.
 
-The generator directory is development-only and excluded from `_site`, including its historical notebooks, spreadsheet, sample inputs, and BibTeX script. Phase 8 removed its accidentally rendered index; Phase 9's complete repository boundary now contains 221 intended public HTML routes while continuing to exclude 20 unlinked internal documentation routes.
+The generator directory is development-only and excluded from `_site`, including its historical notebooks, spreadsheet, sample inputs, and BibTeX script. Phase 8 removed its accidentally rendered index; Phase 9's complete repository boundary now contains 222 intended public HTML routes while continuing to exclude 20 unlinked internal documentation routes.
 
 ## JavaScript Assets
 
@@ -116,12 +116,12 @@ The shared browser bundle follows the AcademicPages v0.9 asset model with local 
 - `npm run check:js` verifies the committed bundle without rewriting it.
 - `npm run check:scientific` verifies the opt-in MathJax, Mermaid, and Plotly runtime contract.
 - `npm run check:search` verifies the Pagefind dependency, indexing markers, metadata, exclusions, modal, theme, preview, and workflow contracts.
-- `npm run check:search:built` verifies the generated 210-document index and its seven content-type totals without changing the 221-route site manifest.
+- `npm run check:search:built` verifies the generated 211-document index and its seven content-type totals without changing the 222-route site manifest.
 - `npm run check:site-artifact` verifies the exact route manifest and rejects repository-only sources from `_site`.
 - `npm run watch:js` rebuilds when the three shared JavaScript sources change.
 - `npm run check:themes` verifies the palette, token, markup, and runtime contract.
 - `npm run check:talkmap` verifies deterministic talk-map generation and its page-scoped runtime.
-- `npm run test:themes` builds all six palettes and requires the same 221 intended routes and artifact boundary.
+- `npm run test:themes` builds all six palettes and requires the same 222 intended routes and artifact boundary.
 - `npm test` runs the asset, content-generator, theme, executable browser-state, and Docker-independent container-contract tests plus bundle verification.
 
 The deterministic builder reads jQuery `3.7.1`, greedy navigation, optional scientific-content renderers, and the shared site interactions in a fixed order. The Talk map uses an independent page-scoped script and does not enlarge that bundle. GitHub Actions runs `npm ci`, `npm test`, the six-theme build matrix, the final Jekyll build, Pagefind generation, rendered-integration, disabled-comments, local-resource, and artifact validation for pull requests and production, so source, generated assets, integrations, palette support, and the tracked intended-route manifest cannot drift. Pull requests are read-only and never upload or deploy Pages.
@@ -132,7 +132,7 @@ Jekyll excludes internal agent/spec documents, lockfiles, notebooks, R/RDS/RStud
 
 Search infrastructure uses Pagefind `1.5.2`. After Jekyll creates `_site`, GitHub Actions builds a static browser-side index under `_site/pagefind/`; those generated files are deployed but never committed. Search has no server, API key, hosted crawler, or query analytics. When the interface is enabled, a visitor's query remains in the browser and is matched against static index chunks.
 
-Production keeps `search.index_enabled: true` and `search.ui_enabled: false`: Actions generates and validates the index in the background, while visitors receive no search icon, modal, or Pagefind browser assets. Setting `ui_enabled: true` exposes the masthead control, accessible modal, `Cmd/Ctrl+K` shortcut, and filters for `News`, `Publications`, `Research`, `Software`, `Talks`, `Teaching`, and `Pages`. The exact contract contains 210 searchable documents while the public site contains 221 HTML routes. Layouts mark meaningful content with `data-pagefind-body`; navigation, profiles, sharing controls, duplicate archive lists, and visualization controls are not indexed.
+Production keeps `search.index_enabled: true` and `search.ui_enabled: false`: Actions generates and validates the index in the background, while visitors receive no search icon, modal, or Pagefind browser assets. Setting `ui_enabled: true` exposes the masthead control, accessible modal, `Cmd/Ctrl+K` shortcut, and filters for `News`, `Publications`, `Research`, `Software`, `Talks`, `Teaching`, and `Pages`. The exact contract contains 211 searchable documents while the public site contains 222 HTML routes. Layouts mark meaningful content with `data-pagefind-body`; navigation, profiles, sharing controls, duplicate archive lists, and visualization controls are not indexed.
 
 Both search flags are disabled in `_config.dev.yml`, so ordinary native, Docker, Dev Container, and theme-matrix previews do no indexing and emit no search UI. For a one-time local QA build, run `npm ci` and then `./scripts/local_preview.command --with-search`. The wrapper enables both flags through a temporary config file and runs `npm run build:search` after Jekyll without changing tracked configuration. Use `search: false` to opt out a page, or `search_title`, `search_description`, and `search_type` to customize its index metadata.
 
