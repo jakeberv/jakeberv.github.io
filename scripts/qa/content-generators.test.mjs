@@ -200,8 +200,12 @@ test("supported builds generate publication interdisciplinarity stats", () => {
     "node scripts/qa/validate-publications-interdisciplinarity-stats.mjs --write",
   );
   assert.ok(generation >= 0, "CI must generate the publication statistics");
+  assert.ok(themeBuilds >= 0, "CI theme builds command must exist");
+  assert.ok(siteBuild >= 0, "CI production Jekyll build command must exist");
   assert.ok(generation < themeBuilds, "statistics generation must precede theme builds");
   assert.ok(generation < siteBuild, "statistics generation must precede the production build");
+  assert.match(preview, /if ! command -v npm >\/dev\/null 2>&1; then/);
+  assert.match(preview, /npm is required to generate publication interdisciplinarity stats\./);
   assert.match(preview, /Generating publications interdisciplinarity braid stats/);
   assert.match(preview, /npm run build:publication-stats/);
   assert.match(ignore, /^\/_data\/publications_interdisciplinarity_stats\.json$/m);
