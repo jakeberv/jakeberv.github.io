@@ -4,7 +4,7 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 14,
-  "citations": 2790,
+  "citations": 2797,
   "cites_per_year": {
     "2015": 13,
     "2016": 111,
@@ -12,12 +12,12 @@
     "2018": 219,
     "2019": 281,
     "2020": 308,
-    "2021": 309,
+    "2021": 310,
     "2022": 323,
-    "2023": 260,
-    "2024": 273,
-    "2025": 254,
-    "2026": 184
+    "2023": 261,
+    "2024": 272,
+    "2025": 255,
+    "2026": 189
   },
   "interests": [
     "Speciation",
@@ -58,6 +58,11 @@
       "scholar_id": "wNmwYS4AAAAJ"
     },
     {
+      "name": "Matt Friedman",
+      "affiliation": "Museum of Paleontology, Department of Earth and Environmental Sciences, University of …",
+      "scholar_id": "4d4zhI8AAAAJ"
+    },
+    {
       "name": "Camila C. Ribas",
       "affiliation": "Instituto Nacional de Pesquisas da Amazônia & American Museum of Natural History",
       "scholar_id": "-X2HGoYAAAAJ"
@@ -73,19 +78,14 @@
       "scholar_id": "KC_7qOMAAAAJ"
     },
     {
-      "name": "Matt Friedman",
-      "affiliation": "Museum of Paleontology, Department of Earth and Environmental Sciences, University of …",
-      "scholar_id": "4d4zhI8AAAAJ"
+      "name": "Stephen A. Smith",
+      "affiliation": "Professor, University of Michigan",
+      "scholar_id": "gVwJZpAAAAAJ"
     },
     {
       "name": "Jacques A. Gauthier",
       "affiliation": "Professor of Earth & Planetary Sciences, Yale University",
       "scholar_id": "x6GEbUEAAAAJ"
-    },
-    {
-      "name": "Vivi Vajda",
-      "affiliation": "Professor, Dept of Palaeobiology, Swedish Museum of Natural History, Stockholm, Sweden",
-      "scholar_id": "LTMeTU4AAAAJ"
     },
     {
       "name": "Tyler Lyson",
@@ -103,14 +103,14 @@
       "scholar_id": "cAyGBSoAAAAJ"
     },
     {
-      "name": "Jonathan Hughes",
-      "affiliation": "Research Consultant, Arizona State University",
-      "scholar_id": "awBFtXsAAAAJ"
-    },
-    {
       "name": "Christopher J Clark",
       "affiliation": "EEOB, UC Riverside",
       "scholar_id": "9Bpr4-4AAAAJ"
+    },
+    {
+      "name": "Jonathan Hughes",
+      "affiliation": "Research Consultant, Arizona State University",
+      "scholar_id": "awBFtXsAAAAJ"
     },
     {
       "name": "Benjamin M. Winger",
@@ -118,9 +118,14 @@
       "scholar_id": "C61BipSii0wC"
     },
     {
-      "name": "Stephen A. Smith",
-      "affiliation": "Professor, University of Michigan",
-      "scholar_id": "gVwJZpAAAAAJ"
+      "name": "J Ryan Shipley",
+      "affiliation": "Swiss Federal Institute for Aquatic Research, EAWAG",
+      "scholar_id": "3z5nlGUAAAAJ"
+    },
+    {
+      "name": "Brian C. Weeks",
+      "affiliation": "School for Environment and Sustainability, University of Michigan",
+      "scholar_id": "7isF9EEAAAAJ"
     },
     {
       "name": "Irby Lovette",
@@ -183,14 +188,14 @@
       "scholar_id": "qfvfHd0AAAAJ"
     },
     {
+      "name": "Charlotte M Probst",
+      "affiliation": "PhD student, University of Michigan",
+      "scholar_id": "dRvjW1sAAAAJ"
+    },
+    {
       "name": "Nathanael Walker-Hale",
       "affiliation": "Postdoctoral Research Associate, Department of Biosciences, Durham University",
       "scholar_id": "SeRf_xAAAAAJ"
-    },
-    {
-      "name": "J Ryan Shipley",
-      "affiliation": "Swiss Federal Institute for Aquatic Research, EAWAG",
-      "scholar_id": "3z5nlGUAAAAJ"
     },
     {
       "name": "Eliot Miller",
@@ -223,9 +228,14 @@
       "scholar_id": "WhHTPMQAAAAJ"
     },
     {
-      "name": "Brian C. Weeks",
-      "affiliation": "School for Environment and Sustainability, University of Michigan",
-      "scholar_id": "7isF9EEAAAAJ"
+      "name": "David Fouhey",
+      "affiliation": "New York University",
+      "scholar_id": "FLcpd34AAAAJ"
+    },
+    {
+      "name": "Michael Pittman | 文嘉棋",
+      "affiliation": "School of Life Sciences, The Chinese University of Hong Kong",
+      "scholar_id": "1xKYhQIAAAAJ"
     },
     {
       "name": "Elisa Bonaccorso",
@@ -268,11 +278,6 @@
       "scholar_id": "To56C4YAAAAJ"
     },
     {
-      "name": "Charlotte M Probst",
-      "affiliation": "PhD student, University of Michigan",
-      "scholar_id": "dRvjW1sAAAAJ"
-    },
-    {
       "name": "Alexandre Aleixo",
       "affiliation": "Instituto Tecnológico Vale",
       "scholar_id": "XpyI2wYAAAAJ"
@@ -291,11 +296,6 @@
       "name": "Valentina Gómez-Bahamón",
       "affiliation": "Virginia Tech",
       "scholar_id": "QCVlwlsAAAAJ"
-    },
-    {
-      "name": "David Fouhey",
-      "affiliation": "New York University",
-      "scholar_id": "FLcpd34AAAAJ"
     },
     {
       "name": "Jacob M. Musser",
@@ -408,14 +408,14 @@
   "organization": 4770128543809686866,
   "public_access": {
     "available": 16,
-    "not_available": 0
+    "not_available": 1
   },
-  "total_publications": 30,
-  "publications_fetched": 30,
+  "total_publications": 31,
+  "publications_fetched": 31,
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 1953,
+      "citations": 1956,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
@@ -429,7 +429,7 @@
     },
     {
       "title": "Genomic signature of an avian Lilliput effect across the K-Pg extinction",
-      "citations": 141,
+      "citations": 142,
       "year": 2018,
       "venue": "N/A",
       "url": "https://academic.oup.com/sysbio/article-abstract/67/1/1/3960267"
@@ -471,14 +471,14 @@
     },
     {
       "title": "Ecological selectivity and the evolution of mammalian substrate preference across the K–Pg boundary",
-      "citations": 40,
+      "citations": 39,
       "year": 2021,
       "venue": "N/A",
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ece3.8114"
     },
     {
       "title": "Genome and life-history evolution link bird diversification to the end-Cretaceous mass extinction",
-      "citations": 31,
+      "citations": 32,
       "year": 2024,
       "venue": "N/A",
       "url": "https://www.science.org/doi/abs/10.1126/sciadv.adp0114"
@@ -513,7 +513,7 @@
     },
     {
       "title": "Skeletal trait measurements for thousands of bird species",
-      "citations": 7,
+      "citations": 8,
       "year": 2025,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/s41597-025-05234-y"
@@ -547,11 +547,25 @@
       "url": "https://academic.oup.com/evolut/article-abstract/79/7/1334/8121435"
     },
     {
+      "title": "Rates of passerine body plan evolution in time and space",
+      "citations": 1,
+      "year": 2026,
+      "venue": "N/A",
+      "url": "https://www.nature.com/articles/s41559-026-03110-5"
+    },
+    {
       "title": "Genomic and physiological changes in a sexually selected and frugivorous bird radiation",
       "citations": 1,
       "year": 2026,
       "venue": "N/A",
       "url": "https://www.cell.com/current-biology/fulltext/S0960-9822(26)00625-1"
+    },
+    {
+      "title": "bifrost: an R package for scalable inference of phylogenetic shifts in multivariate evolutionary dynamics",
+      "citations": 1,
+      "year": 2026,
+      "venue": "N/A",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.04.12.718036.abstract"
     },
     {
       "title": "Variable patterns of phenotypic evolution among canonical ‘living fossil’lineages",
@@ -580,13 +594,6 @@
       "year": 2026,
       "venue": "N/A",
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/geb.70272"
-    },
-    {
-      "title": "bifrost: an R package for scalable inference of phylogenetic shifts in multivariate evolutionary dynamics",
-      "citations": 0,
-      "year": 2026,
-      "venue": "N/A",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.04.12.718036.abstract"
     },
     {
       "title": "Morphological diversity of the cetacean mandibular symphysis coincides with novel modes of aquatic feeding",
@@ -624,6 +631,6 @@
       "url": "https://ui.adsabs.harvard.edu/abs/2016GSAA...4887815B/abstract"
     }
   ],
-  "generated_at": 1784428032,
+  "generated_at": 1785032391,
   "proxy_mode": "free"
 }
