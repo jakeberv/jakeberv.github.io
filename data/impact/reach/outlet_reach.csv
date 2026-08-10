@@ -1,160 +1,160 @@
 domain,matched_domain,match_type,tranco_rank,reach_score,reach_percentile,reach_tier,mentions,unique_outlets,top_outlet,top_outlet_mentions,first_mention_date,last_mention_date,tranco_list_id,tranco_list_created_on,generated_at_utc
-ct.moreover.com,moreover.com,suffix,36193,24.02,96.381,medium,44,36,MSN,3,2024-02-23T14:45:00,2025-05-25T01:32:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-phys.org,phys.org,exact,2855,42.41,99.715,high,11,1,Phys.org,11,2014-10-14T19:19:16,2023-12-20T18:19:09,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-theconversation.com,theconversation.com,exact,991,50.07,99.901,very_high,9,1,The Conversation,9,2018-05-24T15:08:08,2024-02-15T05:11:12,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-rawstory.com,rawstory.com,exact,8719,34.33,99.128,high,8,1,The Raw Story,8,2022-11-25T03:37:42,2023-12-27T12:52:43,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-feedproxy.google.com,google.com,suffix,1,100.0,100.0,very_high,7,3,Sci-News,3,2015-10-14T01:10:13,2021-10-15T18:43:11,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-uk.news.yahoo.com,yahoo.com,suffix,60,70.36,99.994,very_high,7,1,Yahoo! News,7,2018-05-24T15:00:00,2023-12-19T16:53:46,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-eurekalert.org,eurekalert.org,exact,3940,40.08,99.606,high,7,1,EurekAlert!,7,2014-10-14T04:00:00,2021-11-17T14:09:24,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-msn.com,msn.com,exact,62,70.13,99.994,very_high,6,1,MSN,6,2018-05-25T12:53:52,2023-12-20T20:34:55,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-sciencedaily.com,sciencedaily.com,exact,1526,46.94,99.847,high,6,1,Science Daily,6,2014-10-14T19:26:37,2021-11-17T15:01:31,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-news.google.com,google.com,suffix,1,100.0,100.0,very_high,5,1,Google News,5,2019-09-13T12:16:00,2022-11-26T17:10:01,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-newswise.com,newswise.com,exact,19025,28.68,98.098,medium,4,1,Newswise,4,2015-10-12T20:05:00,2021-11-17T00:00:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-miragenews.com,miragenews.com,exact,36417,23.98,96.358,medium,4,1,Mirage News,4,2021-10-11T14:09:36,2021-11-17T14:08:13,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-news.cornell.edu,cornell.edu,suffix,544,54.41,99.946,very_high,3,1,Cornell Chronicle,3,2017-09-21T16:09:02,2021-10-11T14:10:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-sciencealert.com,sciencealert.com,exact,5198,38.07,99.48,high,3,1,Science Alert,3,2018-05-25T03:38:55,2022-11-25T06:16:58,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-firstpost.com,firstpost.com,exact,9071,34.04,99.093,high,3,1,Firstpost,3,2015-10-07T19:15:56,2022-11-25T07:59:21,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-inverse.com,inverse.com,exact,10698,32.84,98.93,medium,3,1,Inverse,3,2018-05-24T15:00:00,2022-12-04T20:00:25,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-naked-science.ru,naked-science.ru,exact,17284,29.37,98.272,medium,3,1,Naked Science,3,2018-05-25T06:27:30,2021-10-14T09:55:49,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-futurity.org,futurity.org,exact,37813,23.71,96.219,medium,3,1,Futurity,3,2015-10-08T15:42:52,2021-11-03T17:55:49,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-sci-news.com,sci-news.com,exact,104615,16.34,89.539,low,3,1,Sci-News,3,2014-10-21T10:01:02,2017-09-22T10:46:25,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-sciencenewsline.com,sciencenewsline.com,exact,844717,1.22,15.528,low,3,1,Science Newsline,3,2015-02-12T17:11:00,2017-09-22T15:40:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-journalbreak.com,,unmatched,0,0.0,0.0,unranked,3,1,journalbreak.Com,3,2022-11-25T11:06:04,2022-11-27T01:08:20,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-nach-welt.com,,unmatched,0,0.0,0.0,unranked,3,1,Nachrichten Welt,3,2022-11-25T14:37:52,2022-11-27T04:02:21,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-in.news.yahoo.com,yahoo.com,suffix,60,70.36,99.994,very_high,2,2,Yahoo! News,1,2015-10-07T17:59:30,2018-05-25T09:36:04,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-businessinsider.com,businessinsider.com,exact,434,56.04,99.957,very_high,2,1,Business Insider,2,2015-10-07T17:10:59,2023-07-12T12:53:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-economictimes.indiatimes.com,indiatimes.com,suffix,498,55.05,99.95,very_high,2,1,Times of India,2,2018-05-25T11:27:16,2023-12-29T05:34:53,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-news.yale.edu,yale.edu,suffix,1039,49.72,99.896,high,2,1,Yale News,2,2018-05-24T15:45:27,2021-10-11T14:00:38,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-smithsonianmag.com,smithsonianmag.com,exact,2696,42.82,99.731,high,2,1,Smithsonian Magazine,2,2018-04-20T15:05:28,2018-05-24T15:13:09,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-yle.fi,yle.fi,exact,3624,40.68,99.638,high,2,1,Yle.fi,2,2018-05-26T13:29:20,2018-10-02T18:34:02,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-popsci.com,popsci.com,exact,4492,39.13,99.551,high,2,1,Popular Science,2,2019-09-17T12:57:24,2022-10-26T15:30:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-scitechdaily.com,scitechdaily.com,exact,9011,34.09,99.099,high,2,1,Scitech Daily,2,2018-05-25T17:57:33,2021-10-17T14:57:59,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-interestingengineering.com,interestingengineering.com,exact,10118,33.25,98.988,medium,2,1,Interesting Engineering,2,2020-03-21T01:40:34,2022-11-27T08:47:32,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-devdiscourse.com,devdiscourse.com,exact,34306,24.41,96.569,medium,2,1,Devdiscourse,2,2022-11-25T04:19:11,2023-12-20T06:46:15,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-zap.aeiou.pt,aeiou.pt,suffix,66301,19.64,93.37,medium,2,1,ZAP,2,2018-05-26T09:00:15,2024-08-03T20:30:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-labmanager.com,labmanager.com,exact,120789,15.3,87.921,low,2,1,Lab Manager,2,2018-05-25T04:00:00,2021-11-17T17:10:43,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-scienmag.com,scienmag.com,exact,161936,13.18,83.806,low,2,1,ScienMag,2,2021-11-17T14:10:29,2024-07-31T18:20:19,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-astrobio.net,astrobio.net,exact,198633,11.7,80.137,low,2,1,Astrobiology Magazine,2,2017-09-24T13:05:46,2018-05-29T11:57:06,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-foreignaffairs.co.nz,foreignaffairs.co.nz,exact,406780,6.51,59.322,low,2,1,Foreign Affairs New Zealand,2,2019-09-13T12:29:43,2020-07-20T13:52:52,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-torontotelegraph.com,,unmatched,0,0.0,0.0,unranked,2,1,Toronto Telegraph,2,2022-11-29T06:24:02,2023-12-19T18:39:17,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-us.alertbreakingnews.com,,unmatched,0,0.0,0.0,unranked,2,1,Alert Breaking News - US,2,2022-10-27T18:44:19,2022-10-27T18:44:19,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-ca.finance.yahoo.com,yahoo.com,suffix,60,70.36,99.994,very_high,1,1,Yahoo! Finance Canada,1,2023-07-12T12:53:00,2023-07-12T12:53:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-ca.news.yahoo.com,yahoo.com,suffix,60,70.36,99.994,very_high,1,1,Yahoo! News,1,2018-05-24T18:20:22,2018-05-24T18:20:22,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-news.yahoo.com,yahoo.com,suffix,60,70.36,99.994,very_high,1,1,Yahoo! News,1,2015-10-07T17:10:59,2015-10-07T17:10:59,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-yahoo.com,yahoo.com,exact,60,70.36,99.994,very_high,1,1,Yahoo!,1,2018-05-25T18:35:17,2018-05-25T18:35:17,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-nytimes.com,nytimes.com,exact,152,63.64,99.985,very_high,1,1,New York Times,1,2020-03-18T21:27:31,2020-03-18T21:27:31,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-medium.com,medium.com,exact,184,62.25,99.982,very_high,1,1,Medium US,1,2021-06-30T12:36:07,2021-06-30T12:36:07,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-cnn.com,cnn.com,exact,186,62.17,99.981,very_high,1,1,CNN News,1,2018-05-24T15:03:52,2018-05-24T15:03:52,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-welt.de,welt.de,exact,807,51.55,99.919,very_high,1,1,Die Welt,1,2018-05-28T07:21:40,2018-05-28T07:21:40,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-news.umich.edu,umich.edu,suffix,929,50.53,99.907,very_high,1,1,University of Michigan News,1,2021-10-11T13:50:02,2021-10-11T13:50:02,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-theatlantic.com,theatlantic.com,exact,955,50.33,99.905,very_high,1,1,The Atlantic,1,2018-05-24T11:00:00,2018-05-24T11:00:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-nypost.com,nypost.com,exact,1048,49.66,99.895,high,1,1,New York Post,1,2018-05-28T15:16:52,2018-05-28T15:16:52,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-cam.ac.uk,cam.ac.uk,exact,1134,49.09,99.887,high,1,1,University of Cambridge,1,2021-10-14T12:10:32,2021-10-14T12:10:32,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-elconfidencial.com,elconfidencial.com,exact,1191,48.73,99.881,high,1,1,El Confidencial,1,2018-05-24T15:00:00,2018-05-24T15:00:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-arstechnica.com,arstechnica.com,exact,1846,45.56,99.816,high,1,1,Arstechnica,1,2015-10-08T16:23:15,2015-10-08T16:23:15,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-sciencemag.org,sciencemag.org,exact,1860,45.51,99.814,high,1,1,Science/AAAS,1,2018-05-24T15:05:00,2018-05-24T15:05:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-ria.ru,ria.ru,exact,2262,44.09,99.774,high,1,1,??? ???????,1,2018-05-24T15:34:05,2018-05-24T15:34:05,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-actualidad.rt.com,rt.com,suffix,2486,43.41,99.752,high,1,1,RT Network,1,2018-05-27T13:12:41,2018-05-27T13:12:41,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-animals.howstuffworks.com,howstuffworks.com,suffix,2699,42.81,99.73,high,1,1,HowStuffWorks,1,2018-06-06T18:00:05,2018-06-06T18:00:05,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-home.bt.com,bt.com,suffix,2975,42.11,99.703,high,1,1,BT News,1,2018-05-24T17:51:25,2018-05-24T17:51:25,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-newsbreak.com,newsbreak.com,exact,3042,41.95,99.696,high,1,1,Newsbreak,1,2022-10-26T15:30:00,2022-10-26T15:30:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-voanews.com,voanews.com,exact,3423,41.09,99.658,high,1,1,Voice of America,1,2015-10-07T22:22:09,2015-10-07T22:22:09,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-tagesspiegel.de,tagesspiegel.de,exact,3460,41.02,99.654,high,1,1,Der Tagesspiegel,1,2018-05-24T15:47:07,2018-05-24T15:47:07,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-rte.ie,rte.ie,exact,3907,40.14,99.609,high,1,1,RTE Online,1,2022-11-25T06:54:50,2022-11-25T06:54:50,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-derstandard.at,derstandard.at,exact,4331,39.39,99.567,high,1,1,Der Standard,1,2018-05-24T16:06:37,2018-05-24T16:06:37,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-business-standard.com,business-standard.com,exact,4475,39.15,99.553,high,1,1,Business Standard,1,2018-05-25T00:00:00,2018-05-25T00:00:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-deccanherald.com,deccanherald.com,exact,5037,38.3,99.496,high,1,1,The Deccan Herald,1,2022-11-25T06:58:47,2022-11-25T06:58:47,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-breitbart.com,breitbart.com,exact,5319,37.9,99.468,high,1,1,Breitbart News Network,1,2017-09-21T17:00:22,2017-09-21T17:00:22,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-upi.com,upi.com,exact,5359,37.85,99.464,high,1,1,UPI.com,1,2017-09-21T16:47:35,2017-09-21T16:47:35,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-ibtimes.com,ibtimes.com,exact,5732,37.36,99.427,high,1,1,International Business Times,1,2018-05-24T15:00:02,2018-05-24T15:00:02,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-svt.se,svt.se,exact,5915,37.13,99.409,high,1,1,SVT,1,2018-05-24T18:52:10,2018-05-24T18:52:10,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-futura-sciences.com,futura-sciences.com,exact,5979,37.06,99.402,high,1,1,Futura-Sciences,1,2018-05-25T14:53:00,2018-05-25T14:53:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-gazeta.ru,gazeta.ru,exact,6507,36.44,99.349,high,1,1,Gazeta.ru,1,2018-05-25T16:33:54,2018-05-25T16:33:54,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-europapress.es,europapress.es,exact,6710,36.22,99.329,high,1,1,Europa Press,1,2018-05-24T15:40:46,2018-05-24T15:40:46,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-spacedaily.com,spacedaily.com,exact,6819,36.1,99.318,high,1,1,Space Daily,1,2018-05-30T14:45:39,2018-05-30T14:45:39,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-blogs.discovermagazine.com,discovermagazine.com,suffix,7024,35.89,99.298,high,1,1,Discover Magazine,1,2018-05-24T15:00:15,2018-05-24T15:00:15,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-sciencenews.org,sciencenews.org,exact,8257,34.72,99.174,high,1,1,Science News,1,2018-05-24T21:44:51,2018-05-24T21:44:51,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-meteored.com.ar,meteored.com.ar,exact,9116,34.0,99.088,high,1,1,meteored.com.ar,1,2024-08-14T18:29:55,2024-08-14T18:29:55,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-iflscience.com,iflscience.com,exact,11604,32.26,98.84,medium,1,1,Iflscience,1,2023-12-22T11:53:09,2023-12-22T11:53:09,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-philly.com,philly.com,exact,12736,31.58,98.727,medium,1,1,Philly.com,1,2015-10-07T17:00:01,2015-10-07T17:00:01,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-irishexaminer.com,irishexaminer.com,exact,13029,31.42,98.697,medium,1,1,Irish Examiner,1,2018-05-24T15:00:00,2018-05-24T15:00:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-techtimes.com,techtimes.com,exact,13355,31.24,98.665,medium,1,1,Tech Times,1,2015-10-09T10:06:28,2015-10-09T10:06:28,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-theprint.in,theprint.in,exact,13579,31.12,98.642,medium,1,1,The Print,1,2022-11-25T04:30:35,2022-11-25T04:30:35,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-demorgen.be,demorgen.be,exact,13872,30.96,98.613,medium,1,1,De Morgen,1,2018-05-29T09:08:25,2018-05-29T09:08:25,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-the-scientist.com,the-scientist.com,exact,16493,29.71,98.351,medium,1,1,The Scientist Magazine,1,2018-05-24T20:35:50,2018-05-24T20:35:50,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-canaltech.com.br,canaltech.com.br,exact,16552,29.69,98.345,medium,1,1,Canaltech,1,2021-10-13T12:10:58,2021-10-13T12:10:58,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-taipeitimes.com,taipeitimes.com,exact,16707,29.62,98.329,medium,1,1,Taipei Times,1,2018-06-02T18:44:33,2018-06-02T18:44:33,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-theobjective.com,theobjective.com,exact,17183,29.42,98.282,medium,1,1,TheObjective,1,2022-12-04T02:30:00,2022-12-04T02:30:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-businessinsider.in,businessinsider.in,exact,17383,29.33,98.262,medium,1,1,Business Insider India,1,2023-07-12T12:54:00,2023-07-12T12:54:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-inquisitr.com,inquisitr.com,exact,17659,29.22,98.234,medium,1,1,The Inquisitr,1,2018-05-27T11:38:48,2018-05-27T11:38:48,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-timesofmalta.com,timesofmalta.com,exact,18108,29.04,98.189,medium,1,1,Times of Malta,1,2018-07-01T11:41:14,2018-07-01T11:41:14,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-thefreelibrary.com,thefreelibrary.com,exact,19055,28.67,98.095,medium,1,1,The Free Library,1,2022-11-29T00:00:00,2022-11-29T00:00:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-azfamily.com,azfamily.com,exact,21301,27.86,97.87,medium,1,1,azfamily.com,1,2018-05-24T15:02:00,2018-05-24T15:02:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-trust.org,trust.org,exact,23491,27.15,97.651,medium,1,1,Thomson Reuters Foundation,1,2015-10-07T17:00:00,2015-10-07T17:00:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-businessinsider.com.au,businessinsider.com.au,exact,24477,26.85,97.552,medium,1,1,Business Insider Australia,1,2019-02-27T16:08:39,2019-02-27T16:08:39,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-siasat.com,siasat.com,exact,32355,24.83,96.765,medium,1,1,The Siasat Daily,1,2018-05-26T06:52:08,2018-05-26T06:52:08,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-minnpost.com,minnpost.com,exact,32743,24.75,96.726,medium,1,1,MinnPost,1,2018-05-31T13:38:25,2018-05-31T13:38:25,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-timescolonist.com,timescolonist.com,exact,34066,24.46,96.594,medium,1,1,Times Colonist,1,2018-05-27T12:40:00,2018-05-27T12:40:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-latestly.com,latestly.com,exact,35240,24.22,96.476,medium,1,1,Latestly,1,2022-11-25T04:20:14,2022-11-25T04:20:14,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-sott.net,sott.net,exact,37897,23.69,96.21,medium,1,1,Sign of the Times,1,2018-05-28T18:25:00,2018-05-28T18:25:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-es.paperblog.com,paperblog.com,suffix,40203,23.26,95.98,medium,1,1,Paperblog,1,2018-05-28T04:59:00,2018-05-28T04:59:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-daijiworld.com,daijiworld.com,exact,40484,23.21,95.952,medium,1,1,Daijiworld.com,1,2018-05-25T09:42:34,2018-05-25T09:42:34,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-arcamax.com,arcamax.com,exact,45276,22.4,95.473,medium,1,1,Arcamax,1,2018-05-25T00:24:48,2018-05-25T00:24:48,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-nkj.ru,nkj.ru,exact,49421,21.77,95.058,medium,1,1,Science and Life Russia,1,2018-05-29T05:04:00,2018-05-29T05:04:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-1tv.ge,1tv.ge,exact,51127,21.52,94.887,medium,1,1,1TV.ge,1,2022-11-25T10:28:30,2022-11-25T10:28:30,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-radionz.co.nz,radionz.co.nz,exact,52383,21.35,94.762,medium,1,1,Radio New Zealand,1,2018-05-25T07:37:39,2018-05-25T07:37:39,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-wissenschaft.de,wissenschaft.de,exact,53837,21.15,94.616,medium,1,1,wissenschaft.de,1,2018-05-24T15:00:37,2018-05-24T15:00:37,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-scientias.nl,scientias.nl,exact,56478,20.8,94.352,medium,1,1,Scientias,1,2018-05-24T16:54:46,2018-05-24T16:54:46,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-businessinsider.nl,businessinsider.nl,exact,63530,19.95,93.647,medium,1,1,Business Insider Nederland,1,2023-07-12T12:53:00,2023-07-12T12:53:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-sciencetimes.com,sciencetimes.com,exact,64609,19.83,93.539,medium,1,1,"The Science Times, United States",1,2022-11-26T04:01:20,2022-11-26T04:01:20,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-guokr.com,guokr.com,exact,65628,19.72,93.437,medium,1,1,Guokr.com,1,2019-09-14T03:47:09,2019-09-14T03:47:09,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-hirado.hu,hirado.hu,exact,66519,19.62,93.348,medium,1,1,Hirado,1,2015-10-13T10:33:00,2015-10-13T10:33:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-newkerala.com,newkerala.com,exact,74001,18.85,92.6,medium,1,1,New Kerala,1,2018-05-25T11:44:53,2018-05-25T11:44:53,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-en.farsnews.com,farsnews.com,suffix,74090,18.84,92.591,medium,1,1,Fars News Agency,1,2018-05-27T08:42:48,2018-05-27T08:42:48,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-agenciasinc.es,agenciasinc.es,exact,74543,18.79,92.546,medium,1,1,Agencia SINC,1,2015-10-07T17:00:02,2015-10-07T17:00:02,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-illvet.se,illvet.se,exact,76724,18.58,92.328,medium,1,1,Illustrerad Vetenskap,1,2024-08-05T15:14:43,2024-08-05T15:14:43,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-enn.com,enn.com,exact,85271,17.82,91.473,medium,1,1,Environmental News Network,1,2021-11-17T19:48:28,2021-11-17T19:48:28,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-muyinteresante.es,muyinteresante.es,exact,91832,17.28,90.817,medium,1,1,Muy Interesante,1,2021-10-14T19:53:03,2021-10-14T19:53:03,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-heraldmailmedia.com,heraldmailmedia.com,exact,97232,16.87,90.277,medium,1,1,Herald Mail Media,1,2018-05-24T23:09:00,2018-05-24T23:09:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-technology.org,technology.org,exact,99213,16.72,90.079,medium,1,1,Technology.org,1,2015-02-13T13:24:39,2015-02-13T13:24:39,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-sci.news,sci.news,exact,103927,16.39,89.607,low,1,1,Sci-News,1,2024-08-02T20:24:47,2024-08-02T20:24:47,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-theeagle.com,theeagle.com,exact,113397,15.76,88.66,low,1,1,The Eagle,1,2018-05-24T23:09:00,2018-05-24T23:09:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-nationalgeographic.it,nationalgeographic.it,exact,125329,15.03,87.467,low,1,1,National Geographic,1,2018-05-25T10:46:25,2018-05-25T10:46:25,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-ebiotrade.com,ebiotrade.com,exact,139607,14.25,86.039,low,1,1,Ebiotrade,1,2021-10-15T04:24:12,2021-10-15T04:24:12,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-insidescience.org,insidescience.org,exact,152466,13.61,84.754,low,1,1,Inside Science,1,2018-05-24T14:56:05,2018-05-24T14:56:05,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-greenreport.it,greenreport.it,exact,153773,13.55,84.623,low,1,1,Green Report (Italy),1,2018-05-25T09:00:05,2018-05-25T09:00:05,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-bioengineer.org,bioengineer.org,exact,157877,13.36,84.212,low,1,1,Bioengineer.org,1,2021-11-17T14:12:37,2021-11-17T14:12:37,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-actionnewsnow.com,actionnewsnow.com,exact,166757,12.97,83.324,low,1,1,Action News Now,1,2018-05-24T00:00:00,2018-05-24T00:00:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-businessinsider.sg,businessinsider.sg,exact,169390,12.85,83.061,low,1,1,Business Insider Singapore,1,2019-02-27T16:08:39,2019-02-27T16:08:39,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-pnn.de,pnn.de,exact,190436,12.0,80.956,low,1,1,Potsdamer Neueste Nachrichten,1,2018-05-24T15:47:07,2018-05-24T15:47:07,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-evolutionnews.org,evolutionnews.org,exact,198549,11.7,80.145,low,1,1,Evolution News & Science Today,1,2022-08-19T13:47:00,2022-08-19T13:47:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-scienceworldreport.com,scienceworldreport.com,exact,286249,9.05,71.375,low,1,1,Science World Report,1,2015-10-13T19:40:08,2015-10-13T19:40:08,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-sg.hu,sg.hu,exact,316028,8.34,68.397,low,1,1,sg.hu,1,2018-05-29T16:07:28,2018-05-29T16:07:28,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-kopalniawiedzy.pl,kopalniawiedzy.pl,exact,317988,8.29,68.201,low,1,1,Kopalnia Wiedzy,1,2021-10-12T11:34:19,2021-10-12T11:34:19,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-nouvelles-du-monde.com,nouvelles-du-monde.com,exact,374180,7.12,62.582,low,1,1,Nouvelles du monde,1,2024-02-15T05:51:07,2024-02-15T05:51:07,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-healthmedicinet.com,healthmedicinet.com,exact,379516,7.01,62.048,low,1,1,Health Medicinet,1,2014-10-15T06:23:58,2014-10-15T06:23:58,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-laboratoryequipment.com,laboratoryequipment.com,exact,389539,6.82,61.046,low,1,1,Laboratory Equipment,1,2017-09-22T13:37:02,2017-09-22T13:37:02,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-southafricatoday.net,southafricatoday.net,exact,425533,6.18,57.447,low,1,1,South Africa Today,1,2022-11-30T18:38:20,2022-11-30T18:38:20,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-vervetimes.com,vervetimes.com,exact,509611,4.88,49.039,low,1,1,Verve times,1,2022-11-25T05:33:41,2022-11-25T05:33:41,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-myscience.org,myscience.org,exact,521596,4.71,47.84,low,1,1,My Science,1,2017-09-21T07:00:06,2017-09-21T07:00:06,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-canindia.com,canindia.com,exact,862783,1.07,13.722,low,1,1,CanIndia,1,2018-05-25T09:36:00,2018-05-25T09:36:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-trueviralnews.com,trueviralnews.com,exact,892674,0.82,10.733,low,1,1,True Viral News,1,2021-10-11T18:38:02,2021-10-11T18:38:02,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-nipponese.news,nipponese.news,exact,977943,0.16,2.206,low,1,1,Nipponese.news,1,2024-08-18T10:03:01,2024-08-18T10:03:01,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-technologytimes.pk,technologytimes.pk,exact,980220,0.14,1.978,low,1,1,Technology Times,1,2021-10-12T19:06:21,2021-10-12T19:06:21,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-bilbao24horas.com,,unmatched,0,0.0,0.0,unranked,1,1,Bilbao24horas,1,2022-12-04T08:03:51,2022-12-04T08:03:51,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-cambiopolitico.com,,unmatched,0,0.0,0.0,unranked,1,1,Cambio Político,1,2022-12-01T22:11:33,2022-12-01T22:11:33,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-chitchatpost.com,,unmatched,0,0.0,0.0,unranked,1,1,ChitChat Post Espana,1,2024-08-14T01:05:52,2024-08-14T01:05:52,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-cikavosti.com,,unmatched,0,0.0,0.0,unranked,1,1,CIKAVOSTI,1,2024-08-15T16:34:27,2024-08-15T16:34:27,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-dclm.es,,unmatched,0,0.0,0.0,unranked,1,1,dclm,1,2022-12-04T12:11:46,2022-12-04T12:11:46,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-elportaluco.com,,unmatched,0,0.0,0.0,unranked,1,1,El Portaluco,1,2022-12-04T05:41:01,2022-12-04T05:41:01,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-free-mail.co.za,,unmatched,0,0.0,0.0,unranked,1,1,Free Mail South Africa,1,2023-12-20T01:00:19,2023-12-20T01:00:19,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-longroom.com,,unmatched,0,0.0,0.0,unranked,1,1,Long Room,1,2018-05-24T19:15:53,2018-05-24T19:15:53,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-madriddigital24horas.com,,unmatched,0,0.0,0.0,unranked,1,1,Madriddigital24horas,1,2022-12-04T11:09:48,2022-12-04T11:09:48,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-mandarinian.news,,unmatched,0,0.0,0.0,unranked,1,1,Mandarinian,1,2025-05-10T22:13:28,2025-05-10T22:13:28,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-newslanes.com,,unmatched,0,0.0,0.0,unranked,1,1,Newslanes,1,2022-11-25T06:24:20,2022-11-25T06:24:20,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-noticiasdelatierra.com,,unmatched,0,0.0,0.0,unranked,1,1,Noticias de la tierra,1,2024-04-08T15:39:30,2024-04-08T15:39:30,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-presseraum.at,,unmatched,0,0.0,0.0,unranked,1,1,Presseraum,1,2022-11-25T13:18:01,2022-11-25T13:18:01,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-swifttelecast.com,,unmatched,0,0.0,0.0,unranked,1,1,Swift Telecast,1,2022-11-26T17:13:24,2022-11-26T17:13:24,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-todayuknews.com,,unmatched,0,0.0,0.0,unranked,1,1,Today UK News,1,2022-11-26T22:24:01,2022-11-26T22:24:01,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-uktimenews.com,,unmatched,0,0.0,0.0,unranked,1,1,UK Time News,1,2022-11-25T05:02:03,2022-11-25T05:02:03,JZ8LY,,2026-08-03T10:08:11.026794+00:00
-w2.technobahn.com,,unmatched,0,0.0,0.0,unranked,1,1,Technobahn,1,2015-02-12T17:11:00,2015-02-12T17:11:00,JZ8LY,,2026-08-03T10:08:11.026794+00:00
+ct.moreover.com,moreover.com,suffix,35988,24.06,96.401,medium,44,36,MSN,3,2024-02-23T14:45:00,2025-05-25T01:32:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+phys.org,phys.org,exact,2866,42.38,99.713,high,11,1,Phys.org,11,2014-10-14T19:19:16,2023-12-20T18:19:09,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+theconversation.com,theconversation.com,exact,1006,49.96,99.9,high,9,1,The Conversation,9,2018-05-24T15:08:08,2024-02-15T05:11:12,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+rawstory.com,rawstory.com,exact,8810,34.25,99.119,high,8,1,The Raw Story,8,2022-11-25T03:37:42,2023-12-27T12:52:43,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+feedproxy.google.com,google.com,suffix,1,100.0,100.0,very_high,7,3,Sci-News,3,2015-10-14T01:10:13,2021-10-15T18:43:11,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+uk.news.yahoo.com,yahoo.com,suffix,62,70.13,99.994,very_high,7,1,Yahoo! News,7,2018-05-24T15:00:00,2023-12-19T16:53:46,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+eurekalert.org,eurekalert.org,exact,3886,40.17,99.611,high,7,1,EurekAlert!,7,2014-10-14T04:00:00,2021-11-17T14:09:24,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+msn.com,msn.com,exact,63,70.01,99.994,very_high,6,1,MSN,6,2018-05-25T12:53:52,2023-12-20T20:34:55,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+sciencedaily.com,sciencedaily.com,exact,1594,46.63,99.841,high,6,1,Science Daily,6,2014-10-14T19:26:37,2021-11-17T15:01:31,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+news.google.com,google.com,suffix,1,100.0,100.0,very_high,5,1,Google News,5,2019-09-13T12:16:00,2022-11-26T17:10:01,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+newswise.com,newswise.com,exact,18590,28.85,98.141,medium,4,1,Newswise,4,2015-10-12T20:05:00,2021-11-17T00:00:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+miragenews.com,miragenews.com,exact,36054,24.05,96.395,medium,4,1,Mirage News,4,2021-10-11T14:09:36,2021-11-17T14:08:13,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+news.cornell.edu,cornell.edu,suffix,547,54.37,99.945,very_high,3,1,Cornell Chronicle,3,2017-09-21T16:09:02,2021-10-11T14:10:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+sciencealert.com,sciencealert.com,exact,5353,37.86,99.465,high,3,1,Science Alert,3,2018-05-25T03:38:55,2022-11-25T06:16:58,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+firstpost.com,firstpost.com,exact,9155,33.97,99.085,high,3,1,Firstpost,3,2015-10-07T19:15:56,2022-11-25T07:59:21,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+inverse.com,inverse.com,exact,11059,32.6,98.894,medium,3,1,Inverse,3,2018-05-24T15:00:00,2022-12-04T20:00:25,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+naked-science.ru,naked-science.ru,exact,17151,29.43,98.285,medium,3,1,Naked Science,3,2018-05-25T06:27:30,2021-10-14T09:55:49,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+futurity.org,futurity.org,exact,38208,23.63,96.179,medium,3,1,Futurity,3,2015-10-08T15:42:52,2021-11-03T17:55:49,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+sci-news.com,sci-news.com,exact,109186,16.03,89.082,low,3,1,Sci-News,3,2014-10-21T10:01:02,2017-09-22T10:46:25,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+sciencenewsline.com,sciencenewsline.com,exact,850001,1.18,15.0,low,3,1,Science Newsline,3,2015-02-12T17:11:00,2017-09-22T15:40:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+journalbreak.com,,unmatched,0,0.0,0.0,unranked,3,1,journalbreak.Com,3,2022-11-25T11:06:04,2022-11-27T01:08:20,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+nach-welt.com,,unmatched,0,0.0,0.0,unranked,3,1,Nachrichten Welt,3,2022-11-25T14:37:52,2022-11-27T04:02:21,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+in.news.yahoo.com,yahoo.com,suffix,62,70.13,99.994,very_high,2,2,Yahoo! News,1,2015-10-07T17:59:30,2018-05-25T09:36:04,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+businessinsider.com,businessinsider.com,exact,432,56.08,99.957,very_high,2,1,Business Insider,2,2015-10-07T17:10:59,2023-07-12T12:53:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+economictimes.indiatimes.com,indiatimes.com,suffix,504,54.96,99.95,very_high,2,1,Times of India,2,2018-05-25T11:27:16,2023-12-29T05:34:53,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+news.yale.edu,yale.edu,suffix,1037,49.74,99.896,high,2,1,Yale News,2,2018-05-24T15:45:27,2021-10-11T14:00:38,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+smithsonianmag.com,smithsonianmag.com,exact,2688,42.84,99.731,high,2,1,Smithsonian Magazine,2,2018-04-20T15:05:28,2018-05-24T15:13:09,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+yle.fi,yle.fi,exact,3604,40.72,99.64,high,2,1,Yle.fi,2,2018-05-26T13:29:20,2018-10-02T18:34:02,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+popsci.com,popsci.com,exact,4412,39.26,99.559,high,2,1,Popular Science,2,2019-09-17T12:57:24,2022-10-26T15:30:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+interestingengineering.com,interestingengineering.com,exact,10219,33.18,98.978,medium,2,1,Interesting Engineering,2,2020-03-21T01:40:34,2022-11-27T08:47:32,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+scitechdaily.com,scitechdaily.com,exact,12222,31.88,98.778,medium,2,1,Scitech Daily,2,2018-05-25T17:57:33,2021-10-17T14:57:59,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+devdiscourse.com,devdiscourse.com,exact,34288,24.41,96.571,medium,2,1,Devdiscourse,2,2022-11-25T04:19:11,2023-12-20T06:46:15,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+zap.aeiou.pt,aeiou.pt,suffix,75484,18.7,92.452,medium,2,1,ZAP,2,2018-05-26T09:00:15,2024-08-03T20:30:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+labmanager.com,labmanager.com,exact,123652,15.13,87.635,low,2,1,Lab Manager,2,2018-05-25T04:00:00,2021-11-17T17:10:43,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+scienmag.com,scienmag.com,exact,158422,13.34,84.158,low,2,1,ScienMag,2,2021-11-17T14:10:29,2024-07-31T18:20:19,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+astrobio.net,astrobio.net,exact,198749,11.69,80.125,low,2,1,Astrobiology Magazine,2,2017-09-24T13:05:46,2018-05-29T11:57:06,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+foreignaffairs.co.nz,foreignaffairs.co.nz,exact,415779,6.35,58.422,low,2,1,Foreign Affairs New Zealand,2,2019-09-13T12:29:43,2020-07-20T13:52:52,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+torontotelegraph.com,,unmatched,0,0.0,0.0,unranked,2,1,Toronto Telegraph,2,2022-11-29T06:24:02,2023-12-19T18:39:17,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+us.alertbreakingnews.com,,unmatched,0,0.0,0.0,unranked,2,1,Alert Breaking News - US,2,2022-10-27T18:44:19,2022-10-27T18:44:19,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+ca.finance.yahoo.com,yahoo.com,suffix,62,70.13,99.994,very_high,1,1,Yahoo! Finance Canada,1,2023-07-12T12:53:00,2023-07-12T12:53:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+ca.news.yahoo.com,yahoo.com,suffix,62,70.13,99.994,very_high,1,1,Yahoo! News,1,2018-05-24T18:20:22,2018-05-24T18:20:22,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+news.yahoo.com,yahoo.com,suffix,62,70.13,99.994,very_high,1,1,Yahoo! News,1,2015-10-07T17:10:59,2015-10-07T17:10:59,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+yahoo.com,yahoo.com,exact,62,70.13,99.994,very_high,1,1,Yahoo!,1,2018-05-25T18:35:17,2018-05-25T18:35:17,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+nytimes.com,nytimes.com,exact,152,63.64,99.985,very_high,1,1,New York Times,1,2020-03-18T21:27:31,2020-03-18T21:27:31,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+medium.com,medium.com,exact,186,62.17,99.981,very_high,1,1,Medium US,1,2021-06-30T12:36:07,2021-06-30T12:36:07,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+cnn.com,cnn.com,exact,188,62.1,99.981,very_high,1,1,CNN News,1,2018-05-24T15:03:52,2018-05-24T15:03:52,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+welt.de,welt.de,exact,799,51.62,99.92,very_high,1,1,Die Welt,1,2018-05-28T07:21:40,2018-05-28T07:21:40,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+news.umich.edu,umich.edu,suffix,949,50.38,99.905,very_high,1,1,University of Michigan News,1,2021-10-11T13:50:02,2021-10-11T13:50:02,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+theatlantic.com,theatlantic.com,exact,968,50.24,99.903,very_high,1,1,The Atlantic,1,2018-05-24T11:00:00,2018-05-24T11:00:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+nypost.com,nypost.com,exact,1068,49.52,99.893,high,1,1,New York Post,1,2018-05-28T15:16:52,2018-05-28T15:16:52,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+cam.ac.uk,cam.ac.uk,exact,1082,49.43,99.892,high,1,1,University of Cambridge,1,2021-10-14T12:10:32,2021-10-14T12:10:32,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+elconfidencial.com,elconfidencial.com,exact,1188,48.75,99.881,high,1,1,El Confidencial,1,2018-05-24T15:00:00,2018-05-24T15:00:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+arstechnica.com,arstechnica.com,exact,1872,45.46,99.813,high,1,1,Arstechnica,1,2015-10-08T16:23:15,2015-10-08T16:23:15,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+sciencemag.org,sciencemag.org,exact,1916,45.29,99.808,high,1,1,Science/AAAS,1,2018-05-24T15:05:00,2018-05-24T15:05:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+ria.ru,ria.ru,exact,2311,43.94,99.769,high,1,1,??? ???????,1,2018-05-24T15:34:05,2018-05-24T15:34:05,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+actualidad.rt.com,rt.com,suffix,2488,43.4,99.751,high,1,1,RT Network,1,2018-05-27T13:12:41,2018-05-27T13:12:41,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+animals.howstuffworks.com,howstuffworks.com,suffix,2713,42.78,99.729,high,1,1,HowStuffWorks,1,2018-06-06T18:00:05,2018-06-06T18:00:05,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+home.bt.com,bt.com,suffix,3001,42.05,99.7,high,1,1,BT News,1,2018-05-24T17:51:25,2018-05-24T17:51:25,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+newsbreak.com,newsbreak.com,exact,3050,41.93,99.695,high,1,1,Newsbreak,1,2022-10-26T15:30:00,2022-10-26T15:30:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+voanews.com,voanews.com,exact,3299,41.36,99.67,high,1,1,Voice of America,1,2015-10-07T22:22:09,2015-10-07T22:22:09,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+tagesspiegel.de,tagesspiegel.de,exact,3380,41.18,99.662,high,1,1,Der Tagesspiegel,1,2018-05-24T15:47:07,2018-05-24T15:47:07,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+rte.ie,rte.ie,exact,3832,40.28,99.617,high,1,1,RTE Online,1,2022-11-25T06:54:50,2022-11-25T06:54:50,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+derstandard.at,derstandard.at,exact,4255,39.52,99.575,high,1,1,Der Standard,1,2018-05-24T16:06:37,2018-05-24T16:06:37,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+business-standard.com,business-standard.com,exact,4375,39.32,99.563,high,1,1,Business Standard,1,2018-05-25T00:00:00,2018-05-25T00:00:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+deccanherald.com,deccanherald.com,exact,4975,38.39,99.503,high,1,1,The Deccan Herald,1,2022-11-25T06:58:47,2022-11-25T06:58:47,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+upi.com,upi.com,exact,5258,37.99,99.474,high,1,1,UPI.com,1,2017-09-21T16:47:35,2017-09-21T16:47:35,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+breitbart.com,breitbart.com,exact,5285,37.95,99.472,high,1,1,Breitbart News Network,1,2017-09-21T17:00:22,2017-09-21T17:00:22,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+futura-sciences.com,futura-sciences.com,exact,5397,37.8,99.46,high,1,1,Futura-Sciences,1,2018-05-25T14:53:00,2018-05-25T14:53:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+ibtimes.com,ibtimes.com,exact,5736,37.36,99.426,high,1,1,International Business Times,1,2018-05-24T15:00:02,2018-05-24T15:00:02,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+gazeta.ru,gazeta.ru,exact,6401,36.56,99.36,high,1,1,Gazeta.ru,1,2018-05-25T16:33:54,2018-05-25T16:33:54,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+svt.se,svt.se,exact,6505,36.45,99.35,high,1,1,SVT,1,2018-05-24T18:52:10,2018-05-24T18:52:10,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+europapress.es,europapress.es,exact,6694,36.24,99.331,high,1,1,Europa Press,1,2018-05-24T15:40:46,2018-05-24T15:40:46,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+spacedaily.com,spacedaily.com,exact,6837,36.09,99.316,high,1,1,Space Daily,1,2018-05-30T14:45:39,2018-05-30T14:45:39,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+blogs.discovermagazine.com,discovermagazine.com,suffix,6966,35.95,99.303,high,1,1,Discover Magazine,1,2018-05-24T15:00:15,2018-05-24T15:00:15,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+sciencenews.org,sciencenews.org,exact,8331,34.66,99.167,high,1,1,Science News,1,2018-05-24T21:44:51,2018-05-24T21:44:51,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+meteored.com.ar,meteored.com.ar,exact,9083,34.03,99.092,high,1,1,meteored.com.ar,1,2024-08-14T18:29:55,2024-08-14T18:29:55,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+iflscience.com,iflscience.com,exact,11964,32.04,98.804,medium,1,1,Iflscience,1,2023-12-22T11:53:09,2023-12-22T11:53:09,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+philly.com,philly.com,exact,12979,31.45,98.702,medium,1,1,Philly.com,1,2015-10-07T17:00:01,2015-10-07T17:00:01,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+irishexaminer.com,irishexaminer.com,exact,13016,31.43,98.698,medium,1,1,Irish Examiner,1,2018-05-24T15:00:00,2018-05-24T15:00:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+techtimes.com,techtimes.com,exact,13370,31.23,98.663,medium,1,1,Tech Times,1,2015-10-09T10:06:28,2015-10-09T10:06:28,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+theprint.in,theprint.in,exact,13759,31.02,98.624,medium,1,1,The Print,1,2022-11-25T04:30:35,2022-11-25T04:30:35,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+demorgen.be,demorgen.be,exact,13906,30.95,98.609,medium,1,1,De Morgen,1,2018-05-29T09:08:25,2018-05-29T09:08:25,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+canaltech.com.br,canaltech.com.br,exact,16388,29.76,98.361,medium,1,1,Canaltech,1,2021-10-13T12:10:58,2021-10-13T12:10:58,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+the-scientist.com,the-scientist.com,exact,16514,29.7,98.349,medium,1,1,The Scientist Magazine,1,2018-05-24T20:35:50,2018-05-24T20:35:50,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+taipeitimes.com,taipeitimes.com,exact,16560,29.68,98.344,medium,1,1,Taipei Times,1,2018-06-02T18:44:33,2018-06-02T18:44:33,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+theobjective.com,theobjective.com,exact,17005,29.49,98.3,medium,1,1,TheObjective,1,2022-12-04T02:30:00,2022-12-04T02:30:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+businessinsider.in,businessinsider.in,exact,17344,29.35,98.266,medium,1,1,Business Insider India,1,2023-07-12T12:54:00,2023-07-12T12:54:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+inquisitr.com,inquisitr.com,exact,17604,29.24,98.24,medium,1,1,The Inquisitr,1,2018-05-27T11:38:48,2018-05-27T11:38:48,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+timesofmalta.com,timesofmalta.com,exact,18323,28.95,98.168,medium,1,1,Times of Malta,1,2018-07-01T11:41:14,2018-07-01T11:41:14,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+thefreelibrary.com,thefreelibrary.com,exact,19007,28.68,98.099,medium,1,1,The Free Library,1,2022-11-29T00:00:00,2022-11-29T00:00:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+azfamily.com,azfamily.com,exact,21404,27.83,97.86,medium,1,1,azfamily.com,1,2018-05-24T15:02:00,2018-05-24T15:02:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+trust.org,trust.org,exact,23812,27.05,97.619,medium,1,1,Thomson Reuters Foundation,1,2015-10-07T17:00:00,2015-10-07T17:00:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+businessinsider.com.au,businessinsider.com.au,exact,24797,26.76,97.52,medium,1,1,Business Insider Australia,1,2019-02-27T16:08:39,2019-02-27T16:08:39,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+siasat.com,siasat.com,exact,31701,24.98,96.83,medium,1,1,The Siasat Daily,1,2018-05-26T06:52:08,2018-05-26T06:52:08,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+minnpost.com,minnpost.com,exact,32563,24.79,96.744,medium,1,1,MinnPost,1,2018-05-31T13:38:25,2018-05-31T13:38:25,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+timescolonist.com,timescolonist.com,exact,33812,24.52,96.619,medium,1,1,Times Colonist,1,2018-05-27T12:40:00,2018-05-27T12:40:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+latestly.com,latestly.com,exact,34911,24.28,96.509,medium,1,1,Latestly,1,2022-11-25T04:20:14,2022-11-25T04:20:14,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+sott.net,sott.net,exact,38156,23.64,96.184,medium,1,1,Sign of the Times,1,2018-05-28T18:25:00,2018-05-28T18:25:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+daijiworld.com,daijiworld.com,exact,40204,23.26,95.98,medium,1,1,Daijiworld.com,1,2018-05-25T09:42:34,2018-05-25T09:42:34,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+es.paperblog.com,paperblog.com,suffix,44221,22.57,95.578,medium,1,1,Paperblog,1,2018-05-28T04:59:00,2018-05-28T04:59:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+arcamax.com,arcamax.com,exact,45357,22.39,95.464,medium,1,1,Arcamax,1,2018-05-25T00:24:48,2018-05-25T00:24:48,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+nkj.ru,nkj.ru,exact,46125,22.27,95.388,medium,1,1,Science and Life Russia,1,2018-05-29T05:04:00,2018-05-29T05:04:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+1tv.ge,1tv.ge,exact,50338,21.64,94.966,medium,1,1,1TV.ge,1,2022-11-25T10:28:30,2022-11-25T10:28:30,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+radionz.co.nz,radionz.co.nz,exact,51683,21.44,94.832,medium,1,1,Radio New Zealand,1,2018-05-25T07:37:39,2018-05-25T07:37:39,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+wissenschaft.de,wissenschaft.de,exact,55505,20.93,94.45,medium,1,1,wissenschaft.de,1,2018-05-24T15:00:37,2018-05-24T15:00:37,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+scientias.nl,scientias.nl,exact,55623,20.91,94.438,medium,1,1,Scientias,1,2018-05-24T16:54:46,2018-05-24T16:54:46,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+sciencetimes.com,sciencetimes.com,exact,64011,19.9,93.599,medium,1,1,"The Science Times, United States",1,2022-11-26T04:01:20,2022-11-26T04:01:20,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+businessinsider.nl,businessinsider.nl,exact,64037,19.89,93.596,medium,1,1,Business Insider Nederland,1,2023-07-12T12:53:00,2023-07-12T12:53:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+guokr.com,guokr.com,exact,66895,19.58,93.311,medium,1,1,Guokr.com,1,2019-09-14T03:47:09,2019-09-14T03:47:09,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+hirado.hu,hirado.hu,exact,68006,19.46,93.2,medium,1,1,Hirado,1,2015-10-13T10:33:00,2015-10-13T10:33:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+newkerala.com,newkerala.com,exact,72802,18.96,92.72,medium,1,1,New Kerala,1,2018-05-25T11:44:53,2018-05-25T11:44:53,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+en.farsnews.com,farsnews.com,suffix,73093,18.94,92.691,medium,1,1,Fars News Agency,1,2018-05-27T08:42:48,2018-05-27T08:42:48,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+agenciasinc.es,agenciasinc.es,exact,74415,18.81,92.559,medium,1,1,Agencia SINC,1,2015-10-07T17:00:02,2015-10-07T17:00:02,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+illvet.se,illvet.se,exact,76177,18.64,92.382,medium,1,1,Illustrerad Vetenskap,1,2024-08-05T15:14:43,2024-08-05T15:14:43,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+enn.com,enn.com,exact,87770,17.61,91.223,medium,1,1,Environmental News Network,1,2021-11-17T19:48:28,2021-11-17T19:48:28,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+muyinteresante.es,muyinteresante.es,exact,92101,17.26,90.79,medium,1,1,Muy Interesante,1,2021-10-14T19:53:03,2021-10-14T19:53:03,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+heraldmailmedia.com,heraldmailmedia.com,exact,98548,16.77,90.145,medium,1,1,Herald Mail Media,1,2018-05-24T23:09:00,2018-05-24T23:09:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+technology.org,technology.org,exact,98859,16.75,90.114,medium,1,1,Technology.org,1,2015-02-13T13:24:39,2015-02-13T13:24:39,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+sci.news,sci.news,exact,108573,16.07,89.143,low,1,1,Sci-News,1,2024-08-02T20:24:47,2024-08-02T20:24:47,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+theeagle.com,theeagle.com,exact,114963,15.66,88.504,low,1,1,The Eagle,1,2018-05-24T23:09:00,2018-05-24T23:09:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+nationalgeographic.it,nationalgeographic.it,exact,137358,14.37,86.264,low,1,1,National Geographic,1,2018-05-25T10:46:25,2018-05-25T10:46:25,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+ebiotrade.com,ebiotrade.com,exact,142949,14.08,85.705,low,1,1,Ebiotrade,1,2021-10-15T04:24:12,2021-10-15T04:24:12,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+insidescience.org,insidescience.org,exact,151079,13.68,84.892,low,1,1,Inside Science,1,2018-05-24T14:56:05,2018-05-24T14:56:05,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+greenreport.it,greenreport.it,exact,153635,13.56,84.637,low,1,1,Green Report (Italy),1,2018-05-25T09:00:05,2018-05-25T09:00:05,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+bioengineer.org,bioengineer.org,exact,155309,13.48,84.469,low,1,1,Bioengineer.org,1,2021-11-17T14:12:37,2021-11-17T14:12:37,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+actionnewsnow.com,actionnewsnow.com,exact,166931,12.96,83.307,low,1,1,Action News Now,1,2018-05-24T00:00:00,2018-05-24T00:00:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+businessinsider.sg,businessinsider.sg,exact,168571,12.89,83.143,low,1,1,Business Insider Singapore,1,2019-02-27T16:08:39,2019-02-27T16:08:39,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+pnn.de,pnn.de,exact,190871,11.99,80.913,low,1,1,Potsdamer Neueste Nachrichten,1,2018-05-24T15:47:07,2018-05-24T15:47:07,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+evolutionnews.org,evolutionnews.org,exact,199905,11.65,80.01,low,1,1,Evolution News & Science Today,1,2022-08-19T13:47:00,2022-08-19T13:47:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+scienceworldreport.com,scienceworldreport.com,exact,286296,9.05,71.371,low,1,1,Science World Report,1,2015-10-13T19:40:08,2015-10-13T19:40:08,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+kopalniawiedzy.pl,kopalniawiedzy.pl,exact,289658,8.97,71.034,low,1,1,Kopalnia Wiedzy,1,2021-10-12T11:34:19,2021-10-12T11:34:19,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+sg.hu,sg.hu,exact,308215,8.52,69.179,low,1,1,sg.hu,1,2018-05-29T16:07:28,2018-05-29T16:07:28,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+healthmedicinet.com,healthmedicinet.com,exact,373053,7.14,62.695,low,1,1,Health Medicinet,1,2014-10-15T06:23:58,2014-10-15T06:23:58,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+laboratoryequipment.com,laboratoryequipment.com,exact,379132,7.02,62.087,low,1,1,Laboratory Equipment,1,2017-09-22T13:37:02,2017-09-22T13:37:02,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+nouvelles-du-monde.com,nouvelles-du-monde.com,exact,412323,6.41,58.768,low,1,1,Nouvelles du monde,1,2024-02-15T05:51:07,2024-02-15T05:51:07,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+southafricatoday.net,southafricatoday.net,exact,423310,6.22,57.669,low,1,1,South Africa Today,1,2022-11-30T18:38:20,2022-11-30T18:38:20,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+vervetimes.com,vervetimes.com,exact,508649,4.89,49.135,low,1,1,Verve times,1,2022-11-25T05:33:41,2022-11-25T05:33:41,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+myscience.org,myscience.org,exact,515999,4.79,48.4,low,1,1,My Science,1,2017-09-21T07:00:06,2017-09-21T07:00:06,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+nipponese.news,nipponese.news,exact,675274,2.84,32.473,low,1,1,Nipponese.news,1,2024-08-18T10:03:01,2024-08-18T10:03:01,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+canindia.com,canindia.com,exact,857347,1.11,14.265,low,1,1,CanIndia,1,2018-05-25T09:36:00,2018-05-25T09:36:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+trueviralnews.com,trueviralnews.com,exact,871659,0.99,12.834,low,1,1,True Viral News,1,2021-10-11T18:38:02,2021-10-11T18:38:02,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+bilbao24horas.com,,unmatched,0,0.0,0.0,unranked,1,1,Bilbao24horas,1,2022-12-04T08:03:51,2022-12-04T08:03:51,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+cambiopolitico.com,,unmatched,0,0.0,0.0,unranked,1,1,Cambio Político,1,2022-12-01T22:11:33,2022-12-01T22:11:33,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+chitchatpost.com,,unmatched,0,0.0,0.0,unranked,1,1,ChitChat Post Espana,1,2024-08-14T01:05:52,2024-08-14T01:05:52,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+cikavosti.com,,unmatched,0,0.0,0.0,unranked,1,1,CIKAVOSTI,1,2024-08-15T16:34:27,2024-08-15T16:34:27,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+dclm.es,,unmatched,0,0.0,0.0,unranked,1,1,dclm,1,2022-12-04T12:11:46,2022-12-04T12:11:46,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+elportaluco.com,,unmatched,0,0.0,0.0,unranked,1,1,El Portaluco,1,2022-12-04T05:41:01,2022-12-04T05:41:01,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+free-mail.co.za,,unmatched,0,0.0,0.0,unranked,1,1,Free Mail South Africa,1,2023-12-20T01:00:19,2023-12-20T01:00:19,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+longroom.com,,unmatched,0,0.0,0.0,unranked,1,1,Long Room,1,2018-05-24T19:15:53,2018-05-24T19:15:53,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+madriddigital24horas.com,,unmatched,0,0.0,0.0,unranked,1,1,Madriddigital24horas,1,2022-12-04T11:09:48,2022-12-04T11:09:48,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+mandarinian.news,,unmatched,0,0.0,0.0,unranked,1,1,Mandarinian,1,2025-05-10T22:13:28,2025-05-10T22:13:28,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+newslanes.com,,unmatched,0,0.0,0.0,unranked,1,1,Newslanes,1,2022-11-25T06:24:20,2022-11-25T06:24:20,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+noticiasdelatierra.com,,unmatched,0,0.0,0.0,unranked,1,1,Noticias de la tierra,1,2024-04-08T15:39:30,2024-04-08T15:39:30,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+presseraum.at,,unmatched,0,0.0,0.0,unranked,1,1,Presseraum,1,2022-11-25T13:18:01,2022-11-25T13:18:01,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+swifttelecast.com,,unmatched,0,0.0,0.0,unranked,1,1,Swift Telecast,1,2022-11-26T17:13:24,2022-11-26T17:13:24,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+technologytimes.pk,,unmatched,0,0.0,0.0,unranked,1,1,Technology Times,1,2021-10-12T19:06:21,2021-10-12T19:06:21,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+todayuknews.com,,unmatched,0,0.0,0.0,unranked,1,1,Today UK News,1,2022-11-26T22:24:01,2022-11-26T22:24:01,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+uktimenews.com,,unmatched,0,0.0,0.0,unranked,1,1,UK Time News,1,2022-11-25T05:02:03,2022-11-25T05:02:03,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
+w2.technobahn.com,,unmatched,0,0.0,0.0,unranked,1,1,Technobahn,1,2015-02-12T17:11:00,2015-02-12T17:11:00,W3779,2026-08-09T22:00:01.987567,2026-08-10T08:06:49.832065+00:00
