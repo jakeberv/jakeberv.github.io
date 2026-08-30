@@ -4,20 +4,20 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 14,
-  "citations": 2855,
+  "citations": 2856,
   "cites_per_year": {
     "2015": 13,
     "2016": 109,
     "2017": 210,
     "2018": 223,
     "2019": 282,
-    "2020": 317,
+    "2020": 316,
     "2021": 315,
-    "2022": 320,
-    "2023": 263,
+    "2022": 319,
+    "2023": 262,
     "2024": 269,
-    "2025": 259,
-    "2026": 214
+    "2025": 258,
+    "2026": 219
   },
   "interests": [
     "Speciation",
@@ -108,14 +108,14 @@
       "scholar_id": "D5ijrOsAAAAJ"
     },
     {
-      "name": "Jonathan Hughes",
-      "affiliation": "Research Consultant, Arizona State University",
-      "scholar_id": "awBFtXsAAAAJ"
-    },
-    {
       "name": "Benjamin M. Winger",
       "affiliation": "Associate Professor of Ecology and Evolutionary Biology, University of Michigan",
       "scholar_id": "C61BipSii0wC"
+    },
+    {
+      "name": "Jonathan Hughes",
+      "affiliation": "Research Consultant, Arizona State University",
+      "scholar_id": "awBFtXsAAAAJ"
     },
     {
       "name": "Christopher J Clark",
@@ -415,12 +415,12 @@
     "available": 16,
     "not_available": 1
   },
-  "total_publications": 34,
-  "publications_fetched": 34,
+  "total_publications": 33,
+  "publications_fetched": 33,
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 1988,
+      "citations": 1993,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
@@ -483,7 +483,7 @@
     },
     {
       "title": "Genome and life-history evolution link bird diversification to the end-Cretaceous mass extinction",
-      "citations": 35,
+      "citations": 36,
       "year": 2024,
       "venue": "N/A",
       "url": "https://www.science.org/doi/abs/10.1126/sciadv.adp0114"
@@ -497,7 +497,7 @@
     },
     {
       "title": "Pennaraptoran theropod dinosaurs: past progress and new frontiers",
-      "citations": 24,
+      "citations": 25,
       "year": 2020,
       "venue": "N/A",
       "url": "https://scholar.google.com/scholar?cluster=14767977026164811401&hl=en&oi=scholarr"
@@ -529,13 +529,6 @@
       "year": 2025,
       "venue": "N/A",
       "url": "https://mirror.truenetwork.ru/CRAN/web/views/Phylogenetics.html"
-    },
-    {
-      "title": "Pennaraptoran theropod dinosaurs: past progress and new frontiers",
-      "citations": 6,
-      "year": 2020,
-      "venue": "N/A",
-      "url": "https://scholar.google.com/scholar?cluster=14670924992546031759&hl=en&oi=scholarr"
     },
     {
       "title": "Habitat-associated evolutionary rates in deep-sea invertebrates",
@@ -657,6 +650,6 @@
       "url": "https://www.academia.edu/download/39047832/Prum_et_al._2015_Nature.pdf"
     }
   ],
-  "generated_at": 1787447240,
+  "generated_at": 1788059743,
   "proxy_mode": "free"
 }
