@@ -4,7 +4,7 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 14,
-  "citations": 2856,
+  "citations": 2860,
   "cites_per_year": {
     "2015": 13,
     "2016": 109,
@@ -13,11 +13,11 @@
     "2019": 282,
     "2020": 316,
     "2021": 315,
-    "2022": 319,
+    "2022": 320,
     "2023": 262,
-    "2024": 269,
-    "2025": 258,
-    "2026": 219
+    "2024": 270,
+    "2025": 256,
+    "2026": 222
   },
   "interests": [
     "Speciation",
@@ -193,6 +193,11 @@
       "scholar_id": "Vi0LoiAAAAAJ"
     },
     {
+      "name": "Charlotte M Probst",
+      "affiliation": "PhD student, University of Michigan",
+      "scholar_id": "dRvjW1sAAAAJ"
+    },
+    {
       "name": "Nathanael Walker-Hale",
       "affiliation": "Postdoctoral Research Associate, Department of Biosciences, Durham University",
       "scholar_id": "SeRf_xAAAAAJ"
@@ -228,11 +233,6 @@
       "scholar_id": "WhHTPMQAAAAJ"
     },
     {
-      "name": "Charlotte M Probst",
-      "affiliation": "PhD student, University of Michigan",
-      "scholar_id": "dRvjW1sAAAAJ"
-    },
-    {
       "name": "David Fouhey",
       "affiliation": "New York University",
       "scholar_id": "FLcpd34AAAAJ"
@@ -249,7 +249,7 @@
     },
     {
       "name": "Michael Landis",
-      "affiliation": "Assistant Professor at Washington University in St. Louis",
+      "affiliation": "Associate Professor at Washington University in St. Louis",
       "scholar_id": "LxPnTjYAAAAJ"
     },
     {
@@ -420,14 +420,14 @@
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 1993,
+      "citations": 1994,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
     },
     {
       "title": "Early evolution of modern birds structured by global forest collapse at the end-Cretaceous mass extinction",
-      "citations": 208,
+      "citations": 209,
       "year": 2018,
       "venue": "N/A",
       "url": "https://www.cell.com/current-biology/fulltext/S0960-9822(18)30534-7"
@@ -518,7 +518,7 @@
     },
     {
       "title": "Skeletal trait measurements for thousands of bird species",
-      "citations": 8,
+      "citations": 9,
       "year": 2025,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/s41597-025-05234-y"
@@ -545,18 +545,18 @@
       "url": "https://academic.oup.com/gbe/article-abstract/17/2/evaf017/7998737"
     },
     {
+      "title": "Rates of passerine body plan evolution in time and space",
+      "citations": 2,
+      "year": 2026,
+      "venue": "N/A",
+      "url": "https://www.nature.com/articles/s41559-026-03110-5"
+    },
+    {
       "title": "Exploring the data demands and global opportunities for reconstructing morphological responses to climate change",
       "citations": 2,
       "year": 2026,
       "venue": "N/A",
       "url": "https://link.springer.com/article/10.1007/s10682-025-10368-x"
-    },
-    {
-      "title": "Rates of passerine body plan evolution in time and space",
-      "citations": 1,
-      "year": 2026,
-      "venue": "N/A",
-      "url": "https://www.nature.com/articles/s41559-026-03110-5"
     },
     {
       "title": "Genomic and physiological changes in a sexually selected and frugivorous bird radiation",
@@ -650,6 +650,6 @@
       "url": "https://www.academia.edu/download/39047832/Prum_et_al._2015_Nature.pdf"
     }
   ],
-  "generated_at": 1788059743,
+  "generated_at": 1788661092,
   "proxy_mode": "free"
 }
