@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-31T14:01:42.439502+00:00",
+  "generated_at_utc": "2026-09-07T12:44:47.658906+00:00",
   "input": {
     "source_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/exports/news_mentions_clean.json",
     "news_mentions_rows_input": 345,
@@ -14,21 +14,21 @@
   },
   "source": {
     "source": "tranco_api",
-    "list_id": "5674N",
-    "download_url": "https://tranco-list.eu/download/5674N/1000000",
-    "created_on": "2026-08-30T22:00:01.861323",
-    "retrieved_at_utc": "2026-08-31T13:59:53.514605+00:00",
+    "list_id": "74V6X",
+    "download_url": "https://tranco-list.eu/download/74V6X/1000000",
+    "created_on": "2026-09-06T22:00:02.210778",
+    "retrieved_at_utc": "2026-09-07T12:41:52.455364+00:00",
     "cache_hit": false,
-    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_5674N.csv.zip",
-    "ranked_domains": 130
+    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_74V6X.csv.zip",
+    "ranked_domains": 131
   },
   "coverage": {
-    "domains_matched": 136,
-    "domains_unmatched": 23,
-    "domain_match_rate": 0.8553,
-    "mentions_ranked": 273,
+    "domains_matched": 137,
+    "domains_unmatched": 22,
+    "domain_match_rate": 0.8616,
+    "mentions_ranked": 274,
     "mentions_total": 302,
-    "mention_coverage_rate": 0.904
+    "mention_coverage_rate": 0.9073
   },
   "time_adjusted": {
     "enabled": true,
@@ -171,12 +171,6 @@
       "mentions": 1,
       "top_outlet": "Today UK News",
       "last_mention_date": "2022-11-26T22:24:01"
-    },
-    {
-      "domain": "trueviralnews.com",
-      "mentions": 1,
-      "top_outlet": "True Viral News",
-      "last_mention_date": "2021-10-11T18:38:02"
     },
     {
       "domain": "uktimenews.com",
