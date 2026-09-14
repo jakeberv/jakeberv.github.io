@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-07T12:44:47.658906+00:00",
+  "generated_at_utc": "2026-09-14T13:14:45.578439+00:00",
   "input": {
     "source_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/exports/news_mentions_clean.json",
     "news_mentions_rows_input": 345,
@@ -13,45 +13,157 @@
     }
   },
   "source": {
-    "source": "tranco_api",
-    "list_id": "74V6X",
-    "download_url": "https://tranco-list.eu/download/74V6X/1000000",
-    "created_on": "2026-09-06T22:00:02.210778",
-    "retrieved_at_utc": "2026-09-07T12:41:52.455364+00:00",
+    "source": "unavailable",
+    "list_id": "",
+    "download_url": "",
+    "created_on": "",
+    "retrieved_at_utc": "2026-09-14T12:57:42.073587+00:00",
     "cache_hit": false,
-    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_74V6X.csv.zip",
-    "ranked_domains": 131
+    "zip_path": ""
   },
   "coverage": {
-    "domains_matched": 137,
-    "domains_unmatched": 22,
-    "domain_match_rate": 0.8616,
-    "mentions_ranked": 274,
+    "domains_matched": 0,
+    "domains_unmatched": 159,
+    "domain_match_rate": 0.0,
+    "mentions_ranked": 0,
     "mentions_total": 302,
-    "mention_coverage_rate": 0.9073
+    "mention_coverage_rate": 0.0
   },
   "time_adjusted": {
     "enabled": true,
     "granularity": "quarter",
     "periods_requested": 22,
-    "periods_resolved": 22,
-    "periods_fallback": 7,
-    "unique_tranco_lists": 15,
+    "periods_resolved": 0,
+    "periods_fallback": 0,
+    "unique_tranco_lists": 0,
     "mentions_total": 302,
-    "mentions_assigned_snapshot": 302,
-    "mentions_ranked_at_date": 283,
-    "ranked_coverage_rate": 0.9371,
-    "median_abs_snapshot_offset_days": 34,
-    "max_abs_snapshot_offset_days": 1588,
-    "earliest_snapshot_date": "2019-02-18",
-    "latest_snapshot_date": "2025-05-15",
-    "unresolved_period_keys": [],
-    "date_api_lookups_attempted": 167,
+    "mentions_assigned_snapshot": 0,
+    "mentions_ranked_at_date": 0,
+    "ranked_coverage_rate": 0.0,
+    "median_abs_snapshot_offset_days": 0,
+    "max_abs_snapshot_offset_days": 0,
+    "earliest_snapshot_date": "",
+    "latest_snapshot_date": "",
+    "unresolved_period_keys": [
+      "2014-Q4",
+      "2015-Q1",
+      "2015-Q4",
+      "2017-Q3",
+      "2018-Q2",
+      "2018-Q3",
+      "2018-Q4",
+      "2019-Q1",
+      "2019-Q3",
+      "2020-Q1",
+      "2020-Q3",
+      "2021-Q2",
+      "2021-Q4",
+      "2022-Q1",
+      "2022-Q3",
+      "2022-Q4",
+      "2023-Q3",
+      "2023-Q4",
+      "2024-Q1",
+      "2024-Q2",
+      "2024-Q3",
+      "2025-Q2"
+    ],
+    "date_api_lookups_attempted": 250,
     "date_api_lookup_cap": 250,
-    "date_api_lookup_cap_hit": false,
+    "date_api_lookup_cap_hit": true,
     "date_api_delay_ms": 250
   },
   "top_unmatched_domains": [
+    {
+      "domain": "ct.moreover.com",
+      "mentions": 44,
+      "top_outlet": "MSN",
+      "last_mention_date": "2025-05-25T01:32:00"
+    },
+    {
+      "domain": "phys.org",
+      "mentions": 11,
+      "top_outlet": "Phys.org",
+      "last_mention_date": "2023-12-20T18:19:09"
+    },
+    {
+      "domain": "theconversation.com",
+      "mentions": 9,
+      "top_outlet": "The Conversation",
+      "last_mention_date": "2024-02-15T05:11:12"
+    },
+    {
+      "domain": "rawstory.com",
+      "mentions": 8,
+      "top_outlet": "The Raw Story",
+      "last_mention_date": "2023-12-27T12:52:43"
+    },
+    {
+      "domain": "eurekalert.org",
+      "mentions": 7,
+      "top_outlet": "EurekAlert!",
+      "last_mention_date": "2021-11-17T14:09:24"
+    },
+    {
+      "domain": "feedproxy.google.com",
+      "mentions": 7,
+      "top_outlet": "Sci-News",
+      "last_mention_date": "2021-10-15T18:43:11"
+    },
+    {
+      "domain": "uk.news.yahoo.com",
+      "mentions": 7,
+      "top_outlet": "Yahoo! News",
+      "last_mention_date": "2023-12-19T16:53:46"
+    },
+    {
+      "domain": "msn.com",
+      "mentions": 6,
+      "top_outlet": "MSN",
+      "last_mention_date": "2023-12-20T20:34:55"
+    },
+    {
+      "domain": "sciencedaily.com",
+      "mentions": 6,
+      "top_outlet": "Science Daily",
+      "last_mention_date": "2021-11-17T15:01:31"
+    },
+    {
+      "domain": "news.google.com",
+      "mentions": 5,
+      "top_outlet": "Google News",
+      "last_mention_date": "2022-11-26T17:10:01"
+    },
+    {
+      "domain": "miragenews.com",
+      "mentions": 4,
+      "top_outlet": "Mirage News",
+      "last_mention_date": "2021-11-17T14:08:13"
+    },
+    {
+      "domain": "newswise.com",
+      "mentions": 4,
+      "top_outlet": "Newswise",
+      "last_mention_date": "2021-11-17T00:00:00"
+    },
+    {
+      "domain": "firstpost.com",
+      "mentions": 3,
+      "top_outlet": "Firstpost",
+      "last_mention_date": "2022-11-25T07:59:21"
+    },
+    {
+      "domain": "futurity.org",
+      "mentions": 3,
+      "top_outlet": "Futurity",
+      "last_mention_date": "2021-11-03T17:55:49"
+    },
+    {
+      "domain": "inverse.com",
+      "mentions": 3,
+      "top_outlet": "Inverse",
+      "last_mention_date": "2022-12-04T20:00:25"
+    },
     {
       "domain": "journalbreak.com",
       "mentions": 3,
@@ -63,6 +175,114 @@
       "mentions": 3,
       "top_outlet": "Nachrichten Welt",
       "last_mention_date": "2022-11-27T04:02:21"
+    },
+    {
+      "domain": "naked-science.ru",
+      "mentions": 3,
+      "top_outlet": "Naked Science",
+      "last_mention_date": "2021-10-14T09:55:49"
+    },
+    {
+      "domain": "news.cornell.edu",
+      "mentions": 3,
+      "top_outlet": "Cornell Chronicle",
+      "last_mention_date": "2021-10-11T14:10:00"
+    },
+    {
+      "domain": "sci-news.com",
+      "mentions": 3,
+      "top_outlet": "Sci-News",
+      "last_mention_date": "2017-09-22T10:46:25"
+    },
+    {
+      "domain": "sciencealert.com",
+      "mentions": 3,
+      "top_outlet": "Science Alert",
+      "last_mention_date": "2022-11-25T06:16:58"
+    },
+    {
+      "domain": "sciencenewsline.com",
+      "mentions": 3,
+      "top_outlet": "Science Newsline",
+      "last_mention_date": "2017-09-22T15:40:00"
+    },
+    {
+      "domain": "astrobio.net",
+      "mentions": 2,
+      "top_outlet": "Astrobiology Magazine",
+      "last_mention_date": "2018-05-29T11:57:06"
+    },
+    {
+      "domain": "businessinsider.com",
+      "mentions": 2,
+      "top_outlet": "Business Insider",
+      "last_mention_date": "2023-07-12T12:53:00"
+    },
+    {
+      "domain": "devdiscourse.com",
+      "mentions": 2,
+      "top_outlet": "Devdiscourse",
+      "last_mention_date": "2023-12-20T06:46:15"
+    },
+    {
+      "domain": "economictimes.indiatimes.com",
+      "mentions": 2,
+      "top_outlet": "Times of India",
+      "last_mention_date": "2023-12-29T05:34:53"
+    },
+    {
+      "domain": "foreignaffairs.co.nz",
+      "mentions": 2,
+      "top_outlet": "Foreign Affairs New Zealand",
+      "last_mention_date": "2020-07-20T13:52:52"
+    },
+    {
+      "domain": "in.news.yahoo.com",
+      "mentions": 2,
+      "top_outlet": "Yahoo! News",
+      "last_mention_date": "2018-05-25T09:36:04"
+    },
+    {
+      "domain": "interestingengineering.com",
+      "mentions": 2,
+      "top_outlet": "Interesting Engineering",
+      "last_mention_date": "2022-11-27T08:47:32"
+    },
+    {
+      "domain": "labmanager.com",
+      "mentions": 2,
+      "top_outlet": "Lab Manager",
+      "last_mention_date": "2021-11-17T17:10:43"
+    },
+    {
+      "domain": "news.yale.edu",
+      "mentions": 2,
+      "top_outlet": "Yale News",
+      "last_mention_date": "2021-10-11T14:00:38"
+    },
+    {
+      "domain": "popsci.com",
+      "mentions": 2,
+      "top_outlet": "Popular Science",
+      "last_mention_date": "2022-10-26T15:30:00"
+    },
+    {
+      "domain": "scienmag.com",
+      "mentions": 2,
+      "top_outlet": "ScienMag",
+      "last_mention_date": "2024-07-31T18:20:19"
+    },
+    {
+      "domain": "scitechdaily.com",
+      "mentions": 2,
+      "top_outlet": "Scitech Daily",
+      "last_mention_date": "2021-10-17T14:57:59"
+    },
+    {
+      "domain": "smithsonianmag.com",
+      "mentions": 2,
+      "top_outlet": "Smithsonian Magazine",
+      "last_mention_date": "2018-05-24T15:13:09"
     },
     {
       "domain": "torontotelegraph.com",
@@ -77,113 +297,28 @@
       "last_mention_date": "2022-10-27T18:44:19"
     },
     {
-      "domain": "bilbao24horas.com",
-      "mentions": 1,
-      "top_outlet": "Bilbao24horas",
-      "last_mention_date": "2022-12-04T08:03:51"
+      "domain": "yle.fi",
+      "mentions": 2,
+      "top_outlet": "Yle.fi",
+      "last_mention_date": "2018-10-02T18:34:02"
     },
     {
-      "domain": "cambiopolitico.com",
-      "mentions": 1,
-      "top_outlet": "Cambio Político",
-      "last_mention_date": "2022-12-01T22:11:33"
+      "domain": "zap.aeiou.pt",
+      "mentions": 2,
+      "top_outlet": "ZAP",
+      "last_mention_date": "2024-08-03T20:30:00"
     },
     {
-      "domain": "chitchatpost.com",
+      "domain": "1tv.ge",
       "mentions": 1,
-      "top_outlet": "ChitChat Post Espana",
-      "last_mention_date": "2024-08-14T01:05:52"
-    },
-    {
-      "domain": "cikavosti.com",
-      "mentions": 1,
-      "top_outlet": "CIKAVOSTI",
-      "last_mention_date": "2024-08-15T16:34:27"
-    },
-    {
-      "domain": "dclm.es",
-      "mentions": 1,
-      "top_outlet": "dclm",
-      "last_mention_date": "2022-12-04T12:11:46"
-    },
-    {
-      "domain": "elportaluco.com",
-      "mentions": 1,
-      "top_outlet": "El Portaluco",
-      "last_mention_date": "2022-12-04T05:41:01"
-    },
-    {
-      "domain": "longroom.com",
-      "mentions": 1,
-      "top_outlet": "Long Room",
-      "last_mention_date": "2018-05-24T19:15:53"
-    },
-    {
-      "domain": "madriddigital24horas.com",
-      "mentions": 1,
-      "top_outlet": "Madriddigital24horas",
-      "last_mention_date": "2022-12-04T11:09:48"
-    },
-    {
-      "domain": "mandarinian.news",
-      "mentions": 1,
-      "top_outlet": "Mandarinian",
-      "last_mention_date": "2025-05-10T22:13:28"
-    },
-    {
-      "domain": "newslanes.com",
-      "mentions": 1,
-      "top_outlet": "Newslanes",
-      "last_mention_date": "2022-11-25T06:24:20"
-    },
-    {
-      "domain": "nipponese.news",
-      "mentions": 1,
-      "top_outlet": "Nipponese.news",
-      "last_mention_date": "2024-08-18T10:03:01"
-    },
-    {
-      "domain": "noticiasdelatierra.com",
-      "mentions": 1,
-      "top_outlet": "Noticias de la tierra",
-      "last_mention_date": "2024-04-08T15:39:30"
-    },
-    {
-      "domain": "presseraum.at",
-      "mentions": 1,
-      "top_outlet": "Presseraum",
-      "last_mention_date": "2022-11-25T13:18:01"
-    },
-    {
-      "domain": "swifttelecast.com",
-      "mentions": 1,
-      "top_outlet": "Swift Telecast",
-      "last_mention_date": "2022-11-26T17:13:24"
-    },
-    {
-      "domain": "technologytimes.pk",
-      "mentions": 1,
-      "top_outlet": "Technology Times",
-      "last_mention_date": "2021-10-12T19:06:21"
-    },
-    {
-      "domain": "todayuknews.com",
-      "mentions": 1,
-      "top_outlet": "Today UK News",
-      "last_mention_date": "2022-11-26T22:24:01"
-    },
-    {
-      "domain": "uktimenews.com",
-      "mentions": 1,
-      "top_outlet": "UK Time News",
-      "last_mention_date": "2022-11-25T05:02:03"
-    },
-    {
-      "domain": "w2.technobahn.com",
-      "mentions": 1,
-      "top_outlet": "Technobahn",
-      "last_mention_date": "2015-02-12T17:11:00"
+      "top_outlet": "1TV.ge",
+      "last_mention_date": "2022-11-25T10:28:30"
     }
   ],
-  "warnings": []
+  "warnings": [
+    "Unable to fetch Tranco latest metadata endpoints; attempting cached latest list.",
+    "Latest Tranco fetch failed: missing_list_id",
+    "Historical date lookup cap reached (250); unresolved periods will use nearest available fallback.",
+    "Unresolved Tranco snapshots for periods: 2014-Q4, 2015-Q1, 2015-Q4, 2017-Q3, 2018-Q2, 2018-Q3, 2018-Q4, 2019-Q1, 2019-Q3, 2020-Q1, 2020-Q3, 2021-Q2 ..."
+  ]
 }
