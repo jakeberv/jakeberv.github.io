@@ -34,7 +34,8 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install scholarly==1.7.11 "httpx[socks]==0.23.0"
+          # scholarly 1.7.11 imports bibtexparser.bibdatabase, removed in v2.
+          pip install scholarly==1.7.11 "httpx[socks]==0.23.0" bibtexparser==1.4.4
 
       - name: Run the Python script (with retry)
         run: |
