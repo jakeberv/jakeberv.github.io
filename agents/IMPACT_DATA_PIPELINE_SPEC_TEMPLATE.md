@@ -134,6 +134,8 @@ Dataset links in `impact_dashboard.json` should remain site-absolute (`/data/imp
 
 ### Upstream source refreshes
 - Scholar refresh workflow: `.github/workflows/fetch_scholar_data.yml` updates `_data/scholar_metrics.json`.
+- Scholar dependencies: Python 3.12 with `scholarly==1.7.11`, `httpx[socks]==0.23.0`, and `bibtexparser==1.4.4`. Keep the BibTeX parser on the tested v1 release while scholarly imports `bibtexparser.bibdatabase`; v2 removes that module and fails before fetching data.
+- Validate Scholar dependency changes with `python -m pip check` and `python -c "from scholarly import scholarly, ProxyGenerator"` after installing the workflow dependencies.
 - Citation geography refresh: `scripts/analysis/citation_map_parser.R` parses `_data/map.txt` to `_data/map_data.json` when run from the repository root.
 - Altmetric refresh: add/update CSV exports under `data/altmetric/raw/`.
 
