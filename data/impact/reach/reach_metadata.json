@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-21T13:02:59.564209+00:00",
+  "generated_at_utc": "2026-09-28T14:08:47.396721+00:00",
   "input": {
     "source_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/exports/news_mentions_clean.json",
     "news_mentions_rows_input": 345,
@@ -14,12 +14,12 @@
   },
   "source": {
     "source": "tranco_api",
-    "list_id": "64X5X",
-    "download_url": "https://tranco-list.eu/download/64X5X/1000000",
-    "created_on": "2026-09-20T22:00:02.090984",
-    "retrieved_at_utc": "2026-09-21T12:56:32.667528+00:00",
+    "list_id": "64X3X",
+    "download_url": "https://tranco-list.eu/download/64X3X/1000000",
+    "created_on": "2026-09-27T22:00:01.783780",
+    "retrieved_at_utc": "2026-09-28T14:05:19.915748+00:00",
     "cache_hit": false,
-    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_64X5X.csv.zip",
+    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_64X3X.csv.zip",
     "ranked_domains": 131
   },
   "coverage": {
@@ -39,14 +39,14 @@
     "unique_tranco_lists": 15,
     "mentions_total": 302,
     "mentions_assigned_snapshot": 302,
-    "mentions_ranked_at_date": 260,
-    "ranked_coverage_rate": 0.8609,
+    "mentions_ranked_at_date": 283,
+    "ranked_coverage_rate": 0.9371,
     "median_abs_snapshot_offset_days": 33,
-    "max_abs_snapshot_offset_days": 1589,
-    "earliest_snapshot_date": "2019-02-19",
+    "max_abs_snapshot_offset_days": 1591,
+    "earliest_snapshot_date": "2019-02-21",
     "latest_snapshot_date": "2025-05-13",
     "unresolved_period_keys": [],
-    "date_api_lookups_attempted": 215,
+    "date_api_lookups_attempted": 218,
     "date_api_lookup_cap": 250,
     "date_api_lookup_cap_hit": false,
     "date_api_delay_ms": 250
@@ -185,9 +185,5 @@
       "last_mention_date": "2015-02-12T17:11:00"
     }
   ],
-  "warnings": [
-    "Historical Tranco fetch failed for Y56VG: TimeoutError: The read operation timed out",
-    "Historical Tranco fetch failed for VXWKN: TimeoutError: The read operation timed out",
-    "Historical Tranco fetch failed for QG934: TimeoutError: The read operation timed out"
-  ]
+  "warnings": []
 }
