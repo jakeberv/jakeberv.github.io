@@ -4,7 +4,7 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 14,
-  "citations": 2888,
+  "citations": 2895,
   "cites_per_year": {
     "2015": 13,
     "2016": 109,
@@ -13,11 +13,11 @@
     "2019": 282,
     "2020": 318,
     "2021": 316,
-    "2022": 321,
-    "2023": 262,
-    "2024": 271,
-    "2025": 257,
-    "2026": 241
+    "2022": 320,
+    "2023": 263,
+    "2024": 273,
+    "2025": 256,
+    "2026": 247
   },
   "interests": [
     "Speciation",
@@ -63,6 +63,11 @@
       "scholar_id": "4d4zhI8AAAAJ"
     },
     {
+      "name": "Stephen A. Smith",
+      "affiliation": "Professor, University of Michigan",
+      "scholar_id": "gVwJZpAAAAAJ"
+    },
+    {
       "name": "Kristof Zyskowski",
       "affiliation": "Yale University, Peabody Museum of Natural History",
       "scholar_id": "aEmILscAAAAJ"
@@ -78,9 +83,9 @@
       "scholar_id": "KC_7qOMAAAAJ"
     },
     {
-      "name": "Stephen A. Smith",
-      "affiliation": "Professor, University of Michigan",
-      "scholar_id": "gVwJZpAAAAAJ"
+      "name": "J Ryan Shipley",
+      "affiliation": "Swiss Federal Institute for Aquatic Research, EAWAG",
+      "scholar_id": "3z5nlGUAAAAJ"
     },
     {
       "name": "Jacques A. Gauthier",
@@ -113,6 +118,11 @@
       "scholar_id": "C61BipSii0wC"
     },
     {
+      "name": "Brian C. Weeks",
+      "affiliation": "School for Environment and Sustainability, University of Michigan",
+      "scholar_id": "7isF9EEAAAAJ"
+    },
+    {
       "name": "Jonathan Hughes",
       "affiliation": "Research Consultant, Arizona State University",
       "scholar_id": "awBFtXsAAAAJ"
@@ -121,16 +131,6 @@
       "name": "Christopher J Clark",
       "affiliation": "EEOB, UC Riverside",
       "scholar_id": "9Bpr4-4AAAAJ"
-    },
-    {
-      "name": "J Ryan Shipley",
-      "affiliation": "Swiss Federal Institute for Aquatic Research, EAWAG",
-      "scholar_id": "3z5nlGUAAAAJ"
-    },
-    {
-      "name": "Brian C. Weeks",
-      "affiliation": "School for Environment and Sustainability, University of Michigan",
-      "scholar_id": "7isF9EEAAAAJ"
     },
     {
       "name": "Alan Fecchio",
@@ -198,11 +198,6 @@
       "scholar_id": "dRvjW1sAAAAJ"
     },
     {
-      "name": "David Fouhey",
-      "affiliation": "New York University",
-      "scholar_id": "FLcpd34AAAAJ"
-    },
-    {
       "name": "Nathanael Walker-Hale",
       "affiliation": "Postdoctoral Research Associate, Department of Biosciences, Durham University",
       "scholar_id": "SeRf_xAAAAAJ"
@@ -236,6 +231,11 @@
       "name": "C. Tomomi Parins-Fukuchi",
       "affiliation": "University of Toronto",
       "scholar_id": "WhHTPMQAAAAJ"
+    },
+    {
+      "name": "David Fouhey",
+      "affiliation": "New York University",
+      "scholar_id": "FLcpd34AAAAJ"
     },
     {
       "name": "Elisa Bonaccorso",
@@ -313,21 +313,6 @@
       "scholar_id": "1xKYhQIAAAAJ"
     },
     {
-      "name": "Eric R. Gulson-Castillo",
-      "affiliation": "Postdoctoral Associate, Yale University",
-      "scholar_id": "lWPHsioAAAAJ"
-    },
-    {
-      "name": "Teresa Pegan",
-      "affiliation": "University of Michigan",
-      "scholar_id": "7XYBoHEAAAAJ"
-    },
-    {
-      "name": "Abigail A. Kimmitt",
-      "affiliation": "Hofstra University",
-      "scholar_id": "j7OsXOwAAAAJ"
-    },
-    {
       "name": "Mia Levine",
       "affiliation": "University of Pennsylvania",
       "scholar_id": "Pt4QxysAAAAJ"
@@ -341,6 +326,21 @@
       "name": "Jeffrey M. Good",
       "affiliation": "Professor, University of Montana",
       "scholar_id": "penpid8AAAAJ"
+    },
+    {
+      "name": "Eric R. Gulson-Castillo",
+      "affiliation": "Postdoctoral Associate, Yale University",
+      "scholar_id": "lWPHsioAAAAJ"
+    },
+    {
+      "name": "Teresa Pegan",
+      "affiliation": "University of Michigan",
+      "scholar_id": "7XYBoHEAAAAJ"
+    },
+    {
+      "name": "Abigail A. Kimmitt",
+      "affiliation": "Hofstra University",
+      "scholar_id": "j7OsXOwAAAAJ"
     },
     {
       "name": "Brett W. Benz",
@@ -415,12 +415,12 @@
     "available": 16,
     "not_available": 1
   },
-  "total_publications": 33,
-  "publications_fetched": 33,
+  "total_publications": 34,
+  "publications_fetched": 34,
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 2008,
+      "citations": 2011,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
@@ -434,7 +434,7 @@
     },
     {
       "title": "Genomic signature of an avian Lilliput effect across the K-Pg extinction",
-      "citations": 149,
+      "citations": 150,
       "year": 2018,
       "venue": "N/A",
       "url": "https://academic.oup.com/sysbio/article-abstract/67/1/1/3960267"
@@ -483,7 +483,7 @@
     },
     {
       "title": "Genome and life-history evolution link bird diversification to the end-Cretaceous mass extinction",
-      "citations": 37,
+      "citations": 39,
       "year": 2024,
       "venue": "N/A",
       "url": "https://www.science.org/doi/abs/10.1126/sciadv.adp0114"
@@ -531,18 +531,18 @@
       "url": "https://mirror.truenetwork.ru/CRAN/web/views/Phylogenetics.html"
     },
     {
+      "title": "The genomic landscape, causes, and consequences of extensive phylogenomic discordance in murine rodents",
+      "citations": 4,
+      "year": 2025,
+      "venue": "N/A",
+      "url": "https://academic.oup.com/gbe/article-abstract/17/2/evaf017/7998737"
+    },
+    {
       "title": "Habitat-associated evolutionary rates in deep-sea invertebrates",
       "citations": 3,
       "year": 2025,
       "venue": "N/A",
       "url": "https://academic.oup.com/evolut/article-abstract/79/7/1334/8121435"
-    },
-    {
-      "title": "The genomic landscape, causes, and consequences of extensive phylogenomic discordance in murine rodents",
-      "citations": 3,
-      "year": 2025,
-      "venue": "N/A",
-      "url": "https://academic.oup.com/gbe/article-abstract/17/2/evaf017/7998737"
     },
     {
       "title": "Rates of passerine body plan evolution in time and space",
@@ -643,6 +643,13 @@
       "url": "https://ui.adsabs.harvard.edu/abs/2016GSAA...4887815B/abstract"
     },
     {
+      "title": "Supplementary code for: Rates of passerine body plan evolution in time and space",
+      "citations": 0,
+      "year": "N/A",
+      "venue": "N/A",
+      "url": "https://ui.adsabs.harvard.edu/abs/2026zndo..19211076B/abstract"
+    },
+    {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
       "citations": 0,
       "year": "N/A",
@@ -650,6 +657,6 @@
       "url": "https://www.academia.edu/download/39047832/Prum_et_al._2015_Nature.pdf"
     }
   ],
-  "generated_at": 1790565308,
+  "generated_at": 1791085388,
   "proxy_mode": "free"
 }
