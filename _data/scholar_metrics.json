@@ -4,7 +4,7 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 14,
-  "citations": 2895,
+  "citations": 2900,
   "cites_per_year": {
     "2015": 13,
     "2016": 109,
@@ -13,11 +13,11 @@
     "2019": 282,
     "2020": 318,
     "2021": 316,
-    "2022": 320,
+    "2022": 321,
     "2023": 263,
-    "2024": 273,
-    "2025": 256,
-    "2026": 247
+    "2024": 274,
+    "2025": 257,
+    "2026": 249
   },
   "interests": [
     "Speciation",
@@ -118,19 +118,24 @@
       "scholar_id": "C61BipSii0wC"
     },
     {
-      "name": "Brian C. Weeks",
-      "affiliation": "School for Environment and Sustainability, University of Michigan",
-      "scholar_id": "7isF9EEAAAAJ"
-    },
-    {
       "name": "Jonathan Hughes",
       "affiliation": "Research Consultant, Arizona State University",
       "scholar_id": "awBFtXsAAAAJ"
     },
     {
+      "name": "Brian C. Weeks",
+      "affiliation": "School for Environment and Sustainability, University of Michigan",
+      "scholar_id": "7isF9EEAAAAJ"
+    },
+    {
       "name": "Christopher J Clark",
       "affiliation": "EEOB, UC Riverside",
       "scholar_id": "9Bpr4-4AAAAJ"
+    },
+    {
+      "name": "David Fouhey",
+      "affiliation": "New York University",
+      "scholar_id": "FLcpd34AAAAJ"
     },
     {
       "name": "Alan Fecchio",
@@ -193,6 +198,11 @@
       "scholar_id": "Vi0LoiAAAAAJ"
     },
     {
+      "name": "Leonardo Campagna",
+      "affiliation": "Cornell Lab of Ornithology",
+      "scholar_id": "PtLhs74AAAAJ"
+    },
+    {
       "name": "Charlotte M Probst",
       "affiliation": "PhD student, University of Michigan",
       "scholar_id": "dRvjW1sAAAAJ"
@@ -233,11 +243,6 @@
       "scholar_id": "WhHTPMQAAAAJ"
     },
     {
-      "name": "David Fouhey",
-      "affiliation": "New York University",
-      "scholar_id": "FLcpd34AAAAJ"
-    },
-    {
       "name": "Elisa Bonaccorso",
       "affiliation": "Colegio de Ciencias Biológicas y Ambientales, Universidad San Francisco de Quito",
       "scholar_id": "vfgVDMsAAAAJ"
@@ -261,11 +266,6 @@
       "name": "Robert Lanfear",
       "affiliation": "Professor, Australian National University",
       "scholar_id": "Se6txrMAAAAJ"
-    },
-    {
-      "name": "Leonardo Campagna",
-      "affiliation": "Cornell Lab of Ornithology",
-      "scholar_id": "PtLhs74AAAAJ"
     },
     {
       "name": "Eric J. Sargis",
@@ -415,12 +415,12 @@
     "available": 16,
     "not_available": 1
   },
-  "total_publications": 34,
-  "publications_fetched": 34,
+  "total_publications": 35,
+  "publications_fetched": 35,
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 2011,
+      "citations": 2013,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
@@ -441,7 +441,7 @@
     },
     {
       "title": "An inverse latitudinal gradient in infection probability and phylogenetic diversity for Leucocytozoon blood parasites in New World birds",
-      "citations": 104,
+      "citations": 106,
       "year": 2020,
       "venue": "N/A",
       "url": "https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/1365-2656.13117"
@@ -476,7 +476,7 @@
     },
     {
       "title": "Ecological selectivity and the evolution of mammalian substrate preference across the K–Pg boundary",
-      "citations": 42,
+      "citations": 43,
       "year": 2021,
       "venue": "N/A",
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ece3.8114"
@@ -608,6 +608,13 @@
       "url": "https://digitallibrary.amnh.org/bitstreams/67c9f682-5396-4064-8f54-d23add6bb751/download"
     },
     {
+      "title": "Multi‐Taxa Genome‐Environment Associations With Contemporary and Historical Climate in the Brazilian Atlantic Forest",
+      "citations": 0,
+      "year": 2026,
+      "venue": "N/A",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/mec.70545"
+    },
+    {
       "title": "Morphological diversity of the cetacean mandibular symphysis coincides with novel modes of aquatic feeding–CORRIGENDUM",
       "citations": 0,
       "year": 2026,
@@ -657,6 +664,6 @@
       "url": "https://www.academia.edu/download/39047832/Prum_et_al._2015_Nature.pdf"
     }
   ],
-  "generated_at": 1791085388,
+  "generated_at": 1791689356,
   "proxy_mode": "free"
 }
