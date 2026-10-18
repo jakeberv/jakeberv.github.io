@@ -4,20 +4,20 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 14,
-  "citations": 2900,
+  "citations": 2906,
   "cites_per_year": {
     "2015": 13,
     "2016": 109,
     "2017": 211,
     "2018": 223,
-    "2019": 282,
+    "2019": 284,
     "2020": 318,
-    "2021": 316,
-    "2022": 321,
+    "2021": 315,
+    "2022": 322,
     "2023": 263,
     "2024": 274,
     "2025": 257,
-    "2026": 249
+    "2026": 253
   },
   "interests": [
     "Speciation",
@@ -63,11 +63,6 @@
       "scholar_id": "4d4zhI8AAAAJ"
     },
     {
-      "name": "Stephen A. Smith",
-      "affiliation": "Professor, University of Michigan",
-      "scholar_id": "gVwJZpAAAAAJ"
-    },
-    {
       "name": "Kristof Zyskowski",
       "affiliation": "Yale University, Peabody Museum of Natural History",
       "scholar_id": "aEmILscAAAAJ"
@@ -81,6 +76,11 @@
       "name": "Teresa J. Feo",
       "affiliation": "Smithsonian National Museum of Natural History",
       "scholar_id": "KC_7qOMAAAAJ"
+    },
+    {
+      "name": "Stephen A. Smith",
+      "affiliation": "Professor, University of Michigan",
+      "scholar_id": "gVwJZpAAAAAJ"
     },
     {
       "name": "J Ryan Shipley",
@@ -248,7 +248,7 @@
       "scholar_id": "vfgVDMsAAAAJ"
     },
     {
-      "name": "Jimmy A McGuire",
+      "name": "Jimmy A. McGuire",
       "affiliation": "Professor of Integrative Biology, UC Berkeley",
       "scholar_id": "5wcNxu0AAAAJ"
     },
@@ -420,28 +420,28 @@
   "publications": [
     {
       "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
-      "citations": 2013,
+      "citations": 2016,
       "year": 2015,
       "venue": "N/A",
       "url": "https://www.nature.com/articles/nature15697"
     },
     {
       "title": "Early evolution of modern birds structured by global forest collapse at the end-Cretaceous mass extinction",
-      "citations": 211,
+      "citations": 214,
       "year": 2018,
       "venue": "N/A",
       "url": "https://www.cell.com/current-biology/fulltext/S0960-9822(18)30534-7"
     },
     {
       "title": "Genomic signature of an avian Lilliput effect across the K-Pg extinction",
-      "citations": 150,
+      "citations": 149,
       "year": 2018,
       "venue": "N/A",
       "url": "https://academic.oup.com/sysbio/article-abstract/67/1/1/3960267"
     },
     {
       "title": "An inverse latitudinal gradient in infection probability and phylogenetic diversity for Leucocytozoon blood parasites in New World birds",
-      "citations": 106,
+      "citations": 105,
       "year": 2020,
       "venue": "N/A",
       "url": "https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/1365-2656.13117"
@@ -455,7 +455,7 @@
     },
     {
       "title": "Complex coevolution of wing, tail, and vocal sounds of courting male bee hummingbirds",
-      "citations": 58,
+      "citations": 59,
       "year": 2018,
       "venue": "N/A",
       "url": "https://academic.oup.com/evolut/article-abstract/72/3/630/6726732"
@@ -504,7 +504,7 @@
     },
     {
       "title": "Divergence in morphology, calls, song, mechanical sounds, and genetics supports species status for the Inaguan hummingbird (Trochilidae: Calliphlox “evelynae” lyrura)",
-      "citations": 23,
+      "citations": 24,
       "year": 2015,
       "venue": "N/A",
       "url": "https://academic.oup.com/auk/article-abstract/132/1/248/5149205"
@@ -664,6 +664,6 @@
       "url": "https://www.academia.edu/download/39047832/Prum_et_al._2015_Nature.pdf"
     }
   ],
-  "generated_at": 1791689356,
+  "generated_at": 1792283080,
   "proxy_mode": "free"
 }
