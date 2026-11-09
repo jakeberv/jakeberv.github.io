@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-02T06:43:05.127243+00:00",
+  "generated_at_utc": "2026-11-09T16:34:07.782359+00:00",
   "input": {
     "source_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/exports/news_mentions_clean.json",
     "news_mentions_rows_input": 345,
@@ -14,12 +14,12 @@
   },
   "source": {
     "source": "tranco_api",
-    "list_id": "V354N",
-    "download_url": "https://tranco-list.eu/download/V354N/1000000",
-    "created_on": "2026-11-01T22:00:01.688715",
-    "retrieved_at_utc": "2026-11-02T06:38:14.001648+00:00",
+    "list_id": "8P8NV",
+    "download_url": "https://tranco-list.eu/download/8P8NV/1000000",
+    "created_on": "2026-11-08T22:00:02.457926",
+    "retrieved_at_utc": "2026-11-09T16:31:14.233238+00:00",
     "cache_hit": false,
-    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_V354N.csv.zip",
+    "zip_path": "/home/runner/work/jakeberv.github.io/jakeberv.github.io/data/impact/reach/.cache/tranco_top1m_8P8NV.csv.zip",
     "ranked_domains": 130
   },
   "coverage": {
@@ -41,12 +41,12 @@
     "mentions_assigned_snapshot": 302,
     "mentions_ranked_at_date": 283,
     "ranked_coverage_rate": 0.9371,
-    "median_abs_snapshot_offset_days": 35,
-    "max_abs_snapshot_offset_days": 1588,
-    "earliest_snapshot_date": "2019-02-18",
+    "median_abs_snapshot_offset_days": 33,
+    "max_abs_snapshot_offset_days": 1589,
+    "earliest_snapshot_date": "2019-02-19",
     "latest_snapshot_date": "2025-05-13",
     "unresolved_period_keys": [],
-    "date_api_lookups_attempted": 209,
+    "date_api_lookups_attempted": 219,
     "date_api_lookup_cap": 250,
     "date_api_lookup_cap_hit": false,
     "date_api_delay_ms": 250
@@ -191,5 +191,7 @@
       "last_mention_date": "2015-02-12T17:11:00"
     }
   ],
-  "warnings": []
+  "warnings": [
+    "Historical Tranco fetch failed for 83LGV: IncompleteRead: IncompleteRead(49005 bytes read)"
+  ]
 }
