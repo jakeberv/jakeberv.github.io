@@ -4,20 +4,20 @@
   "email_domain": "@umich.edu",
   "h_index": 13,
   "i10_index": 15,
-  "citations": 2924,
+  "citations": 2933,
   "cites_per_year": {
-    "2015": 13,
+    "2015": 14,
     "2016": 109,
     "2017": 211,
     "2018": 223,
     "2019": 282,
     "2020": 318,
     "2021": 316,
-    "2022": 322,
+    "2022": 323,
     "2023": 263,
     "2024": 274,
-    "2025": 256,
-    "2026": 273
+    "2025": 258,
+    "2026": 277
   },
   "interests": [
     "Speciation",
@@ -63,6 +63,11 @@
       "scholar_id": "4d4zhI8AAAAJ"
     },
     {
+      "name": "Brian C. Weeks",
+      "affiliation": "School for Environment and Sustainability, University of Michigan",
+      "scholar_id": "7isF9EEAAAAJ"
+    },
+    {
       "name": "Kristof Zyskowski",
       "affiliation": "Yale University, Peabody Museum of Natural History",
       "scholar_id": "aEmILscAAAAJ"
@@ -71,6 +76,11 @@
       "name": "Camila C. Ribas",
       "affiliation": "Instituto Nacional de Pesquisas da Amazônia & American Museum of Natural History",
       "scholar_id": "-X2HGoYAAAAJ"
+    },
+    {
+      "name": "David Fouhey",
+      "affiliation": "New York University",
+      "scholar_id": "FLcpd34AAAAJ"
     },
     {
       "name": "Teresa J. Feo",
@@ -113,11 +123,6 @@
       "scholar_id": "D5ijrOsAAAAJ"
     },
     {
-      "name": "Brian C. Weeks",
-      "affiliation": "School for Environment and Sustainability, University of Michigan",
-      "scholar_id": "7isF9EEAAAAJ"
-    },
-    {
       "name": "Jonathan Hughes",
       "affiliation": "Research Consultant, Arizona State University",
       "scholar_id": "awBFtXsAAAAJ"
@@ -138,9 +143,9 @@
       "scholar_id": "Vi0LoiAAAAAJ"
     },
     {
-      "name": "David Fouhey",
-      "affiliation": "New York University",
-      "scholar_id": "FLcpd34AAAAJ"
+      "name": "Charlotte M Probst",
+      "affiliation": "PhD student, University of Michigan",
+      "scholar_id": "dRvjW1sAAAAJ"
     },
     {
       "name": "Alan Fecchio",
@@ -203,11 +208,6 @@
       "scholar_id": "PtLhs74AAAAJ"
     },
     {
-      "name": "Charlotte M Probst",
-      "affiliation": "PhD student, University of Michigan",
-      "scholar_id": "dRvjW1sAAAAJ"
-    },
-    {
       "name": "Nathanael Walker-Hale",
       "affiliation": "Postdoctoral Research Associate, Department of Biosciences, Durham University",
       "scholar_id": "SeRf_xAAAAAJ"
@@ -253,6 +253,11 @@
       "scholar_id": "5wcNxu0AAAAJ"
     },
     {
+      "name": "Zhizhuo Zhou",
+      "affiliation": "Stanford University",
+      "scholar_id": "WjZyzbYAAAAJ"
+    },
+    {
       "name": "Michael Landis",
       "affiliation": "Associate Professor at Washington University in St. Louis",
       "scholar_id": "LxPnTjYAAAAJ"
@@ -289,7 +294,7 @@
     },
     {
       "name": "Eugenia Zarza",
-      "affiliation": "El Colegio de la Frontera Sur - CONACYT",
+      "affiliation": "El Colegio de la Frontera Sur - SECIHTI",
       "scholar_id": "3CduKNgAAAAJ"
     },
     {
@@ -301,6 +306,16 @@
       "name": "Valentina Gómez-Bahamón",
       "affiliation": "Virginia Tech",
       "scholar_id": "QCVlwlsAAAAJ"
+    },
+    {
+      "name": "Brett W. Benz",
+      "affiliation": "Bird Division Collection Manager, University of Michigan Museum of Zoology",
+      "scholar_id": "kPUMlmgAAAAJ"
+    },
+    {
+      "name": "Bruce O'Brien",
+      "affiliation": "Research Technician",
+      "scholar_id": "bU-hJ1iFchAC"
     },
     {
       "name": "Jacob M. Musser",
@@ -341,21 +356,6 @@
       "name": "Abigail A. Kimmitt",
       "affiliation": "Hofstra University",
       "scholar_id": "j7OsXOwAAAAJ"
-    },
-    {
-      "name": "Brett W. Benz",
-      "affiliation": "Bird Division Collection Manager, University of Michigan Museum of Zoology",
-      "scholar_id": "kPUMlmgAAAAJ"
-    },
-    {
-      "name": "Bruce O'Brien",
-      "affiliation": "Research Technician",
-      "scholar_id": "bU-hJ1iFchAC"
-    },
-    {
-      "name": "Zhizhuo Zhou",
-      "affiliation": "Stanford University",
-      "scholar_id": "WjZyzbYAAAAJ"
     },
     {
       "name": "William Gearty",
@@ -664,6 +664,6 @@
       "url": "https://www.academia.edu/download/39047832/Prum_et_al._2015_Nature.pdf"
     }
   ],
-  "generated_at": 1794110765,
+  "generated_at": 1795324284,
   "proxy_mode": "free"
 }
